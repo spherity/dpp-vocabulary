@@ -4,13 +4,85 @@
     "@protected": true,
     "id": "@id",
     "type": "@type",
-    "dbp": {
+    "DigitalBatteryPassportCertificate": "https://dpp.spherity.com/dbp#DigitalBatteryPassportCertificate",
+    "DigitalBatteryPassport": {
       "@protected": true,
-      "@id": "https://dpp.spherity.com/dbp",
+      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport",
       "@context": {
         "@version": 1.1,
         "id": "@id",
-        "type": "@type"
+        "type": "@type",
+        "generalInformation": {
+          "@protected": true,
+          "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation",
+          "@context": {
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "productIdentifier": {
+              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_productIdentifier",
+              "@type": "@id"
+            },
+            "productPassportIdentifier": {
+              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_productPassportIdentifier",
+              "@type": "@id"
+            },
+            "batteryCategory": {
+              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory",
+              "@type": "@id"
+            },
+            "manufacturerIdentification": {
+              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturerIdentification",
+              "@type": "@id"
+            },
+            "manufactoringDate": {
+              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturingDate",
+              "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "batteryStatus": {
+              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus",
+              "@type": "@id"
+            },
+            "batteryWeight": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryWeight",
+            "manufacturingPlace": {
+              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturingPlace",
+              "@type": "@id"
+            },
+            "economicOperator": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_economicOperator"
+          }
+        },
+        "carbonFootprint": {
+          "@protected": true,
+          "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint",
+          "@context": {
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "batteryCarbonFootprint": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_batteryCarbonFootprint",
+            "carbonFootprintPerLifecycleStage": {
+              "@protected": true,
+              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage",
+              "@context": {
+                "@version": 1.1,
+                "id": "@id",
+                "type": "@type",
+                "lifeCycleStage": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage",
+                  "@type": "@id"
+                },
+                "carbonFootprint": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_carbonFootprint"
+              }
+            },
+            "carbonFootprintPerformanceClass": {
+              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerformanceClass",
+              "@type": "@id"
+            },
+            "carbonFootprintStudy": {
+              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintStudy",
+              "@type": "@id"
+            }
+          }
+        }
       }
     }
   }
