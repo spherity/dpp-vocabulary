@@ -386,6 +386,10 @@ classDiagram
 
 ### 5.3 PerformanceAndDurability {#PerformanceAndDurability}
 
+### 5.4 External Types
+
+#### 5.4.1 dateTime {#dateTime}
+
 ## 6 Properties
 
 ### 6.1 Properties of DigitalBatteryPassport
