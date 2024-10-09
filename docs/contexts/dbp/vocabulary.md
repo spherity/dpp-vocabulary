@@ -412,7 +412,7 @@ classDiagram
 
 #### 6.1.2 carbonFootprint {#DigitalBatteryPassport_carbonFootprint}
 
-##### 6.1.2.1 batteryCarbonFootprint {#DigitalBatteryPassport_carbonFootprint_}
+##### 6.1.2.1 batteryCarbonFootprint {#DigitalBatteryPassport_carbonFootprint_batteryCarbonFootprint}
 
 ##### 6.1.2.2 carbonFootprintPerLifecycleStage {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage}
 
