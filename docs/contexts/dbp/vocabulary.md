@@ -380,11 +380,25 @@ classDiagram
 
 ## 5 Classes
 
-### 5.1 DigitalProductPassport {#DigitalProductPassport}
+### 5.1 DigitalBatteryPassport {#DigitalBatteryPassport}
 
 ### 5.2 PerformanceAndDurability {#PerformanceAndDurability}
 
 ## 6 Properties
+
+### 6.1 Properties of DigitalBatteryPassport
+
+#### 6.1.1 generalInformation {#DigitalBatteryPassport_generalInformation}
+
+#### 6.1.2 carbonFootprint {#DigitalBatteryPassport_carbonFootprint}
+
+#### 6.1.3 circularity {#DigitalBatteryPassport_circularity}
+
+#### 6.1.4 materialComposition {#DigitalBatteryPassport_materialComposition}
+
+#### 6.1.5 labelsAndCertification {#DigitalBatteryPassport_labelsAndCertification}
+
+#### 6.1.6 dueDiligence {#DigitalBatteryPassport_dueDiligence}
 
 ## References
 
