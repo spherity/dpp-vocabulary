@@ -112,7 +112,8 @@
                 "postalCode": "https:/schema.org/postalCode",
                 "addressLocality": "https:/schema.org/addressLocality"
               },
-            "economicOperator": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_economicOperator"
+              "economicOperator": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_economicOperator"
+            }
           }
         },
         "carbonFootprint": {
@@ -158,8 +159,7 @@
                       "@container": "@set"
                     }
                   }
-                }
-              },
+                },
                 "carbonFootprint": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_carbonFootprint"
               }
             },
