@@ -102,7 +102,6 @@
             "manufacturingPlace": {
               "@protected": true,
               "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturingPlace",
-              "@type": "@id",
               "@context": {
                 "@version": 1.1,
                 "id": "@id",
@@ -111,9 +110,9 @@
                 "addressStreet": "https:/schema.org/addressStreet",
                 "postalCode": "https:/schema.org/postalCode",
                 "addressLocality": "https:/schema.org/addressLocality"
-              },
-              "economicOperator": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_economicOperator"
-            }
+              }
+            },
+            "economicOperator": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_economicOperator"
           }
         },
         "carbonFootprint": {
