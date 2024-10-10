@@ -41,7 +41,37 @@
             },
             "batteryStatus": {
               "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus",
-              "@type": "@id"
+              "@type": "@vocab",
+              "@context": {
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "Original": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Original",
+                  "@type": "@id",
+                  "@container": "@set"
+                },
+                "Repurposed": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Repurposed",
+                  "@type": "@id",
+                  "@container": "@set"
+                },
+                "Reused": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Reused",
+                  "@type": "@id",
+                  "@container": "@set"
+                },
+                "Remanufactured": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Remanufactured",
+                  "@type": "@id",
+                  "@container": "@set"
+                },
+                "Waste": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Waste",
+                  "@type": "@id",
+                  "@container": "@set"
+                }
+              }
             },
             "batteryWeight": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryWeight",
             "manufacturingPlace": {
