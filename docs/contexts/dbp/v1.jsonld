@@ -112,7 +112,10 @@
                 "addressLocality": "https:/schema.org/addressLocality"
               }
             },
-            "economicOperator": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_economicOperator"
+            "economicOperator": {
+              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_economicOperator",
+              "@type": "@id"
+            }
           }
         },
         "carbonFootprint": {
