@@ -29,7 +29,32 @@
             },
             "batteryCategory": {
               "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory",
-              "@type": "@id"
+              "@type": "@vocab",
+              "@context": {
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "Lmt": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory_Lmt",
+                  "@type": "@id",
+                  "@container": "@set"
+                },
+                "Ev": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory_Ev",
+                  "@type": "@id",
+                  "@container": "@set"
+                },
+                "Industrial": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory_Industrial",
+                  "@type": "@id",
+                  "@container": "@set"
+                },
+                "Stationary": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory_Stationary",
+                  "@type": "@id",
+                  "@container": "@set"
+                }
+              }
             },
             "manufacturerIdentification": {
               "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturerIdentification",
@@ -75,9 +100,18 @@
             },
             "batteryWeight": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryWeight",
             "manufacturingPlace": {
+              "@protected": true,
               "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturingPlace",
-              "@type": "@id"
-            },
+              "@type": "@id",
+              "@context": {
+                "@version": 1.1,
+                "id": "@id",
+                "type": "@type",
+                "addressCountry": "https:/schema.org/addressCountry",
+                "addressStreet": "https:/schema.org/addressStreet",
+                "postalCode": "https:/schema.org/postalCode",
+                "addressLocality": "https:/schema.org/addressLocality"
+              },
             "economicOperator": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_economicOperator"
           }
         },
@@ -98,8 +132,34 @@
                 "type": "@type",
                 "lifeCycleStage": {
                   "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage",
-                  "@type": "@id"
-                },
+                  "@type": "@vocab",
+                  "@context": {
+                    "@protected": true,
+                    "id": "@id",
+                    "type": "@type",
+                    "RawMaterialExtraction": {
+                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_RawMaterialExtraction",
+                      "@type": "@id",
+                      "@container": "@set"
+                    },
+                    "MainProduction": {
+                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_MainProduction",
+                      "@type": "@id",
+                      "@container": "@set"
+                    },
+                    "Distribution": {
+                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Distribution",
+                      "@type": "@id",
+                      "@container": "@set"
+                    },
+                    "Recycling": {
+                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Recycling",
+                      "@type": "@id",
+                      "@container": "@set"
+                    }
+                  }
+                }
+              },
                 "carbonFootprint": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_carbonFootprint"
               }
             },
