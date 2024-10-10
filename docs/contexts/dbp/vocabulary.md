@@ -30,7 +30,6 @@ classDiagram
         carbonFootprint
         circularity
         materialComposition
-        performanceAndDurability
         labelsAndCertification
         dueDiligence
     }
