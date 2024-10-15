@@ -119,6 +119,23 @@ classDiagram
         manufacturingPlace
         economicOperator
     }
+    class BatteryCategory{
+        <<enum>>
+        Lmt
+        Ev
+        Industrial
+        Stationary
+    }
+    class BatteryStatus{
+        <<enum>>
+        Original
+        Repurposed
+        Reused
+        Remanufactured
+        Waste
+    }
+    GeneralInformation "1" *-- "1" BatteryCategory
+    GeneralInformation "1" *-- "1" BatteryStatus
 ```
 ### CarbonFootprint
 ```mermaid
@@ -135,7 +152,15 @@ classDiagram
         lifeCycleStage
         carbonFootprint
     }
+    class LifeCycleStage{
+        <<enum>>
+        RawMaterialExtraction
+        MainProduction
+        Distribution
+        Recycling
+    }
     CarbonFootprint "1" *-- "n" CarbonFootprintPerLifecycleStage
+    CarbonFootprintPerLifecycleStage "1" *-- "1" LifeCycleStage
 ```
 ### Circularity
 ```mermaid
@@ -401,11 +426,31 @@ classDiagram
 
 ##### 6.1.1.3 batteryCategory {#DigitalBatteryPassport_generalInformation_batteryCategory}
 
+##### 6.1.1.3.1 batteryCategory {#DigitalBatteryPassport_generalInformation_batteryCategory}
+
+###### 6.1.1.3.1.1 Lmt {#DigitalBatteryPassport_generalInformation_batteryCategory_Lmt}
+
+###### 6.1.1.3.1.2 Ev {#DigitalBatteryPassport_generalInformation_batteryCategory_Ev}
+
+###### 6.1.1.3.1.3 Industrial {#DigitalBatteryPassport_generalInformation_batteryCategory_Industrial}
+
+###### 6.1.1.3.1.4 Stationary {#DigitalBatteryPassport_generalInformation_batteryCategory_Stationary}
+
 ##### 6.1.1.4 manufacturerIdentification {#DigitalBatteryPassport_generalInformation_manufacturerIdentification}
 
 ##### 6.1.1.5 manufacturingDate {#DigitalBatteryPassport_generalInformation_manufacturingDate}
 
 ##### 6.1.1.6 batteryStatus {#DigitalBatteryPassport_generalInformation_batteryStatus}
+
+###### 6.1.1.6.1 Original {#DigitalBatteryPassport_generalInformation_batteryStatus_Original}
+
+###### 6.1.1.6.2 Repurposed {#DigitalBatteryPassport_generalInformation_batteryStatus_Repurposed}
+
+###### 6.1.1.6.3 Reused {#DigitalBatteryPassport_generalInformation_batteryStatus_Reused}
+
+###### 6.1.1.6.4 Remanufactured {#DigitalBatteryPassport_generalInformation_batteryStatus_Remanufactured}
+
+###### 6.1.1.6.5 Waste {#DigitalBatteryPassport_generalInformation_batteryStatus_Waste}
 
 ##### 6.1.1.7 batteryWeight {#DigitalBatteryPassport_generalInformation_batteryWeight}
 
@@ -420,6 +465,14 @@ classDiagram
 ##### 6.1.2.2 carbonFootprintPerLifecycleStage {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage}
 
 ###### 6.1.2.2.1 lifeCycleStage {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage}
+
+###### 6.1.2.2.1.1 RawMaterialExtraction {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_RawMaterialExtraction}
+
+###### 6.1.2.2.1.2 MainProduction {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_RawMaterialExtraction}
+
+###### 6.1.2.2.1.3 Distribution {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Distribution}
+
+###### 6.1.2.2.1.4 Recycling {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Recycling}
 
 ###### 6.1.2.2.2 carbonFootprint {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_carbonFootprint}
 
