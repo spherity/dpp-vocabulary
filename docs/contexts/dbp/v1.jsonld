@@ -60,7 +60,7 @@
               "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturerIdentification",
               "@type": "@id"
             },
-            "manufactoringDate": {
+            "manufacturingDate": {
               "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturingDate",
               "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
             },
