@@ -137,7 +137,7 @@ classDiagram
         euTaxonomyDisclosureStatement
         sustainabilityReport
     }
-    
+
     DigitalBatteryPassport "1" *-- "1" GeneralInformation
     DigitalBatteryPassport "1" *-- "1" CarbonFootprint
     DigitalBatteryPassport "1" *-- "1" Circularity
@@ -146,7 +146,9 @@ classDiagram
     DigitalBatteryPassport "1" *-- "1" LabelsAndCertification
     DigitalBatteryPassport "1" *-- "1" DueDiligence
 ```
+
 ### GeneralInformation
+
 ```mermaid
 classDiagram
     class GeneralInformation{
@@ -179,7 +181,9 @@ classDiagram
     GeneralInformation "1" *-- "1" BatteryCategory
     GeneralInformation "1" *-- "1" BatteryStatus
 ```
+
 ### CarbonFootprint
+
 ```mermaid
 classDiagram
     class CarbonFootprint{
@@ -204,7 +208,9 @@ classDiagram
     CarbonFootprint "1" *-- "n" CarbonFootprintPerLifecycleStage
     CarbonFootprintPerLifecycleStage "1" *-- "1" LifeCycleStage
 ```
+
 ### Circularity
+
 ```mermaid
 classDiagram
     class Circularity{
@@ -258,10 +264,12 @@ classDiagram
     Circularity "1" *-- "n" RecycledContent
     Circularity "1" *-- "n" SafetyRequirements
     Circularity "1" *-- "n" EndOfLifeInformation
-    
-   
+
+
 ```
+
 ### MaterialComposition
+
 ```mermaid
 classDiagram
     class MaterialComposition{
@@ -300,7 +308,7 @@ classDiagram
     class HazardousSubstanceLocation {
         <<anonymous>>
         componentName
-        componentId 
+        componentId
     }
 
     MaterialComposition "1" *-- "n" ProductChemistry
@@ -308,9 +316,11 @@ classDiagram
     BatteryMaterials "1" *-- "1" BatteryMaterialLocation
     MaterialComposition "1" *-- "n" HazardousSubstances
     HazardousSubstances "1" *-- "1" HazardousSubstanceLocation
-    
+
 ```
+
 ### PerformanceAndDurability
+
 ```mermaid
 classDiagram
 
@@ -335,7 +345,7 @@ classDiagram
         maximumPermittedBatteryPower
         powerCapabilityRatio
     }
-    
+
     class BatteryLifeTime{
         <<anonymous>>
         lifetimeReferenceTest
@@ -350,14 +360,14 @@ classDiagram
         ratedCapacity
         numberOfFullCycles
     }
-    
+
     class TemperatureCondiditions {
         <<anonymous>>
         temperatureRangeIdleState
         timeExtremeHighTemp
         timeExtremeLowTemp
     }
-    
+
     class TechnicalSpecification {
         <<anonymous>>
         stateOfCertifiedEnergy
@@ -371,19 +381,19 @@ classDiagram
         minimumVoltage
         maximumVoltage
     }
-    
+
     class InternalResistance {
         <<anonymous>>
         initialInternalResistancePack
         currentInternalResistancePack
     }
-    
+
     class CurrentInternalResistancePack {
         <<anonymous>>
         currentInternalResistanceValue
         lastUpdate
     }
-    
+
     class RoundtripEfficiency {
         <<anonymous>>
         initialSelfDischargingRate
@@ -395,7 +405,7 @@ classDiagram
         currentSelfDischargingRateEntity
         lastUpdate
    }
-   
+
     PerformanceAndDurability "1" *-- "1" PowerCapability
     PerformanceAndDurability "1" *-- "1" BatteryLifeTime
     PerformanceAndDurability "1" *-- "1" TemperatureCondiditions
@@ -407,6 +417,7 @@ classDiagram
 ```
 
 ### LabelsAndCertification
+
 ```mermaid
 classDiagram
     class LabelsAndCertification{
@@ -430,7 +441,9 @@ classDiagram
     LabelsAndCertification "1" *-- "1" SeparateCollection
     LabelsAndCertification "1" *-- "n" MaterialSymbols
 ```
+
 ### DueDiligence
+
 ```mermaid
 classDiagram
     class DueDiligence{
@@ -441,8 +454,6 @@ classDiagram
         sustainabilityReport
     }
 ```
-
-
 
 ## 5 Classes
 
