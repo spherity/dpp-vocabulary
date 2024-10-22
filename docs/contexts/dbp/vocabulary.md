@@ -228,6 +228,15 @@ classDiagram
         mimeType
         documentURL
     }
+    class DocumentType {
+        <<enum>>
+        BillOfMaterial
+        Model3D
+        DismantlingManual
+        RemovalManual
+        OtherManual
+        Drawing
+    }
     class SourceForSpareParts {
         <<anonymous>>
         nameOfSupplier
@@ -247,6 +256,13 @@ classDiagram
         recycledMaterial
         postConsumerShare
     }
+    class RecycledMaterial {
+        <<enum>>
+        Cobalt
+        Nickel
+        Lithium
+        Lead
+    }
     class SafetyRequirements {
         <<anonymous>>
         safetyInstructions
@@ -264,8 +280,8 @@ classDiagram
     Circularity "1" *-- "n" RecycledContent
     Circularity "1" *-- "n" SafetyRequirements
     Circularity "1" *-- "n" EndOfLifeInformation
-
-
+    DismantlingAndRemovalInformation "1" *-- "1" DocumentType
+    RecycledContent "1" *-- "1" RecycledMaterial
 ```
 
 ### MaterialComposition
@@ -463,10 +479,6 @@ classDiagram
 
 ### 5.3 PerformanceAndDurability {#PerformanceAndDurability}
 
-### 5.4 External Types
-
-#### 5.4.1 dateTime {#dateTime}
-
 ## 6 Properties
 
 ### 6.1 Properties of DigitalBatteryPassport
@@ -509,6 +521,50 @@ classDiagram
 
 #### 6.1.3 circularity {#DigitalBatteryPassport_circularity}
 
+#### 6.1.3.1 dismantlingAndRemovalInformation {#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation}
+
+##### 6.1.3.1.1 documentType {#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType}
+
+##### 6.1.3.1.2 mimeType {#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_mimeType}
+
+##### 6.1.3.1.3 documentURL {#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentURL}
+
+#### 6.1.3.2 sourceForSpareParts {#DigitalBatteryPassport_circularity_sourceForSpareParts}
+
+##### 6.1.3.2.1 nameOfSupplier {#DigitalBatteryPassport_circularity_sourceForSpareParts_nameOfSupplier}
+
+##### 6.1.3.2.2 components {#DigitalBatteryPassport_circularity_sourceForSpareParts_components}
+
+##### 6.1.3.2.3 supplierWebAddress {#DigitalBatteryPassport_circularity_sourceForSpareParts_supplierWebAddress}
+
+##### 6.1.3.2.4 emailAddressOfSupplier {#DigitalBatteryPassport_circularity_sourceForSpareParts_emailAddressOfSupplier}
+
+##### 6.1.3.2.5 addressOfSupplier {#DigitalBatteryPassport_circularity_sourceForSpareParts_addressOfSupplier}
+
+#### 6.1.3.3 recycledContent {#DigitalBatteryPassport_circularity_recycledContent}
+
+##### 6.1.3.3.1 preConsumerShare {#DigitalBatteryPassport_circularity_recycledContent_preConsumerShare}
+
+##### 6.1.3.3.2 recycledMaterial {#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial}
+
+##### 6.1.3.3.3 postConsumerShare {#DigitalBatteryPassport_circularity_recycledContent_postConsumerShare}
+
+#### 6.1.3.4 safetyRequirements {#DigitalBatteryPassport_circularity_safetyRequirements}
+
+##### 6.1.3.4.1 safetyInstructions {#DigitalBatteryPassport_circularity_safetyRequirements_safetyInstructions}
+
+##### 6.1.3.4.2 extinguishingAgent {#DigitalBatteryPassport_circularity_safetyRequirements_extinguishingAgent}
+
+#### 6.1.3.5 endOfLifeInformation {#DigitalBatteryPassport_circularity_endOfLifeInformation}
+
+#### 6.1.3.5 separateCollection {#DigitalBatteryPassport_circularity_endOfLifeInformation_separateCollection}
+
+#### 6.1.3.5 wastePrevention {#DigitalBatteryPassport_circularity_endOfLifeInformation_wastePrevention}
+
+#### 6.1.3.5 informationOnCollection {#DigitalBatteryPassport_circularity_endOfLifeInformation_informationOnCollection}
+
+#### 6.1.3.6 renewableContent {#DigitalBatteryPassport_circularity_renewableContent}
+
 #### 6.1.4 materialComposition {#DigitalBatteryPassport_materialComposition}
 
 #### 6.1.5 labelsAndCertification {#DigitalBatteryPassport_labelsAndCertification}
@@ -548,6 +604,35 @@ classDiagram
 #### 7.3.3 Distribution {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Distribution}
 
 #### 7.3.4 Recycling {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Recycling}
+
+### 7.4 DocumentType
+
+#### 7.4.1 BillOfMaterial {#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_BillOfMaterial}
+
+#### 7.4.2 Model3D {#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_Model3D}
+
+#### 7.4.3 DismantlingManual {#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_DismantlingManual}
+
+#### 7.4.4 RemovalManual {#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_RemovalManual}
+
+#### 7.4.5 OtherManual {#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_OtherManual}
+
+#### 7.4.6 Drawing {#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_Drawing}
+
+### 7.5 RecycledMaterial
+
+#### 7.5.1 Cobalt {#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial_Cobalt}
+
+#### 7.5.2 Nickel {#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial_Nickel}
+
+#### 7.5.3 Lithium {#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial_Lithium}
+
+#### 7.5.4 Lead {#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial_Lead}
+
+## 8 External Types
+
+### 8.1 dateTime {#dateTime}
+
 
 
 ## References

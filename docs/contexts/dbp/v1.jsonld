@@ -174,6 +174,186 @@
               "@type": "@id"
             }
           }
+        },
+        "circularity": {
+          "@protected": true,
+          "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity",
+          "@context": {
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "dismantlingAndRemovalInformation": {
+              "@protected": true,
+              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation",
+              "@context": {
+                "@version": 1.1,
+                "id": "@id",
+                "type": "@type",
+                "documentType": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType",
+                  "@type": "@vocab",
+                  "@context": {
+                    "@protected": true,
+                    "id": "@id",
+                    "type": "@type",
+                    "BillOfMaterial": {
+                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_BillOfMaterial",
+                      "@type": "@id",
+                      "@container": "@set"
+                    },
+                    "Model3D": {
+                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_BillOfMaterial_Model3D",
+                      "@type": "@id",
+                      "@container": "@set"
+                    },
+                    "DismantlingManual": {
+                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_DismantlingManual",
+                      "@type": "@id",
+                      "@container": "@set"
+                    },
+                    "RemovalManual": {
+                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_RemovalManual",
+                      "@type": "@id",
+                      "@container": "@set"
+                    },
+                    "OtherManual": {
+                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_OtherManual",
+                      "@type": "@id",
+                      "@container": "@set"
+                    },
+                    "Drawing": {
+                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_Drawing",
+                      "@type": "@id",
+                      "@container": "@set"
+                    }
+                  }
+                },
+                "mimeType": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_mimeType",
+                "documentURL": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentURL",
+                  "@type": "@id"
+                }
+              }
+            },
+            "sourceForSpareParts": {
+              "@protected": true,
+              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts",
+              "@context": {
+                "@version": 1.1,
+                "id": "@id",
+                "type": "@type",
+                "nameOfSupplier": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_nameOfSupplier",
+                "components": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_components",
+                  "@type": "@id",
+                  "@context": {
+                    "@protected": true,
+                    "id": "@id",
+                    "type": "@type",
+                    "partName": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_components_partName",
+                    "partNumber": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_components_partNumber"
+                  }
+                },
+                "supplierWebAddress": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_supplierWebAddress",
+                  "@type": "@id"
+                },
+                "emailAddressOfSupplier": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_emailAddressOfSupplier",
+                  "@type": "@id"
+                },
+                "addressOfSupplier": {
+                  "@protected": true,
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_addressOfSupplier",
+                  "@context": {
+                    "@version": 1.1,
+                    "id": "@id",
+                    "type": "@type",
+                    "addressCountry": "https:/schema.org/addressCountry",
+                    "addressStreet": "https:/schema.org/addressStreet",
+                    "postalCode": "https:/schema.org/postalCode",
+                    "addressLocality": "https:/schema.org/addressLocality"
+                  }
+                }
+              }
+            },
+            "recycledContent": {
+              "@protected": true,
+              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent",
+              "@context": {
+                "@version": 1.1,
+                "id": "@id",
+                "type": "@type",
+                "preConsumerShare": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_preConsumerShare",
+                "recycledMaterial": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial",
+                  "@type": "@vocab",
+                  "@context": {
+                    "@protected": true,
+                    "id": "@id",
+                    "type": "@type",
+                    "Cobalt": {
+                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial_Cobalt",
+                      "@type": "@id",
+                      "@container": "@set"
+                    },
+                    "Nickel": {
+                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial_Nickel",
+                      "@type": "@id",
+                      "@container": "@set"
+                    },
+                    "Lithium": {
+                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial_Lithium",
+                      "@type": "@id",
+                      "@container": "@set"
+                    },
+                    "Lead": {
+                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial_Lead",
+                      "@type": "@id",
+                      "@container": "@set"
+                    }
+                  }
+                },
+                "postConsumerShare": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_postConsumerShare"
+              }
+            },
+            "safetyRequirements": {
+              "@protected": true,
+              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_safetyRequirements",
+              "@context": {
+                "@version": 1.1,
+                "id": "@id",
+                "type": "@type",
+                "safetyInstructions": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_safetyRequirements_safetyInstructions",
+                  "@type": "@id"
+                },
+                "extinguishingAgent": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_safetyRequirements_extinguishingAgent"
+              }
+            },
+            "endOfLifeInformation": {
+              "@protected": true,
+              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_endOfLifeInformation",
+              "@context": {
+                "@version": 1.1,
+                "id": "@id",
+                "type": "@type",
+                "separateCollection": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_endOfLifeInformation_separateCollection",
+                  "@type": "@id"
+                },
+                "wastePrevention": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_endOfLifeInformation_wastePrevention",
+                  "@type": "@id"
+                },
+                "informationOnCollection": {
+                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_endOfLifeInformation_informationOnCollection",
+                  "@type": "@id"
+                }
+              }
+            },
+            "renewableContent": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_renewableContent"
+          }
         }
       }
     }
