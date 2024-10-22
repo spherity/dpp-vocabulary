@@ -535,6 +535,10 @@ classDiagram
 
 ##### 6.1.3.2.2 components {#DigitalBatteryPassport_circularity_sourceForSpareParts_components}
 
+##### 6.1.3.2.1 components {#DigitalBatteryPassport_circularity_sourceForSpareParts_components_partName}
+
+##### 6.1.3.2.2 components {#DigitalBatteryPassport_circularity_sourceForSpareParts_components_partNumber}
+
 ##### 6.1.3.2.3 supplierWebAddress {#DigitalBatteryPassport_circularity_sourceForSpareParts_supplierWebAddress}
 
 ##### 6.1.3.2.4 emailAddressOfSupplier {#DigitalBatteryPassport_circularity_sourceForSpareParts_emailAddressOfSupplier}

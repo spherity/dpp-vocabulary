@@ -202,7 +202,7 @@
                       "@container": "@set"
                     },
                     "Model3D": {
-                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_BillOfMaterial_Model3D",
+                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_Model3D",
                       "@type": "@id",
                       "@container": "@set"
                     },
