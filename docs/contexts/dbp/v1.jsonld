@@ -4,104 +4,104 @@
     "@protected": true,
     "id": "@id",
     "type": "@type",
-    "DigitalBatteryPassportCertificate": "https://dpp.spherity.com/dbp#DigitalBatteryPassportCertificate",
+    "DigitalBatteryPassportCertificate": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassportCertificate",
     "DigitalBatteryPassport": {
       "@protected": true,
-      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport",
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport",
       "@context": {
         "@version": 1.1,
         "id": "@id",
         "type": "@type",
         "generalInformation": {
           "@protected": true,
-          "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation",
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation",
           "@context": {
             "@version": 1.1,
             "id": "@id",
             "type": "@type",
             "productIdentifier": {
-              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_productIdentifier",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_productIdentifier",
               "@type": "@id"
             },
             "productPassportIdentifier": {
-              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_productPassportIdentifier",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_productPassportIdentifier",
               "@type": "@id"
             },
             "batteryCategory": {
-              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory",
               "@type": "@vocab",
               "@context": {
                 "@protected": true,
                 "id": "@id",
                 "type": "@type",
                 "Lmt": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory_Lmt",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory_Lmt",
                   "@type": "@id",
                   "@container": "@set"
                 },
                 "Ev": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory_Ev",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory_Ev",
                   "@type": "@id",
                   "@container": "@set"
                 },
                 "Industrial": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory_Industrial",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory_Industrial",
                   "@type": "@id",
                   "@container": "@set"
                 },
                 "Stationary": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory_Stationary",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory_Stationary",
                   "@type": "@id",
                   "@container": "@set"
                 }
               }
             },
             "manufacturerIdentification": {
-              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturerIdentification",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturerIdentification",
               "@type": "@id"
             },
             "manufacturingDate": {
-              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturingDate",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturingDate",
               "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
             },
             "batteryStatus": {
-              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus",
               "@type": "@vocab",
               "@context": {
                 "@protected": true,
                 "id": "@id",
                 "type": "@type",
                 "Original": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Original",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Original",
                   "@type": "@id",
                   "@container": "@set"
                 },
                 "Repurposed": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Repurposed",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Repurposed",
                   "@type": "@id",
                   "@container": "@set"
                 },
                 "Reused": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Reused",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Reused",
                   "@type": "@id",
                   "@container": "@set"
                 },
                 "Remanufactured": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Remanufactured",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Remanufactured",
                   "@type": "@id",
                   "@container": "@set"
                 },
                 "Waste": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Waste",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Waste",
                   "@type": "@id",
                   "@container": "@set"
                 }
               }
             },
-            "batteryWeight": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryWeight",
+            "batteryWeight": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryWeight",
             "manufacturingPlace": {
               "@protected": true,
-              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturingPlace",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturingPlace",
               "@context": {
                 "@version": 1.1,
                 "id": "@id",
@@ -113,158 +113,158 @@
               }
             },
             "economicOperator": {
-              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_generalInformation_economicOperator",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_economicOperator",
               "@type": "@id"
             }
           }
         },
         "carbonFootprint": {
           "@protected": true,
-          "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint",
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint",
           "@context": {
             "@version": 1.1,
             "id": "@id",
             "type": "@type",
-            "batteryCarbonFootprint": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_batteryCarbonFootprint",
+            "batteryCarbonFootprint": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_batteryCarbonFootprint",
             "carbonFootprintPerLifecycleStage": {
               "@protected": true,
-              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage",
               "@context": {
                 "@version": 1.1,
                 "id": "@id",
                 "type": "@type",
                 "lifeCycleStage": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage",
                   "@type": "@vocab",
                   "@context": {
                     "@protected": true,
                     "id": "@id",
                     "type": "@type",
                     "RawMaterialExtraction": {
-                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_RawMaterialExtraction",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_RawMaterialExtraction",
                       "@type": "@id",
                       "@container": "@set"
                     },
                     "MainProduction": {
-                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_MainProduction",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_MainProduction",
                       "@type": "@id",
                       "@container": "@set"
                     },
                     "Distribution": {
-                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Distribution",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Distribution",
                       "@type": "@id",
                       "@container": "@set"
                     },
                     "Recycling": {
-                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Recycling",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Recycling",
                       "@type": "@id",
                       "@container": "@set"
                     }
                   }
                 },
-                "carbonFootprint": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_carbonFootprint"
+                "carbonFootprint": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_carbonFootprint"
               }
             },
             "carbonFootprintPerformanceClass": {
-              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerformanceClass",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerformanceClass",
               "@type": "@id"
             },
             "carbonFootprintStudy": {
-              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintStudy",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintStudy",
               "@type": "@id"
             }
           }
         },
         "circularity": {
           "@protected": true,
-          "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity",
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity",
           "@context": {
             "@version": 1.1,
             "id": "@id",
             "type": "@type",
             "dismantlingAndRemovalInformation": {
               "@protected": true,
-              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation",
               "@context": {
                 "@version": 1.1,
                 "id": "@id",
                 "type": "@type",
                 "documentType": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType",
                   "@type": "@vocab",
                   "@context": {
                     "@protected": true,
                     "id": "@id",
                     "type": "@type",
                     "BillOfMaterial": {
-                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_BillOfMaterial",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_BillOfMaterial",
                       "@type": "@id",
                       "@container": "@set"
                     },
                     "Model3D": {
-                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_Model3D",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_Model3D",
                       "@type": "@id",
                       "@container": "@set"
                     },
                     "DismantlingManual": {
-                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_DismantlingManual",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_DismantlingManual",
                       "@type": "@id",
                       "@container": "@set"
                     },
                     "RemovalManual": {
-                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_RemovalManual",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_RemovalManual",
                       "@type": "@id",
                       "@container": "@set"
                     },
                     "OtherManual": {
-                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_OtherManual",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_OtherManual",
                       "@type": "@id",
                       "@container": "@set"
                     },
                     "Drawing": {
-                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_Drawing",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_Drawing",
                       "@type": "@id",
                       "@container": "@set"
                     }
                   }
                 },
-                "mimeType": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_mimeType",
+                "mimeType": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_mimeType",
                 "documentURL": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentURL",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentURL",
                   "@type": "@id"
                 }
               }
             },
             "sourceForSpareParts": {
               "@protected": true,
-              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts",
               "@context": {
                 "@version": 1.1,
                 "id": "@id",
                 "type": "@type",
-                "nameOfSupplier": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_nameOfSupplier",
+                "nameOfSupplier": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_nameOfSupplier",
                 "components": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_components",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_components",
                   "@type": "@id",
                   "@context": {
                     "@protected": true,
                     "id": "@id",
                     "type": "@type",
-                    "partName": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_components_partName",
-                    "partNumber": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_components_partNumber"
+                    "partName": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_components_partName",
+                    "partNumber": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_components_partNumber"
                   }
                 },
                 "supplierWebAddress": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_supplierWebAddress",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_supplierWebAddress",
                   "@type": "@id"
                 },
                 "emailAddressOfSupplier": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_emailAddressOfSupplier",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_emailAddressOfSupplier",
                   "@type": "@id"
                 },
                 "addressOfSupplier": {
                   "@protected": true,
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_addressOfSupplier",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_addressOfSupplier",
                   "@context": {
                     "@version": 1.1,
                     "id": "@id",
@@ -279,80 +279,80 @@
             },
             "recycledContent": {
               "@protected": true,
-              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent",
               "@context": {
                 "@version": 1.1,
                 "id": "@id",
                 "type": "@type",
-                "preConsumerShare": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_preConsumerShare",
+                "preConsumerShare": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_preConsumerShare",
                 "recycledMaterial": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial",
                   "@type": "@vocab",
                   "@context": {
                     "@protected": true,
                     "id": "@id",
                     "type": "@type",
                     "Cobalt": {
-                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial_Cobalt",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial_Cobalt",
                       "@type": "@id",
                       "@container": "@set"
                     },
                     "Nickel": {
-                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial_Nickel",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial_Nickel",
                       "@type": "@id",
                       "@container": "@set"
                     },
                     "Lithium": {
-                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial_Lithium",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial_Lithium",
                       "@type": "@id",
                       "@container": "@set"
                     },
                     "Lead": {
-                      "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial_Lead",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial_Lead",
                       "@type": "@id",
                       "@container": "@set"
                     }
                   }
                 },
-                "postConsumerShare": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_postConsumerShare"
+                "postConsumerShare": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_postConsumerShare"
               }
             },
             "safetyRequirements": {
               "@protected": true,
-              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_safetyRequirements",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_safetyRequirements",
               "@context": {
                 "@version": 1.1,
                 "id": "@id",
                 "type": "@type",
                 "safetyInstructions": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_safetyRequirements_safetyInstructions",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_safetyRequirements_safetyInstructions",
                   "@type": "@id"
                 },
-                "extinguishingAgent": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_safetyRequirements_extinguishingAgent"
+                "extinguishingAgent": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_safetyRequirements_extinguishingAgent"
               }
             },
             "endOfLifeInformation": {
               "@protected": true,
-              "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_endOfLifeInformation",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_endOfLifeInformation",
               "@context": {
                 "@version": 1.1,
                 "id": "@id",
                 "type": "@type",
                 "separateCollection": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_endOfLifeInformation_separateCollection",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_endOfLifeInformation_separateCollection",
                   "@type": "@id"
                 },
                 "wastePrevention": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_endOfLifeInformation_wastePrevention",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_endOfLifeInformation_wastePrevention",
                   "@type": "@id"
                 },
                 "informationOnCollection": {
-                  "@id": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_endOfLifeInformation_informationOnCollection",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_endOfLifeInformation_informationOnCollection",
                   "@type": "@id"
                 }
               }
             },
-            "renewableContent": "https://dpp.spherity.com/dbp#DigitalBatteryPassport_circularity_renewableContent"
+            "renewableContent": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_renewableContent"
           }
         }
       }

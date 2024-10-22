@@ -520,6 +520,14 @@ classDiagram
 #### 6.1.1 generalInformation {#DigitalBatteryPassport_generalInformation}
 
 ##### 6.1.1.1 productIdentifier {#DigitalBatteryPassport_generalInformation_productIdentifier}
+Unique identifier allowing for the unambiguous identification of each individual battery and hence each corresponding battery passport (exploration of a potential additional battery passport identifier (not required per Battery Regulation) ongoing).
+.
+
+| Key            | Value                                                                                               |
+|----------------|-----------------------------------------------------------------------------------------------------|
+| Term           | productIdentifier                                                                                   |
+| URL            | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_productIdentifier |
+| Expected Value | IRI                                                                                                 |
 
 ##### 6.1.1.2 productPassportIdentifier {#DigitalBatteryPassport_generalInformation_productPassportIdentifier}
 
