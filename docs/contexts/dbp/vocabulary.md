@@ -107,7 +107,7 @@ classDiagram
         circularity
         materialComposition
         labelsAndCertification
-        dueDiligence
+        dueDilligence
     }
     class GeneralInformation{
         <<anonymous>>
@@ -164,9 +164,9 @@ classDiagram
         separateCollection
         materialSymbols
     }
-    class DueDiligence{
+    class DueDilligence{
         <<anonymous>>
-        supplyChainDueDiligenceReport
+        supplyChainDueDilligenceReport
         thirdPartyAussurances
         euTaxonomyDisclosureStatement
         sustainabilityReport
@@ -178,7 +178,7 @@ classDiagram
     DigitalBatteryPassport "1" *-- "1" MaterialComposition
     PerformanceAndDurability "1..n" o-- "1" DigitalBatteryPassport
     DigitalBatteryPassport "1" *-- "1" LabelsAndCertification
-    DigitalBatteryPassport "1" *-- "1" DueDiligence
+    DigitalBatteryPassport "1" *-- "1" DueDilligence
 ```
 
 ### GeneralInformation
@@ -499,13 +499,13 @@ classDiagram
     LabelsAndCertification "1" *-- "n" MaterialSymbols
 ```
 
-### DueDiligence
+### DueDilligence
 
 ```mermaid
 classDiagram
-    class DueDiligence{
+    class DueDilligence{
         <<anonymous>>
-        supplyChainDueDiligenceReport
+        supplyChainDueDilligenceReport
         thirdPartyAussurances
         euTaxonomyDisclosureStatement
         sustainabilityReport
@@ -680,9 +680,9 @@ Unique identifier allowing for the unambiguous identification of each individual
 
 ###### 6.1.5.5.2 materialText {#DigitalBatteryPassport_labelsAndCertification_materialSymbols_materialText}
 
-#### 6.1.6 dueDiligence {#DigitalBatteryPassport_dueDilligence}
+#### 6.1.6 dueDilligence {#DigitalBatteryPassport_dueDilligence}
 
-##### 6.1.6.1 supplyChainDueDiligenceReport {#DigitalBatteryPassport_dueDilligence_supplyChainDueDiligenceReport}
+##### 6.1.6.1 supplyChainDueDillgenceReport {#DigitalBatteryPassport_dueDilligence_supplyChainDueDilligenceReport}
 
 ##### 6.1.6.2 thirdPartyAussurances {#DigitalBatteryPassport_dueDilligence_thirdPartyAussurances}
 

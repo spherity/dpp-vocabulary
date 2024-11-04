@@ -497,8 +497,8 @@
             "@version": 1.1,
             "id": "@id",
             "type": "@type",
-            "supplyChainDueDiligenceReport": {
-              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_dueDilligence_supplyChainDueDiligenceReport",
+            "supplyChainDueDilligenceReport": {
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_dueDilligence_supplyChainDueDilligenceReport",
               "@type": "@id"
             },
             "thirdPartyAussurances": {
