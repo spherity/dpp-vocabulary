@@ -462,7 +462,7 @@
             "euDeclarationOfConformityId": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_euDeclarationOfConformityId",
             "separateCollection": {
               "@protected": true,
-              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_separateCollection",
               "@context": {
                 "@version": 1.1,
                 "id": "@id",
@@ -476,16 +476,16 @@
             },
             "materialSymbols": {
               "@protected": true,
-              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_materialSymbols",
               "@context": {
                 "@version": 1.1,
                 "id": "@id",
                 "type": "@type",
                 "materialSymbol": {
-                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_separateCollection_materialSymbol",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_materialSymbols_materialSymbol",
                   "@type": "@id"
                 },
-                "materialDescription": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_separateCollection_materialDescription"
+                "materialDescription": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_materialSymbols_materialDescription"
               }
             }
           }

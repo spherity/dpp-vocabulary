@@ -680,15 +680,15 @@ Unique identifier allowing for the unambiguous identification of each individual
 
 ###### 6.1.5.5.2 materialText {#DigitalBatteryPassport_labelsAndCertification_materialSymbols_materialText}
 
-#### 6.1.6 dueDiligence {#DigitalBatteryPassport_dueDiligence}
+#### 6.1.6 dueDiligence {#DigitalBatteryPassport_dueDilligence}
 
-##### 6.1.6.1 supplyChainDueDiligenceReport {#DigitalBatteryPassport_dueDiligence_supplyChainDueDiligenceReport}
+##### 6.1.6.1 supplyChainDueDiligenceReport {#DigitalBatteryPassport_dueDilligence_supplyChainDueDiligenceReport}
 
-##### 6.1.6.2 thirdPartyAussurances {#DigitalBatteryPassport_dueDiligence_thirdPartyAussurances}
+##### 6.1.6.2 thirdPartyAussurances {#DigitalBatteryPassport_dueDilligence_thirdPartyAussurances}
 
-##### 6.1.6.3 euTaxonomyDisclosureStatement {#DigitalBatteryPassport_dueDiligence_euTaxonomyDisclosureStatement}
+##### 6.1.6.3 euTaxonomyDisclosureStatement {#DigitalBatteryPassport_dueDilligence_euTaxonomyDisclosureStatement}
 
-##### 6.1.6.4 sustainabilityReport {#DigitalBatteryPassport_dueDiligence_sustainabilityReport}
+##### 6.1.6.4 sustainabilityReport {#DigitalBatteryPassport_dueDilligence_sustainabilityReport}
 
 ## 7. Code Lists
 
