@@ -405,7 +405,7 @@
                 "id": "@id",
                 "type": "@type",
                 "hazardSubstanceClass": {
-                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardSubstanceClass",
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceClass",
                   "@type": "@vocab",
                   "@context": {
                     "@protected": true,
@@ -485,7 +485,7 @@
                   "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_materialSymbols_materialSymbol",
                   "@type": "@id"
                 },
-                "materialDescription": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_materialSymbols_materialDescription"
+                "materialText": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_materialSymbols_materialText"
               }
             }
           }
