@@ -331,8 +331,8 @@ classDiagram
     }
     class ProductChemistry{
         <<anonymous>>
-        componentName
-        componentId
+        shortName
+        clearName
     }
     class BatteryMaterials{
         <<anonymous>>
@@ -355,6 +355,12 @@ classDiagram
         hazardousSubstanceLocation
         hazardousSubstanceName
     }
+    class HazardousSubstanceClass {
+        <<enum>>
+        AcuteToxicity
+        SkinCorrosionOrIrritation
+        EyeDamageOrIrritation
+    }
     class HazardousSubstanceLocation {
         <<anonymous>>
         componentName
@@ -366,7 +372,8 @@ classDiagram
     BatteryMaterials "1" *-- "1" BatteryMaterialLocation
     MaterialComposition "1" *-- "n" HazardousSubstances
     HazardousSubstances "1" *-- "1" HazardousSubstanceLocation
-
+    HazardousSubstances "1" *-- "1" HazardousSubstanceClass
+    
 ```
 
 ### PerformanceAndDurability
@@ -613,9 +620,75 @@ Unique identifier allowing for the unambiguous identification of each individual
 
 #### 6.1.4 materialComposition {#DigitalBatteryPassport_materialComposition}
 
+##### 6.1.4.1 criticalRawMaterials {#DigitalBatteryPassport_materialComposition_criticalRawMaterials}
+
+##### 6.1.4.2 productChemistry {#DigitalBatteryPassport_materialComposition_productChemistry}
+
+###### 6.1.4.2.1 shortName {#DigitalBatteryPassport_materialComposition_productChemistry_shortName}
+
+###### 6.1.4.2.2 clearName {#DigitalBatteryPassport_materialComposition_productChemistry_clearName}
+
+##### 6.1.4.3 batteryMaterials {#DigitalBatteryPassport_materialComposition_batteryMaterials}
+
+###### 6.1.4.3.1 materialIdentifier {#DigitalBatteryPassport_materialComposition_batteryMaterials_materialIdentifier}
+
+###### 6.1.4.3.2 batteryMaterialName {#DigitalBatteryPassport_materialComposition_batteryMaterials_batteryMaterialName}
+
+###### 6.1.4.3.3 batteryMaterialWeight {#DigitalBatteryPassport_materialComposition_batteryMaterials_batteryMaterialWeight}
+
+###### 6.1.4.3.4 batteryMaterialLocation {#DigitalBatteryPassport_materialComposition_batteryMaterials_batteryMaterialLocation}
+
+###### 6.1.4.3.4.1 componentName {#DigitalBatteryPassport_materialComposition_batteryMaterials_batteryMaterialLocation_componentName}
+
+###### 6.1.4.3.4.2 componentId {#DigitalBatteryPassport_materialComposition_batteryMaterials_batteryMaterialLocation_componentId}
+
+##### 6.1.4.4 hazardousSubstances {#DigitalBatteryPassport_materialComposition_hazardousSubstances}
+
+###### 6.1.4.4.1 hazardousSubstanceClass {#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceClass}
+
+###### 6.1.4.4.2 hazardousSubstanceConcentration {#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceConcentration}
+
+###### 6.1.4.4.3 hazardousSubstanceImpact {#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceImpact}
+
+###### 6.1.4.4.4 hazardousSubstanceIdentifier {#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceIdentifier}
+
+###### 6.1.4.4.5 hazardousSubstanceLocation {#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceLocation}
+
+###### 6.1.4.4.5.1 componentName {#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceLocation_componentName}
+
+###### 6.1.4.4.5.2 componentId {#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceLocation_componentId}
+
+###### 6.1.4.4.6 hazardousSubstanceName {#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceName}
+
 #### 6.1.5 labelsAndCertification {#DigitalBatteryPassport_labelsAndCertification}
 
+##### 6.1.5.1 declarationOfConformity {#DigitalBatteryPassport_labelsAndCertification_declarationOfConformity}
+
+##### 6.1.5.2 resultOfTestReport {#DigitalBatteryPassport_labelsAndCertification_resultOfTestReport}
+
+##### 6.1.5.3 euDeclarationOfConformityId {#DigitalBatteryPassport_labelsAndCertification_euDeclarationOfConformityId}
+
+##### 6.1.5.4 separateCollection {#DigitalBatteryPassport_labelsAndCertification_separateCollection}
+
+###### 6.1.5.4.1 separateCollectionSymbol {#DigitalBatteryPassport_labelsAndCertification_separateCollection_separateCollectionSymbol}
+
+###### 6.1.5.4.2 separateCollectionDescription {#DigitalBatteryPassport_labelsAndCertification_separateCollection_separateCollectionDescription}
+
+##### 6.1.5.5 materialSymbols {#DigitalBatteryPassport_labelsAndCertification_materialSymbols}
+
+###### 6.1.5.5.1 materialSymbol {#DigitalBatteryPassport_labelsAndCertification_materialSymbols_materialSymbol}
+
+###### 6.1.5.5.2 materialText {#DigitalBatteryPassport_labelsAndCertification_materialSymbols_materialText}
+
 #### 6.1.6 dueDiligence {#DigitalBatteryPassport_dueDiligence}
+
+##### 6.1.6.1 supplyChainDueDiligenceReport {#DigitalBatteryPassport_dueDiligence_supplyChainDueDiligenceReport}
+
+##### 6.1.6.2 thirdPartyAussurances {#DigitalBatteryPassport_dueDiligence_thirdPartyAussurances}
+
+##### 6.1.6.3 euTaxonomyDisclosureStatement {#DigitalBatteryPassport_dueDiligence_euTaxonomyDisclosureStatement}
+
+##### 6.1.6.4 sustainabilityReport {#DigitalBatteryPassport_dueDiligence_sustainabilityReport}
 
 ## 7. Code Lists
 
@@ -675,11 +748,17 @@ Unique identifier allowing for the unambiguous identification of each individual
 
 #### 7.5.4 Lead {#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial_Lead}
 
+### 7.6 HazardousSubstanceClass
+
+#### 7.6.1 AcuteToxicity {#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardSubstanceClass_AcuteToxicity}
+
+#### 7.6.2 SkinCorrosionOrIrritation {#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardSubstanceClass_SkinCorrosionOrIrritation}
+
+#### 7.6.3 EyeDamageOrIrritation {#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardSubstanceClass_EyeDamageOrIrritation}
+
 ## 8 External Types
 
 ### 8.1 dateTime {#dateTime}
-
-
 
 ## References
 

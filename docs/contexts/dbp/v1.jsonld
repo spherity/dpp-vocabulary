@@ -354,6 +354,166 @@
             },
             "renewableContent": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_renewableContent"
           }
+        },
+        "materialComposition": {
+          "@protected": true,
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition",
+          "@context": {
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "criticalRawMaterials": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_criticalRawMaterials",
+            "productChemistry": {
+              "@protected": true,
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_productChemistry",
+              "@context": {
+                "@version": 1.1,
+                "id": "@id",
+                "type": "@type",
+                "shortName": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_productChemistry_shortName",
+                "clearName": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_productChemistry_clearName"
+              }
+            },
+            "batteryMaterials": {
+              "@protected": true,
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_batteryMaterials",
+              "@context": {
+                "@version": 1.1,
+                "id": "@id",
+                "type": "@type",
+                "batteryMaterialLocation": {
+                  "@protected": true,
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_batteryMaterials_batteryMaterialLocation",
+                  "@context": {
+                    "@version": 1.1,
+                    "id": "@id",
+                    "type": "@type",
+                    "componentName": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_batteryMaterials_batteryMaterialLocation_componentName",
+                    "componentId": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_batteryMaterials_batteryMaterialLocation_componentId"
+                  }
+                },
+                "materialIdentifier": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_batteryMaterials_materialIdentifier",
+                "batteryMaterialName": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_batteryMaterials_batteryMaterialName",
+                "batteryMaterialWeight": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_batteryMaterials_batteryMaterialWeight"
+              }
+            },
+            "hazardousSubstances": {
+              "@protected": true,
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances",
+              "@context": {
+                "@version": 1.1,
+                "id": "@id",
+                "type": "@type",
+                "hazardSubstanceClass": {
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardSubstanceClass",
+                  "@type": "@vocab",
+                  "@context": {
+                    "@protected": true,
+                    "id": "@id",
+                    "type": "@type",
+                    "AcuteToxicity": {
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardSubstanceClass_AcuteToxicity",
+                      "@type": "@id",
+                      "@container": "@set"
+                    },
+                    "SkinCorrosionOrIrritation": {
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardSubstanceClass_SkinCorrosionOrIrritation",
+                      "@type": "@id",
+                      "@container": "@set"
+                    },
+                    "EyeDamageOrIrritation": {
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardSubstanceClass_EyeDamageOrIrritation",
+                      "@type": "@id",
+                      "@container": "@set"
+                    }
+                  }
+                },
+                "hazardousSubstanceConcentration": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceConcentration",
+                "hazardousSubstanceImpact": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceImpact",
+                "hazardousSubstanceIdentifier": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceImpact",
+                "hazardousSubstanceLocation": {
+                  "@protected": true,
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceLocation",
+                  "@context": {
+                    "@version": 1.1,
+                    "id": "@id",
+                    "type": "@type",
+                    "componentName": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_batteryMaterials_batteryMaterialLocation_componentName",
+                    "componentId": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_batteryMaterials_batteryMaterialLocation_componentId"
+                  }
+                },
+                "hazardousSubstanceName": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceName"
+              }
+            }
+          }
+        },
+        "labelsAndCertification": {
+          "@protected": true,
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification",
+          "@context": {
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "declarationOfConformity": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_declarationOfConformity",
+            "resultOfTestReport": {
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_resultOfTestReport",
+              "@type": "@id"
+            },
+            "euDeclarationOfConformityId": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_euDeclarationOfConformityId",
+            "separateCollection": {
+              "@protected": true,
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification",
+              "@context": {
+                "@version": 1.1,
+                "id": "@id",
+                "type": "@type",
+                "separateCollectionSymbol": {
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_separateCollection_separateCollectionSymbol",
+                  "@type": "@id"
+                },
+                "separateCollectionDescription": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_separateCollection_separateCollectionDescription"
+              }
+            },
+            "materialSymbols": {
+              "@protected": true,
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification",
+              "@context": {
+                "@version": 1.1,
+                "id": "@id",
+                "type": "@type",
+                "materialSymbol": {
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_separateCollection_materialSymbol",
+                  "@type": "@id"
+                },
+                "materialDescription": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_separateCollection_materialDescription"
+              }
+            }
+          }
+        },
+        "dueDilligence": {
+          "@protected": true,
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_dueDilligence",
+          "@context": {
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "supplyChainDueDiligenceReport": {
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_dueDilligence_supplyChainDueDiligenceReport",
+              "@type": "@id"
+            },
+            "thirdPartyAussurances": {
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_dueDilligence_thirdPartyAussurances",
+              "@type": "@id"
+            },
+            "euTaxonomyDisclosureStatement": {
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_dueDilligence_euTaxonomyDisclosureStatement",
+              "@type": "@id"
+            },
+            "sustainabilityReport": {
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_dueDilligence_sustainabilityReport",
+              "@type": "@id"
+            }
+          }
         }
       }
     }
