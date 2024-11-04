@@ -6,7 +6,7 @@ function checkSchemaLinks(jsonLdSchemaPath) {
 
   const vocabPath = jsonLdSchemaPath.replace(`v1.jsonld`, 'vocabulary.md');
   const v1SchemaContent = fs.readFileSync(vocabPath, 'utf8');
-  const jsonLdV1Links = (jsonLdTextContent.match(/https\:\/\/oid.spherity.com.*#.*(?=")/g) || [])
+  const jsonLdV1Links = (jsonLdTextContent.match(/https\:\/\/dpp-vocabulary.spherity.com.*#.*(?=")/g) || [])
 
   const missingLinks = jsonLdV1Links.filter((link) => {
     const slug = link.split('#')[1];
