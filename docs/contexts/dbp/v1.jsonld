@@ -404,7 +404,7 @@
                 "@version": 1.1,
                 "id": "@id",
                 "type": "@type",
-                "hazardSubstanceClass": {
+                "hazardousSubstanceClass": {
                   "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceClass",
                   "@type": "@vocab",
                   "@context": {
@@ -412,17 +412,17 @@
                     "id": "@id",
                     "type": "@type",
                     "AcuteToxicity": {
-                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardSubstanceClass_AcuteToxicity",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceClass_AcuteToxicity",
                       "@type": "@id",
                       "@container": "@set"
                     },
                     "SkinCorrosionOrIrritation": {
-                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardSubstanceClass_SkinCorrosionOrIrritation",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceClass_SkinCorrosionOrIrritation",
                       "@type": "@id",
                       "@container": "@set"
                     },
                     "EyeDamageOrIrritation": {
-                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardSubstanceClass_EyeDamageOrIrritation",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceClass_EyeDamageOrIrritation",
                       "@type": "@id",
                       "@container": "@set"
                     }
@@ -430,7 +430,7 @@
                 },
                 "hazardousSubstanceConcentration": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceConcentration",
                 "hazardousSubstanceImpact": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceImpact",
-                "hazardousSubstanceIdentifier": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceImpact",
+                "hazardousSubstanceIdentifier": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceIdentifier",
                 "hazardousSubstanceLocation": {
                   "@protected": true,
                   "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceLocation",
@@ -490,27 +490,27 @@
             }
           }
         },
-        "dueDilligence": {
+        "dueDiligence": {
           "@protected": true,
-          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_dueDilligence",
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_dueDiligence",
           "@context": {
             "@version": 1.1,
             "id": "@id",
             "type": "@type",
-            "supplyChainDueDilligenceReport": {
-              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_dueDilligence_supplyChainDueDilligenceReport",
+            "supplyChainDueDiligenceReport": {
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_dueDiligence_supplyChainDueDiligenceReport",
               "@type": "@id"
             },
             "thirdPartyAussurances": {
-              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_dueDilligence_thirdPartyAussurances",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_dueDiligence_thirdPartyAussurances",
               "@type": "@id"
             },
             "euTaxonomyDisclosureStatement": {
-              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_dueDilligence_euTaxonomyDisclosureStatement",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_dueDiligence_euTaxonomyDisclosureStatement",
               "@type": "@id"
             },
             "sustainabilityReport": {
-              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_dueDilligence_sustainabilityReport",
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_dueDiligence_sustainabilityReport",
               "@type": "@id"
             }
           }
