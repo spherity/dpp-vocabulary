@@ -1645,7 +1645,7 @@ The `remainingPowerCapability` property captures the in-use power capability of 
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_remainingPowerCapability       |
 | **Expected Value** | Array                                                                                           |
 
-####### 6.2.2.2.1 remainingPowerCapabilityValue {#PerformanceAndDurability_powerCapability_remainingPowerCapability_remainingPowerCapabilityValue}
+###### 6.2.2.2.1 remainingPowerCapabilityValue {#PerformanceAndDurability_powerCapability_remainingPowerCapability_remainingPowerCapabilityValue}
 
 The `remainingPowerCapabilityValue` property represents the current value of the remaining power capability in a battery during its operation.
 
@@ -1655,7 +1655,7 @@ The `remainingPowerCapabilityValue` property represents the current value of the
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_remainingPowerCapability_remainingPowerCapabilityValue  |
 | **Expected Value** | Number                                                                                          |
 
-######## 6.2.2.2.1.1 atSoC {#PerformanceAndDurability_powerCapability_remainingPowerCapability_remainingPowerCapabilityValue_atSoC}
+###### 6.2.2.2.1.1 atSoC {#PerformanceAndDurability_powerCapability_remainingPowerCapability_remainingPowerCapabilityValue_atSoC}
 
 The `atSoC` (at State of Charge) property records the state of charge level at which the `remainingPowerCapabilityValue` is assessed. This information is essential for understanding the condition of the battery during the performance evaluation and provides context for the recorded power capability value.
 
@@ -1665,7 +1665,7 @@ The `atSoC` (at State of Charge) property records the state of charge level at w
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_remainingPowerCapability_remainingPowerCapabilityValue_atSoC |
 | **Expected Value** | Number (percentage of charge, e.g., 50%)                                                                                                      |
 
-######## 6.2.2.2.1.2 powerCapabilityAt {#PerformanceAndDurability_powerCapability_remainingPowerCapability_remainingPowerCapabilityValue_powerCapabilityAt}
+###### 6.2.2.2.1.2 powerCapabilityAt {#PerformanceAndDurability_powerCapability_remainingPowerCapability_remainingPowerCapabilityValue_powerCapabilityAt}
 
 The `powerCapabilityAt` property indicates the specific state of charge (SOC) at which the `remainingPowerCapabilityValue` is measured. This property provides essential context for understanding the battery's power performance during the assessment at that SOC.
 
@@ -1676,7 +1676,7 @@ The `powerCapabilityAt` property indicates the specific state of charge (SOC) at
 | **Expected Value** | Number (percentage of charge, e.g., 50%)                                                        |
 
 
-####### 6.2.2.2.1.3 rPCLastUpdated {#PerformanceAndDurability_powerCapability_remainingPowerCapability_remainingPowerCapabilityValue_rPCLastUpdated}
+###### 6.2.2.2.1.3 rPCLastUpdated {#PerformanceAndDurability_powerCapability_remainingPowerCapability_remainingPowerCapabilityValue_rPCLastUpdated}
 
 The `rPCLastUpdated` property records the last timestamp when the `remainingPowerCapability` was updated.
 
@@ -1686,7 +1686,7 @@ The `rPCLastUpdated` property records the last timestamp when the `remainingPowe
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_remainingPowerCapability_remainingPowerCapabilityValue_rPCLastUpdated                 |
 | **Expected Value** | String (formatted timestamp)                                                                    |
 
-######## 6.2.2.2.2 lastUpdate {#PerformanceAndDurability_powerCapability_remainingPowerCapability_lastUpdate}
+###### 6.2.2.2.2 lastUpdate {#PerformanceAndDurability_powerCapability_remainingPowerCapability_lastUpdate}
 
 The `lastUpdate` property specifies the most recent timestamp when the `remainingPowerCapability` was updated. This property is crucial for tracking the currency of the data and ensuring that the power capability information reflects the most recent state of the battery.
 
