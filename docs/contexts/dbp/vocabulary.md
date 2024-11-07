@@ -2049,7 +2049,7 @@ The `stateOfChargeValue` property indicates the actual measured value of the bat
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_stateOfCharge_stateOfChargeValue |
 | **Expected Value** | Number (percentage, e.g., "75%")                                                                                         |
 
-####### 6.2.6.7.2 lastUpdate {#PerformanceAndDurability_technicalSpecification_stateOfCharge_lastUpdate}
+###### 6.2.6.7.2 lastUpdate {#PerformanceAndDurability_technicalSpecification_stateOfCharge_lastUpdate}
 
 The `lastUpdate` property records the most recent timestamp when the `stateOfCharge` value was updated. This is essential for ensuring that analyses and reports use the most recent and relevant SOC data available for the battery.
 
