@@ -14,25 +14,27 @@ Click here to open the JSON-LD file: [dbp.jsonld](https://dpp-vocabulary.spherit
 
 ## 3 Examples
 
+### 3.1 DigitalBatteryPassport
+
 ```json
 {
   "@context": "https://dpp-vocabulary.spherity.com/contexts/dbp/v1.jsonld",
-  "id": "did:web:impactnewenergy.com:dbp:640-265-c-00-640-2405-00024-826-b-01-c-2001-a-0-ea-8",
+  "id": "did:web:examplebatterymanufacturer.com:dbp:0-00-12345-67890-5",
   "type": "DigitalBatteryPassport",
   "generalInformation": {
-    "productIdentifier": "did:web:impactnewenergy.com:dbp:640-265-c-00-640-2405-00024-826-b-01-c-2001-a-0-ea-8",
+    "productIdentifier": "did:web:examplebatterymanufacturer.com:dbp:0-00-12345-67890-5",
     "batteryCategory": "Ev",
-    "manufacturerIdentification": "did:web:impactnewenergy.com",
+    "manufacturerIdentification": "did:web:examplebatterymanufacturer.com",
     "manufacturingDate": "2024-01-01T00:00:00Z",
     "batteryStatus": "Original",
     "batteryWeight": 550,
     "manufacturingPlace": {
-      "addressCountry": "PL",
-      "addressStreet": "Przejazdowa 22",
-      "postalCode": "05-800",
-      "addressLocality": "Pruszków"
+      "addressCountry": "GE",
+      "addressStreet": "Musterstrasse 01",
+      "postalCode": "10111",
+      "addressLocality": "Berlin"
     },
-    "economicOperator": "did:web:solarisbus.com"
+    "economicOperator": "did:web:exampleeconomicoperator.com"
   },
   "carbonFootprint": {
     "batteryCarbonFootprint": 0.20315,
@@ -58,14 +60,14 @@ Click here to open the JSON-LD file: [dbp.jsonld](https://dpp-vocabulary.spherit
   },
   "circularity": {
     "sourceForSpareParts": {
-      "nameOfSupplier": "Impact Clean Power Technology S.A.",
-      "emailAddressOfSupplier": "email:info@icpt.pl",
-      "supplierWebAddress": "https://impactnewenergy.com",
+      "nameOfSupplier": "Battery Manufactury ",
+      "emailAddressOfSupplier": "email:info@examplebatterymanufacturer.com",
+      "supplierWebAddress": "https://examplebatterymanufacturer.com",
       "addressOfSupplier": {
-        "addressCountry": "PL",
-        "addressStreet": "Przejazdowa 22",
-        "postalCode": "05-800",
-        "addressLocality": "Pruszków"
+        "addressCountry": "GE",
+        "addressStreet": "Musterstrasse 1",
+        "postalCode": "10111",
+        "addressLocality": "Berlin"
       }
     },
     "recycledContent": [
@@ -86,7 +88,7 @@ Click here to open the JSON-LD file: [dbp.jsonld](https://dpp-vocabulary.spherit
       }
     ],
     "safetyRequirements": {
-      "safetyInstructions": "https://files-vera.spherity.com/solaris/Safety%20measures.pdf",
+      "safetyInstructions": "https://examplebatterymanufacturer.com/Safety%20measures.pdf",
       "extinguishingAgent": "Class C"
     }
   },
@@ -216,18 +218,62 @@ Click here to open the JSON-LD file: [dbp.jsonld](https://dpp-vocabulary.spherit
     ]
   },
   "labelsAndCertification": {
-    "resultsOfTestReports": "https://files-vera.spherity.com/solaris/Test%20report.pdf",
+    "resultsOfTestReports": "https://examplebatterymanufacturer.com/Test%20report.pdf",
     "separateCollectionSymbol": "https://europa.eu/youreurope/business/images/icons/WEEE_symbol.png",
-    "euDeclarationOfConformity": "https://files-vera.spherity.com/solaris/EU%20declaration.pdf",
-    "meaningOfLabelsAndSymbols": "https://files-vera.spherity.com/solaris/Label%20explanation.pdf"
+    "euDeclarationOfConformity": "https://examplebatterymanufacturer.com/EU%20declaration.pdf",
+    "meaningOfLabelsAndSymbols": "https://examplebatterymanufacturer.com/Label%20explanation.pdf"
   },
   "dueDiligence": {
-    "supplyChainDueDiligenceReport": "https://www.solarisbus.com/public/assets/content/firma/esg/2023/Raport_Zrownowazonego_Rozwoju_2023_ENG.pdf",
-    "sustainabilityReport": "https://www.solarisbus.com/public/assets/content/firma/esg/2023/Raport_Zrownowazonego_Rozwoju_2023_ENG.pdf"
+    "supplyChainDueDiligenceReport": "https://examplebatterymanufacturer.com/supplyChainDueDiligenceReport_2023_ENG.pdf",
+    "sustainabilityReport": "https://examplebatterymanufacturer.com/sustainabilityReport_2023_ENG.pdf"
   }
 }
-
 ```
+### 3.2 PerformanceAndDurability
+
+```json
+{
+  "@context": "https://dpp-vocabulary.spherity.com/contexts/dbp/v1.jsonld",
+  "id": "did:web:examplebatterymanufacturer.com:dbp:0-00-12345-67890-5",
+  "type": "DigitalBatteryPassport",
+  "digitalBatteryPassportId": "did:web:examplebatterymanufacturer.com:dbp:0-00-12345-67890-5",
+  "technicalSpecification": {
+    "maximumVoltage": 749,
+    "minimumVoltage": 520,
+    "nominalVoltage": 660
+  },
+  "batteryLifetime": {
+    "ratedCapacity": 156,
+    "warrantyPeriod": 6,
+    "cRate": 0.4,
+    "expectedNumberOfCycles": 2347,
+    "capacityThresholdExhaustion": 80
+  },
+  "powerCapability": {
+    "maximumPermittedBatteryPower": 39000,
+    "originalPowerCapability": [
+      {
+        "atSoC": 80,
+        "powerCapabilityAt": 38000
+      }
+    ]
+  },
+  "internalResistance": {
+    "initialInternalResistancePack": 0.0015,
+    "currentInternalResistancePack": {
+      "currentInternalResistanceValue": 0.145,
+      "lastUpdate": "2024-11-07T15:45:00Z"
+    }
+  },
+  "temperatureConditions": {
+    "temperatureRangeIdleState": 85,
+    "timeExtremeHighTemp": 0,
+    "timeExtremeLowTemp": 0
+  }
+}
+```
+
+
 ## 4 Information Model
 
 The battery pass conists of a static `DigitalBatteryPassport` credential and a list of `PerformanceAndDurability` credentials which refer to the `DigitalBatteryPassport` credential. The `PerformanceAndDurability` credentials contain the dynamic lifetime data of the battery. The reference is defined in the property `digitalBatteryPassportId` of the referencing `PerformanceAndDurability` credential. 
@@ -1585,7 +1631,7 @@ Comprehensive report outlining the sustainability practices of the economic oper
 
 ### 6.2 Properties of PerformanceAndDurability
 
-##### 6.2.1 digitalBatteryPassportId {#PerformanceAndDurability_digitalBatteryPassportId}
+#### 6.2.1 digitalBatteryPassportId {#PerformanceAndDurability_digitalBatteryPassportId}
 
 The `digitalBatteryPassportId` property is a unique identifier for batteries within the Digital Battery Passport framework. This identifier allows for effective tracking, regulatory compliance, and ensures data consistency across records related to battery specifications and performance. It is an essential element for traceability within the digital ecosystem of battery data management.
 
@@ -1595,7 +1641,7 @@ The `digitalBatteryPassportId` property is a unique identifier for batteries wit
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_digitalBatteryPassportId        |
 | **Expected Value** | String                                                                                          |
 
-##### 6.2.2 powerCapability {#PerformanceAndDurability_powerCapability}
+#### 6.2.2 powerCapability {#PerformanceAndDurability_powerCapability}
 
 The `powerCapability` property encompasses data attributes related to a battery’s power performance and sustained delivery capacity. This property is essential for evaluating a battery's output under different states of charge and conditions.
 
@@ -1605,7 +1651,7 @@ The `powerCapability` property encompasses data attributes related to a battery�
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability                |
 | **Expected Value** | Object                                                                                          |
 
-###### 6.2.2.1 originalPowerCapability {#PerformanceAndDurability_powerCapability_originalPowerCapability}
+##### 6.2.2.1 originalPowerCapability {#PerformanceAndDurability_powerCapability_originalPowerCapability}
 
 The `originalPowerCapability` property defines the pre-use power capability of the battery, measured at 80% and 20% state of charge, as required by Battery Regulation Annex IV Part B.
 
@@ -1635,7 +1681,7 @@ The `powerCapabilityAt` property specifies the state of charge (SOC) at which th
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_originalPowerCapability_powerCapabilityAt              |
 | **Expected Value** | Number (percentage of charge, e.g., 80%)   |
 
-###### 6.2.2.2 remainingPowerCapability {#PerformanceAndDurability_powerCapability_remainingPowerCapability}
+##### 6.2.2.2 remainingPowerCapability {#PerformanceAndDurability_powerCapability_remainingPowerCapability}
 
 The `remainingPowerCapability` property captures the in-use power capability of a battery, reflecting real-time or updated performance metrics during its lifecycle.
 
@@ -1697,7 +1743,7 @@ The `lastUpdate` property specifies the most recent timestamp when the `remainin
 | **Expected Value** | String (formatted timestamp, e.g., "2024-11-07T15:45:00Z")                                      |
 
 
-###### 6.2.2.3 powerCapabilityFade {#PerformanceAndDurability_powerCapability_powerCapabilityFade}
+##### 6.2.2.3 powerCapabilityFade {#PerformanceAndDurability_powerCapability_powerCapabilityFade}
 
 The `powerCapabilityFade` property indicates the decline over time in the power output that a battery can sustain at its rated voltage.
 
@@ -1707,7 +1753,7 @@ The `powerCapabilityFade` property indicates the decline over time in the power 
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_powerCapabilityFade            |
 | **Expected Value** | Number                                                                                          |
 
-###### 6.2.2.4 maximumPermittedBatteryPower {#PerformanceAndDurability_powerCapability_maximumPermittedBatteryPower}
+##### 6.2.2.4 maximumPermittedBatteryPower {#PerformanceAndDurability_powerCapability_maximumPermittedBatteryPower}
 
 The `maximumPermittedBatteryPower` property specifies the highest power output the battery is rated for, including necessary safety and performance constraints.
 
@@ -1717,7 +1763,7 @@ The `maximumPermittedBatteryPower` property specifies the highest power output t
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_maximumPermittedBatteryPower   |
 | **Expected Value** | Number                                                                                          |
 
-###### 6.2.2.5 powerCapabilityRatio {#PerformanceAndDurability_powerCapability_powerCapabilityRatio}
+##### 6.2.2.5 powerCapabilityRatio {#PerformanceAndDurability_powerCapability_powerCapabilityRatio}
 
 The `powerCapabilityRatio` property defines the ratio of the allowed nominal power output (W) to the battery's energy capacity (Wh).
 
@@ -1727,7 +1773,7 @@ The `powerCapabilityRatio` property defines the ratio of the allowed nominal pow
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_powerCapabilityRatio           |
 | **Expected Value** | Number                                                                                          |
 
-##### 6.2.3 batteryLifetime {#PerformanceAndDurability_batteryLifetime}
+#### 6.2.3 batteryLifetime {#PerformanceAndDurability_batteryLifetime}
 
 The `batteryLifetime` property details the expected lifecycle of a battery, expressed in charge cycles and other relevant metrics. It helps determine the reliability and long-term usability of the battery.
 
@@ -1737,7 +1783,7 @@ The `batteryLifetime` property details the expected lifecycle of a battery, expr
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_batteryLifetime                |
 | **Expected Value** | Object                                                                                          |
 
-###### 6.2.3.1 lifetimeReferenceTest {#PerformanceAndDurability_batteryLifetime_lifetimeReferenceTest}
+##### 6.2.3.1 lifetimeReferenceTest {#PerformanceAndDurability_batteryLifetime_lifetimeReferenceTest}
 
 The `lifetimeReferenceTest` property provides details about the reference test used to determine the number of full discharge cycles.
 
@@ -1747,7 +1793,7 @@ The `lifetimeReferenceTest` property provides details about the reference test u
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_lifetimeReferenceTest          |
 | **Expected Value** | String                                                                                          |
 
-###### 6.2.3.2 energyThroughput {#PerformanceAndDurability_batteryLifetime_energyThroughput}
+##### 6.2.3.2 energyThroughput {#PerformanceAndDurability_batteryLifetime_energyThroughput}
 
 The `energyThroughput` property measures the total energy delivered by a battery over its lifetime.
 
@@ -1757,7 +1803,7 @@ The `energyThroughput` property measures the total energy delivered by a battery
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_energyThroughput               |
 | **Expected Value** | Number                                                                                          |
 
-###### 6.2.3.3 expectedNumberOfCycles {#PerformanceAndDurability_batteryLifetime_expectedNumberOfCycles}
+##### 6.2.3.3 expectedNumberOfCycles {#PerformanceAndDurability_batteryLifetime_expectedNumberOfCycles}
 
 The `expectedNumberOfCycles` property represents the anticipated battery lifespan in terms of the number of full charge/discharge cycles.
 
@@ -1767,7 +1813,7 @@ The `expectedNumberOfCycles` property represents the anticipated battery lifespa
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_expectedNumberOfCycles         |
 | **Expected Value** | Number                                                                                          |
 
-###### 6.2.3.4 cRate {#PerformanceAndDurability_batteryLifetime_cRate}
+##### 6.2.3.4 cRate {#PerformanceAndDurability_batteryLifetime_cRate}
 
 The `cRate` property defines the rate at which the battery is charged or discharged relative to its capacity.
 
@@ -1777,7 +1823,7 @@ The `cRate` property defines the rate at which the battery is charged or dischar
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_cRate                          |
 | **Expected Value** | Number                                                                                          |
 
-###### 6.2.3.5 capacityThroughput {#PerformanceAndDurability_batteryLifetime_capacityThroughput}
+##### 6.2.3.5 capacityThroughput {#PerformanceAndDurability_batteryLifetime_capacityThroughput}
 
 The `capacityThroughput` property records the total capacity a battery delivers throughout its operational life.
 
@@ -1787,7 +1833,7 @@ The `capacityThroughput` property records the total capacity a battery delivers 
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_capacityThroughput             |
 | **Expected Value** | Number                                                                                          |
 
-###### 6.2.3.6 capacityThresholdExhaustion {#PerformanceAndDurability_batteryLifetime_capacityThresholdExhaustion}
+##### 6.2.3.6 capacityThresholdExhaustion {#PerformanceAndDurability_batteryLifetime_capacityThresholdExhaustion}
 
 The `capacityThresholdExhaustion` property identifies the point at which the battery's capacity drops below a defined exhaustion level.
 
@@ -1797,7 +1843,7 @@ The `capacityThresholdExhaustion` property identifies the point at which the bat
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_capacityThresholdExhaustion    |
 | **Expected Value** | Number                                                                                          |
 
-###### 6.2.3.7 soceThresholdForExhaustion {#PerformanceAndDurability_batteryLifetime_soceThresholdForExhaustion}
+##### 6.2.3.7 soceThresholdForExhaustion {#PerformanceAndDurability_batteryLifetime_soceThresholdForExhaustion}
 
 The `soceThresholdForExhaustion` property is an indicator for when the state of certified energy (SOCE) drops below an operational level.
 
@@ -1807,7 +1853,7 @@ The `soceThresholdForExhaustion` property is an indicator for when the state of 
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_soceThresholdForExhaustion     |
 | **Expected Value** | Number                                                                                          |
 
-###### 6.2.3.8 warrantyPeriod {#PerformanceAndDurability_batteryLifetime_warrantyPeriod}
+##### 6.2.3.8 warrantyPeriod {#PerformanceAndDurability_batteryLifetime_warrantyPeriod}
 
 The `warrantyPeriod` property specifies the duration for which the battery is guaranteed to perform as expected under defined conditions. This period reflects the manufacturer's warranty and ensures accountability for the battery's performance within the specified time frame.
 
@@ -1817,7 +1863,7 @@ The `warrantyPeriod` property specifies the duration for which the battery is gu
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_warrantyPeriod                 |
 | **Expected Value** | Number                                                                                          |
 
-###### 6.2.3.9 putIntoService {#PerformanceAndDurability_batteryLifetime_putIntoService}
+##### 6.2.3.9 putIntoService {#PerformanceAndDurability_batteryLifetime_putIntoService}
 
 The `putIntoService` property records the date when the battery was initially placed into service.
 
@@ -1827,7 +1873,7 @@ The `putIntoService` property records the date when the battery was initially pl
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_putIntoService                 |
 | **Expected Value** | String (formatted timestamp)                                                                    |
 
-###### 6.2.3.10 ratedCapacity {#PerformanceAndDurability_batteryLifetime_ratedCapacity}
+##### 6.2.3.10 ratedCapacity {#PerformanceAndDurability_batteryLifetime_ratedCapacity}
 
 The `ratedCapacity` property defines the total ampere-hours (Ah) that can be withdrawn from a fully charged battery under specific conditions.
 
@@ -1837,7 +1883,7 @@ The `ratedCapacity` property defines the total ampere-hours (Ah) that can be wit
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_ratedCapacity                  |
 | **Expected Value** | Number                                                                                          |
 
-###### 6.2.3.11 numberOfFullCycles {#PerformanceAndDurability_batteryLifetime_numberOfFullCycles}
+##### 6.2.3.11 numberOfFullCycles {#PerformanceAndDurability_batteryLifetime_numberOfFullCycles}
 
 The `numberOfFullCycles` property provides information on the total number of complete charging and discharging cycles the battery has undergone.
 
@@ -1847,7 +1893,7 @@ The `numberOfFullCycles` property provides information on the total number of co
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_numberOfFullCycles             |
 | **Expected Value** | Number                                                                                          |
 
-##### 6.2.4 temperatureConditions {#PerformanceAndDurability_temperatureConditions}
+#### 6.2.4 temperatureConditions {#PerformanceAndDurability_temperatureConditions}
 
 The `temperatureConditions` property captures the temperature range that a battery can safely withstand while remaining functional.
 
@@ -1857,7 +1903,7 @@ The `temperatureConditions` property captures the temperature range that a batte
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_temperatureConditions          |
 | **Expected Value** | Object                                                                                          |
 
-###### 6.2.4.1 temperatureRangeIdleState {#PerformanceAndDurability_temperatureConditions_temperatureRangeIdleState}
+##### 6.2.4.1 temperatureRangeIdleState {#PerformanceAndDurability_temperatureConditions_temperatureRangeIdleState}
 
 The `temperatureRangeIdleState` property defines the upper and lower temperature range that the battery can safely endure while in an idle state.
 
@@ -1867,7 +1913,7 @@ The `temperatureRangeIdleState` property defines the upper and lower temperature
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_temperatureConditions_temperatureRangeIdleState      |
 | **Expected Value** | Number                                                                                          |
 
-###### 6.2.4.2 timeExtremeHighTemp {#PerformanceAndDurability_temperatureConditions_timeExtremeHighTemp}
+##### 6.2.4.2 timeExtremeHighTemp {#PerformanceAndDurability_temperatureConditions_timeExtremeHighTemp}
 
 The `timeExtremeHighTemp` property records the cumulative time a battery spends above the safe upper temperature boundary.
 
@@ -1877,7 +1923,7 @@ The `timeExtremeHighTemp` property records the cumulative time a battery spends 
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_temperatureConditions_timeExtremeHighTemp            |
 | **Expected Value** | Number                                                                                          |
 
-###### 6.2.4.3 timeExtremeLowTemp {#PerformanceAndDurability_temperatureConditions_timeExtremeLowTemp}
+##### 6.2.4.3 timeExtremeLowTemp {#PerformanceAndDurability_temperatureConditions_timeExtremeLowTemp}
 
 The `timeExtremeLowTemp` property tracks the cumulative time a battery spends below the safe lower temperature boundary.
 
@@ -1887,7 +1933,7 @@ The `timeExtremeLowTemp` property tracks the cumulative time a battery spends be
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_temperatureConditions_timeExtremeLowTemp             |
 | **Expected Value** | Number                                                                                          |
 
-##### 6.2.5 negativeEvents {#PerformanceAndDurability_negativeEvents}
+#### 6.2.5 negativeEvents {#PerformanceAndDurability_negativeEvents}
 
 The `negativeEvents` property provides a list of adverse occurrences that could impact the battery’s performance or safety.
 
@@ -1897,7 +1943,7 @@ The `negativeEvents` property provides a list of adverse occurrences that could 
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_negativeEvents                 |
 | **Expected Value** | Array of Strings                                                                                |
 
-##### 6.2.6 technicalSpecification {#PerformanceAndDurability_technicalSpecification}
+#### 6.2.6 technicalSpecification {#PerformanceAndDurability_technicalSpecification}
 
 The `technicalSpecification` property covers detailed technical attributes and ratings of the battery, such as voltage and capacity.
 
@@ -1907,7 +1953,7 @@ The `technicalSpecification` property covers detailed technical attributes and r
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification         |
 | **Expected Value** | Object                                                                                          |
 
-###### 6.2.6.1 stateOfCertifiedEnergy {#PerformanceAndDurability_technicalSpecification_stateOfCertifiedEnergy}
+##### 6.2.6.1 stateOfCertifiedEnergy {#PerformanceAndDurability_technicalSpecification_stateOfCertifiedEnergy}
 
 The `stateOfCertifiedEnergy` property measures the certified usable energy level of a battery, expressed as a percentage.
 
@@ -1917,7 +1963,7 @@ The `stateOfCertifiedEnergy` property measures the certified usable energy level
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_stateOfCertifiedEnergy         |
 | **Expected Value** | Number                                                                                          |
 
-###### 6.2.6.2 ubeCertified {#PerformanceAndDurability_technicalSpecification_ubeCertified}
+##### 6.2.6.2 ubeCertified {#PerformanceAndDurability_technicalSpecification_ubeCertified}
 
 The `ubeCertified` property specifies the energy a battery supplies as certified under defined conditions.
 
@@ -1927,7 +1973,7 @@ The `ubeCertified` property specifies the energy a battery supplies as certified
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_ubeCertified                   |
 | **Expected Value** | Number                                                                                          |
 
-###### 6.2.6.3 ubeRemaining {#PerformanceAndDurability_technicalSpecification_ubeRemaining}
+##### 6.2.6.3 ubeRemaining {#PerformanceAndDurability_technicalSpecification_ubeRemaining}
 
 The `ubeRemaining` property details the remaining energy of a battery as it continues its operational life, following certification.
 
@@ -1958,7 +2004,7 @@ The `lastUpdate` property records the most recent timestamp when the `ubeRemaini
 | **Expected Value** | String (formatted timestamp, e.g., "2024-11-07T15:45:00Z")                                   |
 
 
-###### 6.2.6.4 initialSelfDischarge {#PerformanceAndDurability_technicalSpecification_initialSelfDischarge}
+##### 6.2.6.4 initialSelfDischarge {#PerformanceAndDurability_technicalSpecification_initialSelfDischarge}
 
 The `initialSelfDischarge` property defines the initial rate of self-discharge of a battery in pre-use conditions.
 
@@ -1968,7 +2014,7 @@ The `initialSelfDischarge` property defines the initial rate of self-discharge o
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_initialSelfDischarge           |
 | **Expected Value** | Number                                                                                          |
 
-###### 6.2.6.5 remainingCapacity {#PerformanceAndDurability_technicalSpecification_remainingCapacity}
+##### 6.2.6.5 remainingCapacity {#PerformanceAndDurability_technicalSpecification_remainingCapacity}
 
 The `remainingCapacity` property captures the in-use capacity of the battery, aligning with its rated capacity.
 
@@ -1998,7 +2044,7 @@ The `lastUpdate` property records the most recent timestamp when the `remainingC
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_remainingCapacity_lastUpdate                 |
 | **Expected Value** | String (formatted timestamp, e.g., "2024-11-07T15:45:00Z")                                    |
 
-###### 6.2.6.6 capacityFade {#PerformanceAndDurability_technicalSpecification_capacityFade}
+##### 6.2.6.6 capacityFade {#PerformanceAndDurability_technicalSpecification_capacityFade}
 
 The `capacityFade` property represents the decline in the amount of charge a battery can deliver over time, compared to its original capacity.
 
@@ -2029,7 +2075,7 @@ The `lastUpdate` property records the most recent timestamp when the `capacityFa
 | **Expected Value** | String (formatted timestamp, e.g., "2024-11-07T15:45:00Z")                                    |
 
 
-###### 6.2.6.7 stateOfCharge {#PerformanceAndDurability_technicalSpecification_stateOfCharge}
+##### 6.2.6.7 stateOfCharge {#PerformanceAndDurability_technicalSpecification_stateOfCharge}
 
 The `stateOfCharge` property defines the percentage of remaining usable capacity in a battery.
 
@@ -2060,7 +2106,7 @@ The `lastUpdate` property records the most recent timestamp when the `stateOfCha
 | **Expected Value** | String (formatted timestamp, e.g., "2024-11-07T15:45:00Z")                                      |
 
 
-###### 6.2.6.8 nominalVoltage {#PerformanceAndDurability_technicalSpecification_nominalVoltage}
+##### 6.2.6.8 nominalVoltage {#PerformanceAndDurability_technicalSpecification_nominalVoltage}
 
 The `nominalVoltage` property indicates the voltage the battery is designed to maintain during its operation.
 
@@ -2072,7 +2118,7 @@ The `nominalVoltage` property indicates the voltage the battery is designed to m
 
 
 
-###### 6.2.6.9 minimumVoltage {#PerformanceAndDurability_technicalSpecification_minimumVoltage}
+##### 6.2.6.9 minimumVoltage {#PerformanceAndDurability_technicalSpecification_minimumVoltage}
 
 The `minimumVoltage` property specifies the lowest voltage level at which a battery can operate safely before discharge.
 
@@ -2082,7 +2128,7 @@ The `minimumVoltage` property specifies the lowest voltage level at which a batt
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_minimumVoltage                 |
 | **Expected Value** | Number                                                                                          |
 
-###### 6.2.6.10 maximumVoltage {#PerformanceAndDurability_technicalSpecification_maximumVoltage}
+##### 6.2.6.10 maximumVoltage {#PerformanceAndDurability_technicalSpecification_maximumVoltage}
 
 The `maximumVoltage` property defines the maximum voltage the battery can safely handle during its operation.
 
@@ -2092,7 +2138,7 @@ The `maximumVoltage` property defines the maximum voltage the battery can safely
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_maximumVoltage                 |
 | **Expected Value** | Number                                                                                          |
 
-##### 6.2.7 internalResistance {#PerformanceAndDurability_internalResistance}
+#### 6.2.7 internalResistance {#PerformanceAndDurability_internalResistance}
 
 The `internalResistance` property measures the resistance within the battery that impacts its efficiency and energy delivery.
 
@@ -2102,7 +2148,7 @@ The `internalResistance` property measures the resistance within the battery tha
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_internalResistance             |
 | **Expected Value** | Object                                                                                          |
 
-###### 6.2.7.1 initialInternalResistancePack {#PerformanceAndDurability_internalResistance_initialInternalResistancePack}
+##### 6.2.7.1 initialInternalResistancePack {#PerformanceAndDurability_internalResistance_initialInternalResistancePack}
 
 The `initialInternalResistancePack` property captures the resistance within the battery pack before usage.
 
@@ -2112,7 +2158,7 @@ The `initialInternalResistancePack` property captures the resistance within the 
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_internalResistance_initialInternalResistancePack  |
 | **Expected Value** | Number                                                                                          |
 
-###### 6.2.7.2 currentInternalResistancePack {#PerformanceAndDurability_internalResistance_currentInternalResistancePack}
+##### 6.2.7.2 currentInternalResistancePack {#PerformanceAndDurability_internalResistance_currentInternalResistancePack}
 
 The `currentInternalResistancePack` property records the present internal resistance at the pack level during use.
 
@@ -2143,7 +2189,7 @@ The `lastUpdate` property specifies the most recent timestamp when the `currentI
 | **Expected Value** | String (formatted timestamp, e.g., "2024-11-07T15:45:00Z")                                      |
 
 
-##### 6.2.8 roundtripEfficiency {#PerformanceAndDurability_roundtripEfficiency}
+#### 6.2.8 roundtripEfficiency {#PerformanceAndDurability_roundtripEfficiency}
 
 The `roundtripEfficiency` property measures how efficiently the battery can be charged and discharged, indicating the energy retention capability of the battery.
 
@@ -2153,7 +2199,7 @@ The `roundtripEfficiency` property measures how efficiently the battery can be c
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_roundtripEfficiency            |
 | **Expected Value** | Object                                                                                          |
 
-###### 6.2.8.1 initialSelfDischargingRate {#PerformanceAndDurability_roundtripEfficiency_initialSelfDischargingRate}
+##### 6.2.8.1 initialSelfDischargingRate {#PerformanceAndDurability_roundtripEfficiency_initialSelfDischargingRate}
 
 The `initialSelfDischargingRate` property identifies the initial rate of self-discharge for the battery when it is not in use.
 
@@ -2163,7 +2209,7 @@ The `initialSelfDischargingRate` property identifies the initial rate of self-di
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_roundtripEfficiency_initialSelfDischargingRate     |
 | **Expected Value** | Number                                                                                          |
 
-###### 6.2.8.2 currentSelfDischargingRate {#PerformanceAndDurability_roundtripEfficiency_currentSelfDischargingRate}
+##### 6.2.8.2 currentSelfDischargingRate {#PerformanceAndDurability_roundtripEfficiency_currentSelfDischargingRate}
 
 The `currentSelfDischargingRate` property indicates the current rate of self-discharge the battery experiences during its operational life.
 
@@ -2193,7 +2239,7 @@ The `lastUpdate` property specifies the most recent timestamp when the `currentS
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_roundtripEfficiency_currentSelfDischargingRate_lastUpdate                     |
 | **Expected Value** | String (formatted timestamp, e.g., "2024-11-07T15:45:00Z")                                      |
 
-##### 6.2.9 dynamicAttribute {#PerformanceAndDurability_dynamicAttribute}
+#### 6.2.9 dynamicAttribute {#PerformanceAndDurability_dynamicAttribute}
 
 The `dynamicAttribute` property captures attributes that change over time, such as the battery's state of charge and real-time performance metrics.
 
@@ -2203,7 +2249,7 @@ The `dynamicAttribute` property captures attributes that change over time, such 
 | **URL**            | https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_dynamicAttribute               |
 | **Expected Value** | Object                                                                                          |
 
-###### 6.2.9.1 lastUpdate {#PerformanceAndDurability_dynamicAttribute_lastUpdate}
+##### 6.2.9.1 lastUpdate {#PerformanceAndDurability_dynamicAttribute_lastUpdate}
 
 The `lastUpdate` property provides the timestamp of the last update to any dynamic attribute.
 
