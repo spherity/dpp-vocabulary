@@ -234,8 +234,8 @@ Click here to open the JSON-LD file: [dbp.jsonld](https://dpp-vocabulary.spherit
 ```json
 {
   "@context": "https://dpp-vocabulary.spherity.com/contexts/dbp/v1.jsonld",
-  "id": "did:web:examplebatterymanufacturer.com:dbp:0-00-12345-67890-5",
-  "type": "DigitalBatteryPassport",
+  "id": "urn:uuid:c531a8e3-7f33-43ad-a1ae-6f7df61daa64",
+  "type": "PerformanceAndDurability",
   "digitalBatteryPassportId": "did:web:examplebatterymanufacturer.com:dbp:0-00-12345-67890-5",
   "technicalSpecification": {
     "maximumVoltage": 749,
