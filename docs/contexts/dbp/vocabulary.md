@@ -6,7 +6,7 @@ title: Digital Battery Passport
 
 ## 1 Abstract
 
-This specification describes a vocabulary for asserting a digital battery pass (DBP). The semantic definitions for the battery pass are taken from [Battery Pass](https://thebatterypass.eu/). The vocabulary is intended to be used to define a battery pass as a credentialSubject of an W3C-Credentials [Verifiable Credentials Data Model v2.0](https://www.w3.org/TR/vc-data-model-2.0). It can be used together with enterprise credentials to get full verifiable battery passes. In this case properties linking to enterprises must be identifiers which allow authentication of the owner, e.g. DIDs.
+This specification describes a vocabulary for asserting the claims of a digital battery pass (DBP). The semantic definitions for the battery pass are taken from [Battery Pass](https://thebatterypass.eu/). The vocabulary is intended to be used to define a battery pass as a credentialSubject of W3C-Credentials following the [Verifiable Credentials Data Model v2.0](https://www.w3.org/TR/vc-data-model-2.0). It can be used together with enterprise credentials to get full verifiable battery passes. In this case properties linking to enterprises must be identifiers which allow authentication of the owner, e.g. DIDs.
 
 Click here to open the JSON-LD file: [dbp.jsonld](https://dpp-vocabulary.spherity.com/contexts/dbp/v1.jsonld)
 
@@ -276,7 +276,7 @@ Click here to open the JSON-LD file: [dbp.jsonld](https://dpp-vocabulary.spherit
 
 ## 4 Information Model
 
-The battery pass conists of a static `DigitalBatteryPassport` credential and a list of `PerformanceAndDurability` credentials which refer to the `DigitalBatteryPassport` credential. The `PerformanceAndDurability` credentials contain the dynamic lifetime data of the battery. The reference is defined in the property `digitalBatteryPassportId` of the referencing `PerformanceAndDurability` credential. 
+The battery pass conists of a static `DigitalBatteryPassport` credential and a list of `PerformanceAndDurability` credentials which refer to the `DigitalBatteryPassport` credential. The `PerformanceAndDurability` credentials contain the dynamic lifetime data of the battery. The reference is established by the property `digitalBatteryPassportId` of the `PerformanceAndDurability` credential which refers to the `id` of the `DigitalBatteryPassport` credential.  
 
 
 ```mermaid
@@ -285,27 +285,13 @@ classDiagram
     class DigitalBatteryPassport{
         <<credentialSubject>>
         id
-        generalInformation
-        carbonFootprint
-        circularity
-        materialComposition
-        labelsAndCertification
-        dueDiligence
     }
     class PerformanceAndDurability{
         <<credentialSubject>>
         digitalBatteryPassportId
-        powerCapability
-        batteryLifetime
-        temperatureConditions
-        negativeEvents
-        technicalSpecification
-        internalResistance
-        roundtripEfficiency
-        dynamicAttribute
     }
 
-    PerformanceAndDurability "1..n" o-- "1" DigitalBatteryPassport
+    PerformanceAndDurability "0..n" o-- "1" DigitalBatteryPassport
 ```
 
 ### 4.1 DigitalBatteryPassport
