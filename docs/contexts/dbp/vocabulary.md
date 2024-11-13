@@ -276,7 +276,7 @@ Click here to open the JSON-LD file: [dbp.jsonld](https://dpp-vocabulary.spherit
 
 ## 4 Information Model
 
-The battery pass conists of a static `DigitalBatteryPassport` credential and a list of `PerformanceAndDurability` credentials which refer to the `DigitalBatteryPassport` credential. The `PerformanceAndDurability` credentials contain the dynamic lifetime data of the battery. The reference is established by the property `digitalBatteryPassportId` of the `PerformanceAndDurability` credential which refers to the `id` of the `DigitalBatteryPassport` credential.  
+The battery pass consists of a static `DigitalBatteryPassport` credential and a list of `PerformanceAndDurability` credentials which refer to the `DigitalBatteryPassport` credential. The `PerformanceAndDurability` credentials contain the dynamic lifetime data of the battery. The reference is established by the property `digitalBatteryPassportId` of the `PerformanceAndDurability` credential which refers to the `id` of the `DigitalBatteryPassport` credential.  
 
 
 ```mermaid
@@ -2304,7 +2304,6 @@ The `Stationary` category is for batteries used in stationary applications, like
 |------------------|--------------------------------------------------------------------------------------|
 | **Term**         | Original                                                                             |
 | **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Original |
-| **Expected Value** | Set of alphanumeric strings                                                         |
 
 
 
@@ -2316,9 +2315,6 @@ The `Stationary` category is for batteries used in stationary applications, like
 |------------------|--------------------------------------------------------------------------------------|
 | **Term**         | Repurposed                                                                           |
 | **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Repurposed |
-| **Expected Value** | Set of alphanumeric strings                                                         |
-
-
 
 #### 7.2.3 Reused {#DigitalBatteryPassport_generalInformation_batteryStatus_Reused}
 
@@ -2328,9 +2324,6 @@ The `Stationary` category is for batteries used in stationary applications, like
 |------------------|--------------------------------------------------------------------------------------|
 | **Term**         | Reused                                                                               |
 | **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Reused |
-| **Expected Value** | Set of alphanumeric strings                                                         |
-
-
 
 #### 7.2.4 Remanufactured {#DigitalBatteryPassport_generalInformation_batteryStatus_Remanufactured}
 
@@ -2340,9 +2333,6 @@ The `Stationary` category is for batteries used in stationary applications, like
 |------------------|--------------------------------------------------------------------------------------|
 | **Term**         | Remanufactured                                                                       |
 | **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Remanufactured |
-| **Expected Value** | Set of alphanumeric strings                                                         |
-
-
 
 #### 7.2.5 Waste {#DigitalBatteryPassport_generalInformation_batteryStatus_Waste}
 
@@ -2352,11 +2342,8 @@ The `Stationary` category is for batteries used in stationary applications, like
 |------------------|--------------------------------------------------------------------------------------|
 | **Term**         | Waste                                                                                |
 | **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Waste |
-| **Expected Value** | Set of alphanumeric strings                                                         |
 
-
-
-### 7.3 LifeCycleStage {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage}
+### 7.3 LifeCycleStage
 
 The `LifeCycleStage` section breaks down the carbon footprint of the battery across different phases of its lifecycle. These stages include raw material extraction, production, distribution, and end-of-life recycling. Understanding emissions at each stage helps identify opportunities for reducing the overall carbon footprint of the battery.
 
@@ -2370,9 +2357,6 @@ The `RawMaterialExtraction` phase accounts for emissions produced during the ext
 |------------------|--------------------------------------------------------------------------------------|
 | **Term**         | RawMaterialExtraction                                                                |
 | **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_RawMaterialExtraction |
-| **Expected Value** | Numerical value representing kg of CO2 equivalent per unit of raw material extracted |
-
-
 
 #### 7.3.2 MainProduction {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_MainProduction}
 
@@ -2382,9 +2366,6 @@ The `MainProduction` phase covers emissions from manufacturing processes, includ
 |------------------|--------------------------------------------------------------------------------------|
 | **Term**         | MainProduction                                                                       |
 | **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_MainProduction |
-| **Expected Value** | Numerical value representing kg of CO2 equivalent from the manufacturing process    |
-
-
 
 #### 7.3.3 Distribution {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Distribution}
 
@@ -2394,9 +2375,6 @@ The `Distribution` phase includes emissions generated from the transportation an
 |------------------|--------------------------------------------------------------------------------------|
 | **Term**         | Distribution                                                                         |
 | **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Distribution |
-| **Expected Value** | Numerical value representing kg of CO2 equivalent from transportation and logistics |
-
-
 
 #### 7.3.4 Recycling {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Recycling}
 
@@ -2406,14 +2384,10 @@ The `Recycling` phase measures emissions related to the end-of-life management o
 |------------------|--------------------------------------------------------------------------------------|
 | **Term**         | Recycling                                                                            |
 | **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Recycling |
-| **Expected Value** | Numerical value representing kg of CO2 equivalent from recycling activities         |
 
-
-### 7.4 DocumentType {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_documentType}
+### 7.4 DocumentType
 
 The `DocumentType` section defines the various types of documentation associated with the carbon footprint of the battery. This documentation serves to validate the data and methodologies used in calculating the carbon emissions across the lifecycle stages of the battery.
-
-
 
 #### 7.4.1 BillOfMaterial {#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_BillOfMaterial}
 
@@ -2424,8 +2398,6 @@ The `BillOfMaterial` is a comprehensive list of all materials and components use
 | **Term**         | BillOfMaterial                                                                       |
 | **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_documentType_BillOfMaterial |
 
-
-
 #### 7.4.2 Model3D {#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_Model3D}
 
 The `Model3D` document provides a three-dimensional representation of the battery's design and components. This model can be used for simulations and analyses regarding material flows and emissions.
@@ -2434,8 +2406,6 @@ The `Model3D` document provides a three-dimensional representation of the batter
 |------------------|--------------------------------------------------------------------------------------|
 | **Term**         | Model3D                                                                              |
 | **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_documentType_Model3D |
-
-
 
 #### 7.4.3 DismantlingManual {#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_DismantlingManual}
 
@@ -2446,8 +2416,6 @@ The `DismantlingManual` outlines the procedures and guidelines for safely disass
 | **Term**         | DismantlingManual                                                                    |
 | **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_documentType_DismantlingManual |
 
-
-
 #### 7.4.4 RemovalManual {#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_RemovalManual}
 
 The `RemovalManual` provides instructions for safely removing the battery from its application or housing. This document ensures that disassembly is conducted without causing harm to the battery or surrounding components.
@@ -2456,8 +2424,6 @@ The `RemovalManual` provides instructions for safely removing the battery from i
 |------------------|--------------------------------------------------------------------------------------|
 | **Term**         | RemovalManual                                                                        |
 | **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_documentType_RemovalManual |
-
-
 
 #### 7.4.5 OtherManual {#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_OtherManual}
 
@@ -2468,8 +2434,6 @@ The `OtherManual` category encompasses any additional documentation related to t
 | **Term**         | OtherManual                                                                          |
 | **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_documentType_OtherManual |
 
-
-
 #### 7.4.6 Drawing {#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation_documentType_Drawing}
 
 The `Drawing` provides technical illustrations or schematics related to the battery design, including layout and assembly instructions. These documents are important for manufacturing and maintenance purposes.
@@ -2478,7 +2442,6 @@ The `Drawing` provides technical illustrations or schematics related to the batt
 |------------------|--------------------------------------------------------------------------------------|
 | **Term**         | Drawing                                                                               |
 | **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_documentType_Drawing |
-
 
 ### 7.5 RecycledMaterial
 
@@ -2520,11 +2483,9 @@ The `Lead` section details the specific recycled material used in the battery. L
 | **Term**         | Lead                                                                                 |
 | **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent_recycledMaterial_Lead |
 
-### 7.6 HazardousSubstanceClass {#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardSubstanceClass}
+### 7.6 HazardousSubstanceClass
 
 The `HazardousSubstanceClass` section categorizes the hazardous substances that may be present in the battery. These classifications help identify the potential risks associated with specific materials used in battery production, ensuring compliance with safety regulations and promoting responsible handling and disposal.
-
-
 
 #### 7.6.1 AcuteToxicity {#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceClass_AcuteToxicity}
 
@@ -2535,8 +2496,6 @@ The `AcuteToxicity` class includes substances that can cause harmful effects sho
 | **Term**         | AcuteToxicity                                                                        |
 | **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceClass_AcuteToxicity |
 
-
-
 #### 7.6.2 SkinCorrosionOrIrritation {#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceClass_SkinCorrosionOrIrritation}
 
 The `SkinCorrosionOrIrritation` class refers to substances that can cause damage to the skin or irritation upon contact. This classification is critical for developing safety guidelines and protective measures during manufacturing and use.
@@ -2545,8 +2504,6 @@ The `SkinCorrosionOrIrritation` class refers to substances that can cause damage
 |------------------|--------------------------------------------------------------------------------------|
 | **Term**         | SkinCorrosionOrIrritation                                                            |
 | **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceClass_SkinCorrosionOrIrritation |
-
-
 
 #### 7.6.3 EyeDamageOrIrritation {#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceClass_EyeDamageOrIrritation}
 
