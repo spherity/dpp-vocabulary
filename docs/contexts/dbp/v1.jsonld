@@ -133,30 +133,30 @@
                 "@version": 1.1,
                 "id": "@id",
                 "type": "@type",
-                "lifeCycleStage": {
-                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage",
+                "lifecycleStage": {
+                  "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifecycleStage",
                   "@type": "@vocab",
                   "@context": {
                     "@protected": true,
                     "id": "@id",
                     "type": "@type",
                     "RawMaterialExtraction": {
-                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_RawMaterialExtraction",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifecycleStage_RawMaterialExtraction",
                       "@type": "@id",
                       "@container": "@set"
                     },
                     "MainProduction": {
-                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_MainProduction",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifecycleStage_MainProduction",
                       "@type": "@id",
                       "@container": "@set"
                     },
                     "Distribution": {
-                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Distribution",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifecycleStage_Distribution",
                       "@type": "@id",
                       "@container": "@set"
                     },
                     "Recycling": {
-                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Recycling",
+                      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifecycleStage_Recycling",
                       "@type": "@id",
                       "@container": "@set"
                     }

@@ -40,19 +40,19 @@ Click here to open the JSON-LD file: [dbp.jsonld](https://dpp-vocabulary.spherit
     "batteryCarbonFootprint": 0.20315,
     "carbonFootprintPerLifecycleStage": [
       {
-        "lifeCycleStage": "RawMaterialExtraction",
+        "lifecycleStage": "RawMaterialExtraction",
         "carbonFootprint": 7.18
       },
       {
-        "lifeCycleStage": "MainProduction",
+        "lifecycleStage": "MainProduction",
         "carbonFootprint": 0.22
       },
       {
-        "lifeCycleStage": "Distribution",
+        "lifecycleStage": "Distribution",
         "carbonFootprint": 0.42
       },
       {
-        "lifeCycleStage": "Recycling",
+        "lifecycleStage": "Recycling",
         "carbonFootprint": 92.19
       }
     ],
@@ -2343,47 +2343,47 @@ The `Stationary` category is for batteries used in stationary applications, like
 | **Term**         | Waste                                                                                |
 | **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Waste |
 
-### 7.3 LifeCycleStage
+### 7.3 LifecycleStage
 
-The `LifeCycleStage` section breaks down the carbon footprint of the battery across different phases of its lifecycle. These stages include raw material extraction, production, distribution, and end-of-life recycling. Understanding emissions at each stage helps identify opportunities for reducing the overall carbon footprint of the battery.
+The `LifecycleStage` section breaks down the carbon footprint of the battery across different phases of its lifecycle. These stages include raw material extraction, production, distribution, and end-of-life recycling. Understanding emissions at each stage helps identify opportunities for reducing the overall carbon footprint of the battery.
 
 
 
-#### 7.3.1 RawMaterialExtraction {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_RawMaterialExtraction}
+#### 7.3.1 RawMaterialExtraction {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifecycleStage_RawMaterialExtraction}
 
 The `RawMaterialExtraction` phase accounts for emissions produced during the extraction and primary processing of raw materials, such as mining and refining essential elements like lithium, cobalt, and nickel. This stage is critical for assessing the environmental impact of sourcing raw materials.
 
-| **Key**          | **Value**                                                                            |
-|------------------|--------------------------------------------------------------------------------------|
-| **Term**         | RawMaterialExtraction                                                                |
-| **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_RawMaterialExtraction |
+| **Key**          | **Value**                                                                                                                                            |
+|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Term**         | RawMaterialExtraction                                                                                                                                |
+| **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifecycleStage_RawMaterialExtraction |
 
-#### 7.3.2 MainProduction {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_MainProduction}
+#### 7.3.2 MainProduction {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifecycleStage_MainProduction}
 
 The `MainProduction` phase covers emissions from manufacturing processes, including the assembly of battery cells and packs. This includes energy consumption and material usage, making it a significant contributor to the battery's carbon footprint.
 
-| **Key**          | **Value**                                                                            |
-|------------------|--------------------------------------------------------------------------------------|
-| **Term**         | MainProduction                                                                       |
-| **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_MainProduction |
+| **Key**          | **Value**                                                                                                                                     |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| **Term**         | MainProduction                                                                                                                                |
+| **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifecycleStage_MainProduction |
 
-#### 7.3.3 Distribution {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Distribution}
+#### 7.3.3 Distribution {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifecycleStage_Distribution}
 
 The `Distribution` phase includes emissions generated from the transportation and logistics involved in delivering batteries from the production facilities to end users or storage locations. This stage highlights the environmental impact of the supply chain.
 
-| **Key**          | **Value**                                                                            |
-|------------------|--------------------------------------------------------------------------------------|
-| **Term**         | Distribution                                                                         |
-| **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Distribution |
+| **Key**          | **Value**                                                                                                                                   |
+|------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| **Term**         | Distribution                                                                                                                                |
+| **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifecycleStage_Distribution |
 
-#### 7.3.4 Recycling {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Recycling}
+#### 7.3.4 Recycling {#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifecycleStage_Recycling}
 
 The `Recycling` phase measures emissions related to the end-of-life management of the battery, including the collection, dismantling, and processing of materials for reuse or disposal. Recycling efforts can significantly impact the overall carbon footprint of the battery lifecycle.
 
-| **Key**          | **Value**                                                                            |
-|------------------|--------------------------------------------------------------------------------------|
-| **Term**         | Recycling                                                                            |
-| **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifeCycleStage_Recycling |
+| **Key**          | **Value**                                                                                                                                |
+|------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| **Term**         | Recycling                                                                                                                                |
+| **URL**          | https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_carbonFootprint_carbonFootprintPerLifecycleStage_lifecycleStage_Recycling |
 
 ### 7.4 DocumentType
 
