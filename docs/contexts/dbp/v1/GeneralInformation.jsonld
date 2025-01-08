@@ -1,0 +1,115 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "id": "@id",
+    "type": "@type",
+    "DigitalBatteryPassportCertificate": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassportCertificate",
+    "GeneralInformation": {
+      "@protected": true,
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "productIdentifier": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_productIdentifier",
+          "@type": "@id"
+        },
+        "productPassportIdentifier": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_productPassportIdentifier",
+          "@type": "@id"
+        },
+        "batteryCategory": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory",
+          "@type": "@vocab",
+          "@context": {
+            "@protected": true,
+            "id": "@id",
+            "type": "@type",
+            "Lmt": {
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory_Lmt",
+              "@type": "@id",
+              "@container": "@set"
+            },
+            "Ev": {
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory_Ev",
+              "@type": "@id",
+              "@container": "@set"
+            },
+            "Industrial": {
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory_Industrial",
+              "@type": "@id",
+              "@container": "@set"
+            },
+            "Stationary": {
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryCategory_Stationary",
+              "@type": "@id",
+              "@container": "@set"
+            }
+          }
+        },
+        "manufacturerIdentification": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturerIdentification",
+          "@type": "@id"
+        },
+        "manufacturingDate": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturingDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "batteryStatus": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus",
+          "@type": "@vocab",
+          "@context": {
+            "@protected": true,
+            "id": "@id",
+            "type": "@type",
+            "Original": {
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Original",
+              "@type": "@id",
+              "@container": "@set"
+            },
+            "Repurposed": {
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Repurposed",
+              "@type": "@id",
+              "@container": "@set"
+            },
+            "Reused": {
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Reused",
+              "@type": "@id",
+              "@container": "@set"
+            },
+            "Remanufactured": {
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Remanufactured",
+              "@type": "@id",
+              "@container": "@set"
+            },
+            "Waste": {
+              "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryStatus_Waste",
+              "@type": "@id",
+              "@container": "@set"
+            }
+          }
+        },
+        "batteryWeight": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryWeight",
+        "manufacturingPlace": {
+          "@protected": true,
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturingPlace",
+          "@context": {
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "addressCountry": "https:/schema.org/addressCountry",
+            "addressStreet": "https:/schema.org/addressStreet",
+            "postalCode": "https:/schema.org/postalCode",
+            "addressLocality": "https:/schema.org/addressLocality"
+          }
+        },
+        "economicOperator": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_economicOperator",
+          "@type": "@id"
+        }
+      }
+    }
+  }
+}
