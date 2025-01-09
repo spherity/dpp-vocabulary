@@ -13,23 +13,26 @@
         "id": "@id",
         "type": "@type",
         "criticalRawMaterials": {
-          "@protected": true,
           "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_criticalRawMaterials",
-          "@container": "@list"
+          "@container": "@list",
+          "@protected": true
         },
         "hazardousSubstances": {
-          "@protected": true,
           "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances",
-          "@container": "@list"
+          "@container": "@list",
+          "@protected": true
         },
-        "productChemistry": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_productChemistry",
-        "batteryMaterials": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_batteryMaterials"
+        "batteryMaterials": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_batteryMaterials",
+          "@container": "@list",
+          "@protected": true
+        },
+        "productChemistry": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_productChemistry"
       }
     },
     "ProductChemistry": {
       "@protected": true,
       "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_productChemistry",
-      "type": "@type",
       "@context": {
         "@version": 1.1,
         "id": "@id",
@@ -38,10 +41,9 @@
         "clearName": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_productChemistry_clearName"
       }
     },
-    "BatteryMaterials": {
+    "BatteryMaterial": {
       "@protected": true,
       "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_batteryMaterials",
-      "type": "@type",
       "@context": {
         "@version": 1.1,
         "id": "@id",
@@ -55,7 +57,6 @@
     "BatteryMaterialLocation": {
       "@protected": true,
       "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_batteryMaterials_batteryMaterialLocation",
-      "type": "@type",
       "@context": {
         "@version": 1.1,
         "id": "@id",
@@ -67,7 +68,6 @@
     "HazardousSubstance": {
       "@protected": true,
       "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances",
-      "type": "@type",
       "@context": {
         "@version": 1.1,
         "id": "@id",
@@ -96,8 +96,12 @@
             }
           }
         },
+        "hazardousSubstanceImpact": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceImpact",
+          "@container": "@list",
+          "@protected": true
+        },
         "hazardousSubstanceConcentration": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceConcentration",
-        "hazardousSubstanceImpact": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceImpact",
         "hazardousSubstanceIdentifier": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceIdentifier",
         "hazardousSubstanceLocation": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceLocation",
         "hazardousSubstanceName": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceName"
@@ -106,7 +110,6 @@
     "HazardousSubstanceLocation": {
       "@protected": true,
       "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_materialComposition_hazardousSubstances_hazardousSubstanceLocation",
-      "type": "@type",
       "@context": {
         "@version": 1.1,
         "id": "@id",

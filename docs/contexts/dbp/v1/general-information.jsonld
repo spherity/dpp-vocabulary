@@ -102,7 +102,6 @@
     "ManufacturingPlace": {
       "@protected": true,
       "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturingPlace",
-      "type": "@type",
       "@context": {
         "@version": 1.1,
         "id": "@id",

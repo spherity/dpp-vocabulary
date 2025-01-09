@@ -12,8 +12,12 @@
         "@version": 1.1,
         "id": "@id",
         "type": "@type",
+        "sourceForSpareParts": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts",
+          "@protected": true,
+          "@container": "@list"
+        },
         "dismantlingAndRemovalInformation": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_dismantlingAndRemovalInformation",
-        "sourceForSpareParts": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts",
         "recycledContent": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent",
         "safetyRequirements": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_safetyRequirements",
         "endOfLifeInformation": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_endOfLifeInformation",
@@ -77,22 +81,14 @@
     "SourceForSpareParts": {
       "@protected": true,
       "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts",
-      "type": "@type",
       "@context": {
         "@version": 1.1,
         "id": "@id",
         "type": "@type",
-        "nameOfSupplier": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_nameOfSupplier",
         "components": {
           "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_components",
           "@type": "@id",
-          "@context": {
-            "@protected": true,
-            "id": "@id",
-            "type": "@type",
-            "partName": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_components_partName",
-            "partNumber": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_components_partNumber"
-          }
+          "@container": "@list"
         },
         "supplierWebAddress": {
           "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_supplierWebAddress",
@@ -102,25 +98,37 @@
           "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_emailAddressOfSupplier",
           "@type": "@id"
         },
-        "addressOfSupplier": {
-          "@protected": true,
-          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_addressOfSupplier",
-          "@context": {
-            "@version": 1.1,
-            "id": "@id",
-            "type": "@type",
-            "addressCountry": "https:/schema.org/addressCountry",
-            "addressStreet": "https:/schema.org/addressStreet",
-            "postalCode": "https:/schema.org/postalCode",
-            "addressLocality": "https:/schema.org/addressLocality"
-          }
-        }
+        "addressOfSupplier": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_addressOfSupplier",
+        "nameOfSupplier": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_nameOfSupplier"
+      }
+    },
+    "Component": {
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_components",
+      "@type": "@id",
+      "@context": {
+        "@protected": true,
+        "id": "@id",
+        "type": "@type",
+        "partName": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_components_partName",
+        "partNumber": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_components_partNumber"
+      }
+    },
+    "AddressOfSupplier": {
+      "@protected": true,
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_sourceForSpareParts_addressOfSupplier",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "addressCountry": "https:/schema.org/addressCountry",
+        "addressStreet": "https:/schema.org/addressStreet",
+        "postalCode": "https:/schema.org/postalCode",
+        "addressLocality": "https:/schema.org/addressLocality"
       }
     },
     "RecycledContent": {
       "@protected": true,
       "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_recycledContent",
-      "type": "@type",
       "@context": {
         "@version": 1.1,
         "id": "@id",
@@ -161,7 +169,6 @@
     "SafetyRequirements": {
       "@protected": true,
       "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_safetyRequirements",
-      "type": "@type",
       "@context": {
         "@version": 1.1,
         "id": "@id",
@@ -176,7 +183,6 @@
     "EndOfLifeInformation": {
       "@protected": true,
       "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_circularity_endOfLifeInformation",
-      "type": "@type",
       "@context": {
         "@version": 1.1,
         "id": "@id",
