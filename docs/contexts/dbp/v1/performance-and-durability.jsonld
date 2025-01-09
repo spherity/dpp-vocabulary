@@ -35,11 +35,13 @@
         "type": "@type",
         "originalPowerCapability": {
           "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_originalPowerCapability",
+          "@type": "@id",
           "@container": "@list",
           "@protected": true
         },
         "remainingPowerCapability": {
           "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_remainingPowerCapability",
+          "@type": "@id",
           "@container": "@list",
           "@protected": true
         },
