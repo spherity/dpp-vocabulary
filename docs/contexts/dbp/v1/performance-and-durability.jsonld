@@ -1,0 +1,266 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "id": "@id",
+    "type": "@type",
+    "DigitalBatteryPassportCertificate": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassportCertificate",
+    "PerformanceAndDurability": {
+      "@protected": true,
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "powerCapability": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability",
+        "batteryLifetime": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime",
+        "temperatureConditions": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_temperatureConditions",
+        "negativeEvents": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_negativeEvents",
+        "technicalSpecification": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification",
+        "internalResistance": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_internalResistance",
+        "roundtripEfficiency": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_roundtripEfficiency",
+        "dynamicAttribute": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_dynamicAttribute"
+      }
+    },
+    "PowerCapability": {
+      "@protected": true,
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability",
+      "type": "@type",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "originalPowerCapability": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_originalPowerCapability",
+        "remainingPowerCapability": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_remainingPowerCapability",
+        "powerCapabilityFade": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_powerCapabilityFade",
+        "maximumPermittedBatteryPower": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_maximumPermittedBatteryPower",
+        "powerCapabilityRatio": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_powerCapabilityRatio"
+      }
+    },
+    "OriginalPowerCapability": {
+      "@protected": true,
+      "type": "@type",
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_originalPowerCapability",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "atSoC": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_originalPowerCapability_atSoC",
+        "powerCapabilityAt": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_originalPowerCapability_powerCapabilityAt"
+      }
+    },
+    "RemainingPowerCapability": {
+      "@protected": true,
+      "type": "@type",
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_remainingPowerCapability",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "remainingPowerCapabilityValue": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_remainingPowerCapability_remainingPowerCapabilityValue",
+        "lastUpdate": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_remainingPowerCapability_lastUpdate",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      }
+    },
+    "RemainingPowerCapabilityValue": {
+      "@protected": true,
+      "type": "@type",
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_remainingPowerCapability_remainingPowerCapabilityValue",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "atSoC": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_remainingPowerCapability_remainingPowerCapabilityValue_atSoC",
+        "powerCapabilityAt": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_remainingPowerCapability_remainingPowerCapabilityValue_powerCapabilityAt",
+        "rPCLastUpdated": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_powerCapability_remainingPowerCapability_remainingPowerCapabilityValue_rPCLastUpdated",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      }
+    },
+    "BatteryLifetime": {
+      "@protected": true,
+      "type": "@type",
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "lifetimeReferenceTest": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_lifetimeReferenceTest",
+        "energyThroughput": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_energyThroughput",
+        "expectedNumberOfCycles": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_expectedNumberOfCycles",
+        "cRate": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_cRate",
+        "capacityThroughput": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_capacityThroughput",
+        "capacityThresholdExhaustion": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_capacityThresholdExhaustion",
+        "soceThresholdForExhaustion": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_soceThresholdForExhaustion",
+        "warrantyPeriod": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_warrantyPeriod",
+        "putIntoService": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_putIntoService",
+        "ratedCapacity": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_ratedCapacity",
+        "numberOfFullCycles": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_batteryLifetime_numberOfFullCycles"
+      }
+    },
+    "TemperatureConditions": {
+      "@protected": true,
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_temperatureConditions",
+      "type": "@type",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "temperatureRangeIdleState": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_temperatureConditions_temperatureRangeIdleState",
+        "timeExtremeHighTemp": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_temperatureConditions_timeExtremeHighTemp",
+        "timeExtremeLowTemp": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_temperatureConditions_timeExtremeLowTemp"
+      }
+    },
+    "TechnicalSpecification": {
+      "@protected": true,
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification",
+      "type": "@type",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "stateOfCertifiedEnergy": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_stateOfCertifiedEnergy",
+        "ubeCertified": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_ubeCertified",
+        "ubeRemaining": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_ubeRemaining",
+        "initialSelfDischarge": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_initialSelfDischarge",
+        "remainingCapacity": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_remainingCapacity",
+        "capacityFade": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_capacityFade",
+        "stateOfCharge": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_stateOfCharge",
+        "nominalVoltage": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_nominalVoltage",
+        "minimumVoltage": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_minimumVoltage",
+        "maximumVoltage": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_maximumVoltage"
+      }
+    },
+    "UbeRemaining": {
+      "@protected": true,
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_ubeRemaining",
+      "type": "@type",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "ubeRemainingValue": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_ubeRemaining_ubeRemainingValue",
+        "lastUpdate": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_ubeRemaining_lastUpdate",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      }
+    },
+    "RemainingCapacity": {
+      "@protected": true,
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_remainingCapacity",
+      "type": "@type",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "remainingCapacityValue": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_remainingCapacity_remainingCapacityValue",
+        "lastUpdate": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_remainingCapacity_lastUpdate",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      }
+    },
+    "CapacityFade": {
+      "@protected": true,
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_capacityFade",
+      "type": "@type",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "capacityFadeValue": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_capacityFade_capacityFadeValue",
+        "lastUpdate": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_capacityFade_lastUpdate",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      }
+    },
+    "StateOfCharge": {
+      "@protected": true,
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_stateOfCharge",
+      "type": "@type",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "stateOfChargeValue": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_stateOfCharge_stateOfChargeValue",
+        "lastUpdate": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_technicalSpecification_stateOfCharge_lastUpdate",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      }
+    },
+    "InternalResistance": {
+      "@protected": true,
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_internalResistance",
+      "type": "@type",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "initialInternalResistancePack": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_internalResistance_initialInternalResistancePack",
+        "currentInternalResistancePack": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_internalResistance_currentInternalResistancePack"
+      }
+    },
+    "CurrentInternalResistancePack": {
+      "@protected": true,
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_internalResistance_currentInternalResistancePack",
+      "type": "@type",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "currentInternalResistanceValue": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_internalResistance_currentInternalResistancePack_currentInternalResistanceValue",
+        "lastUpdate": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_internalResistance_currentInternalResistancePack_lastUpdate",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      }
+    },
+    "RoundtripEfficiency": {
+      "@protected": true,
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_roundtripEfficiency",
+      "type": "@type",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "initialSelfDischargingRate": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_roundtripEfficiency_initialSelfDischargingRate",
+        "currentSelfDischargingRate": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_roundtripEfficiency_currentSelfDischargingRate"
+      }
+    },
+    "CurrentSelfDischargingRate": {
+      "@protected": true,
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_roundtripEfficiency_currentSelfDischargingRate",
+      "type": "@type",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "currentSelfDischargingRateValue": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_roundtripEfficiency_currentSelfDischargingRate_currentSelfDischargingRateValue",
+        "lastUpdate": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_roundtripEfficiency_currentSelfDischargingRate_lastUpdate",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      }
+    },
+    "DynamicAttribute": {
+      "@protected": true,
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_dynamicAttribute",
+      "type": "@type",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "lastUpdate": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#PerformanceAndDurability_dynamicAttribute_lastUpdate",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      }
+    }
+  }
+}

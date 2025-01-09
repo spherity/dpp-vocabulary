@@ -91,24 +91,26 @@
             }
           }
         },
-        "batteryWeight": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryWeight",
-        "manufacturingPlace": {
-          "@protected": true,
-          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturingPlace",
-          "@context": {
-            "@version": 1.1,
-            "id": "@id",
-            "type": "@type",
-            "addressCountry": "https:/schema.org/addressCountry",
-            "addressStreet": "https:/schema.org/addressStreet",
-            "postalCode": "https:/schema.org/postalCode",
-            "addressLocality": "https:/schema.org/addressLocality"
-          }
-        },
         "economicOperator": {
           "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_economicOperator",
           "@type": "@id"
-        }
+        },
+        "batteryWeight": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_batteryWeight",
+        "manufacturingPlace": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturingPlace"
+      }
+    },
+    "ManufacturingPlace": {
+      "@protected": true,
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_generalInformation_manufacturingPlace",
+      "type": "@type",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "addressCountry": "https:/schema.org/addressCountry",
+        "addressStreet": "https:/schema.org/addressStreet",
+        "postalCode": "https:/schema.org/postalCode",
+        "addressLocality": "https:/schema.org/addressLocality"
       }
     }
   }

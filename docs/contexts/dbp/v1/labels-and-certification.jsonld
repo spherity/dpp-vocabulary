@@ -1,0 +1,56 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "id": "@id",
+    "type": "@type",
+    "DigitalBatteryPassportCertificate": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassportCertificate",
+    "LabelsAndCertification": {
+      "@protected": true,
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "resultOfTestReport": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_resultOfTestReport",
+          "@type": "@id"
+        },
+        "declarationOfConformity": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_declarationOfConformity",
+        "euDeclarationOfConformityId": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_euDeclarationOfConformityId",
+        "separateCollection": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_separateCollection",
+        "materialSymbols": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_materialSymbols"
+      }
+    },
+    "SeparateCollection": {
+      "@protected": true,
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_separateCollection",
+      "type": "@type",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "separateCollectionSymbol": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_separateCollection_separateCollectionSymbol",
+          "@type": "@id"
+        },
+        "separateCollectionDescription": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_separateCollection_separateCollectionDescription"
+      }
+    },
+    "MaterialSymbols": {
+      "@protected": true,
+      "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_materialSymbols",
+      "type": "@type",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "materialSymbol": {
+          "@id": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_materialSymbols_materialSymbol",
+          "@type": "@id"
+        },
+        "materialText": "https://dpp-vocabulary.spherity.com/dbp#DigitalBatteryPassport_labelsAndCertification_materialSymbols_materialText"
+      }
+    }
+  }
+}
