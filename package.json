@@ -9,8 +9,12 @@
   "name": "@spherity/dpp-vocabulary",
   "packageManager": "pnpm@9.11.0",
   "scripts": {
+    "webserver": "serve -l 3000 ./docs/contexts",
     "validate:jsonld": "node ./scripts/validate-jsonld.js",
     "validate:vocab-links": "node ./scripts/validate-vocab-links.js"
   },
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "devDependencies": {
+    "serve": "^14.2.5"
+  }
 }
