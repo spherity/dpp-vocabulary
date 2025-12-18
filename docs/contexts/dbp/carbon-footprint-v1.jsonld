@@ -19,7 +19,7 @@
     "carbonFootprintPerformanceClass": "bp:carbonFootprintPerformanceClass",
     "carbonFootprintPerLifecycleStage": {
       "@id": "bp:carbonFootprintPerLifecycleStage",
-      "@container": "@list"
+      "@container": "@set"
     },
     
     "url": "bp:url",
