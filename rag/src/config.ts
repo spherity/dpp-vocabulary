@@ -20,7 +20,7 @@ export const UPSTASH_VECTOR_REST_TOKEN: string | undefined =
 
 export const INPUT_DIR: string = process.env['INPUT_DIR']
   ? resolve(process.env['INPUT_DIR'])
-  : resolve(__dirname, '..', '..', 'dbp', 'v1.3', 'input');
+  : resolve(__dirname, 'resources');
 
 /** Max characters per chunk (~500 tokens, fits BAAI/bge-large-en-v1.5 512-token limit). */
 export const MAX_CHUNK_SIZE = 2000;

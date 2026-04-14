@@ -1,0 +1,22 @@
+{
+    "CELEX_32023R1542_EN_TXT (1).pdf": {
+        "regulation": "EU 2023/1542",
+        "industry": "batteries",
+        "productGroup": "electric-vehicle-batteries",
+        "jurisdiction": "EU",
+        "version": "1.3",
+        "documentType": "regulation",
+        "documentYear": "2023",
+        "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1542"
+    },
+    "2026_BatteryPass-Ready_DataAttributeLongList_v1.3.xlsx": {
+        "regulation": "EU 2023/1542",
+        "standard": "DIN DKE SPEC 99100:2025-02",
+        "industry": "batteries",
+        "productGroup": "electric-vehicle-batteries",
+        "jurisdiction": "EU",
+        "version": "1.3",
+        "documentType": "data-dictionary",
+        "documentYear": "2026"
+    }
+}

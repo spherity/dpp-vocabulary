@@ -4,10 +4,11 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-WG_CONF="${SCRIPT_DIR}/../fly-wireguard.conf"
+WG_CONF="${SCRIPT_DIR}/fly-wireguard.conf"
 
 if [[ ! -f "$WG_CONF" ]]; then
   echo "Error: WireGuard config not found at $WG_CONF"
+  echo "Generate it with: pnpm wg:config"
   exit 1
 fi
 

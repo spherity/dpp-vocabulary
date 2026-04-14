@@ -7,11 +7,12 @@
     "scripts": {
         "build": "tsc",
         "ingest": "node --import tsx/esm src/ingest.ts",
-        "query": "node --import tsx/esm src/query.ts",
         "typecheck": "tsc --noEmit",
+        "query": "node --import tsx/esm src/query.ts",
+        "reset": "node --import tsx/esm src/reset.ts",
+        "wg:config": "flyctl wireguard create spherity-vera fra rag-wg fly-wireguard.conf",
         "wg:ingest": "./wg-ingest.sh",
         "wg:query": "./wg-query.sh",
-        "reset": "node --import tsx/esm src/reset.ts",
         "wg:reset": "./wg-reset.sh"
     },
     "dependencies": {

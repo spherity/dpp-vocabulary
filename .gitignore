@@ -1,2 +1,16 @@
-node_modules
 public
+
+# Node
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+
+# Environment
+.env
+rag/.env
+
+# rag
+resources
+.env
+*.conf
+fly-wireguard.conf
