@@ -1,0 +1,1452 @@
+######################################################################
+# Copyright (c) 2025 Circulor GmbH on behalf of the Battery Pass Consortium
+#
+# See the NOTICE file(s) distributed with this work for additional
+# information regarding copyright ownership.
+#
+# This work is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by-nc/4.0/.
+#
+# SPDX-License-Identifier: CC-BY-NC-4.0
+#
+# Merged vocabulary combining all Battery Pass v0.2 modules:
+#   - CarbonFootprint        (CC BY-NC 4.0) urn:samm:io.BatteryPass.CarbonFootprint:1.2.0#
+#   - Circularity            (CC BY 4.0)    urn:samm:io.BatteryPass.Circularity:1.2.0#
+#   - GeneralProductInformation (CC BY-NC 4.0) urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#
+#   - Labels                 (CC BY-NC 4.0) urn:samm:io.BatteryPass.Labels:1.2.0#
+#   - MaterialComposition    (CC BY-NC 4.0) urn:samm:io.BatteryPass.MaterialComposition:1.2.0#
+#   - PerformanceAndDurability (CC BY 4.0)  urn:samm:io.BatteryPass.Performance:1.2.1#
+#   - SupplyChainDueDiligence (CC BY-NC 4.0) urn:samm:io.BatteryPass.SupplyChainDueDiligence:1.2.0#
+#######################################################################
+
+vocab:
+  - id: bp
+    value: https://dpp.vocabulary.spherity.dev/dbp/v0.2#
+
+prefix:
+  - id: unit
+    value: urn:samm:org.eclipse.esmf.samm:unit:2.1.0#
+
+  - id: schema
+    value: https://schema.org/
+
+  - id: jsonld
+    value: http://www.w3.org/ns/json-ld#
+
+ontology:
+  - property: dc:title
+    value: Battery Pass Ontology
+
+  - property: dc:description
+    value: |
+      Combined Battery Pass vocabulary covering all mandatory and optional data attributes required by REGULATION (EU) 2023/1542 (EU Battery Regulation) and DIN DKE Spec 99100. Modules included: Carbon Footprint, Circularity, General Product Information, Labels, Material Composition, Performance and Durability, Supply Chain Due Diligence.
+
+  - property: rdfs:seeAlso
+    value: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1542
+
+# =============================================================================
+# CLASSES
+# =============================================================================
+
+class:
+  # --- CarbonFootprint ---
+
+  - id: CarbonFootprintForBatteries
+    label: Carbon Footprint for Batteries
+    comment: |
+      The battery passport must contain carbon footprint per functional unit of the battery as declared in the battery carbon footprint declaration in accordance with the entry into force of the implementing acts on the format of declaration. Reference: REGULATION (EU) 2023/1542 aka EU Battery Regulation
+    see_also:
+      - label: EU Battery Regulation
+        url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1542
+
+  - id: CarbonFootprintPerLifecycleStageEntity
+    label: Carbon Footprint Per Lifecycle Stage Entity
+    comment: |
+      The carbon footprint of the battery as share of total Battery Carbon Footprint, differentiated per life cycle stage raw material extraction, main production, distribution and end of life and recycling.
+
+  - id: Unit
+    label: Unit
+    comment: Class for units of measurement
+
+  # --- Circularity ---
+
+  - id: Circularity
+    label: Circularity
+    comment: Battery circularity information including dismantling, spare parts, recycled content, safety measures, and end-of-life information.
+
+  - id: DismantlingandRemovalDocumentation
+    label: Dismantling and Removal Documentation
+    comment: |
+      Dismantling and Removal information, including at least: Exploded diagrams of the battery system/pack showing the location of battery cells, disassembly sequences, type and number of fastening techniques to be unlocked, tools required for disassembly, warnings if risk of damaging parts exists, amount of cells used and layout.
+
+  - id: SparePartSupplierEntity
+    label: Spare Part Supplier Entity
+    comment: |
+      The part numbers for components should be provided together with the postal address, e-mail address and web address of the sources for spare parts.
+
+  - id: RecycledContentEntity
+    label: Recycled Content Entity
+    comment: |
+      A battery passport must include recycled content information. The content information must include the percentage share of materials that have been recovered from battery manufacturing waste, for each battery model per year and per manufacturing plant.
+
+  - id: SafetyMeasuresEntity
+    label: Safety Measures Entity
+    comment: The safety measures should be provided via the instruction manual as URL linking to PDF.
+
+  - id: EndOfLifeInformationEntity
+    label: End Of Life Information Entity
+    comment: Information on end-of-life handling, waste prevention, and collection.
+
+  - id: PostalAddress
+    label: Postal Address
+    comment: A postal address.
+    see_also:
+      - label: schema.org PostalAddress
+        url: https://schema.org/PostalAddress
+
+  - id: ComponentEntity
+    label: Component Entity
+    comment: Component information including part name and number.
+
+  # --- GeneralProductInformation ---
+
+  - id: GeneralProductInformation
+    label: General Product Information
+    comment: General product information for battery passport including product identification, manufacturer information, manufacturing details, and battery category.
+
+  - id: ContactInformationEntity
+    label: Contact Information Entity
+    comment: Contact information including name, postal address, identifier, and optional email and web address.
+
+  - id: PostalAddressEntity
+    label: Postal Address Entity
+    comment: A postal address with country, postal code, and street address.
+    see_also:
+      - label: schema.org PostalAddress
+        url: https://schema.org/PostalAddress
+
+  # --- Labeling ---
+
+  - id: Labeling
+    label: Labeling
+    comment: Battery labeling information including declaration of conformity, test reports, and labels.
+
+  - id: LabelingEntity
+    label: Labeling Entity
+    comment: Entity for the definition of required battery labeling including symbol, meaning, and subject.
+
+  # --- MaterialComposition ---
+
+  - id: MaterialComposition
+    label: Material Composition
+    comment: Battery material composition including battery chemistry, battery materials, and hazardous substances.
+
+  - id: BatteryChemistryEntity
+    label: Battery Chemistry Entity
+    comment: |
+      Detailed composition, including materials used in the cathode, anode, and electrolyte. All common cells have two electrodes and an electrolyte. The specific combination of materials used to make these components is called 'chemistry'.
+
+  - id: BatteryMaterialEntity
+    label: Battery Material Entity
+    comment: Detailed composition, including materials used in the cathode, anode, and electrolyte.
+
+  - id: HazardousSubstanceEntity
+    label: Hazardous Substance Entity
+    comment: Hazardous substances contained in the battery other than mercury, cadmium or lead. Substance as a chemical element and its compounds in the natural state or the result of a manufacturing process.
+
+  - id: BatteryLocationEntity
+    label: Battery Location Entity
+    comment: Battery component that includes the material.
+
+  # --- PerformanceAndDurability ---
+
+  - id: PerformanceAndDurability
+    label: Performance and Durability
+    comment: Battery performance and durability information including technical properties and condition.
+
+  - id: BatteryTechnicalPropertiesEntity
+    label: Battery Technical Properties Entity
+    comment: Covers all capability related data attributes including rated capacity, power, energy, voltage ranges, internal resistance, and expected lifetime.
+
+  - id: BatteryConditionEntity
+    label: Battery Condition Entity
+    comment: Covers all battery lifetime relevant properties including energy throughput, capacity fade, number of cycles, state of charge, and temperature information.
+
+  - id: PowerCapabilityAtEntity
+    label: Power Capability At Entity
+    comment: Power capability measurement at specific state of charge percentage.
+
+  - id: InternalResistanceEntity
+    label: Internal Resistance Entity
+    comment: Internal resistance measurement for battery pack, module, or cell level.
+
+  - id: TemperatureRangeType
+    label: Temperature Range Type
+    comment: Temperature range with minimum and maximum boundaries.
+
+  - id: CapacityThroughputEntity
+    label: Capacity Throughput Entity
+    comment: Capacity throughput value with last update timestamp.
+
+  - id: NumberOfFullCyclesEntity
+    label: Number Of Full Cycles Entity
+    comment: Number of full cycles value with last update timestamp.
+
+  - id: StateOfCertifiedEnergyEntity
+    label: State Of Certified Energy Entity
+    comment: State of certified energy value with last update timestamp.
+
+  - id: CapacityFadeEntity
+    label: Capacity Fade Entity
+    comment: Capacity fade value with last update timestamp.
+
+  - id: RemainingEnergyEntity
+    label: Remaining Energy Entity
+    comment: Remaining energy value with last update timestamp.
+
+  - id: RemainingCapacityEntity
+    label: Remaining Capacity Entity
+    comment: Remaining capacity value with last update timestamp.
+
+  - id: NegativeEventEntity
+    label: Negative Event Entity
+    comment: Information about negative events such as accidents.
+
+  - id: TemperatureConditionsEntity
+    label: Temperature Conditions Entity
+    comment: Temperature condition information including time spent in extreme temperatures.
+
+  - id: RemainingPowerCapabilityEntity
+    label: Remaining Power Capability Entity
+    comment: Remaining power capability value with timestamp.
+
+  - id: EvolutionOfSelfDischargeEntity
+    label: Evolution Of Self Discharge Entity
+    comment: Evolution of self discharge value.
+
+  - id: CurrentSelfDischargingRateEntity
+    label: Current Self Discharging Rate Entity
+    comment: Current self discharging rate value with last update timestamp.
+
+  - id: InternalResistanceIncreaseEntity
+    label: Internal Resistance Increase Entity
+    comment: Internal resistance increase value with last update timestamp and battery component level.
+
+  - id: RemainingRoundTripEnergyEfficiencyEntity
+    label: Remaining Round Trip Energy Efficiency Entity
+    comment: Remaining round trip energy efficiency value with last update timestamp.
+
+  - id: StateOfChargeEntity
+    label: State Of Charge Entity
+    comment: State of charge value with last update timestamp.
+
+  - id: RemainingPowerCapabilityDynamicAt
+    label: Remaining Power Capability Dynamic At
+    comment: Remaining power capability extending PowerCapabilityAtEntity with timestamp.
+
+  # --- SupplyChainDueDiligence ---
+
+  - id: SupplyChainDueDiligence
+    label: Supply Chain Due Diligence
+    comment: Battery supply chain due diligence information including responsible sourcing reports and third-party assurances.
+
+  # --- DPP Metadata ---
+
+  - id: DPPStaticMetadata
+    label: DPP Static Metadata
+    comment: Static Digital Product Passport metadata as defined in JTC-24 prEN_18223. These attributes are set at issuance and describe the structure and granularity of the DPP record itself.
+    see_also:
+      - label: JTC-24 prEN_18223
+        url: https://www.din.de/en/getting-involved/standards-committees/nid/european-projects/wdc-proj:din21:355350326
+
+  - id: DPPStatus
+    label: DPP Status
+    comment: Dynamic lifecycle state of the Digital Product Passport record. This attribute changes over the DPP lifecycle independently of the static product data.
+    see_also:
+      - label: JTC-24 prEN_18223
+        url: https://www.din.de/en/getting-involved/standards-committees/nid/european-projects/wdc-proj:din21:355350326
+
+  - id: DPPLastUpdated
+    label: DPP Last Updated
+    comment: Dynamic timestamp recording when the Digital Product Passport record was most recently updated. Changes independently of static product data over the DPP lifecycle.
+    see_also:
+      - label: JTC-24 prEN_18223
+        url: https://www.din.de/en/getting-involved/standards-committees/nid/european-projects/wdc-proj:din21:355350326
+
+# =============================================================================
+# DATATYPES
+# =============================================================================
+
+datatype:
+  # --- CarbonFootprint ---
+
+  - id: LifecycleStageDatatype
+    label: Lifecycle Stage
+    upper_value: xsd:string
+    one_of: [RawMaterialExtraction, MainProduction, Distribution, EndOfLifeAndRecycling]
+    comment: Enumeration of battery lifecycle stages as string values
+
+  # --- Circularity ---
+
+  - id: DocumentTypeDatatype
+    label: Document Type
+    upper_value: xsd:string
+    one_of: [BillOfMaterial, Model3D, DismantlingManual, RemovalManual, OtherManual, Drawing]
+    comment: Enumeration of document types
+
+  - id: RecycledMaterialDatatype
+    label: Recycled Material
+    upper_value: xsd:string
+    one_of: [Cobalt, Nickel, Lithium, Lead]
+    comment: Enumeration of recyclable materials
+
+  - id: EmailAddressDatatype
+    label: Email Address
+    upper_value: xsd:string
+    pattern: "^[\\w.-]+@[\\w.-]+\\.[A-Za-z]{2,}$"
+    comment: Valid email address format
+
+  - id: PercentageDatatype
+    label: Percentage
+    upper_value: xsd:float
+    comment: Percentage value between 0 and 100
+
+  # --- GeneralProductInformation ---
+
+  - id: BatteryCategoryDatatype
+    label: Battery Category
+    upper_value: xsd:string
+    one_of: [lmt, ev, industrial, stationary]
+    comment: Enumeration of battery categories
+
+  - id: BatteryStatusDatatype
+    label: Battery Status
+    upper_value: xsd:string
+    one_of: [Original, Repurposed, Reused, Remanufactured, Waste]
+    comment: Lifecycle status enumeration
+
+  - id: BatteryPassportIdentifierDatatype
+    label: Battery Passport Identifier
+    upper_value: xsd:string
+    pattern: "^urn:[a-z0-9]+:[a-z0-9]+$"
+    comment: URN format identifier for battery passport
+
+  - id: DPPStatusDatatype
+    label: DPP Status
+    upper_value: xsd:string
+    one_of: [Active, Archived, Inactive, Marked-for-deletion]
+    comment: Lifecycle status of the Digital Product Passport
+
+  # --- Labeling ---
+
+  - id: LabelingSubjectDatatype
+    label: Labeling Subject
+    upper_value: xsd:string
+    one_of: [SeparateCollection, CadmiumAndLead, CarbonFootprint, ExtinguishingAgent]
+    comment: Enumeration of labeling subjects
+
+  # --- MaterialComposition ---
+
+  - id: HazardousSubstanceClassDatatype
+    label: Hazardous Substance Class
+    upper_value: xsd:string
+    one_of: [AcuteToxicity, SkinCorrosionOrIrritation, EyeDamageOrIrritation, RespiratoryOrSkinSensitisation, GermCellMutagenicity, Carcinogenicity, ReproductiveToxicity, SpecificTargetOrganToxicitySingleExposure, SpecificTargetOrganToxicityRepeatedExposure, AspirationHazard, AquaticToxicityAcute, AquaticToxicityChronic]
+    comment: Enumeration of CLP hazard classes per Regulation (EC) No 1272/2008
+
+  - id: BatteryComponentTypeDatatype
+    label: Battery Component Type
+    upper_value: xsd:string
+    one_of: [Cathode, Anode, Electrolyte, Cell, Module, Pack, Other]
+    comment: Enumeration of battery component types
+
+  - id: CASNumberDatatype
+    label: CAS Number
+    upper_value: xsd:string
+    pattern: "^\\d{2,7}-\\d{2}-\\d{1}$"
+    comment: Chemical Abstracts Service (CAS) Registry Number format
+
+  # --- PerformanceAndDurability ---
+
+  - id: BatteryComponentDatatype
+    label: Battery Component
+    upper_value: xsd:string
+    one_of: [pack, module, cell]
+    comment: Enumeration of battery component levels
+
+  - id: TemperatureConstraintDatatype
+    label: Temperature Constraint
+    upper_value: xsd:double
+    comment: Temperature range constraint between -100 and 200 degrees Celsius
+
+# =============================================================================
+# PROPERTIES
+# =============================================================================
+
+property:
+  # --- CarbonFootprint ---
+
+  - id: batteryCarbonFootprint
+    label: battery carbon footprint
+    domain: bp:CarbonFootprintForBatteries
+    range: xsd:double
+    comment: |
+      The carbon footprint of the battery, calculated as kg of carbon dioxide equivalent per one kWh of the total energy provided by the battery over its expected service life, as declared in the Carbon Footprint Declaration. DIN DKE Spec 99100 chapter reference: 6.3.2
+
+  - id: carbonFootprintPerformanceClass
+    label: carbon footprint performance class
+    domain: bp:CarbonFootprintForBatteries
+    range: xsd:string
+    comment: |
+      The carbon footprint performance class that the relevant battery model per manufacturing plant corresponds to. DIN DKE Spec 99100 chapter reference: 6.3.7
+
+  - id: carbonFootprintStudy
+    label: carbon footprint study
+    domain: bp:CarbonFootprintForBatteries
+    range: xsd:anyURI
+    comment: |
+      A web link to get access to a public version of the study supporting the carbon footprint values. DIN DKE Spec 99100 chapter reference: 6.3.8
+
+  - id: absoluteCarbonFootprint
+    label: absolute carbon footprint
+    domain: bp:CarbonFootprintForBatteries
+    range: xsd:integer
+    comment: |
+      As a non-mandatory data attribute, the battery passport should include the battery carbon footprint in absolute terms. The absolute battery carbon footprint should be calculated as kilograms of carbon dioxide equivalent, without reference to the functional unit as prescribed by the battery regulation. DIN DKE Spec 99100 chapter reference: 6.3.10
+
+  - id: carbonFootprintPerLifecycleStage
+    label: carbon footprint per lifecycle stage
+    domain: bp:CarbonFootprintForBatteries
+    range: bp:CarbonFootprintPerLifecycleStageEntity
+    comment: |
+      The carbon footprint of the battery as share of total Battery Carbon Footprint, differentiated per life cycle stages raw material extraction, battery production, distribution and recycling. DIN DKE Spec 99100 chapter reference: 6.3.3: Raw material extraction; 6.3.4: Main production; 6.3.5: Distribution; 6.3.6: EoL/Recycling
+
+  - id: carbonFootprint
+    label: carbon footprint
+    domain: bp:CarbonFootprintPerLifecycleStageEntity
+    range: xsd:double
+    comment: |
+      Carbon footprint of the individual lifecycle stage
+
+  - id: lifecycleStage
+    label: lifecycle stage
+    domain: bp:CarbonFootprintPerLifecycleStageEntity
+    range: bp:LifecycleStageDatatype
+    comment: |
+      The description of the life cycle stage
+
+  - id: hasUnit
+    label: has unit
+    range: bp:Unit
+    comment: |
+      Specifies the unit of measurement for a property
+
+  - id: symbol
+    label: symbol
+    domain: bp:Unit
+    range: xsd:string
+    comment: Symbol representation of the unit
+
+  - id: commonCode
+    label: common code
+    domain: bp:Unit
+    range: xsd:string
+    comment: Common code representation of the unit
+
+  - id: referenceUnit
+    label: reference unit
+    domain: bp:Unit
+    comment: Reference to a standard unit definition
+
+  # --- Circularity ---
+
+  - id: dismantlingAndRemovalInformation
+    label: dismantling and removal information
+    domain: bp:Circularity
+    range: bp:DismantlingandRemovalDocumentation
+    comment: |
+      Dismantling and Removal information. DIN DKE Spec 99100 chapter reference: 6.6.1.2
+
+  - id: sparePartSources
+    label: spare part sources
+    domain: bp:Circularity
+    range: bp:SparePartSupplierEntity
+    comment: |
+      Contact details of sources for replacement spares. DIN DKE Spec 99100 chapter reference: 6.6.1.3 - 6.6.1.4
+
+  - id: recycledContent
+    label: recycled content
+    domain: bp:Circularity
+    range: bp:RecycledContentEntity
+    comment: |
+      Share of material recovered from waste present in active materials for each battery model per year and per manufacturing plant. DIN DKE Spec 99100 chapter reference: 6.6.2.3 - 6.6.2.10
+
+  - id: safetyMeasures
+    label: safety measures
+    domain: bp:Circularity
+    range: bp:SafetyMeasuresEntity
+    comment: |
+      Safety measures and instructions should also take past negative and extreme events as well as the separate data attributes 'battery status' and 'battery composition/chemistry' into account. DIN DKE Spec 99100 chapter reference: 6.6.1.5
+
+  - id: endOfLifeInformation
+    label: end of life information
+    domain: bp:Circularity
+    range: bp:EndOfLifeInformationEntity
+    comment: |
+      Producer or producer responsibility organisations shall make information available to distributors and end-users on the role of end-users in contributing to waste prevention. DIN DKE Spec 99100 chapter reference: 6.6.3.2 - 6.6.3.4
+
+  - id: addressOfSupplier
+    label: address of supplier
+    domain: bp:SparePartSupplierEntity
+    range: bp:PostalAddress
+    comment: Postal address of supplier for spare parts.
+
+  - id: components
+    label: components
+    domain: bp:SparePartSupplierEntity
+    range: bp:ComponentEntity
+    comment: Components available at supplier
+
+  - id: renewableContent
+    label: renewable content
+    domain: bp:Circularity
+    range: xsd:float
+    comment: |
+      Share of renewable material content. A renewable material is a material made of natural resources that can be replenished. DIN DKE Spec 99100 chapter reference: 6.6.2.11
+
+  - id: documentType
+    label: document type
+    domain: bp:DismantlingandRemovalDocumentation
+    range: bp:DocumentTypeDatatype
+    comment: Describes type for document e.g. Dismantling manual
+
+  - id: mimeType
+    label: mime type
+    domain: bp:DismantlingandRemovalDocumentation
+    range: xsd:string
+    comment: Defines internet media type to determine how to interpret the documentURL
+
+  - id: documentURL
+    label: document URL
+    domain: bp:DismantlingandRemovalDocumentation
+    range: xsd:anyURI
+    comment: Link to document
+
+  - id: nameOfSupplier
+    label: name of supplier
+    domain: bp:SparePartSupplierEntity
+    range: xsd:string
+    comment: Name of Supplier
+
+  - id: emailAddressOfSupplier
+    label: email address of supplier
+    domain: bp:SparePartSupplierEntity
+    range: bp:EmailAddressDatatype
+    comment: E-mail address of supplier for spare parts.
+
+  - id: supplierWebAddress
+    label: supplier web address
+    domain: bp:SparePartSupplierEntity
+    range: xsd:anyURI
+    comment: Web address of supplier for spare parts.
+
+  - id: preConsumerShare
+    label: pre consumer share
+    domain: bp:RecycledContentEntity
+    range: xsd:float
+    comment: |
+      Recycled material share from pre-consumer waste (manufacturing waste, excluding run-around scrap) of the active material.
+
+  - id: recycledMaterial
+    label: recycled material
+    domain: bp:RecycledContentEntity
+    range: bp:RecycledMaterialDatatype
+    comment: Name of recycled material
+
+  - id: postConsumerShare
+    label: post consumer share
+    domain: bp:RecycledContentEntity
+    range: xsd:float
+    comment: |
+      Recycled material share from post-consumer waste (end-of-life scrap) of the active material.
+
+  - id: safetyInstructions
+    label: safety instructions
+    domain: bp:SafetyMeasuresEntity
+    range: xsd:anyURI
+    comment: |
+      Safety measures and necessary safety instructions to handle waste batteries, including in relation to the risks associated with, and the handling of, batteries containing lithium.
+
+  - id: extinguishingAgent
+    label: extinguishing agent
+    domain: bp:SafetyMeasuresEntity
+    range: xsd:string
+    comment: Usable extinguishing agents referring to classes of extinguishers (A, B, C, D, K).
+
+  - id: wastePrevention
+    label: waste prevention
+    domain: bp:EndOfLifeInformationEntity
+    range: xsd:anyURI
+    comment: |
+      Prevention and management of waste batteries: Information on the role of end-users in contributing to waste prevention.
+
+  - id: separateCollection
+    label: separate collection
+    domain: bp:EndOfLifeInformationEntity
+    range: xsd:anyURI
+    comment: |
+      Prevention and management of waste batteries: Information on the role of end-users in contributing to the separate collection of waste batteries.
+
+  - id: informationOnCollection
+    label: information on collection
+    domain: bp:EndOfLifeInformationEntity
+    range: xsd:anyURI
+    comment: |
+      Prevention and management of waste batteries: Information on the separate collection, the take back, the collection points.
+
+  - id: addressCountry
+    label: address country
+    domain: bp:PostalAddress
+    range: xsd:string
+    comment: The country. For example, Germany or DE.
+    see_also:
+      - label: schema.org addressCountry
+        url: https://schema.org/addressCountry
+
+  - id: postalCode
+    label: postal code
+    domain: bp:PostalAddress
+    range: xsd:string
+    comment: The postal code. For example, DE-10719 or 10719.
+    see_also:
+      - label: schema.org postalCode
+        url: https://schema.org/postalCode
+
+  - id: streetAddress
+    label: street address
+    domain: bp:PostalAddress
+    range: xsd:string
+    comment: The street address. For example, Street 1 or Hindenburgstr. 10.
+    see_also:
+      - label: schema.org streetAddress
+        url: https://schema.org/streetAddress
+
+  - id: partName
+    label: part name
+    domain: bp:ComponentEntity
+    range: xsd:string
+    comment: Name of the component part.
+
+  - id: partNumber
+    label: part number
+    domain: bp:ComponentEntity
+    range: xsd:string
+    comment: Part Number of Component
+
+  # --- GeneralProductInformation ---
+
+  - id: manufacturerInformation
+    label: manufacturer information
+    domain: bp:GeneralProductInformation
+    range: bp:ContactInformationEntity
+    comment: |
+      Unambiguous identification of the manufacturer of the battery, suggested via a unique operator identifier. DIN DKE Spec chapter reference: 6.1.2.4
+
+  - id: operatorInformation
+    label: operator information
+    domain: bp:GeneralProductInformation
+    range: bp:ContactInformationEntity
+    comment: |
+      State the name, trade name or mark, postal address, web address, e-mail address. DIN DKE Spec chapter reference: 6.1.2.3
+
+  - id: economicOperatorIdentifier
+    label: economic operator identifier
+    domain: bp:GeneralProductInformation
+    range: xsd:string
+    comment: |
+      Unique identifier of the economic operator responsible for placing the battery on the market. DIN DKE Spec chapter reference: 6.1.2.3
+
+  - id: manufacturerIdentifier
+    label: manufacturer identifier
+    domain: bp:GeneralProductInformation
+    range: xsd:string
+    comment: |
+      Unique identifier of the manufacturer of the battery. DIN DKE Spec chapter reference: 6.1.2.4
+
+  - id: manufacturingPlace
+    label: manufacturing place
+    domain: bp:GeneralProductInformation
+    range: bp:PostalAddressEntity
+    comment: |
+      Unambiguous identification of the manufacturing facility. DIN DKE Spec chapter reference: 6.1.3.1
+    see_also:
+      - label: schema.org PostalAddress
+        url: https://schema.org/PostalAddress
+
+  - id: postalAddress
+    label: postal address
+    domain: bp:ContactInformationEntity
+    range: bp:PostalAddressEntity
+    comment: Postal address of the contact.
+
+  - id: productIdentifier
+    label: product identifier
+    domain: bp:GeneralProductInformation
+    range: xsd:string
+    comment: |
+      Unique identifier allowing for the unambiguous identification of each individual battery and hence each corresponding battery passport. DIN DKE Spec chapter reference: 6.1.2.2
+
+  - id: batteryPassportIdentifier
+    label: battery passport identifier
+    domain: bp:GeneralProductInformation
+    range: bp:BatteryPassportIdentifierDatatype
+    comment: |
+      Unique identifier allowing for the unambiguous identification of each individual battery and hence each corresponding battery passport.
+
+  - id: batteryCategory
+    label: battery category
+    domain: bp:GeneralProductInformation
+    range: bp:BatteryCategoryDatatype
+    comment: |
+      Categories relevant for the battery passport: LMT battery, electric vehicle battery, stationary or other industrial battery >2kWh. DIN DKE Spec chapter reference: 6.1.3.5
+
+  - id: manufacturingDate
+    label: manufacturing date
+    domain: bp:GeneralProductInformation
+    range: xsd:gYearMonth
+    comment: |
+      The manufacturing date should not only relate to the battery model, but to the battery item. The date code should comply with DIN ISO 8601. DIN DKE Spec chapter reference: 6.1.3.2
+
+  - id: batteryStatus
+    label: battery status
+    domain: bp:GeneralProductInformation
+    range: bp:BatteryStatusDatatype
+    comment: |
+      Lifecycle status of the battery. Status defined from a list: 'original', 'repurposed', 'reused', 'remanufactured', 'waste'. DIN DKE Spec chapter reference: 6.1.3.7
+
+  - id: batteryMass
+    label: battery mass
+    domain: bp:GeneralProductInformation
+    range: xsd:float
+    comment: |
+      Mass of the entire battery in kilograms. DIN DKE Spec chapter reference: 6.1.3.6
+
+  - id: puttingIntoService
+    label: putting into service
+    domain: bp:GeneralProductInformation
+    range: xsd:gYearMonth
+    comment: |
+      The battery passport must include information on the date of putting the battery into service. DIN DKE Spec chapter reference: 6.1.3.3
+
+  - id: warrantyPeriod
+    label: warranty period
+    domain: bp:GeneralProductInformation
+    range: xsd:gYearMonth
+    comment: |
+      The battery passport must include information about the period for which the commercial warranty applies. DIN DKE Spec chapter reference: 6.1.3.4
+
+  - id: batteryModelIdentifier
+    label: battery model identifier
+    domain: bp:GeneralProductInformation
+    range: xsd:string
+    comment: |
+      Unambiguous identification of the battery model. DIN DKE Spec chapter reference: 6.1.2.1
+
+  - id: batterySerialNumber
+    label: battery serial number
+    domain: bp:GeneralProductInformation
+    range: xsd:string
+    comment: |
+      Unique serial number of the individual battery item. DIN DKE Spec chapter reference: 6.1.2.2
+
+  # --- DPP Metadata ---
+
+  - id: dppSchemaVersion
+    label: dpp schema version
+    domain: bp:DPPStaticMetadata
+    range: xsd:string
+    comment: Version of the DPP data schema in use, as defined in JTC-24 prEN_18223.
+
+  - id: dppGranularity
+    label: dpp granularity
+    domain: bp:DPPStaticMetadata
+    range: xsd:string
+    comment: Level of granularity at which the DPP is issued (e.g. model, batch, item), as defined in JTC-24 prEN_18223.
+
+  - id: dppLastUpdated
+    label: dpp last updated
+    domain: bp:DPPLastUpdated
+    range: xsd:dateTimeStamp
+    comment: Timestamp of the most recent update to the Digital Product Passport record.
+
+  - id: dppStatus
+    label: dpp status
+    domain: bp:DPPStatus
+    range: bp:DPPStatusDatatype
+    comment: Dynamic lifecycle state of the Digital Product Passport record. Changes independently of product data over the DPP lifecycle.
+
+  - id: contactName
+    label: contact name
+    domain: bp:ContactInformationEntity
+    range: xsd:string
+    comment: Name of the contact.
+
+  - id: identifier
+    label: identifier
+    domain: bp:ContactInformationEntity
+    range: xsd:string
+    comment: Economic operator code identifier.
+
+  - id: emailAddress
+    label: email address
+    domain: bp:ContactInformationEntity
+    range: bp:EmailAddressDatatype
+    comment: Email address.
+
+  - id: webAddress
+    label: web address
+    domain: bp:ContactInformationEntity
+    range: xsd:anyURI
+    comment: Web address.
+
+  - id: facilityIdentifier
+    label: facility identifier
+    domain: bp:PostalAddressEntity
+    range: xsd:string
+    comment: |
+      Unique identifier of the manufacturing facility. DIN DKE Spec chapter reference: 6.1.3.1
+
+  # --- Labeling ---
+
+  - id: labels
+    label: labels
+    domain: bp:Labeling
+    range: bp:LabelingEntity
+    comment: |
+      'Separate collection' or 'WEEE label' indicating that a product should not be discarded as unsorted waste but must be sent to separate collection facilities for recovery and recycling. DIN DKE Spec chapter reference: 6.2.2 Separate collection; 6.2.3 Material symbol for Cadmium and Lead; 6.2.4 Carbon Footprint performance class; 6.2.5 Extinguishing agent
+
+  - id: declarationOfConformity
+    label: declaration of conformity
+    domain: bp:Labeling
+    range: xsd:anyURI
+    comment: |
+      A battery passport must include the EU declaration of conformity. The EU declaration of conformity has the model structure set out in Annex IX and must contain the elements specified in the relevant modules set out in Annex VIII. DIN DKE Spec chapter reference: 6.2.7
+
+  - id: resultOfTestReport
+    label: result of test report
+    domain: bp:Labeling
+    range: xsd:anyURI
+    comment: |
+      URL to a document that includes results of test reports proving compliance in the market conformity assessment procedure with the requirements as per the technical documentation. DIN DKE Spec chapter reference: 6.2.8
+
+  - id: labelingSymbol
+    label: labeling symbol
+    domain: bp:LabelingEntity
+    range: xsd:anyURI
+    comment: URL or path to the labeling symbol image.
+
+  - id: labelingMeaning
+    label: labeling meaning
+    domain: bp:LabelingEntity
+    range: rdf:langString
+    comment: |
+      Explanation of the meaning of all symbols and labels (including separate collection; cadmium and lead; and carbon footprint and carbon footprint performance class symbols).
+
+  - id: labelingSubject
+    label: labeling subject
+    domain: bp:LabelingEntity
+    range: bp:LabelingSubjectDatatype
+    comment: Short name of required labeling subjects
+
+  # --- MaterialComposition ---
+
+  - id: batteryChemistry
+    label: battery chemistry
+    domain: bp:MaterialComposition
+    range: bp:BatteryChemistryEntity
+    comment: |
+      Composition of a product in general terms by specifying the cathode and anode active material as well as electrolyte. DIN DKE Spec 99100 chapter reference: 6.5.2
+
+  - id: batteryMaterials
+    label: battery materials
+    domain: bp:MaterialComposition
+    range: bp:BatteryMaterialEntity
+    comment: |
+      Component materials used: Naming the materials (as a composition of substances) in cathode, anode, electrolyte according to public standards. DIN DKE Spec 99100 chapter reference: 6.5.3-6.5.4
+
+  - id: hazardousSubstances
+    label: hazardous substances
+    domain: bp:MaterialComposition
+    range: bp:HazardousSubstanceEntity
+    comment: |
+      Hazardous substances: Name all hazardous substance (as any substance that poses a threat to human health and the environment). DIN DKE Spec 99100 chapter reference: 6.5.4 - 6.5.6
+
+  - id: batteryMaterialLocation
+    label: battery material location
+    domain: bp:BatteryMaterialEntity
+    range: bp:BatteryLocationEntity
+    comment: Battery component that relates to the material
+
+  - id: hazardousSubstanceLocation
+    label: hazardous substance location
+    domain: bp:HazardousSubstanceEntity
+    range: bp:BatteryLocationEntity
+    comment: Location on a (sub-)component-level of all hazardous substances.
+
+  - id: shortName
+    label: short name
+    domain: bp:BatteryChemistryEntity
+    range: xsd:string
+    comment: Short name of battery chemistry.
+
+  - id: clearName
+    label: clear name
+    domain: bp:BatteryChemistryEntity
+    range: xsd:string
+    comment: Clear name of battery chemistry.
+
+  - id: batteryMaterialIdentifier
+    label: battery material identifier
+    domain: bp:BatteryMaterialEntity
+    range: bp:CASNumberDatatype
+    comment: CAS Number
+
+  - id: batteryMaterialName
+    label: battery material name
+    domain: bp:BatteryMaterialEntity
+    range: xsd:string
+    comment: Clear name of Material
+
+  - id: batteryMaterialMass
+    label: battery material mass
+    domain: bp:BatteryMaterialEntity
+    range: xsd:float
+    comment: Weight of component material in grams
+
+  - id: isCriticalRawMaterial
+    label: is critical raw material
+    domain: bp:BatteryMaterialEntity
+    range: xsd:boolean
+    comment: |
+      The battery passport must contain information on the critical raw materials present in the battery. Critical raw materials must be reported if present in the battery in a concentration of more than 0.1% weight by weight.
+
+  - id: hazardousSubstanceClass
+    label: hazardous substance class
+    domain: bp:HazardousSubstanceEntity
+    range: bp:HazardousSubstanceClassDatatype
+    comment: Battery Regulation narrows reporting to substances falling under defined hazard classes and categories of the CLP regulation.
+
+  - id: hazardousSubstanceName
+    label: hazardous substance name
+    domain: bp:HazardousSubstanceEntity
+    range: xsd:string
+    comment: Clear name of hazardous substance
+
+  - id: hazardousSubstanceConcentration
+    label: hazardous substance concentration
+    domain: bp:HazardousSubstanceEntity
+    range: xsd:double
+    comment: Concentration of hazardous substance in percent
+
+  - id: hazardousSubstanceImpact
+    label: hazardous substance impact
+    domain: bp:HazardousSubstanceEntity
+    range: xsd:string
+    comment: |
+      Impact statements based on, e.g., REACH or GHS for all hazard classes applicable to substances in the battery.
+
+  - id: hazardousSubstanceIdentifier
+    label: hazardous substance identifier
+    domain: bp:HazardousSubstanceEntity
+    range: bp:CASNumberDatatype
+    comment: CAS identifier of hazardous substance
+    see_also:
+      - label: CAS Registry
+        url: https://www.cas.org/cas-data/cas-registry
+
+  - id: componentName
+    label: component name
+    domain: bp:BatteryLocationEntity
+    range: xsd:string
+    comment: Name of battery component.
+
+  - id: componentId
+    label: component id
+    domain: bp:BatteryLocationEntity
+    range: xsd:string
+    comment: Identifier of substance component.
+
+  - id: componentType
+    label: component type
+    domain: bp:BatteryLocationEntity
+    range: bp:BatteryComponentTypeDatatype
+    comment: Type classification of the battery component (e.g. Cathode, Anode, Electrolyte).
+
+  # --- PerformanceAndDurability ---
+
+  - id: batteryTechnicalProperties
+    label: battery technical properties
+    domain: bp:PerformanceAndDurability
+    range: bp:BatteryTechnicalPropertiesEntity
+    comment: This property covers all performance related properties
+
+  - id: batteryCondition
+    label: battery condition
+    domain: bp:PerformanceAndDurability
+    range: bp:BatteryConditionEntity
+    comment: |
+      Expected battery lifetime expressed in cycles, and reference test used. Expected lifetime under reference conditions for which they have been designed in terms of cycles and calendar years.
+
+  - id: originalPowerCapability
+    label: original power capability
+    domain: bp:BatteryTechnicalPropertiesEntity
+    range: bp:PowerCapabilityAtEntity
+    comment: |
+      Pre-use power capability: Definition of power capability as given in Battery Regulation. Annex IV Part B, point 4 --> measurement at 80 % and 20 % SoC required. DIN DKE Spec 99100 chapter reference: 6.7.3.2
+
+  - id: ratedMaximumPower
+    label: rated maximum power
+    domain: bp:BatteryTechnicalPropertiesEntity
+    range: xsd:double
+    comment: |
+      Maximum permitted power the battery is rated for, reflecting power limits. DIN DKE Spec 99100 chapter reference: 6.7.3.5
+
+  - id: ratedEnergy
+    label: rated energy
+    domain: bp:BatteryTechnicalPropertiesEntity
+    range: xsd:float
+    comment: |
+      The certified usable battery energy according to the procedure in the UN GTR No 22. DIN DKE Spec 99100 chapter reference: 6.7.2.5
+
+  - id: expectedNumberOfCycles
+    label: expected number of cycles
+    domain: bp:BatteryTechnicalPropertiesEntity
+    range: xsd:long
+    comment: |
+      Expected battery lifetime expressed in cycles. DIN DKE Spec 99100 chapter reference: 6.7.6.3
+
+  - id: initialSelfDischarge
+    label: initial self discharge
+    domain: bp:BatteryTechnicalPropertiesEntity
+    range: xsd:double
+    comment: |
+      Initial self-discharge in % of capacity per unit of time in defined conditions. DIN DKE Spec 99100 chapter reference: 6.7.4.6
+
+  - id: roundtripEfficiency
+    label: roundtrip efficiency
+    domain: bp:BatteryTechnicalPropertiesEntity
+    range: xsd:float
+    comment: |
+      Energy round trip efficiency is the ratio of net energy delivered during discharge to total energy required to restore initial state of charge. DIN DKE Spec 99100 chapter reference: 6.7.4.2
+
+  - id: ratedCapacity
+    label: rated capacity
+    domain: bp:BatteryTechnicalPropertiesEntity
+    range: xsd:float
+    comment: |
+      Rated capacity is the total number of ampere-hours (Ah) that can be withdrawn from a fully charged battery under reference conditions. DIN DKE Spec 99100 chapter reference: 6.7.2.2
+
+  - id: initialInternalResistance
+    label: initial internal resistance
+    domain: bp:BatteryTechnicalPropertiesEntity
+    range: bp:InternalResistanceEntity
+    comment: |
+      Initial internal resistance on battery pack level. DIN DKE Spec 99100 chapter reference: 6.7.5.2
+
+  - id: expectedLifetime
+    label: expected lifetime
+    domain: bp:BatteryTechnicalPropertiesEntity
+    range: xsd:short
+    comment: |
+      Expected battery lifetime in calendar years. DIN DKE Spec 99100 chapter reference: 6.7.6.2
+
+  - id: cRate
+    label: c rate
+    domain: bp:BatteryTechnicalPropertiesEntity
+    range: xsd:float
+    comment: |
+      Ratio between nominal battery power in W and battery energy in Wh. DIN DKE Spec 99100 chapter reference: 6.7.3.6
+
+  - id: nominalVoltage
+    label: nominal voltage
+    domain: bp:BatteryTechnicalPropertiesEntity
+    range: xsd:float
+    comment: |
+      Nominal voltage the battery is rated for. DIN DKE Spec 99100 chapter reference: 6.7.2.11
+
+  - id: minimumVoltage
+    label: minimum voltage
+    domain: bp:BatteryTechnicalPropertiesEntity
+    range: xsd:float
+    comment: |
+      Minimum voltage the battery is rated for. DIN DKE Spec 99100 chapter reference: 6.7.2.9
+
+  - id: maximumVoltage
+    label: maximum voltage
+    domain: bp:BatteryTechnicalPropertiesEntity
+    range: xsd:float
+    comment: |
+      Maximum voltage the battery is rated for. DIN DKE Spec 99100 chapter reference: 6.7.2.10
+
+  - id: capacityThresholdForExhaustion
+    label: capacity threshold for exhaustion
+    domain: bp:BatteryTechnicalPropertiesEntity
+    range: xsd:double
+    comment: |
+      Percentage of SOCE above which the battery is still considered operational. DIN DKE Spec 99100 chapter reference: 6.7.6.9
+
+  - id: lifetimeReferenceTest
+    label: lifetime reference test
+    domain: bp:BatteryTechnicalPropertiesEntity
+    range: xsd:anyURI
+    comment: |
+      Reference test for lifetime measurements. DIN DKE Spec 99100 chapter reference: 6.7.6.5
+
+  - id: cRateLifeCycleTest
+    label: c rate life cycle test
+    domain: bp:BatteryTechnicalPropertiesEntity
+    range: xsd:float
+    comment: |
+      C-rate for charge and discharge in cycle-life test. DIN DKE Spec 99100 chapter reference: 6.7.6.6
+
+  - id: temperatureRangeIdleState
+    label: temperature range idle state
+    domain: bp:BatteryTechnicalPropertiesEntity
+    range: bp:TemperatureRangeType
+    comment: |
+      Upper and lower boundary of temperature range the battery can safely withstand. DIN DKE Spec 99100 chapter reference: 6.7.6.3-4
+
+  - id: energyThroughput
+    label: energy throughput
+    domain: bp:BatteryConditionEntity
+    range: xsd:double
+    comment: |
+      Energy throughput measurement. DIN DKE Spec 99100 chapter reference: 6.7.6.7
+
+  - id: capacityThroughput
+    label: capacity throughput
+    domain: bp:BatteryConditionEntity
+    range: bp:CapacityThroughputEntity
+    comment: |
+      Capacity throughput measurement. DIN DKE Spec 99100 chapter reference: 6.7.6.8
+
+  - id: numberOfFullCycles
+    label: number of full cycles
+    domain: bp:BatteryConditionEntity
+    range: bp:NumberOfFullCyclesEntity
+    comment: |
+      Number of (full) charging and discharging cycles. DIN DKE Spec 99100 chapter reference: 6.7.6.4
+
+  - id: stateOfCertifiedEnergy
+    label: state of certified energy
+    domain: bp:BatteryConditionEntity
+    range: bp:StateOfCertifiedEnergyEntity
+    comment: |
+      Measured or on-board UBE performance as percentage of certified usable battery energy. DIN DKE Spec 99100 chapter reference: 6.7.2.7
+
+  - id: capacityFade
+    label: capacity fade
+    domain: bp:BatteryConditionEntity
+    range: bp:CapacityFadeEntity
+    comment: |
+      Decrease over time and usage in amount of charge that a battery can deliver at rated voltage. DIN DKE Spec 99100 chapter reference: 6.7.2.4
+
+  - id: remainingEnergy
+    label: remaining energy
+    domain: bp:BatteryConditionEntity
+    range: bp:RemainingEnergyEntity
+    comment: |
+      Energy supplied by the battery from beginning of test procedure until break-off criterion is reached. DIN DKE Spec 99100 chapter reference: 6.7.2.6
+
+  - id: remainingCapacity
+    label: remaining capacity
+    domain: bp:BatteryConditionEntity
+    range: bp:RemainingCapacityEntity
+    comment: |
+      In-use data attribute on capacity, corresponding with definition of rated capacity. DIN DKE Spec 99100 chapter reference: 6.7.2.3
+
+  - id: negativeEvents
+    label: negative events
+    domain: bp:BatteryConditionEntity
+    range: bp:NegativeEventEntity
+    comment: Information about negative events such as accidents.
+
+  - id: temperatureInformation
+    label: temperature information
+    domain: bp:BatteryConditionEntity
+    range: bp:TemperatureConditionsEntity
+    comment: |
+      Periodically recorded information on operating environmental conditions including temperature. DIN DKE Spec 99100 chapter reference: 6.7.7.2
+
+  - id: remainingPowerCapability
+    label: remaining power capability
+    domain: bp:BatteryConditionEntity
+    range: bp:RemainingPowerCapabilityEntity
+    comment: |
+      Remaining power capability with temperature range when relevant. DIN DKE Spec 99100 chapter reference: 6.7.3.3
+
+  - id: powerFade
+    label: power fade
+    domain: bp:BatteryConditionEntity
+    range: xsd:float
+    comment: |
+      Decrease over time and usage in amount of power that a battery can deliver at rated voltage. DIN DKE Spec 99100 chapter reference: 6.7.3.4
+
+  - id: roundTripEfficiencyFade
+    label: round trip efficiency fade
+    domain: bp:BatteryConditionEntity
+    range: xsd:float
+    comment: |
+      Energy round trip efficiency fade calculated from initial and remaining round trip energy efficiency. DIN DKE Spec 99100 chapter reference: 6.7.4.5
+
+  - id: evolutionOfSelfDischarge
+    label: evolution of self discharge
+    domain: bp:BatteryConditionEntity
+    range: bp:EvolutionOfSelfDischargeEntity
+    comment: |
+      Change of self-discharge over time and usage. DIN DKE Spec 99100 chapter reference: 6.7.4.8
+
+  - id: currentSelfDischargingRate
+    label: current self discharging rate
+    domain: bp:BatteryConditionEntity
+    range: bp:CurrentSelfDischargingRateEntity
+    comment: |
+      Current self-discharge rate in idle state at reference conditions. DIN DKE Spec 99100 chapter reference: 6.7.4.7
+
+  - id: internalResistanceIncrease
+    label: internal resistance increase
+    domain: bp:BatteryConditionEntity
+    range: bp:InternalResistanceIncreaseEntity
+    comment: |
+      Internal resistance increase over time and usage. DIN DKE Spec 99100 chapter reference: 6.7.5.3
+
+  - id: roundTripEfficiencyat50PerCentCycleLife
+    label: round trip efficiency at 50 percent cycle life
+    domain: bp:BatteryConditionEntity
+    range: xsd:float
+    comment: |
+      Initial round trip energy efficiency measured at 50% of cycle-life. DIN DKE Spec 99100 chapter reference: 6.7.4.3
+
+  - id: remainingRoundTripEnergyEfficiency
+    label: remaining round trip energy efficiency
+    domain: bp:BatteryConditionEntity
+    range: bp:RemainingRoundTripEnergyEfficiencyEntity
+    comment: |
+      Remaining round trip energy efficiency as state of health indicator. DIN DKE Spec 99100 chapter reference: 6.7.4.4
+
+  - id: stateOfCharge
+    label: state of charge
+    domain: bp:BatteryConditionEntity
+    range: bp:StateOfChargeEntity
+    comment: |
+      Available capacity in a battery expressed as a percentage of remaining capacity. DIN DKE Spec 99100 chapter reference: 6.7.2.8
+
+  - id: atSoC
+    label: at state of charge
+    domain: bp:PowerCapabilityAtEntity
+    range: xsd:float
+    comment: State of charge percentage at which power capability is measured.
+
+  - id: powerCapabilityAt
+    label: power capability at
+    domain: bp:PowerCapabilityAtEntity
+    range: xsd:float
+    comment: Power capability value at specified state of charge.
+
+  - id: ohmicResistance
+    label: ohmic resistance
+    domain: bp:InternalResistanceEntity
+    range: xsd:double
+    comment: Internal resistance value in ohms.
+
+  - id: batteryComponent
+    label: battery component
+    domain: bp:InternalResistanceEntity
+    range: bp:BatteryComponentDatatype
+    comment: Battery component level (pack, module, or cell).
+
+  - id: minimum
+    label: minimum
+    domain: bp:TemperatureRangeType
+    range: xsd:double
+    comment: Lower temperature boundary.
+
+  - id: maximum
+    label: maximum
+    domain: bp:TemperatureRangeType
+    range: xsd:double
+    comment: Upper temperature boundary.
+
+  - id: capacityThroughputValue
+    label: capacity throughput value
+    domain: bp:CapacityThroughputEntity
+    range: xsd:float
+    comment: Capacity throughput value in ampere-hours.
+
+  - id: numberOfFullCyclesValue
+    label: number of full cycles value
+    domain: bp:NumberOfFullCyclesEntity
+    range: xsd:integer
+    comment: Number of full cycles value.
+
+  - id: stateOfCertifiedEnergyValue
+    label: state of certified energy value
+    domain: bp:StateOfCertifiedEnergyEntity
+    range: xsd:float
+    comment: State of certified energy value as percentage.
+
+  - id: capacityFadeValue
+    label: capacity fade value
+    domain: bp:CapacityFadeEntity
+    range: xsd:float
+    comment: Capacity fade value as percentage.
+
+  - id: remainingEnergyValue
+    label: remaining energy value
+    domain: bp:RemainingEnergyEntity
+    range: xsd:float
+    comment: Remaining energy value in kilowatt-hours.
+
+  - id: remainingCapacityValue
+    label: remaining capacity value
+    domain: bp:RemainingCapacityEntity
+    range: xsd:float
+    comment: Remaining capacity value in kilowatt-hours.
+
+  - id: numberOfDeepDischargeEvents
+    label: number of deep discharge events
+    domain: bp:NegativeEventEntity
+    range: xsd:integer
+    comment: |
+      Number of deep discharge events recorded. DIN DKE Spec 99100 chapter reference: 6.7.7.9
+
+  - id: numberOfOverchargeEvents
+    label: number of overcharge events
+    domain: bp:NegativeEventEntity
+    range: xsd:integer
+    comment: |
+      Number of overcharge events recorded. DIN DKE Spec 99100 chapter reference: 6.7.7.10
+
+  - id: informationOnAccidents
+    label: information on accidents
+    domain: bp:NegativeEventEntity
+    range: xsd:anyURI
+    comment: |
+      URL to information on accidents or incidents related to the battery. DIN DKE Spec 99100 chapter reference: 6.7.7.11
+
+  - id: timeExtremeHighTemp
+    label: time extreme high temp
+    domain: bp:TemperatureConditionsEntity
+    range: xsd:double
+    comment: Cumulated time spent above upper temperature boundary.
+
+  - id: timeExtremeLowTemp
+    label: time extreme low temp
+    domain: bp:TemperatureConditionsEntity
+    range: xsd:double
+    comment: Cumulated time spent below lower temperature boundary.
+
+  - id: timeExtremeHighTempCharging
+    label: time extreme high temp charging
+    domain: bp:TemperatureConditionsEntity
+    range: xsd:double
+    comment: Cumulated time spent above upper temperature boundary during charging.
+
+  - id: timeExtremeLowTempCharging
+    label: time extreme low temp charging
+    domain: bp:TemperatureConditionsEntity
+    range: xsd:double
+    comment: Cumulated time spent below lower temperature boundary during charging.
+
+  - id: temperatureValue
+    label: temperature value
+    domain: bp:TemperatureConditionsEntity
+    range: xsd:double
+    comment: |
+      Recorded temperature value in degrees Celsius for operating environmental conditions. DIN DKE Spec 99100 chapter reference: 6.7.7.2
+
+  - id: remainingPowerCapabilityValue
+    label: remaining power capability value
+    domain: bp:RemainingPowerCapabilityEntity
+    range: bp:RemainingPowerCapabilityDynamicAt
+    comment: Remaining power capability value with timestamp.
+
+  - id: evolutionOfSelfDischargeValue
+    label: evolution of self discharge value
+    domain: bp:EvolutionOfSelfDischargeEntity
+    range: xsd:float
+    comment: Evolution of self discharge value as percentage.
+
+  - id: currentSelfDischargingRateValue
+    label: current self discharging rate value
+    domain: bp:CurrentSelfDischargingRateEntity
+    range: xsd:float
+    comment: Current self discharging rate value as percentage.
+
+  - id: internalResistanceIncreaseValue
+    label: internal resistance increase value
+    domain: bp:InternalResistanceIncreaseEntity
+    range: xsd:float
+    comment: Internal resistance increase value as percentage.
+
+  - id: remainingRoundTripEnergyEfficiencyValue
+    label: remaining round trip energy efficiency value
+    domain: bp:RemainingRoundTripEnergyEfficiencyEntity
+    range: xsd:float
+    comment: Remaining round trip energy efficiency value as percentage.
+
+  - id: stateOfChargeValue
+    label: state of charge value
+    domain: bp:StateOfChargeEntity
+    range: xsd:float
+    comment: State of charge value as percentage.
+
+  - id: rPCLastUpdated
+    label: rpc last updated
+    domain: bp:RemainingPowerCapabilityDynamicAt
+    range: xsd:dateTimeStamp
+    comment: Timestamp for remaining power capability last update.
+
+  - id: lastUpdate
+    label: last update
+    range: xsd:dateTimeStamp
+    comment: Timestamp for dynamic data attributes showing the last update time.
+
+  # --- SupplyChainDueDiligence ---
+
+  - id: supplyChainDueDiligenceReport
+    label: supply chain due diligence report
+    domain: bp:SupplyChainDueDiligence
+    range: xsd:anyURI
+    comment: |
+      The battery passport must include information on responsible sourcing as indicated in the report on its due diligence policy. The report must provide data on: supply chain due diligence policy, risk management plan, summary report of third-party verification, and elaboration on access to information. DIN DKE Spec 99100 chapter reference: 6.4.2
+
+  - id: thirdPartyAssurances
+    label: third party assurances
+    domain: bp:SupplyChainDueDiligence
+    range: xsd:anyURI
+    comment: |
+      Information on third-party supply chain assurances such as certifications, of recognised supply chain schemes. DIN DKE Spec 99100 chapter reference: 6.4.3
+
+  - id: supplyChainIndices
+    label: supply chain indices
+    domain: bp:SupplyChainDueDiligence
+    range: xsd:string
+    comment: |
+      Supply chain indices to allow easy assessment for consumers on level of responsible sourcing. ESGE+ indices under development by the GBA (Global Battery Alliance), scoring and benchmarking sustainability performance. DIN DKE Spec 99100 chapter reference: 6.4.4
+
+# =============================================================================
+# INDIVIDUALS
+# =============================================================================
+
+individual:
+  - id: kilogramperkilowatthour
+    label: Kilogram Per Kilowatt Hour
+    type: bp:Unit
+    comment: Unit for carbon footprint per energy (kg CO2e/kWh)
+
+  - id: kilogramm
+    label: Kilogramm CO2 Equivalent
+    type: bp:Unit
+    comment: Unit for absolute carbon footprint (kg)

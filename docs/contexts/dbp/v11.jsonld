@@ -1,0 +1,81 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "bp": "https://dpp-vocabulary.spherity.com/dbp#",
+    "schema": "https://schema.org/"
+  },
+  "@graph": [
+
+    {
+      "@id": "bp:GeneralProductInformation",
+      "@type": "rdfs:Class",
+      "rdfs:label": "General Product Information Aspect"
+    },
+    {
+      "@id": "bp:ContactInformationEntity",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Contact Information"
+    },
+    {
+      "@id": "bp:PostalAddressEntity",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Postal Address"
+    },
+    
+
+    {
+      "@id": "bp:manufacturerInformation",
+      "@type": "rdf:Property",
+      "rdfs:label": "Manufacturer Identification",
+      "rdfs:domain": { "@id": "bp:GeneralProductInformation" },
+      "rdfs:range": { "@id": "bp:ContactInformationEntity" }
+    },
+
+    {
+      "@id": "bp:operatorInformation",
+      "@type": "rdf:Property",
+      "rdfs:label": "Operator Information",
+      "rdfs:domain": { "@id": "bp:GeneralProductInformation" },
+      "rdfs:range": { "@id": "bp:ContactInformationEntity" }
+    },
+    
+    {
+      "@id": "bp:postalAddress",
+      "@type": "rdf:Property",
+      "rdfs:label": "Postal Address",
+      "rdfs:domain": { "@id": "bp:ContactInformationEntity" },
+      "rdfs:range": { "@id": "bp:PostalAddressEntity" }
+    },
+  
+    {
+      "@id": "bp:manufacturingPlace",
+      "@type": "rdf:Property",
+      "rdfs:label": "Manufacturing Place",
+      "rdfs:domain": { "@id": "bp:GeneralProductInformation" },
+      "rdfs:range": { "@id": "bp:PostalAddressEntity" }
+    },
+
+    
+    { "@id": "bp:productIdentifier", "@type": "rdf:Property", "rdfs:domain": { "@id": "bp:GeneralProductInformation" }, "rdfs:range": { "@id": "xsd:string" }, "rdfs:label": "Product Identifier" },
+    { "@id": "bp:batteryPassportIdentifier", "@type": "rdf:Property", "rdfs:domain": { "@id": "bp:GeneralProductInformation" }, "rdfs:range": { "@id": "xsd:string" }, "rdfs:label": "Battery Passport Identifier" },
+    { "@id": "bp:batteryCategory", "@type": "rdf:Property", "rdfs:domain": { "@id": "bp:GeneralProductInformation" }, "rdfs:range": { "@id": "xsd:string" }, "rdfs:label": "Battery Category" },
+    { "@id": "bp:manufacturingDate", "@type": "rdf:Property", "rdfs:domain": { "@id": "bp:GeneralProductInformation" }, "rdfs:range": { "@id": "xsd:dateTimeStamp" }, "rdfs:label": "Manufacturing Date" },
+    { "@id": "bp:batteryStatus", "@type": "rdf:Property", "rdfs:domain": { "@id": "bp:GeneralProductInformation" }, "rdfs:range": { "@id": "xsd:string" }, "rdfs:label": "Battery Status" },
+    { "@id": "bp:batteryMass", "@type": "rdf:Property", "rdfs:domain": { "@id": "bp:GeneralProductInformation" }, "rdfs:range": { "@id": "xsd:float" }, "rdfs:label": "Battery Mass (kg)" },
+    { "@id": "bp:puttingIntoService", "@type": "rdf:Property", "rdfs:domain": { "@id": "bp:GeneralProductInformation" }, "rdfs:range": { "@id": "xsd:dateTime" }, "rdfs:label": "Date of Putting Into Service" },
+    { "@id": "bp:warrentyPeriod", "@type": "rdf:Property", "rdfs:domain": { "@id": "bp:GeneralProductInformation" }, "rdfs:range": { "@id": "xsd:gMonth" }, "rdfs:label": "Warrenty Period (Month)" },
+
+    
+    { "@id": "bp:contactName", "@type": "rdf:Property", "rdfs:domain": { "@id": "bp:ContactInformationEntity" }, "rdfs:range": { "@id": "xsd:string" }, "rdfs:label": "Contact Name" },
+    { "@id": "bp:identifier", "@type": "rdf:Property", "rdfs:domain": { "@id": "bp:ContactInformationEntity" }, "rdfs:range": { "@id": "xsd:string" }, "rdfs:label": "Economic Operator Identifier" },
+    { "@id": "bp:emailAddress", "@type": "rdf:Property", "rdfs:domain": { "@id": "bp:ContactInformationEntity" }, "rdfs:range": { "@id": "xsd:string" }, "rdfs:label": "Email Address" },
+    { "@id": "bp:webAddress", "@type": "rdf:Property", "rdfs:domain": { "@id": "bp:ContactInformationEntity" }, "rdfs:range": { "@id": "xsd:anyURI" }, "rdfs:label": "Web Address" },
+
+    
+    { "@id": "bp:addressCountry", "@type": "rdf:Property", "rdfs:domain": { "@id": "bp:PostalAddressEntity" }, "rdfs:range": { "@id": "xsd:string" }, "rdfs:label": "Address Country" },
+    { "@id": "bp:postalCode", "@type": "rdf:Property", "rdfs:domain": { "@id": "bp:PostalAddressEntity" }, "rdfs:range": { "@id": "xsd:string" }, "rdfs:label": "Postal Code" },
+    { "@id": "bp:streetAddress", "@type": "rdf:Property", "rdfs:domain": { "@id": "bp:PostalAddressEntity" }, "rdfs:range": { "@id": "xsd:string" }, "rdfs:label": "Street Address" }
+  ]
+}

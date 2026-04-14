@@ -1,0 +1,143 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "bp": "https://dpp-vocabulary.spherity.com/dbp#",
+    "schema": "https://schema.org/",
+    "CarbonFootprint": "bp:CarbonFootprint",
+    "CarbonFootprintStudy": "bp:CarbonFootprintStudy",
+    "LifecycleStageFootprint": "bp:LifecycleStageFootprint",
+    "carbonFootprintStudy": {
+      "@id": "bp:carbonFootprintStudy",
+      "@type": "@id"
+    },
+    "batteryCarbonFootprint": "bp:batteryCarbonFootprint",
+    "absoluteCarbonFootprint": "bp:absoluteCarbonFootprint",
+    "carbonFootprintPerformanceClass": "bp:carbonFootprintPerformanceClass",
+    "carbonFootprintPerLifecycleStage": {
+      "@id": "bp:carbonFootprintPerLifecycleStage",
+      "@container": "@set"
+    },
+    "url": "bp:url",
+    "fileName": "bp:fileName",
+    "lifecycleStage": "bp:lifecycleStage",
+    "carbonFootprint": "bp:carbonFootprint"
+  },
+  "@graph": [
+    {
+      "@id": "bp:CarbonFootprint",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Carbon Footprint"
+    },
+    {
+      "@id": "bp:CarbonFootprintStudy",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Carbon Footprint Study Reference"
+    },
+    {
+      "@id": "bp:LifecycleStageFootprint",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Lifecycle Stage Footprint"
+    },
+    {
+      "@id": "bp:carbonFootprintStudy",
+      "@type": "rdf:Property",
+      "rdfs:label": "Carbon Footprint Study Reference",
+      "rdfs:domain": {
+        "@id": "bp:CarbonFootprint"
+      },
+      "rdfs:range": {
+        "@id": "bp:CarbonFootprintStudy"
+      }
+    },
+    {
+      "@id": "bp:batteryCarbonFootprint",
+      "@type": "rdf:Property",
+      "rdfs:label": "Battery Carbon Footprint (kgCO2e/kWh)",
+      "rdfs:domain": {
+        "@id": "bp:CarbonFootprint"
+      },
+      "rdfs:range": {
+        "@id": "xsd:float"
+      }
+    },
+    {
+      "@id": "bp:absoluteCarbonFootprint",
+      "@type": "rdf:Property",
+      "rdfs:label": "Absolute Carbon Footprint (tCO2e)",
+      "rdfs:domain": {
+        "@id": "bp:CarbonFootprint"
+      },
+      "rdfs:range": {
+        "@id": "xsd:float"
+      }
+    },
+    {
+      "@id": "bp:carbonFootprintPerformanceClass",
+      "@type": "rdf:Property",
+      "rdfs:label": "Carbon Footprint Performance Class",
+      "rdfs:domain": {
+        "@id": "bp:CarbonFootprint"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "bp:carbonFootprintPerLifecycleStage",
+      "@type": "rdf:Property",
+      "rdfs:label": "Carbon Footprint Per Lifecycle Stage",
+      "rdfs:domain": {
+        "@id": "bp:CarbonFootprint"
+      },
+      "rdfs:range": {
+        "@id": "bp:LifecycleStageFootprint"
+      }
+    },
+    {
+      "@id": "bp:url",
+      "@type": "rdf:Property",
+      "rdfs:label": "Study URL",
+      "rdfs:domain": {
+        "@id": "bp:CarbonFootprintStudy"
+      },
+      "rdfs:range": {
+        "@id": "xsd:anyURI"
+      }
+    },
+    {
+      "@id": "bp:fileName",
+      "@type": "rdf:Property",
+      "rdfs:label": "File Name",
+      "rdfs:domain": {
+        "@id": "bp:CarbonFootprintStudy"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "bp:lifecycleStage",
+      "@type": "rdf:Property",
+      "rdfs:label": "Lifecycle Stage",
+      "rdfs:domain": {
+        "@id": "bp:LifecycleStageFootprint"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "bp:carbonFootprint",
+      "@type": "rdf:Property",
+      "rdfs:label": "Carbon Footprint Contribution (%)",
+      "rdfs:domain": {
+        "@id": "bp:LifecycleStageFootprint"
+      },
+      "rdfs:range": {
+        "@id": "xsd:float"
+      }
+    }
+  ]
+}
