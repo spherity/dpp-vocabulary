@@ -9,7 +9,7 @@
   "name": "@spherity/dpp-vocabulary",
   "packageManager": "pnpm@9.11.0",
   "scripts": {
-    "build": "rsync -av --delete --exclude='*.yml' --exclude='dbp-template.html' resources/dbp/ public/dbp/",
+    "build": "mkdir -p public/dbp && rsync -av --delete --exclude='*.yml' --exclude='dbp-template.html' resources/dbp/ public/dbp/",
     "webserver": "serve -l 3000 public/",
     "validate:jsonld": "node ../scripts/validate-jsonld.js",
     "validate:vocab-links": "node ../scripts/validate-vocab-links.js"
