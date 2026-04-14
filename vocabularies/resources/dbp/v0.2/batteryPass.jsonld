@@ -1,0 +1,3343 @@
+{
+    "@context": {
+        "bp": "https://dpp.vocabulary.spherity.dev/dbp/v0.2#",
+        "jsonld": "http://www.w3.org/ns/json-ld#",
+        "dc": "http://purl.org/dc/terms/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+        "dc:date": {
+            "@type": "xsd:date"
+        },
+        "rdfs:domain": {
+            "@type": "@id"
+        },
+        "rdfs:range": {
+            "@type": "@id"
+        },
+        "rdfs:seeAlso": {
+            "@type": "@id"
+        },
+        "rdfs:subClassOf": {
+            "@type": "@id"
+        },
+        "rdfs:subPropertyOf": {
+            "@type": "@id"
+        },
+        "rdfs:isDefinedBy": {
+            "@type": "@id"
+        },
+        "owl:oneOf": {
+            "@container": "@list",
+            "@type": "@vocab"
+        },
+        "owl:deprecated": {
+            "@type": "xsd:boolean"
+        },
+        "owl:inverseOf": {
+            "@type": "@vocab"
+        },
+        "owl:unionOf": {
+            "@container": "@list",
+            "@type": "@vocab"
+        },
+        "rdfs_classes": {
+            "@reverse": "rdfs:isDefinedBy",
+            "@type": "@id"
+        },
+        "rdfs_properties": {
+            "@reverse": "rdfs:isDefinedBy",
+            "@type": "@id"
+        },
+        "rdfs_individuals": {
+            "@reverse": "rdfs:isDefinedBy",
+            "@type": "@id"
+        },
+        "rdfs_datatypes": {
+            "@reverse": "rdfs:isDefinedBy",
+            "@type": "@id"
+        },
+        "mentioned": {
+            "@reverse": "schema:mentions",
+            "@type": "@id"
+        }
+    },
+    "@id": "https://dpp.vocabulary.spherity.dev/dbp/v0.2#",
+    "@type": "owl:Ontology",
+    "dc:title": {
+        "@value": "Battery Pass Ontology",
+        "@language": "en"
+    },
+    "dc:description": {
+        "@value": "Combined Battery Pass vocabulary covering all mandatory and optional data attributes required by REGULATION (EU) 2023/1542 (EU Battery Regulation) and DIN DKE Spec 99100. Modules included: Carbon Footprint, Circularity, General Product Information, Labels, Material Composition, Performance and Durability, Supply Chain Due Diligence.\n",
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+    },
+    "rdfs:seeAlso": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1542",
+    "dc:date": "2026-04-14",
+    "rdfs_properties": [{
+        "@id": "bp:batteryCarbonFootprint",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:CarbonFootprintForBatteries",
+        "rdfs:range": "xsd:double",
+        "rdfs:label": "battery carbon footprint",
+        "rdfs:comment": {
+            "@value": "<div>The carbon footprint of the battery, calculated as kg of carbon dioxide equivalent per one kWh of the total energy provided by the battery over its expected service life, as declared in the Carbon Footprint Declaration. DIN DKE Spec 99100 chapter reference: 6.3.2</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:carbonFootprintPerformanceClass",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:CarbonFootprintForBatteries",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "carbon footprint performance class",
+        "rdfs:comment": {
+            "@value": "<div>The carbon footprint performance class that the relevant battery model per manufacturing plant corresponds to. DIN DKE Spec 99100 chapter reference: 6.3.7</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:carbonFootprintStudy",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:CarbonFootprintForBatteries",
+        "rdfs:range": "xsd:anyURI",
+        "rdfs:label": "carbon footprint study",
+        "rdfs:comment": {
+            "@value": "<div>A web link to get access to a public version of the study supporting the carbon footprint values. DIN DKE Spec 99100 chapter reference: 6.3.8</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:absoluteCarbonFootprint",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:CarbonFootprintForBatteries",
+        "rdfs:range": "xsd:integer",
+        "rdfs:label": "absolute carbon footprint",
+        "rdfs:comment": {
+            "@value": "<div>As a non-mandatory data attribute, the battery passport should include the battery carbon footprint in absolute terms. The absolute battery carbon footprint should be calculated as kilograms of carbon dioxide equivalent, without reference to the functional unit as prescribed by the battery regulation. DIN DKE Spec 99100 chapter reference: 6.3.10</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:carbonFootprintPerLifecycleStage",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:CarbonFootprintForBatteries",
+        "rdfs:range": "bp:CarbonFootprintPerLifecycleStageEntity",
+        "rdfs:label": "carbon footprint per lifecycle stage",
+        "rdfs:comment": {
+            "@value": "<div>The carbon footprint of the battery as share of total Battery Carbon Footprint, differentiated per life cycle stages raw material extraction, battery production, distribution and recycling. DIN DKE Spec 99100 chapter reference: 6.3.3: Raw material extraction; 6.3.4: Main production; 6.3.5: Distribution; 6.3.6: EoL/Recycling</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:carbonFootprint",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:CarbonFootprintPerLifecycleStageEntity",
+        "rdfs:range": "xsd:double",
+        "rdfs:label": "carbon footprint",
+        "rdfs:comment": {
+            "@value": "<div>Carbon footprint of the individual lifecycle stage</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:lifecycleStage",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:CarbonFootprintPerLifecycleStageEntity",
+        "rdfs:range": "bp:LifecycleStageDatatype",
+        "rdfs:label": "lifecycle stage",
+        "rdfs:comment": {
+            "@value": "<div>The description of the life cycle stage</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:hasUnit",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:range": "bp:Unit",
+        "rdfs:label": "has unit",
+        "rdfs:comment": {
+            "@value": "<div>Specifies the unit of measurement for a property</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:symbol",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:Unit",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "symbol",
+        "rdfs:comment": {
+            "@value": "<div>Symbol representation of the unit</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:commonCode",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:Unit",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "common code",
+        "rdfs:comment": {
+            "@value": "<div>Common code representation of the unit</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:referenceUnit",
+        "@type": "rdf:Property",
+        "rdfs:domain": "bp:Unit",
+        "rdfs:label": "reference unit",
+        "rdfs:comment": {
+            "@value": "<div>Reference to a standard unit definition</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:dismantlingAndRemovalInformation",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:Circularity",
+        "rdfs:range": "bp:DismantlingandRemovalDocumentation",
+        "rdfs:label": "dismantling and removal information",
+        "rdfs:comment": {
+            "@value": "<div>Dismantling and Removal information. DIN DKE Spec 99100 chapter reference: 6.6.1.2</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:sparePartSources",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:Circularity",
+        "rdfs:range": "bp:SparePartSupplierEntity",
+        "rdfs:label": "spare part sources",
+        "rdfs:comment": {
+            "@value": "<div>Contact details of sources for replacement spares. DIN DKE Spec 99100 chapter reference: 6.6.1.3 - 6.6.1.4</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:recycledContent",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:Circularity",
+        "rdfs:range": "bp:RecycledContentEntity",
+        "rdfs:label": "recycled content",
+        "rdfs:comment": {
+            "@value": "<div>Share of material recovered from waste present in active materials for each battery model per year and per manufacturing plant. DIN DKE Spec 99100 chapter reference: 6.6.2.3 - 6.6.2.10</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:safetyMeasures",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:Circularity",
+        "rdfs:range": "bp:SafetyMeasuresEntity",
+        "rdfs:label": "safety measures",
+        "rdfs:comment": {
+            "@value": "<div>Safety measures and instructions should also take past negative and extreme events as well as the separate data attributes 'battery status' and 'battery composition/chemistry' into account. DIN DKE Spec 99100 chapter reference: 6.6.1.5</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:endOfLifeInformation",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:Circularity",
+        "rdfs:range": "bp:EndOfLifeInformationEntity",
+        "rdfs:label": "end of life information",
+        "rdfs:comment": {
+            "@value": "<div>Producer or producer responsibility organisations shall make information available to distributors and end-users on the role of end-users in contributing to waste prevention. DIN DKE Spec 99100 chapter reference: 6.6.3.2 - 6.6.3.4</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:addressOfSupplier",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:SparePartSupplierEntity",
+        "rdfs:range": "bp:PostalAddress",
+        "rdfs:label": "address of supplier",
+        "rdfs:comment": {
+            "@value": "<div>Postal address of supplier for spare parts.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:components",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:SparePartSupplierEntity",
+        "rdfs:range": "bp:ComponentEntity",
+        "rdfs:label": "components",
+        "rdfs:comment": {
+            "@value": "<div>Components available at supplier</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:renewableContent",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:Circularity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "renewable content",
+        "rdfs:comment": {
+            "@value": "<div>Share of renewable material content. A renewable material is a material made of natural resources that can be replenished. DIN DKE Spec 99100 chapter reference: 6.6.2.11</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:documentType",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:DismantlingandRemovalDocumentation",
+        "rdfs:range": "bp:DocumentTypeDatatype",
+        "rdfs:label": "document type",
+        "rdfs:comment": {
+            "@value": "<div>Describes type for document e.g. Dismantling manual</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:mimeType",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:DismantlingandRemovalDocumentation",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "mime type",
+        "rdfs:comment": {
+            "@value": "<div>Defines internet media type to determine how to interpret the documentURL</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:documentURL",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:DismantlingandRemovalDocumentation",
+        "rdfs:range": "xsd:anyURI",
+        "rdfs:label": "document URL",
+        "rdfs:comment": {
+            "@value": "<div>Link to document</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:nameOfSupplier",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:SparePartSupplierEntity",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "name of supplier",
+        "rdfs:comment": {
+            "@value": "<div>Name of Supplier</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:emailAddressOfSupplier",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:SparePartSupplierEntity",
+        "rdfs:range": "bp:EmailAddressDatatype",
+        "rdfs:label": "email address of supplier",
+        "rdfs:comment": {
+            "@value": "<div>E-mail address of supplier for spare parts.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:supplierWebAddress",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:SparePartSupplierEntity",
+        "rdfs:range": "xsd:anyURI",
+        "rdfs:label": "supplier web address",
+        "rdfs:comment": {
+            "@value": "<div>Web address of supplier for spare parts.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:preConsumerShare",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:RecycledContentEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "pre consumer share",
+        "rdfs:comment": {
+            "@value": "<div>Recycled material share from pre-consumer waste (manufacturing waste, excluding run-around scrap) of the active material.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:recycledMaterial",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:RecycledContentEntity",
+        "rdfs:range": "bp:RecycledMaterialDatatype",
+        "rdfs:label": "recycled material",
+        "rdfs:comment": {
+            "@value": "<div>Name of recycled material</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:postConsumerShare",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:RecycledContentEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "post consumer share",
+        "rdfs:comment": {
+            "@value": "<div>Recycled material share from post-consumer waste (end-of-life scrap) of the active material.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:safetyInstructions",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:SafetyMeasuresEntity",
+        "rdfs:range": "xsd:anyURI",
+        "rdfs:label": "safety instructions",
+        "rdfs:comment": {
+            "@value": "<div>Safety measures and necessary safety instructions to handle waste batteries, including in relation to the risks associated with, and the handling of, batteries containing lithium.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:extinguishingAgent",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:SafetyMeasuresEntity",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "extinguishing agent",
+        "rdfs:comment": {
+            "@value": "<div>Usable extinguishing agents referring to classes of extinguishers (A, B, C, D, K).</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:wastePrevention",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:EndOfLifeInformationEntity",
+        "rdfs:range": "xsd:anyURI",
+        "rdfs:label": "waste prevention",
+        "rdfs:comment": {
+            "@value": "<div>Prevention and management of waste batteries: Information on the role of end-users in contributing to waste prevention.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:separateCollection",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:EndOfLifeInformationEntity",
+        "rdfs:range": "xsd:anyURI",
+        "rdfs:label": "separate collection",
+        "rdfs:comment": {
+            "@value": "<div>Prevention and management of waste batteries: Information on the role of end-users in contributing to the separate collection of waste batteries.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:informationOnCollection",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:EndOfLifeInformationEntity",
+        "rdfs:range": "xsd:anyURI",
+        "rdfs:label": "information on collection",
+        "rdfs:comment": {
+            "@value": "<div>Prevention and management of waste batteries: Information on the separate collection, the take back, the collection points.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:addressCountry",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:PostalAddress",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "address country",
+        "rdfs:comment": {
+            "@value": "<div>The country. For example, Germany or DE.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "rdfs:seeAlso": ["https://schema.org/addressCountry"],
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:postalCode",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:PostalAddress",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "postal code",
+        "rdfs:comment": {
+            "@value": "<div>The postal code. For example, DE-10719 or 10719.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "rdfs:seeAlso": ["https://schema.org/postalCode"],
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:streetAddress",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:PostalAddress",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "street address",
+        "rdfs:comment": {
+            "@value": "<div>The street address. For example, Street 1 or Hindenburgstr. 10.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "rdfs:seeAlso": ["https://schema.org/streetAddress"],
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:partName",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:ComponentEntity",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "part name",
+        "rdfs:comment": {
+            "@value": "<div>Name of the component part.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:partNumber",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:ComponentEntity",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "part number",
+        "rdfs:comment": {
+            "@value": "<div>Part Number of Component</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:manufacturerInformation",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:GeneralProductInformation",
+        "rdfs:range": "bp:ContactInformationEntity",
+        "rdfs:label": "manufacturer information",
+        "rdfs:comment": {
+            "@value": "<div>Unambiguous identification of the manufacturer of the battery, suggested via a unique operator identifier. DIN DKE Spec chapter reference: 6.1.2.4</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:operatorInformation",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:GeneralProductInformation",
+        "rdfs:range": "bp:ContactInformationEntity",
+        "rdfs:label": "operator information",
+        "rdfs:comment": {
+            "@value": "<div>State the name, trade name or mark, postal address, web address, e-mail address. DIN DKE Spec chapter reference: 6.1.2.3</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:economicOperatorIdentifier",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:GeneralProductInformation",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "economic operator identifier",
+        "rdfs:comment": {
+            "@value": "<div>Unique identifier of the economic operator responsible for placing the battery on the market. DIN DKE Spec chapter reference: 6.1.2.3</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:manufacturerIdentifier",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:GeneralProductInformation",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "manufacturer identifier",
+        "rdfs:comment": {
+            "@value": "<div>Unique identifier of the manufacturer of the battery. DIN DKE Spec chapter reference: 6.1.2.4</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:manufacturingPlace",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:GeneralProductInformation",
+        "rdfs:range": "bp:PostalAddressEntity",
+        "rdfs:label": "manufacturing place",
+        "rdfs:comment": {
+            "@value": "<div>Unambiguous identification of the manufacturing facility. DIN DKE Spec chapter reference: 6.1.3.1</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "rdfs:seeAlso": ["https://schema.org/PostalAddress"],
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:postalAddress",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:ContactInformationEntity",
+        "rdfs:range": "bp:PostalAddressEntity",
+        "rdfs:label": "postal address",
+        "rdfs:comment": {
+            "@value": "<div>Postal address of the contact.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:productIdentifier",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:GeneralProductInformation",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "product identifier",
+        "rdfs:comment": {
+            "@value": "<div>Unique identifier allowing for the unambiguous identification of each individual battery and hence each corresponding battery passport. DIN DKE Spec chapter reference: 6.1.2.2</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:batteryPassportIdentifier",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:GeneralProductInformation",
+        "rdfs:range": "bp:BatteryPassportIdentifierDatatype",
+        "rdfs:label": "battery passport identifier",
+        "rdfs:comment": {
+            "@value": "<div>Unique identifier allowing for the unambiguous identification of each individual battery and hence each corresponding battery passport.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:batteryCategory",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:GeneralProductInformation",
+        "rdfs:range": "bp:BatteryCategoryDatatype",
+        "rdfs:label": "battery category",
+        "rdfs:comment": {
+            "@value": "<div>Categories relevant for the battery passport: LMT battery, electric vehicle battery, stationary or other industrial battery >2kWh. DIN DKE Spec chapter reference: 6.1.3.5</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:manufacturingDate",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:GeneralProductInformation",
+        "rdfs:range": "xsd:gYearMonth",
+        "rdfs:label": "manufacturing date",
+        "rdfs:comment": {
+            "@value": "<div>The manufacturing date should not only relate to the battery model, but to the battery item. The date code should comply with DIN ISO 8601. DIN DKE Spec chapter reference: 6.1.3.2</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:batteryStatus",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:GeneralProductInformation",
+        "rdfs:range": "bp:BatteryStatusDatatype",
+        "rdfs:label": "battery status",
+        "rdfs:comment": {
+            "@value": "<div>Lifecycle status of the battery. Status defined from a list: 'original', 'repurposed', 'reused', 'remanufactured', 'waste'. DIN DKE Spec chapter reference: 6.1.3.7</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:batteryMass",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:GeneralProductInformation",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "battery mass",
+        "rdfs:comment": {
+            "@value": "<div>Mass of the entire battery in kilograms. DIN DKE Spec chapter reference: 6.1.3.6</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:puttingIntoService",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:GeneralProductInformation",
+        "rdfs:range": "xsd:gYearMonth",
+        "rdfs:label": "putting into service",
+        "rdfs:comment": {
+            "@value": "<div>The battery passport must include information on the date of putting the battery into service. DIN DKE Spec chapter reference: 6.1.3.3</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:warrantyPeriod",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:GeneralProductInformation",
+        "rdfs:range": "xsd:gYearMonth",
+        "rdfs:label": "warranty period",
+        "rdfs:comment": {
+            "@value": "<div>The battery passport must include information about the period for which the commercial warranty applies. DIN DKE Spec chapter reference: 6.1.3.4</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:batteryModelIdentifier",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:GeneralProductInformation",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "battery model identifier",
+        "rdfs:comment": {
+            "@value": "<div>Unambiguous identification of the battery model. DIN DKE Spec chapter reference: 6.1.2.1</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:batterySerialNumber",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:GeneralProductInformation",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "battery serial number",
+        "rdfs:comment": {
+            "@value": "<div>Unique serial number of the individual battery item. DIN DKE Spec chapter reference: 6.1.2.2</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:dppSchemaVersion",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:DPPStaticMetadata",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "dpp schema version",
+        "rdfs:comment": {
+            "@value": "<div>Version of the DPP data schema in use, as defined in JTC-24 prEN_18223.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:dppGranularity",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:DPPStaticMetadata",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "dpp granularity",
+        "rdfs:comment": {
+            "@value": "<div>Level of granularity at which the DPP is issued (e.g. model, batch, item), as defined in JTC-24 prEN_18223.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:dppLastUpdated",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:DPPLastUpdated",
+        "rdfs:range": "xsd:dateTimeStamp",
+        "rdfs:label": "dpp last updated",
+        "rdfs:comment": {
+            "@value": "<div>Timestamp of the most recent update to the Digital Product Passport record.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:dppStatus",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:DPPStatus",
+        "rdfs:range": "bp:DPPStatusDatatype",
+        "rdfs:label": "dpp status",
+        "rdfs:comment": {
+            "@value": "<div>Dynamic lifecycle state of the Digital Product Passport record. Changes independently of product data over the DPP lifecycle.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:contactName",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:ContactInformationEntity",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "contact name",
+        "rdfs:comment": {
+            "@value": "<div>Name of the contact.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:identifier",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:ContactInformationEntity",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "identifier",
+        "rdfs:comment": {
+            "@value": "<div>Economic operator code identifier.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:emailAddress",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:ContactInformationEntity",
+        "rdfs:range": "bp:EmailAddressDatatype",
+        "rdfs:label": "email address",
+        "rdfs:comment": {
+            "@value": "<div>Email address.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:webAddress",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:ContactInformationEntity",
+        "rdfs:range": "xsd:anyURI",
+        "rdfs:label": "web address",
+        "rdfs:comment": {
+            "@value": "<div>Web address.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:facilityIdentifier",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:PostalAddressEntity",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "facility identifier",
+        "rdfs:comment": {
+            "@value": "<div>Unique identifier of the manufacturing facility. DIN DKE Spec chapter reference: 6.1.3.1</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:labels",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:Labeling",
+        "rdfs:range": "bp:LabelingEntity",
+        "rdfs:label": "labels",
+        "rdfs:comment": {
+            "@value": "<div>'Separate collection' or 'WEEE label' indicating that a product should not be discarded as unsorted waste but must be sent to separate collection facilities for recovery and recycling. DIN DKE Spec chapter reference: 6.2.2 Separate collection; 6.2.3 Material symbol for Cadmium and Lead; 6.2.4 Carbon Footprint performance class; 6.2.5 Extinguishing agent</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:declarationOfConformity",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:Labeling",
+        "rdfs:range": "xsd:anyURI",
+        "rdfs:label": "declaration of conformity",
+        "rdfs:comment": {
+            "@value": "<div>A battery passport must include the EU declaration of conformity. The EU declaration of conformity has the model structure set out in Annex IX and must contain the elements specified in the relevant modules set out in Annex VIII. DIN DKE Spec chapter reference: 6.2.7</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:resultOfTestReport",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:Labeling",
+        "rdfs:range": "xsd:anyURI",
+        "rdfs:label": "result of test report",
+        "rdfs:comment": {
+            "@value": "<div>URL to a document that includes results of test reports proving compliance in the market conformity assessment procedure with the requirements as per the technical documentation. DIN DKE Spec chapter reference: 6.2.8</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:labelingSymbol",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:LabelingEntity",
+        "rdfs:range": "xsd:anyURI",
+        "rdfs:label": "labeling symbol",
+        "rdfs:comment": {
+            "@value": "<div>URL or path to the labeling symbol image.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:labelingMeaning",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:LabelingEntity",
+        "rdfs:range": "rdf:langString",
+        "rdfs:label": "labeling meaning",
+        "rdfs:comment": {
+            "@value": "<div>Explanation of the meaning of all symbols and labels (including separate collection; cadmium and lead; and carbon footprint and carbon footprint performance class symbols).</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:labelingSubject",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:LabelingEntity",
+        "rdfs:range": "bp:LabelingSubjectDatatype",
+        "rdfs:label": "labeling subject",
+        "rdfs:comment": {
+            "@value": "<div>Short name of required labeling subjects</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:batteryChemistry",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:MaterialComposition",
+        "rdfs:range": "bp:BatteryChemistryEntity",
+        "rdfs:label": "battery chemistry",
+        "rdfs:comment": {
+            "@value": "<div>Composition of a product in general terms by specifying the cathode and anode active material as well as electrolyte. DIN DKE Spec 99100 chapter reference: 6.5.2</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:batteryMaterials",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:MaterialComposition",
+        "rdfs:range": "bp:BatteryMaterialEntity",
+        "rdfs:label": "battery materials",
+        "rdfs:comment": {
+            "@value": "<div>Component materials used: Naming the materials (as a composition of substances) in cathode, anode, electrolyte according to public standards. DIN DKE Spec 99100 chapter reference: 6.5.3-6.5.4</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:hazardousSubstances",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:MaterialComposition",
+        "rdfs:range": "bp:HazardousSubstanceEntity",
+        "rdfs:label": "hazardous substances",
+        "rdfs:comment": {
+            "@value": "<div>Hazardous substances: Name all hazardous substance (as any substance that poses a threat to human health and the environment). DIN DKE Spec 99100 chapter reference: 6.5.4 - 6.5.6</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:batteryMaterialLocation",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:BatteryMaterialEntity",
+        "rdfs:range": "bp:BatteryLocationEntity",
+        "rdfs:label": "battery material location",
+        "rdfs:comment": {
+            "@value": "<div>Battery component that relates to the material</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:hazardousSubstanceLocation",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:HazardousSubstanceEntity",
+        "rdfs:range": "bp:BatteryLocationEntity",
+        "rdfs:label": "hazardous substance location",
+        "rdfs:comment": {
+            "@value": "<div>Location on a (sub-)component-level of all hazardous substances.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:shortName",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryChemistryEntity",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "short name",
+        "rdfs:comment": {
+            "@value": "<div>Short name of battery chemistry.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:clearName",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryChemistryEntity",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "clear name",
+        "rdfs:comment": {
+            "@value": "<div>Clear name of battery chemistry.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:batteryMaterialIdentifier",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryMaterialEntity",
+        "rdfs:range": "bp:CASNumberDatatype",
+        "rdfs:label": "battery material identifier",
+        "rdfs:comment": {
+            "@value": "<div>CAS Number</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:batteryMaterialName",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryMaterialEntity",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "battery material name",
+        "rdfs:comment": {
+            "@value": "<div>Clear name of Material</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:batteryMaterialMass",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryMaterialEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "battery material mass",
+        "rdfs:comment": {
+            "@value": "<div>Weight of component material in grams</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:isCriticalRawMaterial",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryMaterialEntity",
+        "rdfs:range": "xsd:boolean",
+        "rdfs:label": "is critical raw material",
+        "rdfs:comment": {
+            "@value": "<div>The battery passport must contain information on the critical raw materials present in the battery. Critical raw materials must be reported if present in the battery in a concentration of more than 0.1% weight by weight.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:hazardousSubstanceClass",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:HazardousSubstanceEntity",
+        "rdfs:range": "bp:HazardousSubstanceClassDatatype",
+        "rdfs:label": "hazardous substance class",
+        "rdfs:comment": {
+            "@value": "<div>Battery Regulation narrows reporting to substances falling under defined hazard classes and categories of the CLP regulation.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:hazardousSubstanceName",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:HazardousSubstanceEntity",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "hazardous substance name",
+        "rdfs:comment": {
+            "@value": "<div>Clear name of hazardous substance</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:hazardousSubstanceConcentration",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:HazardousSubstanceEntity",
+        "rdfs:range": "xsd:double",
+        "rdfs:label": "hazardous substance concentration",
+        "rdfs:comment": {
+            "@value": "<div>Concentration of hazardous substance in percent</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:hazardousSubstanceImpact",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:HazardousSubstanceEntity",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "hazardous substance impact",
+        "rdfs:comment": {
+            "@value": "<div>Impact statements based on, e.g., REACH or GHS for all hazard classes applicable to substances in the battery.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:hazardousSubstanceIdentifier",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:HazardousSubstanceEntity",
+        "rdfs:range": "bp:CASNumberDatatype",
+        "rdfs:label": "hazardous substance identifier",
+        "rdfs:comment": {
+            "@value": "<div>CAS identifier of hazardous substance</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "rdfs:seeAlso": ["https://www.cas.org/cas-data/cas-registry"],
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:componentName",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryLocationEntity",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "component name",
+        "rdfs:comment": {
+            "@value": "<div>Name of battery component.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:componentId",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryLocationEntity",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "component id",
+        "rdfs:comment": {
+            "@value": "<div>Identifier of substance component.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:componentType",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryLocationEntity",
+        "rdfs:range": "bp:BatteryComponentTypeDatatype",
+        "rdfs:label": "component type",
+        "rdfs:comment": {
+            "@value": "<div>Type classification of the battery component (e.g. Cathode, Anode, Electrolyte).</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:batteryTechnicalProperties",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:PerformanceAndDurability",
+        "rdfs:range": "bp:BatteryTechnicalPropertiesEntity",
+        "rdfs:label": "battery technical properties",
+        "rdfs:comment": {
+            "@value": "<div>This property covers all performance related properties</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:batteryCondition",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:PerformanceAndDurability",
+        "rdfs:range": "bp:BatteryConditionEntity",
+        "rdfs:label": "battery condition",
+        "rdfs:comment": {
+            "@value": "<div>Expected battery lifetime expressed in cycles, and reference test used. Expected lifetime under reference conditions for which they have been designed in terms of cycles and calendar years.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:originalPowerCapability",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:BatteryTechnicalPropertiesEntity",
+        "rdfs:range": "bp:PowerCapabilityAtEntity",
+        "rdfs:label": "original power capability",
+        "rdfs:comment": {
+            "@value": "<div>Pre-use power capability: Definition of power capability as given in Battery Regulation. Annex IV Part B, point 4 --> measurement at 80 % and 20 % SoC required. DIN DKE Spec 99100 chapter reference: 6.7.3.2</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:ratedMaximumPower",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryTechnicalPropertiesEntity",
+        "rdfs:range": "xsd:double",
+        "rdfs:label": "rated maximum power",
+        "rdfs:comment": {
+            "@value": "<div>Maximum permitted power the battery is rated for, reflecting power limits. DIN DKE Spec 99100 chapter reference: 6.7.3.5</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:ratedEnergy",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryTechnicalPropertiesEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "rated energy",
+        "rdfs:comment": {
+            "@value": "<div>The certified usable battery energy according to the procedure in the UN GTR No 22. DIN DKE Spec 99100 chapter reference: 6.7.2.5</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:expectedNumberOfCycles",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryTechnicalPropertiesEntity",
+        "rdfs:range": "xsd:long",
+        "rdfs:label": "expected number of cycles",
+        "rdfs:comment": {
+            "@value": "<div>Expected battery lifetime expressed in cycles. DIN DKE Spec 99100 chapter reference: 6.7.6.3</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:initialSelfDischarge",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryTechnicalPropertiesEntity",
+        "rdfs:range": "xsd:double",
+        "rdfs:label": "initial self discharge",
+        "rdfs:comment": {
+            "@value": "<div>Initial self-discharge in % of capacity per unit of time in defined conditions. DIN DKE Spec 99100 chapter reference: 6.7.4.6</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:roundtripEfficiency",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryTechnicalPropertiesEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "roundtrip efficiency",
+        "rdfs:comment": {
+            "@value": "<div>Energy round trip efficiency is the ratio of net energy delivered during discharge to total energy required to restore initial state of charge. DIN DKE Spec 99100 chapter reference: 6.7.4.2</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:ratedCapacity",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryTechnicalPropertiesEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "rated capacity",
+        "rdfs:comment": {
+            "@value": "<div>Rated capacity is the total number of ampere-hours (Ah) that can be withdrawn from a fully charged battery under reference conditions. DIN DKE Spec 99100 chapter reference: 6.7.2.2</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:initialInternalResistance",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:BatteryTechnicalPropertiesEntity",
+        "rdfs:range": "bp:InternalResistanceEntity",
+        "rdfs:label": "initial internal resistance",
+        "rdfs:comment": {
+            "@value": "<div>Initial internal resistance on battery pack level. DIN DKE Spec 99100 chapter reference: 6.7.5.2</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:expectedLifetime",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryTechnicalPropertiesEntity",
+        "rdfs:range": "xsd:short",
+        "rdfs:label": "expected lifetime",
+        "rdfs:comment": {
+            "@value": "<div>Expected battery lifetime in calendar years. DIN DKE Spec 99100 chapter reference: 6.7.6.2</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:cRate",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryTechnicalPropertiesEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "c rate",
+        "rdfs:comment": {
+            "@value": "<div>Ratio between nominal battery power in W and battery energy in Wh. DIN DKE Spec 99100 chapter reference: 6.7.3.6</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:nominalVoltage",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryTechnicalPropertiesEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "nominal voltage",
+        "rdfs:comment": {
+            "@value": "<div>Nominal voltage the battery is rated for. DIN DKE Spec 99100 chapter reference: 6.7.2.11</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:minimumVoltage",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryTechnicalPropertiesEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "minimum voltage",
+        "rdfs:comment": {
+            "@value": "<div>Minimum voltage the battery is rated for. DIN DKE Spec 99100 chapter reference: 6.7.2.9</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:maximumVoltage",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryTechnicalPropertiesEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "maximum voltage",
+        "rdfs:comment": {
+            "@value": "<div>Maximum voltage the battery is rated for. DIN DKE Spec 99100 chapter reference: 6.7.2.10</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:capacityThresholdForExhaustion",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryTechnicalPropertiesEntity",
+        "rdfs:range": "xsd:double",
+        "rdfs:label": "capacity threshold for exhaustion",
+        "rdfs:comment": {
+            "@value": "<div>Percentage of SOCE above which the battery is still considered operational. DIN DKE Spec 99100 chapter reference: 6.7.6.9</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:lifetimeReferenceTest",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryTechnicalPropertiesEntity",
+        "rdfs:range": "xsd:anyURI",
+        "rdfs:label": "lifetime reference test",
+        "rdfs:comment": {
+            "@value": "<div>Reference test for lifetime measurements. DIN DKE Spec 99100 chapter reference: 6.7.6.5</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:cRateLifeCycleTest",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryTechnicalPropertiesEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "c rate life cycle test",
+        "rdfs:comment": {
+            "@value": "<div>C-rate for charge and discharge in cycle-life test. DIN DKE Spec 99100 chapter reference: 6.7.6.6</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:temperatureRangeIdleState",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:BatteryTechnicalPropertiesEntity",
+        "rdfs:range": "bp:TemperatureRangeType",
+        "rdfs:label": "temperature range idle state",
+        "rdfs:comment": {
+            "@value": "<div>Upper and lower boundary of temperature range the battery can safely withstand. DIN DKE Spec 99100 chapter reference: 6.7.6.3-4</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:energyThroughput",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryConditionEntity",
+        "rdfs:range": "xsd:double",
+        "rdfs:label": "energy throughput",
+        "rdfs:comment": {
+            "@value": "<div>Energy throughput measurement. DIN DKE Spec 99100 chapter reference: 6.7.6.7</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:capacityThroughput",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:BatteryConditionEntity",
+        "rdfs:range": "bp:CapacityThroughputEntity",
+        "rdfs:label": "capacity throughput",
+        "rdfs:comment": {
+            "@value": "<div>Capacity throughput measurement. DIN DKE Spec 99100 chapter reference: 6.7.6.8</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:numberOfFullCycles",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:BatteryConditionEntity",
+        "rdfs:range": "bp:NumberOfFullCyclesEntity",
+        "rdfs:label": "number of full cycles",
+        "rdfs:comment": {
+            "@value": "<div>Number of (full) charging and discharging cycles. DIN DKE Spec 99100 chapter reference: 6.7.6.4</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:stateOfCertifiedEnergy",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:BatteryConditionEntity",
+        "rdfs:range": "bp:StateOfCertifiedEnergyEntity",
+        "rdfs:label": "state of certified energy",
+        "rdfs:comment": {
+            "@value": "<div>Measured or on-board UBE performance as percentage of certified usable battery energy. DIN DKE Spec 99100 chapter reference: 6.7.2.7</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:capacityFade",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:BatteryConditionEntity",
+        "rdfs:range": "bp:CapacityFadeEntity",
+        "rdfs:label": "capacity fade",
+        "rdfs:comment": {
+            "@value": "<div>Decrease over time and usage in amount of charge that a battery can deliver at rated voltage. DIN DKE Spec 99100 chapter reference: 6.7.2.4</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:remainingEnergy",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:BatteryConditionEntity",
+        "rdfs:range": "bp:RemainingEnergyEntity",
+        "rdfs:label": "remaining energy",
+        "rdfs:comment": {
+            "@value": "<div>Energy supplied by the battery from beginning of test procedure until break-off criterion is reached. DIN DKE Spec 99100 chapter reference: 6.7.2.6</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:remainingCapacity",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:BatteryConditionEntity",
+        "rdfs:range": "bp:RemainingCapacityEntity",
+        "rdfs:label": "remaining capacity",
+        "rdfs:comment": {
+            "@value": "<div>In-use data attribute on capacity, corresponding with definition of rated capacity. DIN DKE Spec 99100 chapter reference: 6.7.2.3</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:negativeEvents",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:BatteryConditionEntity",
+        "rdfs:range": "bp:NegativeEventEntity",
+        "rdfs:label": "negative events",
+        "rdfs:comment": {
+            "@value": "<div>Information about negative events such as accidents.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:temperatureInformation",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:BatteryConditionEntity",
+        "rdfs:range": "bp:TemperatureConditionsEntity",
+        "rdfs:label": "temperature information",
+        "rdfs:comment": {
+            "@value": "<div>Periodically recorded information on operating environmental conditions including temperature. DIN DKE Spec 99100 chapter reference: 6.7.7.2</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:remainingPowerCapability",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:BatteryConditionEntity",
+        "rdfs:range": "bp:RemainingPowerCapabilityEntity",
+        "rdfs:label": "remaining power capability",
+        "rdfs:comment": {
+            "@value": "<div>Remaining power capability with temperature range when relevant. DIN DKE Spec 99100 chapter reference: 6.7.3.3</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:powerFade",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryConditionEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "power fade",
+        "rdfs:comment": {
+            "@value": "<div>Decrease over time and usage in amount of power that a battery can deliver at rated voltage. DIN DKE Spec 99100 chapter reference: 6.7.3.4</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:roundTripEfficiencyFade",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryConditionEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "round trip efficiency fade",
+        "rdfs:comment": {
+            "@value": "<div>Energy round trip efficiency fade calculated from initial and remaining round trip energy efficiency. DIN DKE Spec 99100 chapter reference: 6.7.4.5</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:evolutionOfSelfDischarge",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:BatteryConditionEntity",
+        "rdfs:range": "bp:EvolutionOfSelfDischargeEntity",
+        "rdfs:label": "evolution of self discharge",
+        "rdfs:comment": {
+            "@value": "<div>Change of self-discharge over time and usage. DIN DKE Spec 99100 chapter reference: 6.7.4.8</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:currentSelfDischargingRate",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:BatteryConditionEntity",
+        "rdfs:range": "bp:CurrentSelfDischargingRateEntity",
+        "rdfs:label": "current self discharging rate",
+        "rdfs:comment": {
+            "@value": "<div>Current self-discharge rate in idle state at reference conditions. DIN DKE Spec 99100 chapter reference: 6.7.4.7</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:internalResistanceIncrease",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:BatteryConditionEntity",
+        "rdfs:range": "bp:InternalResistanceIncreaseEntity",
+        "rdfs:label": "internal resistance increase",
+        "rdfs:comment": {
+            "@value": "<div>Internal resistance increase over time and usage. DIN DKE Spec 99100 chapter reference: 6.7.5.3</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:roundTripEfficiencyat50PerCentCycleLife",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:BatteryConditionEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "round trip efficiency at 50 percent cycle life",
+        "rdfs:comment": {
+            "@value": "<div>Initial round trip energy efficiency measured at 50% of cycle-life. DIN DKE Spec 99100 chapter reference: 6.7.4.3</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:remainingRoundTripEnergyEfficiency",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:BatteryConditionEntity",
+        "rdfs:range": "bp:RemainingRoundTripEnergyEfficiencyEntity",
+        "rdfs:label": "remaining round trip energy efficiency",
+        "rdfs:comment": {
+            "@value": "<div>Remaining round trip energy efficiency as state of health indicator. DIN DKE Spec 99100 chapter reference: 6.7.4.4</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:stateOfCharge",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:BatteryConditionEntity",
+        "rdfs:range": "bp:StateOfChargeEntity",
+        "rdfs:label": "state of charge",
+        "rdfs:comment": {
+            "@value": "<div>Available capacity in a battery expressed as a percentage of remaining capacity. DIN DKE Spec 99100 chapter reference: 6.7.2.8</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:atSoC",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:PowerCapabilityAtEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "at state of charge",
+        "rdfs:comment": {
+            "@value": "<div>State of charge percentage at which power capability is measured.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:powerCapabilityAt",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:PowerCapabilityAtEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "power capability at",
+        "rdfs:comment": {
+            "@value": "<div>Power capability value at specified state of charge.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:ohmicResistance",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:InternalResistanceEntity",
+        "rdfs:range": "xsd:double",
+        "rdfs:label": "ohmic resistance",
+        "rdfs:comment": {
+            "@value": "<div>Internal resistance value in ohms.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:batteryComponent",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:InternalResistanceEntity",
+        "rdfs:range": "bp:BatteryComponentDatatype",
+        "rdfs:label": "battery component",
+        "rdfs:comment": {
+            "@value": "<div>Battery component level (pack, module, or cell).</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:minimum",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:TemperatureRangeType",
+        "rdfs:range": "xsd:double",
+        "rdfs:label": "minimum",
+        "rdfs:comment": {
+            "@value": "<div>Lower temperature boundary.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:maximum",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:TemperatureRangeType",
+        "rdfs:range": "xsd:double",
+        "rdfs:label": "maximum",
+        "rdfs:comment": {
+            "@value": "<div>Upper temperature boundary.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:capacityThroughputValue",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:CapacityThroughputEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "capacity throughput value",
+        "rdfs:comment": {
+            "@value": "<div>Capacity throughput value in ampere-hours.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:numberOfFullCyclesValue",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:NumberOfFullCyclesEntity",
+        "rdfs:range": "xsd:integer",
+        "rdfs:label": "number of full cycles value",
+        "rdfs:comment": {
+            "@value": "<div>Number of full cycles value.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:stateOfCertifiedEnergyValue",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:StateOfCertifiedEnergyEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "state of certified energy value",
+        "rdfs:comment": {
+            "@value": "<div>State of certified energy value as percentage.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:capacityFadeValue",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:CapacityFadeEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "capacity fade value",
+        "rdfs:comment": {
+            "@value": "<div>Capacity fade value as percentage.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:remainingEnergyValue",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:RemainingEnergyEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "remaining energy value",
+        "rdfs:comment": {
+            "@value": "<div>Remaining energy value in kilowatt-hours.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:remainingCapacityValue",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:RemainingCapacityEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "remaining capacity value",
+        "rdfs:comment": {
+            "@value": "<div>Remaining capacity value in kilowatt-hours.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:numberOfDeepDischargeEvents",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:NegativeEventEntity",
+        "rdfs:range": "xsd:integer",
+        "rdfs:label": "number of deep discharge events",
+        "rdfs:comment": {
+            "@value": "<div>Number of deep discharge events recorded. DIN DKE Spec 99100 chapter reference: 6.7.7.9</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:numberOfOverchargeEvents",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:NegativeEventEntity",
+        "rdfs:range": "xsd:integer",
+        "rdfs:label": "number of overcharge events",
+        "rdfs:comment": {
+            "@value": "<div>Number of overcharge events recorded. DIN DKE Spec 99100 chapter reference: 6.7.7.10</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:informationOnAccidents",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:NegativeEventEntity",
+        "rdfs:range": "xsd:anyURI",
+        "rdfs:label": "information on accidents",
+        "rdfs:comment": {
+            "@value": "<div>URL to information on accidents or incidents related to the battery. DIN DKE Spec 99100 chapter reference: 6.7.7.11</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:timeExtremeHighTemp",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:TemperatureConditionsEntity",
+        "rdfs:range": "xsd:double",
+        "rdfs:label": "time extreme high temp",
+        "rdfs:comment": {
+            "@value": "<div>Cumulated time spent above upper temperature boundary.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:timeExtremeLowTemp",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:TemperatureConditionsEntity",
+        "rdfs:range": "xsd:double",
+        "rdfs:label": "time extreme low temp",
+        "rdfs:comment": {
+            "@value": "<div>Cumulated time spent below lower temperature boundary.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:timeExtremeHighTempCharging",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:TemperatureConditionsEntity",
+        "rdfs:range": "xsd:double",
+        "rdfs:label": "time extreme high temp charging",
+        "rdfs:comment": {
+            "@value": "<div>Cumulated time spent above upper temperature boundary during charging.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:timeExtremeLowTempCharging",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:TemperatureConditionsEntity",
+        "rdfs:range": "xsd:double",
+        "rdfs:label": "time extreme low temp charging",
+        "rdfs:comment": {
+            "@value": "<div>Cumulated time spent below lower temperature boundary during charging.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:temperatureValue",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:TemperatureConditionsEntity",
+        "rdfs:range": "xsd:double",
+        "rdfs:label": "temperature value",
+        "rdfs:comment": {
+            "@value": "<div>Recorded temperature value in degrees Celsius for operating environmental conditions. DIN DKE Spec 99100 chapter reference: 6.7.7.2</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:remainingPowerCapabilityValue",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "bp:RemainingPowerCapabilityEntity",
+        "rdfs:range": "bp:RemainingPowerCapabilityDynamicAt",
+        "rdfs:label": "remaining power capability value",
+        "rdfs:comment": {
+            "@value": "<div>Remaining power capability value with timestamp.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:evolutionOfSelfDischargeValue",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:EvolutionOfSelfDischargeEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "evolution of self discharge value",
+        "rdfs:comment": {
+            "@value": "<div>Evolution of self discharge value as percentage.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:currentSelfDischargingRateValue",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:CurrentSelfDischargingRateEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "current self discharging rate value",
+        "rdfs:comment": {
+            "@value": "<div>Current self discharging rate value as percentage.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:internalResistanceIncreaseValue",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:InternalResistanceIncreaseEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "internal resistance increase value",
+        "rdfs:comment": {
+            "@value": "<div>Internal resistance increase value as percentage.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:remainingRoundTripEnergyEfficiencyValue",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:RemainingRoundTripEnergyEfficiencyEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "remaining round trip energy efficiency value",
+        "rdfs:comment": {
+            "@value": "<div>Remaining round trip energy efficiency value as percentage.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:stateOfChargeValue",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:StateOfChargeEntity",
+        "rdfs:range": "xsd:float",
+        "rdfs:label": "state of charge value",
+        "rdfs:comment": {
+            "@value": "<div>State of charge value as percentage.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:rPCLastUpdated",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:RemainingPowerCapabilityDynamicAt",
+        "rdfs:range": "xsd:dateTimeStamp",
+        "rdfs:label": "rpc last updated",
+        "rdfs:comment": {
+            "@value": "<div>Timestamp for remaining power capability last update.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:lastUpdate",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:range": "xsd:dateTimeStamp",
+        "rdfs:label": "last update",
+        "rdfs:comment": {
+            "@value": "<div>Timestamp for dynamic data attributes showing the last update time.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:supplyChainDueDiligenceReport",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:SupplyChainDueDiligence",
+        "rdfs:range": "xsd:anyURI",
+        "rdfs:label": "supply chain due diligence report",
+        "rdfs:comment": {
+            "@value": "<div>The battery passport must include information on responsible sourcing as indicated in the report on its due diligence policy. The report must provide data on: supply chain due diligence policy, risk management plan, summary report of third-party verification, and elaboration on access to information. DIN DKE Spec 99100 chapter reference: 6.4.2</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:thirdPartyAssurances",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:SupplyChainDueDiligence",
+        "rdfs:range": "xsd:anyURI",
+        "rdfs:label": "third party assurances",
+        "rdfs:comment": {
+            "@value": "<div>Information on third-party supply chain assurances such as certifications, of recognised supply chain schemes. DIN DKE Spec 99100 chapter reference: 6.4.3</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:supplyChainIndices",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "bp:SupplyChainDueDiligence",
+        "rdfs:range": "xsd:string",
+        "rdfs:label": "supply chain indices",
+        "rdfs:comment": {
+            "@value": "<div>Supply chain indices to allow easy assessment for consumers on level of responsible sourcing. ESGE+ indices under development by the GBA (Global Battery Alliance), scoring and benchmarking sustainability performance. DIN DKE Spec 99100 chapter reference: 6.4.4</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }],
+    "rdfs_classes": [{
+        "@id": "bp:CarbonFootprintForBatteries",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Carbon Footprint for Batteries",
+        "rdfs:comment": {
+            "@value": "<div>The battery passport must contain carbon footprint per functional unit of the battery as declared in the battery carbon footprint declaration in accordance with the entry into force of the implementing acts on the format of declaration. Reference: REGULATION (EU) 2023/1542 aka EU Battery Regulation</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "rdfs:seeAlso": ["https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1542"],
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:CarbonFootprintPerLifecycleStageEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Carbon Footprint Per Lifecycle Stage Entity",
+        "rdfs:comment": {
+            "@value": "<div>The carbon footprint of the battery as share of total Battery Carbon Footprint, differentiated per life cycle stage raw material extraction, main production, distribution and end of life and recycling.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:Unit",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Unit",
+        "rdfs:comment": {
+            "@value": "<div>Class for units of measurement</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:Circularity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Circularity",
+        "rdfs:comment": {
+            "@value": "<div>Battery circularity information including dismantling, spare parts, recycled content, safety measures, and end-of-life information.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:DismantlingandRemovalDocumentation",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Dismantling and Removal Documentation",
+        "rdfs:comment": {
+            "@value": "<div>Dismantling and Removal information, including at least: Exploded diagrams of the battery system/pack showing the location of battery cells, disassembly sequences, type and number of fastening techniques to be unlocked, tools required for disassembly, warnings if risk of damaging parts exists, amount of cells used and layout.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:SparePartSupplierEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Spare Part Supplier Entity",
+        "rdfs:comment": {
+            "@value": "<div>The part numbers for components should be provided together with the postal address, e-mail address and web address of the sources for spare parts.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:RecycledContentEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Recycled Content Entity",
+        "rdfs:comment": {
+            "@value": "<div>A battery passport must include recycled content information. The content information must include the percentage share of materials that have been recovered from battery manufacturing waste, for each battery model per year and per manufacturing plant.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:SafetyMeasuresEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Safety Measures Entity",
+        "rdfs:comment": {
+            "@value": "<div>The safety measures should be provided via the instruction manual as URL linking to PDF.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:EndOfLifeInformationEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "End Of Life Information Entity",
+        "rdfs:comment": {
+            "@value": "<div>Information on end-of-life handling, waste prevention, and collection.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:PostalAddress",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Postal Address",
+        "rdfs:comment": {
+            "@value": "<div>A postal address.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "rdfs:seeAlso": ["https://schema.org/PostalAddress"],
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:ComponentEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Component Entity",
+        "rdfs:comment": {
+            "@value": "<div>Component information including part name and number.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:GeneralProductInformation",
+        "@type": "rdfs:Class",
+        "rdfs:label": "General Product Information",
+        "rdfs:comment": {
+            "@value": "<div>General product information for battery passport including product identification, manufacturer information, manufacturing details, and battery category.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:ContactInformationEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Contact Information Entity",
+        "rdfs:comment": {
+            "@value": "<div>Contact information including name, postal address, identifier, and optional email and web address.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:PostalAddressEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Postal Address Entity",
+        "rdfs:comment": {
+            "@value": "<div>A postal address with country, postal code, and street address.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "rdfs:seeAlso": ["https://schema.org/PostalAddress"],
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:Labeling",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Labeling",
+        "rdfs:comment": {
+            "@value": "<div>Battery labeling information including declaration of conformity, test reports, and labels.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:LabelingEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Labeling Entity",
+        "rdfs:comment": {
+            "@value": "<div>Entity for the definition of required battery labeling including symbol, meaning, and subject.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:MaterialComposition",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Material Composition",
+        "rdfs:comment": {
+            "@value": "<div>Battery material composition including battery chemistry, battery materials, and hazardous substances.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:BatteryChemistryEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Battery Chemistry Entity",
+        "rdfs:comment": {
+            "@value": "<div>Detailed composition, including materials used in the cathode, anode, and electrolyte. All common cells have two electrodes and an electrolyte. The specific combination of materials used to make these components is called 'chemistry'.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:BatteryMaterialEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Battery Material Entity",
+        "rdfs:comment": {
+            "@value": "<div>Detailed composition, including materials used in the cathode, anode, and electrolyte.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:HazardousSubstanceEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Hazardous Substance Entity",
+        "rdfs:comment": {
+            "@value": "<div>Hazardous substances contained in the battery other than mercury, cadmium or lead. Substance as a chemical element and its compounds in the natural state or the result of a manufacturing process.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:BatteryLocationEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Battery Location Entity",
+        "rdfs:comment": {
+            "@value": "<div>Battery component that includes the material.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:PerformanceAndDurability",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Performance and Durability",
+        "rdfs:comment": {
+            "@value": "<div>Battery performance and durability information including technical properties and condition.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:BatteryTechnicalPropertiesEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Battery Technical Properties Entity",
+        "rdfs:comment": {
+            "@value": "<div>Covers all capability related data attributes including rated capacity, power, energy, voltage ranges, internal resistance, and expected lifetime.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:BatteryConditionEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Battery Condition Entity",
+        "rdfs:comment": {
+            "@value": "<div>Covers all battery lifetime relevant properties including energy throughput, capacity fade, number of cycles, state of charge, and temperature information.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:PowerCapabilityAtEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Power Capability At Entity",
+        "rdfs:comment": {
+            "@value": "<div>Power capability measurement at specific state of charge percentage.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:InternalResistanceEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Internal Resistance Entity",
+        "rdfs:comment": {
+            "@value": "<div>Internal resistance measurement for battery pack, module, or cell level.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:TemperatureRangeType",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Temperature Range Type",
+        "rdfs:comment": {
+            "@value": "<div>Temperature range with minimum and maximum boundaries.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:CapacityThroughputEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Capacity Throughput Entity",
+        "rdfs:comment": {
+            "@value": "<div>Capacity throughput value with last update timestamp.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:NumberOfFullCyclesEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Number Of Full Cycles Entity",
+        "rdfs:comment": {
+            "@value": "<div>Number of full cycles value with last update timestamp.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:StateOfCertifiedEnergyEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "State Of Certified Energy Entity",
+        "rdfs:comment": {
+            "@value": "<div>State of certified energy value with last update timestamp.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:CapacityFadeEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Capacity Fade Entity",
+        "rdfs:comment": {
+            "@value": "<div>Capacity fade value with last update timestamp.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:RemainingEnergyEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Remaining Energy Entity",
+        "rdfs:comment": {
+            "@value": "<div>Remaining energy value with last update timestamp.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:RemainingCapacityEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Remaining Capacity Entity",
+        "rdfs:comment": {
+            "@value": "<div>Remaining capacity value with last update timestamp.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:NegativeEventEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Negative Event Entity",
+        "rdfs:comment": {
+            "@value": "<div>Information about negative events such as accidents.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:TemperatureConditionsEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Temperature Conditions Entity",
+        "rdfs:comment": {
+            "@value": "<div>Temperature condition information including time spent in extreme temperatures.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:RemainingPowerCapabilityEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Remaining Power Capability Entity",
+        "rdfs:comment": {
+            "@value": "<div>Remaining power capability value with timestamp.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:EvolutionOfSelfDischargeEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Evolution Of Self Discharge Entity",
+        "rdfs:comment": {
+            "@value": "<div>Evolution of self discharge value.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:CurrentSelfDischargingRateEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Current Self Discharging Rate Entity",
+        "rdfs:comment": {
+            "@value": "<div>Current self discharging rate value with last update timestamp.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:InternalResistanceIncreaseEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Internal Resistance Increase Entity",
+        "rdfs:comment": {
+            "@value": "<div>Internal resistance increase value with last update timestamp and battery component level.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:RemainingRoundTripEnergyEfficiencyEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Remaining Round Trip Energy Efficiency Entity",
+        "rdfs:comment": {
+            "@value": "<div>Remaining round trip energy efficiency value with last update timestamp.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:StateOfChargeEntity",
+        "@type": "rdfs:Class",
+        "rdfs:label": "State Of Charge Entity",
+        "rdfs:comment": {
+            "@value": "<div>State of charge value with last update timestamp.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:RemainingPowerCapabilityDynamicAt",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Remaining Power Capability Dynamic At",
+        "rdfs:comment": {
+            "@value": "<div>Remaining power capability extending PowerCapabilityAtEntity with timestamp.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:SupplyChainDueDiligence",
+        "@type": "rdfs:Class",
+        "rdfs:label": "Supply Chain Due Diligence",
+        "rdfs:comment": {
+            "@value": "<div>Battery supply chain due diligence information including responsible sourcing reports and third-party assurances.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:DPPStaticMetadata",
+        "@type": "rdfs:Class",
+        "rdfs:label": "DPP Static Metadata",
+        "rdfs:comment": {
+            "@value": "<div>Static Digital Product Passport metadata as defined in JTC-24 prEN_18223. These attributes are set at issuance and describe the structure and granularity of the DPP record itself.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "rdfs:seeAlso": ["https://www.din.de/en/getting-involved/standards-committees/nid/european-projects/wdc-proj:din21:355350326"],
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:DPPStatus",
+        "@type": "rdfs:Class",
+        "rdfs:label": "DPP Status",
+        "rdfs:comment": {
+            "@value": "<div>Dynamic lifecycle state of the Digital Product Passport record. This attribute changes over the DPP lifecycle independently of the static product data.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "rdfs:seeAlso": ["https://www.din.de/en/getting-involved/standards-committees/nid/european-projects/wdc-proj:din21:355350326"],
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:DPPLastUpdated",
+        "@type": "rdfs:Class",
+        "rdfs:label": "DPP Last Updated",
+        "rdfs:comment": {
+            "@value": "<div>Dynamic timestamp recording when the Digital Product Passport record was most recently updated. Changes independently of static product data over the DPP lifecycle.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "rdfs:seeAlso": ["https://www.din.de/en/getting-involved/standards-committees/nid/european-projects/wdc-proj:din21:355350326"],
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }],
+    "rdfs_individuals": [{
+        "@id": "bp:kilogramperkilowatthour",
+        "@type": "bp:Unit",
+        "rdfs:label": "Kilogram Per Kilowatt Hour",
+        "rdfs:comment": {
+            "@value": "<div>Unit for carbon footprint per energy (kg CO2e/kWh)</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:kilogramm",
+        "@type": "bp:Unit",
+        "rdfs:label": "Kilogramm CO2 Equivalent",
+        "rdfs:comment": {
+            "@value": "<div>Unit for absolute carbon footprint (kg)</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }],
+    "rdfs_datatypes": [{
+        "@id": "bp:LifecycleStageDatatype",
+        "@type": "rdfs:Datatype",
+        "rdfs:subClassOf": ["xsd:string"],
+        "owl:onDatatype": "xsd:string",
+        "owl:withRestrictions": {
+            "@list": [{
+                "xsd:pattern": "RawMaterialExtraction|MainProduction|Distribution|EndOfLifeAndRecycling"
+            }]
+        },
+        "rdfs:label": "Lifecycle Stage",
+        "rdfs:comment": {
+            "@value": "<div>Enumeration of battery lifecycle stages as string values</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:DocumentTypeDatatype",
+        "@type": "rdfs:Datatype",
+        "rdfs:subClassOf": ["xsd:string"],
+        "owl:onDatatype": "xsd:string",
+        "owl:withRestrictions": {
+            "@list": [{
+                "xsd:pattern": "BillOfMaterial|Model3D|DismantlingManual|RemovalManual|OtherManual|Drawing"
+            }]
+        },
+        "rdfs:label": "Document Type",
+        "rdfs:comment": {
+            "@value": "<div>Enumeration of document types</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:RecycledMaterialDatatype",
+        "@type": "rdfs:Datatype",
+        "rdfs:subClassOf": ["xsd:string"],
+        "owl:onDatatype": "xsd:string",
+        "owl:withRestrictions": {
+            "@list": [{
+                "xsd:pattern": "Cobalt|Nickel|Lithium|Lead"
+            }]
+        },
+        "rdfs:label": "Recycled Material",
+        "rdfs:comment": {
+            "@value": "<div>Enumeration of recyclable materials</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:EmailAddressDatatype",
+        "@type": "rdfs:Datatype",
+        "rdfs:subClassOf": ["xsd:string"],
+        "owl:onDatatype": "xsd:string",
+        "owl:withRestrictions": {
+            "@list": [{
+                "xsd:pattern": "^[\\w.-]+@[\\w.-]+\\.[A-Za-z]{2,}$"
+            }]
+        },
+        "rdfs:label": "Email Address",
+        "rdfs:comment": {
+            "@value": "<div>Valid email address format</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:PercentageDatatype",
+        "@type": "rdfs:Datatype",
+        "rdfs:subClassOf": ["xsd:float"],
+        "rdfs:label": "Percentage",
+        "rdfs:comment": {
+            "@value": "<div>Percentage value between 0 and 100</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:BatteryCategoryDatatype",
+        "@type": "rdfs:Datatype",
+        "rdfs:subClassOf": ["xsd:string"],
+        "owl:onDatatype": "xsd:string",
+        "owl:withRestrictions": {
+            "@list": [{
+                "xsd:pattern": "lmt|ev|industrial|stationary"
+            }]
+        },
+        "rdfs:label": "Battery Category",
+        "rdfs:comment": {
+            "@value": "<div>Enumeration of battery categories</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:BatteryStatusDatatype",
+        "@type": "rdfs:Datatype",
+        "rdfs:subClassOf": ["xsd:string"],
+        "owl:onDatatype": "xsd:string",
+        "owl:withRestrictions": {
+            "@list": [{
+                "xsd:pattern": "Original|Repurposed|Reused|Remanufactured|Waste"
+            }]
+        },
+        "rdfs:label": "Battery Status",
+        "rdfs:comment": {
+            "@value": "<div>Lifecycle status enumeration</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:BatteryPassportIdentifierDatatype",
+        "@type": "rdfs:Datatype",
+        "rdfs:subClassOf": ["xsd:string"],
+        "owl:onDatatype": "xsd:string",
+        "owl:withRestrictions": {
+            "@list": [{
+                "xsd:pattern": "^urn:[a-z0-9]+:[a-z0-9]+$"
+            }]
+        },
+        "rdfs:label": "Battery Passport Identifier",
+        "rdfs:comment": {
+            "@value": "<div>URN format identifier for battery passport</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:DPPStatusDatatype",
+        "@type": "rdfs:Datatype",
+        "rdfs:subClassOf": ["xsd:string"],
+        "owl:onDatatype": "xsd:string",
+        "owl:withRestrictions": {
+            "@list": [{
+                "xsd:pattern": "Active|Archived|Inactive|Marked-for-deletion"
+            }]
+        },
+        "rdfs:label": "DPP Status",
+        "rdfs:comment": {
+            "@value": "<div>Lifecycle status of the Digital Product Passport</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:LabelingSubjectDatatype",
+        "@type": "rdfs:Datatype",
+        "rdfs:subClassOf": ["xsd:string"],
+        "owl:onDatatype": "xsd:string",
+        "owl:withRestrictions": {
+            "@list": [{
+                "xsd:pattern": "SeparateCollection|CadmiumAndLead|CarbonFootprint|ExtinguishingAgent"
+            }]
+        },
+        "rdfs:label": "Labeling Subject",
+        "rdfs:comment": {
+            "@value": "<div>Enumeration of labeling subjects</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:HazardousSubstanceClassDatatype",
+        "@type": "rdfs:Datatype",
+        "rdfs:subClassOf": ["xsd:string"],
+        "owl:onDatatype": "xsd:string",
+        "owl:withRestrictions": {
+            "@list": [{
+                "xsd:pattern": "AcuteToxicity|SkinCorrosionOrIrritation|EyeDamageOrIrritation|RespiratoryOrSkinSensitisation|GermCellMutagenicity|Carcinogenicity|ReproductiveToxicity|SpecificTargetOrganToxicitySingleExposure|SpecificTargetOrganToxicityRepeatedExposure|AspirationHazard|AquaticToxicityAcute|AquaticToxicityChronic"
+            }]
+        },
+        "rdfs:label": "Hazardous Substance Class",
+        "rdfs:comment": {
+            "@value": "<div>Enumeration of CLP hazard classes per Regulation (EC) No 1272/2008</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:BatteryComponentTypeDatatype",
+        "@type": "rdfs:Datatype",
+        "rdfs:subClassOf": ["xsd:string"],
+        "owl:onDatatype": "xsd:string",
+        "owl:withRestrictions": {
+            "@list": [{
+                "xsd:pattern": "Cathode|Anode|Electrolyte|Cell|Module|Pack|Other"
+            }]
+        },
+        "rdfs:label": "Battery Component Type",
+        "rdfs:comment": {
+            "@value": "<div>Enumeration of battery component types</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:CASNumberDatatype",
+        "@type": "rdfs:Datatype",
+        "rdfs:subClassOf": ["xsd:string"],
+        "owl:onDatatype": "xsd:string",
+        "owl:withRestrictions": {
+            "@list": [{
+                "xsd:pattern": "^\\d{2,7}-\\d{2}-\\d{1}$"
+            }]
+        },
+        "rdfs:label": "CAS Number",
+        "rdfs:comment": {
+            "@value": "<div>Chemical Abstracts Service (CAS) Registry Number format</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:BatteryComponentDatatype",
+        "@type": "rdfs:Datatype",
+        "rdfs:subClassOf": ["xsd:string"],
+        "owl:onDatatype": "xsd:string",
+        "owl:withRestrictions": {
+            "@list": [{
+                "xsd:pattern": "pack|module|cell"
+            }]
+        },
+        "rdfs:label": "Battery Component",
+        "rdfs:comment": {
+            "@value": "<div>Enumeration of battery component levels</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "bp:TemperatureConstraintDatatype",
+        "@type": "rdfs:Datatype",
+        "rdfs:subClassOf": ["xsd:double"],
+        "rdfs:label": "Temperature Constraint",
+        "rdfs:comment": {
+            "@value": "<div>Temperature range constraint between -100 and 200 degrees Celsius</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "vocab",
+            "@type": "jsonld:Context"
+        }]
+    }]
+}
