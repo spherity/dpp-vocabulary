@@ -1,4 +1,7 @@
 public
+!vocabularies/public/
+vocabularies/public/*
+!vocabularies/public/index.html
 
 # Node
 node_modules/
