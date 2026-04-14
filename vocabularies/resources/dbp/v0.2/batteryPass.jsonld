@@ -1,6 +1,6 @@
 {
     "@context": {
-        "bp": "https://dpp.vocabulary.spherity.dev/dbp/v0.2#",
+        "bp": "https://dpp.vocabulary.spherity.com/dbp/v0.2#",
         "jsonld": "http://www.w3.org/ns/json-ld#",
         "dc": "http://purl.org/dc/terms/",
         "owl": "http://www.w3.org/2002/07/owl#",
@@ -64,7 +64,7 @@
             "@type": "@id"
         }
     },
-    "@id": "https://dpp.vocabulary.spherity.dev/dbp/v0.2#",
+    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#",
     "@type": "owl:Ontology",
     "dc:title": {
         "@value": "Battery Pass Ontology",
