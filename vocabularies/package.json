@@ -9,8 +9,8 @@
   "name": "@spherity/dpp-vocabulary",
   "packageManager": "pnpm@9.11.0",
   "scripts": {
-    "build": "mkdir -p public/dbp && rsync -av --delete --exclude='*.yml' --exclude='dbp-template.html' resources/dbp/ public/dbp/ && find public/dbp -name 'batteryPass.html' | while read f; do cp \"$f\" \"$(dirname $f)/index.html\"; done",
-    "webserver": "serve -l 3000 public/",
+    "build": "mkdir -p public/dbp/v0.2 && rsync -av --delete --exclude='dbp-template.html' --exclude='index.html' --include='*/' --include='*.html'  --include='*.ttl' --include='*.jsonld' --include='*.svg' --include='*.png' --exclude='*' resources/dbp/ public/dbp/ && cat > public/dbp/v0.2/index.html << 'EOF'\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta http-equiv=\"refresh\" content=\"0; url=batteryPass.html\">\n    <title>Battery Pass v0.2</title>\n</head>\n<body>\n    <p>Redirecting to <a href=\"batteryPass.html\">Battery Pass vocabulary documentation</a>...</p>\n</body>\n</html>\nEOF\n",
+    "serve": "serve -l 3000 public",
     "validate:jsonld": "node ../scripts/validate-jsonld.js",
     "validate:vocab-links": "node ../scripts/validate-vocab-links.js"
   },

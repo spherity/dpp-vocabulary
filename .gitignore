@@ -2,6 +2,14 @@ public
 !vocabularies/public/
 vocabularies/public/*
 !vocabularies/public/index.html
+!vocabularies/public/*/
+vocabularies/public/*/*
+!vocabularies/public/*/index.html
+!vocabularies/public/*/*/
+vocabularies/public/*/*/*
+!vocabularies/public/*/*/index.html
+
+resources
 
 # Node
 node_modules/
@@ -13,7 +21,7 @@ pnpm-debug.log*
 rag/.env
 
 # rag
-resources
+rag/resources
 .env
 *.conf
 fly-wireguard.conf
