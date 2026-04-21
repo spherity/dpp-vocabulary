@@ -493,6 +493,21 @@ property:
     comment: |
       Product and operator data sub-section. In the restricted context points to RestrictedProductData.
 
+  # --- GeneralInformationRestricted ---
+  - id: identifiers
+    label: Identifiers
+    domain: dbp:GeneralInformationRestricted
+    range: dbp:OperatorIdentifiers
+    comment: |
+      Operator identifiers sub-section within the restricted general information context.
+
+  - id: productData
+    label: Product Data
+    domain: dbp:GeneralInformationRestricted
+    range: dbp:RestrictedProductData
+    comment: |
+      Restricted product data sub-section within the restricted general information context.
+
   # --- OperatorIdentifiers ---
   - id: manufacturerId
     label: Manufacturer ID
@@ -595,6 +610,13 @@ property:
     comment: |
       URI linking to the EU declaration of conformity document for this battery.
 
+  - id: hasLabel
+    label: Has Label
+    domain: dbp:BatteryCompliancePublic
+    range: dbp:Label
+    comment: |
+      A regulatory label or symbol associated with the battery compliance information.
+
   # --- BatteryComplianceRestricted ---
   - id: testReportResults
     label: Test Report Results
@@ -677,6 +699,13 @@ property:
     range: dbp:HazardousSubstance
     comment: |
       Collection of hazardous substances present in the battery above regulatory thresholds.
+
+  - id: contains
+    label: Contains
+    domain: dbp:BatteryMaterialsPublic
+    range: dbp:HazardousSubstance
+    comment: |
+      Relationship indicating that the battery materials contain a hazardous substance.
 
   # --- BatteryMaterialLocation ---
   - id: componentId
@@ -1091,7 +1120,58 @@ property:
     domain: dbp:BatteryPerformancePublic
     range: dbp:TemperatureConditionsPublic
     comment: |
-      Temperature conditions sub-section. Applied to both public and restricted performance containers.
+      Temperature conditions sub-section of the public battery performance container.
+
+  # --- BatteryPerformanceRestricted ---
+  - id: capacityEnergyVoltage
+    label: Capacity Energy and Voltage
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:CapacityEnergyVoltageRestricted
+    comment: |
+      Dynamic restricted capacity, energy, and voltage sub-section.
+
+  - id: powerCapability
+    label: Power Capability
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:PowerCapabilityRestricted
+    comment: |
+      Dynamic restricted power capability sub-section.
+
+  - id: roundTripEfficiency
+    label: Round Trip Efficiency
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:RoundTripEfficiencyRestricted
+    comment: |
+      Dynamic restricted round trip efficiency and self-discharge sub-section.
+
+  - id: internalResistance
+    label: Internal Resistance
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:InternalResistanceRestricted
+    comment: |
+      Dynamic restricted internal resistance sub-section.
+
+  - id: batteryLifetime
+    label: Battery Lifetime
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:BatteryLifetimeRestricted
+    comment: |
+      Dynamic restricted battery lifetime sub-section.
+
+  - id: temperatureConditions
+    label: Temperature Conditions
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:TemperatureConditionsRestricted
+    comment: |
+      Dynamic restricted temperature conditions sub-section.
+
+  - id: negativeEvents
+    label: Negative Events
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:NegativeEvents
+    comment: |
+      Dynamic restricted adverse battery events sub-section including deep discharge,
+      overcharge events, and accident records.
 
   # --- CapacityEnergyVoltageRestricted ---
   - id: capacityFade

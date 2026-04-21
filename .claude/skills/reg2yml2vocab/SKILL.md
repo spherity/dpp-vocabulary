@@ -268,6 +268,55 @@ property:
 
 After writing the file, display the first 50 lines as a preview and confirm: "YAML written to `<path>`. Preview above — does it look correct?"
 
+### Coverage check (always run after writing the YAML, when a `.mmd` is available)
+
+If a `.mmd` file exists (either provided in Phase 0 or generated in Phase 3b), run this check to ensure every connection defined in the data model has a corresponding property in the YAML. **Fix all gaps before proceeding to Phase 4.**
+
+```python
+import re
+
+mmd  = open("<mmd-path>").read()
+yml  = open("<yaml-path>").read()
+
+primitives = {"string","integer","decimal","boolean","date","timestamp","uri","id"}
+
+# 1. Object-typed entity block attributes  →  property must exist with that domain
+attrs = []
+current = None
+for line in mmd.splitlines():
+    m = re.match(r'\s+(\w+)\s*\{', line)
+    if m:
+        current = m.group(1)
+    if current:
+        m = re.match(r'\s+(\w+)\[?\]?\s+(\w+)\s*$', line)
+        if m and m.group(1) not in primitives and m.group(1) != current:
+            attrs.append((current, m.group(1).rstrip("[]"), m.group(2)))
+
+# 2. Relationship labels  →  property must exist with that domain
+rels = re.findall(r'(\w+)\s+\|\|--[|o]\{?\s+(\w+)\s+:\s+"(\w+)"', mmd)
+
+# 3. YAML properties
+props = {(p, d) for p, d, _ in
+         re.findall(r'- id: (\w+)\n\s+label:.*?\n\s+domain: \w+:(\w+)\n', yml)}
+
+missing = []
+for cls, typ, attr in attrs:
+    if (attr, cls) not in props:
+        missing.append(f"  entity-block attr  {cls}.{attr} : {typ}")
+for dom, rng, prop in rels:
+    if (prop, dom) not in props:
+        missing.append(f"  relationship       {dom} --[{prop}]--> {rng}")
+
+if missing:
+    print("MISSING PROPERTIES — add these to the YAML before continuing:")
+    for m in missing:
+        print(m)
+else:
+    print(f"Coverage OK — {len(attrs)} entity attrs + {len(rels)} relationship labels all covered")
+```
+
+Do **not** proceed to Phase 4 if any gaps are reported. Add the missing properties to the YAML and re-run the check until it prints `Coverage OK`.
+
 ---
 
 ## Phase 3b — Generate Mermaid ERD (skip if `.mmd` was provided in Phase 0)

@@ -154,14 +154,6 @@
                 "general": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/general",
                     "@type": "@id"
-                },
-                "identifiers": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/identifiers",
-                    "@type": "@id"
-                },
-                "productData": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/productData",
-                    "@type": "@id"
                 }
             }
         },
@@ -197,7 +189,20 @@
                 }
             }
         },
-        "GeneralInformationRestricted": "https://dpp.vocabulary.spherity.com/dbp/v0.2/GeneralInformationRestricted",
+        "GeneralInformationRestricted": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/GeneralInformationRestricted",
+            "@context": {
+                "@protected": true,
+                "identifiers": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/identifiers",
+                    "@type": "@id"
+                },
+                "productData": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/productData",
+                    "@type": "@id"
+                }
+            }
+        },
         "Label": {
             "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/Label",
             "@context": {
@@ -243,6 +248,10 @@
                 "euDeclarationConformity": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/euDeclarationConformity",
                     "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+                },
+                "hasLabel": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/hasLabel",
+                    "@type": "@id"
                 }
             }
         },
@@ -316,6 +325,10 @@
                 },
                 "hazardousSubstances": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/hazardousSubstances",
+                    "@type": "@id"
+                },
+                "contains": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/contains",
                     "@type": "@id"
                 }
             }
@@ -608,36 +621,7 @@
                 }
             }
         },
-        "BatteryPerformancePublic": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryPerformancePublic",
-            "@context": {
-                "@protected": true,
-                "capacityEnergyVoltage": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/capacityEnergyVoltage",
-                    "@type": "@id"
-                },
-                "powerCapability": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/powerCapability",
-                    "@type": "@id"
-                },
-                "roundTripEfficiency": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/roundTripEfficiency",
-                    "@type": "@id"
-                },
-                "internalResistance": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/internalResistance",
-                    "@type": "@id"
-                },
-                "batteryLifetime": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryLifetime",
-                    "@type": "@id"
-                },
-                "temperatureConditions": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/temperatureConditions",
-                    "@type": "@id"
-                }
-            }
-        },
+        "BatteryPerformancePublic": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryPerformancePublic",
         "CapacityEnergyVoltageRestricted": {
             "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/CapacityEnergyVoltageRestricted",
             "@context": {
@@ -780,7 +764,40 @@
                 }
             }
         },
-        "BatteryPerformanceRestricted": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryPerformanceRestricted",
+        "BatteryPerformanceRestricted": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryPerformanceRestricted",
+            "@context": {
+                "@protected": true,
+                "capacityEnergyVoltage": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/capacityEnergyVoltage",
+                    "@type": "@id"
+                },
+                "powerCapability": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/powerCapability",
+                    "@type": "@id"
+                },
+                "roundTripEfficiency": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/roundTripEfficiency",
+                    "@type": "@id"
+                },
+                "internalResistance": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/internalResistance",
+                    "@type": "@id"
+                },
+                "batteryLifetime": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryLifetime",
+                    "@type": "@id"
+                },
+                "temperatureConditions": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/temperatureConditions",
+                    "@type": "@id"
+                },
+                "negativeEvents": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/negativeEvents",
+                    "@type": "@id"
+                }
+            }
+        },
         "PerformanceClass": "https://dpp.vocabulary.spherity.com/dbp/v0.2/PerformanceClass"
     }
 }
