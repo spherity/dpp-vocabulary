@@ -1,4 +1,4 @@
-@prefix bp: <https://dpp.vocabulary.spherity.com/dbp/v0.2#> .
+@prefix dbp: <https://dpp.vocabulary.spherity.com/dbp/v0.2/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -7,2251 +7,1754 @@
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 
 # Ontology definition
-bp: a owl:Ontology ;
-    dc:title """Battery Digital Product Passport Vocabulary"""@en ;
-    dc:description """Combined Battery Digital Product Passport vocabulary covering all mandatory and optional
-data attributes required by REGULATION (EU) 2023/1542 (EU Battery Regulation) and
-DIN DKE Spec 99100. Modules included: Carbon Footprint, Circularity, General Information,
-Labels, Material Composition, Performance and Durability, Supply Chain Due Diligence.
+dbp: a owl:Ontology ;
+    dc:title """Digital Battery Passport Vocabulary"""@en ;
+    dc:description """Vocabulary for the EU Battery Regulation Digital Product Passport, covering battery identity,
+compliance, materials, carbon footprint, circularity, and performance and durability data
+as defined by the BatteryPass-Ready DataAttributeLongList v1.3 (March 2026).
 """^^rdf:HTML ;
-    rdfs:seeAlso <https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1542> ;
-    rdfs:seeAlso <https://thebatterypass.eu/battery-pass/> ;
-    dc:date "2026-04-20"^^xsd:date ;
+    rdfs:seeAlso <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1542> ;
+    dc:date "2026-04-21"^^xsd:date ;
 .
 
 # Property definitions
-bp:batteryPassportIdentifier a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:GeneralInformation ;
-    rdfs:range bp:BatteryPassportIdentifierDatatype ;
-    rdfs:label "battery passport identifier" ;
-    rdfs:comment """<div>Unique identifier allowing for the unambiguous identification of each individual
-battery and hence each corresponding battery passport.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:productIdentifier a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:GeneralInformation ;
+dbp:postalCode a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:PostalAddress ;
     rdfs:range xsd:string ;
-    rdfs:label "product identifier" ;
-    rdfs:comment """<div>Unique identifier allowing for the unambiguous identification of each individual
-battery and hence each corresponding battery passport.
-DIN DKE Spec chapter reference: 6.1.2.2</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Postal Code" ;
+    rdfs:comment """<div>The postal or ZIP code of the address.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:batteryModelIdentifier a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:GeneralInformation ;
+dbp:streetAddress a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:PostalAddress ;
     rdfs:range xsd:string ;
-    rdfs:label "battery model identifier" ;
-    rdfs:comment """<div>Unambiguous identification of the battery model.
-DIN DKE Spec chapter reference: 6.1.2.1</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Street Address" ;
+    rdfs:comment """<div>The full street address including building number.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:batterySerialNumber a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:GeneralInformation ;
+dbp:country a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:PostalAddress ;
     rdfs:range xsd:string ;
-    rdfs:label "battery serial number" ;
-    rdfs:comment """<div>Unique serial number of the individual battery item.
-DIN DKE Spec chapter reference: 6.1.2.2</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Country" ;
+    rdfs:comment """<div>The country of the address, preferably as an ISO 3166-1 alpha-2 country code.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:batteryCategory a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:GeneralInformation ;
-    rdfs:range bp:BatteryCategoryDatatype ;
-    rdfs:label "battery category" ;
-    rdfs:comment """<div>Categories relevant for the battery passport: LMT battery, electric vehicle battery,
-stationary or other industrial battery greater than 2 kWh.
-DIN DKE Spec chapter reference: 6.1.3.5</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:batteryMass a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:GeneralInformation ;
-    rdfs:range xsd:double ;
-    rdfs:label "battery mass" ;
-    rdfs:comment """<div>Mass of the entire battery in kilograms.
-DIN DKE Spec chapter reference: 6.1.3.6</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:batteryStatus a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:GeneralInformation ;
-    rdfs:range bp:BatteryStatusDatatype ;
-    rdfs:label "battery status" ;
-    rdfs:comment """<div>Lifecycle status of the battery. Status defined from a list: original, repurposed,
-reused, remanufactured, waste.
-DIN DKE Spec chapter reference: 6.1.3.7</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:manufacturingDate a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:GeneralInformation ;
-    rdfs:range xsd:gYearMonth ;
-    rdfs:label "manufacturing date" ;
-    rdfs:comment """<div>The manufacturing date should not only relate to the battery model, but to the
-battery item. The date code should comply with DIN ISO 8601.
-DIN DKE Spec chapter reference: 6.1.3.2</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:puttingIntoService a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:GeneralInformation ;
-    rdfs:range xsd:gYearMonth ;
-    rdfs:label "putting into service" ;
-    rdfs:comment """<div>The battery passport must include information on the date of putting the battery
-into service. DIN DKE Spec chapter reference: 6.1.3.3</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:warrantyPeriod a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:GeneralInformation ;
-    rdfs:range xsd:gYearMonth ;
-    rdfs:label "warranty period" ;
-    rdfs:comment """<div>The battery passport must include information about the period for which the
-commercial warranty applies. DIN DKE Spec chapter reference: 6.1.3.4</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:manufacturerInformation a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:GeneralInformation ;
-    rdfs:range bp:ContactInformation ;
-    rdfs:label "manufacturer information" ;
-    rdfs:comment """<div>Unambiguous identification of the manufacturer of the battery, suggested via
-a unique operator identifier. DIN DKE Spec chapter reference: 6.1.2.4</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:operatorInformation a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:GeneralInformation ;
-    rdfs:range bp:ContactInformation ;
-    rdfs:label "operator information" ;
-    rdfs:comment """<div>State the name, trade name or mark, postal address, web address, e-mail address.
-DIN DKE Spec chapter reference: 6.1.2.3</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:manufacturerIdentifier a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:GeneralInformation ;
+dbp:phone a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:ContactInformation ;
     rdfs:range xsd:string ;
-    rdfs:label "manufacturer identifier" ;
-    rdfs:comment """<div>Unique identifier of the manufacturer of the battery.
-DIN DKE Spec chapter reference: 6.1.2.4</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Phone" ;
+    rdfs:comment """<div>The telephone number for the contact.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:economicOperatorIdentifier a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:GeneralInformation ;
+dbp:email a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:ContactInformation ;
     rdfs:range xsd:string ;
-    rdfs:label "economic operator identifier" ;
-    rdfs:comment """<div>Unique identifier of the economic operator responsible for placing the battery
-on the market. DIN DKE Spec chapter reference: 6.1.2.3</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Email" ;
+    rdfs:comment """<div>The email address for the contact.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:manufacturingPlace a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:GeneralInformation ;
-    rdfs:range bp:PostalAddress ;
-    rdfs:label "manufacturing place" ;
-    rdfs:comment """<div>Unambiguous identification of the manufacturing facility.
-DIN DKE Spec chapter reference: 6.1.3.1</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:website a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:ContactInformation ;
+    rdfs:range xsd:anyURI ;
+    rdfs:label "Website" ;
+    rdfs:comment """<div>The URL of the organisation's website.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:dppSchemaVersion a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:DPPStaticMetadata ;
+dbp:identifier a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:CompanyInformation ;
     rdfs:range xsd:string ;
-    rdfs:label "dpp schema version" ;
-    rdfs:comment """<div>Version of the DPP data schema in use, as defined in JTC-24 prEN_18223.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Identifier" ;
+    rdfs:comment """<div>Unique identifier for the company or operator.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:dppGranularity a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:DPPStaticMetadata ;
+dbp:name a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:CompanyInformation ;
     rdfs:range xsd:string ;
-    rdfs:label "dpp granularity" ;
-    rdfs:comment """<div>Level of granularity at which the DPP is issued (e.g. model, batch, item),
-as defined in JTC-24 prEN_18223.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Name" ;
+    rdfs:comment """<div>Legal name of the company or operator.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:dppStatus a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:DPPStatus ;
-    rdfs:range bp:DPPStatusDatatype ;
-    rdfs:label "dpp status" ;
-    rdfs:comment """<div>Dynamic lifecycle state of the Digital Product Passport record.
-Changes independently of product data over the DPP lifecycle.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:contact a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:CompanyInformation ;
+    rdfs:range dbp:ContactInformation ;
+    rdfs:label "Contact" ;
+    rdfs:comment """<div>Contact details for the company or operator.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:dppLastUpdated a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:DPPLastUpdated ;
+dbp:address a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:CompanyInformation ;
+    rdfs:range dbp:PostalAddress ;
+    rdfs:label "Address" ;
+    rdfs:comment """<div>Registered postal address of the company or operator.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:schemaVersion a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:DPPInfo ;
+    rdfs:range xsd:string ;
+    rdfs:label "Schema Version" ;
+    rdfs:comment """<div>Version of the DPP data schema used for this battery passport instance.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:dppGranularity a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:DPPInfo ;
+    rdfs:range xsd:string ;
+    rdfs:label "DPP Granularity" ;
+    rdfs:comment """<div>Granularity level of the DPP — model, batch, site, or individual battery.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:dppStatus a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:DPPInfo ;
+    rdfs:range xsd:string ;
+    rdfs:label "DPP Status" ;
+    rdfs:comment """<div>Current lifecycle status of the DPP (e.g. active, withdrawn, updated).</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:lastUpdated a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:DPPInfo ;
     rdfs:range xsd:dateTime ;
-    rdfs:label "dpp last updated" ;
-    rdfs:comment """<div>Timestamp of the most recent update to the Digital Product Passport record.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Last Updated" ;
+    rdfs:comment """<div>Timestamp of the most recent update to the DPP record.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:contactName a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:ContactInformation ;
+dbp:warrantyPeriod a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryAttributes ;
+    rdfs:range xsd:date ;
+    rdfs:label "Warranty Period" ;
+    rdfs:comment """<div>Date until which the manufacturer warranty for the battery is valid.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:batteryCategory a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryAttributes ;
     rdfs:range xsd:string ;
-    rdfs:label "contact name" ;
-    rdfs:comment """<div>Name of the contact or organisation. Used to represent the company name
-of manufacturer or operator.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Battery Category" ;
+    rdfs:comment """<div>Category of the battery as defined by the EU Battery Regulation
+(e.g. EV, LMT, industrial, stationary).</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:identifier a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:ContactInformation ;
+dbp:batteryMass a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryAttributes ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Battery Mass" ;
+    rdfs:comment """<div>Total mass of the battery in kilograms.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:batteryModelIdentifier a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryIdentifiers ;
     rdfs:range xsd:string ;
-    rdfs:label "identifier" ;
-    rdfs:comment """<div>Economic operator code identifier.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Battery Model Identifier" ;
+    rdfs:comment """<div>Unique identifier for the battery model, assigned at model level.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:emailAddress a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:ContactInformation ;
-    rdfs:range bp:EmailAddressDatatype ;
-    rdfs:label "email address" ;
-    rdfs:comment """<div>Email address.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:webAddress a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:ContactInformation ;
+dbp:uniqueBatteryIdentifier a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryIdentifiers ;
     rdfs:range xsd:anyURI ;
-    rdfs:label "web address" ;
-    rdfs:comment """<div>Web address.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Unique Battery Identifier" ;
+    rdfs:comment """<div>Unique identifier for the individual battery unit expressed as a URI.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:postalAddress a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:ContactInformation ;
-    rdfs:range bp:PostalAddress ;
-    rdfs:label "postal address" ;
-    rdfs:comment """<div>Postal address of the contact.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:addressCountry a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:PostalAddress ;
+dbp:serialNumber a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryIdentifiers ;
     rdfs:range xsd:string ;
-    rdfs:label "address country" ;
-    rdfs:comment """<div>The country. For example, Germany or DE.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Serial Number" ;
+    rdfs:comment """<div>Manufacturer-assigned serial number for the individual battery unit.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:postalCode a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:PostalAddress ;
-    rdfs:range xsd:string ;
-    rdfs:label "postal code" ;
-    rdfs:comment """<div>The postal code. For example, DE-10719 or 10719.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:streetAddress a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:PostalAddress ;
-    rdfs:range xsd:string ;
-    rdfs:label "street address" ;
-    rdfs:comment """<div>The street address. For example, Street 1 or Hindenburgstr. 10.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:facilityIdentifier a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:PostalAddress ;
-    rdfs:range xsd:string ;
-    rdfs:label "facility identifier" ;
-    rdfs:comment """<div>Unique identifier of the manufacturing facility.
-DIN DKE Spec chapter reference: 6.1.3.1</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:labels a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:Labeling ;
-    rdfs:range bp:Label ;
-    rdfs:label "labels" ;
-    rdfs:comment """<div>Separate collection or WEEE label indicating that a product should not be
-discarded as unsorted waste but must be sent to separate collection facilities
-for recovery and recycling.
-DIN DKE Spec chapter reference: 6.2.2-6.2.5</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:declarationOfConformity a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:Labeling ;
+dbp:uniqueDPPIdentifier a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryIdentifiers ;
     rdfs:range xsd:anyURI ;
-    rdfs:label "declaration of conformity" ;
-    rdfs:comment """<div>A battery passport must include the EU declaration of conformity.
-The EU declaration of conformity has the model structure set out in Annex IX.
-DIN DKE Spec chapter reference: 6.2.7</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Unique DPP Identifier" ;
+    rdfs:comment """<div>Unique identifier for this Digital Product Passport expressed as a URI.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:resultOfTestReport a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:Labeling ;
+dbp:economicOperator a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:ProductData ;
+    rdfs:range dbp:CompanyInformation ;
+    rdfs:label "Economic Operator" ;
+    rdfs:comment """<div>Information about the economic operator responsible for placing the battery on the market.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:manufacturer a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:ProductData ;
+    rdfs:range dbp:CompanyInformation ;
+    rdfs:label "Manufacturer" ;
+    rdfs:comment """<div>Information about the battery manufacturer.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:manufacturingPlace a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:ProductData ;
+    rdfs:range dbp:PostalAddress ;
+    rdfs:label "Manufacturing Place" ;
+    rdfs:comment """<div>Postal address of the manufacturing facility.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:manufacturingDate a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:ProductData ;
+    rdfs:range xsd:date ;
+    rdfs:label "Manufacturing Date" ;
+    rdfs:comment """<div>Date on which the battery was manufactured.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:dppInfo a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:GeneralInformationPublic ;
+    rdfs:range dbp:DPPInfo ;
+    rdfs:label "DPP Info" ;
+    rdfs:comment """<div>Digital Product Passport metadata associated with this battery passport instance.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:general a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:GeneralInformationPublic ;
+    rdfs:range dbp:BatteryAttributes ;
+    rdfs:label "General" ;
+    rdfs:comment """<div>General battery attributes including warranty period, category, and mass.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:identifiers a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:GeneralInformationPublic ;
+    rdfs:range dbp:BatteryIdentifiers ;
+    rdfs:label "Identifiers" ;
+    rdfs:comment """<div>Battery identifiers sub-section. In the restricted context points to OperatorIdentifiers.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:productData a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:GeneralInformationPublic ;
+    rdfs:range dbp:ProductData ;
+    rdfs:label "Product Data" ;
+    rdfs:comment """<div>Product and operator data sub-section. In the restricted context points to RestrictedProductData.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:manufacturerId a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:OperatorIdentifiers ;
+    rdfs:range xsd:string ;
+    rdfs:label "Manufacturer ID" ;
+    rdfs:comment """<div>Unique identifier for the battery manufacturer.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:facilityId a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:OperatorIdentifiers ;
+    rdfs:range xsd:string ;
+    rdfs:label "Facility ID" ;
+    rdfs:comment """<div>Unique identifier for the manufacturing facility.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:economicOperatorId a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:OperatorIdentifiers ;
+    rdfs:range xsd:string ;
+    rdfs:label "Economic Operator ID" ;
+    rdfs:comment """<div>Unique identifier for the economic operator.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:dateOfPuttingIntoService a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:RestrictedProductData ;
+    rdfs:range xsd:date ;
+    rdfs:label "Date of Putting Into Service" ;
+    rdfs:comment """<div>Date on which the battery was first put into service.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:batteryStatus a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:RestrictedProductData ;
+    rdfs:range xsd:string ;
+    rdfs:label "Battery Status" ;
+    rdfs:comment """<div>Current operational status of the battery (e.g. original, repurposed, remanufactured, waste).</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:symbol a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:Label ;
+    rdfs:range xsd:string ;
+    rdfs:label "Symbol" ;
+    rdfs:comment """<div>The regulatory symbol code or icon reference.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:meaning a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:Label ;
+    rdfs:range xsd:string ;
+    rdfs:label "Meaning" ;
+    rdfs:comment """<div>Human-readable explanation of the symbol's meaning.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:subject a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:Label ;
+    rdfs:range xsd:string ;
+    rdfs:label "Subject" ;
+    rdfs:comment """<div>The subject matter or topic addressed by this label or symbol.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:separateCollectionSymbol a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryCompliancePublic ;
+    rdfs:range dbp:Label ;
+    rdfs:label "Separate Collection Symbol" ;
+    rdfs:comment """<div>Symbol indicating that the battery must be separately collected at end of life.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:cadmium a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryCompliancePublic ;
+    rdfs:range dbp:Label ;
+    rdfs:label "Cadmium Label" ;
+    rdfs:comment """<div>Label indicating presence of cadmium above the regulatory threshold.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:lead a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryCompliancePublic ;
+    rdfs:range dbp:Label ;
+    rdfs:label "Lead Label" ;
+    rdfs:comment """<div>Label indicating presence of lead above the regulatory threshold.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:carbonFootprint a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryCompliancePublic ;
+    rdfs:range dbp:Label ;
+    rdfs:label "Carbon Footprint Label" ;
+    rdfs:comment """<div>Label displaying the carbon footprint performance class assigned to the battery model.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:extinguishingAgent a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryCompliancePublic ;
+    rdfs:range xsd:string ;
+    rdfs:label "Extinguishing Agent" ;
+    rdfs:comment """<div>The type of extinguishing agent suitable for use in case of battery fire.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:euDeclarationConformity a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryCompliancePublic ;
     rdfs:range xsd:anyURI ;
-    rdfs:label "result of test report" ;
-    rdfs:comment """<div>URL to a document that includes results of test reports proving compliance
-in the market conformity assessment procedure.
-DIN DKE Spec chapter reference: 6.2.8</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "EU Declaration of Conformity" ;
+    rdfs:comment """<div>URI linking to the EU declaration of conformity document for this battery.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:extinguishingAgent a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:Labeling ;
-    rdfs:range xsd:string ;
-    rdfs:label "extinguishing agent" ;
-    rdfs:comment """<div>Usable extinguishing agents referring to classes of extinguishers (A, B, C, D, K).
-DIN DKE Spec chapter reference: 6.2.5</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:symbol a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:Label ;
+dbp:testReportResults a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryComplianceRestricted ;
     rdfs:range xsd:anyURI ;
-    rdfs:label "symbol" ;
-    rdfs:comment """<div>URL or path to the labeling symbol image.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Test Report Results" ;
+    rdfs:comment """<div>URI linking to the results of conformity test reports.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:meaning a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:Label ;
-    rdfs:range xsd:string ;
-    rdfs:label "meaning" ;
-    rdfs:comment """<div>Explanation of the meaning of all symbols and labels (including separate
-collection; cadmium and lead; and carbon footprint and carbon footprint
-performance class symbols).</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:subject a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:Label ;
-    rdfs:range bp:LabelingSubjectDatatype ;
-    rdfs:label "subject" ;
-    rdfs:comment """<div>Short name of required labeling subjects.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:batteryCarbonFootprint a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:CarbonFootprint ;
-    rdfs:range xsd:double ;
-    rdfs:label "battery carbon footprint" ;
-    rdfs:comment """<div>The carbon footprint of the battery, calculated as kg of carbon dioxide equivalent
-per one kWh of the total energy provided by the battery over its expected service life,
-as declared in the Carbon Footprint Declaration.
-DIN DKE Spec 99100 chapter reference: 6.3.2</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:carbonFootprintPerformanceClass a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:CarbonFootprint ;
-    rdfs:range bp:CarbonFootprintPerformanceClassDatatype ;
-    rdfs:label "carbon footprint performance class" ;
-    rdfs:comment """<div>The carbon footprint performance class that the relevant battery model per
-manufacturing plant corresponds to.
-DIN DKE Spec 99100 chapter reference: 6.3.7</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:carbonFootprintStudy a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:CarbonFootprint ;
+dbp:dueDiligenceReport a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:SupplyChainDueDiligence ;
     rdfs:range xsd:anyURI ;
-    rdfs:label "carbon footprint study" ;
-    rdfs:comment """<div>A web link to get access to a public version of the study supporting
-the carbon footprint values.
-DIN DKE Spec 99100 chapter reference: 6.3.8</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Due Diligence Report" ;
+    rdfs:comment """<div>URI linking to the supply chain due diligence report.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:absoluteCarbonFootprint a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:CarbonFootprint ;
-    rdfs:range xsd:integer ;
-    rdfs:label "absolute carbon footprint" ;
-    rdfs:comment """<div>The battery carbon footprint in absolute terms, calculated as kilograms of
-carbon dioxide equivalent, without reference to the functional unit.
-DIN DKE Spec 99100 chapter reference: 6.3.10</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:carbonFootprintPerLifecycleStage a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:CarbonFootprint ;
-    rdfs:range bp:CarbonFootprintPerLifecycleStage ;
-    rdfs:label "carbon footprint per lifecycle stage" ;
-    rdfs:comment """<div>The carbon footprint of the battery as share of total Battery Carbon Footprint,
-differentiated per life cycle stages raw material extraction, battery production,
-distribution and recycling.
-DIN DKE Spec 99100 chapter reference: 6.3.3-6.3.6</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:carbonFootprint a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:CarbonFootprintPerLifecycleStage ;
-    rdfs:range xsd:double ;
-    rdfs:label "carbon footprint" ;
-    rdfs:comment """<div>Carbon footprint of the individual lifecycle stage.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:lifecycleStage a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:CarbonFootprintPerLifecycleStage ;
-    rdfs:range bp:LifecycleStageDatatype ;
-    rdfs:label "lifecycle stage" ;
-    rdfs:comment """<div>The description of the life cycle stage.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:supplyChainDueDiligenceReport a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:SupplyChainDueDiligence ;
-    rdfs:range xsd:anyURI ;
-    rdfs:label "supply chain due diligence report" ;
-    rdfs:comment """<div>The battery passport must include information on responsible sourcing as indicated
-in the report on its due diligence policy. The report must provide data on: supply
-chain due diligence policy, risk management plan, summary report of third-party
-verification, and elaboration on access to information.
-DIN DKE Spec 99100 chapter reference: 6.4.2</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:thirdPartyAssurances a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:SupplyChainDueDiligence ;
-    rdfs:range xsd:anyURI ;
-    rdfs:label "third party assurances" ;
-    rdfs:comment """<div>Information on third-party supply chain assurances such as certifications,
-of recognised supply chain schemes.
-DIN DKE Spec 99100 chapter reference: 6.4.3</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:supplyChainIndices a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:SupplyChainDueDiligence ;
+dbp:thirdPartyAssurances a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:SupplyChainDueDiligence ;
     rdfs:range xsd:string ;
-    rdfs:label "supply chain indices" ;
-    rdfs:comment """<div>Supply chain indices to allow easy assessment for consumers on level of
-responsible sourcing. ESGE+ indices under development by the GBA (Global
-Battery Alliance), scoring and benchmarking sustainability performance.
-DIN DKE Spec 99100 chapter reference: 6.4.4</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Third Party Assurances" ;
+    rdfs:comment """<div>Description of third-party assurances obtained for supply chain due diligence.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:batteryChemistry a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:MaterialComposition ;
-    rdfs:range bp:BatteryChemistry ;
-    rdfs:label "battery chemistry" ;
-    rdfs:comment """<div>Composition of a product in general terms by specifying the cathode and anode
-active material as well as electrolyte.
-DIN DKE Spec 99100 chapter reference: 6.5.2</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:batteryMaterials a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:MaterialComposition ;
-    rdfs:range bp:BatteryMaterial ;
-    rdfs:label "battery materials" ;
-    rdfs:comment """<div>Component materials used: Naming the materials (as a composition of substances)
-in cathode, anode, electrolyte according to public standards.
-DIN DKE Spec 99100 chapter reference: 6.5.3-6.5.4</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:hazardousSubstances a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:MaterialComposition ;
-    rdfs:range bp:HazardousSubstance ;
-    rdfs:label "hazardous substances" ;
-    rdfs:comment """<div>Hazardous substances: Name all hazardous substance (as any substance that poses
-a threat to human health and the environment).
-DIN DKE Spec 99100 chapter reference: 6.5.4-6.5.6</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:shortName a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryChemistry ;
+dbp:supplyChainIndices a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:SupplyChainDueDiligence ;
     rdfs:range xsd:string ;
-    rdfs:label "short name" ;
-    rdfs:comment """<div>Short name of battery chemistry.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Supply Chain Indices" ;
+    rdfs:comment """<div>Indices or metrics used to assess supply chain sustainability performance.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:clearName a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryChemistry ;
+dbp:substance a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:HazardousSubstance ;
     rdfs:range xsd:string ;
-    rdfs:label "clear name" ;
-    rdfs:comment """<div>Clear name of battery chemistry.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Substance" ;
+    rdfs:comment """<div>Name or identifier of the hazardous substance present in the battery.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:batteryMaterialName a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryMaterial ;
+dbp:impactOnEnvironment a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:HazardousSubstance ;
     rdfs:range xsd:string ;
-    rdfs:label "battery material name" ;
-    rdfs:comment """<div>Clear name of material.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Impact on Environment" ;
+    rdfs:comment """<div>Description of the impact of the substance on the environment and human health.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:batteryMaterialIdentifier a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryMaterial ;
-    rdfs:range bp:CASNumberDatatype ;
-    rdfs:label "battery material identifier" ;
-    rdfs:comment """<div>CAS Number identifying the battery material.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:clearName a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryChemistry ;
+    rdfs:range xsd:string ;
+    rdfs:label "Clear Name" ;
+    rdfs:comment """<div>Full descriptive name of the battery chemistry (e.g. Lithium Nickel Manganese Cobalt Oxide).</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:batteryMaterialMass a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryMaterial ;
-    rdfs:range xsd:double ;
-    rdfs:label "battery material mass" ;
-    rdfs:comment """<div>Weight of component material in grams.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:shortName a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryChemistry ;
+    rdfs:range xsd:string ;
+    rdfs:label "Short Name" ;
+    rdfs:comment """<div>Abbreviated name of the battery chemistry (e.g. NMC, LFP, NCA).</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:isCriticalRawMaterial a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryMaterial ;
+dbp:batteryChemistry a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryMaterialsPublic ;
+    rdfs:range dbp:BatteryChemistry ;
+    rdfs:label "Battery Chemistry" ;
+    rdfs:comment """<div>The electrochemical technology and active materials used in the battery.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:criticalRawMaterials a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryMaterialsPublic ;
+    rdfs:range xsd:string ;
+    rdfs:label "Critical Raw Materials" ;
+    rdfs:comment """<div>List of critical raw materials present in the battery as defined by the EU Critical
+Raw Materials Act.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:hazardousSubstances a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryMaterialsPublic ;
+    rdfs:range dbp:HazardousSubstance ;
+    rdfs:label "Hazardous Substances" ;
+    rdfs:comment """<div>Collection of hazardous substances present in the battery above regulatory thresholds.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:componentId a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryMaterialLocation ;
+    rdfs:range xsd:string ;
+    rdfs:label "Component ID" ;
+    rdfs:comment """<div>Unique identifier of the battery component (e.g. cathode, anode, electrolyte) where this material is located.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:componentName a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryMaterialLocation ;
+    rdfs:range xsd:string ;
+    rdfs:label "Component Name" ;
+    rdfs:comment """<div>Name of the battery component where this material is located (e.g. Cathode, Anode, Electrolyte).</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:batteryMaterialIdentifier a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryMaterial ;
+    rdfs:range xsd:string ;
+    rdfs:label "Battery Material Identifier" ;
+    rdfs:comment """<div>Unique identifier for this material entry, such as a CAS number or internal reference code.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:batteryMaterialName a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryMaterial ;
+    rdfs:range xsd:string ;
+    rdfs:label "Battery Material Name" ;
+    rdfs:comment """<div>Common or IUPAC name of the material (e.g. Graphite, Lithium Iron Phosphate).</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:batteryMaterialMass a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryMaterial ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Battery Material Mass" ;
+    rdfs:comment """<div>Mass of this material in the battery expressed in grams.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:batteryMaterialShare a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryMaterial ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Battery Material Share" ;
+    rdfs:comment """<div>Share of this material as a percentage of the total battery weight.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:isCriticalRawMaterial a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryMaterial ;
     rdfs:range xsd:boolean ;
-    rdfs:label "is critical raw material" ;
-    rdfs:comment """<div>The battery passport must contain information on the critical raw materials present
-in the battery. Critical raw materials must be reported if present in the battery
-in a concentration of more than 0.1% weight by weight.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Is Critical Raw Material" ;
+    rdfs:comment """<div>Indicates whether this material is classified as a critical raw material by the EU.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:batteryMaterialLocation a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:BatteryMaterial ;
-    rdfs:range bp:BatteryLocation ;
-    rdfs:label "battery material location" ;
-    rdfs:comment """<div>Battery component that relates to the material.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:batteryMaterialLocation a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryMaterial ;
+    rdfs:range dbp:BatteryMaterialLocation ;
+    rdfs:label "Battery Material Location" ;
+    rdfs:comment """<div>The location within the battery assembly where this material is present.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:componentName a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryLocation ;
-    rdfs:range xsd:string ;
-    rdfs:label "component name" ;
-    rdfs:comment """<div>Name of battery component.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:materialsComposition a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryMaterialsRestricted ;
+    rdfs:range dbp:BatteryMaterial ;
+    rdfs:label "Materials Composition" ;
+    rdfs:comment """<div>Detailed composition of the battery listing all constituent materials with their
+identifiers, names, masses, shares, and component locations.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:componentId a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryLocation ;
-    rdfs:range xsd:string ;
-    rdfs:label "component id" ;
-    rdfs:comment """<div>Identifier of substance component.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:carbonFootprintPerFU a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryCarbonFootprint ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Carbon Footprint per Functional Unit" ;
+    rdfs:comment """<div>Total carbon footprint of the battery per functional unit in kg CO2 equivalent per kWh.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:componentType a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryLocation ;
-    rdfs:range bp:BatteryComponentTypeDatatype ;
-    rdfs:label "component type" ;
-    rdfs:comment """<div>Type classification of the battery component
-(e.g. Cathode, Anode, Electrolyte, Cell, Module, Pack).</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:contributionRawMaterial a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryCarbonFootprint ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Contribution Raw Material Acquisition" ;
+    rdfs:comment """<div>Carbon footprint contribution from raw material acquisition and pre-processing phase.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:hazardousSubstanceName a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:HazardousSubstance ;
-    rdfs:range xsd:string ;
-    rdfs:label "hazardous substance name" ;
-    rdfs:comment """<div>Clear name of hazardous substance.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:contributionProduction a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryCarbonFootprint ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Contribution Main Product Production" ;
+    rdfs:comment """<div>Carbon footprint contribution from the main battery production phase.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:hazardousSubstanceIdentifier a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:HazardousSubstance ;
-    rdfs:range bp:CASNumberDatatype ;
-    rdfs:label "hazardous substance identifier" ;
-    rdfs:comment """<div>CAS identifier of hazardous substance.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:contributionDistribution a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryCarbonFootprint ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Contribution Distribution" ;
+    rdfs:comment """<div>Carbon footprint contribution from distribution and logistics.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:hazardousSubstanceConcentration a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:HazardousSubstance ;
-    rdfs:range xsd:double ;
-    rdfs:label "hazardous substance concentration" ;
-    rdfs:comment """<div>Concentration of hazardous substance in percent.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:contributionEndOfLife a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryCarbonFootprint ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Contribution End of Life and Recycling" ;
+    rdfs:comment """<div>Carbon footprint contribution from end-of-life treatment and recycling.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:hazardousSubstanceLocation a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:HazardousSubstance ;
-    rdfs:range bp:BatteryLocation ;
-    rdfs:label "hazardous substance location" ;
-    rdfs:comment """<div>Location on a (sub-)component-level of all hazardous substances.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:performanceClass a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryCarbonFootprint ;
+    rdfs:range dbp:PerformanceClass ;
+    rdfs:label "Performance Class" ;
+    rdfs:comment """<div>Carbon footprint performance class assigned to the battery model (A through G).</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:hazardousSubstanceClass a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:HazardousSubstance ;
-    rdfs:range bp:HazardousSubstanceClassDatatype ;
-    rdfs:label "hazardous substance class" ;
-    rdfs:comment """<div>Battery Regulation narrows reporting to substances falling under defined
-hazard classes and categories of the CLP regulation.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:hazardousSubstanceImpacts a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:HazardousSubstance ;
-    rdfs:range bp:HazardousSubstanceImpact ;
-    rdfs:label "hazardous substance impacts" ;
-    rdfs:comment """<div>Impact statements based on, e.g., REACH or GHS for all hazard classes
-applicable to substances in the battery.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:impactClass a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:HazardousSubstanceImpact ;
-    rdfs:range xsd:string ;
-    rdfs:label "impact class" ;
-    rdfs:comment """<div>The class or category of the environmental or health impact.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:impactStatement a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:HazardousSubstanceImpact ;
-    rdfs:range xsd:string ;
-    rdfs:label "impact statement" ;
-    rdfs:comment """<div>A descriptive statement of the environmental or health impact of
-the hazardous substance.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:dismantlingDocuments a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:Circularity ;
-    rdfs:range bp:DismantlingDocument ;
-    rdfs:label "dismantling documents" ;
-    rdfs:comment """<div>Dismantling and Removal information.
-DIN DKE Spec 99100 chapter reference: 6.6.1.2</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:sparePartSources a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:Circularity ;
-    rdfs:range bp:SparePartSupplier ;
-    rdfs:label "spare part sources" ;
-    rdfs:comment """<div>Contact details of sources for replacement spares.
-DIN DKE Spec 99100 chapter reference: 6.6.1.3-6.6.1.4</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:recycledContent a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:Circularity ;
-    rdfs:range bp:RecycledContent ;
-    rdfs:label "recycled content" ;
-    rdfs:comment """<div>Share of material recovered from waste present in active materials for each
-battery model per year and per manufacturing plant.
-DIN DKE Spec 99100 chapter reference: 6.6.2.3-6.6.2.10</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:safetyMeasures a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:Circularity ;
+dbp:publicCarbonFootprintStudy a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryCarbonFootprint ;
     rdfs:range xsd:anyURI ;
-    rdfs:label "safety measures" ;
-    rdfs:comment """<div>Safety measures and necessary safety instructions to handle waste batteries,
-including in relation to the risks associated with, and the handling of,
-batteries containing lithium.
-DIN DKE Spec 99100 chapter reference: 6.6.1.5</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Public Carbon Footprint Study" ;
+    rdfs:comment """<div>URI linking to the publicly accessible carbon footprint study for this battery.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:endOfLifeInformation a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:Circularity ;
-    rdfs:range bp:EndOfLifeInformation ;
-    rdfs:label "end of life information" ;
-    rdfs:comment """<div>Producer or producer responsibility organisations shall make information available
-to distributors and end-users on the role of end-users in contributing to waste
-prevention. DIN DKE Spec 99100 chapter reference: 6.6.3.2-6.6.3.4</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:renewableContent a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:Circularity ;
-    rdfs:range xsd:double ;
-    rdfs:label "renewable content" ;
-    rdfs:comment """<div>Share of renewable material content. A renewable material is a material made
-of natural resources that can be replenished.
-DIN DKE Spec 99100 chapter reference: 6.6.2.11</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:documentType a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:DismantlingDocument ;
-    rdfs:range bp:DocumentTypeDatatype ;
-    rdfs:label "document type" ;
-    rdfs:comment """<div>Describes type for document e.g. Dismantling manual.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:mimeType a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:DismantlingDocument ;
-    rdfs:range xsd:string ;
-    rdfs:label "mime type" ;
-    rdfs:comment """<div>Defines internet media type to determine how to interpret the documentURL.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:documentURL a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:DismantlingDocument ;
-    rdfs:range xsd:anyURI ;
-    rdfs:label "document URL" ;
-    rdfs:comment """<div>Link to document.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:nameOfSupplier a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:SparePartSupplier ;
-    rdfs:range xsd:string ;
-    rdfs:label "name of supplier" ;
-    rdfs:comment """<div>Name of supplier.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:emailAddressOfSupplier a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:SparePartSupplier ;
-    rdfs:range bp:EmailAddressDatatype ;
-    rdfs:label "email address of supplier" ;
-    rdfs:comment """<div>E-mail address of supplier for spare parts.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:supplierWebAddress a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:SparePartSupplier ;
-    rdfs:range xsd:anyURI ;
-    rdfs:label "supplier web address" ;
-    rdfs:comment """<div>Web address of supplier for spare parts.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:addressOfSupplier a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:SparePartSupplier ;
-    rdfs:range bp:PostalAddress ;
-    rdfs:label "address of supplier" ;
-    rdfs:comment """<div>Postal address of supplier for spare parts.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:components a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:SparePartSupplier ;
-    rdfs:range bp:Component ;
-    rdfs:label "components" ;
-    rdfs:comment """<div>Components available at supplier.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:partName a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:Component ;
-    rdfs:range xsd:string ;
-    rdfs:label "part name" ;
-    rdfs:comment """<div>Name of the component part.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:partNumber a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:Component ;
-    rdfs:range xsd:string ;
-    rdfs:label "part number" ;
-    rdfs:comment """<div>Part number of component.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:recycledMaterial a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:RecycledContent ;
-    rdfs:range bp:RecycledMaterialDatatype ;
-    rdfs:label "recycled material" ;
-    rdfs:comment """<div>Name of recycled material.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:preConsumerShare a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:RecycledContent ;
-    rdfs:range xsd:double ;
-    rdfs:label "pre consumer share" ;
-    rdfs:comment """<div>Recycled material share from pre-consumer waste (manufacturing waste, excluding
-run-around scrap) of the active material.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:postConsumerShare a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:RecycledContent ;
-    rdfs:range xsd:double ;
-    rdfs:label "post consumer share" ;
-    rdfs:comment """<div>Recycled material share from post-consumer waste (end-of-life scrap)
-of the active material.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:wastePrevention a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:EndOfLifeInformation ;
-    rdfs:range xsd:anyURI ;
-    rdfs:label "waste prevention" ;
-    rdfs:comment """<div>Prevention and management of waste batteries: Information on the role of
-end-users in contributing to waste prevention.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:separateCollection a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:EndOfLifeInformation ;
-    rdfs:range xsd:anyURI ;
-    rdfs:label "separate collection" ;
-    rdfs:comment """<div>Prevention and management of waste batteries: Information on the role of
-end-users in contributing to the separate collection of waste batteries.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:informationOnCollection a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:EndOfLifeInformation ;
-    rdfs:range xsd:anyURI ;
-    rdfs:label "information on collection" ;
-    rdfs:comment """<div>Prevention and management of waste batteries: Information on the separate
-collection, the take back, the collection points.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:batteryTechnicalProperties a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:PerformanceAndDurability ;
-    rdfs:range bp:BatteryTechnicalProperties ;
-    rdfs:label "battery technical properties" ;
-    rdfs:comment """<div>This property covers all performance related static properties.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:batteryCondition a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:PerformanceAndDurability ;
-    rdfs:range bp:BatteryCondition ;
-    rdfs:label "battery condition" ;
-    rdfs:comment """<div>Expected battery lifetime expressed in cycles, and reference test used.
-Expected lifetime under reference conditions for which they have been designed
-in terms of cycles and calendar years.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:originalPowerCapability a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
-    rdfs:range bp:PowerCapabilityAt ;
-    rdfs:label "original power capability" ;
-    rdfs:comment """<div>Pre-use power capability: Definition of power capability as given in Battery
-Regulation. Annex IV Part B, point 4 - measurement at 80% and 20% SoC required.
-DIN DKE Spec 99100 chapter reference: 6.7.3.2</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:ratedMaximumPower a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
-    rdfs:range xsd:double ;
-    rdfs:label "rated maximum power" ;
-    rdfs:comment """<div>Maximum permitted power the battery is rated for, reflecting power limits.
-DIN DKE Spec 99100 chapter reference: 6.7.3.5</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:ratedEnergy a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
-    rdfs:range xsd:double ;
-    rdfs:label "rated energy" ;
-    rdfs:comment """<div>The certified usable battery energy according to the procedure in the UN GTR No 22.
-DIN DKE Spec 99100 chapter reference: 6.7.2.5</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:expectedNumberOfCycles a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
+dbp:absoluteCarbonFootprint a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryCarbonFootprint ;
     rdfs:range xsd:integer ;
-    rdfs:label "expected number of cycles" ;
-    rdfs:comment """<div>Expected battery lifetime expressed in cycles.
-DIN DKE Spec 99100 chapter reference: 6.7.6.3</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Absolute Battery Carbon Footprint" ;
+    rdfs:comment """<div>Absolute carbon footprint of the battery expressed in kg CO2 equivalent.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:initialSelfDischarge a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
-    rdfs:range xsd:double ;
-    rdfs:label "initial self discharge" ;
-    rdfs:comment """<div>Initial self-discharge in % of capacity per unit of time in defined conditions.
-DIN DKE Spec 99100 chapter reference: 6.7.4.6</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:roundtripEfficiency a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
-    rdfs:range xsd:double ;
-    rdfs:label "roundtrip efficiency" ;
-    rdfs:comment """<div>Energy round trip efficiency is the ratio of net energy delivered during discharge
-to total energy required to restore initial state of charge.
-DIN DKE Spec 99100 chapter reference: 6.7.4.2</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:ratedCapacity a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
-    rdfs:range xsd:double ;
-    rdfs:label "rated capacity" ;
-    rdfs:comment """<div>Rated capacity is the total number of ampere-hours (Ah) that can be withdrawn
-from a fully charged battery under reference conditions.
-DIN DKE Spec 99100 chapter reference: 6.7.2.2</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:initialInternalResistance a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
-    rdfs:range bp:InternalResistance ;
-    rdfs:label "initial internal resistance" ;
-    rdfs:comment """<div>Initial internal resistance on battery pack level.
-DIN DKE Spec 99100 chapter reference: 6.7.5.2</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:expectedLifetime a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
-    rdfs:range xsd:integer ;
-    rdfs:label "expected lifetime" ;
-    rdfs:comment """<div>Expected battery lifetime in calendar years.
-DIN DKE Spec 99100 chapter reference: 6.7.6.2</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:cRate a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
-    rdfs:range xsd:double ;
-    rdfs:label "c rate" ;
-    rdfs:comment """<div>Ratio between nominal battery power in W and battery energy in Wh.
-DIN DKE Spec 99100 chapter reference: 6.7.3.6</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:cRateLifeCycleTest a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
-    rdfs:range xsd:double ;
-    rdfs:label "c rate life cycle test" ;
-    rdfs:comment """<div>C-rate for charge and discharge in cycle-life test.
-DIN DKE Spec 99100 chapter reference: 6.7.6.6</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:nominalVoltage a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
-    rdfs:range xsd:double ;
-    rdfs:label "nominal voltage" ;
-    rdfs:comment """<div>Nominal voltage the battery is rated for.
-DIN DKE Spec 99100 chapter reference: 6.7.2.11</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:minimumVoltage a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
-    rdfs:range xsd:double ;
-    rdfs:label "minimum voltage" ;
-    rdfs:comment """<div>Minimum voltage the battery is rated for.
-DIN DKE Spec 99100 chapter reference: 6.7.2.9</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:maximumVoltage a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
-    rdfs:range xsd:double ;
-    rdfs:label "maximum voltage" ;
-    rdfs:comment """<div>Maximum voltage the battery is rated for.
-DIN DKE Spec 99100 chapter reference: 6.7.2.10</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:capacityThresholdForExhaustion a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
-    rdfs:range xsd:double ;
-    rdfs:label "capacity threshold for exhaustion" ;
-    rdfs:comment """<div>Percentage of SOCE above which the battery is still considered operational.
-DIN DKE Spec 99100 chapter reference: 6.7.6.9</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:lifetimeReferenceTest a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
+dbp:wastePrevention a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:EndUserInformation ;
     rdfs:range xsd:anyURI ;
-    rdfs:label "lifetime reference test" ;
-    rdfs:comment """<div>Reference test for lifetime measurements.
-DIN DKE Spec 99100 chapter reference: 6.7.6.5</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Waste Prevention" ;
+    rdfs:comment """<div>URI linking to information on the end-user's role in waste prevention.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:temperatureRangeIdleState a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
-    rdfs:range bp:TemperatureRangeType ;
-    rdfs:label "temperature range idle state" ;
-    rdfs:comment """<div>Upper and lower boundary of temperature range the battery can safely withstand.
-DIN DKE Spec 99100 chapter reference: 6.7.6.3-4</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:capacityFade a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
-    rdfs:range xsd:double ;
-    rdfs:label "capacity fade" ;
-    rdfs:comment """<div>Allowable capacity fade threshold as percentage of rated capacity, used to
-determine end-of-first-life. This is a static design parameter.
-DIN DKE Spec 99100 chapter reference: 6.7.2.4</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:powerFade a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
-    rdfs:range xsd:double ;
-    rdfs:label "power fade" ;
-    rdfs:comment """<div>Allowable power fade threshold as percentage of rated power.
-This is a static design parameter.
-DIN DKE Spec 99100 chapter reference: 6.7.3.4</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:energyRoundTripEfficiencyFade a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
-    rdfs:range xsd:double ;
-    rdfs:label "energy round trip efficiency fade" ;
-    rdfs:comment """<div>Allowable fade in round-trip energy efficiency as percentage of original rated
-efficiency. This is a static design parameter.
-DIN DKE Spec 99100 chapter reference: 6.7.4.5</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:internalResistanceIncrease a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryTechnicalProperties ;
-    rdfs:range xsd:double ;
-    rdfs:label "internal resistance increase" ;
-    rdfs:comment """<div>Allowable increase in internal resistance as percentage of original internal
-resistance value. This is a static design parameter.
-DIN DKE Spec 99100 chapter reference: 6.7.5.3</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:ohmicResistance a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:InternalResistance ;
-    rdfs:range xsd:double ;
-    rdfs:label "ohmic resistance" ;
-    rdfs:comment """<div>Internal resistance value in ohms.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:batteryComponent a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:InternalResistance ;
-    rdfs:range bp:BatteryComponentDatatype ;
-    rdfs:label "battery component" ;
-    rdfs:comment """<div>Battery component level (pack, module, or cell).</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:minimum a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:TemperatureRangeType ;
-    rdfs:range xsd:double ;
-    rdfs:label "minimum" ;
-    rdfs:comment """<div>Lower temperature boundary.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:maximum a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:TemperatureRangeType ;
-    rdfs:range xsd:double ;
-    rdfs:label "maximum" ;
-    rdfs:comment """<div>Upper temperature boundary.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:temperatureConstraintType a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:TemperatureRangeType ;
-    rdfs:range bp:TemperatureConstraintDatatype ;
-    rdfs:label "temperature constraint type" ;
-    rdfs:comment """<div>The use case for the temperature limit (StorageTemperature or ChargingTemperature).</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:stateOfCharge a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:BatteryCondition ;
-    rdfs:range bp:StateOfCharge ;
-    rdfs:label "state of charge" ;
-    rdfs:comment """<div>Available capacity in a battery expressed as a percentage of remaining capacity.
-DIN DKE Spec 99100 chapter reference: 6.7.2.8</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:remainingCapacity a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:BatteryCondition ;
-    rdfs:range bp:RemainingCapacity ;
-    rdfs:label "remaining capacity" ;
-    rdfs:comment """<div>In-use data attribute on capacity, corresponding with definition of rated capacity.
-DIN DKE Spec 99100 chapter reference: 6.7.2.3</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:remainingEnergy a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:BatteryCondition ;
-    rdfs:range bp:RemainingEnergy ;
-    rdfs:label "remaining energy" ;
-    rdfs:comment """<div>Energy supplied by the battery from beginning of test procedure until
-break-off criterion is reached.
-DIN DKE Spec 99100 chapter reference: 6.7.2.6</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:stateOfCertifiedEnergy a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:BatteryCondition ;
-    rdfs:range bp:StateOfCertifiedEnergy ;
-    rdfs:label "state of certified energy" ;
-    rdfs:comment """<div>Measured or on-board UBE performance as percentage of certified usable battery energy.
-DIN DKE Spec 99100 chapter reference: 6.7.2.7</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:remainingPowerCapability a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:BatteryCondition ;
-    rdfs:range bp:RemainingPowerCapability ;
-    rdfs:label "remaining power capability" ;
-    rdfs:comment """<div>Remaining power capability with temperature range when relevant.
-DIN DKE Spec 99100 chapter reference: 6.7.3.3</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:roundTripEfficiencyat50PerCentCycleLife a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryCondition ;
-    rdfs:range xsd:double ;
-    rdfs:label "round trip efficiency at 50 percent cycle life" ;
-    rdfs:comment """<div>Initial round trip energy efficiency measured at 50% of cycle-life.
-DIN DKE Spec 99100 chapter reference: 6.7.4.3</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:remainingRoundTripEnergyEfficiency a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:BatteryCondition ;
-    rdfs:range bp:RemainingRoundTripEnergyEfficiency ;
-    rdfs:label "remaining round trip energy efficiency" ;
-    rdfs:comment """<div>Remaining round trip energy efficiency as state of health indicator.
-DIN DKE Spec 99100 chapter reference: 6.7.4.4</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:currentSelfDischargingRate a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:BatteryCondition ;
-    rdfs:range bp:CurrentSelfDischargingRate ;
-    rdfs:label "current self discharging rate" ;
-    rdfs:comment """<div>Current self-discharge rate in idle state at reference conditions.
-DIN DKE Spec 99100 chapter reference: 6.7.4.7</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:evolutionOfSelfDischarge a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:BatteryCondition ;
-    rdfs:range bp:EvolutionOfSelfDischarge ;
-    rdfs:label "evolution of self discharge" ;
-    rdfs:comment """<div>Change of self-discharge over time and usage.
-DIN DKE Spec 99100 chapter reference: 6.7.4.8</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:energyThroughput a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryCondition ;
-    rdfs:range xsd:double ;
-    rdfs:label "energy throughput" ;
-    rdfs:comment """<div>Energy throughput measurement.
-DIN DKE Spec 99100 chapter reference: 6.7.6.7</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:capacityThroughput a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:BatteryCondition ;
-    rdfs:range bp:CapacityThroughput ;
-    rdfs:label "capacity throughput" ;
-    rdfs:comment """<div>Capacity throughput measurement.
-DIN DKE Spec 99100 chapter reference: 6.7.6.8</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:numberOfFullCycles a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:BatteryCondition ;
-    rdfs:range bp:NumberOfFullCycles ;
-    rdfs:label "number of full cycles" ;
-    rdfs:comment """<div>Number of (full) charging and discharging cycles.
-DIN DKE Spec 99100 chapter reference: 6.7.6.4</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:negativeEvents a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:BatteryCondition ;
-    rdfs:range bp:NegativeEvent ;
-    rdfs:label "negative events" ;
-    rdfs:comment """<div>Information about negative events such as accidents.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:temperatureInformation a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:BatteryCondition ;
-    rdfs:range bp:TemperatureConditions ;
-    rdfs:label "temperature information" ;
-    rdfs:comment """<div>Periodically recorded information on operating environmental conditions
-including temperature. DIN DKE Spec 99100 chapter reference: 6.7.7.2</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:atSoC a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:PowerCapabilityAt ;
-    rdfs:range xsd:double ;
-    rdfs:label "at state of charge" ;
-    rdfs:comment """<div>State of charge percentage at which power capability is measured.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:powerCapabilityAt a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:PowerCapabilityAt ;
-    rdfs:range xsd:double ;
-    rdfs:label "power capability at" ;
-    rdfs:comment """<div>Power capability value at specified state of charge.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:stateOfChargeValue a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:StateOfCharge ;
-    rdfs:range xsd:double ;
-    rdfs:label "state of charge value" ;
-    rdfs:comment """<div>State of charge value as percentage.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:remainingCapacityValue a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:RemainingCapacity ;
-    rdfs:range xsd:double ;
-    rdfs:label "remaining capacity value" ;
-    rdfs:comment """<div>Remaining capacity value in kilowatt-hours.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:remainingEnergyValue a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:RemainingEnergy ;
-    rdfs:range xsd:double ;
-    rdfs:label "remaining energy value" ;
-    rdfs:comment """<div>Remaining energy value in kilowatt-hours.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:stateOfCertifiedEnergyValue a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:StateOfCertifiedEnergy ;
-    rdfs:range xsd:double ;
-    rdfs:label "state of certified energy value" ;
-    rdfs:comment """<div>State of certified energy value as percentage.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:remainingPowerCapabilityValue a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain bp:RemainingPowerCapability ;
-    rdfs:range bp:RemainingPowerCapabilityDynamicAt ;
-    rdfs:label "remaining power capability value" ;
-    rdfs:comment """<div>Remaining power capability value with timestamp.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:rPCLastUpdated a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:RemainingPowerCapabilityDynamicAt ;
-    rdfs:range xsd:dateTime ;
-    rdfs:label "rpc last updated" ;
-    rdfs:comment """<div>Timestamp for remaining power capability last update.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:remainingRoundTripEnergyEfficiencyValue a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:RemainingRoundTripEnergyEfficiency ;
-    rdfs:range xsd:double ;
-    rdfs:label "remaining round trip energy efficiency value" ;
-    rdfs:comment """<div>Remaining round trip energy efficiency value as percentage.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:currentSelfDischargingRateValue a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:CurrentSelfDischargingRate ;
-    rdfs:range xsd:double ;
-    rdfs:label "current self discharging rate value" ;
-    rdfs:comment """<div>Current self discharging rate value as percentage.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:evolutionOfSelfDischargeValue a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:EvolutionOfSelfDischarge ;
-    rdfs:range xsd:double ;
-    rdfs:label "evolution of self discharge value" ;
-    rdfs:comment """<div>Evolution of self discharge value as percentage.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:numberOfFullCyclesValue a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:NumberOfFullCycles ;
-    rdfs:range xsd:integer ;
-    rdfs:label "number of full cycles value" ;
-    rdfs:comment """<div>Number of full cycles value.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:capacityThroughputValue a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:CapacityThroughput ;
-    rdfs:range xsd:double ;
-    rdfs:label "capacity throughput value" ;
-    rdfs:comment """<div>Capacity throughput value in ampere-hours.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:numberOfDeepDischargeEvents a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:NegativeEvent ;
-    rdfs:range xsd:integer ;
-    rdfs:label "number of deep discharge events" ;
-    rdfs:comment """<div>Number of deep discharge events recorded.
-DIN DKE Spec 99100 chapter reference: 6.7.7.9</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:numberOfOverchargeEvents a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:NegativeEvent ;
-    rdfs:range xsd:integer ;
-    rdfs:label "number of overcharge events" ;
-    rdfs:comment """<div>Number of overcharge events recorded.
-DIN DKE Spec 99100 chapter reference: 6.7.7.10</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:informationOnAccidents a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:NegativeEvent ;
+dbp:separateCollection a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:EndUserInformation ;
     rdfs:range xsd:anyURI ;
-    rdfs:label "information on accidents" ;
-    rdfs:comment """<div>URL to information on accidents or incidents related to the battery.
-DIN DKE Spec 99100 chapter reference: 6.7.7.11</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:label "Separate Collection" ;
+    rdfs:comment """<div>URI linking to information on the end-user's role in separate collection of batteries.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:timeExtremeHighTemp a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:TemperatureConditions ;
-    rdfs:range xsd:double ;
-    rdfs:label "time extreme high temp" ;
-    rdfs:comment """<div>Cumulated time spent above upper temperature boundary.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:collectionEndOfLife a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:EndUserInformation ;
+    rdfs:range xsd:anyURI ;
+    rdfs:label "Collection End of Life" ;
+    rdfs:comment """<div>URI linking to information on battery collection, second life, and end-of-life options.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:timeExtremeLowTemp a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:TemperatureConditions ;
-    rdfs:range xsd:double ;
-    rdfs:label "time extreme low temp" ;
-    rdfs:comment """<div>Cumulated time spent below lower temperature boundary.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:preConsumerNickelShare a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:RecycledRenewableContent ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Pre-Consumer Recycled Nickel Share" ;
+    rdfs:comment """<div>Share of nickel sourced from pre-consumer recycled material as a percentage.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:timeExtremeHighTempCharging a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:TemperatureConditions ;
-    rdfs:range xsd:double ;
-    rdfs:label "time extreme high temp charging" ;
-    rdfs:comment """<div>Cumulated time spent above upper temperature boundary during charging.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:preConsumerCobaltShare a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:RecycledRenewableContent ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Pre-Consumer Recycled Cobalt Share" ;
+    rdfs:comment """<div>Share of cobalt sourced from pre-consumer recycled material as a percentage.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:timeExtremeLowTempCharging a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:TemperatureConditions ;
-    rdfs:range xsd:double ;
-    rdfs:label "time extreme low temp charging" ;
-    rdfs:comment """<div>Cumulated time spent below lower temperature boundary during charging.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:preConsumerLithiumShare a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:RecycledRenewableContent ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Pre-Consumer Recycled Lithium Share" ;
+    rdfs:comment """<div>Share of lithium sourced from pre-consumer recycled material as a percentage.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:temperatureValue a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:TemperatureConditions ;
-    rdfs:range xsd:double ;
-    rdfs:label "temperature value" ;
-    rdfs:comment """<div>Recorded temperature value in degrees Celsius for operating environmental conditions.
-DIN DKE Spec 99100 chapter reference: 6.7.7.2</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:postConsumerNickelShare a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:RecycledRenewableContent ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Post-Consumer Recycled Nickel Share" ;
+    rdfs:comment """<div>Share of nickel sourced from post-consumer recycled material as a percentage.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:lastUpdate a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain bp:BatteryCondition ;
-    rdfs:range xsd:dateTime ;
-    rdfs:label "last update" ;
-    rdfs:comment """<div>Timestamp for dynamic data attributes showing the last update time.
-Applied to all dynamic condition entities.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:postConsumerCobaltShare a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:RecycledRenewableContent ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Post-Consumer Recycled Cobalt Share" ;
+    rdfs:comment """<div>Share of cobalt sourced from post-consumer recycled material as a percentage.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:postConsumerLithiumShare a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:RecycledRenewableContent ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Post-Consumer Recycled Lithium Share" ;
+    rdfs:comment """<div>Share of lithium sourced from post-consumer recycled material as a percentage.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:recycledLeadShare a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:RecycledRenewableContent ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Recycled Lead Share" ;
+    rdfs:comment """<div>Share of lead sourced from recycled material as a percentage.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:renewableContentShare a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:RecycledRenewableContent ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Renewable Content Share" ;
+    rdfs:comment """<div>Share of renewable material content in the battery as a percentage.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:endUserInfo a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryCircularityPublic ;
+    rdfs:range dbp:EndUserInformation ;
+    rdfs:label "End-User Info" ;
+    rdfs:comment """<div>End-user information on waste prevention, separate collection, and end-of-life handling.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:recycledContent a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryCircularityPublic ;
+    rdfs:range dbp:RecycledRenewableContent ;
+    rdfs:label "Recycled Content" ;
+    rdfs:comment """<div>Recycled and renewable content shares for key materials in the battery.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:dismantlingManuals a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryCircularityPrivate ;
+    rdfs:range xsd:anyURI ;
+    rdfs:label "Dismantling Manuals" ;
+    rdfs:comment """<div>URI linking to dismantling and disassembly manuals for the battery.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:partNumbers a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryCircularityPrivate ;
+    rdfs:range xsd:anyURI ;
+    rdfs:label "Part Numbers" ;
+    rdfs:comment """<div>URI linking to part numbers for battery components.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:sparePartsInfo a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryCircularityPrivate ;
+    rdfs:range xsd:anyURI ;
+    rdfs:label "Spare Parts Info" ;
+    rdfs:comment """<div>URI linking to information on sources of spare parts for the battery.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:safetyMeasures a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryCircularityPrivate ;
+    rdfs:range xsd:anyURI ;
+    rdfs:label "Safety Measures" ;
+    rdfs:comment """<div>URI linking to safety measures for handling, storage, and transport of the battery.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:ratedCapacity a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:CapacityEnergyVoltagePublic ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Rated Capacity" ;
+    rdfs:comment """<div>Rated capacity of the battery in ampere-hours (Ah) at time of manufacture.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:certifiedUsableBattEnergy a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:CapacityEnergyVoltagePublic ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Certified Usable Battery Energy" ;
+    rdfs:comment """<div>Certified usable battery energy in watt-hours (Wh).</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:minimumVoltage a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:CapacityEnergyVoltagePublic ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Minimum Voltage" ;
+    rdfs:comment """<div>Minimum operational voltage of the battery in volts.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:maximumVoltage a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:CapacityEnergyVoltagePublic ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Maximum Voltage" ;
+    rdfs:comment """<div>Maximum operational voltage of the battery in volts.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:nominalVoltage a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:CapacityEnergyVoltagePublic ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Nominal Voltage" ;
+    rdfs:comment """<div>Nominal voltage of the battery in volts.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:originalPowerCapability a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:PowerCapabilityPublic ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Original Power Capability" ;
+    rdfs:comment """<div>Original power capability of the battery at beginning of life in watts.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:maximumPermittedPower a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:PowerCapabilityPublic ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Maximum Permitted Battery Power" ;
+    rdfs:comment """<div>Maximum permitted power of the battery in watts.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:ratioPowerToEnergy a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:PowerCapabilityPublic ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Ratio Nominal Power to Battery Energy" ;
+    rdfs:comment """<div>Ratio of nominal power to battery energy expressed in W/Wh.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:initialRoundTripEfficiency a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:RoundTripEfficiencyPublic ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Initial Round Trip Energy Efficiency" ;
+    rdfs:comment """<div>Initial round trip energy efficiency of the battery as a percentage at beginning of life.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:roundTripEfficiencyAt50pct a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:RoundTripEfficiencyPublic ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Round Trip Efficiency at 50% Cycle Life" ;
+    rdfs:comment """<div>Round trip energy efficiency at 50% of the expected cycle life as a percentage.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:initialInternalResistance a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:InternalResistancePublic ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Initial Internal Resistance" ;
+    rdfs:comment """<div>Initial internal resistance of the battery cell and pack at beginning of life in milliohms.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:expectedLifetimeCycles a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryLifetimePublic ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Expected Lifetime Charge-Discharge Cycles" ;
+    rdfs:comment """<div>Expected number of charge-discharge cycles before capacity drops below the exhaustion threshold.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:cycleLifeReferenceTest a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryLifetimePublic ;
+    rdfs:range xsd:string ;
+    rdfs:label "Cycle-Life Reference Test" ;
+    rdfs:comment """<div>Reference to the standard or test procedure used to determine cycle life.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:cRateCycleLifeTest a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryLifetimePublic ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "C-Rate of Cycle-Life Test" ;
+    rdfs:comment """<div>C-rate applied during the cycle-life reference test.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:capacityThresholdExhaustion a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryLifetimePublic ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Capacity Threshold for Exhaustion" ;
+    rdfs:comment """<div>Capacity threshold below which the battery is considered exhausted, expressed as a percentage.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:tempRangeIdleLower a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:TemperatureConditionsPublic ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Temperature Range Idle Lower Boundary" ;
+    rdfs:comment """<div>Lower boundary of the temperature range for idle state storage in degrees Celsius.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:tempRangeIdleUpper a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:TemperatureConditionsPublic ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Temperature Range Idle Upper Boundary" ;
+    rdfs:comment """<div>Upper boundary of the temperature range for idle state storage in degrees Celsius.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:capacityEnergyVoltage a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
+    rdfs:range dbp:CapacityEnergyVoltagePublic ;
+    rdfs:label "Capacity Energy and Voltage" ;
+    rdfs:comment """<div>Capacity, energy, and voltage sub-section. Applied to both public and restricted performance containers.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:powerCapability a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
+    rdfs:range dbp:PowerCapabilityPublic ;
+    rdfs:label "Power Capability" ;
+    rdfs:comment """<div>Power capability sub-section. Applied to both public and restricted performance containers.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:roundTripEfficiency a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
+    rdfs:range dbp:RoundTripEfficiencyPublic ;
+    rdfs:label "Round Trip Efficiency" ;
+    rdfs:comment """<div>Round trip efficiency and self-discharge sub-section. Applied to both public and restricted performance containers.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:internalResistance a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
+    rdfs:range dbp:InternalResistancePublic ;
+    rdfs:label "Internal Resistance" ;
+    rdfs:comment """<div>Internal resistance sub-section. Applied to both public and restricted performance containers.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:batteryLifetime a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
+    rdfs:range dbp:BatteryLifetimePublic ;
+    rdfs:label "Battery Lifetime" ;
+    rdfs:comment """<div>Battery lifetime sub-section. Applied to both public and restricted performance containers.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:temperatureConditions a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
+    rdfs:range dbp:TemperatureConditionsPublic ;
+    rdfs:label "Temperature Conditions" ;
+    rdfs:comment """<div>Temperature conditions sub-section. Applied to both public and restricted performance containers.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:capacityFade a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:CapacityEnergyVoltageRestricted ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Capacity Fade" ;
+    rdfs:comment """<div>Decrease in rated capacity over time as a percentage of the original capacity.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:remainingCapacity a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:CapacityEnergyVoltageRestricted ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Remaining Capacity" ;
+    rdfs:comment """<div>Current remaining capacity of the battery in ampere-hours (Ah).</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:remainingUsableBattEnergy a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:CapacityEnergyVoltageRestricted ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Remaining Usable Battery Energy" ;
+    rdfs:comment """<div>Current remaining usable energy of the battery in watt-hours (Wh).</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:stateOfCertifiedEnergy a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:CapacityEnergyVoltageRestricted ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "State of Certified Energy" ;
+    rdfs:comment """<div>State of certified energy (SOCE) as the ratio of remaining usable energy to certified usable energy.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:stateOfCharge a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:CapacityEnergyVoltageRestricted ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "State of Charge" ;
+    rdfs:comment """<div>Current state of charge (SoC) expressed as a percentage of remaining capacity.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:powerFade a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:PowerCapabilityRestricted ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Power Fade" ;
+    rdfs:comment """<div>Decrease in power capability over time as a percentage of original power capability.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:remainingPowerCapability a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:PowerCapabilityRestricted ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Remaining Power Capability" ;
+    rdfs:comment """<div>Current remaining power capability of the battery in watts.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:roundTripEfficiencyFade a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:RoundTripEfficiencyRestricted ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Energy Round Trip Efficiency Fade" ;
+    rdfs:comment """<div>Decrease in round trip energy efficiency over time as a percentage.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:initialSelfDischargeRate a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:RoundTripEfficiencyRestricted ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Initial Self-Discharge Rate" ;
+    rdfs:comment """<div>Self-discharge rate at beginning of life expressed as a percentage per unit time.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:remainingRoundTripEfficiency a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:RoundTripEfficiencyRestricted ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Remaining Round Trip Energy Efficiency" ;
+    rdfs:comment """<div>Current remaining round trip energy efficiency expressed as a percentage.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:currentSelfDischargeRate a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:RoundTripEfficiencyRestricted ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Current Self-Discharge Rate" ;
+    rdfs:comment """<div>Current self-discharge rate expressed as a percentage per unit time.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:evolutionSelfDischargeRates a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:RoundTripEfficiencyRestricted ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Evolution of Self-Discharge Rates" ;
+    rdfs:comment """<div>Historical evolution of self-discharge rates over the battery's service lifetime.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:internalResistanceIncrease a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:InternalResistanceRestricted ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Internal Resistance Increase" ;
+    rdfs:comment """<div>Increase in internal resistance over time expressed as a percentage of original resistance.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:expectedLifetimeYears a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryLifetimeRestricted ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Expected Lifetime in Calendar Years" ;
+    rdfs:comment """<div>Expected remaining lifetime of the battery in calendar years.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:numberOfFullCycles a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryLifetimeRestricted ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Number of Full Charging and Discharging Cycles" ;
+    rdfs:comment """<div>Total number of full charge-discharge cycles completed by the battery to date.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:energyThroughput a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryLifetimeRestricted ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Energy Throughput" ;
+    rdfs:comment """<div>Total energy throughput of the battery in watt-hours since first use.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:capacityThroughput a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryLifetimeRestricted ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Capacity Throughput" ;
+    rdfs:comment """<div>Total charge throughput of the battery in ampere-hours since first use.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:temperatureInformation a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:TemperatureConditionsRestricted ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Temperature Information" ;
+    rdfs:comment """<div>General temperature information about the battery's operating history.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:timeInExtremeTempsAbove a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:TemperatureConditionsRestricted ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Time in Extreme Temperatures Above Boundary" ;
+    rdfs:comment """<div>Cumulative time the battery has spent in temperatures above the upper boundary, in hours.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:timeInExtremeTempsBelow a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:TemperatureConditionsRestricted ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Time in Extreme Temperatures Below Boundary" ;
+    rdfs:comment """<div>Cumulative time the battery has spent in temperatures below the lower boundary, in hours.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:timeChargingExtremeTempsAbove a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:TemperatureConditionsRestricted ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Time Charging in Extreme Temperatures Above" ;
+    rdfs:comment """<div>Cumulative time the battery has been charged at temperatures above the upper boundary, in hours.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:timeChargingExtremeTempsBelow a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:TemperatureConditionsRestricted ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Time Charging in Extreme Temperatures Below" ;
+    rdfs:comment """<div>Cumulative time the battery has been charged at temperatures below the lower boundary, in hours.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:deepDischargeEvents a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:NegativeEvents ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Number of Deep Discharge Events" ;
+    rdfs:comment """<div>Total number of deep discharge events recorded for the battery.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:overchargeEvents a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:NegativeEvents ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Number of Overcharge Events" ;
+    rdfs:comment """<div>Total number of overcharge events recorded for the battery.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:informationOnAccidents a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:NegativeEvents ;
+    rdfs:range xsd:anyURI ;
+    rdfs:label "Information on Accidents" ;
+    rdfs:comment """<div>URI linking to records of accidents or safety incidents involving the battery.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
 # Class definitions
-bp:GeneralInformation a rdfs:Class ;
-    rdfs:label "General Information" ;
-    rdfs:comment """<div>General product information for battery passport including product identification,
-manufacturer information, manufacturing details, and battery category.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-    rdfs:seeAlso <https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1542> ;
-.
-
-bp:DPPStaticMetadata a rdfs:Class ;
-    rdfs:label "DPP Static Metadata" ;
-    rdfs:comment """<div>Static Digital Product Passport metadata as defined in JTC-24 prEN_18223.
-These attributes are set at issuance and describe the structure and granularity
-of the DPP record itself.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-    rdfs:seeAlso <https://www.din.de/en/getting-involved/standards-committees/nid/european-projects/wdc-proj:din21:355350326> ;
-.
-
-bp:DPPStatus a rdfs:Class ;
-    rdfs:label "DPP Status" ;
-    rdfs:comment """<div>Dynamic lifecycle state of the Digital Product Passport record.
-This attribute changes over the DPP lifecycle independently of the static product data.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-    rdfs:seeAlso <https://www.din.de/en/getting-involved/standards-committees/nid/european-projects/wdc-proj:din21:355350326> ;
-.
-
-bp:DPPLastUpdated a rdfs:Class ;
-    rdfs:label "DPP Last Updated" ;
-    rdfs:comment """<div>Dynamic timestamp recording when the Digital Product Passport record was most
-recently updated. Changes independently of static product data over the DPP lifecycle.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-    rdfs:seeAlso <https://www.din.de/en/getting-involved/standards-committees/nid/european-projects/wdc-proj:din21:355350326> ;
-.
-
-bp:ContactInformation a rdfs:Class ;
-    rdfs:label "Contact Information" ;
-    rdfs:comment """<div>Contact information including name, postal address, identifier,
-and optional email and web address.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:PostalAddress a rdfs:Class ;
+dbp:PostalAddress a rdfs:Class ;
     rdfs:label "Postal Address" ;
-    rdfs:comment """<div>A postal address with country, postal code, street address,
-and optional facility identifier.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:comment """<div>A structured postal address including postal code, street address, and country.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
-    rdfs:seeAlso <https://schema.org/PostalAddress> ;
 .
 
-bp:Labeling a rdfs:Class ;
-    rdfs:label "Labeling" ;
-    rdfs:comment """<div>Battery labeling information including declaration of conformity,
-test reports, labels, and extinguishing agent.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:ContactInformation a rdfs:Class ;
+    rdfs:label "Contact Information" ;
+    rdfs:comment """<div>Contact details for an organisation including phone, email, and website.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
-    rdfs:seeAlso <https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1542> ;
 .
 
-bp:Label a rdfs:Class ;
+dbp:CompanyInformation a rdfs:Class ;
+    rdfs:label "Company Information" ;
+    rdfs:comment """<div>Complete company profile including unique identifier, name, contact information, and postal address.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:DPPInfo a rdfs:Class ;
+    rdfs:label "DPP Information" ;
+    rdfs:comment """<div>Digital Product Passport metadata including schema version, granularity level, DPP status,
+and last updated timestamp.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:BatteryAttributes a rdfs:Class ;
+    rdfs:label "Battery Attributes" ;
+    rdfs:comment """<div>General battery attributes including warranty period, battery category, and battery mass.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:BatteryIdentifiers a rdfs:Class ;
+    rdfs:label "Battery Identifiers" ;
+    rdfs:comment """<div>Publicly accessible battery identifiers including battery model identifier, unique battery
+identifier, serial number, and unique DPP identifier.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:ProductData a rdfs:Class ;
+    rdfs:label "Product Data" ;
+    rdfs:comment """<div>Publicly accessible product data including economic operator information, manufacturer
+information, manufacturing place, and manufacturing date.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:GeneralInformationPublic a rdfs:Class ;
+    rdfs:label "General Information (Public)" ;
+    rdfs:comment """<div>Public general information container grouping DPP metadata, battery attributes,
+battery identifiers, and product data.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:OperatorIdentifiers a rdfs:Class ;
+    rdfs:label "Operator Identifiers" ;
+    rdfs:comment """<div>Restricted identifiers for the manufacturer, manufacturing facility, and economic operator.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:RestrictedProductData a rdfs:Class ;
+    rdfs:label "Restricted Product Data" ;
+    rdfs:comment """<div>Restricted product data including date of putting into service and battery status,
+accessible only by notified bodies and market surveillance authorities.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:GeneralInformationRestricted a rdfs:Class ;
+    rdfs:label "General Information (Restricted)" ;
+    rdfs:comment """<div>Restricted general information including operator identifiers and restricted product data,
+accessible only by notified bodies and market surveillance authorities.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:Label a rdfs:Class ;
     rdfs:label "Label" ;
-    rdfs:comment """<div>Entity for the definition of required battery labeling including
-symbol, meaning, and subject.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:comment """<div>A regulatory label or symbol with its symbol code, human-readable meaning, and subject matter.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:CarbonFootprint a rdfs:Class ;
-    rdfs:label "Carbon Footprint" ;
-    rdfs:comment """<div>The battery passport must contain carbon footprint per functional unit of the
-battery as declared in the battery carbon footprint declaration in accordance
-with the entry into force of the implementing acts on the format of declaration.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-    rdfs:seeAlso <https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1542> ;
-.
-
-bp:CarbonFootprintPerLifecycleStage a rdfs:Class ;
-    rdfs:label "Carbon Footprint Per Lifecycle Stage" ;
-    rdfs:comment """<div>The carbon footprint of the battery as share of total Battery Carbon Footprint,
-differentiated per life cycle stage: raw material acquisition, main production,
-distribution and end of life and recycling.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:BatteryCompliancePublic a rdfs:Class ;
+    rdfs:label "Battery Compliance (Public)" ;
+    rdfs:comment """<div>Public compliance information including regulatory symbols and labels, extinguishing agent,
+and EU declaration of conformity.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:SupplyChainDueDiligence a rdfs:Class ;
+dbp:BatteryComplianceRestricted a rdfs:Class ;
+    rdfs:label "Battery Compliance (Restricted)" ;
+    rdfs:comment """<div>Restricted compliance information including test report results, accessible only by
+notified bodies and market surveillance authorities.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:SupplyChainDueDiligence a rdfs:Class ;
     rdfs:label "Supply Chain Due Diligence" ;
-    rdfs:comment """<div>Battery supply chain due diligence information including responsible sourcing
-reports and third-party assurances.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-    rdfs:seeAlso <https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1542> ;
-.
-
-bp:MaterialComposition a rdfs:Class ;
-    rdfs:label "Material Composition" ;
-    rdfs:comment """<div>Battery material composition including battery chemistry, battery materials,
-and hazardous substances.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-    rdfs:seeAlso <https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1542> ;
-.
-
-bp:BatteryChemistry a rdfs:Class ;
-    rdfs:label "Battery Chemistry" ;
-    rdfs:comment """<div>Detailed composition, including materials used in the cathode, anode,
-and electrolyte. All common cells have two electrodes and an electrolyte.
-The specific combination of materials used to make these components is called
-chemistry.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:comment """<div>Supply chain due diligence information including the due diligence report, third-party
+assurances, and supply chain indices.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:BatteryMaterial a rdfs:Class ;
-    rdfs:label "Battery Material" ;
-    rdfs:comment """<div>Detailed composition, including materials used in the cathode, anode,
-and electrolyte.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:BatteryLocation a rdfs:Class ;
-    rdfs:label "Battery Location" ;
-    rdfs:comment """<div>Battery component that includes the material, identified by component name,
-identifier, and component type.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:HazardousSubstance a rdfs:Class ;
+dbp:HazardousSubstance a rdfs:Class ;
     rdfs:label "Hazardous Substance" ;
-    rdfs:comment """<div>Hazardous substances contained in the battery other than mercury, cadmium or lead.
-Substance as a chemical element and its compounds in the natural state or the
-result of a manufacturing process.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    rdfs:comment """<div>A hazardous substance present in the battery, identified by name and its impact on
+human health and the environment.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:HazardousSubstanceImpact a rdfs:Class ;
-    rdfs:label "Hazardous Substance Impact" ;
-    rdfs:comment """<div>An environmental or health impact associated with a hazardous substance,
-described by an impact class and impact statement based on REACH or GHS
-for all hazard classes applicable to substances in the battery.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:BatteryChemistry a rdfs:Class ;
+    rdfs:label "Battery Chemistry" ;
+    rdfs:comment """<div>The electrochemical technology of the battery identified by its full clear name and abbreviated short name.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:Circularity a rdfs:Class ;
-    rdfs:label "Circularity" ;
-    rdfs:comment """<div>Battery circularity information including dismantling, spare parts,
-recycled content, safety measures, and end-of-life information.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-    rdfs:seeAlso <https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1542> ;
-.
-
-bp:DismantlingDocument a rdfs:Class ;
-    rdfs:label "Dismantling Document" ;
-    rdfs:comment """<div>Dismantling and Removal information, including at least: exploded diagrams
-of the battery system/pack showing the location of battery cells, disassembly
-sequences, type and number of fastening techniques to be unlocked, tools required
-for disassembly, warnings if risk of damaging parts exists, amount of cells used
-and layout.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:BatteryMaterialsPublic a rdfs:Class ;
+    rdfs:label "Battery Materials (Public)" ;
+    rdfs:comment """<div>Publicly accessible battery materials information including battery chemistry,
+critical raw materials, and hazardous substances.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:SparePartSupplier a rdfs:Class ;
-    rdfs:label "Spare Part Supplier" ;
-    rdfs:comment """<div>The part numbers for components should be provided together with the postal
-address, e-mail address and web address of the sources for spare parts.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:BatteryMaterialLocation a rdfs:Class ;
+    rdfs:label "Battery Material Location" ;
+    rdfs:comment """<div>The location of a material within the battery assembly, identified by component ID and component name.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:Component a rdfs:Class ;
-    rdfs:label "Component" ;
-    rdfs:comment """<div>Component information including part name and number.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:BatteryMaterial a rdfs:Class ;
+    rdfs:label "Battery Material" ;
+    rdfs:comment """<div>A single material entry in the battery composition, including identifier, name, mass,
+share, critical raw material flag, and location within the battery.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:RecycledContent a rdfs:Class ;
-    rdfs:label "Recycled Content" ;
-    rdfs:comment """<div>A battery passport must include recycled content information. The content
-information must include the percentage share of materials that have been
-recovered from battery manufacturing waste, for each battery model per year
-and per manufacturing plant.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:BatteryMaterialsRestricted a rdfs:Class ;
+    rdfs:label "Battery Materials (Restricted)" ;
+    rdfs:comment """<div>Restricted battery materials information including the detailed materials composition list,
+accessible to operators, recyclers, and repairers.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:EndOfLifeInformation a rdfs:Class ;
-    rdfs:label "End Of Life Information" ;
-    rdfs:comment """<div>Information on end-of-life handling, waste prevention, and collection.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:BatteryCarbonFootprint a rdfs:Class ;
+    rdfs:label "Battery Carbon Footprint" ;
+    rdfs:comment """<div>Carbon footprint data for the battery including lifecycle phase contributions, performance class,
+and a link to the full carbon footprint study.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:PerformanceAndDurability a rdfs:Class ;
-    rdfs:label "Performance And Durability" ;
-    rdfs:comment """<div>Battery performance and durability information including technical properties
-and condition.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-    rdfs:seeAlso <https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1542> ;
-.
-
-bp:BatteryTechnicalProperties a rdfs:Class ;
-    rdfs:label "Battery Technical Properties" ;
-    rdfs:comment """<div>Covers all capability related static data attributes including rated capacity,
-power, energy, voltage ranges, internal resistance, expected lifetime, and
-allowable degradation thresholds.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:EndUserInformation a rdfs:Class ;
+    rdfs:label "End-User Information" ;
+    rdfs:comment """<div>Information for end users about waste prevention, separate collection obligations,
+and battery collection, second life, and end-of-life processes.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:BatteryCondition a rdfs:Class ;
-    rdfs:label "Battery Condition" ;
-    rdfs:comment """<div>Covers all battery lifetime relevant dynamic properties including energy throughput,
-number of cycles, state of charge, and temperature information.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:RecycledRenewableContent a rdfs:Class ;
+    rdfs:label "Recycled and Renewable Content" ;
+    rdfs:comment """<div>Recycled and renewable content shares for key materials including nickel, cobalt,
+lithium, lead, and general renewable content.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:PowerCapabilityAt a rdfs:Class ;
-    rdfs:label "Power Capability At" ;
-    rdfs:comment """<div>Power capability measurement at a specific state of charge percentage.
-Used to characterise battery power output across its operating range.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:BatteryCircularityPublic a rdfs:Class ;
+    rdfs:label "Battery Circularity (Public)" ;
+    rdfs:comment """<div>Public circularity information including end-user guidance and recycled and
+renewable content shares.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:InternalResistance a rdfs:Class ;
-    rdfs:label "Internal Resistance" ;
-    rdfs:comment """<div>Internal resistance measurement for battery pack, module, or cell level.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:BatteryCircularityPrivate a rdfs:Class ;
+    rdfs:label "Battery Circularity (Restricted)" ;
+    rdfs:comment """<div>Restricted circularity information including dismantling manuals, part numbers,
+spare parts sources, and safety measures.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:TemperatureRangeType a rdfs:Class ;
-    rdfs:label "Temperature Range Type" ;
-    rdfs:comment """<div>Temperature range with minimum and maximum boundaries.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:CapacityEnergyVoltagePublic a rdfs:Class ;
+    rdfs:label "Capacity, Energy and Voltage (Public)" ;
+    rdfs:comment """<div>Public static battery performance data for capacity, energy, and voltage including
+rated capacity, certified usable energy, and minimum, maximum, and nominal voltages.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:StateOfCharge a rdfs:Class ;
-    rdfs:label "State Of Charge" ;
-    rdfs:comment """<div>Available capacity in a battery expressed as a percentage of remaining capacity.
-DIN DKE Spec 99100 chapter reference: 6.7.2.8</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:PowerCapabilityPublic a rdfs:Class ;
+    rdfs:label "Power Capability (Public)" ;
+    rdfs:comment """<div>Public static power capability data including original power capability, maximum
+permitted battery power, and ratio of nominal power to battery energy.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:RemainingCapacity a rdfs:Class ;
-    rdfs:label "Remaining Capacity" ;
-    rdfs:comment """<div>In-use data attribute on capacity, corresponding with definition of rated capacity.
-DIN DKE Spec 99100 chapter reference: 6.7.2.3</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:RoundTripEfficiencyPublic a rdfs:Class ;
+    rdfs:label "Round Trip Efficiency (Public)" ;
+    rdfs:comment """<div>Public static round trip energy efficiency data including initial efficiency and
+efficiency at 50% of the expected cycle life.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:RemainingEnergy a rdfs:Class ;
-    rdfs:label "Remaining Energy" ;
-    rdfs:comment """<div>Energy supplied by the battery from beginning of test procedure until
-break-off criterion is reached. DIN DKE Spec 99100 chapter reference: 6.7.2.6</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:InternalResistancePublic a rdfs:Class ;
+    rdfs:label "Internal Resistance (Public)" ;
+    rdfs:comment """<div>Public static initial internal resistance of the battery cell and pack at beginning of life.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:StateOfCertifiedEnergy a rdfs:Class ;
-    rdfs:label "State Of Certified Energy" ;
-    rdfs:comment """<div>Measured or on-board UBE performance as percentage of certified usable battery energy.
-DIN DKE Spec 99100 chapter reference: 6.7.2.7</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:BatteryLifetimePublic a rdfs:Class ;
+    rdfs:label "Battery Lifetime (Public)" ;
+    rdfs:comment """<div>Public static battery lifetime data including expected charge-discharge cycles,
+cycle-life reference test, C-rate, and capacity threshold for exhaustion.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:RemainingPowerCapability a rdfs:Class ;
-    rdfs:label "Remaining Power Capability" ;
-    rdfs:comment """<div>Remaining power capability with temperature range when relevant.
-DIN DKE Spec 99100 chapter reference: 6.7.3.3</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:TemperatureConditionsPublic a rdfs:Class ;
+    rdfs:label "Temperature Conditions (Public)" ;
+    rdfs:comment """<div>Public static temperature range boundaries for idle state battery storage and operation.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:RemainingPowerCapabilityDynamicAt a rdfs:Class ;
-    rdfs:label "Remaining Power Capability Dynamic At" ;
-    rdfs:comment """<div>Remaining power capability extending PowerCapabilityAt with a timestamp
-for dynamic reporting.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:BatteryPerformancePublic a rdfs:Class ;
+    rdfs:label "Battery Performance (Public)" ;
+    rdfs:comment """<div>Public battery performance and durability data container grouping capacity, power,
+efficiency, internal resistance, lifetime, and temperature sub-sections.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:RemainingRoundTripEnergyEfficiency a rdfs:Class ;
-    rdfs:label "Remaining Round Trip Energy Efficiency" ;
-    rdfs:comment """<div>Remaining round trip energy efficiency as state of health indicator.
-DIN DKE Spec 99100 chapter reference: 6.7.4.4</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:CapacityEnergyVoltageRestricted a rdfs:Class ;
+    rdfs:label "Capacity, Energy and Voltage (Restricted)" ;
+    rdfs:comment """<div>Dynamic restricted capacity and energy data including capacity fade, remaining capacity,
+remaining usable energy, state of certified energy, and state of charge.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:CurrentSelfDischargingRate a rdfs:Class ;
-    rdfs:label "Current Self Discharging Rate" ;
-    rdfs:comment """<div>Current self-discharge rate in idle state at reference conditions.
-DIN DKE Spec 99100 chapter reference: 6.7.4.7</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:PowerCapabilityRestricted a rdfs:Class ;
+    rdfs:label "Power Capability (Restricted)" ;
+    rdfs:comment """<div>Dynamic restricted power capability data including power fade and remaining power capability.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:EvolutionOfSelfDischarge a rdfs:Class ;
-    rdfs:label "Evolution Of Self Discharge" ;
-    rdfs:comment """<div>Change of self-discharge over time and usage.
-DIN DKE Spec 99100 chapter reference: 6.7.4.8</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:RoundTripEfficiencyRestricted a rdfs:Class ;
+    rdfs:label "Round Trip Efficiency (Restricted)" ;
+    rdfs:comment """<div>Dynamic restricted round trip efficiency data including efficiency fade, initial and current
+self-discharge rates, remaining efficiency, and evolution of self-discharge rates.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:NumberOfFullCycles a rdfs:Class ;
-    rdfs:label "Number Of Full Cycles" ;
-    rdfs:comment """<div>Number of (full) charging and discharging cycles.
-DIN DKE Spec 99100 chapter reference: 6.7.6.4</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:InternalResistanceRestricted a rdfs:Class ;
+    rdfs:label "Internal Resistance (Restricted)" ;
+    rdfs:comment """<div>Dynamic restricted internal resistance data recording resistance increase over lifetime.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:CapacityThroughput a rdfs:Class ;
-    rdfs:label "Capacity Throughput" ;
-    rdfs:comment """<div>Capacity throughput value with last update timestamp.
-DIN DKE Spec 99100 chapter reference: 6.7.6.8</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:BatteryLifetimeRestricted a rdfs:Class ;
+    rdfs:label "Battery Lifetime (Restricted)" ;
+    rdfs:comment """<div>Dynamic restricted battery lifetime data including expected remaining lifetime in years,
+number of full cycles completed, energy throughput, and capacity throughput.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:NegativeEvent a rdfs:Class ;
-    rdfs:label "Negative Event" ;
-    rdfs:comment """<div>Information about negative events such as accidents, deep discharges,
-or overcharge events.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:TemperatureConditionsRestricted a rdfs:Class ;
+    rdfs:label "Temperature Conditions (Restricted)" ;
+    rdfs:comment """<div>Dynamic restricted temperature condition data including time spent in extreme temperatures
+during operation and charging.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
-bp:TemperatureConditions a rdfs:Class ;
-    rdfs:label "Temperature Conditions" ;
-    rdfs:comment """<div>Periodically recorded information on operating environmental conditions
-including temperature. DIN DKE Spec 99100 chapter reference: 6.7.7.2</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+dbp:NegativeEvents a rdfs:Class ;
+    rdfs:label "Negative Events" ;
+    rdfs:comment """<div>Dynamic restricted data on adverse battery events including deep discharge events,
+overcharge events, and information on accidents.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
+    vs:term_status "stable" ;
+.
+
+dbp:BatteryPerformanceRestricted a rdfs:Class ;
+    rdfs:label "Battery Performance (Restricted)" ;
+    rdfs:comment """<div>Restricted dynamic battery performance data container grouping capacity, power, efficiency,
+internal resistance, lifetime, temperature, and negative event sub-sections.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
 
 
 # Definitions of datatypes
-bp:BatteryCategoryDatatype a rdfs:Datatype ;
+dbp:PerformanceClass a rdfs:Datatype ;
     rdfs:subClassOf xsd:string ;
     owl:onDatatype xsd:string ;
-    owl:withRestrictions ([xsd:pattern "LMT|EV|SLI|Stationary"]) ;
-    rdfs:label "Battery Category" ;
-    rdfs:comment """<div>The category of the battery as defined by REGULATION (EU) 2023/1542.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:BatteryComponentDatatype a rdfs:Datatype ;
-    rdfs:subClassOf xsd:string ;
-    owl:onDatatype xsd:string ;
-    owl:withRestrictions ([xsd:pattern "Pack|Module|Cell"]) ;
-    rdfs:label "Battery Component" ;
-    rdfs:comment """<div>Identifies a battery component level for measurements such as internal resistance.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:BatteryComponentTypeDatatype a rdfs:Datatype ;
-    rdfs:subClassOf xsd:string ;
-    owl:onDatatype xsd:string ;
-    owl:withRestrictions ([xsd:pattern "Cathode|Anode|Electrolyte|Cell|Module|Pack|Other"]) ;
-    rdfs:label "Battery Component Type" ;
-    rdfs:comment """<div>Type classification of the battery component (e.g. Cathode, Anode, Electrolyte).</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:BatteryPassportIdentifierDatatype a rdfs:Datatype ;
-    rdfs:subClassOf xsd:string ;
-    owl:onDatatype xsd:string ;
-    owl:withRestrictions ([xsd:pattern "^urn:[a-z0-9]+:[a-z0-9]+$"]) ;
-    rdfs:label "Battery Passport Identifier" ;
-    rdfs:comment """<div>URN format identifier for battery passport.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:BatteryStatusDatatype a rdfs:Datatype ;
-    rdfs:subClassOf xsd:string ;
-    owl:onDatatype xsd:string ;
-    owl:withRestrictions ([xsd:pattern "Original|Repurposed|Reused|Remanufactured|Waste"]) ;
-    rdfs:label "Battery Status" ;
-    rdfs:comment """<div>Lifecycle status of the battery as defined in REGULATION (EU) 2023/1542.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:CASNumberDatatype a rdfs:Datatype ;
-    rdfs:subClassOf xsd:string ;
-    owl:onDatatype xsd:string ;
-    owl:withRestrictions ([xsd:pattern "^\d{2,7}-\d{2}-\d{1}$"]) ;
-    rdfs:label "CAS Number" ;
-    rdfs:comment """<div>Chemical Abstracts Service (CAS) Registry Number format.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:CarbonFootprintPerformanceClassDatatype a rdfs:Datatype ;
-    rdfs:subClassOf xsd:string ;
-    owl:onDatatype xsd:string ;
-    owl:withRestrictions ([xsd:pattern "A|B|C|D|E"]) ;
-    rdfs:label "Carbon Footprint Performance Class" ;
-    rdfs:comment """<div>The carbon footprint performance class of the battery as defined in
-REGULATION (EU) 2023/1542, ranging from A (lowest/best) to E (highest/worst).</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:DPPStatusDatatype a rdfs:Datatype ;
-    rdfs:subClassOf xsd:string ;
-    owl:onDatatype xsd:string ;
-    owl:withRestrictions ([xsd:pattern "Active|Archived|Inactive|Marked-for-deletion"]) ;
-    rdfs:label "DPP Status" ;
-    rdfs:comment """<div>Lifecycle status of the Digital Product Passport.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:DocumentTypeDatatype a rdfs:Datatype ;
-    rdfs:subClassOf xsd:string ;
-    owl:onDatatype xsd:string ;
-    owl:withRestrictions ([xsd:pattern "BillOfMaterial|Model3D|DismantlingManual|RemovalManual|OtherManual|Drawing"]) ;
-    rdfs:label "Document Type" ;
-    rdfs:comment """<div>Enumeration of document types for dismantling and removal documentation.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:EmailAddressDatatype a rdfs:Datatype ;
-    rdfs:subClassOf xsd:string ;
-    owl:onDatatype xsd:string ;
-    owl:withRestrictions ([xsd:pattern "^[\w.-]+@[\w.-]+\.[A-Za-z]{2,}$"]) ;
-    rdfs:label "Email Address" ;
-    rdfs:comment """<div>Valid email address format.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:HazardousSubstanceClassDatatype a rdfs:Datatype ;
-    rdfs:subClassOf xsd:string ;
-    owl:onDatatype xsd:string ;
-    owl:withRestrictions ([xsd:pattern "AcuteToxicity|SkinCorrosionOrIrritation|EyeDamageOrIrritation|RespiratoryOrSkinSensitisation|GermCellMutagenicity|Carcinogenicity|ReproductiveToxicity|SpecificTargetOrganToxicitySingleExposure|SpecificTargetOrganToxicityRepeatedExposure|AspirationHazard|AquaticToxicityAcute|AquaticToxicityChronic"]) ;
-    rdfs:label "Hazardous Substance Class" ;
-    rdfs:comment """<div>Enumeration of CLP hazard classes per Regulation (EC) No 1272/2008.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:LabelingSubjectDatatype a rdfs:Datatype ;
-    rdfs:subClassOf xsd:string ;
-    owl:onDatatype xsd:string ;
-    owl:withRestrictions ([xsd:pattern "SeparateCollection|Cadmium|Lead|CarbonFootprint|ExtinguishingAgent"]) ;
-    rdfs:label "Labeling Subject" ;
-    rdfs:comment """<div>Short name of required labeling subjects as specified in REGULATION (EU) 2023/1542.
-Cadmium and Lead are listed as separate options.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:LifecycleStageDatatype a rdfs:Datatype ;
-    rdfs:subClassOf xsd:string ;
-    owl:onDatatype xsd:string ;
-    owl:withRestrictions ([xsd:pattern "RawMaterialAcquisition|MainProduction|Distribution|Use|EndOfLifeAndRecycling"]) ;
-    rdfs:label "Lifecycle Stage" ;
-    rdfs:comment """<div>Enumeration of battery lifecycle stages for carbon footprint attribution.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:PercentageDatatype a rdfs:Datatype ;
-    rdfs:subClassOf xsd:double ;
-    rdfs:label "Percentage" ;
-    rdfs:comment """<div>Percentage value between 0 and 100.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:RecycledMaterialDatatype a rdfs:Datatype ;
-    rdfs:subClassOf xsd:string ;
-    owl:onDatatype xsd:string ;
-    owl:withRestrictions ([xsd:pattern "Cobalt|Nickel|Lithium|Lead"]) ;
-    rdfs:label "Recycled Material" ;
-    rdfs:comment """<div>Name of recyclable material in recycled content reporting.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
-    vs:term_status "stable" ;
-.
-
-bp:TemperatureConstraintDatatype a rdfs:Datatype ;
-    rdfs:subClassOf xsd:string ;
-    owl:onDatatype xsd:string ;
-    owl:withRestrictions ([xsd:pattern "StorageTemperature|ChargingTemperature"]) ;
-    rdfs:label "Temperature Constraint" ;
-    rdfs:comment """<div>Constraint type for battery temperature ranges, specifying the use case
-for the temperature limit.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2#> ;
+    owl:withRestrictions ([xsd:pattern "A|B|C|D|E|F|G"]) ;
+    rdfs:label "Performance Class" ;
+    rdfs:comment """<div>Carbon footprint performance class assigned to a battery model, ranging from A (best) to G (worst).</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
 
 # Context files and their mentions
 <vocab> a jsonld:Context ;
     schema:mentions
-        bp:BatteryCategoryDatatype,
-        bp:BatteryChemistry,
-        bp:BatteryComponentDatatype,
-        bp:BatteryComponentTypeDatatype,
-        bp:BatteryCondition,
-        bp:BatteryLocation,
-        bp:BatteryMaterial,
-        bp:BatteryPassportIdentifierDatatype,
-        bp:BatteryStatusDatatype,
-        bp:BatteryTechnicalProperties,
-        bp:CASNumberDatatype,
-        bp:CapacityThroughput,
-        bp:CarbonFootprint,
-        bp:CarbonFootprintPerLifecycleStage,
-        bp:CarbonFootprintPerformanceClassDatatype,
-        bp:Circularity,
-        bp:Component,
-        bp:ContactInformation,
-        bp:CurrentSelfDischargingRate,
-        bp:DPPLastUpdated,
-        bp:DPPStaticMetadata,
-        bp:DPPStatus,
-        bp:DPPStatusDatatype,
-        bp:DismantlingDocument,
-        bp:DocumentTypeDatatype,
-        bp:EmailAddressDatatype,
-        bp:EndOfLifeInformation,
-        bp:EvolutionOfSelfDischarge,
-        bp:GeneralInformation,
-        bp:HazardousSubstance,
-        bp:HazardousSubstanceClassDatatype,
-        bp:HazardousSubstanceImpact,
-        bp:InternalResistance,
-        bp:Label,
-        bp:Labeling,
-        bp:LabelingSubjectDatatype,
-        bp:LifecycleStageDatatype,
-        bp:MaterialComposition,
-        bp:NegativeEvent,
-        bp:NumberOfFullCycles,
-        bp:PercentageDatatype,
-        bp:PerformanceAndDurability,
-        bp:PostalAddress,
-        bp:PowerCapabilityAt,
-        bp:RecycledContent,
-        bp:RecycledMaterialDatatype,
-        bp:RemainingCapacity,
-        bp:RemainingEnergy,
-        bp:RemainingPowerCapability,
-        bp:RemainingPowerCapabilityDynamicAt,
-        bp:RemainingRoundTripEnergyEfficiency,
-        bp:SparePartSupplier,
-        bp:StateOfCertifiedEnergy,
-        bp:StateOfCharge,
-        bp:SupplyChainDueDiligence,
-        bp:TemperatureConditions,
-        bp:TemperatureConstraintDatatype,
-        bp:TemperatureRangeType,
-        bp:absoluteCarbonFootprint,
-        bp:addressCountry,
-        bp:addressOfSupplier,
-        bp:atSoC,
-        bp:batteryCarbonFootprint,
-        bp:batteryCategory,
-        bp:batteryChemistry,
-        bp:batteryComponent,
-        bp:batteryCondition,
-        bp:batteryMass,
-        bp:batteryMaterialIdentifier,
-        bp:batteryMaterialLocation,
-        bp:batteryMaterialMass,
-        bp:batteryMaterialName,
-        bp:batteryMaterials,
-        bp:batteryModelIdentifier,
-        bp:batteryPassportIdentifier,
-        bp:batterySerialNumber,
-        bp:batteryStatus,
-        bp:batteryTechnicalProperties,
-        bp:cRate,
-        bp:cRateLifeCycleTest,
-        bp:capacityFade,
-        bp:capacityThresholdForExhaustion,
-        bp:capacityThroughput,
-        bp:capacityThroughputValue,
-        bp:carbonFootprint,
-        bp:carbonFootprintPerLifecycleStage,
-        bp:carbonFootprintPerformanceClass,
-        bp:carbonFootprintStudy,
-        bp:clearName,
-        bp:componentId,
-        bp:componentName,
-        bp:componentType,
-        bp:components,
-        bp:contactName,
-        bp:currentSelfDischargingRate,
-        bp:currentSelfDischargingRateValue,
-        bp:declarationOfConformity,
-        bp:dismantlingDocuments,
-        bp:documentType,
-        bp:documentURL,
-        bp:dppGranularity,
-        bp:dppLastUpdated,
-        bp:dppSchemaVersion,
-        bp:dppStatus,
-        bp:economicOperatorIdentifier,
-        bp:emailAddress,
-        bp:emailAddressOfSupplier,
-        bp:endOfLifeInformation,
-        bp:energyRoundTripEfficiencyFade,
-        bp:energyThroughput,
-        bp:evolutionOfSelfDischarge,
-        bp:evolutionOfSelfDischargeValue,
-        bp:expectedLifetime,
-        bp:expectedNumberOfCycles,
-        bp:extinguishingAgent,
-        bp:facilityIdentifier,
-        bp:hazardousSubstanceClass,
-        bp:hazardousSubstanceConcentration,
-        bp:hazardousSubstanceIdentifier,
-        bp:hazardousSubstanceImpacts,
-        bp:hazardousSubstanceLocation,
-        bp:hazardousSubstanceName,
-        bp:hazardousSubstances,
-        bp:identifier,
-        bp:impactClass,
-        bp:impactStatement,
-        bp:informationOnAccidents,
-        bp:informationOnCollection,
-        bp:initialInternalResistance,
-        bp:initialSelfDischarge,
-        bp:internalResistanceIncrease,
-        bp:isCriticalRawMaterial,
-        bp:labels,
-        bp:lastUpdate,
-        bp:lifecycleStage,
-        bp:lifetimeReferenceTest,
-        bp:manufacturerIdentifier,
-        bp:manufacturerInformation,
-        bp:manufacturingDate,
-        bp:manufacturingPlace,
-        bp:maximum,
-        bp:maximumVoltage,
-        bp:meaning,
-        bp:mimeType,
-        bp:minimum,
-        bp:minimumVoltage,
-        bp:nameOfSupplier,
-        bp:negativeEvents,
-        bp:nominalVoltage,
-        bp:numberOfDeepDischargeEvents,
-        bp:numberOfFullCycles,
-        bp:numberOfFullCyclesValue,
-        bp:numberOfOverchargeEvents,
-        bp:ohmicResistance,
-        bp:operatorInformation,
-        bp:originalPowerCapability,
-        bp:partName,
-        bp:partNumber,
-        bp:postConsumerShare,
-        bp:postalAddress,
-        bp:postalCode,
-        bp:powerCapabilityAt,
-        bp:powerFade,
-        bp:preConsumerShare,
-        bp:productIdentifier,
-        bp:puttingIntoService,
-        bp:rPCLastUpdated,
-        bp:ratedCapacity,
-        bp:ratedEnergy,
-        bp:ratedMaximumPower,
-        bp:recycledContent,
-        bp:recycledMaterial,
-        bp:remainingCapacity,
-        bp:remainingCapacityValue,
-        bp:remainingEnergy,
-        bp:remainingEnergyValue,
-        bp:remainingPowerCapability,
-        bp:remainingPowerCapabilityValue,
-        bp:remainingRoundTripEnergyEfficiency,
-        bp:remainingRoundTripEnergyEfficiencyValue,
-        bp:renewableContent,
-        bp:resultOfTestReport,
-        bp:roundTripEfficiencyat50PerCentCycleLife,
-        bp:roundtripEfficiency,
-        bp:safetyMeasures,
-        bp:separateCollection,
-        bp:shortName,
-        bp:sparePartSources,
-        bp:stateOfCertifiedEnergy,
-        bp:stateOfCertifiedEnergyValue,
-        bp:stateOfCharge,
-        bp:stateOfChargeValue,
-        bp:streetAddress,
-        bp:subject,
-        bp:supplierWebAddress,
-        bp:supplyChainDueDiligenceReport,
-        bp:supplyChainIndices,
-        bp:symbol,
-        bp:temperatureConstraintType,
-        bp:temperatureInformation,
-        bp:temperatureRangeIdleState,
-        bp:temperatureValue,
-        bp:thirdPartyAssurances,
-        bp:timeExtremeHighTemp,
-        bp:timeExtremeHighTempCharging,
-        bp:timeExtremeLowTemp,
-        bp:timeExtremeLowTempCharging,
-        bp:warrantyPeriod,
-        bp:wastePrevention,
-        bp:webAddress ;
+        dbp:BatteryAttributes,
+        dbp:BatteryCarbonFootprint,
+        dbp:BatteryChemistry,
+        dbp:BatteryCircularityPrivate,
+        dbp:BatteryCircularityPublic,
+        dbp:BatteryCompliancePublic,
+        dbp:BatteryComplianceRestricted,
+        dbp:BatteryIdentifiers,
+        dbp:BatteryLifetimePublic,
+        dbp:BatteryLifetimeRestricted,
+        dbp:BatteryMaterial,
+        dbp:BatteryMaterialLocation,
+        dbp:BatteryMaterialsPublic,
+        dbp:BatteryMaterialsRestricted,
+        dbp:BatteryPerformancePublic,
+        dbp:BatteryPerformanceRestricted,
+        dbp:CapacityEnergyVoltagePublic,
+        dbp:CapacityEnergyVoltageRestricted,
+        dbp:CompanyInformation,
+        dbp:ContactInformation,
+        dbp:DPPInfo,
+        dbp:EndUserInformation,
+        dbp:GeneralInformationPublic,
+        dbp:GeneralInformationRestricted,
+        dbp:HazardousSubstance,
+        dbp:InternalResistancePublic,
+        dbp:InternalResistanceRestricted,
+        dbp:Label,
+        dbp:NegativeEvents,
+        dbp:OperatorIdentifiers,
+        dbp:PerformanceClass,
+        dbp:PostalAddress,
+        dbp:PowerCapabilityPublic,
+        dbp:PowerCapabilityRestricted,
+        dbp:ProductData,
+        dbp:RecycledRenewableContent,
+        dbp:RestrictedProductData,
+        dbp:RoundTripEfficiencyPublic,
+        dbp:RoundTripEfficiencyRestricted,
+        dbp:SupplyChainDueDiligence,
+        dbp:TemperatureConditionsPublic,
+        dbp:TemperatureConditionsRestricted,
+        dbp:absoluteCarbonFootprint,
+        dbp:address,
+        dbp:batteryCategory,
+        dbp:batteryChemistry,
+        dbp:batteryLifetime,
+        dbp:batteryMass,
+        dbp:batteryMaterialIdentifier,
+        dbp:batteryMaterialLocation,
+        dbp:batteryMaterialMass,
+        dbp:batteryMaterialName,
+        dbp:batteryMaterialShare,
+        dbp:batteryModelIdentifier,
+        dbp:batteryStatus,
+        dbp:cRateCycleLifeTest,
+        dbp:cadmium,
+        dbp:capacityEnergyVoltage,
+        dbp:capacityFade,
+        dbp:capacityThresholdExhaustion,
+        dbp:capacityThroughput,
+        dbp:carbonFootprint,
+        dbp:carbonFootprintPerFU,
+        dbp:certifiedUsableBattEnergy,
+        dbp:clearName,
+        dbp:collectionEndOfLife,
+        dbp:componentId,
+        dbp:componentName,
+        dbp:contact,
+        dbp:contributionDistribution,
+        dbp:contributionEndOfLife,
+        dbp:contributionProduction,
+        dbp:contributionRawMaterial,
+        dbp:country,
+        dbp:criticalRawMaterials,
+        dbp:currentSelfDischargeRate,
+        dbp:cycleLifeReferenceTest,
+        dbp:dateOfPuttingIntoService,
+        dbp:deepDischargeEvents,
+        dbp:dismantlingManuals,
+        dbp:dppGranularity,
+        dbp:dppInfo,
+        dbp:dppStatus,
+        dbp:dueDiligenceReport,
+        dbp:economicOperator,
+        dbp:economicOperatorId,
+        dbp:email,
+        dbp:endUserInfo,
+        dbp:energyThroughput,
+        dbp:euDeclarationConformity,
+        dbp:evolutionSelfDischargeRates,
+        dbp:expectedLifetimeCycles,
+        dbp:expectedLifetimeYears,
+        dbp:extinguishingAgent,
+        dbp:facilityId,
+        dbp:general,
+        dbp:hazardousSubstances,
+        dbp:identifier,
+        dbp:identifiers,
+        dbp:impactOnEnvironment,
+        dbp:informationOnAccidents,
+        dbp:initialInternalResistance,
+        dbp:initialRoundTripEfficiency,
+        dbp:initialSelfDischargeRate,
+        dbp:internalResistance,
+        dbp:internalResistanceIncrease,
+        dbp:isCriticalRawMaterial,
+        dbp:lastUpdated,
+        dbp:lead,
+        dbp:manufacturer,
+        dbp:manufacturerId,
+        dbp:manufacturingDate,
+        dbp:manufacturingPlace,
+        dbp:materialsComposition,
+        dbp:maximumPermittedPower,
+        dbp:maximumVoltage,
+        dbp:meaning,
+        dbp:minimumVoltage,
+        dbp:name,
+        dbp:nominalVoltage,
+        dbp:numberOfFullCycles,
+        dbp:originalPowerCapability,
+        dbp:overchargeEvents,
+        dbp:partNumbers,
+        dbp:performanceClass,
+        dbp:phone,
+        dbp:postConsumerCobaltShare,
+        dbp:postConsumerLithiumShare,
+        dbp:postConsumerNickelShare,
+        dbp:postalCode,
+        dbp:powerCapability,
+        dbp:powerFade,
+        dbp:preConsumerCobaltShare,
+        dbp:preConsumerLithiumShare,
+        dbp:preConsumerNickelShare,
+        dbp:productData,
+        dbp:publicCarbonFootprintStudy,
+        dbp:ratedCapacity,
+        dbp:ratioPowerToEnergy,
+        dbp:recycledContent,
+        dbp:recycledLeadShare,
+        dbp:remainingCapacity,
+        dbp:remainingPowerCapability,
+        dbp:remainingRoundTripEfficiency,
+        dbp:remainingUsableBattEnergy,
+        dbp:renewableContentShare,
+        dbp:roundTripEfficiency,
+        dbp:roundTripEfficiencyAt50pct,
+        dbp:roundTripEfficiencyFade,
+        dbp:safetyMeasures,
+        dbp:schemaVersion,
+        dbp:separateCollection,
+        dbp:separateCollectionSymbol,
+        dbp:serialNumber,
+        dbp:shortName,
+        dbp:sparePartsInfo,
+        dbp:stateOfCertifiedEnergy,
+        dbp:stateOfCharge,
+        dbp:streetAddress,
+        dbp:subject,
+        dbp:substance,
+        dbp:supplyChainIndices,
+        dbp:symbol,
+        dbp:tempRangeIdleLower,
+        dbp:tempRangeIdleUpper,
+        dbp:temperatureConditions,
+        dbp:temperatureInformation,
+        dbp:testReportResults,
+        dbp:thirdPartyAssurances,
+        dbp:timeChargingExtremeTempsAbove,
+        dbp:timeChargingExtremeTempsBelow,
+        dbp:timeInExtremeTempsAbove,
+        dbp:timeInExtremeTempsBelow,
+        dbp:uniqueBatteryIdentifier,
+        dbp:uniqueDPPIdentifier,
+        dbp:warrantyPeriod,
+        dbp:wastePrevention,
+        dbp:website ;
 .
 

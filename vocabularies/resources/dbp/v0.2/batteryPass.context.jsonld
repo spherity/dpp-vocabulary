@@ -1,881 +1,786 @@
 {
     "@context": {
         "@protected": true,
-        "GeneralInformation": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#GeneralInformation",
+        "PostalAddress": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/PostalAddress",
             "@context": {
                 "@protected": true,
-                "batteryPassportIdentifier": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#batteryPassportIdentifier",
-                    "@type": "https://dpp.vocabulary.spherity.com/dbp/v0.2#BatteryPassportIdentifierDatatype"
-                },
-                "productIdentifier": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#productIdentifier",
+                "postalCode": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/postalCode",
                     "@type": "http://www.w3.org/2001/XMLSchema#string"
                 },
-                "batteryModelIdentifier": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#batteryModelIdentifier",
+                "streetAddress": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/streetAddress",
                     "@type": "http://www.w3.org/2001/XMLSchema#string"
                 },
-                "batterySerialNumber": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#batterySerialNumber",
+                "country": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/country",
                     "@type": "http://www.w3.org/2001/XMLSchema#string"
-                },
-                "batteryCategory": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#batteryCategory",
-                    "@type": "https://dpp.vocabulary.spherity.com/dbp/v0.2#BatteryCategoryDatatype"
-                },
-                "batteryMass": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#batteryMass",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "batteryStatus": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#batteryStatus",
-                    "@type": "https://dpp.vocabulary.spherity.com/dbp/v0.2#BatteryStatusDatatype"
-                },
-                "manufacturingDate": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#manufacturingDate",
-                    "@type": "http://www.w3.org/2001/XMLSchema#gYearMonth"
-                },
-                "puttingIntoService": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#puttingIntoService",
-                    "@type": "http://www.w3.org/2001/XMLSchema#gYearMonth"
-                },
-                "warrantyPeriod": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#warrantyPeriod",
-                    "@type": "http://www.w3.org/2001/XMLSchema#gYearMonth"
-                },
-                "manufacturerInformation": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#manufacturerInformation",
-                    "@type": "@id"
-                },
-                "operatorInformation": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#operatorInformation",
-                    "@type": "@id"
-                },
-                "manufacturerIdentifier": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#manufacturerIdentifier",
-                    "@type": "http://www.w3.org/2001/XMLSchema#string"
-                },
-                "economicOperatorIdentifier": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#economicOperatorIdentifier",
-                    "@type": "http://www.w3.org/2001/XMLSchema#string"
-                },
-                "manufacturingPlace": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#manufacturingPlace",
-                    "@type": "@id"
-                }
-            }
-        },
-        "DPPStaticMetadata": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#DPPStaticMetadata",
-            "@context": {
-                "@protected": true,
-                "dppSchemaVersion": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#dppSchemaVersion",
-                    "@type": "http://www.w3.org/2001/XMLSchema#string"
-                },
-                "dppGranularity": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#dppGranularity",
-                    "@type": "http://www.w3.org/2001/XMLSchema#string"
-                }
-            }
-        },
-        "DPPStatus": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#DPPStatus",
-            "@context": {
-                "@protected": true,
-                "dppStatus": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#dppStatus",
-                    "@type": "https://dpp.vocabulary.spherity.com/dbp/v0.2#DPPStatusDatatype"
-                }
-            }
-        },
-        "DPPLastUpdated": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#DPPLastUpdated",
-            "@context": {
-                "@protected": true,
-                "dppLastUpdated": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#dppLastUpdated",
-                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
                 }
             }
         },
         "ContactInformation": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#ContactInformation",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/ContactInformation",
             "@context": {
                 "@protected": true,
-                "contactName": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#contactName",
+                "phone": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/phone",
                     "@type": "http://www.w3.org/2001/XMLSchema#string"
                 },
+                "email": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/email",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                "website": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/website",
+                    "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+                }
+            }
+        },
+        "CompanyInformation": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/CompanyInformation",
+            "@context": {
+                "@protected": true,
                 "identifier": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#identifier",
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/identifier",
                     "@type": "http://www.w3.org/2001/XMLSchema#string"
                 },
-                "emailAddress": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#emailAddress",
-                    "@type": "https://dpp.vocabulary.spherity.com/dbp/v0.2#EmailAddressDatatype"
+                "name": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/name",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
                 },
-                "webAddress": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#webAddress",
-                    "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+                "contact": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/contact",
+                    "@type": "@id"
                 },
-                "postalAddress": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#postalAddress",
+                "address": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/address",
                     "@type": "@id"
                 }
             }
         },
-        "PostalAddress": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#PostalAddress",
+        "DPPInfo": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/DPPInfo",
             "@context": {
                 "@protected": true,
-                "addressCountry": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#addressCountry",
+                "schemaVersion": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/schemaVersion",
                     "@type": "http://www.w3.org/2001/XMLSchema#string"
                 },
-                "postalCode": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#postalCode",
+                "dppGranularity": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/dppGranularity",
                     "@type": "http://www.w3.org/2001/XMLSchema#string"
                 },
-                "streetAddress": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#streetAddress",
+                "dppStatus": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/dppStatus",
                     "@type": "http://www.w3.org/2001/XMLSchema#string"
                 },
-                "facilityIdentifier": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#facilityIdentifier",
-                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                "lastUpdated": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/lastUpdated",
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
                 }
             }
         },
-        "Labeling": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#Labeling",
+        "BatteryAttributes": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryAttributes",
             "@context": {
                 "@protected": true,
-                "labels": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#labels",
+                "warrantyPeriod": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/warrantyPeriod",
+                    "@type": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                "batteryCategory": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryCategory",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                "batteryMass": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryMass",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            }
+        },
+        "BatteryIdentifiers": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryIdentifiers",
+            "@context": {
+                "@protected": true,
+                "batteryModelIdentifier": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryModelIdentifier",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                "uniqueBatteryIdentifier": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/uniqueBatteryIdentifier",
+                    "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+                },
+                "serialNumber": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/serialNumber",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                "uniqueDPPIdentifier": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/uniqueDPPIdentifier",
+                    "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+                }
+            }
+        },
+        "ProductData": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/ProductData",
+            "@context": {
+                "@protected": true,
+                "economicOperator": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/economicOperator",
                     "@type": "@id"
                 },
-                "declarationOfConformity": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#declarationOfConformity",
-                    "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+                "manufacturer": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/manufacturer",
+                    "@type": "@id"
                 },
-                "resultOfTestReport": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#resultOfTestReport",
-                    "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+                "manufacturingPlace": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/manufacturingPlace",
+                    "@type": "@id"
                 },
-                "extinguishingAgent": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#extinguishingAgent",
+                "manufacturingDate": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/manufacturingDate",
+                    "@type": "http://www.w3.org/2001/XMLSchema#date"
+                }
+            }
+        },
+        "GeneralInformationPublic": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/GeneralInformationPublic",
+            "@context": {
+                "@protected": true,
+                "dppInfo": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/dppInfo",
+                    "@type": "@id"
+                },
+                "general": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/general",
+                    "@type": "@id"
+                },
+                "identifiers": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/identifiers",
+                    "@type": "@id"
+                },
+                "productData": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/productData",
+                    "@type": "@id"
+                }
+            }
+        },
+        "OperatorIdentifiers": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/OperatorIdentifiers",
+            "@context": {
+                "@protected": true,
+                "manufacturerId": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/manufacturerId",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                "facilityId": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/facilityId",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                "economicOperatorId": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/economicOperatorId",
                     "@type": "http://www.w3.org/2001/XMLSchema#string"
                 }
             }
         },
+        "RestrictedProductData": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/RestrictedProductData",
+            "@context": {
+                "@protected": true,
+                "dateOfPuttingIntoService": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/dateOfPuttingIntoService",
+                    "@type": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                "batteryStatus": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryStatus",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                }
+            }
+        },
+        "GeneralInformationRestricted": "https://dpp.vocabulary.spherity.com/dbp/v0.2/GeneralInformationRestricted",
         "Label": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#Label",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/Label",
             "@context": {
                 "@protected": true,
                 "symbol": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#symbol",
-                    "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/symbol",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
                 },
                 "meaning": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#meaning",
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/meaning",
                     "@type": "http://www.w3.org/2001/XMLSchema#string"
                 },
                 "subject": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#subject",
-                    "@type": "https://dpp.vocabulary.spherity.com/dbp/v0.2#LabelingSubjectDatatype"
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/subject",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
                 }
             }
         },
-        "CarbonFootprint": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#CarbonFootprint",
+        "BatteryCompliancePublic": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryCompliancePublic",
             "@context": {
                 "@protected": true,
-                "batteryCarbonFootprint": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#batteryCarbonFootprint",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "carbonFootprintPerformanceClass": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#carbonFootprintPerformanceClass",
-                    "@type": "https://dpp.vocabulary.spherity.com/dbp/v0.2#CarbonFootprintPerformanceClassDatatype"
-                },
-                "carbonFootprintStudy": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#carbonFootprintStudy",
-                    "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-                },
-                "absoluteCarbonFootprint": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#absoluteCarbonFootprint",
-                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
-                },
-                "carbonFootprintPerLifecycleStage": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#carbonFootprintPerLifecycleStage",
+                "separateCollectionSymbol": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/separateCollectionSymbol",
                     "@type": "@id"
+                },
+                "cadmium": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/cadmium",
+                    "@type": "@id"
+                },
+                "lead": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/lead",
+                    "@type": "@id"
+                },
+                "carbonFootprint": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/carbonFootprint",
+                    "@type": "@id"
+                },
+                "extinguishingAgent": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/extinguishingAgent",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                "euDeclarationConformity": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/euDeclarationConformity",
+                    "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
                 }
             }
         },
-        "CarbonFootprintPerLifecycleStage": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#CarbonFootprintPerLifecycleStage",
+        "BatteryComplianceRestricted": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryComplianceRestricted",
             "@context": {
                 "@protected": true,
-                "carbonFootprint": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#carbonFootprint",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "lifecycleStage": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#lifecycleStage",
-                    "@type": "https://dpp.vocabulary.spherity.com/dbp/v0.2#LifecycleStageDatatype"
+                "testReportResults": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/testReportResults",
+                    "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
                 }
             }
         },
         "SupplyChainDueDiligence": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#SupplyChainDueDiligence",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/SupplyChainDueDiligence",
             "@context": {
                 "@protected": true,
-                "supplyChainDueDiligenceReport": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#supplyChainDueDiligenceReport",
+                "dueDiligenceReport": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/dueDiligenceReport",
                     "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
                 },
                 "thirdPartyAssurances": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#thirdPartyAssurances",
-                    "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/thirdPartyAssurances",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
                 },
                 "supplyChainIndices": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#supplyChainIndices",
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/supplyChainIndices",
                     "@type": "http://www.w3.org/2001/XMLSchema#string"
                 }
             }
         },
-        "MaterialComposition": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#MaterialComposition",
+        "HazardousSubstance": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/HazardousSubstance",
             "@context": {
                 "@protected": true,
-                "batteryChemistry": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#batteryChemistry",
-                    "@type": "@id"
+                "substance": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/substance",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
                 },
-                "batteryMaterials": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#batteryMaterials",
-                    "@type": "@id"
-                },
-                "hazardousSubstances": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#hazardousSubstances",
-                    "@type": "@id"
+                "impactOnEnvironment": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/impactOnEnvironment",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
                 }
             }
         },
         "BatteryChemistry": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#BatteryChemistry",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryChemistry",
             "@context": {
                 "@protected": true,
-                "shortName": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#shortName",
+                "clearName": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/clearName",
                     "@type": "http://www.w3.org/2001/XMLSchema#string"
                 },
-                "clearName": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#clearName",
+                "shortName": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/shortName",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                }
+            }
+        },
+        "BatteryMaterialsPublic": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryMaterialsPublic",
+            "@context": {
+                "@protected": true,
+                "batteryChemistry": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryChemistry",
+                    "@type": "@id"
+                },
+                "criticalRawMaterials": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/criticalRawMaterials",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                "hazardousSubstances": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/hazardousSubstances",
+                    "@type": "@id"
+                }
+            }
+        },
+        "BatteryMaterialLocation": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryMaterialLocation",
+            "@context": {
+                "@protected": true,
+                "componentId": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/componentId",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                "componentName": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/componentName",
                     "@type": "http://www.w3.org/2001/XMLSchema#string"
                 }
             }
         },
         "BatteryMaterial": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#BatteryMaterial",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryMaterial",
             "@context": {
                 "@protected": true,
-                "batteryMaterialName": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#batteryMaterialName",
+                "batteryMaterialIdentifier": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryMaterialIdentifier",
                     "@type": "http://www.w3.org/2001/XMLSchema#string"
                 },
-                "batteryMaterialIdentifier": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#batteryMaterialIdentifier",
-                    "@type": "https://dpp.vocabulary.spherity.com/dbp/v0.2#CASNumberDatatype"
+                "batteryMaterialName": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryMaterialName",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
                 },
                 "batteryMaterialMass": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#batteryMaterialMass",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryMaterialMass",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                },
+                "batteryMaterialShare": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryMaterialShare",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
                 },
                 "isCriticalRawMaterial": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#isCriticalRawMaterial",
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/isCriticalRawMaterial",
                     "@type": "http://www.w3.org/2001/XMLSchema#boolean"
                 },
                 "batteryMaterialLocation": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#batteryMaterialLocation",
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryMaterialLocation",
                     "@type": "@id"
                 }
             }
         },
-        "BatteryLocation": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#BatteryLocation",
+        "BatteryMaterialsRestricted": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryMaterialsRestricted",
             "@context": {
                 "@protected": true,
-                "componentName": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#componentName",
-                    "@type": "http://www.w3.org/2001/XMLSchema#string"
-                },
-                "componentId": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#componentId",
-                    "@type": "http://www.w3.org/2001/XMLSchema#string"
-                },
-                "componentType": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#componentType",
-                    "@type": "https://dpp.vocabulary.spherity.com/dbp/v0.2#BatteryComponentTypeDatatype"
-                }
-            }
-        },
-        "HazardousSubstance": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#HazardousSubstance",
-            "@context": {
-                "@protected": true,
-                "hazardousSubstanceName": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#hazardousSubstanceName",
-                    "@type": "http://www.w3.org/2001/XMLSchema#string"
-                },
-                "hazardousSubstanceIdentifier": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#hazardousSubstanceIdentifier",
-                    "@type": "https://dpp.vocabulary.spherity.com/dbp/v0.2#CASNumberDatatype"
-                },
-                "hazardousSubstanceConcentration": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#hazardousSubstanceConcentration",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "hazardousSubstanceLocation": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#hazardousSubstanceLocation",
-                    "@type": "@id"
-                },
-                "hazardousSubstanceClass": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#hazardousSubstanceClass",
-                    "@type": "https://dpp.vocabulary.spherity.com/dbp/v0.2#HazardousSubstanceClassDatatype"
-                },
-                "hazardousSubstanceImpacts": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#hazardousSubstanceImpacts",
+                "materialsComposition": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/materialsComposition",
                     "@type": "@id"
                 }
             }
         },
-        "HazardousSubstanceImpact": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#HazardousSubstanceImpact",
+        "BatteryCarbonFootprint": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryCarbonFootprint",
             "@context": {
                 "@protected": true,
-                "impactClass": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#impactClass",
-                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                "carbonFootprintPerFU": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/carbonFootprintPerFU",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
                 },
-                "impactStatement": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#impactStatement",
-                    "@type": "http://www.w3.org/2001/XMLSchema#string"
-                }
-            }
-        },
-        "Circularity": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#Circularity",
-            "@context": {
-                "@protected": true,
-                "dismantlingDocuments": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#dismantlingDocuments",
-                    "@type": "@id"
+                "contributionRawMaterial": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/contributionRawMaterial",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
                 },
-                "sparePartSources": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#sparePartSources",
-                    "@type": "@id"
+                "contributionProduction": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/contributionProduction",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
                 },
-                "recycledContent": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#recycledContent",
-                    "@type": "@id"
+                "contributionDistribution": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/contributionDistribution",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
                 },
-                "safetyMeasures": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#safetyMeasures",
+                "contributionEndOfLife": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/contributionEndOfLife",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                },
+                "performanceClass": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/performanceClass",
+                    "@type": "https://dpp.vocabulary.spherity.com/dbp/v0.2/PerformanceClass"
+                },
+                "publicCarbonFootprintStudy": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/publicCarbonFootprintStudy",
                     "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
                 },
-                "endOfLifeInformation": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#endOfLifeInformation",
-                    "@type": "@id"
-                },
-                "renewableContent": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#renewableContent",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
+                "absoluteCarbonFootprint": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/absoluteCarbonFootprint",
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
                 }
             }
         },
-        "DismantlingDocument": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#DismantlingDocument",
-            "@context": {
-                "@protected": true,
-                "documentType": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#documentType",
-                    "@type": "https://dpp.vocabulary.spherity.com/dbp/v0.2#DocumentTypeDatatype"
-                },
-                "mimeType": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#mimeType",
-                    "@type": "http://www.w3.org/2001/XMLSchema#string"
-                },
-                "documentURL": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#documentURL",
-                    "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-                }
-            }
-        },
-        "SparePartSupplier": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#SparePartSupplier",
-            "@context": {
-                "@protected": true,
-                "nameOfSupplier": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#nameOfSupplier",
-                    "@type": "http://www.w3.org/2001/XMLSchema#string"
-                },
-                "emailAddressOfSupplier": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#emailAddressOfSupplier",
-                    "@type": "https://dpp.vocabulary.spherity.com/dbp/v0.2#EmailAddressDatatype"
-                },
-                "supplierWebAddress": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#supplierWebAddress",
-                    "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-                },
-                "addressOfSupplier": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#addressOfSupplier",
-                    "@type": "@id"
-                },
-                "components": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#components",
-                    "@type": "@id"
-                }
-            }
-        },
-        "Component": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#Component",
-            "@context": {
-                "@protected": true,
-                "partName": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#partName",
-                    "@type": "http://www.w3.org/2001/XMLSchema#string"
-                },
-                "partNumber": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#partNumber",
-                    "@type": "http://www.w3.org/2001/XMLSchema#string"
-                }
-            }
-        },
-        "RecycledContent": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#RecycledContent",
-            "@context": {
-                "@protected": true,
-                "recycledMaterial": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#recycledMaterial",
-                    "@type": "https://dpp.vocabulary.spherity.com/dbp/v0.2#RecycledMaterialDatatype"
-                },
-                "preConsumerShare": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#preConsumerShare",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "postConsumerShare": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#postConsumerShare",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                }
-            }
-        },
-        "EndOfLifeInformation": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#EndOfLifeInformation",
+        "EndUserInformation": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/EndUserInformation",
             "@context": {
                 "@protected": true,
                 "wastePrevention": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#wastePrevention",
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/wastePrevention",
                     "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
                 },
                 "separateCollection": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#separateCollection",
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/separateCollection",
                     "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
                 },
-                "informationOnCollection": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#informationOnCollection",
+                "collectionEndOfLife": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/collectionEndOfLife",
                     "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
                 }
             }
         },
-        "PerformanceAndDurability": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#PerformanceAndDurability",
+        "RecycledRenewableContent": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/RecycledRenewableContent",
             "@context": {
                 "@protected": true,
-                "batteryTechnicalProperties": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#batteryTechnicalProperties",
+                "preConsumerNickelShare": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/preConsumerNickelShare",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                },
+                "preConsumerCobaltShare": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/preConsumerCobaltShare",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                },
+                "preConsumerLithiumShare": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/preConsumerLithiumShare",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                },
+                "postConsumerNickelShare": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/postConsumerNickelShare",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                },
+                "postConsumerCobaltShare": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/postConsumerCobaltShare",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                },
+                "postConsumerLithiumShare": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/postConsumerLithiumShare",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                },
+                "recycledLeadShare": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/recycledLeadShare",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                },
+                "renewableContentShare": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/renewableContentShare",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            }
+        },
+        "BatteryCircularityPublic": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryCircularityPublic",
+            "@context": {
+                "@protected": true,
+                "endUserInfo": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/endUserInfo",
                     "@type": "@id"
                 },
-                "batteryCondition": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#batteryCondition",
+                "recycledContent": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/recycledContent",
                     "@type": "@id"
                 }
             }
         },
-        "BatteryTechnicalProperties": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#BatteryTechnicalProperties",
+        "BatteryCircularityPrivate": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryCircularityPrivate",
+            "@context": {
+                "@protected": true,
+                "dismantlingManuals": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/dismantlingManuals",
+                    "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+                },
+                "partNumbers": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/partNumbers",
+                    "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+                },
+                "sparePartsInfo": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/sparePartsInfo",
+                    "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+                },
+                "safetyMeasures": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/safetyMeasures",
+                    "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+                }
+            }
+        },
+        "CapacityEnergyVoltagePublic": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/CapacityEnergyVoltagePublic",
+            "@context": {
+                "@protected": true,
+                "ratedCapacity": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/ratedCapacity",
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                },
+                "certifiedUsableBattEnergy": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/certifiedUsableBattEnergy",
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                },
+                "minimumVoltage": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/minimumVoltage",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                },
+                "maximumVoltage": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/maximumVoltage",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                },
+                "nominalVoltage": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/nominalVoltage",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            }
+        },
+        "PowerCapabilityPublic": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/PowerCapabilityPublic",
             "@context": {
                 "@protected": true,
                 "originalPowerCapability": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#originalPowerCapability",
-                    "@type": "@id"
-                },
-                "ratedMaximumPower": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#ratedMaximumPower",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "ratedEnergy": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#ratedEnergy",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "expectedNumberOfCycles": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#expectedNumberOfCycles",
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/originalPowerCapability",
                     "@type": "http://www.w3.org/2001/XMLSchema#integer"
                 },
-                "initialSelfDischarge": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#initialSelfDischarge",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "roundtripEfficiency": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#roundtripEfficiency",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "ratedCapacity": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#ratedCapacity",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "initialInternalResistance": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#initialInternalResistance",
-                    "@type": "@id"
-                },
-                "expectedLifetime": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#expectedLifetime",
+                "maximumPermittedPower": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/maximumPermittedPower",
                     "@type": "http://www.w3.org/2001/XMLSchema#integer"
                 },
-                "cRate": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#cRate",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "cRateLifeCycleTest": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#cRateLifeCycleTest",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "nominalVoltage": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#nominalVoltage",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "minimumVoltage": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#minimumVoltage",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "maximumVoltage": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#maximumVoltage",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "capacityThresholdForExhaustion": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#capacityThresholdForExhaustion",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "lifetimeReferenceTest": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#lifetimeReferenceTest",
-                    "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-                },
-                "temperatureRangeIdleState": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#temperatureRangeIdleState",
-                    "@type": "@id"
-                },
-                "capacityFade": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#capacityFade",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "powerFade": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#powerFade",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "energyRoundTripEfficiencyFade": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#energyRoundTripEfficiencyFade",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "internalResistanceIncrease": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#internalResistanceIncrease",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
+                "ratioPowerToEnergy": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/ratioPowerToEnergy",
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
                 }
             }
         },
-        "BatteryCondition": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#BatteryCondition",
+        "RoundTripEfficiencyPublic": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/RoundTripEfficiencyPublic",
             "@context": {
                 "@protected": true,
-                "stateOfCharge": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#stateOfCharge",
+                "initialRoundTripEfficiency": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/initialRoundTripEfficiency",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                },
+                "roundTripEfficiencyAt50pct": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/roundTripEfficiencyAt50pct",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            }
+        },
+        "InternalResistancePublic": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/InternalResistancePublic",
+            "@context": {
+                "@protected": true,
+                "initialInternalResistance": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/initialInternalResistance",
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            }
+        },
+        "BatteryLifetimePublic": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryLifetimePublic",
+            "@context": {
+                "@protected": true,
+                "expectedLifetimeCycles": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/expectedLifetimeCycles",
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                },
+                "cycleLifeReferenceTest": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/cycleLifeReferenceTest",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                "cRateCycleLifeTest": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/cRateCycleLifeTest",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                },
+                "capacityThresholdExhaustion": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/capacityThresholdExhaustion",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            }
+        },
+        "TemperatureConditionsPublic": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/TemperatureConditionsPublic",
+            "@context": {
+                "@protected": true,
+                "tempRangeIdleLower": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/tempRangeIdleLower",
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                },
+                "tempRangeIdleUpper": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/tempRangeIdleUpper",
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            }
+        },
+        "BatteryPerformancePublic": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryPerformancePublic",
+            "@context": {
+                "@protected": true,
+                "capacityEnergyVoltage": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/capacityEnergyVoltage",
                     "@type": "@id"
+                },
+                "powerCapability": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/powerCapability",
+                    "@type": "@id"
+                },
+                "roundTripEfficiency": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/roundTripEfficiency",
+                    "@type": "@id"
+                },
+                "internalResistance": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/internalResistance",
+                    "@type": "@id"
+                },
+                "batteryLifetime": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryLifetime",
+                    "@type": "@id"
+                },
+                "temperatureConditions": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/temperatureConditions",
+                    "@type": "@id"
+                }
+            }
+        },
+        "CapacityEnergyVoltageRestricted": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/CapacityEnergyVoltageRestricted",
+            "@context": {
+                "@protected": true,
+                "capacityFade": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/capacityFade",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
                 },
                 "remainingCapacity": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#remainingCapacity",
-                    "@type": "@id"
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/remainingCapacity",
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
                 },
-                "remainingEnergy": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#remainingEnergy",
-                    "@type": "@id"
+                "remainingUsableBattEnergy": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/remainingUsableBattEnergy",
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
                 },
                 "stateOfCertifiedEnergy": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#stateOfCertifiedEnergy",
-                    "@type": "@id"
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/stateOfCertifiedEnergy",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                },
+                "stateOfCharge": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/stateOfCharge",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            }
+        },
+        "PowerCapabilityRestricted": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/PowerCapabilityRestricted",
+            "@context": {
+                "@protected": true,
+                "powerFade": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/powerFade",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
                 },
                 "remainingPowerCapability": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#remainingPowerCapability",
-                    "@type": "@id"
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/remainingPowerCapability",
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            }
+        },
+        "RoundTripEfficiencyRestricted": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/RoundTripEfficiencyRestricted",
+            "@context": {
+                "@protected": true,
+                "roundTripEfficiencyFade": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/roundTripEfficiencyFade",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
                 },
-                "roundTripEfficiencyat50PerCentCycleLife": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#roundTripEfficiencyat50PerCentCycleLife",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
+                "initialSelfDischargeRate": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/initialSelfDischargeRate",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
                 },
-                "remainingRoundTripEnergyEfficiency": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#remainingRoundTripEnergyEfficiency",
-                    "@type": "@id"
+                "remainingRoundTripEfficiency": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/remainingRoundTripEfficiency",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
                 },
-                "currentSelfDischargingRate": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#currentSelfDischargingRate",
-                    "@type": "@id"
+                "currentSelfDischargeRate": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/currentSelfDischargeRate",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
                 },
-                "evolutionOfSelfDischarge": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#evolutionOfSelfDischarge",
-                    "@type": "@id"
-                },
-                "energyThroughput": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#energyThroughput",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "capacityThroughput": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#capacityThroughput",
-                    "@type": "@id"
+                "evolutionSelfDischargeRates": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/evolutionSelfDischargeRates",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            }
+        },
+        "InternalResistanceRestricted": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/InternalResistanceRestricted",
+            "@context": {
+                "@protected": true,
+                "internalResistanceIncrease": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/internalResistanceIncrease",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            }
+        },
+        "BatteryLifetimeRestricted": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryLifetimeRestricted",
+            "@context": {
+                "@protected": true,
+                "expectedLifetimeYears": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/expectedLifetimeYears",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
                 },
                 "numberOfFullCycles": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#numberOfFullCycles",
-                    "@type": "@id"
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/numberOfFullCycles",
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
                 },
-                "negativeEvents": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#negativeEvents",
-                    "@type": "@id"
+                "energyThroughput": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/energyThroughput",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
                 },
+                "capacityThroughput": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/capacityThroughput",
+                    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            }
+        },
+        "TemperatureConditionsRestricted": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/TemperatureConditionsRestricted",
+            "@context": {
+                "@protected": true,
                 "temperatureInformation": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#temperatureInformation",
-                    "@type": "@id"
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/temperatureInformation",
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
                 },
-                "lastUpdate": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#lastUpdate",
-                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-                }
-            }
-        },
-        "PowerCapabilityAt": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#PowerCapabilityAt",
-            "@context": {
-                "@protected": true,
-                "atSoC": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#atSoC",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
+                "timeInExtremeTempsAbove": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/timeInExtremeTempsAbove",
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
                 },
-                "powerCapabilityAt": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#powerCapabilityAt",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                }
-            }
-        },
-        "InternalResistance": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#InternalResistance",
-            "@context": {
-                "@protected": true,
-                "ohmicResistance": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#ohmicResistance",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
+                "timeInExtremeTempsBelow": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/timeInExtremeTempsBelow",
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
                 },
-                "batteryComponent": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#batteryComponent",
-                    "@type": "https://dpp.vocabulary.spherity.com/dbp/v0.2#BatteryComponentDatatype"
-                }
-            }
-        },
-        "TemperatureRangeType": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#TemperatureRangeType",
-            "@context": {
-                "@protected": true,
-                "minimum": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#minimum",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
+                "timeChargingExtremeTempsAbove": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/timeChargingExtremeTempsAbove",
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
                 },
-                "maximum": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#maximum",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "temperatureConstraintType": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#temperatureConstraintType",
-                    "@type": "https://dpp.vocabulary.spherity.com/dbp/v0.2#TemperatureConstraintDatatype"
-                }
-            }
-        },
-        "StateOfCharge": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#StateOfCharge",
-            "@context": {
-                "@protected": true,
-                "stateOfChargeValue": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#stateOfChargeValue",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                }
-            }
-        },
-        "RemainingCapacity": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#RemainingCapacity",
-            "@context": {
-                "@protected": true,
-                "remainingCapacityValue": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#remainingCapacityValue",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                }
-            }
-        },
-        "RemainingEnergy": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#RemainingEnergy",
-            "@context": {
-                "@protected": true,
-                "remainingEnergyValue": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#remainingEnergyValue",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                }
-            }
-        },
-        "StateOfCertifiedEnergy": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#StateOfCertifiedEnergy",
-            "@context": {
-                "@protected": true,
-                "stateOfCertifiedEnergyValue": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#stateOfCertifiedEnergyValue",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                }
-            }
-        },
-        "RemainingPowerCapability": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#RemainingPowerCapability",
-            "@context": {
-                "@protected": true,
-                "remainingPowerCapabilityValue": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#remainingPowerCapabilityValue",
-                    "@type": "@id"
-                }
-            }
-        },
-        "RemainingPowerCapabilityDynamicAt": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#RemainingPowerCapabilityDynamicAt",
-            "@context": {
-                "@protected": true,
-                "rPCLastUpdated": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#rPCLastUpdated",
-                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-                }
-            }
-        },
-        "RemainingRoundTripEnergyEfficiency": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#RemainingRoundTripEnergyEfficiency",
-            "@context": {
-                "@protected": true,
-                "remainingRoundTripEnergyEfficiencyValue": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#remainingRoundTripEnergyEfficiencyValue",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                }
-            }
-        },
-        "CurrentSelfDischargingRate": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#CurrentSelfDischargingRate",
-            "@context": {
-                "@protected": true,
-                "currentSelfDischargingRateValue": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#currentSelfDischargingRateValue",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                }
-            }
-        },
-        "EvolutionOfSelfDischarge": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#EvolutionOfSelfDischarge",
-            "@context": {
-                "@protected": true,
-                "evolutionOfSelfDischargeValue": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#evolutionOfSelfDischargeValue",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                }
-            }
-        },
-        "NumberOfFullCycles": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#NumberOfFullCycles",
-            "@context": {
-                "@protected": true,
-                "numberOfFullCyclesValue": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#numberOfFullCyclesValue",
+                "timeChargingExtremeTempsBelow": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/timeChargingExtremeTempsBelow",
                     "@type": "http://www.w3.org/2001/XMLSchema#integer"
                 }
             }
         },
-        "CapacityThroughput": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#CapacityThroughput",
+        "NegativeEvents": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/NegativeEvents",
             "@context": {
                 "@protected": true,
-                "capacityThroughputValue": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#capacityThroughputValue",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                }
-            }
-        },
-        "NegativeEvent": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#NegativeEvent",
-            "@context": {
-                "@protected": true,
-                "numberOfDeepDischargeEvents": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#numberOfDeepDischargeEvents",
+                "deepDischargeEvents": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/deepDischargeEvents",
                     "@type": "http://www.w3.org/2001/XMLSchema#integer"
                 },
-                "numberOfOverchargeEvents": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#numberOfOverchargeEvents",
+                "overchargeEvents": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/overchargeEvents",
                     "@type": "http://www.w3.org/2001/XMLSchema#integer"
                 },
                 "informationOnAccidents": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#informationOnAccidents",
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/informationOnAccidents",
                     "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
                 }
             }
         },
-        "TemperatureConditions": {
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#TemperatureConditions",
-            "@context": {
-                "@protected": true,
-                "timeExtremeHighTemp": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#timeExtremeHighTemp",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "timeExtremeLowTemp": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#timeExtremeLowTemp",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "timeExtremeHighTempCharging": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#timeExtremeHighTempCharging",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "timeExtremeLowTempCharging": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#timeExtremeLowTempCharging",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                },
-                "temperatureValue": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2#temperatureValue",
-                    "@type": "http://www.w3.org/2001/XMLSchema#double"
-                }
-            }
-        },
-        "BatteryCategoryDatatype": "https://dpp.vocabulary.spherity.com/dbp/v0.2#BatteryCategoryDatatype",
-        "BatteryComponentDatatype": "https://dpp.vocabulary.spherity.com/dbp/v0.2#BatteryComponentDatatype",
-        "BatteryComponentTypeDatatype": "https://dpp.vocabulary.spherity.com/dbp/v0.2#BatteryComponentTypeDatatype",
-        "BatteryPassportIdentifierDatatype": "https://dpp.vocabulary.spherity.com/dbp/v0.2#BatteryPassportIdentifierDatatype",
-        "BatteryStatusDatatype": "https://dpp.vocabulary.spherity.com/dbp/v0.2#BatteryStatusDatatype",
-        "CASNumberDatatype": "https://dpp.vocabulary.spherity.com/dbp/v0.2#CASNumberDatatype",
-        "CarbonFootprintPerformanceClassDatatype": "https://dpp.vocabulary.spherity.com/dbp/v0.2#CarbonFootprintPerformanceClassDatatype",
-        "DPPStatusDatatype": "https://dpp.vocabulary.spherity.com/dbp/v0.2#DPPStatusDatatype",
-        "DocumentTypeDatatype": "https://dpp.vocabulary.spherity.com/dbp/v0.2#DocumentTypeDatatype",
-        "EmailAddressDatatype": "https://dpp.vocabulary.spherity.com/dbp/v0.2#EmailAddressDatatype",
-        "HazardousSubstanceClassDatatype": "https://dpp.vocabulary.spherity.com/dbp/v0.2#HazardousSubstanceClassDatatype",
-        "LabelingSubjectDatatype": "https://dpp.vocabulary.spherity.com/dbp/v0.2#LabelingSubjectDatatype",
-        "LifecycleStageDatatype": "https://dpp.vocabulary.spherity.com/dbp/v0.2#LifecycleStageDatatype",
-        "PercentageDatatype": "https://dpp.vocabulary.spherity.com/dbp/v0.2#PercentageDatatype",
-        "RecycledMaterialDatatype": "https://dpp.vocabulary.spherity.com/dbp/v0.2#RecycledMaterialDatatype",
-        "TemperatureConstraintDatatype": "https://dpp.vocabulary.spherity.com/dbp/v0.2#TemperatureConstraintDatatype"
+        "BatteryPerformanceRestricted": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryPerformanceRestricted",
+        "PerformanceClass": "https://dpp.vocabulary.spherity.com/dbp/v0.2/PerformanceClass"
     }
 }
