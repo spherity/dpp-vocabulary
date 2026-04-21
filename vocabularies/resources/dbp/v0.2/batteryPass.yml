@@ -610,13 +610,6 @@ property:
     comment: |
       URI linking to the EU declaration of conformity document for this battery.
 
-  - id: hasLabel
-    label: Has Label
-    domain: dbp:BatteryCompliancePublic
-    range: dbp:Label
-    comment: |
-      A regulatory label or symbol associated with the battery compliance information.
-
   # --- BatteryComplianceRestricted ---
   - id: testReportResults
     label: Test Report Results
@@ -700,12 +693,6 @@ property:
     comment: |
       Collection of hazardous substances present in the battery above regulatory thresholds.
 
-  - id: contains
-    label: Contains
-    domain: dbp:BatteryMaterialsPublic
-    range: dbp:HazardousSubstance
-    comment: |
-      Relationship indicating that the battery materials contain a hazardous substance.
 
   # --- BatteryMaterialLocation ---
   - id: componentId

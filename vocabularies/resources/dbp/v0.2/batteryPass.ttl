@@ -426,15 +426,6 @@ dbp:euDeclarationConformity a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:hasLabel a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:BatteryCompliancePublic ;
-    rdfs:range dbp:Label ;
-    rdfs:label "Has Label" ;
-    rdfs:comment """<div>A regulatory label or symbol associated with the battery compliance information.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
-    vs:term_status "stable" ;
-.
-
 dbp:testReportResults a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryComplianceRestricted ;
     rdfs:range xsd:anyURI ;
@@ -531,15 +522,6 @@ dbp:hazardousSubstances a rdf:Property, owl:ObjectProperty ;
     rdfs:range dbp:HazardousSubstance ;
     rdfs:label "Hazardous Substances" ;
     rdfs:comment """<div>Collection of hazardous substances present in the battery above regulatory thresholds.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
-    vs:term_status "stable" ;
-.
-
-dbp:contains a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:BatteryMaterialsPublic ;
-    rdfs:range dbp:HazardousSubstance ;
-    rdfs:label "Contains" ;
-    rdfs:comment """<div>Relationship indicating that the battery materials contain a hazardous substance.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
     vs:term_status "stable" ;
 .
@@ -1751,7 +1733,6 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:componentId,
         dbp:componentName,
         dbp:contact,
-        dbp:contains,
         dbp:contributionDistribution,
         dbp:contributionEndOfLife,
         dbp:contributionProduction,
@@ -1779,7 +1760,6 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:extinguishingAgent,
         dbp:facilityId,
         dbp:general,
-        dbp:hasLabel,
         dbp:hazardousSubstances,
         dbp:identifier,
         dbp:identifiers,

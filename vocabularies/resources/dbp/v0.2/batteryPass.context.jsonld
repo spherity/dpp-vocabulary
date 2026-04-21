@@ -248,10 +248,6 @@
                 "euDeclarationConformity": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/euDeclarationConformity",
                     "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-                },
-                "hasLabel": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/hasLabel",
-                    "@type": "@id"
                 }
             }
         },
@@ -325,10 +321,6 @@
                 },
                 "hazardousSubstances": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/hazardousSubstances",
-                    "@type": "@id"
-                },
-                "contains": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/contains",
                     "@type": "@id"
                 }
             }

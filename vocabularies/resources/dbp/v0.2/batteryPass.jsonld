@@ -752,21 +752,6 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:hasLabel",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
-        "rdfs:domain": "dbp:BatteryCompliancePublic",
-        "rdfs:range": "dbp:Label",
-        "rdfs:label": "Has Label",
-        "rdfs:comment": {
-            "@value": "<div>A regulatory label or symbol associated with the battery compliance information.</div>",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
-        },
-        "vs:term_status": "stable",
-        "mentioned": [{
-            "@id": "vocab",
-            "@type": "jsonld:Context"
-        }]
-    }, {
         "@id": "dbp:testReportResults",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryComplianceRestricted",
@@ -924,21 +909,6 @@
         "rdfs:label": "Hazardous Substances",
         "rdfs:comment": {
             "@value": "<div>Collection of hazardous substances present in the battery above regulatory thresholds.</div>",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
-        },
-        "vs:term_status": "stable",
-        "mentioned": [{
-            "@id": "vocab",
-            "@type": "jsonld:Context"
-        }]
-    }, {
-        "@id": "dbp:contains",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
-        "rdfs:domain": "dbp:BatteryMaterialsPublic",
-        "rdfs:range": "dbp:HazardousSubstance",
-        "rdfs:label": "Contains",
-        "rdfs:comment": {
-            "@value": "<div>Relationship indicating that the battery materials contain a hazardous substance.</div>",
             "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
         },
         "vs:term_status": "stable",

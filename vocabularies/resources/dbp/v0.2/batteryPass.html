@@ -254,7 +254,6 @@
                         <li><a href="#componentId"><code>componentId<code></code></code></a></li>
                         <li><a href="#componentName"><code>componentName<code></code></code></a></li>
                         <li><a href="#contact"><code>contact<code></code></code></a></li>
-                        <li><a href="#contains"><code>contains<code></code></code></a></li>
                         <li><a href="#contributionDistribution"><code>contributionDistribution<code></code></code></a></li>
                         <li><a href="#contributionEndOfLife"><code>contributionEndOfLife<code></code></code></a></li>
                         <li><a href="#contributionProduction"><code>contributionProduction<code></code></code></a></li>
@@ -282,7 +281,6 @@
                         <li><a href="#extinguishingAgent"><code>extinguishingAgent<code></code></code></a></li>
                         <li><a href="#facilityId"><code>facilityId<code></code></code></a></li>
                         <li><a href="#general"><code>general<code></code></code></a></li>
-                        <li><a href="#hasLabel"><code>hasLabel<code></code></code></a></li>
                         <li><a href="#hazardousSubstances"><code>hazardousSubstances<code></code></code></a></li>
                         <li><a href="#identifier"><code>identifier<code></code></code></a></li>
                         <li><a href="#identifiers"><code>identifiers<code></code></code></a></li>
@@ -1060,21 +1058,6 @@
                     <dd><a href="vocab"><code>vocab</code></a></dd>
                 </dl>
             </section>
-            <section id="hasLabel">
-                <h4><code>hasLabel</code></h4>
-                <p><em>Has Label</em></p>
-                <div>A regulatory label or symbol associated with the battery compliance information.</div>
-                <dl class="terms">
-                    <dt>Domain:</dt>
-                    <dd><a href="#BatteryCompliancePublic"><code>BatteryCompliancePublic</code></a></dd>
-                    <dt>Range:</dt>
-                    <dd><a href="#Label"><code>Label</code></a></dd>
-                </dl>
-                <dl class="terms">
-                    <dt>Relevant <code>@context</code>:</dt>
-                    <dd><a href="vocab"><code>vocab</code></a></dd>
-                </dl>
-            </section>
             <section id="testReportResults">
                 <h4><code>testReportResults</code></h4>
                 <p><em>Test Report Results</em></p>
@@ -1230,21 +1213,6 @@
                 <h4><code>hazardousSubstances</code></h4>
                 <p><em>Hazardous Substances</em></p>
                 <div>Collection of hazardous substances present in the battery above regulatory thresholds.</div>
-                <dl class="terms">
-                    <dt>Domain:</dt>
-                    <dd><a href="#BatteryMaterialsPublic"><code>BatteryMaterialsPublic</code></a></dd>
-                    <dt>Range:</dt>
-                    <dd><a href="#HazardousSubstance"><code>HazardousSubstance</code></a></dd>
-                </dl>
-                <dl class="terms">
-                    <dt>Relevant <code>@context</code>:</dt>
-                    <dd><a href="vocab"><code>vocab</code></a></dd>
-                </dl>
-            </section>
-            <section id="contains">
-                <h4><code>contains</code></h4>
-                <p><em>Contains</em></p>
-                <div>Relationship indicating that the battery materials contain a hazardous substance.</div>
                 <dl class="terms">
                     <dt>Domain:</dt>
                     <dd><a href="#BatteryMaterialsPublic"><code>BatteryMaterialsPublic</code></a></dd>
@@ -2767,7 +2735,7 @@
                 <div>A regulatory label or symbol with its symbol code, human-readable meaning, and subject matter.</div>
                 <dl class="terms">
                     <dt>Range of:</dt>
-                    <dd><a href="#separateCollectionSymbol"><code>separateCollectionSymbol</code></a>, <a href="#cadmium"><code>cadmium</code></a>, <a href="#lead"><code>lead</code></a>, <a href="#carbonFootprint"><code>carbonFootprint</code></a>, <a href="#hasLabel"><code>hasLabel</code></a></dd>
+                    <dd><a href="#separateCollectionSymbol"><code>separateCollectionSymbol</code></a>, <a href="#cadmium"><code>cadmium</code></a>, <a href="#lead"><code>lead</code></a>, <a href="#carbonFootprint"><code>carbonFootprint</code></a></dd>
                     <dt>Domain of:</dt>
                     <dd><a href="#symbol"><code>symbol</code></a>, <a href="#meaning"><code>meaning</code></a>, <a href="#subject"><code>subject</code></a></dd>
                 </dl>
@@ -2783,7 +2751,7 @@
                     and EU declaration of conformity.</div>
                 <dl class="terms">
                     <dt>Domain of:</dt>
-                    <dd><a href="#separateCollectionSymbol"><code>separateCollectionSymbol</code></a>, <a href="#cadmium"><code>cadmium</code></a>, <a href="#lead"><code>lead</code></a>, <a href="#carbonFootprint"><code>carbonFootprint</code></a>, <a href="#extinguishingAgent"><code>extinguishingAgent</code></a>, <a href="#euDeclarationConformity"><code>euDeclarationConformity</code></a>, <a href="#hasLabel"><code>hasLabel</code></a></dd>
+                    <dd><a href="#separateCollectionSymbol"><code>separateCollectionSymbol</code></a>, <a href="#cadmium"><code>cadmium</code></a>, <a href="#lead"><code>lead</code></a>, <a href="#carbonFootprint"><code>carbonFootprint</code></a>, <a href="#extinguishingAgent"><code>extinguishingAgent</code></a>, <a href="#euDeclarationConformity"><code>euDeclarationConformity</code></a></dd>
                 </dl>
                 <dl class="terms">
                     <dt>Relevant <code>@context</code>:</dt>
@@ -2825,7 +2793,7 @@
                     human health and the environment.</div>
                 <dl class="terms">
                     <dt>Range of:</dt>
-                    <dd><a href="#hazardousSubstances"><code>hazardousSubstances</code></a>, <a href="#contains"><code>contains</code></a></dd>
+                    <dd><a href="#hazardousSubstances"><code>hazardousSubstances</code></a></dd>
                     <dt>Domain of:</dt>
                     <dd><a href="#substance"><code>substance</code></a>, <a href="#impactOnEnvironment"><code>impactOnEnvironment</code></a></dd>
                 </dl>
@@ -2856,7 +2824,7 @@
                     critical raw materials, and hazardous substances.</div>
                 <dl class="terms">
                     <dt>Domain of:</dt>
-                    <dd><a href="#batteryChemistry"><code>batteryChemistry</code></a>, <a href="#criticalRawMaterials"><code>criticalRawMaterials</code></a>, <a href="#hazardousSubstances"><code>hazardousSubstances</code></a>, <a href="#contains"><code>contains</code></a></dd>
+                    <dd><a href="#batteryChemistry"><code>batteryChemistry</code></a>, <a href="#criticalRawMaterials"><code>criticalRawMaterials</code></a>, <a href="#hazardousSubstances"><code>hazardousSubstances</code></a></dd>
                 </dl>
                 <dl class="terms">
                     <dt>Relevant <code>@context</code>:</dt>
