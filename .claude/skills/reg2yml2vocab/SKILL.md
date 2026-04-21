@@ -262,6 +262,8 @@ property:
 1. **Ordering**: classes first (alphabetically within module), then datatypes, then properties. Within properties, sort by domain class then by property name.
 2. **Comments**: Use block scalar (`|`) for multi-line text. Trim trailing whitespace. Ensure descriptions end with a period.
 3. **IDs**: Class/datatype IDs must be PascalCase. Property IDs must be camelCase. Strip spaces, hyphens, special characters.
+   - **Uniqueness rule**: Every property `id` must be globally unique across the entire YAML. If the same semantic name (e.g. `identifiers`) would appear in two different domain classes, qualify it with the domain class name using an underscore separator: `<domainClassCamel>_<propertyName>`. Example: `identifiers` for both `GeneralInformationPublic` and `GeneralInformationRestricted` becomes `generalInformationPublic_identifiers` and `generalInformationRestricted_identifiers`. Apply this rule during initial generation — do not wait for a post-hoc fix.
+   - **Duplicate check (always run after writing the YAML)**: Run `python3 -c "import yaml; from collections import Counter; d=yaml.safe_load(open('<yaml-path>').read()); ids=[p['id'] for p in d.get('property',[])]; dupes={k for k,v in Counter(ids).items() if v>1}; print('Duplicate IDs:',dupes) if dupes else print('No duplicates ✓')"` and fix any reported duplicates before proceeding.
 4. **External prefixes**: Only include `xsd` if XSD types are used in ranges. Include `schema` if `schema.org` IRIs appear in `seeAlso`. Include `dc` — it is always needed for ontology metadata.
 5. **seeAlso**: Only include the block if there is at least one reference. Each `see_also` entry must have both `label` and `url`.
 6. **domain/range**: Always use prefixed notation (`bp:ClassName`, `xsd:string`). Never use bare local names or full URIs.
@@ -272,50 +274,42 @@ After writing the file, display the first 50 lines as a preview and confirm: "YA
 
 If a `.mmd` file exists (either provided in Phase 0 or generated in Phase 3b), run this check to ensure every connection defined in the data model has a corresponding property in the YAML. **Fix all gaps before proceeding to Phase 4.**
 
+**The relationship lines section is the single source of truth for object properties.**
+Entity-block attributes that are typed with a vocab class are only visual annotations — they do NOT independently define properties. A property exists in the YAML if and only if a relationship line `Domain ||--xx Range : "propName"` exists in the `.mmd`.
+
 ```python
 import re
 
 mmd  = open("<mmd-path>").read()
 yml  = open("<yaml-path>").read()
 
-primitives = {"string","integer","decimal","boolean","date","timestamp","uri","id"}
+# Source of truth: ONLY relationship lines define object properties
+rels = re.findall(r'(\w+)\s+\|\|--(?:\|\||o\{)\s+(\w+)\s*:\s*"(\w+)"', mmd)
 
-# 1. Object-typed entity block attributes  →  property must exist with that domain
-attrs = []
-current = None
-for line in mmd.splitlines():
-    m = re.match(r'\s+(\w+)\s*\{', line)
-    if m:
-        current = m.group(1)
-    if current:
-        m = re.match(r'\s+(\w+)\[?\]?\s+(\w+)\s*$', line)
-        if m and m.group(1) not in primitives and m.group(1) != current:
-            attrs.append((current, m.group(1).rstrip("[]"), m.group(2)))
+# YAML object properties (range is a vocab class, i.e. dbp:)
+yml_props = re.findall(r'- id: (\w+)\n\s+label:[^\n]*\n\s+domain: \w+:(\w+)\n\s+range: (\S+)', yml)
+props     = {(p, d) for p, d, _ in yml_props}
 
-# 2. Relationship labels  →  property must exist with that domain
-rels = re.findall(r'(\w+)\s+\|\|--[|o]\{?\s+(\w+)\s+:\s+"(\w+)"', mmd)
+# Missing: in .mmd relationship lines but not in YAML
+missing = [(dom, rng, prop) for dom, rng, prop in rels if (prop, dom) not in props]
 
-# 3. YAML properties
-props = {(p, d) for p, d, _ in
-         re.findall(r'- id: (\w+)\n\s+label:.*?\n\s+domain: \w+:(\w+)\n', yml)}
-
-missing = []
-for cls, typ, attr in attrs:
-    if (attr, cls) not in props:
-        missing.append(f"  entity-block attr  {cls}.{attr} : {typ}")
-for dom, rng, prop in rels:
-    if (prop, dom) not in props:
-        missing.append(f"  relationship       {dom} --[{prop}]--> {rng}")
+# Extra: in YAML as object property but no longer in .mmd relationship lines
+mmd_connections = {(prop, dom) for dom, rng, prop in rels}
+extra = [(p, d, r) for p, d, r in yml_props if r.startswith("dbp:") and (p, d) not in mmd_connections]
 
 if missing:
-    print("MISSING PROPERTIES — add these to the YAML before continuing:")
-    for m in missing:
-        print(m)
-else:
-    print(f"Coverage OK — {len(attrs)} entity attrs + {len(rels)} relationship labels all covered")
+    print("MISSING — add to YAML:")
+    for dom, rng, prop in missing:
+        print(f"  {dom} --[{prop}]--> {rng}")
+if extra:
+    print("EXTRA — remove from YAML (relationship was deleted from .mmd):")
+    for p, d, r in extra:
+        print(f"  {d}.{p} -> {r}")
+if not missing and not extra:
+    print(f"Coverage OK — {len(rels)} relationship lines all covered, no stale properties")
 ```
 
-Do **not** proceed to Phase 4 if any gaps are reported. Add the missing properties to the YAML and re-run the check until it prints `Coverage OK`.
+Do **not** proceed to Phase 4 if any gaps or extras are reported. Fix the YAML and re-run until `Coverage OK`.
 
 ---
 

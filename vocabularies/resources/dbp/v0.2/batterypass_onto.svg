@@ -1,1 +1,1254 @@
-<svg id="my-svg" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="flowchart" style="max-width: 6259.52px; background-color: white;" viewBox="0 0 6259.51953125 1873" role="graphics-document document" aria-roledescription="flowchart-v2"><style>#my-svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#my-svg .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#my-svg .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#my-svg .error-icon{fill:#552222;}#my-svg .error-text{fill:#552222;stroke:#552222;}#my-svg .edge-thickness-normal{stroke-width:1px;}#my-svg .edge-thickness-thick{stroke-width:3.5px;}#my-svg .edge-pattern-solid{stroke-dasharray:0;}#my-svg .edge-thickness-invisible{stroke-width:0;fill:none;}#my-svg .edge-pattern-dashed{stroke-dasharray:3;}#my-svg .edge-pattern-dotted{stroke-dasharray:2;}#my-svg .marker{fill:#333333;stroke:#333333;}#my-svg .marker.cross{stroke:#333333;}#my-svg svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#my-svg p{margin:0;}#my-svg .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#my-svg .cluster-label text{fill:#333;}#my-svg .cluster-label span{color:#333;}#my-svg .cluster-label span p{background-color:transparent;}#my-svg .label text,#my-svg span{fill:#333;color:#333;}#my-svg .node rect,#my-svg .node circle,#my-svg .node ellipse,#my-svg .node polygon,#my-svg .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#my-svg .rough-node .label text,#my-svg .node .label text,#my-svg .image-shape .label,#my-svg .icon-shape .label{text-anchor:middle;}#my-svg .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#my-svg .rough-node .label,#my-svg .node .label,#my-svg .image-shape .label,#my-svg .icon-shape .label{text-align:center;}#my-svg .node.clickable{cursor:pointer;}#my-svg .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#my-svg .arrowheadPath{fill:#333333;}#my-svg .edgePath .path{stroke:#333333;stroke-width:1px;}#my-svg .flowchart-link{stroke:#333333;fill:none;}#my-svg .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#my-svg .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#my-svg .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#my-svg .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#my-svg .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#my-svg .cluster text{fill:#333;}#my-svg .cluster span{color:#333;}#my-svg div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#my-svg .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#my-svg rect.text{fill:none;stroke-width:0;}#my-svg .icon-shape,#my-svg .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#my-svg .icon-shape p,#my-svg .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#my-svg .icon-shape .label rect,#my-svg .image-shape .label rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#my-svg .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#my-svg .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#my-svg .node .neo-node{stroke:#9370DB;}#my-svg [data-look="neo"].node rect,#my-svg [data-look="neo"].cluster rect,#my-svg [data-look="neo"].node polygon{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node path{stroke:#9370DB;stroke-width:1px;}#my-svg [data-look="neo"].node .outer-path{filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node .neo-line path{stroke:#9370DB;filter:none;}#my-svg [data-look="neo"].node circle{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node circle .state-start{fill:#000000;}#my-svg [data-look="neo"].icon-shape .icon{fill:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].icon-shape .icon-neo path{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g><marker id="my-svg_flowchart-v2-pointEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointEnd-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="11.5" refY="7" markerUnits="userSpaceOnUse" markerWidth="10.5" markerHeight="14" orient="auto"><path d="M 0 0 L 11.5 7 L 0 14 z" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointStart-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="1" refY="7" markerUnits="userSpaceOnUse" markerWidth="11.5" markerHeight="14" orient="auto"><polygon points="0,7 11.5,14 11.5,0" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="11" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-1" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleEnd-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refY="5" refX="12.25" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleStart-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-2" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="12" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="-1" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossEnd-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="17.7" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5;"/></marker><marker id="my-svg_flowchart-v2-crossStart-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="-3.5" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5; stroke-dasharray: 1, 0;"/></marker><g class="root"><g class="clusters"><g class="cluster" id="my-svg-sg_BatteryCarbonFootprint" data-look="classic"><rect style="" x="1743.21875" y="8" width="300.125" height="1526"/><g class="cluster-label" transform="translate(1808.21875, 8)"><foreignObject width="170.125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5;"><span class="nodeLabel"><p>BatteryCarbonFootprint</p></span></div></foreignObject></g></g><g class="cluster" id="my-svg-sg_GeneralInformation" data-look="classic"><rect style="" x="4632.859375" y="8" width="1618.66015625" height="1704"/><g class="cluster-label" transform="translate(5372.087890625, 8)"><foreignObject width="140.203125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5;"><span class="nodeLabel"><p>GeneralInformation</p></span></div></foreignObject></g></g><g class="cluster" id="my-svg-sg_Shared" data-look="classic"><rect style="" x="791.16796875" y="1608" width="479.99609375" height="257"/><g class="cluster-label" transform="translate(1006.814453125, 1608)"><foreignObject width="48.703125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5;"><span class="nodeLabel"><p>Shared</p></span></div></foreignObject></g></g></g><g class="edgePaths"><path d="M1893.281,798L1893.281,920.667C1893.281,1043.333,1893.281,1288.667,1893.281,1417.5C1893.281,1546.333,1893.281,1558.667,1893.281,1571C1893.281,1583.333,1893.281,1595.667,1893.281,1605.333C1893.281,1615,1893.281,1622,1893.281,1625.5L1893.281,1629" id="my-svg-L_BatteryCarbonFootprint_PerformanceClass_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_BatteryCarbonFootprint_PerformanceClass_0" data-points="W3sieCI6MTg5My4yODEyNSwieSI6Nzk4fSx7IngiOjE4OTMuMjgxMjUsInkiOjE1MzR9LHsieCI6MTg5My4yODEyNSwieSI6MTU3MX0seyJ4IjoxODkzLjI4MTI1LCJ5IjoxNjA4fSx7IngiOjE4OTMuMjgxMjUsInkiOjE2MzN9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M1024.919,1687L1034.086,1691.167C1043.253,1695.333,1061.588,1703.667,1070.755,1714C1079.922,1724.333,1079.922,1736.667,1086.857,1748.575C1093.792,1760.483,1107.662,1771.966,1114.597,1777.708L1121.533,1783.449" id="my-svg-L_CompanyInformation_PostalAddress_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_CompanyInformation_PostalAddress_0" data-points="W3sieCI6MTAyNC45MTg4NzAxOTIzMDc2LCJ5IjoxNjg3fSx7IngiOjEwNzkuOTIxODc1LCJ5IjoxNzEyfSx7IngiOjEwNzkuOTIxODc1LCJ5IjoxNzQ5fSx7IngiOjExMjQuNjEzNjQ3NDYwOTM3NSwieSI6MTc4Nn1d" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M946.251,1687L943.278,1691.167C940.306,1695.333,934.36,1703.667,931.387,1714C928.414,1724.333,928.414,1736.667,928.414,1748.333C928.414,1760,928.414,1771,928.414,1776.5L928.414,1782" id="my-svg-L_CompanyInformation_ContactInformation_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_CompanyInformation_ContactInformation_0" data-points="W3sieCI6OTQ2LjI1MTM1MjE2MzQ2MTUsInkiOjE2ODd9LHsieCI6OTI4LjQxNDA2MjUsInkiOjE3MTJ9LHsieCI6OTI4LjQxNDA2MjUsInkiOjE3NDl9LHsieCI6OTI4LjQxNDA2MjUsInkiOjE3ODZ9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M4799.159,798L4839.404,920.667C4879.649,1043.333,4960.139,1288.667,5000.384,1417.5C5040.629,1546.333,5040.629,1558.667,5040.629,1571C5040.629,1583.333,5040.629,1595.667,5040.629,1605.333C5040.629,1615,5040.629,1622,5040.629,1625.5L5040.629,1629" id="my-svg-L_GeneralInformationPublic_BatteryAttributes_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_GeneralInformationPublic_BatteryAttributes_0" data-points="W3sieCI6NDc5OS4xNTkwNTA0MTc3NTgsInkiOjc5OH0seyJ4Ijo1MDQwLjYyODkwNjI1LCJ5IjoxNTM0fSx7IngiOjUwNDAuNjI4OTA2MjUsInkiOjE1NzF9LHsieCI6NTA0MC42Mjg5MDYyNSwieSI6MTYwOH0seyJ4Ijo1MDQwLjYyODkwNjI1LCJ5IjoxNjMzfV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M5961.872,798L5915.574,920.667C5869.275,1043.333,5776.679,1288.667,5730.38,1417.5C5684.082,1546.333,5684.082,1558.667,5684.082,1571C5684.082,1583.333,5684.082,1595.667,5684.082,1605.333C5684.082,1615,5684.082,1622,5684.082,1625.5L5684.082,1629" id="my-svg-L_GeneralInformationRestricted_OperatorIdentifiers_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_GeneralInformationRestricted_OperatorIdentifiers_0" data-points="W3sieCI6NTk2MS44NzE4NDEyMTA2ODIsInkiOjc5OH0seyJ4Ijo1Njg0LjA4MjAzMTI1LCJ5IjoxNTM0fSx7IngiOjU2ODQuMDgyMDMxMjUsInkiOjE1NzF9LHsieCI6NTY4NC4wODIwMzEyNSwieSI6MTYwOH0seyJ4Ijo1Njg0LjA4MjAzMTI1LCJ5IjoxNjMzfV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M5971.048,798L5966.438,920.667C5961.827,1043.333,5952.607,1288.667,5947.997,1417.5C5943.387,1546.333,5943.387,1558.667,5943.387,1571C5943.387,1583.333,5943.387,1595.667,5943.387,1605.333C5943.387,1615,5943.387,1622,5943.387,1625.5L5943.387,1629" id="my-svg-L_GeneralInformationRestricted_RestrictedProductData_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_GeneralInformationRestricted_RestrictedProductData_0" data-points="W3sieCI6NTk3MS4wNDc3NjA2ODk3MTIsInkiOjc5OH0seyJ4Ijo1OTQzLjM4NjcxODc1LCJ5IjoxNTM0fSx7IngiOjU5NDMuMzg2NzE4NzUsInkiOjE1NzF9LHsieCI6NTk0My4zODY3MTg3NSwieSI6MTYwOH0seyJ4Ijo1OTQzLjM4NjcxODc1LCJ5IjoxNjMzfV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M5255.405,798L5166.025,920.667C5076.645,1043.333,4897.885,1288.667,4808.505,1417.5C4719.125,1546.333,4719.125,1558.667,4719.125,1571C4719.125,1583.333,4719.125,1595.667,4111.626,1610.249C3504.127,1624.832,2289.13,1641.664,1681.631,1650.079L1074.132,1658.495" id="my-svg-L_ProductData_CompanyInformation_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_ProductData_CompanyInformation_0" data-points="W3sieCI6NTI1NS40MDQ4MTY1MTM3NjEsInkiOjc5OH0seyJ4Ijo0NzE5LjEyNSwieSI6MTUzNH0seyJ4Ijo0NzE5LjEyNSwieSI6MTU3MX0seyJ4Ijo0NzE5LjEyNSwieSI6MTYwOH0seyJ4IjoxMDcwLjEzMjgxMjUsInkiOjE2NTguNTUwNzAzMjgxNDI1fV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M5263.398,798L5210.332,920.667C5157.267,1043.333,5051.135,1288.667,4998.07,1417.5C4945.004,1546.333,4945.004,1558.667,4945.004,1571C4945.004,1583.333,4945.004,1595.667,4299.859,1610.263C3654.713,1624.86,2364.423,1641.72,1719.278,1650.151L1074.132,1658.581" id="my-svg-L_ProductData_CompanyInformation_2" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_ProductData_CompanyInformation_2" data-points="W3sieCI6NTI2My4zOTc5MTAxODE4NDgsInkiOjc5OH0seyJ4Ijo0OTQ1LjAwMzkwNjI1LCJ5IjoxNTM0fSx7IngiOjQ5NDUuMDAzOTA2MjUsInkiOjE1NzF9LHsieCI6NDk0NS4wMDM5MDYyNSwieSI6MTYwOH0seyJ4IjoxMDcwLjEzMjgxMjUsInkiOjE2NTguNjMyOTY2NTEwODg3NH1d" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M5306.398,798L5448.689,920.667C5590.98,1043.333,5875.562,1288.667,6017.853,1417.5C6160.145,1546.333,6160.145,1558.667,6160.145,1571C6160.145,1583.333,6160.145,1595.667,6160.145,1610.5C6160.145,1625.333,6160.145,1642.667,6160.145,1660C6160.145,1677.333,6160.145,1694.667,5334.153,1709.5C4508.161,1724.333,2856.178,1736.667,2026.056,1748.463C1195.933,1760.258,1187.671,1771.517,1183.539,1777.146L1179.408,1782.775" id="my-svg-L_ProductData_PostalAddress_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_ProductData_PostalAddress_0" data-points="W3sieCI6NTMwNi4zOTc2NDM5NjI5NzUsInkiOjc5OH0seyJ4Ijo2MTYwLjE0NDUzMTI1LCJ5IjoxNTM0fSx7IngiOjYxNjAuMTQ0NTMxMjUsInkiOjE1NzF9LHsieCI6NjE2MC4xNDQ1MzEyNSwieSI6MTYwOH0seyJ4Ijo2MTYwLjE0NDUzMTI1LCJ5IjoxNjYwfSx7IngiOjYxNjAuMTQ0NTMxMjUsInkiOjE3MTJ9LHsieCI6MTIwNC4xOTUzMTI1LCJ5IjoxNzQ5fSx7IngiOjExNzcuMDQxNTAzOTA2MjUsInkiOjE3ODZ9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(1893.28125, 1571)"><g class="label" data-id="L_BatteryCarbonFootprint_PerformanceClass_0" transform="translate(-63.65625, -12)"><foreignObject width="127.3125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>performanceClass</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(1079.921875, 1749)"><g class="label" data-id="L_CompanyInformation_PostalAddress_0" transform="translate(-27.0703125, -12)"><foreignObject width="54.140625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>address</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(928.4140625, 1749)"><g class="label" data-id="L_CompanyInformation_ContactInformation_0" transform="translate(-27.1328125, -12)"><foreignObject width="54.265625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>contact</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(5040.62890625, 1571)"><g class="label" data-id="L_GeneralInformationPublic_BatteryAttributes_0" transform="translate(-26.7890625, -12)"><foreignObject width="53.578125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>general</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(5684.08203125, 1571)"><g class="label" data-id="L_GeneralInformationRestricted_OperatorIdentifiers_0" transform="translate(-36.875, -12)"><foreignObject width="73.75" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>identifiers</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(5943.38671875, 1571)"><g class="label" data-id="L_GeneralInformationRestricted_RestrictedProductData_0" transform="translate(-44.3046875, -12)"><foreignObject width="88.609375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>productData</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(4719.125, 1571)"><g class="label" data-id="L_ProductData_CompanyInformation_0" transform="translate(-66.265625, -12)"><foreignObject width="132.53125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>economicOperator</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(4945.00390625, 1571)"><g class="label" data-id="L_ProductData_CompanyInformation_2" transform="translate(-48.8359375, -12)"><foreignObject width="97.671875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>manufacturer</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(6160.14453125, 1660)"><g class="label" data-id="L_ProductData_PostalAddress_0" transform="translate(-71.375, -12)"><foreignObject width="142.75" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>manufacturingPlace</p></span></div></foreignObject></g></g></g><g class="nodes"><g class="root" transform="translate(0, 25)"><g class="clusters"><g class="cluster" id="my-svg-sg_BatteryPerformance" data-look="classic"><rect style="" x="8" y="8" width="892.125" height="1476"/><g class="cluster-label" transform="translate(382.109375, 8)"><foreignObject width="143.90625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5;"><span class="nodeLabel"><p>BatteryPerformance</p></span></div></foreignObject></g></g></g><g class="edgePaths"><path d="M206.292,459L245.687,411.5C285.082,364,363.873,269,427.12,221.5C490.367,174,538.07,174,561.922,174L585.773,174" id="my-svg-L_BatteryPerformanceRestricted_BatteryLifetimeRestricted_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_BatteryPerformanceRestricted_BatteryLifetimeRestricted_0" data-points="W3sieCI6MjA2LjI5MTYxNjU4NjUzODQ1LCJ5Ijo0NTl9LHsieCI6NDQyLjY2NDA2MjUsInkiOjE3NH0seyJ4Ijo1ODkuNzczNDM3NSwieSI6MTc0fV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M217.488,459L255.018,428.833C292.547,398.667,367.605,338.333,424.805,308.167C482.005,278,521.346,278,541.017,278L560.688,278" id="my-svg-L_BatteryPerformanceRestricted_CapacityEnergyVoltageRestricted_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_BatteryPerformanceRestricted_CapacityEnergyVoltageRestricted_0" data-points="W3sieCI6MjE3LjQ4ODIwNjEyOTgwNzY4LCJ5Ijo0NTl9LHsieCI6NDQyLjY2NDA2MjUsInkiOjI3OH0seyJ4Ijo1NjQuNjg3NSwieSI6Mjc4fV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M251.078,459L283.009,446.167C314.94,433.333,378.802,407.667,433.069,394.833C487.336,382,532.008,382,554.344,382L576.68,382" id="my-svg-L_BatteryPerformanceRestricted_InternalResistanceRestricted_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_BatteryPerformanceRestricted_InternalResistanceRestricted_0" data-points="W3sieCI6MjUxLjA3Nzk3NDc1OTYxNTQsInkiOjQ1OX0seyJ4Ijo0NDIuNjY0MDYyNSwieSI6MzgyfSx7IngiOjU4MC42Nzk2ODc1LCJ5IjozODJ9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M322.297,486L342.358,486C362.419,486,402.542,486,452.835,486C503.128,486,563.591,486,593.823,486L624.055,486" id="my-svg-L_BatteryPerformanceRestricted_NegativeEvents_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_BatteryPerformanceRestricted_NegativeEvents_0" data-points="W3sieCI6MzIyLjI5Njg3NSwieSI6NDg2fSx7IngiOjQ0Mi42NjQwNjI1LCJ5Ijo0ODZ9LHsieCI6NjI4LjA1NDY4NzUsInkiOjQ4Nn1d" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M251.078,513L283.009,525.833C314.94,538.667,378.802,564.333,434.361,577.167C489.919,590,537.174,590,560.802,590L584.43,590" id="my-svg-L_BatteryPerformanceRestricted_PowerCapabilityRestricted_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_BatteryPerformanceRestricted_PowerCapabilityRestricted_0" data-points="W3sieCI6MjUxLjA3Nzk3NDc1OTYxNTQsInkiOjUxM30seyJ4Ijo0NDIuNjY0MDYyNSwieSI6NTkwfSx7IngiOjU4OC40Mjk2ODc1LCJ5Ijo1OTB9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M217.488,513L255.018,543.167C292.547,573.333,367.605,633.667,426.62,663.833C485.635,694,528.607,694,550.092,694L571.578,694" id="my-svg-L_BatteryPerformanceRestricted_RoundTripEfficiencyRestricted_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_BatteryPerformanceRestricted_RoundTripEfficiencyRestricted_0" data-points="W3sieCI6MjE3LjQ4ODIwNjEyOTgwNzY4LCJ5Ijo1MTN9LHsieCI6NDQyLjY2NDA2MjUsInkiOjY5NH0seyJ4Ijo1NzUuNTc4MTI1LCJ5Ijo2OTR9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M206.292,513L245.687,560.5C285.082,608,363.873,703,422.663,750.5C481.453,798,520.242,798,539.637,798L559.031,798" id="my-svg-L_BatteryPerformanceRestricted_TemperatureConditionsRestricted_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_BatteryPerformanceRestricted_TemperatureConditionsRestricted_0" data-points="W3sieCI6MjA2LjI5MTYxNjU4NjUzODQ1LCJ5Ijo1MTN9LHsieCI6NDQyLjY2NDA2MjUsInkiOjc5OH0seyJ4Ijo1NjMuMDMxMjUsInkiOjc5OH1d" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(442.6640625, 174)"><g class="label" data-id="L_BatteryPerformanceRestricted_BatteryLifetimeRestricted_0" transform="translate(-56.53125, -12)"><foreignObject width="113.0625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>batteryLifetime</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(442.6640625, 278)"><g class="label" data-id="L_BatteryPerformanceRestricted_CapacityEnergyVoltageRestricted_0" transform="translate(-80.8671875, -12)"><foreignObject width="161.734375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>capacityEnergyVoltage</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(442.6640625, 382)"><g class="label" data-id="L_BatteryPerformanceRestricted_InternalResistanceRestricted_0" transform="translate(-65.7578125, -12)"><foreignObject width="131.515625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>internalResistance</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(442.6640625, 486)"><g class="label" data-id="L_BatteryPerformanceRestricted_NegativeEvents_0" transform="translate(-54.0390625, -12)"><foreignObject width="108.078125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>negativeEvents</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(442.6640625, 590)"><g class="label" data-id="L_BatteryPerformanceRestricted_PowerCapabilityRestricted_0" transform="translate(-58.3203125, -12)"><foreignObject width="116.640625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>powerCapability</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(442.6640625, 694)"><g class="label" data-id="L_BatteryPerformanceRestricted_RoundTripEfficiencyRestricted_0" transform="translate(-69.578125, -12)"><foreignObject width="139.15625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>roundTripEfficiency</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(442.6640625, 798)"><g class="label" data-id="L_BatteryPerformanceRestricted_TemperatureConditionsRestricted_0" transform="translate(-82.8671875, -12)"><foreignObject width="165.734375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>temperatureConditions</p></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="my-svg-flowchart-BatteryLifetimePublic-26" data-look="classic" transform="translate(712.828125, 70)"><rect class="basic label-container" style="" x="-108.4921875" y="-27" width="216.984375" height="54"/><g class="label" style="" transform="translate(-78.4921875, -12)"><rect/><foreignObject width="156.984375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>BatteryLifetimePublic</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-BatteryPerformanceRestricted-29" data-look="classic" transform="translate(183.8984375, 486)"><rect class="basic label-container" style="" x="-138.3984375" y="-27" width="276.796875" height="54"/><g class="label" style="" transform="translate(-108.3984375, -12)"><rect/><foreignObject width="216.796875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel"><p>BatteryPerformanceRestricted</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-BatteryLifetimeRestricted-27" data-look="classic" transform="translate(712.828125, 174)"><rect class="basic label-container" style="" x="-123.0546875" y="-27" width="246.109375" height="54"/><g class="label" style="" transform="translate(-93.0546875, -12)"><rect/><foreignObject width="186.109375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>BatteryLifetimeRestricted</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-CapacityEnergyVoltageRestricted-31" data-look="classic" transform="translate(712.828125, 278)"><rect class="basic label-container" style="" x="-148.140625" y="-27" width="296.28125" height="54"/><g class="label" style="" transform="translate(-118.140625, -12)"><rect/><foreignObject width="236.28125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel"><p>CapacityEnergyVoltageRestricted</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-InternalResistanceRestricted-33" data-look="classic" transform="translate(712.828125, 382)"><rect class="basic label-container" style="" x="-132.1484375" y="-27" width="264.296875" height="54"/><g class="label" style="" transform="translate(-102.1484375, -12)"><rect/><foreignObject width="204.296875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel"><p>InternalResistanceRestricted</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-NegativeEvents-34" data-look="classic" transform="translate(712.828125, 486)"><rect class="basic label-container" style="" x="-84.7734375" y="-27" width="169.546875" height="54"/><g class="label" style="" transform="translate(-54.7734375, -12)"><rect/><foreignObject width="109.546875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>NegativeEvents</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-PowerCapabilityRestricted-36" data-look="classic" transform="translate(712.828125, 590)"><rect class="basic label-container" style="" x="-124.3984375" y="-27" width="248.796875" height="54"/><g class="label" style="" transform="translate(-94.3984375, -12)"><rect/><foreignObject width="188.796875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>PowerCapabilityRestricted</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-RoundTripEfficiencyRestricted-38" data-look="classic" transform="translate(712.828125, 694)"><rect class="basic label-container" style="" x="-137.25" y="-27" width="274.5" height="54"/><g class="label" style="" transform="translate(-107.25, -12)"><rect/><foreignObject width="214.5" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel"><p>RoundTripEfficiencyRestricted</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-TemperatureConditionsRestricted-40" data-look="classic" transform="translate(712.828125, 798)"><rect class="basic label-container" style="" x="-149.796875" y="-27" width="299.59375" height="54"/><g class="label" style="" transform="translate(-119.796875, -12)"><rect/><foreignObject width="239.59375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel"><p>TemperatureConditionsRestricted</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-BatteryPerformancePublic-28" data-look="classic" transform="translate(712.828125, 902)"><rect class="basic label-container" style="" x="-123.84375" y="-27" width="247.6875" height="54"/><g class="label" style="" transform="translate(-93.84375, -12)"><rect/><foreignObject width="187.6875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>BatteryPerformancePublic</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-CapacityEnergyVoltagePublic-30" data-look="classic" transform="translate(712.828125, 1006)"><rect class="basic label-container" style="" x="-133.578125" y="-27" width="267.15625" height="54"/><g class="label" style="" transform="translate(-103.578125, -12)"><rect/><foreignObject width="207.15625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel"><p>CapacityEnergyVoltagePublic</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-InternalResistancePublic-32" data-look="classic" transform="translate(712.828125, 1110)"><rect class="basic label-container" style="" x="-117.59375" y="-27" width="235.1875" height="54"/><g class="label" style="" transform="translate(-87.59375, -12)"><rect/><foreignObject width="175.1875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>InternalResistancePublic</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-PowerCapabilityPublic-35" data-look="classic" transform="translate(712.828125, 1214)"><rect class="basic label-container" style="" x="-109.84375" y="-27" width="219.6875" height="54"/><g class="label" style="" transform="translate(-79.84375, -12)"><rect/><foreignObject width="159.6875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>PowerCapabilityPublic</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-RoundTripEfficiencyPublic-37" data-look="classic" transform="translate(712.828125, 1318)"><rect class="basic label-container" style="" x="-122.6953125" y="-27" width="245.390625" height="54"/><g class="label" style="" transform="translate(-92.6953125, -12)"><rect/><foreignObject width="185.390625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>RoundTripEfficiencyPublic</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-TemperatureConditionsPublic-39" data-look="classic" transform="translate(712.828125, 1422)"><rect class="basic label-container" style="" x="-135.234375" y="-27" width="270.46875" height="54"/><g class="label" style="" transform="translate(-105.234375, -12)"><rect/><foreignObject width="210.46875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel"><p>TemperatureConditionsPublic</p></span></div></foreignObject></g></g></g></g><g class="root" transform="translate(942.125, 597)"><g class="clusters"><g class="cluster" id="my-svg-sg_BatteryCircularity" data-look="classic"><rect style="" x="8" y="8" width="758.09375" height="332"/><g class="cluster-label" transform="translate(322.9765625, 8)"><foreignObject width="128.140625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5;"><span class="nodeLabel"><p>BatteryCircularity</p></span></div></foreignObject></g></g></g><g class="edgePaths"><path d="M271.802,199L288.829,194.833C305.857,190.667,339.913,182.333,377.05,178.167C414.188,174,454.406,174,474.516,174L494.625,174" id="my-svg-L_BatteryCircularityPublic_EndUserInformation_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_BatteryCircularityPublic_EndUserInformation_0" data-points="W3sieCI6MjcxLjgwMTUzMjQ1MTkyMzEsInkiOjE5OX0seyJ4IjozNzMuOTY4NzUsInkiOjE3NH0seyJ4Ijo0OTguNjI1LCJ5IjoxNzR9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M271.802,253L288.829,257.167C305.857,261.333,339.913,269.667,372.365,273.833C404.818,278,435.667,278,451.091,278L466.516,278" id="my-svg-L_BatteryCircularityPublic_RecycledRenewableContent_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_BatteryCircularityPublic_RecycledRenewableContent_0" data-points="W3sieCI6MjcxLjgwMTUzMjQ1MTkyMzEsInkiOjI1M30seyJ4IjozNzMuOTY4NzUsInkiOjI3OH0seyJ4Ijo0NzAuNTE1NjI1LCJ5IjoyNzh9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(373.96875, 174)"><g class="label" data-id="L_BatteryCircularityPublic_EndUserInformation_0" transform="translate(-42.9375, -12)"><foreignObject width="85.875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>endUserInfo</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(373.96875, 278)"><g class="label" data-id="L_BatteryCircularityPublic_RecycledRenewableContent_0" transform="translate(-59.046875, -12)"><foreignObject width="118.09375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>recycledContent</p></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="my-svg-flowchart-BatteryCircularityPrivate-22" data-look="classic" transform="translate(599.5546875, 70)"><rect class="basic label-container" style="" x="-119.203125" y="-27" width="238.40625" height="54"/><g class="label" style="" transform="translate(-89.203125, -12)"><rect/><foreignObject width="178.40625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>BatteryCircularityPrivate</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-BatteryCircularityPublic-23" data-look="classic" transform="translate(161.4609375, 226)"><rect class="basic label-container" style="" x="-115.9609375" y="-27" width="231.921875" height="54"/><g class="label" style="" transform="translate(-85.9609375, -12)"><rect/><foreignObject width="171.921875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>BatteryCircularityPublic</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-EndUserInformation-24" data-look="classic" transform="translate(599.5546875, 174)"><rect class="basic label-container" style="" x="-100.9296875" y="-27" width="201.859375" height="54"/><g class="label" style="" transform="translate(-70.9296875, -12)"><rect/><foreignObject width="141.859375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>EndUserInformation</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-RecycledRenewableContent-25" data-look="classic" transform="translate(599.5546875, 278)"><rect class="basic label-container" style="" x="-129.0390625" y="-27" width="258.078125" height="54"/><g class="label" style="" transform="translate(-99.0390625, -12)"><rect/><foreignObject width="198.078125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>RecycledRenewableContent</p></span></div></foreignObject></g></g></g></g><g class="root" transform="translate(2070.34375, 597)"><g class="clusters"><g class="cluster" id="my-svg-sg_BatteryMaterials" data-look="classic"><rect style="" x="8" y="8" width="1259.234375" height="332"/><g class="cluster-label" transform="translate(578.515625, 8)"><foreignObject width="118.203125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5;"><span class="nodeLabel"><p>BatteryMaterials</p></span></div></foreignObject></g></g></g><g class="edgePaths"><path d="M723.805,70L748.646,70C773.487,70,823.169,70,867.996,70C912.823,70,952.794,70,972.78,70L992.766,70" id="my-svg-L_BatteryMaterial_BatteryMaterialLocation_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_BatteryMaterial_BatteryMaterialLocation_0" data-points="W3sieCI6NzIzLjgwNDY4NzUsInkiOjcwfSx7IngiOjg3Mi44NTE1NjI1LCJ5Ijo3MH0seyJ4Ijo5OTYuNzY1NjI1LCJ5Ijo3MH1d" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M748.938,201.43L769.59,196.859C790.242,192.287,831.547,183.143,876.199,178.572C920.852,174,968.852,174,992.852,174L1016.852,174" id="my-svg-L_BatteryMaterialsPublic_BatteryChemistry_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_BatteryMaterialsPublic_BatteryChemistry_0" data-points="W3sieCI6NzQ4LjkzNzUsInkiOjIwMS40MzAyMjQ4MjM3MzI4OX0seyJ4Ijo4NzIuODUxNTYyNSwieSI6MTc0fSx7IngiOjEwMjAuODUxNTYyNSwieSI6MTc0fV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M748.938,250.57L769.59,255.141C790.242,259.713,831.547,268.857,874.451,273.428C917.354,278,961.857,278,984.108,278L1006.359,278" id="my-svg-L_BatteryMaterialsPublic_HazardousSubstance_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_BatteryMaterialsPublic_HazardousSubstance_0" data-points="W3sieCI6NzQ4LjkzNzUsInkiOjI1MC41Njk3NzUxNzYyNjcxMX0seyJ4Ijo4NzIuODUxNTYyNSwieSI6Mjc4fSx7IngiOjEwMTAuMzU5Mzc1LCJ5IjoyNzh9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M296.594,70L315.79,70C334.987,70,373.38,70,415.296,70C457.211,70,502.648,70,525.367,70L548.086,70" id="my-svg-L_BatteryMaterialsRestricted_BatteryMaterial_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_BatteryMaterialsRestricted_BatteryMaterial_0" data-points="W3sieCI6Mjk2LjU5Mzc1LCJ5Ijo3MH0seyJ4Ijo0MTEuNzczNDM3NSwieSI6NzB9LHsieCI6NTUyLjA4NTkzNzUsInkiOjcwfV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(872.8515625, 70)"><g class="label" data-id="L_BatteryMaterial_BatteryMaterialLocation_0" transform="translate(-86.4140625, -12)"><foreignObject width="172.828125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>batteryMaterialLocation</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(872.8515625, 174)"><g class="label" data-id="L_BatteryMaterialsPublic_BatteryChemistry_0" transform="translate(-62.328125, -12)"><foreignObject width="124.65625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>batteryChemistry</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(872.8515625, 278)"><g class="label" data-id="L_BatteryMaterialsPublic_HazardousSubstance_0" transform="translate(-75.265625, -12)"><foreignObject width="150.53125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>hazardousSubstances</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(411.7734375, 70)"><g class="label" data-id="L_BatteryMaterialsRestricted_BatteryMaterial_0" transform="translate(-77.6796875, -12)"><foreignObject width="155.359375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>materialsComposition</p></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="my-svg-flowchart-BatteryChemistry-15" data-look="classic" transform="translate(1113.25, 174)"><rect class="basic label-container" style="" x="-92.3984375" y="-27" width="184.796875" height="54"/><g class="label" style="" transform="translate(-62.3984375, -12)"><rect/><foreignObject width="124.796875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>BatteryChemistry</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-BatteryMaterial-16" data-look="classic" transform="translate(637.9453125, 70)"><rect class="basic label-container" style="" x="-85.859375" y="-27" width="171.71875" height="54"/><g class="label" style="" transform="translate(-55.859375, -12)"><rect/><foreignObject width="111.71875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>BatteryMaterial</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-BatteryMaterialLocation-17" data-look="classic" transform="translate(1113.25, 70)"><rect class="basic label-container" style="" x="-116.484375" y="-27" width="232.96875" height="54"/><g class="label" style="" transform="translate(-86.484375, -12)"><rect/><foreignObject width="172.96875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>BatteryMaterialLocation</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-BatteryMaterialsPublic-18" data-look="classic" transform="translate(637.9453125, 226)"><rect class="basic label-container" style="" x="-110.9921875" y="-27" width="221.984375" height="54"/><g class="label" style="" transform="translate(-80.9921875, -12)"><rect/><foreignObject width="161.984375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>BatteryMaterialsPublic</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-HazardousSubstance-20" data-look="classic" transform="translate(1113.25, 278)"><rect class="basic label-container" style="" x="-102.890625" y="-27" width="205.78125" height="54"/><g class="label" style="" transform="translate(-72.890625, -12)"><rect/><foreignObject width="145.78125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>HazardousSubstance</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-BatteryMaterialsRestricted-19" data-look="classic" transform="translate(171.046875, 70)"><rect class="basic label-container" style="" x="-125.546875" y="-27" width="251.09375" height="54"/><g class="label" style="" transform="translate(-95.546875, -12)"><rect/><foreignObject width="191.09375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>BatteryMaterialsRestricted</p></span></div></foreignObject></g></g></g></g><g class="root" transform="translate(3379.578125, 701)"><g class="clusters"><g class="cluster" id="my-svg-sg_SupplyChainDueDiligence" data-look="classic"><rect style="" x="8" y="8" width="314.984375" height="124"/><g class="cluster-label" transform="translate(75.5, 8)"><foreignObject width="179.984375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5;"><span class="nodeLabel"><p>SupplyChainDueDiligence</p></span></div></foreignObject></g></g></g><g class="edgePaths"/><g class="edgeLabels"/><g class="nodes"><g class="node default" id="my-svg-flowchart-SupplyChainDueDiligence-14" data-look="classic" transform="translate(165.4921875, 70)"><rect class="basic label-container" style="" x="-119.9921875" y="-27" width="239.984375" height="54"/><g class="label" style="" transform="translate(-89.9921875, -12)"><rect/><foreignObject width="179.984375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>SupplyChainDueDiligence</p></span></div></foreignObject></g></g></g></g><g class="root" transform="translate(3744.5625, 634.5)"><g class="clusters"><g class="cluster" id="my-svg-sg_BatteryCompliance" data-look="classic"><rect style="" x="8" y="8" width="845.296875" height="257"/><g class="cluster-label" transform="translate(362.4375, 8)"><foreignObject width="136.421875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5;"><span class="nodeLabel"><p>BatteryCompliance</p></span></div></foreignObject></g></g></g><g class="edgePaths"><path d="M268.076,94L292.745,87.5C317.415,81,366.754,68,426.701,67.356C486.648,66.713,557.203,78.425,592.48,84.282L627.757,90.138" id="my-svg-L_BatteryCompliancePublic_Label_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_BatteryCompliancePublic_Label_0" data-points="W3sieCI6MjY4LjA3NTYzOTIwNDU0NTQ0LCJ5Ijo5NH0seyJ4Ijo0MTYuMDkzNzUsInkiOjU1fSx7IngiOjYzMS43MDMxMjUsInkiOjkwLjc5Mjk2MTE1MDczOTg0fV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M285.703,110.452L307.435,108.543C329.167,106.635,372.63,102.817,429.63,100.909C486.63,99,557.167,99,592.435,99L627.703,99" id="my-svg-L_BatteryCompliancePublic_Label_2" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_BatteryCompliancePublic_Label_2" data-points="W3sieCI6Mjg1LjcwMzEyNSwieSI6MTEwLjQ1MTgyOTIxMTI0MDM3fSx7IngiOjQxNi4wOTM3NSwieSI6OTl9LHsieCI6NjMxLjcwMzEyNSwieSI6OTl9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M285.703,132.028L307.435,134.023C329.167,136.018,372.63,140.009,429.64,136.015C486.649,132.021,557.204,120.042,592.482,114.053L627.76,108.063" id="my-svg-L_BatteryCompliancePublic_Label_3" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_BatteryCompliancePublic_Label_3" data-points="W3sieCI6Mjg1LjcwMzEyNSwieSI6MTMyLjAyNzYzMzA5NzMzOTYyfSx7IngiOjQxNi4wOTM3NSwieSI6MTQ0fSx7IngiOjYzMS43MDMxMjUsInkiOjEwNy4zOTM1NjI0NTk0NzA2Mn1d" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M266.546,148L291.471,154.667C316.395,161.333,366.245,174.667,426.472,169.479C486.7,164.291,557.305,140.583,592.608,128.728L627.911,116.874" id="my-svg-L_BatteryCompliancePublic_Label_4" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_BatteryCompliancePublic_Label_4" data-points="W3sieCI6MjY2LjU0NjE3NTM3MzEzNDM2LCJ5IjoxNDh9LHsieCI6NDE2LjA5Mzc1LCJ5IjoxODh9LHsieCI6NjMxLjcwMzEyNSwieSI6MTE1LjYwMDYwMTMwODczMDc3fV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(416.09375, 55)"><g class="label" data-id="L_BatteryCompliancePublic_Label_0" transform="translate(-32.5546875, -12)"><foreignObject width="65.109375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>cadmium</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(416.09375, 99)"><g class="label" data-id="L_BatteryCompliancePublic_Label_2" transform="translate(-57.7421875, -12)"><foreignObject width="115.484375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>carbonFootprint</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(459.35256, 136.65546)"><g class="label" data-id="L_BatteryCompliancePublic_Label_3" transform="translate(-15.3828125, -12)"><foreignObject width="30.765625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>lead</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(450.5224, 176.43922)"><g class="label" data-id="L_BatteryCompliancePublic_Label_4" transform="translate(-92.890625, -12)"><foreignObject width="185.78125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>separateCollectionSymbol</p></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="my-svg-flowchart-BatteryCompliancePublic-11" data-look="classic" transform="translate(165.6015625, 121)"><rect class="basic label-container" style="" x="-120.1015625" y="-27" width="240.203125" height="54"/><g class="label" style="" transform="translate(-90.1015625, -12)"><rect/><foreignObject width="180.203125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>BatteryCompliancePublic</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-Label-13" data-look="classic" transform="translate(681.140625, 99)"><rect class="basic label-container" style="" x="-49.4375" y="-27" width="98.875" height="54"/><g class="label" style="" transform="translate(-19.4375, -12)"><rect/><foreignObject width="38.875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>Label</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-BatteryComplianceRestricted-12" data-look="classic" transform="translate(681.140625, 203)"><rect class="basic label-container" style="" x="-134.65625" y="-27" width="269.3125" height="54"/><g class="label" style="" transform="translate(-104.65625, -12)"><rect/><foreignObject width="209.3125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel"><p>BatteryComplianceRestricted</p></span></div></foreignObject></g></g></g></g><g class="node default" id="my-svg-flowchart-CompanyInformation-0" data-look="classic" transform="translate(965.515625, 1660)"><rect class="basic label-container" style="" x="-104.6171875" y="-27" width="209.234375" height="54"/><g class="label" style="" transform="translate(-74.6171875, -12)"><rect/><foreignObject width="149.234375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>CompanyInformation</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-ContactInformation-1" data-look="classic" transform="translate(928.4140625, 1813)"><rect class="basic label-container" style="" x="-99.875" y="-27" width="199.75" height="54"/><g class="label" style="" transform="translate(-69.875, -12)"><rect/><foreignObject width="139.75" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>ContactInformation</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-PostalAddress-2" data-look="classic" transform="translate(1157.2265625, 1813)"><rect class="basic label-container" style="" x="-78.9375" y="-27" width="157.875" height="54"/><g class="label" style="" transform="translate(-48.9375, -12)"><rect/><foreignObject width="97.875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>PostalAddress</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-BatteryAttributes-3" data-look="classic" transform="translate(5040.62890625, 1660)"><rect class="basic label-container" style="" x="-92.546875" y="-27" width="185.09375" height="54"/><g class="label" style="" transform="translate(-62.546875, -12)"><rect/><foreignObject width="125.09375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>BatteryAttributes</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-BatteryIdentifiers-4" data-look="classic" transform="translate(5276.48828125, 1660)"><rect class="basic label-container" style="" x="-93.3125" y="-27" width="186.625" height="54"/><g class="label" style="" transform="translate(-63.3125, -12)"><rect/><foreignObject width="126.625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>BatteryIdentifiers</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-DPPInfo-5" data-look="classic" transform="translate(5477.48046875, 1660)"><rect class="basic label-container" style="" x="-57.6796875" y="-27" width="115.359375" height="54"/><g class="label" style="" transform="translate(-27.6796875, -12)"><rect/><foreignObject width="55.359375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>DPPInfo</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-GeneralInformationPublic-6" data-look="classic" transform="translate(4790.30078125, 771)"><rect class="basic label-container" style="" x="-121.9921875" y="-27" width="243.984375" height="54"/><g class="label" style="" transform="translate(-91.9921875, -12)"><rect/><foreignObject width="183.984375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>GeneralInformationPublic</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-GeneralInformationRestricted-7" data-look="classic" transform="translate(5972.0625, 771)"><rect class="basic label-container" style="" x="-136.546875" y="-27" width="273.09375" height="54"/><g class="label" style="" transform="translate(-106.546875, -12)"><rect/><foreignObject width="213.09375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel"><p>GeneralInformationRestricted</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-OperatorIdentifiers-8" data-look="classic" transform="translate(5684.08203125, 1660)"><rect class="basic label-container" style="" x="-98.921875" y="-27" width="197.84375" height="54"/><g class="label" style="" transform="translate(-68.921875, -12)"><rect/><foreignObject width="137.84375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>OperatorIdentifiers</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-ProductData-9" data-look="classic" transform="translate(5275.078125, 771)"><rect class="basic label-container" style="" x="-73.9375" y="-27" width="147.875" height="54"/><g class="label" style="" transform="translate(-43.9375, -12)"><rect/><foreignObject width="87.875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>ProductData</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-RestrictedProductData-10" data-look="classic" transform="translate(5943.38671875, 1660)"><rect class="basic label-container" style="" x="-110.3828125" y="-27" width="220.765625" height="54"/><g class="label" style="" transform="translate(-80.3828125, -12)"><rect/><foreignObject width="160.765625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>RestrictedProductData</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-BatteryCarbonFootprint-21" data-look="classic" transform="translate(1893.28125, 771)"><rect class="basic label-container" style="" x="-115.0625" y="-27" width="230.125" height="54"/><g class="label" style="" transform="translate(-85.0625, -12)"><rect/><foreignObject width="170.125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>BatteryCarbonFootprint</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-PerformanceClass-42" data-look="classic" transform="translate(1893.28125, 1660)"><rect class="basic label-container" style="" x="-93.28125" y="-27" width="186.5625" height="54"/><g class="label" style="" transform="translate(-63.28125, -12)"><rect/><foreignObject width="126.5625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>PerformanceClass</p></span></div></foreignObject></g></g></g></g></g><defs><filter id="my-svg-drop-shadow" height="130%" width="130%"><feDropShadow dx="4" dy="4" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"/></filter></defs><defs><filter id="my-svg-drop-shadow-small" height="150%" width="150%"><feDropShadow dx="2" dy="2" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"/></filter></defs></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 12.2.1 (20241206.2353)
+ -->
+<!-- Title: OWL Pages: 1 -->
+<svg width="5233pt" height="778pt"
+ viewBox="0.00 0.00 5233.00 777.75" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 773.75)">
+<title>OWL</title>
+<polygon fill="#fafafa" stroke="none" points="-4,4 -4,-773.75 5229,-773.75 5229,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_Shared</title>
+<polygon fill="#e8f4fd" stroke="#5b9bd5" stroke-width="2" points="271,-8 271,-267 522,-267 522,-8 271,-8"/>
+<text text-anchor="middle" x="396.5" y="-251.6" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="12.00">Shared</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_GeneralInformation</title>
+<polygon fill="#e8f8e8" stroke="#5ba55b" stroke-width="2" points="8,-360.75 8,-735.12 844,-735.12 844,-360.75 8,-360.75"/>
+<text text-anchor="middle" x="426" y="-719.73" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="12.00">GeneralInformation</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_BatteryCompliance</title>
+<polygon fill="#fef9e7" stroke="#d4ac0d" stroke-width="2" points="852,-369.62 852,-717.38 1251,-717.38 1251,-369.62 852,-369.62"/>
+<text text-anchor="middle" x="1051.5" y="-701.98" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="12.00">BatteryCompliance</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_SupplyChainDueDiligence</title>
+<polygon fill="#fdf2f8" stroke="#a569bd" stroke-width="2" points="1259,-617 1259,-726.25 1425,-726.25 1425,-617 1259,-617"/>
+<text text-anchor="middle" x="1342" y="-710.85" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="12.00">SupplyChainDueDiligence</text>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_BatteryMaterials</title>
+<polygon fill="#fdf0e8" stroke="#e67e22" stroke-width="2" points="1433,-175.5 1433,-708.5 1896,-708.5 1896,-175.5 1433,-175.5"/>
+<text text-anchor="middle" x="1664.5" y="-693.1" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="12.00">BatteryMaterials</text>
+</g>
+<g id="clust6" class="cluster">
+<title>cluster_BatteryCarbonFootprint</title>
+<polygon fill="#e8f8f5" stroke="#1abc9c" stroke-width="2" points="1912,-361.38 1912,-761.75 2088,-761.75 2088,-361.38 1912,-361.38"/>
+<text text-anchor="middle" x="2000" y="-746.35" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="12.00">BatteryCarbonFootprint</text>
+</g>
+<g id="clust7" class="cluster">
+<title>cluster_BatteryCircularity</title>
+<polygon fill="#fdfefe" stroke="#85c1e9" stroke-width="2" points="2114,-325.25 2114,-735.12 2439,-735.12 2439,-325.25 2114,-325.25"/>
+<text text-anchor="middle" x="2276.5" y="-719.73" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="12.00">BatteryCircularity</text>
+</g>
+<g id="clust8" class="cluster">
+<title>cluster_BatteryPerformance</title>
+<polygon fill="#fdedec" stroke="#e74c3c" stroke-width="2" points="2466,-351.88 2466,-708 5217,-708 5217,-351.88 2466,-351.88"/>
+<text text-anchor="middle" x="3841.5" y="-692.6" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="12.00">BatteryPerformance</text>
+</g>
+<!-- CompanyInformation -->
+<g id="node1" class="node">
+<title>CompanyInformation</title>
+<polygon fill="#5b9bd5" stroke="none" points="279.5,-219 279.5,-238.25 386.5,-238.25 386.5,-219 279.5,-219"/>
+<polygon fill="none" stroke="black" points="279.5,-219 279.5,-238.25 386.5,-238.25 386.5,-219 279.5,-219"/>
+<text text-anchor="start" x="283.5" y="-225.75" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">CompanyInformation</text>
+<polygon fill="white" stroke="none" points="279.5,-201.25 279.5,-219 326.25,-219 326.25,-201.25 279.5,-201.25"/>
+<polygon fill="none" stroke="black" points="279.5,-201.25 279.5,-219 326.25,-219 326.25,-201.25 279.5,-201.25"/>
+<text text-anchor="start" x="283.5" y="-207.03" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="326.25,-201.25 326.25,-219 386.5,-219 386.5,-201.25 326.25,-201.25"/>
+<polygon fill="none" stroke="black" points="326.25,-201.25 326.25,-219 386.5,-219 386.5,-201.25 326.25,-201.25"/>
+<text text-anchor="start" x="330.25" y="-206.45" font-family="Helvetica,sans-Serif" font-size="9.00">identifier</text>
+<polygon fill="white" stroke="none" points="279.5,-183.5 279.5,-201.25 326.25,-201.25 326.25,-183.5 279.5,-183.5"/>
+<polygon fill="none" stroke="black" points="279.5,-183.5 279.5,-201.25 326.25,-201.25 326.25,-183.5 279.5,-183.5"/>
+<text text-anchor="start" x="283.5" y="-189.28" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="326.25,-183.5 326.25,-201.25 386.5,-201.25 386.5,-183.5 326.25,-183.5"/>
+<polygon fill="none" stroke="black" points="326.25,-183.5 326.25,-201.25 386.5,-201.25 386.5,-183.5 326.25,-183.5"/>
+<text text-anchor="start" x="330.25" y="-188.7" font-family="Helvetica,sans-Serif" font-size="9.00">name</text>
+</g>
+<!-- ContactInformation -->
+<g id="node2" class="node">
+<title>ContactInformation</title>
+<polygon fill="#5b9bd5" stroke="none" points="279,-69.25 279,-88.5 377,-88.5 377,-69.25 279,-69.25"/>
+<polygon fill="none" stroke="black" points="279,-69.25 279,-88.5 377,-88.5 377,-69.25 279,-69.25"/>
+<text text-anchor="start" x="283" y="-76" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">ContactInformation</text>
+<polygon fill="white" stroke="none" points="279,-51.5 279,-69.25 323.12,-69.25 323.12,-51.5 279,-51.5"/>
+<polygon fill="none" stroke="black" points="279,-51.5 279,-69.25 323.12,-69.25 323.12,-51.5 279,-51.5"/>
+<text text-anchor="start" x="283" y="-57.27" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="323.12,-51.5 323.12,-69.25 377,-69.25 377,-51.5 323.12,-51.5"/>
+<polygon fill="none" stroke="black" points="323.12,-51.5 323.12,-69.25 377,-69.25 377,-51.5 323.12,-51.5"/>
+<text text-anchor="start" x="327.12" y="-56.7" font-family="Helvetica,sans-Serif" font-size="9.00">email</text>
+<polygon fill="white" stroke="none" points="279,-33.75 279,-51.5 323.12,-51.5 323.12,-33.75 279,-33.75"/>
+<polygon fill="none" stroke="black" points="279,-33.75 279,-51.5 323.12,-51.5 323.12,-33.75 279,-33.75"/>
+<text text-anchor="start" x="283" y="-39.52" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="323.12,-33.75 323.12,-51.5 377,-51.5 377,-33.75 323.12,-33.75"/>
+<polygon fill="none" stroke="black" points="323.12,-33.75 323.12,-51.5 377,-51.5 377,-33.75 323.12,-33.75"/>
+<text text-anchor="start" x="327.12" y="-38.95" font-family="Helvetica,sans-Serif" font-size="9.00">phone</text>
+<polygon fill="white" stroke="none" points="279,-16 279,-33.75 323.12,-33.75 323.12,-16 279,-16"/>
+<polygon fill="none" stroke="black" points="279,-16 279,-33.75 323.12,-33.75 323.12,-16 279,-16"/>
+<text text-anchor="start" x="283" y="-21.77" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">uri </text>
+<polygon fill="white" stroke="none" points="323.12,-16 323.12,-33.75 377,-33.75 377,-16 323.12,-16"/>
+<polygon fill="none" stroke="black" points="323.12,-16 323.12,-33.75 377,-33.75 377,-16 323.12,-16"/>
+<text text-anchor="start" x="327.12" y="-21.2" font-family="Helvetica,sans-Serif" font-size="9.00">website</text>
+</g>
+<!-- CompanyInformation&#45;&gt;ContactInformation -->
+<g id="edge26" class="edge">
+<title>CompanyInformation&#45;&gt;ContactInformation</title>
+<path fill="none" stroke="#444444" d="M332.16,-183.66C331.41,-160.19 330.3,-125.29 329.41,-97.5"/>
+<polygon fill="#444444" stroke="#444444" points="329.16,-89.59 333.01,-97.47 329.25,-92.37 329.42,-97.59 329.42,-97.59 329.42,-97.59 329.25,-92.37 325.82,-97.7 329.16,-89.59"/>
+<text text-anchor="middle" x="343.4" y="-132.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">contact</text>
+</g>
+<!-- PostalAddress -->
+<g id="node3" class="node">
+<title>PostalAddress</title>
+<polygon fill="#5b9bd5" stroke="none" points="420,-69.25 420,-88.5 514,-88.5 514,-69.25 420,-69.25"/>
+<polygon fill="none" stroke="black" points="420,-69.25 420,-88.5 514,-88.5 514,-69.25 420,-69.25"/>
+<text text-anchor="start" x="432.88" y="-76" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">PostalAddress</text>
+<polygon fill="white" stroke="none" points="420,-51.5 420,-69.25 449.75,-69.25 449.75,-51.5 420,-51.5"/>
+<polygon fill="none" stroke="black" points="420,-51.5 420,-69.25 449.75,-69.25 449.75,-51.5 420,-51.5"/>
+<text text-anchor="start" x="424" y="-57.27" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="449.75,-51.5 449.75,-69.25 514,-69.25 514,-51.5 449.75,-51.5"/>
+<polygon fill="none" stroke="black" points="449.75,-51.5 449.75,-69.25 514,-69.25 514,-51.5 449.75,-51.5"/>
+<text text-anchor="start" x="453.75" y="-56.7" font-family="Helvetica,sans-Serif" font-size="9.00">country</text>
+<polygon fill="white" stroke="none" points="420,-33.75 420,-51.5 449.75,-51.5 449.75,-33.75 420,-33.75"/>
+<polygon fill="none" stroke="black" points="420,-33.75 420,-51.5 449.75,-51.5 449.75,-33.75 420,-33.75"/>
+<text text-anchor="start" x="424" y="-39.52" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="449.75,-33.75 449.75,-51.5 514,-51.5 514,-33.75 449.75,-33.75"/>
+<polygon fill="none" stroke="black" points="449.75,-33.75 449.75,-51.5 514,-51.5 514,-33.75 449.75,-33.75"/>
+<text text-anchor="start" x="453.75" y="-38.95" font-family="Helvetica,sans-Serif" font-size="9.00">postalCode</text>
+<polygon fill="white" stroke="none" points="420,-16 420,-33.75 449.75,-33.75 449.75,-16 420,-16"/>
+<polygon fill="none" stroke="black" points="420,-16 420,-33.75 449.75,-33.75 449.75,-16 420,-16"/>
+<text text-anchor="start" x="424" y="-21.77" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="449.75,-16 449.75,-33.75 514,-33.75 514,-16 449.75,-16"/>
+<polygon fill="none" stroke="black" points="449.75,-16 449.75,-33.75 514,-33.75 514,-16 449.75,-16"/>
+<text text-anchor="start" x="453.75" y="-21.2" font-family="Helvetica,sans-Serif" font-size="9.00">streetAddress</text>
+</g>
+<!-- CompanyInformation&#45;&gt;PostalAddress -->
+<g id="edge25" class="edge">
+<title>CompanyInformation&#45;&gt;PostalAddress</title>
+<path fill="none" stroke="#444444" d="M355.43,-183.66C376.03,-159.58 406.93,-123.46 430.99,-95.34"/>
+<polygon fill="#444444" stroke="#444444" points="436.16,-89.3 433.69,-97.72 434.35,-91.41 430.96,-95.38 430.96,-95.38 430.96,-95.38 434.35,-91.41 428.22,-93.04 436.16,-89.3"/>
+<text text-anchor="middle" x="414.25" y="-132.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">address</text>
+</g>
+<!-- BatteryAttributes -->
+<g id="node4" class="node">
+<title>BatteryAttributes</title>
+<polygon fill="#5ba55b" stroke="none" points="15.75,-430.88 15.75,-450.12 126.25,-450.12 126.25,-430.88 15.75,-430.88"/>
+<polygon fill="none" stroke="black" points="15.75,-430.88 15.75,-450.12 126.25,-450.12 126.25,-430.88 15.75,-430.88"/>
+<text text-anchor="start" x="31.62" y="-437.62" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">BatteryAttributes</text>
+<polygon fill="white" stroke="none" points="15.75,-413.12 15.75,-430.88 53,-430.88 53,-413.12 15.75,-413.12"/>
+<polygon fill="none" stroke="black" points="15.75,-413.12 15.75,-430.88 53,-430.88 53,-413.12 15.75,-413.12"/>
+<text text-anchor="start" x="19.75" y="-418.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="53,-413.12 53,-430.88 126.25,-430.88 126.25,-413.12 53,-413.12"/>
+<polygon fill="none" stroke="black" points="53,-413.12 53,-430.88 126.25,-430.88 126.25,-413.12 53,-413.12"/>
+<text text-anchor="start" x="57" y="-418.32" font-family="Helvetica,sans-Serif" font-size="9.00">batteryCategory</text>
+<polygon fill="white" stroke="none" points="15.75,-395.38 15.75,-413.12 53,-413.12 53,-395.38 15.75,-395.38"/>
+<polygon fill="none" stroke="black" points="15.75,-395.38 15.75,-413.12 53,-413.12 53,-395.38 15.75,-395.38"/>
+<text text-anchor="start" x="19.75" y="-401.15" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="53,-395.38 53,-413.12 126.25,-413.12 126.25,-395.38 53,-395.38"/>
+<polygon fill="none" stroke="black" points="53,-395.38 53,-413.12 126.25,-413.12 126.25,-395.38 53,-395.38"/>
+<text text-anchor="start" x="57" y="-400.57" font-family="Helvetica,sans-Serif" font-size="9.00">batteryMass</text>
+<polygon fill="white" stroke="none" points="15.75,-377.62 15.75,-395.38 53,-395.38 53,-377.62 15.75,-377.62"/>
+<polygon fill="none" stroke="black" points="15.75,-377.62 15.75,-395.38 53,-395.38 53,-377.62 15.75,-377.62"/>
+<text text-anchor="start" x="19.75" y="-383.4" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">date </text>
+<polygon fill="white" stroke="none" points="53,-377.62 53,-395.38 126.25,-395.38 126.25,-377.62 53,-377.62"/>
+<polygon fill="none" stroke="black" points="53,-377.62 53,-395.38 126.25,-395.38 126.25,-377.62 53,-377.62"/>
+<text text-anchor="start" x="57" y="-382.82" font-family="Helvetica,sans-Serif" font-size="9.00">warrantyPeriod</text>
+</g>
+<!-- BatteryIdentifiers -->
+<g id="node5" class="node">
+<title>BatteryIdentifiers</title>
+<polygon fill="#5ba55b" stroke="none" points="169,-439.75 169,-459 299,-459 299,-439.75 169,-439.75"/>
+<polygon fill="none" stroke="black" points="169,-439.75 169,-459 299,-459 299,-439.75 169,-439.75"/>
+<text text-anchor="start" x="194.25" y="-446.5" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">BatteryIdentifiers</text>
+<polygon fill="white" stroke="none" points="169,-422 169,-439.75 198.75,-439.75 198.75,-422 169,-422"/>
+<polygon fill="none" stroke="black" points="169,-422 169,-439.75 198.75,-439.75 198.75,-422 169,-422"/>
+<text text-anchor="start" x="173" y="-427.77" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="198.75,-422 198.75,-439.75 299,-439.75 299,-422 198.75,-422"/>
+<polygon fill="none" stroke="black" points="198.75,-422 198.75,-439.75 299,-439.75 299,-422 198.75,-422"/>
+<text text-anchor="start" x="202.75" y="-427.2" font-family="Helvetica,sans-Serif" font-size="9.00">batteryModelIdentifier</text>
+<polygon fill="white" stroke="none" points="169,-404.25 169,-422 198.75,-422 198.75,-404.25 169,-404.25"/>
+<polygon fill="none" stroke="black" points="169,-404.25 169,-422 198.75,-422 198.75,-404.25 169,-404.25"/>
+<text text-anchor="start" x="173" y="-410.02" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="198.75,-404.25 198.75,-422 299,-422 299,-404.25 198.75,-404.25"/>
+<polygon fill="none" stroke="black" points="198.75,-404.25 198.75,-422 299,-422 299,-404.25 198.75,-404.25"/>
+<text text-anchor="start" x="202.75" y="-409.45" font-family="Helvetica,sans-Serif" font-size="9.00">serialNumber</text>
+<polygon fill="white" stroke="none" points="169,-386.5 169,-404.25 198.75,-404.25 198.75,-386.5 169,-386.5"/>
+<polygon fill="none" stroke="black" points="169,-386.5 169,-404.25 198.75,-404.25 198.75,-386.5 169,-386.5"/>
+<text text-anchor="start" x="173" y="-392.27" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">uri </text>
+<polygon fill="white" stroke="none" points="198.75,-386.5 198.75,-404.25 299,-404.25 299,-386.5 198.75,-386.5"/>
+<polygon fill="none" stroke="black" points="198.75,-386.5 198.75,-404.25 299,-404.25 299,-386.5 198.75,-386.5"/>
+<text text-anchor="start" x="202.75" y="-391.7" font-family="Helvetica,sans-Serif" font-size="9.00">uniqueBatteryIdentifier</text>
+<polygon fill="white" stroke="none" points="169,-368.75 169,-386.5 198.75,-386.5 198.75,-368.75 169,-368.75"/>
+<polygon fill="none" stroke="black" points="169,-368.75 169,-386.5 198.75,-386.5 198.75,-368.75 169,-368.75"/>
+<text text-anchor="start" x="173" y="-374.52" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">uri </text>
+<polygon fill="white" stroke="none" points="198.75,-368.75 198.75,-386.5 299,-386.5 299,-368.75 198.75,-368.75"/>
+<polygon fill="none" stroke="black" points="198.75,-368.75 198.75,-386.5 299,-386.5 299,-368.75 198.75,-368.75"/>
+<text text-anchor="start" x="202.75" y="-373.95" font-family="Helvetica,sans-Serif" font-size="9.00">uniqueDPPIdentifier</text>
+</g>
+<!-- DPPInfo -->
+<g id="node6" class="node">
+<title>DPPInfo</title>
+<polygon fill="#5ba55b" stroke="none" points="16,-687.12 16,-706.38 134,-706.38 134,-687.12 16,-687.12"/>
+<polygon fill="none" stroke="black" points="16,-687.12 16,-706.38 134,-706.38 134,-687.12 16,-687.12"/>
+<text text-anchor="start" x="55.5" y="-693.88" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">DPPInfo</text>
+<polygon fill="white" stroke="none" points="16,-669.38 16,-687.12 63,-687.12 63,-669.38 16,-669.38"/>
+<polygon fill="none" stroke="black" points="16,-669.38 16,-687.12 63,-687.12 63,-669.38 16,-669.38"/>
+<text text-anchor="start" x="20" y="-675.15" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="63,-669.38 63,-687.12 134,-687.12 134,-669.38 63,-669.38"/>
+<polygon fill="none" stroke="black" points="63,-669.38 63,-687.12 134,-687.12 134,-669.38 63,-669.38"/>
+<text text-anchor="start" x="67" y="-674.58" font-family="Helvetica,sans-Serif" font-size="9.00">dppGranularity</text>
+<polygon fill="white" stroke="none" points="16,-651.62 16,-669.38 63,-669.38 63,-651.62 16,-651.62"/>
+<polygon fill="none" stroke="black" points="16,-651.62 16,-669.38 63,-669.38 63,-651.62 16,-651.62"/>
+<text text-anchor="start" x="20" y="-657.4" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="63,-651.62 63,-669.38 134,-669.38 134,-651.62 63,-651.62"/>
+<polygon fill="none" stroke="black" points="63,-651.62 63,-669.38 134,-669.38 134,-651.62 63,-651.62"/>
+<text text-anchor="start" x="67" y="-656.83" font-family="Helvetica,sans-Serif" font-size="9.00">dppStatus</text>
+<polygon fill="white" stroke="none" points="16,-633.88 16,-651.62 63,-651.62 63,-633.88 16,-633.88"/>
+<polygon fill="none" stroke="black" points="16,-633.88 16,-651.62 63,-651.62 63,-633.88 16,-633.88"/>
+<text text-anchor="start" x="20" y="-639.65" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">timestamp </text>
+<polygon fill="white" stroke="none" points="63,-633.88 63,-651.62 134,-651.62 134,-633.88 63,-633.88"/>
+<polygon fill="none" stroke="black" points="63,-633.88 63,-651.62 134,-651.62 134,-633.88 63,-633.88"/>
+<text text-anchor="start" x="67" y="-639.08" font-family="Helvetica,sans-Serif" font-size="9.00">lastUpdated</text>
+<polygon fill="white" stroke="none" points="16,-616.12 16,-633.88 63,-633.88 63,-616.12 16,-616.12"/>
+<polygon fill="none" stroke="black" points="16,-616.12 16,-633.88 63,-633.88 63,-616.12 16,-616.12"/>
+<text text-anchor="start" x="20" y="-621.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="63,-616.12 63,-633.88 134,-633.88 134,-616.12 63,-616.12"/>
+<polygon fill="none" stroke="black" points="63,-616.12 63,-633.88 134,-633.88 134,-616.12 63,-616.12"/>
+<text text-anchor="start" x="67" y="-621.33" font-family="Helvetica,sans-Serif" font-size="9.00">schemaVersion</text>
+</g>
+<!-- GeneralInformationPublic -->
+<g id="node7" class="node">
+<title>GeneralInformationPublic</title>
+<polygon fill="#5ba55b" stroke="none" points="177,-650.62 177,-671.88 307,-671.88 307,-650.62 177,-650.62"/>
+<polygon fill="none" stroke="black" points="177,-650.62 177,-671.88 307,-671.88 307,-650.62 177,-650.62"/>
+<text text-anchor="start" x="182" y="-658.38" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">GeneralInformationPublic</text>
+</g>
+<!-- GeneralInformationPublic&#45;&gt;BatteryAttributes -->
+<g id="edge27" class="edge">
+<title>GeneralInformationPublic&#45;&gt;BatteryAttributes</title>
+<path fill="none" stroke="#444444" d="M222.65,-643.36C205.52,-628.63 179.63,-606.97 156,-589.5 128.14,-568.91 109.65,-575.69 91,-546.5 74.45,-520.6 69.7,-486.1 68.95,-458.91"/>
+<polygon fill="#444444" stroke="#444444" points="68.86,-451.22 72.56,-459.17 68.89,-454 68.96,-459.21 68.96,-459.21 68.96,-459.21 68.89,-454 65.36,-459.26 68.86,-451.22"/>
+<text text-anchor="middle" x="104.5" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">general</text>
+</g>
+<!-- GeneralInformationPublic&#45;&gt;BatteryIdentifiers -->
+<g id="edge28" class="edge">
+<title>GeneralInformationPublic&#45;&gt;BatteryIdentifiers</title>
+<path fill="none" stroke="#444444" d="M216.01,-643.43C188.5,-623.92 146.71,-588.93 129.25,-546.5 121.91,-528.66 150.04,-494.18 178.98,-464.99"/>
+<polygon fill="#444444" stroke="#444444" points="184.3,-459.71 181.16,-467.9 182.32,-461.67 178.62,-465.35 178.62,-465.35 178.62,-465.35 182.32,-461.67 176.08,-462.79 184.3,-459.71"/>
+<text text-anchor="middle" x="192.62" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">generalInformationPublic_identifiers</text>
+</g>
+<!-- ProductData -->
+<g id="node10" class="node">
+<title>ProductData</title>
+<polygon fill="#5ba55b" stroke="none" points="342,-413.12 342,-432.38 454,-432.38 454,-413.12 342,-413.12"/>
+<polygon fill="none" stroke="black" points="342,-413.12 342,-432.38 454,-432.38 454,-413.12 342,-413.12"/>
+<text text-anchor="start" x="369.12" y="-419.88" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">ProductData</text>
+<polygon fill="white" stroke="none" points="342,-395.38 342,-413.12 368,-413.12 368,-395.38 342,-395.38"/>
+<polygon fill="none" stroke="black" points="342,-395.38 342,-413.12 368,-413.12 368,-395.38 342,-395.38"/>
+<text text-anchor="start" x="346" y="-401.15" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">date </text>
+<polygon fill="white" stroke="none" points="368,-395.38 368,-413.12 454,-413.12 454,-395.38 368,-395.38"/>
+<polygon fill="none" stroke="black" points="368,-395.38 368,-413.12 454,-413.12 454,-395.38 368,-395.38"/>
+<text text-anchor="start" x="372" y="-400.57" font-family="Helvetica,sans-Serif" font-size="9.00">manufacturingDate</text>
+</g>
+<!-- GeneralInformationPublic&#45;&gt;ProductData -->
+<g id="edge29" class="edge">
+<title>GeneralInformationPublic&#45;&gt;ProductData</title>
+<path fill="none" stroke="#444444" d="M252.72,-643.38C279.65,-601.02 350.25,-489.98 382.06,-439.95"/>
+<polygon fill="#444444" stroke="#444444" points="386.34,-433.21 385.09,-441.9 384.85,-435.56 382.05,-439.97 382.05,-439.97 382.05,-439.97 384.85,-435.56 379.01,-438.03 386.34,-433.21"/>
+<text text-anchor="middle" x="388.62" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">generalInformationPublic_productData</text>
+</g>
+<!-- GeneralInformationRestricted -->
+<g id="node8" class="node">
+<title>GeneralInformationRestricted</title>
+<polygon fill="#5ba55b" stroke="none" points="515.38,-650.62 515.38,-671.88 662.62,-671.88 662.62,-650.62 515.38,-650.62"/>
+<polygon fill="none" stroke="black" points="515.38,-650.62 515.38,-671.88 662.62,-671.88 662.62,-650.62 515.38,-650.62"/>
+<text text-anchor="start" x="520.38" y="-658.38" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">GeneralInformationRestricted</text>
+</g>
+<!-- OperatorIdentifiers -->
+<g id="node9" class="node">
+<title>OperatorIdentifiers</title>
+<polygon fill="#5ba55b" stroke="none" points="497.5,-430.88 497.5,-450.12 618.5,-450.12 618.5,-430.88 497.5,-430.88"/>
+<polygon fill="none" stroke="black" points="497.5,-430.88 497.5,-450.12 618.5,-450.12 618.5,-430.88 497.5,-430.88"/>
+<text text-anchor="start" x="514.5" y="-437.62" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">OperatorIdentifiers</text>
+<polygon fill="white" stroke="none" points="497.5,-413.12 497.5,-430.88 527.25,-430.88 527.25,-413.12 497.5,-413.12"/>
+<polygon fill="none" stroke="black" points="497.5,-413.12 497.5,-430.88 527.25,-430.88 527.25,-413.12 497.5,-413.12"/>
+<text text-anchor="start" x="501.5" y="-418.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="527.25,-413.12 527.25,-430.88 618.5,-430.88 618.5,-413.12 527.25,-413.12"/>
+<polygon fill="none" stroke="black" points="527.25,-413.12 527.25,-430.88 618.5,-430.88 618.5,-413.12 527.25,-413.12"/>
+<text text-anchor="start" x="531.25" y="-418.32" font-family="Helvetica,sans-Serif" font-size="9.00">economicOperatorId</text>
+<polygon fill="white" stroke="none" points="497.5,-395.38 497.5,-413.12 527.25,-413.12 527.25,-395.38 497.5,-395.38"/>
+<polygon fill="none" stroke="black" points="497.5,-395.38 497.5,-413.12 527.25,-413.12 527.25,-395.38 497.5,-395.38"/>
+<text text-anchor="start" x="501.5" y="-401.15" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="527.25,-395.38 527.25,-413.12 618.5,-413.12 618.5,-395.38 527.25,-395.38"/>
+<polygon fill="none" stroke="black" points="527.25,-395.38 527.25,-413.12 618.5,-413.12 618.5,-395.38 527.25,-395.38"/>
+<text text-anchor="start" x="531.25" y="-400.57" font-family="Helvetica,sans-Serif" font-size="9.00">facilityId</text>
+<polygon fill="white" stroke="none" points="497.5,-377.62 497.5,-395.38 527.25,-395.38 527.25,-377.62 497.5,-377.62"/>
+<polygon fill="none" stroke="black" points="497.5,-377.62 497.5,-395.38 527.25,-395.38 527.25,-377.62 497.5,-377.62"/>
+<text text-anchor="start" x="501.5" y="-383.4" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="527.25,-377.62 527.25,-395.38 618.5,-395.38 618.5,-377.62 527.25,-377.62"/>
+<polygon fill="none" stroke="black" points="527.25,-377.62 527.25,-395.38 618.5,-395.38 618.5,-377.62 527.25,-377.62"/>
+<text text-anchor="start" x="531.25" y="-382.82" font-family="Helvetica,sans-Serif" font-size="9.00">manufacturerId</text>
+</g>
+<!-- GeneralInformationRestricted&#45;&gt;OperatorIdentifiers -->
+<g id="edge30" class="edge">
+<title>GeneralInformationRestricted&#45;&gt;OperatorIdentifiers</title>
+<path fill="none" stroke="#444444" d="M566.82,-643.45C542.44,-623.45 504.7,-587.55 489.25,-546.5 477.55,-515.4 495.05,-482.26 515.32,-457"/>
+<polygon fill="#444444" stroke="#444444" points="520.31,-451.03 517.94,-459.48 518.53,-453.17 515.18,-457.17 515.18,-457.17 515.18,-457.17 518.53,-453.17 512.42,-454.87 520.31,-451.03"/>
+<text text-anchor="middle" x="560.12" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">generalInformationRestricted_identifiers</text>
+</g>
+<!-- RestrictedProductData -->
+<g id="node11" class="node">
+<title>RestrictedProductData</title>
+<polygon fill="#5ba55b" stroke="none" points="661.5,-422 661.5,-441.25 800.5,-441.25 800.5,-422 661.5,-422"/>
+<polygon fill="none" stroke="black" points="661.5,-422 661.5,-441.25 800.5,-441.25 800.5,-422 661.5,-422"/>
+<text text-anchor="start" x="678.5" y="-428.75" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">RestrictedProductData</text>
+<polygon fill="white" stroke="none" points="661.5,-404.25 661.5,-422 691.25,-422 691.25,-404.25 661.5,-404.25"/>
+<polygon fill="none" stroke="black" points="661.5,-404.25 661.5,-422 691.25,-422 691.25,-404.25 661.5,-404.25"/>
+<text text-anchor="start" x="665.5" y="-410.02" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="691.25,-404.25 691.25,-422 800.5,-422 800.5,-404.25 691.25,-404.25"/>
+<polygon fill="none" stroke="black" points="691.25,-404.25 691.25,-422 800.5,-422 800.5,-404.25 691.25,-404.25"/>
+<text text-anchor="start" x="695.25" y="-409.45" font-family="Helvetica,sans-Serif" font-size="9.00">batteryStatus</text>
+<polygon fill="white" stroke="none" points="661.5,-386.5 661.5,-404.25 691.25,-404.25 691.25,-386.5 661.5,-386.5"/>
+<polygon fill="none" stroke="black" points="661.5,-386.5 661.5,-404.25 691.25,-404.25 691.25,-386.5 661.5,-386.5"/>
+<text text-anchor="start" x="665.5" y="-392.27" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">date </text>
+<polygon fill="white" stroke="none" points="691.25,-386.5 691.25,-404.25 800.5,-404.25 800.5,-386.5 691.25,-386.5"/>
+<polygon fill="none" stroke="black" points="691.25,-386.5 691.25,-404.25 800.5,-404.25 800.5,-386.5 691.25,-386.5"/>
+<text text-anchor="start" x="695.25" y="-391.7" font-family="Helvetica,sans-Serif" font-size="9.00">dateOfPuttingIntoService</text>
+</g>
+<!-- GeneralInformationRestricted&#45;&gt;RestrictedProductData -->
+<g id="edge31" class="edge">
+<title>GeneralInformationRestricted&#45;&gt;RestrictedProductData</title>
+<path fill="none" stroke="#444444" d="M598.76,-643.38C621.89,-603.42 680.38,-502.35 711.24,-449.02"/>
+<polygon fill="#444444" stroke="#444444" points="715.16,-442.25 714.26,-450.98 713.76,-444.66 711.15,-449.18 711.15,-449.18 711.15,-449.18 713.76,-444.66 708.03,-447.38 715.16,-442.25"/>
+<text text-anchor="middle" x="736.12" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">generalInformationRestricted_productData</text>
+</g>
+<!-- ProductData&#45;&gt;CompanyInformation -->
+<g id="edge32" class="edge">
+<title>ProductData&#45;&gt;CompanyInformation</title>
+<path fill="none" stroke="#444444" d="M384.26,-395.7C369.4,-377.51 344.65,-348.28 321,-325.25 303.59,-308.29 289.31,-312.25 279,-290.25 271.53,-274.3 279.64,-258.05 291.65,-244.51"/>
+<polygon fill="#444444" stroke="#444444" points="296.96,-238.98 294.02,-247.24 295.03,-240.99 291.42,-244.75 291.42,-244.75 291.42,-244.75 295.03,-240.99 288.82,-242.26 296.96,-238.98"/>
+<text text-anchor="middle" x="312" y="-282.65" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">economicOperator</text>
+</g>
+<!-- ProductData&#45;&gt;CompanyInformation -->
+<g id="edge33" class="edge">
+<title>ProductData&#45;&gt;CompanyInformation</title>
+<path fill="none" stroke="#444444" d="M392.35,-395.39C381.65,-362.33 358.29,-290.09 344.28,-246.76"/>
+<polygon fill="#444444" stroke="#444444" points="341.9,-239.4 347.79,-245.9 342.76,-242.04 344.36,-247.01 344.36,-247.01 344.36,-247.01 342.76,-242.04 340.94,-248.12 341.9,-239.4"/>
+<text text-anchor="middle" x="381.77" y="-282.65" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">manufacturer</text>
+</g>
+<!-- ProductData&#45;&gt;PostalAddress -->
+<g id="edge34" class="edge">
+<title>ProductData&#45;&gt;PostalAddress</title>
+<path fill="none" stroke="#444444" d="M401.33,-395.53C411.64,-341.76 443.31,-176.72 458.59,-97.11"/>
+<polygon fill="#444444" stroke="#444444" points="460.05,-89.49 462.07,-98.03 459.52,-92.22 458.54,-97.35 458.54,-97.35 458.54,-97.35 459.52,-92.22 455,-96.67 460.05,-89.49"/>
+<text text-anchor="middle" x="477.96" y="-207.78" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">manufacturingPlace</text>
+</g>
+<!-- BatteryCompliancePublic -->
+<g id="node12" class="node">
+<title>BatteryCompliancePublic</title>
+<polygon fill="#d4ac0d" stroke="none" points="914.12,-669.38 914.12,-688.62 1053.88,-688.62 1053.88,-669.38 914.12,-669.38"/>
+<polygon fill="none" stroke="black" points="914.12,-669.38 914.12,-688.62 1053.88,-688.62 1053.88,-669.38 914.12,-669.38"/>
+<text text-anchor="start" x="924.38" y="-676.12" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">BatteryCompliancePublic</text>
+<polygon fill="white" stroke="none" points="914.12,-651.62 914.12,-669.38 943.88,-669.38 943.88,-651.62 914.12,-651.62"/>
+<polygon fill="none" stroke="black" points="914.12,-651.62 914.12,-669.38 943.88,-669.38 943.88,-651.62 914.12,-651.62"/>
+<text text-anchor="start" x="918.12" y="-657.4" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">uri </text>
+<polygon fill="white" stroke="none" points="943.88,-651.62 943.88,-669.38 1053.88,-669.38 1053.88,-651.62 943.88,-651.62"/>
+<polygon fill="none" stroke="black" points="943.88,-651.62 943.88,-669.38 1053.88,-669.38 1053.88,-651.62 943.88,-651.62"/>
+<text text-anchor="start" x="947.88" y="-656.83" font-family="Helvetica,sans-Serif" font-size="9.00">euDeclarationConformity</text>
+<polygon fill="white" stroke="none" points="914.12,-633.88 914.12,-651.62 943.88,-651.62 943.88,-633.88 914.12,-633.88"/>
+<polygon fill="none" stroke="black" points="914.12,-633.88 914.12,-651.62 943.88,-651.62 943.88,-633.88 914.12,-633.88"/>
+<text text-anchor="start" x="918.12" y="-639.65" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="943.88,-633.88 943.88,-651.62 1053.88,-651.62 1053.88,-633.88 943.88,-633.88"/>
+<polygon fill="none" stroke="black" points="943.88,-633.88 943.88,-651.62 1053.88,-651.62 1053.88,-633.88 943.88,-633.88"/>
+<text text-anchor="start" x="947.88" y="-639.08" font-family="Helvetica,sans-Serif" font-size="9.00">extinguishingAgent</text>
+</g>
+<!-- Label -->
+<g id="node14" class="node">
+<title>Label</title>
+<polygon fill="#d4ac0d" stroke="none" points="998.12,-430.88 998.12,-450.12 1071.88,-450.12 1071.88,-430.88 998.12,-430.88"/>
+<polygon fill="none" stroke="black" points="998.12,-430.88 998.12,-450.12 1071.88,-450.12 1071.88,-430.88 998.12,-430.88"/>
+<text text-anchor="start" x="1022.25" y="-437.62" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">Label</text>
+<polygon fill="white" stroke="none" points="998.12,-413.12 998.12,-430.88 1027.88,-430.88 1027.88,-413.12 998.12,-413.12"/>
+<polygon fill="none" stroke="black" points="998.12,-413.12 998.12,-430.88 1027.88,-430.88 1027.88,-413.12 998.12,-413.12"/>
+<text text-anchor="start" x="1002.12" y="-418.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="1027.88,-413.12 1027.88,-430.88 1071.88,-430.88 1071.88,-413.12 1027.88,-413.12"/>
+<polygon fill="none" stroke="black" points="1027.88,-413.12 1027.88,-430.88 1071.88,-430.88 1071.88,-413.12 1027.88,-413.12"/>
+<text text-anchor="start" x="1031.88" y="-418.32" font-family="Helvetica,sans-Serif" font-size="9.00">meaning</text>
+<polygon fill="white" stroke="none" points="998.12,-395.38 998.12,-413.12 1027.88,-413.12 1027.88,-395.38 998.12,-395.38"/>
+<polygon fill="none" stroke="black" points="998.12,-395.38 998.12,-413.12 1027.88,-413.12 1027.88,-395.38 998.12,-395.38"/>
+<text text-anchor="start" x="1002.12" y="-401.15" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="1027.88,-395.38 1027.88,-413.12 1071.88,-413.12 1071.88,-395.38 1027.88,-395.38"/>
+<polygon fill="none" stroke="black" points="1027.88,-395.38 1027.88,-413.12 1071.88,-413.12 1071.88,-395.38 1027.88,-395.38"/>
+<text text-anchor="start" x="1031.88" y="-400.57" font-family="Helvetica,sans-Serif" font-size="9.00">subject</text>
+<polygon fill="white" stroke="none" points="998.12,-377.62 998.12,-395.38 1027.88,-395.38 1027.88,-377.62 998.12,-377.62"/>
+<polygon fill="none" stroke="black" points="998.12,-377.62 998.12,-395.38 1027.88,-395.38 1027.88,-377.62 998.12,-377.62"/>
+<text text-anchor="start" x="1002.12" y="-383.4" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="1027.88,-377.62 1027.88,-395.38 1071.88,-395.38 1071.88,-377.62 1027.88,-377.62"/>
+<polygon fill="none" stroke="black" points="1027.88,-377.62 1027.88,-395.38 1071.88,-395.38 1071.88,-377.62 1027.88,-377.62"/>
+<text text-anchor="start" x="1031.88" y="-382.82" font-family="Helvetica,sans-Serif" font-size="9.00">symbol</text>
+</g>
+<!-- BatteryCompliancePublic&#45;&gt;Label -->
+<g id="edge4" class="edge">
+<title>BatteryCompliancePublic&#45;&gt;Label</title>
+<path fill="none" stroke="#444444" d="M945.15,-634.06C915.24,-610.37 881.52,-573.75 897.75,-537.5 916.66,-495.24 958.13,-461.54 990.56,-440.24"/>
+<polygon fill="#444444" stroke="#444444" points="997.15,-436.02 992.36,-443.37 994.81,-437.52 990.41,-440.34 990.41,-440.34 990.41,-440.34 994.81,-437.52 988.47,-437.31 997.15,-436.02"/>
+<text text-anchor="middle" x="913.88" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">cadmium</text>
+</g>
+<!-- BatteryCompliancePublic&#45;&gt;Label -->
+<g id="edge5" class="edge">
+<title>BatteryCompliancePublic&#45;&gt;Label</title>
+<path fill="none" stroke="#444444" d="M978.76,-634.05C974.66,-608.97 970.77,-570.21 978,-537.5 984.16,-509.61 997.34,-480.54 1009.48,-457.7"/>
+<polygon fill="#444444" stroke="#444444" points="1013.13,-450.97 1012.48,-459.72 1011.8,-453.41 1009.31,-458 1009.31,-458 1009.31,-458 1011.8,-453.41 1006.15,-456.28 1013.13,-450.97"/>
+<text text-anchor="middle" x="1006.5" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">carbonFootprint</text>
+</g>
+<!-- BatteryCompliancePublic&#45;&gt;Label -->
+<g id="edge6" class="edge">
+<title>BatteryCompliancePublic&#45;&gt;Label</title>
+<path fill="none" stroke="#444444" d="M1001.58,-634.03C1015.36,-611.81 1033.42,-578.53 1041,-546.5 1047.78,-517.82 1046.22,-484.68 1042.99,-458.83"/>
+<polygon fill="#444444" stroke="#444444" points="1041.96,-451.21 1046.6,-458.65 1042.33,-453.97 1043.04,-459.14 1043.04,-459.14 1043.04,-459.14 1042.33,-453.97 1039.47,-459.62 1041.96,-451.21"/>
+<text text-anchor="middle" x="1049.96" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">lead</text>
+</g>
+<!-- BatteryCompliancePublic&#45;&gt;Label -->
+<g id="edge7" class="edge">
+<title>BatteryCompliancePublic&#45;&gt;Label</title>
+<path fill="none" stroke="#444444" d="M1010.68,-634.09C1030.5,-612.66 1055.94,-580.43 1067,-546.5 1076.43,-517.57 1068.16,-484.27 1057.66,-458.4"/>
+<polygon fill="#444444" stroke="#444444" points="1054.52,-451.04 1060.98,-456.99 1055.62,-453.6 1057.67,-458.4 1057.67,-458.4 1057.67,-458.4 1055.62,-453.6 1054.36,-459.82 1054.52,-451.04"/>
+<text text-anchor="middle" x="1115.04" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">separateCollectionSymbol</text>
+</g>
+<!-- BatteryComplianceRestricted -->
+<g id="node13" class="node">
+<title>BatteryComplianceRestricted</title>
+<polygon fill="#d4ac0d" stroke="none" points="1096.75,-660.5 1096.75,-679.75 1241.25,-679.75 1241.25,-660.5 1096.75,-660.5"/>
+<polygon fill="none" stroke="black" points="1096.75,-660.5 1096.75,-679.75 1241.25,-679.75 1241.25,-660.5 1096.75,-660.5"/>
+<text text-anchor="start" x="1100.75" y="-667.25" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">BatteryComplianceRestricted</text>
+<polygon fill="white" stroke="none" points="1096.75,-642.75 1096.75,-660.5 1138.25,-660.5 1138.25,-642.75 1096.75,-642.75"/>
+<polygon fill="none" stroke="black" points="1096.75,-642.75 1096.75,-660.5 1138.25,-660.5 1138.25,-642.75 1096.75,-642.75"/>
+<text text-anchor="start" x="1100.75" y="-648.52" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">uri </text>
+<polygon fill="white" stroke="none" points="1138.25,-642.75 1138.25,-660.5 1241.25,-660.5 1241.25,-642.75 1138.25,-642.75"/>
+<polygon fill="none" stroke="black" points="1138.25,-642.75 1138.25,-660.5 1241.25,-660.5 1241.25,-642.75 1138.25,-642.75"/>
+<text text-anchor="start" x="1142.25" y="-647.95" font-family="Helvetica,sans-Serif" font-size="9.00">testReportResults</text>
+</g>
+<!-- SupplyChainDueDiligence -->
+<g id="node15" class="node">
+<title>SupplyChainDueDiligence</title>
+<polygon fill="#a569bd" stroke="none" points="1285.12,-678.25 1285.12,-697.5 1416.88,-697.5 1416.88,-678.25 1285.12,-678.25"/>
+<polygon fill="none" stroke="black" points="1285.12,-678.25 1285.12,-697.5 1416.88,-697.5 1416.88,-678.25 1285.12,-678.25"/>
+<text text-anchor="start" x="1289.12" y="-685" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">SupplyChainDueDiligence</text>
+<polygon fill="white" stroke="none" points="1285.12,-660.5 1285.12,-678.25 1318.38,-678.25 1318.38,-660.5 1285.12,-660.5"/>
+<polygon fill="none" stroke="black" points="1285.12,-660.5 1285.12,-678.25 1318.38,-678.25 1318.38,-660.5 1285.12,-660.5"/>
+<text text-anchor="start" x="1289.12" y="-666.27" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">uri </text>
+<polygon fill="white" stroke="none" points="1318.38,-660.5 1318.38,-678.25 1416.88,-678.25 1416.88,-660.5 1318.38,-660.5"/>
+<polygon fill="none" stroke="black" points="1318.38,-660.5 1318.38,-678.25 1416.88,-678.25 1416.88,-660.5 1318.38,-660.5"/>
+<text text-anchor="start" x="1322.38" y="-665.7" font-family="Helvetica,sans-Serif" font-size="9.00">dueDiligenceReport</text>
+<polygon fill="white" stroke="none" points="1285.12,-642.75 1285.12,-660.5 1318.38,-660.5 1318.38,-642.75 1285.12,-642.75"/>
+<polygon fill="none" stroke="black" points="1285.12,-642.75 1285.12,-660.5 1318.38,-660.5 1318.38,-642.75 1285.12,-642.75"/>
+<text text-anchor="start" x="1289.12" y="-648.52" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="1318.38,-642.75 1318.38,-660.5 1416.88,-660.5 1416.88,-642.75 1318.38,-642.75"/>
+<polygon fill="none" stroke="black" points="1318.38,-642.75 1318.38,-660.5 1416.88,-660.5 1416.88,-642.75 1318.38,-642.75"/>
+<text text-anchor="start" x="1322.38" y="-647.95" font-family="Helvetica,sans-Serif" font-size="9.00">supplyChainIndices</text>
+<polygon fill="white" stroke="none" points="1285.12,-625 1285.12,-642.75 1318.38,-642.75 1318.38,-625 1285.12,-625"/>
+<polygon fill="none" stroke="black" points="1285.12,-625 1285.12,-642.75 1318.38,-642.75 1318.38,-625 1285.12,-625"/>
+<text text-anchor="start" x="1289.12" y="-630.77" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="1318.38,-625 1318.38,-642.75 1416.88,-642.75 1416.88,-625 1318.38,-625"/>
+<polygon fill="none" stroke="black" points="1318.38,-625 1318.38,-642.75 1416.88,-642.75 1416.88,-625 1318.38,-625"/>
+<text text-anchor="start" x="1322.38" y="-630.2" font-family="Helvetica,sans-Serif" font-size="9.00">thirdPartyAssurances</text>
+</g>
+<!-- BatteryChemistry -->
+<g id="node16" class="node">
+<title>BatteryChemistry</title>
+<polygon fill="#e67e22" stroke="none" points="1441.5,-422 1441.5,-441.25 1530.5,-441.25 1530.5,-422 1441.5,-422"/>
+<polygon fill="none" stroke="black" points="1441.5,-422 1441.5,-441.25 1530.5,-441.25 1530.5,-422 1441.5,-422"/>
+<text text-anchor="start" x="1445.5" y="-428.75" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">BatteryChemistry</text>
+<polygon fill="white" stroke="none" points="1441.5,-404.25 1441.5,-422 1474.38,-422 1474.38,-404.25 1441.5,-404.25"/>
+<polygon fill="none" stroke="black" points="1441.5,-404.25 1441.5,-422 1474.38,-422 1474.38,-404.25 1441.5,-404.25"/>
+<text text-anchor="start" x="1445.5" y="-410.02" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="1474.38,-404.25 1474.38,-422 1530.5,-422 1530.5,-404.25 1474.38,-404.25"/>
+<polygon fill="none" stroke="black" points="1474.38,-404.25 1474.38,-422 1530.5,-422 1530.5,-404.25 1474.38,-404.25"/>
+<text text-anchor="start" x="1478.38" y="-409.45" font-family="Helvetica,sans-Serif" font-size="9.00">clearName</text>
+<polygon fill="white" stroke="none" points="1441.5,-386.5 1441.5,-404.25 1474.38,-404.25 1474.38,-386.5 1441.5,-386.5"/>
+<polygon fill="none" stroke="black" points="1441.5,-386.5 1441.5,-404.25 1474.38,-404.25 1474.38,-386.5 1441.5,-386.5"/>
+<text text-anchor="start" x="1445.5" y="-392.27" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="1474.38,-386.5 1474.38,-404.25 1530.5,-404.25 1530.5,-386.5 1474.38,-386.5"/>
+<polygon fill="none" stroke="black" points="1474.38,-386.5 1474.38,-404.25 1530.5,-404.25 1530.5,-386.5 1474.38,-386.5"/>
+<text text-anchor="start" x="1478.38" y="-391.7" font-family="Helvetica,sans-Serif" font-size="9.00">shortName</text>
+</g>
+<!-- BatteryMaterial -->
+<g id="node17" class="node">
+<title>BatteryMaterial</title>
+<polygon fill="#e67e22" stroke="none" points="1745.62,-448.62 1745.62,-467.88 1888.38,-467.88 1888.38,-448.62 1745.62,-448.62"/>
+<polygon fill="none" stroke="black" points="1745.62,-448.62 1745.62,-467.88 1888.38,-467.88 1888.38,-448.62 1745.62,-448.62"/>
+<text text-anchor="start" x="1782.12" y="-455.38" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">BatteryMaterial</text>
+<polygon fill="white" stroke="none" points="1745.62,-430.88 1745.62,-448.62 1784.38,-448.62 1784.38,-430.88 1745.62,-430.88"/>
+<polygon fill="none" stroke="black" points="1745.62,-430.88 1745.62,-448.62 1784.38,-448.62 1784.38,-430.88 1745.62,-430.88"/>
+<text text-anchor="start" x="1749.62" y="-436.65" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="1784.38,-430.88 1784.38,-448.62 1888.38,-448.62 1888.38,-430.88 1784.38,-430.88"/>
+<polygon fill="none" stroke="black" points="1784.38,-430.88 1784.38,-448.62 1888.38,-448.62 1888.38,-430.88 1784.38,-430.88"/>
+<text text-anchor="start" x="1788.38" y="-436.07" font-family="Helvetica,sans-Serif" font-size="9.00">batteryMaterialIdentifier</text>
+<polygon fill="white" stroke="none" points="1745.62,-413.12 1745.62,-430.88 1784.38,-430.88 1784.38,-413.12 1745.62,-413.12"/>
+<polygon fill="none" stroke="black" points="1745.62,-413.12 1745.62,-430.88 1784.38,-430.88 1784.38,-413.12 1745.62,-413.12"/>
+<text text-anchor="start" x="1749.62" y="-418.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="1784.38,-413.12 1784.38,-430.88 1888.38,-430.88 1888.38,-413.12 1784.38,-413.12"/>
+<polygon fill="none" stroke="black" points="1784.38,-413.12 1784.38,-430.88 1888.38,-430.88 1888.38,-413.12 1784.38,-413.12"/>
+<text text-anchor="start" x="1788.38" y="-418.32" font-family="Helvetica,sans-Serif" font-size="9.00">batteryMaterialMass</text>
+<polygon fill="white" stroke="none" points="1745.62,-395.38 1745.62,-413.12 1784.38,-413.12 1784.38,-395.38 1745.62,-395.38"/>
+<polygon fill="none" stroke="black" points="1745.62,-395.38 1745.62,-413.12 1784.38,-413.12 1784.38,-395.38 1745.62,-395.38"/>
+<text text-anchor="start" x="1749.62" y="-401.15" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="1784.38,-395.38 1784.38,-413.12 1888.38,-413.12 1888.38,-395.38 1784.38,-395.38"/>
+<polygon fill="none" stroke="black" points="1784.38,-395.38 1784.38,-413.12 1888.38,-413.12 1888.38,-395.38 1784.38,-395.38"/>
+<text text-anchor="start" x="1788.38" y="-400.57" font-family="Helvetica,sans-Serif" font-size="9.00">batteryMaterialName</text>
+<polygon fill="white" stroke="none" points="1745.62,-377.62 1745.62,-395.38 1784.38,-395.38 1784.38,-377.62 1745.62,-377.62"/>
+<polygon fill="none" stroke="black" points="1745.62,-377.62 1745.62,-395.38 1784.38,-395.38 1784.38,-377.62 1745.62,-377.62"/>
+<text text-anchor="start" x="1749.62" y="-383.4" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="1784.38,-377.62 1784.38,-395.38 1888.38,-395.38 1888.38,-377.62 1784.38,-377.62"/>
+<polygon fill="none" stroke="black" points="1784.38,-377.62 1784.38,-395.38 1888.38,-395.38 1888.38,-377.62 1784.38,-377.62"/>
+<text text-anchor="start" x="1788.38" y="-382.82" font-family="Helvetica,sans-Serif" font-size="9.00">batteryMaterialShare</text>
+<polygon fill="white" stroke="none" points="1745.62,-359.88 1745.62,-377.62 1784.38,-377.62 1784.38,-359.88 1745.62,-359.88"/>
+<polygon fill="none" stroke="black" points="1745.62,-359.88 1745.62,-377.62 1784.38,-377.62 1784.38,-359.88 1745.62,-359.88"/>
+<text text-anchor="start" x="1749.62" y="-365.65" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">boolean </text>
+<polygon fill="white" stroke="none" points="1784.38,-359.88 1784.38,-377.62 1888.38,-377.62 1888.38,-359.88 1784.38,-359.88"/>
+<polygon fill="none" stroke="black" points="1784.38,-359.88 1784.38,-377.62 1888.38,-377.62 1888.38,-359.88 1784.38,-359.88"/>
+<text text-anchor="start" x="1788.38" y="-365.07" font-family="Helvetica,sans-Serif" font-size="9.00">isCriticalRawMaterial</text>
+</g>
+<!-- BatteryMaterialLocation -->
+<g id="node18" class="node">
+<title>BatteryMaterialLocation</title>
+<polygon fill="#e67e22" stroke="none" points="1745.88,-219 1745.88,-238.25 1864.12,-238.25 1864.12,-219 1745.88,-219"/>
+<polygon fill="none" stroke="black" points="1745.88,-219 1745.88,-238.25 1864.12,-238.25 1864.12,-219 1745.88,-219"/>
+<text text-anchor="start" x="1749.88" y="-225.75" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">BatteryMaterialLocation</text>
+<polygon fill="white" stroke="none" points="1745.88,-201.25 1745.88,-219 1780.62,-219 1780.62,-201.25 1745.88,-201.25"/>
+<polygon fill="none" stroke="black" points="1745.88,-201.25 1745.88,-219 1780.62,-219 1780.62,-201.25 1745.88,-201.25"/>
+<text text-anchor="start" x="1749.88" y="-207.03" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="1780.62,-201.25 1780.62,-219 1864.12,-219 1864.12,-201.25 1780.62,-201.25"/>
+<polygon fill="none" stroke="black" points="1780.62,-201.25 1780.62,-219 1864.12,-219 1864.12,-201.25 1780.62,-201.25"/>
+<text text-anchor="start" x="1784.62" y="-206.45" font-family="Helvetica,sans-Serif" font-size="9.00">componentId</text>
+<polygon fill="white" stroke="none" points="1745.88,-183.5 1745.88,-201.25 1780.62,-201.25 1780.62,-183.5 1745.88,-183.5"/>
+<polygon fill="none" stroke="black" points="1745.88,-183.5 1745.88,-201.25 1780.62,-201.25 1780.62,-183.5 1745.88,-183.5"/>
+<text text-anchor="start" x="1749.88" y="-189.28" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="1780.62,-183.5 1780.62,-201.25 1864.12,-201.25 1864.12,-183.5 1780.62,-183.5"/>
+<polygon fill="none" stroke="black" points="1780.62,-183.5 1780.62,-201.25 1864.12,-201.25 1864.12,-183.5 1780.62,-183.5"/>
+<text text-anchor="start" x="1784.62" y="-188.7" font-family="Helvetica,sans-Serif" font-size="9.00">componentName</text>
+</g>
+<!-- BatteryMaterial&#45;&gt;BatteryMaterialLocation -->
+<g id="edge8" class="edge">
+<title>BatteryMaterial&#45;&gt;BatteryMaterialLocation</title>
+<path fill="none" stroke="#444444" d="M1813.85,-360.06C1811.73,-324.54 1808.99,-278.67 1807.12,-247.44"/>
+<polygon fill="#444444" stroke="#444444" points="1806.65,-239.46 1810.72,-247.23 1806.81,-242.23 1807.12,-247.44 1807.12,-247.44 1807.12,-247.44 1806.81,-242.23 1803.53,-247.66 1806.65,-239.46"/>
+<text text-anchor="middle" x="1851.2" y="-282.65" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">batteryMaterialLocation</text>
+</g>
+<!-- BatteryMaterialsPublic -->
+<g id="node19" class="node">
+<title>BatteryMaterialsPublic</title>
+<polygon fill="#e67e22" stroke="none" points="1497.88,-660.5 1497.88,-679.75 1618.12,-679.75 1618.12,-660.5 1497.88,-660.5"/>
+<polygon fill="none" stroke="black" points="1497.88,-660.5 1497.88,-679.75 1618.12,-679.75 1618.12,-660.5 1497.88,-660.5"/>
+<text text-anchor="start" x="1505.5" y="-667.25" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">BatteryMaterialsPublic</text>
+<polygon fill="white" stroke="none" points="1497.88,-642.75 1497.88,-660.5 1527.62,-660.5 1527.62,-642.75 1497.88,-642.75"/>
+<polygon fill="none" stroke="black" points="1497.88,-642.75 1497.88,-660.5 1527.62,-660.5 1527.62,-642.75 1497.88,-642.75"/>
+<text text-anchor="start" x="1501.88" y="-648.52" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="1527.62,-642.75 1527.62,-660.5 1618.12,-660.5 1618.12,-642.75 1527.62,-642.75"/>
+<polygon fill="none" stroke="black" points="1527.62,-642.75 1527.62,-660.5 1618.12,-660.5 1618.12,-642.75 1527.62,-642.75"/>
+<text text-anchor="start" x="1531.62" y="-647.95" font-family="Helvetica,sans-Serif" font-size="9.00">criticalRawMaterials</text>
+</g>
+<!-- BatteryMaterialsPublic&#45;&gt;BatteryChemistry -->
+<g id="edge9" class="edge">
+<title>BatteryMaterialsPublic&#45;&gt;BatteryChemistry</title>
+<path fill="none" stroke="#444444" d="M1547.44,-642.84C1534.78,-621.11 1513.95,-582.42 1503.25,-546.5 1493.78,-514.69 1489.5,-477.01 1487.58,-450.14"/>
+<polygon fill="#444444" stroke="#444444" points="1487.07,-442.32 1491.18,-450.07 1487.25,-445.1 1487.59,-450.31 1487.59,-450.31 1487.59,-450.31 1487.25,-445.1 1483.99,-450.54 1487.07,-442.32"/>
+<text text-anchor="middle" x="1533.62" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">batteryChemistry</text>
+</g>
+<!-- HazardousSubstance -->
+<g id="node21" class="node">
+<title>HazardousSubstance</title>
+<polygon fill="#e67e22" stroke="none" points="1573.75,-422 1573.75,-441.25 1702.25,-441.25 1702.25,-422 1573.75,-422"/>
+<polygon fill="none" stroke="black" points="1573.75,-422 1573.75,-441.25 1702.25,-441.25 1702.25,-422 1573.75,-422"/>
+<text text-anchor="start" x="1588.5" y="-428.75" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">HazardousSubstance</text>
+<polygon fill="white" stroke="none" points="1573.75,-404.25 1573.75,-422 1603.5,-422 1603.5,-404.25 1573.75,-404.25"/>
+<polygon fill="none" stroke="black" points="1573.75,-404.25 1573.75,-422 1603.5,-422 1603.5,-404.25 1573.75,-404.25"/>
+<text text-anchor="start" x="1577.75" y="-410.02" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="1603.5,-404.25 1603.5,-422 1702.25,-422 1702.25,-404.25 1603.5,-404.25"/>
+<polygon fill="none" stroke="black" points="1603.5,-404.25 1603.5,-422 1702.25,-422 1702.25,-404.25 1603.5,-404.25"/>
+<text text-anchor="start" x="1607.5" y="-409.45" font-family="Helvetica,sans-Serif" font-size="9.00">impactOnEnvironment</text>
+<polygon fill="white" stroke="none" points="1573.75,-386.5 1573.75,-404.25 1603.5,-404.25 1603.5,-386.5 1573.75,-386.5"/>
+<polygon fill="none" stroke="black" points="1573.75,-386.5 1573.75,-404.25 1603.5,-404.25 1603.5,-386.5 1573.75,-386.5"/>
+<text text-anchor="start" x="1577.75" y="-392.27" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="1603.5,-386.5 1603.5,-404.25 1702.25,-404.25 1702.25,-386.5 1603.5,-386.5"/>
+<polygon fill="none" stroke="black" points="1603.5,-386.5 1603.5,-404.25 1702.25,-404.25 1702.25,-386.5 1603.5,-386.5"/>
+<text text-anchor="start" x="1607.5" y="-391.7" font-family="Helvetica,sans-Serif" font-size="9.00">substance</text>
+</g>
+<!-- BatteryMaterialsPublic&#45;&gt;HazardousSubstance -->
+<g id="edge10" class="edge">
+<title>BatteryMaterialsPublic&#45;&gt;HazardousSubstance</title>
+<path fill="none" stroke="#444444" d="M1563.63,-643C1576.7,-602.9 1609.33,-502.82 1626.7,-449.53"/>
+<polygon fill="#444444" stroke="#444444" points="1629.08,-442.25 1630.02,-450.97 1628.21,-444.89 1626.6,-449.85 1626.6,-449.85 1626.6,-449.85 1628.21,-444.89 1623.17,-448.74 1629.08,-442.25"/>
+<text text-anchor="middle" x="1637.38" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">hazardousSubstances</text>
+</g>
+<!-- BatteryMaterialsRestricted -->
+<g id="node20" class="node">
+<title>BatteryMaterialsRestricted</title>
+<polygon fill="#e67e22" stroke="none" points="1744.88,-650.62 1744.88,-671.88 1877.12,-671.88 1877.12,-650.62 1744.88,-650.62"/>
+<polygon fill="none" stroke="black" points="1744.88,-650.62 1744.88,-671.88 1877.12,-671.88 1877.12,-650.62 1744.88,-650.62"/>
+<text text-anchor="start" x="1749.88" y="-658.38" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">BatteryMaterialsRestricted</text>
+</g>
+<!-- BatteryMaterialsRestricted&#45;&gt;BatteryMaterial -->
+<g id="edge11" class="edge">
+<title>BatteryMaterialsRestricted&#45;&gt;BatteryMaterial</title>
+<path fill="none" stroke="#444444" d="M1811.41,-643.38C1812.24,-609.59 1814.13,-532.08 1815.49,-476.71"/>
+<polygon fill="#444444" stroke="#444444" points="1815.68,-468.9 1819.08,-476.98 1815.61,-471.68 1815.48,-476.89 1815.48,-476.89 1815.48,-476.89 1815.61,-471.68 1811.88,-476.81 1815.68,-468.9"/>
+<text text-anchor="middle" x="1852.25" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">materialsComposition</text>
+</g>
+<!-- BatteryCarbonFootprint -->
+<g id="node22" class="node">
+<title>BatteryCarbonFootprint</title>
+<polygon fill="#1abc9c" stroke="none" points="1920,-713.75 1920,-733 2080,-733 2080,-713.75 1920,-713.75"/>
+<polygon fill="none" stroke="black" points="1920,-713.75 1920,-733 2080,-733 2080,-713.75 1920,-713.75"/>
+<text text-anchor="start" x="1944.88" y="-720.5" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">BatteryCarbonFootprint</text>
+<polygon fill="white" stroke="none" points="1920,-696 1920,-713.75 1957.25,-713.75 1957.25,-696 1920,-696"/>
+<polygon fill="none" stroke="black" points="1920,-696 1920,-713.75 1957.25,-713.75 1957.25,-696 1920,-696"/>
+<text text-anchor="start" x="1924" y="-701.77" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="1957.25,-696 1957.25,-713.75 2080,-713.75 2080,-696 1957.25,-696"/>
+<polygon fill="none" stroke="black" points="1957.25,-696 1957.25,-713.75 2080,-713.75 2080,-696 1957.25,-696"/>
+<text text-anchor="start" x="1961.25" y="-701.2" font-family="Helvetica,sans-Serif" font-size="9.00">absoluteCarbonFootprint</text>
+<polygon fill="white" stroke="none" points="1920,-678.25 1920,-696 1957.25,-696 1957.25,-678.25 1920,-678.25"/>
+<polygon fill="none" stroke="black" points="1920,-678.25 1920,-696 1957.25,-696 1957.25,-678.25 1920,-678.25"/>
+<text text-anchor="start" x="1924" y="-684.02" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="1957.25,-678.25 1957.25,-696 2080,-696 2080,-678.25 1957.25,-678.25"/>
+<polygon fill="none" stroke="black" points="1957.25,-678.25 1957.25,-696 2080,-696 2080,-678.25 1957.25,-678.25"/>
+<text text-anchor="start" x="1961.25" y="-683.45" font-family="Helvetica,sans-Serif" font-size="9.00">carbonFootprintPerFU</text>
+<polygon fill="white" stroke="none" points="1920,-660.5 1920,-678.25 1957.25,-678.25 1957.25,-660.5 1920,-660.5"/>
+<polygon fill="none" stroke="black" points="1920,-660.5 1920,-678.25 1957.25,-678.25 1957.25,-660.5 1920,-660.5"/>
+<text text-anchor="start" x="1924" y="-666.27" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="1957.25,-660.5 1957.25,-678.25 2080,-678.25 2080,-660.5 1957.25,-660.5"/>
+<polygon fill="none" stroke="black" points="1957.25,-660.5 1957.25,-678.25 2080,-678.25 2080,-660.5 1957.25,-660.5"/>
+<text text-anchor="start" x="1961.25" y="-665.7" font-family="Helvetica,sans-Serif" font-size="9.00">contributionDistribution</text>
+<polygon fill="white" stroke="none" points="1920,-642.75 1920,-660.5 1957.25,-660.5 1957.25,-642.75 1920,-642.75"/>
+<polygon fill="none" stroke="black" points="1920,-642.75 1920,-660.5 1957.25,-660.5 1957.25,-642.75 1920,-642.75"/>
+<text text-anchor="start" x="1924" y="-648.52" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="1957.25,-642.75 1957.25,-660.5 2080,-660.5 2080,-642.75 1957.25,-642.75"/>
+<polygon fill="none" stroke="black" points="1957.25,-642.75 1957.25,-660.5 2080,-660.5 2080,-642.75 1957.25,-642.75"/>
+<text text-anchor="start" x="1961.25" y="-647.95" font-family="Helvetica,sans-Serif" font-size="9.00">contributionEndOfLife</text>
+<polygon fill="white" stroke="none" points="1920,-625 1920,-642.75 1957.25,-642.75 1957.25,-625 1920,-625"/>
+<polygon fill="none" stroke="black" points="1920,-625 1920,-642.75 1957.25,-642.75 1957.25,-625 1920,-625"/>
+<text text-anchor="start" x="1924" y="-630.77" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="1957.25,-625 1957.25,-642.75 2080,-642.75 2080,-625 1957.25,-625"/>
+<polygon fill="none" stroke="black" points="1957.25,-625 1957.25,-642.75 2080,-642.75 2080,-625 1957.25,-625"/>
+<text text-anchor="start" x="1961.25" y="-630.2" font-family="Helvetica,sans-Serif" font-size="9.00">contributionProduction</text>
+<polygon fill="white" stroke="none" points="1920,-607.25 1920,-625 1957.25,-625 1957.25,-607.25 1920,-607.25"/>
+<polygon fill="none" stroke="black" points="1920,-607.25 1920,-625 1957.25,-625 1957.25,-607.25 1920,-607.25"/>
+<text text-anchor="start" x="1924" y="-613.02" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="1957.25,-607.25 1957.25,-625 2080,-625 2080,-607.25 1957.25,-607.25"/>
+<polygon fill="none" stroke="black" points="1957.25,-607.25 1957.25,-625 2080,-625 2080,-607.25 1957.25,-607.25"/>
+<text text-anchor="start" x="1961.25" y="-612.45" font-family="Helvetica,sans-Serif" font-size="9.00">contributionRawMaterial</text>
+<polygon fill="white" stroke="none" points="1920,-589.5 1920,-607.25 1957.25,-607.25 1957.25,-589.5 1920,-589.5"/>
+<polygon fill="none" stroke="black" points="1920,-589.5 1920,-607.25 1957.25,-607.25 1957.25,-589.5 1920,-589.5"/>
+<text text-anchor="start" x="1924" y="-595.27" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">uri </text>
+<polygon fill="white" stroke="none" points="1957.25,-589.5 1957.25,-607.25 2080,-607.25 2080,-589.5 1957.25,-589.5"/>
+<polygon fill="none" stroke="black" points="1957.25,-589.5 1957.25,-607.25 2080,-607.25 2080,-589.5 1957.25,-589.5"/>
+<text text-anchor="start" x="1961.25" y="-594.7" font-family="Helvetica,sans-Serif" font-size="9.00">publicCarbonFootprintStudy</text>
+</g>
+<!-- PerformanceClass -->
+<g id="node23" class="node">
+<title>PerformanceClass</title>
+<polygon fill="#fffde7" stroke="#f39c12" stroke-width="1.5" points="2035,-458.38 1959,-458.38 1959,-369.38 2041,-369.38 2041,-452.38 2035,-458.38"/>
+<polyline fill="none" stroke="#f39c12" stroke-width="1.5" points="2035,-458.38 2035,-452.38"/>
+<polyline fill="none" stroke="#f39c12" stroke-width="1.5" points="2041,-452.38 2035,-452.38"/>
+<text text-anchor="middle" x="2000" y="-446.77" font-family="Helvetica,sans-Serif" font-size="8.00">PerformanceClass</text>
+<text text-anchor="middle" x="2000" y="-437.77" font-family="Helvetica,sans-Serif" font-size="8.00">«enumeration»</text>
+<text text-anchor="middle" x="2000" y="-428.77" font-family="Helvetica,sans-Serif" font-size="8.00">A</text>
+<text text-anchor="middle" x="2000" y="-419.77" font-family="Helvetica,sans-Serif" font-size="8.00">B</text>
+<text text-anchor="middle" x="2000" y="-410.77" font-family="Helvetica,sans-Serif" font-size="8.00">C</text>
+<text text-anchor="middle" x="2000" y="-401.77" font-family="Helvetica,sans-Serif" font-size="8.00">D</text>
+<text text-anchor="middle" x="2000" y="-392.77" font-family="Helvetica,sans-Serif" font-size="8.00">E</text>
+<text text-anchor="middle" x="2000" y="-383.77" font-family="Helvetica,sans-Serif" font-size="8.00">F</text>
+<text text-anchor="middle" x="2000" y="-374.77" font-family="Helvetica,sans-Serif" font-size="8.00">G</text>
+</g>
+<!-- BatteryCarbonFootprint&#45;&gt;PerformanceClass -->
+<g id="edge1" class="edge">
+<title>BatteryCarbonFootprint&#45;&gt;PerformanceClass</title>
+<path fill="none" stroke="#444444" d="M2000,-589.61C2000,-550.71 2000,-503.25 2000,-467.61"/>
+<polygon fill="#444444" stroke="#444444" points="2000,-460.04 2003.6,-468.04 2000,-462.82 2000,-468.04 2000,-468.04 2000,-468.04 2000,-462.82 1996.4,-468.04 2000,-460.04"/>
+<text text-anchor="middle" x="2032.62" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">performanceClass</text>
+</g>
+<!-- BatteryCircularityPrivate -->
+<g id="node24" class="node">
+<title>BatteryCircularityPrivate</title>
+<polygon fill="#85c1e9" stroke="none" points="2123,-687.12 2123,-706.38 2245,-706.38 2245,-687.12 2123,-687.12"/>
+<polygon fill="none" stroke="black" points="2123,-687.12 2123,-706.38 2245,-706.38 2245,-687.12 2123,-687.12"/>
+<text text-anchor="start" x="2127" y="-693.88" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">BatteryCircularityPrivate</text>
+<polygon fill="white" stroke="none" points="2123,-669.38 2123,-687.12 2148.38,-687.12 2148.38,-669.38 2123,-669.38"/>
+<polygon fill="none" stroke="black" points="2123,-669.38 2123,-687.12 2148.38,-687.12 2148.38,-669.38 2123,-669.38"/>
+<text text-anchor="start" x="2127" y="-675.15" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">uri </text>
+<polygon fill="white" stroke="none" points="2148.38,-669.38 2148.38,-687.12 2245,-687.12 2245,-669.38 2148.38,-669.38"/>
+<polygon fill="none" stroke="black" points="2148.38,-669.38 2148.38,-687.12 2245,-687.12 2245,-669.38 2148.38,-669.38"/>
+<text text-anchor="start" x="2152.38" y="-674.58" font-family="Helvetica,sans-Serif" font-size="9.00">dismantlingManuals</text>
+<polygon fill="white" stroke="none" points="2123,-651.62 2123,-669.38 2148.38,-669.38 2148.38,-651.62 2123,-651.62"/>
+<polygon fill="none" stroke="black" points="2123,-651.62 2123,-669.38 2148.38,-669.38 2148.38,-651.62 2123,-651.62"/>
+<text text-anchor="start" x="2127" y="-657.4" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">uri </text>
+<polygon fill="white" stroke="none" points="2148.38,-651.62 2148.38,-669.38 2245,-669.38 2245,-651.62 2148.38,-651.62"/>
+<polygon fill="none" stroke="black" points="2148.38,-651.62 2148.38,-669.38 2245,-669.38 2245,-651.62 2148.38,-651.62"/>
+<text text-anchor="start" x="2152.38" y="-656.83" font-family="Helvetica,sans-Serif" font-size="9.00">partNumbers</text>
+<polygon fill="white" stroke="none" points="2123,-633.88 2123,-651.62 2148.38,-651.62 2148.38,-633.88 2123,-633.88"/>
+<polygon fill="none" stroke="black" points="2123,-633.88 2123,-651.62 2148.38,-651.62 2148.38,-633.88 2123,-633.88"/>
+<text text-anchor="start" x="2127" y="-639.65" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">uri </text>
+<polygon fill="white" stroke="none" points="2148.38,-633.88 2148.38,-651.62 2245,-651.62 2245,-633.88 2148.38,-633.88"/>
+<polygon fill="none" stroke="black" points="2148.38,-633.88 2148.38,-651.62 2245,-651.62 2245,-633.88 2148.38,-633.88"/>
+<text text-anchor="start" x="2152.38" y="-639.08" font-family="Helvetica,sans-Serif" font-size="9.00">safetyMeasures</text>
+<polygon fill="white" stroke="none" points="2123,-616.12 2123,-633.88 2148.38,-633.88 2148.38,-616.12 2123,-616.12"/>
+<polygon fill="none" stroke="black" points="2123,-616.12 2123,-633.88 2148.38,-633.88 2148.38,-616.12 2123,-616.12"/>
+<text text-anchor="start" x="2127" y="-621.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">uri </text>
+<polygon fill="white" stroke="none" points="2148.38,-616.12 2148.38,-633.88 2245,-633.88 2245,-616.12 2148.38,-616.12"/>
+<polygon fill="none" stroke="black" points="2148.38,-616.12 2148.38,-633.88 2245,-633.88 2245,-616.12 2148.38,-616.12"/>
+<text text-anchor="start" x="2152.38" y="-621.33" font-family="Helvetica,sans-Serif" font-size="9.00">sparePartsInfo</text>
+</g>
+<!-- BatteryCircularityPublic -->
+<g id="node25" class="node">
+<title>BatteryCircularityPublic</title>
+<polygon fill="#85c1e9" stroke="none" points="2289.12,-650.62 2289.12,-671.88 2410.88,-671.88 2410.88,-650.62 2289.12,-650.62"/>
+<polygon fill="none" stroke="black" points="2289.12,-650.62 2289.12,-671.88 2410.88,-671.88 2410.88,-650.62 2289.12,-650.62"/>
+<text text-anchor="start" x="2294.12" y="-658.38" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">BatteryCircularityPublic</text>
+</g>
+<!-- EndUserInformation -->
+<g id="node26" class="node">
+<title>EndUserInformation</title>
+<polygon fill="#85c1e9" stroke="none" points="2121.62,-430.88 2121.62,-450.12 2228.38,-450.12 2228.38,-430.88 2121.62,-430.88"/>
+<polygon fill="none" stroke="black" points="2121.62,-430.88 2121.62,-450.12 2228.38,-450.12 2228.38,-430.88 2121.62,-430.88"/>
+<text text-anchor="start" x="2127.75" y="-437.62" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">EndUserInformation</text>
+<polygon fill="white" stroke="none" points="2121.62,-413.12 2121.62,-430.88 2140.88,-430.88 2140.88,-413.12 2121.62,-413.12"/>
+<polygon fill="none" stroke="black" points="2121.62,-413.12 2121.62,-430.88 2140.88,-430.88 2140.88,-413.12 2121.62,-413.12"/>
+<text text-anchor="start" x="2125.62" y="-418.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">uri </text>
+<polygon fill="white" stroke="none" points="2140.88,-413.12 2140.88,-430.88 2228.38,-430.88 2228.38,-413.12 2140.88,-413.12"/>
+<polygon fill="none" stroke="black" points="2140.88,-413.12 2140.88,-430.88 2228.38,-430.88 2228.38,-413.12 2140.88,-413.12"/>
+<text text-anchor="start" x="2144.88" y="-418.32" font-family="Helvetica,sans-Serif" font-size="9.00">collectionEndOfLife</text>
+<polygon fill="white" stroke="none" points="2121.62,-395.38 2121.62,-413.12 2140.88,-413.12 2140.88,-395.38 2121.62,-395.38"/>
+<polygon fill="none" stroke="black" points="2121.62,-395.38 2121.62,-413.12 2140.88,-413.12 2140.88,-395.38 2121.62,-395.38"/>
+<text text-anchor="start" x="2125.62" y="-401.15" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">uri </text>
+<polygon fill="white" stroke="none" points="2140.88,-395.38 2140.88,-413.12 2228.38,-413.12 2228.38,-395.38 2140.88,-395.38"/>
+<polygon fill="none" stroke="black" points="2140.88,-395.38 2140.88,-413.12 2228.38,-413.12 2228.38,-395.38 2140.88,-395.38"/>
+<text text-anchor="start" x="2144.88" y="-400.57" font-family="Helvetica,sans-Serif" font-size="9.00">separateCollection</text>
+<polygon fill="white" stroke="none" points="2121.62,-377.62 2121.62,-395.38 2140.88,-395.38 2140.88,-377.62 2121.62,-377.62"/>
+<polygon fill="none" stroke="black" points="2121.62,-377.62 2121.62,-395.38 2140.88,-395.38 2140.88,-377.62 2121.62,-377.62"/>
+<text text-anchor="start" x="2125.62" y="-383.4" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">uri </text>
+<polygon fill="white" stroke="none" points="2140.88,-377.62 2140.88,-395.38 2228.38,-395.38 2228.38,-377.62 2140.88,-377.62"/>
+<polygon fill="none" stroke="black" points="2140.88,-377.62 2140.88,-395.38 2228.38,-395.38 2228.38,-377.62 2140.88,-377.62"/>
+<text text-anchor="start" x="2144.88" y="-382.82" font-family="Helvetica,sans-Serif" font-size="9.00">wastePrevention</text>
+</g>
+<!-- BatteryCircularityPublic&#45;&gt;EndUserInformation -->
+<g id="edge2" class="edge">
+<title>BatteryCircularityPublic&#45;&gt;EndUserInformation</title>
+<path fill="none" stroke="#444444" d="M2337.97,-643.38C2310.9,-605.43 2244.52,-512.35 2205.33,-457.4"/>
+<polygon fill="#444444" stroke="#444444" points="2200.7,-450.91 2208.27,-455.33 2202.31,-453.17 2205.34,-457.42 2205.34,-457.42 2205.34,-457.42 2202.31,-453.17 2202.41,-459.51 2200.7,-450.91"/>
+<text text-anchor="middle" x="2289.87" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">endUserInfo</text>
+</g>
+<!-- RecycledRenewableContent -->
+<g id="node27" class="node">
+<title>RecycledRenewableContent</title>
+<polygon fill="#85c1e9" stroke="none" points="2271,-475.25 2271,-494.5 2431,-494.5 2431,-475.25 2271,-475.25"/>
+<polygon fill="none" stroke="black" points="2271,-475.25 2271,-494.5 2431,-494.5 2431,-475.25 2271,-475.25"/>
+<text text-anchor="start" x="2285.75" y="-482" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">RecycledRenewableContent</text>
+<polygon fill="white" stroke="none" points="2271,-457.5 2271,-475.25 2308.25,-475.25 2308.25,-457.5 2271,-457.5"/>
+<polygon fill="none" stroke="black" points="2271,-457.5 2271,-475.25 2308.25,-475.25 2308.25,-457.5 2271,-457.5"/>
+<text text-anchor="start" x="2275" y="-463.27" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="2308.25,-457.5 2308.25,-475.25 2431,-475.25 2431,-457.5 2308.25,-457.5"/>
+<polygon fill="none" stroke="black" points="2308.25,-457.5 2308.25,-475.25 2431,-475.25 2431,-457.5 2308.25,-457.5"/>
+<text text-anchor="start" x="2312.25" y="-462.7" font-family="Helvetica,sans-Serif" font-size="9.00">postConsumerCobaltShare</text>
+<polygon fill="white" stroke="none" points="2271,-439.75 2271,-457.5 2308.25,-457.5 2308.25,-439.75 2271,-439.75"/>
+<polygon fill="none" stroke="black" points="2271,-439.75 2271,-457.5 2308.25,-457.5 2308.25,-439.75 2271,-439.75"/>
+<text text-anchor="start" x="2275" y="-445.52" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="2308.25,-439.75 2308.25,-457.5 2431,-457.5 2431,-439.75 2308.25,-439.75"/>
+<polygon fill="none" stroke="black" points="2308.25,-439.75 2308.25,-457.5 2431,-457.5 2431,-439.75 2308.25,-439.75"/>
+<text text-anchor="start" x="2312.25" y="-444.95" font-family="Helvetica,sans-Serif" font-size="9.00">postConsumerLithiumShare</text>
+<polygon fill="white" stroke="none" points="2271,-422 2271,-439.75 2308.25,-439.75 2308.25,-422 2271,-422"/>
+<polygon fill="none" stroke="black" points="2271,-422 2271,-439.75 2308.25,-439.75 2308.25,-422 2271,-422"/>
+<text text-anchor="start" x="2275" y="-427.77" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="2308.25,-422 2308.25,-439.75 2431,-439.75 2431,-422 2308.25,-422"/>
+<polygon fill="none" stroke="black" points="2308.25,-422 2308.25,-439.75 2431,-439.75 2431,-422 2308.25,-422"/>
+<text text-anchor="start" x="2312.25" y="-427.2" font-family="Helvetica,sans-Serif" font-size="9.00">postConsumerNickelShare</text>
+<polygon fill="white" stroke="none" points="2271,-404.25 2271,-422 2308.25,-422 2308.25,-404.25 2271,-404.25"/>
+<polygon fill="none" stroke="black" points="2271,-404.25 2271,-422 2308.25,-422 2308.25,-404.25 2271,-404.25"/>
+<text text-anchor="start" x="2275" y="-410.02" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="2308.25,-404.25 2308.25,-422 2431,-422 2431,-404.25 2308.25,-404.25"/>
+<polygon fill="none" stroke="black" points="2308.25,-404.25 2308.25,-422 2431,-422 2431,-404.25 2308.25,-404.25"/>
+<text text-anchor="start" x="2312.25" y="-409.45" font-family="Helvetica,sans-Serif" font-size="9.00">preConsumerCobaltShare</text>
+<polygon fill="white" stroke="none" points="2271,-386.5 2271,-404.25 2308.25,-404.25 2308.25,-386.5 2271,-386.5"/>
+<polygon fill="none" stroke="black" points="2271,-386.5 2271,-404.25 2308.25,-404.25 2308.25,-386.5 2271,-386.5"/>
+<text text-anchor="start" x="2275" y="-392.27" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="2308.25,-386.5 2308.25,-404.25 2431,-404.25 2431,-386.5 2308.25,-386.5"/>
+<polygon fill="none" stroke="black" points="2308.25,-386.5 2308.25,-404.25 2431,-404.25 2431,-386.5 2308.25,-386.5"/>
+<text text-anchor="start" x="2312.25" y="-391.7" font-family="Helvetica,sans-Serif" font-size="9.00">preConsumerLithiumShare</text>
+<polygon fill="white" stroke="none" points="2271,-368.75 2271,-386.5 2308.25,-386.5 2308.25,-368.75 2271,-368.75"/>
+<polygon fill="none" stroke="black" points="2271,-368.75 2271,-386.5 2308.25,-386.5 2308.25,-368.75 2271,-368.75"/>
+<text text-anchor="start" x="2275" y="-374.52" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="2308.25,-368.75 2308.25,-386.5 2431,-386.5 2431,-368.75 2308.25,-368.75"/>
+<polygon fill="none" stroke="black" points="2308.25,-368.75 2308.25,-386.5 2431,-386.5 2431,-368.75 2308.25,-368.75"/>
+<text text-anchor="start" x="2312.25" y="-373.95" font-family="Helvetica,sans-Serif" font-size="9.00">preConsumerNickelShare</text>
+<polygon fill="white" stroke="none" points="2271,-351 2271,-368.75 2308.25,-368.75 2308.25,-351 2271,-351"/>
+<polygon fill="none" stroke="black" points="2271,-351 2271,-368.75 2308.25,-368.75 2308.25,-351 2271,-351"/>
+<text text-anchor="start" x="2275" y="-356.77" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="2308.25,-351 2308.25,-368.75 2431,-368.75 2431,-351 2308.25,-351"/>
+<polygon fill="none" stroke="black" points="2308.25,-351 2308.25,-368.75 2431,-368.75 2431,-351 2308.25,-351"/>
+<text text-anchor="start" x="2312.25" y="-356.2" font-family="Helvetica,sans-Serif" font-size="9.00">recycledLeadShare</text>
+<polygon fill="white" stroke="none" points="2271,-333.25 2271,-351 2308.25,-351 2308.25,-333.25 2271,-333.25"/>
+<polygon fill="none" stroke="black" points="2271,-333.25 2271,-351 2308.25,-351 2308.25,-333.25 2271,-333.25"/>
+<text text-anchor="start" x="2275" y="-339.02" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="2308.25,-333.25 2308.25,-351 2431,-351 2431,-333.25 2308.25,-333.25"/>
+<polygon fill="none" stroke="black" points="2308.25,-333.25 2308.25,-351 2431,-351 2431,-333.25 2308.25,-333.25"/>
+<text text-anchor="start" x="2312.25" y="-338.45" font-family="Helvetica,sans-Serif" font-size="9.00">renewableContentShare</text>
+</g>
+<!-- BatteryCircularityPublic&#45;&gt;RecycledRenewableContent -->
+<g id="edge3" class="edge">
+<title>BatteryCircularityPublic&#45;&gt;RecycledRenewableContent</title>
+<path fill="none" stroke="#444444" d="M2350.07,-643.38C2350.19,-614.78 2350.43,-554.88 2350.64,-503.57"/>
+<polygon fill="#444444" stroke="#444444" points="2350.67,-495.65 2354.24,-503.67 2350.66,-498.44 2350.64,-503.65 2350.64,-503.65 2350.64,-503.65 2350.66,-498.44 2347.04,-503.64 2350.67,-495.65"/>
+<text text-anchor="middle" x="2379.38" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">recycledContent</text>
+</g>
+<!-- BatteryLifetimePublic -->
+<g id="node28" class="node">
+<title>BatteryLifetimePublic</title>
+<polygon fill="#e74c3c" stroke="none" points="2474,-439.75 2474,-459 2640,-459 2640,-439.75 2474,-439.75"/>
+<polygon fill="none" stroke="black" points="2474,-439.75 2474,-459 2640,-459 2640,-439.75 2474,-439.75"/>
+<text text-anchor="start" x="2506.75" y="-446.5" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">BatteryLifetimePublic</text>
+<polygon fill="white" stroke="none" points="2474,-422 2474,-439.75 2511.25,-439.75 2511.25,-422 2474,-422"/>
+<polygon fill="none" stroke="black" points="2474,-422 2474,-439.75 2511.25,-439.75 2511.25,-422 2474,-422"/>
+<text text-anchor="start" x="2478" y="-427.77" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="2511.25,-422 2511.25,-439.75 2640,-439.75 2640,-422 2511.25,-422"/>
+<polygon fill="none" stroke="black" points="2511.25,-422 2511.25,-439.75 2640,-439.75 2640,-422 2511.25,-422"/>
+<text text-anchor="start" x="2515.25" y="-427.2" font-family="Helvetica,sans-Serif" font-size="9.00">cRateCycleLifeTest</text>
+<polygon fill="white" stroke="none" points="2474,-404.25 2474,-422 2511.25,-422 2511.25,-404.25 2474,-404.25"/>
+<polygon fill="none" stroke="black" points="2474,-404.25 2474,-422 2511.25,-422 2511.25,-404.25 2474,-404.25"/>
+<text text-anchor="start" x="2478" y="-410.02" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="2511.25,-404.25 2511.25,-422 2640,-422 2640,-404.25 2511.25,-404.25"/>
+<polygon fill="none" stroke="black" points="2511.25,-404.25 2511.25,-422 2640,-422 2640,-404.25 2511.25,-404.25"/>
+<text text-anchor="start" x="2515.25" y="-409.45" font-family="Helvetica,sans-Serif" font-size="9.00">capacityThresholdExhaustion</text>
+<polygon fill="white" stroke="none" points="2474,-386.5 2474,-404.25 2511.25,-404.25 2511.25,-386.5 2474,-386.5"/>
+<polygon fill="none" stroke="black" points="2474,-386.5 2474,-404.25 2511.25,-404.25 2511.25,-386.5 2474,-386.5"/>
+<text text-anchor="start" x="2478" y="-392.27" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">string </text>
+<polygon fill="white" stroke="none" points="2511.25,-386.5 2511.25,-404.25 2640,-404.25 2640,-386.5 2511.25,-386.5"/>
+<polygon fill="none" stroke="black" points="2511.25,-386.5 2511.25,-404.25 2640,-404.25 2640,-386.5 2511.25,-386.5"/>
+<text text-anchor="start" x="2515.25" y="-391.7" font-family="Helvetica,sans-Serif" font-size="9.00">cycleLifeReferenceTest</text>
+<polygon fill="white" stroke="none" points="2474,-368.75 2474,-386.5 2511.25,-386.5 2511.25,-368.75 2474,-368.75"/>
+<polygon fill="none" stroke="black" points="2474,-368.75 2474,-386.5 2511.25,-386.5 2511.25,-368.75 2474,-368.75"/>
+<text text-anchor="start" x="2478" y="-374.52" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="2511.25,-368.75 2511.25,-386.5 2640,-386.5 2640,-368.75 2511.25,-368.75"/>
+<polygon fill="none" stroke="black" points="2511.25,-368.75 2511.25,-386.5 2640,-386.5 2640,-368.75 2511.25,-368.75"/>
+<text text-anchor="start" x="2515.25" y="-373.95" font-family="Helvetica,sans-Serif" font-size="9.00">expectedLifetimeCycles</text>
+</g>
+<!-- BatteryLifetimeRestricted -->
+<g id="node29" class="node">
+<title>BatteryLifetimeRestricted</title>
+<polygon fill="#e74c3c" stroke="none" points="3722.25,-439.75 3722.25,-459 3859.75,-459 3859.75,-439.75 3722.25,-439.75"/>
+<polygon fill="none" stroke="black" points="3722.25,-439.75 3722.25,-459 3859.75,-459 3859.75,-439.75 3722.25,-439.75"/>
+<text text-anchor="start" x="3732.12" y="-446.5" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">BatteryLifetimeRestricted</text>
+<polygon fill="white" stroke="none" points="3722.25,-422 3722.25,-439.75 3759.5,-439.75 3759.5,-422 3722.25,-422"/>
+<polygon fill="none" stroke="black" points="3722.25,-422 3722.25,-439.75 3759.5,-439.75 3759.5,-422 3722.25,-422"/>
+<text text-anchor="start" x="3726.25" y="-427.77" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="3759.5,-422 3759.5,-439.75 3859.75,-439.75 3859.75,-422 3759.5,-422"/>
+<polygon fill="none" stroke="black" points="3759.5,-422 3759.5,-439.75 3859.75,-439.75 3859.75,-422 3759.5,-422"/>
+<text text-anchor="start" x="3763.5" y="-427.2" font-family="Helvetica,sans-Serif" font-size="9.00">capacityThroughput</text>
+<polygon fill="white" stroke="none" points="3722.25,-404.25 3722.25,-422 3759.5,-422 3759.5,-404.25 3722.25,-404.25"/>
+<polygon fill="none" stroke="black" points="3722.25,-404.25 3722.25,-422 3759.5,-422 3759.5,-404.25 3722.25,-404.25"/>
+<text text-anchor="start" x="3726.25" y="-410.02" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="3759.5,-404.25 3759.5,-422 3859.75,-422 3859.75,-404.25 3759.5,-404.25"/>
+<polygon fill="none" stroke="black" points="3759.5,-404.25 3759.5,-422 3859.75,-422 3859.75,-404.25 3759.5,-404.25"/>
+<text text-anchor="start" x="3763.5" y="-409.45" font-family="Helvetica,sans-Serif" font-size="9.00">energyThroughput</text>
+<polygon fill="white" stroke="none" points="3722.25,-386.5 3722.25,-404.25 3759.5,-404.25 3759.5,-386.5 3722.25,-386.5"/>
+<polygon fill="none" stroke="black" points="3722.25,-386.5 3722.25,-404.25 3759.5,-404.25 3759.5,-386.5 3722.25,-386.5"/>
+<text text-anchor="start" x="3726.25" y="-392.27" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="3759.5,-386.5 3759.5,-404.25 3859.75,-404.25 3859.75,-386.5 3759.5,-386.5"/>
+<polygon fill="none" stroke="black" points="3759.5,-386.5 3759.5,-404.25 3859.75,-404.25 3859.75,-386.5 3759.5,-386.5"/>
+<text text-anchor="start" x="3763.5" y="-391.7" font-family="Helvetica,sans-Serif" font-size="9.00">expectedLifetimeYears</text>
+<polygon fill="white" stroke="none" points="3722.25,-368.75 3722.25,-386.5 3759.5,-386.5 3759.5,-368.75 3722.25,-368.75"/>
+<polygon fill="none" stroke="black" points="3722.25,-368.75 3722.25,-386.5 3759.5,-386.5 3759.5,-368.75 3722.25,-368.75"/>
+<text text-anchor="start" x="3726.25" y="-374.52" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="3759.5,-368.75 3759.5,-386.5 3859.75,-386.5 3859.75,-368.75 3759.5,-368.75"/>
+<polygon fill="none" stroke="black" points="3759.5,-368.75 3759.5,-386.5 3859.75,-386.5 3859.75,-368.75 3759.5,-368.75"/>
+<text text-anchor="start" x="3763.5" y="-373.95" font-family="Helvetica,sans-Serif" font-size="9.00">numberOfFullCycles</text>
+</g>
+<!-- BatteryPerformancePublic -->
+<g id="node30" class="node">
+<title>BatteryPerformancePublic</title>
+<polygon fill="#e74c3c" stroke="none" points="2978.88,-650.62 2978.88,-671.88 3111.12,-671.88 3111.12,-650.62 2978.88,-650.62"/>
+<polygon fill="none" stroke="black" points="2978.88,-650.62 2978.88,-671.88 3111.12,-671.88 3111.12,-650.62 2978.88,-650.62"/>
+<text text-anchor="start" x="2983.88" y="-658.38" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">BatteryPerformancePublic</text>
+</g>
+<!-- BatteryPerformancePublic&#45;&gt;BatteryLifetimePublic -->
+<g id="edge12" class="edge">
+<title>BatteryPerformancePublic&#45;&gt;BatteryLifetimePublic</title>
+<path fill="none" stroke="#444444" d="M2979.02,-652.74C2864.71,-638.37 2636.85,-603.26 2582.75,-546.5 2562.98,-525.75 2556.27,-494.53 2554.63,-467.7"/>
+<polygon fill="#444444" stroke="#444444" points="2554.3,-460.01 2558.24,-467.85 2554.42,-462.78 2554.64,-468 2554.64,-468 2554.64,-468 2554.42,-462.78 2551.04,-468.15 2554.3,-460.01"/>
+<text text-anchor="middle" x="2657.38" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">batteryPerformancePublic_batteryLifetime</text>
+</g>
+<!-- CapacityEnergyVoltagePublic -->
+<g id="node32" class="node">
+<title>CapacityEnergyVoltagePublic</title>
+<polygon fill="#e74c3c" stroke="none" points="2683.12,-448.62 2683.12,-467.88 2834.88,-467.88 2834.88,-448.62 2683.12,-448.62"/>
+<polygon fill="none" stroke="black" points="2683.12,-448.62 2683.12,-467.88 2834.88,-467.88 2834.88,-448.62 2683.12,-448.62"/>
+<text text-anchor="start" x="2690" y="-455.38" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">CapacityEnergyVoltagePublic</text>
+<polygon fill="white" stroke="none" points="2683.12,-430.88 2683.12,-448.62 2720.38,-448.62 2720.38,-430.88 2683.12,-430.88"/>
+<polygon fill="none" stroke="black" points="2683.12,-430.88 2683.12,-448.62 2720.38,-448.62 2720.38,-430.88 2683.12,-430.88"/>
+<text text-anchor="start" x="2687.12" y="-436.65" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="2720.38,-430.88 2720.38,-448.62 2834.88,-448.62 2834.88,-430.88 2720.38,-430.88"/>
+<polygon fill="none" stroke="black" points="2720.38,-430.88 2720.38,-448.62 2834.88,-448.62 2834.88,-430.88 2720.38,-430.88"/>
+<text text-anchor="start" x="2724.38" y="-436.07" font-family="Helvetica,sans-Serif" font-size="9.00">certifiedUsableBattEnergy</text>
+<polygon fill="white" stroke="none" points="2683.12,-413.12 2683.12,-430.88 2720.38,-430.88 2720.38,-413.12 2683.12,-413.12"/>
+<polygon fill="none" stroke="black" points="2683.12,-413.12 2683.12,-430.88 2720.38,-430.88 2720.38,-413.12 2683.12,-413.12"/>
+<text text-anchor="start" x="2687.12" y="-418.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="2720.38,-413.12 2720.38,-430.88 2834.88,-430.88 2834.88,-413.12 2720.38,-413.12"/>
+<polygon fill="none" stroke="black" points="2720.38,-413.12 2720.38,-430.88 2834.88,-430.88 2834.88,-413.12 2720.38,-413.12"/>
+<text text-anchor="start" x="2724.38" y="-418.32" font-family="Helvetica,sans-Serif" font-size="9.00">maximumVoltage</text>
+<polygon fill="white" stroke="none" points="2683.12,-395.38 2683.12,-413.12 2720.38,-413.12 2720.38,-395.38 2683.12,-395.38"/>
+<polygon fill="none" stroke="black" points="2683.12,-395.38 2683.12,-413.12 2720.38,-413.12 2720.38,-395.38 2683.12,-395.38"/>
+<text text-anchor="start" x="2687.12" y="-401.15" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="2720.38,-395.38 2720.38,-413.12 2834.88,-413.12 2834.88,-395.38 2720.38,-395.38"/>
+<polygon fill="none" stroke="black" points="2720.38,-395.38 2720.38,-413.12 2834.88,-413.12 2834.88,-395.38 2720.38,-395.38"/>
+<text text-anchor="start" x="2724.38" y="-400.57" font-family="Helvetica,sans-Serif" font-size="9.00">minimumVoltage</text>
+<polygon fill="white" stroke="none" points="2683.12,-377.62 2683.12,-395.38 2720.38,-395.38 2720.38,-377.62 2683.12,-377.62"/>
+<polygon fill="none" stroke="black" points="2683.12,-377.62 2683.12,-395.38 2720.38,-395.38 2720.38,-377.62 2683.12,-377.62"/>
+<text text-anchor="start" x="2687.12" y="-383.4" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="2720.38,-377.62 2720.38,-395.38 2834.88,-395.38 2834.88,-377.62 2720.38,-377.62"/>
+<polygon fill="none" stroke="black" points="2720.38,-377.62 2720.38,-395.38 2834.88,-395.38 2834.88,-377.62 2720.38,-377.62"/>
+<text text-anchor="start" x="2724.38" y="-382.82" font-family="Helvetica,sans-Serif" font-size="9.00">nominalVoltage</text>
+<polygon fill="white" stroke="none" points="2683.12,-359.88 2683.12,-377.62 2720.38,-377.62 2720.38,-359.88 2683.12,-359.88"/>
+<polygon fill="none" stroke="black" points="2683.12,-359.88 2683.12,-377.62 2720.38,-377.62 2720.38,-359.88 2683.12,-359.88"/>
+<text text-anchor="start" x="2687.12" y="-365.65" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="2720.38,-359.88 2720.38,-377.62 2834.88,-377.62 2834.88,-359.88 2720.38,-359.88"/>
+<polygon fill="none" stroke="black" points="2720.38,-359.88 2720.38,-377.62 2834.88,-377.62 2834.88,-359.88 2720.38,-359.88"/>
+<text text-anchor="start" x="2724.38" y="-365.07" font-family="Helvetica,sans-Serif" font-size="9.00">ratedCapacity</text>
+</g>
+<!-- BatteryPerformancePublic&#45;&gt;CapacityEnergyVoltagePublic -->
+<g id="edge13" class="edge">
+<title>BatteryPerformancePublic&#45;&gt;CapacityEnergyVoltagePublic</title>
+<path fill="none" stroke="#444444" d="M2979.04,-656.12C2907.85,-647.72 2797.65,-622.43 2745.25,-546.5 2731.36,-526.38 2731.4,-500.24 2736.18,-476.57"/>
+<polygon fill="#444444" stroke="#444444" points="2737.95,-468.82 2739.67,-477.43 2737.33,-471.54 2736.17,-476.62 2736.17,-476.62 2736.17,-476.62 2737.33,-471.54 2732.66,-475.82 2737.95,-468.82"/>
+<text text-anchor="middle" x="2834.12" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">batteryPerformancePublic_capacityEnergyVoltage</text>
+</g>
+<!-- InternalResistancePublic -->
+<g id="node34" class="node">
+<title>InternalResistancePublic</title>
+<polygon fill="#e74c3c" stroke="none" points="2878.38,-413.12 2878.38,-432.38 3019.62,-432.38 3019.62,-413.12 2878.38,-413.12"/>
+<polygon fill="none" stroke="black" points="2878.38,-413.12 2878.38,-432.38 3019.62,-432.38 3019.62,-413.12 2878.38,-413.12"/>
+<text text-anchor="start" x="2890.88" y="-419.88" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">InternalResistancePublic</text>
+<polygon fill="white" stroke="none" points="2878.38,-395.38 2878.38,-413.12 2913.38,-413.12 2913.38,-395.38 2878.38,-395.38"/>
+<polygon fill="none" stroke="black" points="2878.38,-395.38 2878.38,-413.12 2913.38,-413.12 2913.38,-395.38 2878.38,-395.38"/>
+<text text-anchor="start" x="2882.38" y="-401.15" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="2913.38,-395.38 2913.38,-413.12 3019.62,-413.12 3019.62,-395.38 2913.38,-395.38"/>
+<polygon fill="none" stroke="black" points="2913.38,-395.38 2913.38,-413.12 3019.62,-413.12 3019.62,-395.38 2913.38,-395.38"/>
+<text text-anchor="start" x="2917.38" y="-400.57" font-family="Helvetica,sans-Serif" font-size="9.00">initialInternalResistance</text>
+</g>
+<!-- BatteryPerformancePublic&#45;&gt;InternalResistancePublic -->
+<g id="edge14" class="edge">
+<title>BatteryPerformancePublic&#45;&gt;InternalResistancePublic</title>
+<path fill="none" stroke="#444444" d="M3019.63,-643.28C2992.78,-623.63 2951.99,-588.52 2935,-546.5 2920.99,-511.86 2930.43,-468.11 2939.18,-440.81"/>
+<polygon fill="#444444" stroke="#444444" points="2941.69,-433.37 2942.54,-442.1 2940.8,-436.01 2939.13,-440.95 2939.13,-440.95 2939.13,-440.95 2940.8,-436.01 2935.72,-439.8 2941.69,-433.37"/>
+<text text-anchor="middle" x="3016" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">batteryPerformancePublic_internalResistance</text>
+</g>
+<!-- PowerCapabilityPublic -->
+<g id="node37" class="node">
+<title>PowerCapabilityPublic</title>
+<polygon fill="#e74c3c" stroke="none" points="3076,-430.88 3076,-450.12 3224,-450.12 3224,-430.88 3076,-430.88"/>
+<polygon fill="none" stroke="black" points="3076,-430.88 3076,-450.12 3224,-450.12 3224,-430.88 3076,-430.88"/>
+<text text-anchor="start" x="3096.75" y="-437.62" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">PowerCapabilityPublic</text>
+<polygon fill="white" stroke="none" points="3076,-413.12 3076,-430.88 3111,-430.88 3111,-413.12 3076,-413.12"/>
+<polygon fill="none" stroke="black" points="3076,-413.12 3076,-430.88 3111,-430.88 3111,-413.12 3076,-413.12"/>
+<text text-anchor="start" x="3080" y="-418.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="3111,-413.12 3111,-430.88 3224,-430.88 3224,-413.12 3111,-413.12"/>
+<polygon fill="none" stroke="black" points="3111,-413.12 3111,-430.88 3224,-430.88 3224,-413.12 3111,-413.12"/>
+<text text-anchor="start" x="3115" y="-418.32" font-family="Helvetica,sans-Serif" font-size="9.00">maximumPermittedPower</text>
+<polygon fill="white" stroke="none" points="3076,-395.38 3076,-413.12 3111,-413.12 3111,-395.38 3076,-395.38"/>
+<polygon fill="none" stroke="black" points="3076,-395.38 3076,-413.12 3111,-413.12 3111,-395.38 3076,-395.38"/>
+<text text-anchor="start" x="3080" y="-401.15" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="3111,-395.38 3111,-413.12 3224,-413.12 3224,-395.38 3111,-395.38"/>
+<polygon fill="none" stroke="black" points="3111,-395.38 3111,-413.12 3224,-413.12 3224,-395.38 3111,-395.38"/>
+<text text-anchor="start" x="3115" y="-400.57" font-family="Helvetica,sans-Serif" font-size="9.00">originalPowerCapability</text>
+<polygon fill="white" stroke="none" points="3076,-377.62 3076,-395.38 3111,-395.38 3111,-377.62 3076,-377.62"/>
+<polygon fill="none" stroke="black" points="3076,-377.62 3076,-395.38 3111,-395.38 3111,-377.62 3076,-377.62"/>
+<text text-anchor="start" x="3080" y="-383.4" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="3111,-377.62 3111,-395.38 3224,-395.38 3224,-377.62 3111,-377.62"/>
+<polygon fill="none" stroke="black" points="3111,-377.62 3111,-395.38 3224,-395.38 3224,-377.62 3111,-377.62"/>
+<text text-anchor="start" x="3115" y="-382.82" font-family="Helvetica,sans-Serif" font-size="9.00">ratioPowerToEnergy</text>
+</g>
+<!-- BatteryPerformancePublic&#45;&gt;PowerCapabilityPublic -->
+<g id="edge15" class="edge">
+<title>BatteryPerformancePublic&#45;&gt;PowerCapabilityPublic</title>
+<path fill="none" stroke="#444444" d="M3054.34,-643.62C3066.42,-621.74 3087.72,-581.92 3103,-546.5 3115.43,-517.67 3127.3,-484.37 3136,-458.47"/>
+<polygon fill="#444444" stroke="#444444" points="3138.45,-451.14 3139.33,-459.87 3137.57,-453.78 3135.92,-458.73 3135.92,-458.73 3135.92,-458.73 3137.57,-453.78 3132.5,-457.6 3138.45,-451.14"/>
+<text text-anchor="middle" x="3182.82" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">batteryPerformancePublic_powerCapability</text>
+</g>
+<!-- RoundTripEfficiencyPublic -->
+<g id="node39" class="node">
+<title>RoundTripEfficiencyPublic</title>
+<polygon fill="#e74c3c" stroke="none" points="3274.62,-422 3274.62,-441.25 3429.38,-441.25 3429.38,-422 3274.62,-422"/>
+<polygon fill="none" stroke="black" points="3274.62,-422 3274.62,-441.25 3429.38,-441.25 3429.38,-422 3274.62,-422"/>
+<text text-anchor="start" x="3289" y="-428.75" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">RoundTripEfficiencyPublic</text>
+<polygon fill="white" stroke="none" points="3274.62,-404.25 3274.62,-422 3311.88,-422 3311.88,-404.25 3274.62,-404.25"/>
+<polygon fill="none" stroke="black" points="3274.62,-404.25 3274.62,-422 3311.88,-422 3311.88,-404.25 3274.62,-404.25"/>
+<text text-anchor="start" x="3278.62" y="-410.02" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="3311.88,-404.25 3311.88,-422 3429.38,-422 3429.38,-404.25 3311.88,-404.25"/>
+<polygon fill="none" stroke="black" points="3311.88,-404.25 3311.88,-422 3429.38,-422 3429.38,-404.25 3311.88,-404.25"/>
+<text text-anchor="start" x="3315.88" y="-409.45" font-family="Helvetica,sans-Serif" font-size="9.00">initialRoundTripEfficiency</text>
+<polygon fill="white" stroke="none" points="3274.62,-386.5 3274.62,-404.25 3311.88,-404.25 3311.88,-386.5 3274.62,-386.5"/>
+<polygon fill="none" stroke="black" points="3274.62,-386.5 3274.62,-404.25 3311.88,-404.25 3311.88,-386.5 3274.62,-386.5"/>
+<text text-anchor="start" x="3278.62" y="-392.27" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="3311.88,-386.5 3311.88,-404.25 3429.38,-404.25 3429.38,-386.5 3311.88,-386.5"/>
+<polygon fill="none" stroke="black" points="3311.88,-386.5 3311.88,-404.25 3429.38,-404.25 3429.38,-386.5 3311.88,-386.5"/>
+<text text-anchor="start" x="3315.88" y="-391.7" font-family="Helvetica,sans-Serif" font-size="9.00">roundTripEfficiencyAt50pct</text>
+</g>
+<!-- BatteryPerformancePublic&#45;&gt;RoundTripEfficiencyPublic -->
+<g id="edge16" class="edge">
+<title>BatteryPerformancePublic&#45;&gt;RoundTripEfficiencyPublic</title>
+<path fill="none" stroke="#444444" d="M3096.7,-643.35C3145.69,-625.36 3219.13,-593.03 3270,-546.5 3300.02,-519.05 3323.16,-478.15 3337.1,-449.24"/>
+<polygon fill="#444444" stroke="#444444" points="3340.43,-442.16 3340.28,-450.93 3339.25,-444.68 3337.02,-449.4 3337.02,-449.4 3337.02,-449.4 3339.25,-444.68 3333.77,-447.86 3340.43,-442.16"/>
+<text text-anchor="middle" x="3360.69" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">batteryPerformancePublic_roundTripEfficiency</text>
+</g>
+<!-- TemperatureConditionsPublic -->
+<g id="node41" class="node">
+<title>TemperatureConditionsPublic</title>
+<polygon fill="#e74c3c" stroke="none" points="3489.88,-422 3489.88,-441.25 3638.12,-441.25 3638.12,-422 3489.88,-422"/>
+<polygon fill="none" stroke="black" points="3489.88,-422 3489.88,-441.25 3638.12,-441.25 3638.12,-422 3489.88,-422"/>
+<text text-anchor="start" x="3493.88" y="-428.75" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">TemperatureConditionsPublic</text>
+<polygon fill="white" stroke="none" points="3489.88,-404.25 3489.88,-422 3533.25,-422 3533.25,-404.25 3489.88,-404.25"/>
+<polygon fill="none" stroke="black" points="3489.88,-404.25 3489.88,-422 3533.25,-422 3533.25,-404.25 3489.88,-404.25"/>
+<text text-anchor="start" x="3493.88" y="-410.02" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="3533.25,-404.25 3533.25,-422 3638.12,-422 3638.12,-404.25 3533.25,-404.25"/>
+<polygon fill="none" stroke="black" points="3533.25,-404.25 3533.25,-422 3638.12,-422 3638.12,-404.25 3533.25,-404.25"/>
+<text text-anchor="start" x="3537.25" y="-409.45" font-family="Helvetica,sans-Serif" font-size="9.00">tempRangeIdleLower</text>
+<polygon fill="white" stroke="none" points="3489.88,-386.5 3489.88,-404.25 3533.25,-404.25 3533.25,-386.5 3489.88,-386.5"/>
+<polygon fill="none" stroke="black" points="3489.88,-386.5 3489.88,-404.25 3533.25,-404.25 3533.25,-386.5 3489.88,-386.5"/>
+<text text-anchor="start" x="3493.88" y="-392.27" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="3533.25,-386.5 3533.25,-404.25 3638.12,-404.25 3638.12,-386.5 3533.25,-386.5"/>
+<polygon fill="none" stroke="black" points="3533.25,-386.5 3533.25,-404.25 3638.12,-404.25 3638.12,-386.5 3533.25,-386.5"/>
+<text text-anchor="start" x="3537.25" y="-391.7" font-family="Helvetica,sans-Serif" font-size="9.00">tempRangeIdleUpper</text>
+</g>
+<!-- BatteryPerformancePublic&#45;&gt;TemperatureConditionsPublic -->
+<g id="edge17" class="edge">
+<title>BatteryPerformancePublic&#45;&gt;TemperatureConditionsPublic</title>
+<path fill="none" stroke="#444444" d="M3110.79,-653.84C3195.52,-643.04 3344.62,-615.2 3452,-546.5 3490.98,-521.56 3523.64,-478.9 3543.45,-448.92"/>
+<polygon fill="#444444" stroke="#444444" points="3547.79,-442.23 3546.45,-450.91 3546.27,-444.57 3543.43,-448.95 3543.43,-448.95 3543.43,-448.95 3546.27,-444.57 3540.41,-446.99 3547.79,-442.23"/>
+<text text-anchor="middle" x="3552.7" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">batteryPerformancePublic_temperatureConditions</text>
+</g>
+<!-- BatteryPerformanceRestricted -->
+<g id="node31" class="node">
+<title>BatteryPerformanceRestricted</title>
+<polygon fill="#e74c3c" stroke="none" points="4394.25,-650.62 4394.25,-671.88 4543.75,-671.88 4543.75,-650.62 4394.25,-650.62"/>
+<polygon fill="none" stroke="black" points="4394.25,-650.62 4394.25,-671.88 4543.75,-671.88 4543.75,-650.62 4394.25,-650.62"/>
+<text text-anchor="start" x="4399.25" y="-658.38" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">BatteryPerformanceRestricted</text>
+</g>
+<!-- BatteryPerformanceRestricted&#45;&gt;BatteryLifetimeRestricted -->
+<g id="edge18" class="edge">
+<title>BatteryPerformanceRestricted&#45;&gt;BatteryLifetimeRestricted</title>
+<path fill="none" stroke="#444444" d="M4394.36,-654.72C4250.07,-642.72 3939.68,-610.1 3855.75,-546.5 3830.18,-527.12 3814.1,-494.95 3804.36,-467.26"/>
+<polygon fill="#444444" stroke="#444444" points="3801.92,-459.98 3807.87,-466.42 3802.8,-462.62 3804.46,-467.57 3804.46,-467.57 3804.46,-467.57 3802.8,-462.62 3801.05,-468.71 3801.92,-459.98"/>
+<text text-anchor="middle" x="3937.88" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">batteryPerformanceRestricted_batteryLifetime</text>
+</g>
+<!-- CapacityEnergyVoltageRestricted -->
+<g id="node33" class="node">
+<title>CapacityEnergyVoltageRestricted</title>
+<polygon fill="#e74c3c" stroke="none" points="3921.38,-448.62 3921.38,-467.88 4084.62,-467.88 4084.62,-448.62 3921.38,-448.62"/>
+<polygon fill="none" stroke="black" points="3921.38,-448.62 3921.38,-467.88 4084.62,-467.88 4084.62,-448.62 3921.38,-448.62"/>
+<text text-anchor="start" x="3925.38" y="-455.38" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">CapacityEnergyVoltageRestricted</text>
+<polygon fill="white" stroke="none" points="3921.38,-430.88 3921.38,-448.62 3959.88,-448.62 3959.88,-430.88 3921.38,-430.88"/>
+<polygon fill="none" stroke="black" points="3921.38,-430.88 3921.38,-448.62 3959.88,-448.62 3959.88,-430.88 3921.38,-430.88"/>
+<text text-anchor="start" x="3925.38" y="-436.65" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="3959.88,-430.88 3959.88,-448.62 4084.62,-448.62 4084.62,-430.88 3959.88,-430.88"/>
+<polygon fill="none" stroke="black" points="3959.88,-430.88 3959.88,-448.62 4084.62,-448.62 4084.62,-430.88 3959.88,-430.88"/>
+<text text-anchor="start" x="3963.88" y="-436.07" font-family="Helvetica,sans-Serif" font-size="9.00">capacityFade</text>
+<polygon fill="white" stroke="none" points="3921.38,-413.12 3921.38,-430.88 3959.88,-430.88 3959.88,-413.12 3921.38,-413.12"/>
+<polygon fill="none" stroke="black" points="3921.38,-413.12 3921.38,-430.88 3959.88,-430.88 3959.88,-413.12 3921.38,-413.12"/>
+<text text-anchor="start" x="3925.38" y="-418.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="3959.88,-413.12 3959.88,-430.88 4084.62,-430.88 4084.62,-413.12 3959.88,-413.12"/>
+<polygon fill="none" stroke="black" points="3959.88,-413.12 3959.88,-430.88 4084.62,-430.88 4084.62,-413.12 3959.88,-413.12"/>
+<text text-anchor="start" x="3963.88" y="-418.32" font-family="Helvetica,sans-Serif" font-size="9.00">remainingCapacity</text>
+<polygon fill="white" stroke="none" points="3921.38,-395.38 3921.38,-413.12 3959.88,-413.12 3959.88,-395.38 3921.38,-395.38"/>
+<polygon fill="none" stroke="black" points="3921.38,-395.38 3921.38,-413.12 3959.88,-413.12 3959.88,-395.38 3921.38,-395.38"/>
+<text text-anchor="start" x="3925.38" y="-401.15" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="3959.88,-395.38 3959.88,-413.12 4084.62,-413.12 4084.62,-395.38 3959.88,-395.38"/>
+<polygon fill="none" stroke="black" points="3959.88,-395.38 3959.88,-413.12 4084.62,-413.12 4084.62,-395.38 3959.88,-395.38"/>
+<text text-anchor="start" x="3963.88" y="-400.57" font-family="Helvetica,sans-Serif" font-size="9.00">remainingUsableBattEnergy</text>
+<polygon fill="white" stroke="none" points="3921.38,-377.62 3921.38,-395.38 3959.88,-395.38 3959.88,-377.62 3921.38,-377.62"/>
+<polygon fill="none" stroke="black" points="3921.38,-377.62 3921.38,-395.38 3959.88,-395.38 3959.88,-377.62 3921.38,-377.62"/>
+<text text-anchor="start" x="3925.38" y="-383.4" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="3959.88,-377.62 3959.88,-395.38 4084.62,-395.38 4084.62,-377.62 3959.88,-377.62"/>
+<polygon fill="none" stroke="black" points="3959.88,-377.62 3959.88,-395.38 4084.62,-395.38 4084.62,-377.62 3959.88,-377.62"/>
+<text text-anchor="start" x="3963.88" y="-382.82" font-family="Helvetica,sans-Serif" font-size="9.00">stateOfCertifiedEnergy</text>
+<polygon fill="white" stroke="none" points="3921.38,-359.88 3921.38,-377.62 3959.88,-377.62 3959.88,-359.88 3921.38,-359.88"/>
+<polygon fill="none" stroke="black" points="3921.38,-359.88 3921.38,-377.62 3959.88,-377.62 3959.88,-359.88 3921.38,-359.88"/>
+<text text-anchor="start" x="3925.38" y="-365.65" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="3959.88,-359.88 3959.88,-377.62 4084.62,-377.62 4084.62,-359.88 3959.88,-359.88"/>
+<polygon fill="none" stroke="black" points="3959.88,-359.88 3959.88,-377.62 4084.62,-377.62 4084.62,-359.88 3959.88,-359.88"/>
+<text text-anchor="start" x="3963.88" y="-365.07" font-family="Helvetica,sans-Serif" font-size="9.00">stateOfCharge</text>
+</g>
+<!-- BatteryPerformanceRestricted&#45;&gt;CapacityEnergyVoltageRestricted -->
+<g id="edge19" class="edge">
+<title>BatteryPerformanceRestricted&#45;&gt;CapacityEnergyVoltageRestricted</title>
+<path fill="none" stroke="#444444" d="M4394.57,-649.82C4284.8,-632.97 4087.12,-596.52 4037.25,-546.5 4018.91,-528.11 4010.01,-501.22 4005.82,-476.54"/>
+<polygon fill="#444444" stroke="#444444" points="4004.66,-468.76 4009.4,-476.15 4005.07,-471.52 4005.84,-476.68 4005.84,-476.68 4005.84,-476.68 4005.07,-471.52 4002.28,-477.21 4004.66,-468.76"/>
+<text text-anchor="middle" x="4133.62" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">batteryPerformanceRestricted_capacityEnergyVoltage</text>
+</g>
+<!-- InternalResistanceRestricted -->
+<g id="node35" class="node">
+<title>InternalResistanceRestricted</title>
+<polygon fill="#e74c3c" stroke="none" points="4128.5,-413.12 4128.5,-432.38 4285.5,-432.38 4285.5,-413.12 4128.5,-413.12"/>
+<polygon fill="none" stroke="black" points="4128.5,-413.12 4128.5,-432.38 4285.5,-432.38 4285.5,-413.12 4128.5,-413.12"/>
+<text text-anchor="start" x="4140.25" y="-419.88" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">InternalResistanceRestricted</text>
+<polygon fill="white" stroke="none" points="4128.5,-395.38 4128.5,-413.12 4165.75,-413.12 4165.75,-395.38 4128.5,-395.38"/>
+<polygon fill="none" stroke="black" points="4128.5,-395.38 4128.5,-413.12 4165.75,-413.12 4165.75,-395.38 4128.5,-395.38"/>
+<text text-anchor="start" x="4132.5" y="-401.15" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="4165.75,-395.38 4165.75,-413.12 4285.5,-413.12 4285.5,-395.38 4165.75,-395.38"/>
+<polygon fill="none" stroke="black" points="4165.75,-395.38 4165.75,-413.12 4285.5,-413.12 4285.5,-395.38 4165.75,-395.38"/>
+<text text-anchor="start" x="4169.75" y="-400.57" font-family="Helvetica,sans-Serif" font-size="9.00">internalResistanceIncrease</text>
+</g>
+<!-- BatteryPerformanceRestricted&#45;&gt;InternalResistanceRestricted -->
+<g id="edge20" class="edge">
+<title>BatteryPerformanceRestricted&#45;&gt;InternalResistanceRestricted</title>
+<path fill="none" stroke="#444444" d="M4407.01,-643.28C4357.02,-626.53 4288.45,-596.1 4247,-546.5 4221.68,-516.2 4212.38,-470.15 4208.97,-441.32"/>
+<polygon fill="#444444" stroke="#444444" points="4208.15,-433.46 4212.56,-441.05 4208.44,-436.23 4208.98,-441.42 4208.98,-441.42 4208.98,-441.42 4208.44,-436.23 4205.4,-441.79 4208.15,-433.46"/>
+<text text-anchor="middle" x="4335.5" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">batteryPerformanceRestricted_internalResistance</text>
+</g>
+<!-- NegativeEvents -->
+<g id="node36" class="node">
+<title>NegativeEvents</title>
+<polygon fill="#e74c3c" stroke="none" points="4328.75,-430.88 4328.75,-450.12 4469.25,-450.12 4469.25,-430.88 4328.75,-430.88"/>
+<polygon fill="none" stroke="black" points="4328.75,-430.88 4328.75,-450.12 4469.25,-450.12 4469.25,-430.88 4328.75,-430.88"/>
+<text text-anchor="start" x="4363" y="-437.62" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">NegativeEvents</text>
+<polygon fill="white" stroke="none" points="4328.75,-413.12 4328.75,-430.88 4363.75,-430.88 4363.75,-413.12 4328.75,-413.12"/>
+<polygon fill="none" stroke="black" points="4328.75,-413.12 4328.75,-430.88 4363.75,-430.88 4363.75,-413.12 4328.75,-413.12"/>
+<text text-anchor="start" x="4332.75" y="-418.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="4363.75,-413.12 4363.75,-430.88 4469.25,-430.88 4469.25,-413.12 4363.75,-413.12"/>
+<polygon fill="none" stroke="black" points="4363.75,-413.12 4363.75,-430.88 4469.25,-430.88 4469.25,-413.12 4363.75,-413.12"/>
+<text text-anchor="start" x="4367.75" y="-418.32" font-family="Helvetica,sans-Serif" font-size="9.00">deepDischargeEvents</text>
+<polygon fill="white" stroke="none" points="4328.75,-395.38 4328.75,-413.12 4363.75,-413.12 4363.75,-395.38 4328.75,-395.38"/>
+<polygon fill="none" stroke="black" points="4328.75,-395.38 4328.75,-413.12 4363.75,-413.12 4363.75,-395.38 4328.75,-395.38"/>
+<text text-anchor="start" x="4332.75" y="-401.15" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">uri </text>
+<polygon fill="white" stroke="none" points="4363.75,-395.38 4363.75,-413.12 4469.25,-413.12 4469.25,-395.38 4363.75,-395.38"/>
+<polygon fill="none" stroke="black" points="4363.75,-395.38 4363.75,-413.12 4469.25,-413.12 4469.25,-395.38 4363.75,-395.38"/>
+<text text-anchor="start" x="4367.75" y="-400.57" font-family="Helvetica,sans-Serif" font-size="9.00">informationOnAccidents</text>
+<polygon fill="white" stroke="none" points="4328.75,-377.62 4328.75,-395.38 4363.75,-395.38 4363.75,-377.62 4328.75,-377.62"/>
+<polygon fill="none" stroke="black" points="4328.75,-377.62 4328.75,-395.38 4363.75,-395.38 4363.75,-377.62 4328.75,-377.62"/>
+<text text-anchor="start" x="4332.75" y="-383.4" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="4363.75,-377.62 4363.75,-395.38 4469.25,-395.38 4469.25,-377.62 4363.75,-377.62"/>
+<polygon fill="none" stroke="black" points="4363.75,-377.62 4363.75,-395.38 4469.25,-395.38 4469.25,-377.62 4363.75,-377.62"/>
+<text text-anchor="start" x="4367.75" y="-382.82" font-family="Helvetica,sans-Serif" font-size="9.00">overchargeEvents</text>
+</g>
+<!-- BatteryPerformanceRestricted&#45;&gt;NegativeEvents -->
+<g id="edge24" class="edge">
+<title>BatteryPerformanceRestricted&#45;&gt;NegativeEvents</title>
+<path fill="none" stroke="#444444" d="M4464.19,-643.38C4453.45,-605.74 4427.24,-513.87 4411.52,-458.76"/>
+<polygon fill="#444444" stroke="#444444" points="4409.33,-451.09 4414.99,-457.79 4410.09,-453.76 4411.53,-458.78 4411.53,-458.78 4411.53,-458.78 4410.09,-453.76 4408.06,-459.77 4409.33,-451.09"/>
+<text text-anchor="middle" x="4463.1" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">negativeEvents</text>
+</g>
+<!-- PowerCapabilityRestricted -->
+<g id="node38" class="node">
+<title>PowerCapabilityRestricted</title>
+<polygon fill="#e74c3c" stroke="none" points="4512,-422 4512,-441.25 4666,-441.25 4666,-422 4512,-422"/>
+<polygon fill="none" stroke="black" points="4512,-422 4512,-441.25 4666,-441.25 4666,-422 4512,-422"/>
+<text text-anchor="start" x="4527.12" y="-428.75" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">PowerCapabilityRestricted</text>
+<polygon fill="white" stroke="none" points="4512,-404.25 4512,-422 4549.25,-422 4549.25,-404.25 4512,-404.25"/>
+<polygon fill="none" stroke="black" points="4512,-404.25 4512,-422 4549.25,-422 4549.25,-404.25 4512,-404.25"/>
+<text text-anchor="start" x="4516" y="-410.02" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="4549.25,-404.25 4549.25,-422 4666,-422 4666,-404.25 4549.25,-404.25"/>
+<polygon fill="none" stroke="black" points="4549.25,-404.25 4549.25,-422 4666,-422 4666,-404.25 4549.25,-404.25"/>
+<text text-anchor="start" x="4553.25" y="-409.45" font-family="Helvetica,sans-Serif" font-size="9.00">powerFade</text>
+<polygon fill="white" stroke="none" points="4512,-386.5 4512,-404.25 4549.25,-404.25 4549.25,-386.5 4512,-386.5"/>
+<polygon fill="none" stroke="black" points="4512,-386.5 4512,-404.25 4549.25,-404.25 4549.25,-386.5 4512,-386.5"/>
+<text text-anchor="start" x="4516" y="-392.27" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="4549.25,-386.5 4549.25,-404.25 4666,-404.25 4666,-386.5 4549.25,-386.5"/>
+<polygon fill="none" stroke="black" points="4549.25,-386.5 4549.25,-404.25 4666,-404.25 4666,-386.5 4549.25,-386.5"/>
+<text text-anchor="start" x="4553.25" y="-391.7" font-family="Helvetica,sans-Serif" font-size="9.00">remainingPowerCapability</text>
+</g>
+<!-- BatteryPerformanceRestricted&#45;&gt;PowerCapabilityRestricted -->
+<g id="edge21" class="edge">
+<title>BatteryPerformanceRestricted&#45;&gt;PowerCapabilityRestricted</title>
+<path fill="none" stroke="#444444" d="M4477.25,-643.38C4496.75,-603.51 4546.02,-502.76 4572.14,-449.35"/>
+<polygon fill="#444444" stroke="#444444" points="4575.59,-442.29 4575.31,-451.06 4574.37,-444.79 4572.08,-449.48 4572.08,-449.48 4572.08,-449.48 4574.37,-444.79 4568.84,-447.9 4575.59,-442.29"/>
+<text text-anchor="middle" x="4613.38" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">batteryPerformanceRestricted_powerCapability</text>
+</g>
+<!-- RoundTripEfficiencyRestricted -->
+<g id="node40" class="node">
+<title>RoundTripEfficiencyRestricted</title>
+<polygon fill="#e74c3c" stroke="none" points="4709.5,-448.62 4709.5,-467.88 4878.5,-467.88 4878.5,-448.62 4709.5,-448.62"/>
+<polygon fill="none" stroke="black" points="4709.5,-448.62 4709.5,-467.88 4878.5,-467.88 4878.5,-448.62 4709.5,-448.62"/>
+<text text-anchor="start" x="4722.38" y="-455.38" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">RoundTripEfficiencyRestricted</text>
+<polygon fill="white" stroke="none" points="4709.5,-430.88 4709.5,-448.62 4746.75,-448.62 4746.75,-430.88 4709.5,-430.88"/>
+<polygon fill="none" stroke="black" points="4709.5,-430.88 4709.5,-448.62 4746.75,-448.62 4746.75,-430.88 4709.5,-430.88"/>
+<text text-anchor="start" x="4713.5" y="-436.65" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="4746.75,-430.88 4746.75,-448.62 4878.5,-448.62 4878.5,-430.88 4746.75,-430.88"/>
+<polygon fill="none" stroke="black" points="4746.75,-430.88 4746.75,-448.62 4878.5,-448.62 4878.5,-430.88 4746.75,-430.88"/>
+<text text-anchor="start" x="4750.75" y="-436.07" font-family="Helvetica,sans-Serif" font-size="9.00">currentSelfDischargeRate</text>
+<polygon fill="white" stroke="none" points="4709.5,-413.12 4709.5,-430.88 4746.75,-430.88 4746.75,-413.12 4709.5,-413.12"/>
+<polygon fill="none" stroke="black" points="4709.5,-413.12 4709.5,-430.88 4746.75,-430.88 4746.75,-413.12 4709.5,-413.12"/>
+<text text-anchor="start" x="4713.5" y="-418.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="4746.75,-413.12 4746.75,-430.88 4878.5,-430.88 4878.5,-413.12 4746.75,-413.12"/>
+<polygon fill="none" stroke="black" points="4746.75,-413.12 4746.75,-430.88 4878.5,-430.88 4878.5,-413.12 4746.75,-413.12"/>
+<text text-anchor="start" x="4750.75" y="-418.32" font-family="Helvetica,sans-Serif" font-size="9.00">evolutionSelfDischargeRates</text>
+<polygon fill="white" stroke="none" points="4709.5,-395.38 4709.5,-413.12 4746.75,-413.12 4746.75,-395.38 4709.5,-395.38"/>
+<polygon fill="none" stroke="black" points="4709.5,-395.38 4709.5,-413.12 4746.75,-413.12 4746.75,-395.38 4709.5,-395.38"/>
+<text text-anchor="start" x="4713.5" y="-401.15" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="4746.75,-395.38 4746.75,-413.12 4878.5,-413.12 4878.5,-395.38 4746.75,-395.38"/>
+<polygon fill="none" stroke="black" points="4746.75,-395.38 4746.75,-413.12 4878.5,-413.12 4878.5,-395.38 4746.75,-395.38"/>
+<text text-anchor="start" x="4750.75" y="-400.57" font-family="Helvetica,sans-Serif" font-size="9.00">initialSelfDischargeRate</text>
+<polygon fill="white" stroke="none" points="4709.5,-377.62 4709.5,-395.38 4746.75,-395.38 4746.75,-377.62 4709.5,-377.62"/>
+<polygon fill="none" stroke="black" points="4709.5,-377.62 4709.5,-395.38 4746.75,-395.38 4746.75,-377.62 4709.5,-377.62"/>
+<text text-anchor="start" x="4713.5" y="-383.4" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="4746.75,-377.62 4746.75,-395.38 4878.5,-395.38 4878.5,-377.62 4746.75,-377.62"/>
+<polygon fill="none" stroke="black" points="4746.75,-377.62 4746.75,-395.38 4878.5,-395.38 4878.5,-377.62 4746.75,-377.62"/>
+<text text-anchor="start" x="4750.75" y="-382.82" font-family="Helvetica,sans-Serif" font-size="9.00">remainingRoundTripEfficiency</text>
+<polygon fill="white" stroke="none" points="4709.5,-359.88 4709.5,-377.62 4746.75,-377.62 4746.75,-359.88 4709.5,-359.88"/>
+<polygon fill="none" stroke="black" points="4709.5,-359.88 4709.5,-377.62 4746.75,-377.62 4746.75,-359.88 4709.5,-359.88"/>
+<text text-anchor="start" x="4713.5" y="-365.65" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">decimal </text>
+<polygon fill="white" stroke="none" points="4746.75,-359.88 4746.75,-377.62 4878.5,-377.62 4878.5,-359.88 4746.75,-359.88"/>
+<polygon fill="none" stroke="black" points="4746.75,-359.88 4746.75,-377.62 4878.5,-377.62 4878.5,-359.88 4746.75,-359.88"/>
+<text text-anchor="start" x="4750.75" y="-365.07" font-family="Helvetica,sans-Serif" font-size="9.00">roundTripEfficiencyFade</text>
+</g>
+<!-- BatteryPerformanceRestricted&#45;&gt;RoundTripEfficiencyRestricted -->
+<g id="edge22" class="edge">
+<title>BatteryPerformanceRestricted&#45;&gt;RoundTripEfficiencyRestricted</title>
+<path fill="none" stroke="#444444" d="M4525.2,-643.33C4577.08,-625.59 4654.02,-593.67 4708,-546.5 4730.54,-526.81 4749.54,-499.84 4763.91,-475.44"/>
+<polygon fill="#444444" stroke="#444444" points="4767.8,-468.68 4766.93,-477.41 4766.41,-471.09 4763.81,-475.61 4763.81,-475.61 4763.81,-475.61 4766.41,-471.09 4760.69,-473.82 4767.8,-468.68"/>
+<text text-anchor="middle" x="4806.51" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">batteryPerformanceRestricted_roundTripEfficiency</text>
+</g>
+<!-- TemperatureConditionsRestricted -->
+<g id="node42" class="node">
+<title>TemperatureConditionsRestricted</title>
+<polygon fill="#e74c3c" stroke="none" points="4922.25,-448.62 4922.25,-467.88 5107.75,-467.88 5107.75,-448.62 4922.25,-448.62"/>
+<polygon fill="none" stroke="black" points="4922.25,-448.62 4922.25,-467.88 5107.75,-467.88 5107.75,-448.62 4922.25,-448.62"/>
+<text text-anchor="start" x="4936.25" y="-455.38" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="10.00" fill="white">TemperatureConditionsRestricted</text>
+<polygon fill="white" stroke="none" points="4922.25,-430.88 4922.25,-448.62 4957.25,-448.62 4957.25,-430.88 4922.25,-430.88"/>
+<polygon fill="none" stroke="black" points="4922.25,-430.88 4922.25,-448.62 4957.25,-448.62 4957.25,-430.88 4922.25,-430.88"/>
+<text text-anchor="start" x="4926.25" y="-436.65" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="4957.25,-430.88 4957.25,-448.62 5107.75,-448.62 5107.75,-430.88 4957.25,-430.88"/>
+<polygon fill="none" stroke="black" points="4957.25,-430.88 4957.25,-448.62 5107.75,-448.62 5107.75,-430.88 4957.25,-430.88"/>
+<text text-anchor="start" x="4961.25" y="-436.07" font-family="Helvetica,sans-Serif" font-size="9.00">temperatureInformation</text>
+<polygon fill="white" stroke="none" points="4922.25,-413.12 4922.25,-430.88 4957.25,-430.88 4957.25,-413.12 4922.25,-413.12"/>
+<polygon fill="none" stroke="black" points="4922.25,-413.12 4922.25,-430.88 4957.25,-430.88 4957.25,-413.12 4922.25,-413.12"/>
+<text text-anchor="start" x="4926.25" y="-418.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="4957.25,-413.12 4957.25,-430.88 5107.75,-430.88 5107.75,-413.12 4957.25,-413.12"/>
+<polygon fill="none" stroke="black" points="4957.25,-413.12 4957.25,-430.88 5107.75,-430.88 5107.75,-413.12 4957.25,-413.12"/>
+<text text-anchor="start" x="4961.25" y="-418.32" font-family="Helvetica,sans-Serif" font-size="9.00">timeChargingExtremeTempsAbove</text>
+<polygon fill="white" stroke="none" points="4922.25,-395.38 4922.25,-413.12 4957.25,-413.12 4957.25,-395.38 4922.25,-395.38"/>
+<polygon fill="none" stroke="black" points="4922.25,-395.38 4922.25,-413.12 4957.25,-413.12 4957.25,-395.38 4922.25,-395.38"/>
+<text text-anchor="start" x="4926.25" y="-401.15" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="4957.25,-395.38 4957.25,-413.12 5107.75,-413.12 5107.75,-395.38 4957.25,-395.38"/>
+<polygon fill="none" stroke="black" points="4957.25,-395.38 4957.25,-413.12 5107.75,-413.12 5107.75,-395.38 4957.25,-395.38"/>
+<text text-anchor="start" x="4961.25" y="-400.57" font-family="Helvetica,sans-Serif" font-size="9.00">timeChargingExtremeTempsBelow</text>
+<polygon fill="white" stroke="none" points="4922.25,-377.62 4922.25,-395.38 4957.25,-395.38 4957.25,-377.62 4922.25,-377.62"/>
+<polygon fill="none" stroke="black" points="4922.25,-377.62 4922.25,-395.38 4957.25,-395.38 4957.25,-377.62 4922.25,-377.62"/>
+<text text-anchor="start" x="4926.25" y="-383.4" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="4957.25,-377.62 4957.25,-395.38 5107.75,-395.38 5107.75,-377.62 4957.25,-377.62"/>
+<polygon fill="none" stroke="black" points="4957.25,-377.62 4957.25,-395.38 5107.75,-395.38 5107.75,-377.62 4957.25,-377.62"/>
+<text text-anchor="start" x="4961.25" y="-382.82" font-family="Helvetica,sans-Serif" font-size="9.00">timeInExtremeTempsAbove</text>
+<polygon fill="white" stroke="none" points="4922.25,-359.88 4922.25,-377.62 4957.25,-377.62 4957.25,-359.88 4922.25,-359.88"/>
+<polygon fill="none" stroke="black" points="4922.25,-359.88 4922.25,-377.62 4957.25,-377.62 4957.25,-359.88 4922.25,-359.88"/>
+<text text-anchor="start" x="4926.25" y="-365.65" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#666666">integer </text>
+<polygon fill="white" stroke="none" points="4957.25,-359.88 4957.25,-377.62 5107.75,-377.62 5107.75,-359.88 4957.25,-359.88"/>
+<polygon fill="none" stroke="black" points="4957.25,-359.88 4957.25,-377.62 5107.75,-377.62 5107.75,-359.88 4957.25,-359.88"/>
+<text text-anchor="start" x="4961.25" y="-365.07" font-family="Helvetica,sans-Serif" font-size="9.00">timeInExtremeTempsBelow</text>
+</g>
+<!-- BatteryPerformanceRestricted&#45;&gt;TemperatureConditionsRestricted -->
+<g id="edge23" class="edge">
+<title>BatteryPerformanceRestricted&#45;&gt;TemperatureConditionsRestricted</title>
+<path fill="none" stroke="#444444" d="M4543.73,-654.81C4635.46,-645.14 4792.75,-618.6 4906,-546.5 4934.36,-528.45 4958.97,-500.59 4977.59,-475.14"/>
+<polygon fill="#444444" stroke="#444444" points="4982.22,-468.67 4980.49,-477.27 4980.6,-470.94 4977.56,-475.18 4977.56,-475.18 4977.56,-475.18 4980.6,-470.94 4974.64,-473.08 4982.22,-468.67"/>
+<text text-anchor="middle" x="5014.07" y="-538.9" font-family="Helvetica,sans-Serif" font-size="8.00" fill="#1a1a2e">batteryPerformanceRestricted_temperatureConditions</text>
+</g>
+</g>
+</svg>

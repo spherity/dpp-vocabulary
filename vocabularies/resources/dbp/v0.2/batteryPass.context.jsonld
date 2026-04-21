@@ -150,6 +150,14 @@
                 "general": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/general",
                     "@type": "@id"
+                },
+                "generalInformationPublic_identifiers": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/generalInformationPublic_identifiers",
+                    "@type": "@id"
+                },
+                "generalInformationPublic_productData": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/generalInformationPublic_productData",
+                    "@type": "@id"
                 }
             }
         },
@@ -189,12 +197,12 @@
             "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/GeneralInformationRestricted",
             "@context": {
                 "@protected": true,
-                "identifiers": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/identifiers",
+                "generalInformationRestricted_identifiers": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/generalInformationRestricted_identifiers",
                     "@type": "@id"
                 },
-                "productData": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/productData",
+                "generalInformationRestricted_productData": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/generalInformationRestricted_productData",
                     "@type": "@id"
                 }
             }
@@ -609,7 +617,36 @@
                 }
             }
         },
-        "BatteryPerformancePublic": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryPerformancePublic",
+        "BatteryPerformancePublic": {
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryPerformancePublic",
+            "@context": {
+                "@protected": true,
+                "batteryPerformancePublic_capacityEnergyVoltage": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPerformancePublic_capacityEnergyVoltage",
+                    "@type": "@id"
+                },
+                "batteryPerformancePublic_powerCapability": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPerformancePublic_powerCapability",
+                    "@type": "@id"
+                },
+                "batteryPerformancePublic_roundTripEfficiency": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPerformancePublic_roundTripEfficiency",
+                    "@type": "@id"
+                },
+                "batteryPerformancePublic_internalResistance": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPerformancePublic_internalResistance",
+                    "@type": "@id"
+                },
+                "batteryPerformancePublic_batteryLifetime": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPerformancePublic_batteryLifetime",
+                    "@type": "@id"
+                },
+                "batteryPerformancePublic_temperatureConditions": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPerformancePublic_temperatureConditions",
+                    "@type": "@id"
+                }
+            }
+        },
         "CapacityEnergyVoltageRestricted": {
             "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/CapacityEnergyVoltageRestricted",
             "@context": {
@@ -756,28 +793,28 @@
             "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/BatteryPerformanceRestricted",
             "@context": {
                 "@protected": true,
-                "capacityEnergyVoltage": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/capacityEnergyVoltage",
+                "batteryPerformanceRestricted_capacityEnergyVoltage": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPerformanceRestricted_capacityEnergyVoltage",
                     "@type": "@id"
                 },
-                "powerCapability": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/powerCapability",
+                "batteryPerformanceRestricted_powerCapability": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPerformanceRestricted_powerCapability",
                     "@type": "@id"
                 },
-                "roundTripEfficiency": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/roundTripEfficiency",
+                "batteryPerformanceRestricted_roundTripEfficiency": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPerformanceRestricted_roundTripEfficiency",
                     "@type": "@id"
                 },
-                "internalResistance": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/internalResistance",
+                "batteryPerformanceRestricted_internalResistance": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPerformanceRestricted_internalResistance",
                     "@type": "@id"
                 },
-                "batteryLifetime": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryLifetime",
+                "batteryPerformanceRestricted_batteryLifetime": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPerformanceRestricted_batteryLifetime",
                     "@type": "@id"
                 },
-                "temperatureConditions": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/temperatureConditions",
+                "batteryPerformanceRestricted_temperatureConditions": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPerformanceRestricted_temperatureConditions",
                     "@type": "@id"
                 },
                 "negativeEvents": {

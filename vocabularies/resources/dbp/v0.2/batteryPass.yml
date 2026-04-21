@@ -472,14 +472,14 @@ property:
     comment: |
       General battery attributes including warranty period, category, and mass.
 
-  - id: identifiers
+  - id: generalInformationPublic_identifiers
     label: Identifiers
     domain: dbp:GeneralInformationPublic
     range: dbp:BatteryIdentifiers
     comment: |
       Battery identifiers sub-section. In the restricted context points to OperatorIdentifiers.
 
-  - id: productData
+  - id: generalInformationPublic_productData
     label: Product Data
     domain: dbp:GeneralInformationPublic
     range: dbp:ProductData
@@ -487,14 +487,14 @@ property:
       Product and operator data sub-section. In the restricted context points to RestrictedProductData.
 
   # --- GeneralInformationRestricted ---
-  - id: identifiers
+  - id: generalInformationRestricted_identifiers
     label: Identifiers
     domain: dbp:GeneralInformationRestricted
     range: dbp:OperatorIdentifiers
     comment: |
       Operator identifiers sub-section within the restricted general information context.
 
-  - id: productData
+  - id: generalInformationRestricted_productData
     label: Product Data
     domain: dbp:GeneralInformationRestricted
     range: dbp:RestrictedProductData
@@ -1060,42 +1060,42 @@ property:
       Upper boundary of the temperature range for idle state storage in degrees Celsius.
 
   # --- BatteryPerformancePublic ---
-  - id: capacityEnergyVoltage
+  - id: batteryPerformancePublic_capacityEnergyVoltage
     label: Capacity Energy and Voltage
     domain: dbp:BatteryPerformancePublic
     range: dbp:CapacityEnergyVoltagePublic
     comment: |
       Capacity, energy, and voltage sub-section. Applied to both public and restricted performance containers.
 
-  - id: powerCapability
+  - id: batteryPerformancePublic_powerCapability
     label: Power Capability
     domain: dbp:BatteryPerformancePublic
     range: dbp:PowerCapabilityPublic
     comment: |
       Power capability sub-section. Applied to both public and restricted performance containers.
 
-  - id: roundTripEfficiency
+  - id: batteryPerformancePublic_roundTripEfficiency
     label: Round Trip Efficiency
     domain: dbp:BatteryPerformancePublic
     range: dbp:RoundTripEfficiencyPublic
     comment: |
       Round trip efficiency and self-discharge sub-section. Applied to both public and restricted performance containers.
 
-  - id: internalResistance
+  - id: batteryPerformancePublic_internalResistance
     label: Internal Resistance
     domain: dbp:BatteryPerformancePublic
     range: dbp:InternalResistancePublic
     comment: |
       Internal resistance sub-section. Applied to both public and restricted performance containers.
 
-  - id: batteryLifetime
+  - id: batteryPerformancePublic_batteryLifetime
     label: Battery Lifetime
     domain: dbp:BatteryPerformancePublic
     range: dbp:BatteryLifetimePublic
     comment: |
       Battery lifetime sub-section. Applied to both public and restricted performance containers.
 
-  - id: temperatureConditions
+  - id: batteryPerformancePublic_temperatureConditions
     label: Temperature Conditions
     domain: dbp:BatteryPerformancePublic
     range: dbp:TemperatureConditionsPublic
@@ -1103,42 +1103,42 @@ property:
       Temperature conditions sub-section of the public battery performance container.
 
   # --- BatteryPerformanceRestricted ---
-  - id: capacityEnergyVoltage
+  - id: batteryPerformanceRestricted_capacityEnergyVoltage
     label: Capacity Energy and Voltage
     domain: dbp:BatteryPerformanceRestricted
     range: dbp:CapacityEnergyVoltageRestricted
     comment: |
       Dynamic restricted capacity, energy, and voltage sub-section.
 
-  - id: powerCapability
+  - id: batteryPerformanceRestricted_powerCapability
     label: Power Capability
     domain: dbp:BatteryPerformanceRestricted
     range: dbp:PowerCapabilityRestricted
     comment: |
       Dynamic restricted power capability sub-section.
 
-  - id: roundTripEfficiency
+  - id: batteryPerformanceRestricted_roundTripEfficiency
     label: Round Trip Efficiency
     domain: dbp:BatteryPerformanceRestricted
     range: dbp:RoundTripEfficiencyRestricted
     comment: |
       Dynamic restricted round trip efficiency and self-discharge sub-section.
 
-  - id: internalResistance
+  - id: batteryPerformanceRestricted_internalResistance
     label: Internal Resistance
     domain: dbp:BatteryPerformanceRestricted
     range: dbp:InternalResistanceRestricted
     comment: |
       Dynamic restricted internal resistance sub-section.
 
-  - id: batteryLifetime
+  - id: batteryPerformanceRestricted_batteryLifetime
     label: Battery Lifetime
     domain: dbp:BatteryPerformanceRestricted
     range: dbp:BatteryLifetimeRestricted
     comment: |
       Dynamic restricted battery lifetime sub-section.
 
-  - id: temperatureConditions
+  - id: batteryPerformanceRestricted_temperatureConditions
     label: Temperature Conditions
     domain: dbp:BatteryPerformanceRestricted
     range: dbp:TemperatureConditionsRestricted
