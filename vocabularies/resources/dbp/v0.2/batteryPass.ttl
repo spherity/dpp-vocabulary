@@ -246,15 +246,6 @@ dbp:manufacturingDate a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:dppInfo a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:GeneralInformationPublic ;
-    rdfs:range dbp:DPPInfo ;
-    rdfs:label "DPP Info" ;
-    rdfs:comment """<div>Digital Product Passport metadata associated with this battery passport instance.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/> ;
-    vs:term_status "stable" ;
-.
-
 dbp:general a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:GeneralInformationPublic ;
     rdfs:range dbp:BatteryAttributes ;
@@ -1745,7 +1736,6 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:deepDischargeEvents,
         dbp:dismantlingManuals,
         dbp:dppGranularity,
-        dbp:dppInfo,
         dbp:dppStatus,
         dbp:dueDiligenceReport,
         dbp:economicOperator,

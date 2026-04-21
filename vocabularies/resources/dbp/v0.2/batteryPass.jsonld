@@ -452,21 +452,6 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:dppInfo",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
-        "rdfs:domain": "dbp:GeneralInformationPublic",
-        "rdfs:range": "dbp:DPPInfo",
-        "rdfs:label": "DPP Info",
-        "rdfs:comment": {
-            "@value": "<div>Digital Product Passport metadata associated with this battery passport instance.</div>",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
-        },
-        "vs:term_status": "stable",
-        "mentioned": [{
-            "@id": "vocab",
-            "@type": "jsonld:Context"
-        }]
-    }, {
         "@id": "dbp:general",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:GeneralInformationPublic",

@@ -465,13 +465,6 @@ property:
       Date on which the battery was manufactured.
 
   # --- GeneralInformationPublic ---
-  - id: dppInfo
-    label: DPP Info
-    domain: dbp:GeneralInformationPublic
-    range: dbp:DPPInfo
-    comment: |
-      Digital Product Passport metadata associated with this battery passport instance.
-
   - id: general
     label: General
     domain: dbp:GeneralInformationPublic
