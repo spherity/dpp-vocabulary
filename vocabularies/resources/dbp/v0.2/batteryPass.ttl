@@ -5,6 +5,8 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix jsonld: <http://www.w3.org/ns/json-ld#> .
+@prefix schema: <https://schema.org/> .
 
 # Ontology definition
 dbp: a owl:Ontology ;
@@ -1576,7 +1578,7 @@ dbp:PerformanceClass a rdfs:Datatype ;
 .
 
 # Context files and their mentions
-<vocab> a jsonld:Context ;
+<https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld> a jsonld:Context ;
     schema:mentions
         dbp:BatteryAttributes,
         dbp:BatteryCarbonFootprint,

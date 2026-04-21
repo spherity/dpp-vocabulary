@@ -345,6 +345,51 @@ If yml2vocab fails:
 3. Fix the YAML and retry (up to 2 times)
 4. If still failing, present the error and ask the user how to proceed
 
+### TTL post-processing (always run after a successful yml2vocab)
+
+yml2vocab appends a `# Context files and their mentions` block to the TTL that contains two bugs:
+- `<vocab>` — a relative URI with no `@base`, rejected by any OWL API-based tool (e.g. WebVOWL)
+- `jsonld:` and `schema:` prefixes used but never declared in the `@prefix` block
+
+Fix both automatically after every successful run:
+
+```python
+import re
+from rdflib import Graph
+
+stem = "<stem>"          # e.g. "batteryPass"
+ns   = "<namespace>"     # e.g. "https://dpp.vocabulary.spherity.com/dbp/v0.2/"
+ttl_path = f"{stem}.ttl"
+
+with open(ttl_path) as f:
+    raw = f.read()
+
+# 1. Add missing prefix declarations (insert after last existing @prefix line)
+additions = []
+if "jsonld:" in raw and "@prefix jsonld:" not in raw:
+    additions.append("@prefix jsonld: <http://www.w3.org/ns/json-ld#> .")
+if "schema:" in raw and "@prefix schema:" not in raw:
+    additions.append("@prefix schema: <https://schema.org/> .")
+
+if additions:
+    last = max(m.end() for m in re.finditer(r"^@prefix[^\n]+\n", raw, re.MULTILINE))
+    raw = raw[:last] + "\n".join(additions) + "\n" + raw[last:]
+
+# 2. Replace relative <vocab> with the absolute context file URI
+raw = raw.replace("<vocab>", f"<{ns}{stem}.context.jsonld>")
+
+# 3. Validate — raises if still broken
+g = Graph()
+g.parse(data=raw, format="turtle")
+
+with open(ttl_path, "w") as f:
+    f.write(raw)
+
+print(f"TTL fixed and validated — {len(g)} triples")
+```
+
+Run this as a Python snippet via Bash immediately after yml2vocab exits with code 0. If rdflib raises, show the error and do not proceed to Phase 5.
+
 ---
 
 ## Phase 5 — Generate SVG Diagrams (Always Run)
