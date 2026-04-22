@@ -210,6 +210,15 @@ dbp:batteryIdentifiers_uniqueDPPIdentifier a rdf:Property, owl:DatatypeProperty 
     vs:term_status "stable" ;
 .
 
+dbp:batteryIdentifiers_lastUpdated a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryIdentifiers ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "Last Updated" ;
+    rdfs:comment """<div>Timestamp of the most recent update to the battery identifiers record.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
 dbp:productData_economicOperator a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:ProductData ;
     rdfs:range dbp:CompanyInformation ;
@@ -332,6 +341,15 @@ dbp:restrictedProductData_batteryStatus a rdf:Property, owl:DatatypeProperty ;
     rdfs:range xsd:string ;
     rdfs:label "Battery Status" ;
     rdfs:comment """<div>Current operational status of the battery (e.g. original, repurposed, remanufactured, waste).</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
+dbp:restrictedProductData_lastUpdated a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:RestrictedProductData ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "Last Updated" ;
+    rdfs:comment """<div>Timestamp of the most recent update to the restricted product data record.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
@@ -1140,6 +1158,15 @@ dbp:capacityEnergyVoltageRestricted_stateOfCharge a rdf:Property, owl:DatatypePr
     vs:term_status "stable" ;
 .
 
+dbp:capacityEnergyVoltageRestricted_lastUpdated a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:CapacityEnergyVoltageRestricted ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "Last Updated" ;
+    rdfs:comment """<div>Timestamp of the most recent update to the restricted capacity, energy, and voltage data.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
 dbp:powerCapabilityRestricted_powerFade a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:PowerCapabilityRestricted ;
     rdfs:range xsd:decimal ;
@@ -1154,6 +1181,15 @@ dbp:powerCapabilityRestricted_remainingPowerCapability a rdf:Property, owl:Datat
     rdfs:range xsd:integer ;
     rdfs:label "Remaining Power Capability" ;
     rdfs:comment """<div>Current remaining power capability of the battery in watts.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
+dbp:powerCapabilityRestricted_lastUpdated a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:PowerCapabilityRestricted ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "Last Updated" ;
+    rdfs:comment """<div>Timestamp of the most recent update to the restricted power capability data.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
@@ -1203,6 +1239,15 @@ dbp:roundTripEfficiencyRestricted_evolutionSelfDischargeRates a rdf:Property, ow
     vs:term_status "stable" ;
 .
 
+dbp:roundTripEfficiencyRestricted_lastUpdated a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:RoundTripEfficiencyRestricted ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "Last Updated" ;
+    rdfs:comment """<div>Timestamp of the most recent update to the restricted round trip efficiency data.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
 dbp:internalResistanceRestricted_internalResistanceIncrease a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:InternalResistanceRestricted ;
     rdfs:range xsd:decimal ;
@@ -1244,6 +1289,15 @@ dbp:batteryLifetimeRestricted_capacityThroughput a rdf:Property, owl:DatatypePro
     rdfs:range xsd:decimal ;
     rdfs:label "Capacity Throughput" ;
     rdfs:comment """<div>Total charge throughput of the battery in ampere-hours since first use.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
+dbp:batteryLifetimeRestricted_lastUpdated a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryLifetimeRestricted ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "Last Updated" ;
+    rdfs:comment """<div>Timestamp of the most recent update to the restricted battery lifetime data.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
@@ -1293,6 +1347,15 @@ dbp:temperatureConditionsRestricted_timeChargingExtremeTempsBelow a rdf:Property
     vs:term_status "stable" ;
 .
 
+dbp:temperatureConditionsRestricted_lastUpdated a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:TemperatureConditionsRestricted ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "Last Updated" ;
+    rdfs:comment """<div>Timestamp of the most recent update to the restricted temperature conditions data.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
 dbp:negativeEvents_deepDischargeEvents a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:NegativeEvents ;
     rdfs:range xsd:integer ;
@@ -1316,6 +1379,15 @@ dbp:negativeEvents_informationOnAccidents a rdf:Property, owl:DatatypeProperty ;
     rdfs:range xsd:anyURI ;
     rdfs:label "Information on Accidents" ;
     rdfs:comment """<div>URI linking to records of accidents or safety incidents involving the battery.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
+dbp:negativeEvents_lastUpdated a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:NegativeEvents ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "Last Updated" ;
+    rdfs:comment """<div>Timestamp of the most recent update to the negative events data.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
@@ -1722,6 +1794,7 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:batteryCompliancePublic_separateCollectionSymbol,
         dbp:batteryComplianceRestricted_testReportResults,
         dbp:batteryIdentifiers_batteryModelIdentifier,
+        dbp:batteryIdentifiers_lastUpdated,
         dbp:batteryIdentifiers_serialNumber,
         dbp:batteryIdentifiers_uniqueBatteryIdentifier,
         dbp:batteryIdentifiers_uniqueDPPIdentifier,
@@ -1732,6 +1805,7 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:batteryLifetimeRestricted_capacityThroughput,
         dbp:batteryLifetimeRestricted_energyThroughput,
         dbp:batteryLifetimeRestricted_expectedLifetimeYears,
+        dbp:batteryLifetimeRestricted_lastUpdated,
         dbp:batteryLifetimeRestricted_numberOfFullCycles,
         dbp:batteryMaterialLocation_componentId,
         dbp:batteryMaterialLocation_componentName,
@@ -1764,6 +1838,7 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:capacityEnergyVoltagePublic_nominalVoltage,
         dbp:capacityEnergyVoltagePublic_ratedCapacity,
         dbp:capacityEnergyVoltageRestricted_capacityFade,
+        dbp:capacityEnergyVoltageRestricted_lastUpdated,
         dbp:capacityEnergyVoltageRestricted_remainingCapacity,
         dbp:capacityEnergyVoltageRestricted_remainingUsableBattEnergy,
         dbp:capacityEnergyVoltageRestricted_stateOfCertifiedEnergy,
@@ -1796,6 +1871,7 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:label_symbol,
         dbp:negativeEvents_deepDischargeEvents,
         dbp:negativeEvents_informationOnAccidents,
+        dbp:negativeEvents_lastUpdated,
         dbp:negativeEvents_overchargeEvents,
         dbp:operatorIdentifiers_economicOperatorId,
         dbp:operatorIdentifiers_facilityId,
@@ -1806,6 +1882,7 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:powerCapabilityPublic_maximumPermittedPower,
         dbp:powerCapabilityPublic_originalPowerCapability,
         dbp:powerCapabilityPublic_ratioPowerToEnergy,
+        dbp:powerCapabilityRestricted_lastUpdated,
         dbp:powerCapabilityRestricted_powerFade,
         dbp:powerCapabilityRestricted_remainingPowerCapability,
         dbp:productData_economicOperator,
@@ -1822,11 +1899,13 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:recycledRenewableContent_renewableContentShare,
         dbp:restrictedProductData_batteryStatus,
         dbp:restrictedProductData_dateOfPuttingIntoService,
+        dbp:restrictedProductData_lastUpdated,
         dbp:roundTripEfficiencyPublic_initialRoundTripEfficiency,
         dbp:roundTripEfficiencyPublic_roundTripEfficiencyAt50pct,
         dbp:roundTripEfficiencyRestricted_currentSelfDischargeRate,
         dbp:roundTripEfficiencyRestricted_evolutionSelfDischargeRates,
         dbp:roundTripEfficiencyRestricted_initialSelfDischargeRate,
+        dbp:roundTripEfficiencyRestricted_lastUpdated,
         dbp:roundTripEfficiencyRestricted_remainingRoundTripEfficiency,
         dbp:roundTripEfficiencyRestricted_roundTripEfficiencyFade,
         dbp:supplyChainDueDiligence_dueDiligenceReport,
@@ -1834,6 +1913,7 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:supplyChainDueDiligence_thirdPartyAssurances,
         dbp:temperatureConditionsPublic_tempRangeIdleLower,
         dbp:temperatureConditionsPublic_tempRangeIdleUpper,
+        dbp:temperatureConditionsRestricted_lastUpdated,
         dbp:temperatureConditionsRestricted_temperatureInformation,
         dbp:temperatureConditionsRestricted_timeChargingExtremeTempsAbove,
         dbp:temperatureConditionsRestricted_timeChargingExtremeTempsBelow,

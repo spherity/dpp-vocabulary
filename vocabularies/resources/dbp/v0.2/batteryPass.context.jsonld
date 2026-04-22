@@ -118,6 +118,10 @@
                 "batteryIdentifiers_uniqueDPPIdentifier": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#batteryIdentifiers_uniqueDPPIdentifier",
                     "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+                },
+                "batteryIdentifiers_lastUpdated": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#batteryIdentifiers_lastUpdated",
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
                 }
             }
         },
@@ -190,6 +194,10 @@
                 "restrictedProductData_batteryStatus": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#restrictedProductData_batteryStatus",
                     "@type": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                "restrictedProductData_lastUpdated": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#restrictedProductData_lastUpdated",
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
                 }
             }
         },
@@ -670,6 +678,10 @@
                 "capacityEnergyVoltageRestricted_stateOfCharge": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#capacityEnergyVoltageRestricted_stateOfCharge",
                     "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                },
+                "capacityEnergyVoltageRestricted_lastUpdated": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#capacityEnergyVoltageRestricted_lastUpdated",
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
                 }
             }
         },
@@ -684,6 +696,10 @@
                 "powerCapabilityRestricted_remainingPowerCapability": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#powerCapabilityRestricted_remainingPowerCapability",
                     "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                },
+                "powerCapabilityRestricted_lastUpdated": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#powerCapabilityRestricted_lastUpdated",
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
                 }
             }
         },
@@ -710,6 +726,10 @@
                 "roundTripEfficiencyRestricted_evolutionSelfDischargeRates": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#roundTripEfficiencyRestricted_evolutionSelfDischargeRates",
                     "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                },
+                "roundTripEfficiencyRestricted_lastUpdated": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#roundTripEfficiencyRestricted_lastUpdated",
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
                 }
             }
         },
@@ -742,6 +762,10 @@
                 "batteryLifetimeRestricted_capacityThroughput": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#batteryLifetimeRestricted_capacityThroughput",
                     "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+                },
+                "batteryLifetimeRestricted_lastUpdated": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#batteryLifetimeRestricted_lastUpdated",
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
                 }
             }
         },
@@ -768,6 +792,10 @@
                 "temperatureConditionsRestricted_timeChargingExtremeTempsBelow": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#temperatureConditionsRestricted_timeChargingExtremeTempsBelow",
                     "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                },
+                "temperatureConditionsRestricted_lastUpdated": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#temperatureConditionsRestricted_lastUpdated",
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
                 }
             }
         },
@@ -786,6 +814,10 @@
                 "negativeEvents_informationOnAccidents": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#negativeEvents_informationOnAccidents",
                     "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+                },
+                "negativeEvents_lastUpdated": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#negativeEvents_lastUpdated",
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
                 }
             }
         },

@@ -392,6 +392,21 @@
             "@type": "jsonld:Context"
         }]
     }, {
+        "@id": "dbp:batteryIdentifiers_lastUpdated",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "dbp:BatteryIdentifiers",
+        "rdfs:range": "xsd:dateTime",
+        "rdfs:label": "Last Updated",
+        "rdfs:comment": {
+            "@value": "<div>Timestamp of the most recent update to the battery identifiers record.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
+            "@type": "jsonld:Context"
+        }]
+    }, {
         "@id": "dbp:productData_economicOperator",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:ProductData",
@@ -594,6 +609,21 @@
         "rdfs:label": "Battery Status",
         "rdfs:comment": {
             "@value": "<div>Current operational status of the battery (e.g. original, repurposed, remanufactured, waste).</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "dbp:restrictedProductData_lastUpdated",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "dbp:RestrictedProductData",
+        "rdfs:range": "xsd:dateTime",
+        "rdfs:label": "Last Updated",
+        "rdfs:comment": {
+            "@value": "<div>Timestamp of the most recent update to the restricted product data record.</div>",
             "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
         },
         "vs:term_status": "stable",
@@ -1937,6 +1967,21 @@
             "@type": "jsonld:Context"
         }]
     }, {
+        "@id": "dbp:capacityEnergyVoltageRestricted_lastUpdated",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "dbp:CapacityEnergyVoltageRestricted",
+        "rdfs:range": "xsd:dateTime",
+        "rdfs:label": "Last Updated",
+        "rdfs:comment": {
+            "@value": "<div>Timestamp of the most recent update to the restricted capacity, energy, and voltage data.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
+            "@type": "jsonld:Context"
+        }]
+    }, {
         "@id": "dbp:powerCapabilityRestricted_powerFade",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:PowerCapabilityRestricted",
@@ -1959,6 +2004,21 @@
         "rdfs:label": "Remaining Power Capability",
         "rdfs:comment": {
             "@value": "<div>Current remaining power capability of the battery in watts.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "dbp:powerCapabilityRestricted_lastUpdated",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "dbp:PowerCapabilityRestricted",
+        "rdfs:range": "xsd:dateTime",
+        "rdfs:label": "Last Updated",
+        "rdfs:comment": {
+            "@value": "<div>Timestamp of the most recent update to the restricted power capability data.</div>",
             "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
         },
         "vs:term_status": "stable",
@@ -2042,6 +2102,21 @@
             "@type": "jsonld:Context"
         }]
     }, {
+        "@id": "dbp:roundTripEfficiencyRestricted_lastUpdated",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "dbp:RoundTripEfficiencyRestricted",
+        "rdfs:range": "xsd:dateTime",
+        "rdfs:label": "Last Updated",
+        "rdfs:comment": {
+            "@value": "<div>Timestamp of the most recent update to the restricted round trip efficiency data.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
+            "@type": "jsonld:Context"
+        }]
+    }, {
         "@id": "dbp:internalResistanceRestricted_internalResistanceIncrease",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:InternalResistanceRestricted",
@@ -2109,6 +2184,21 @@
         "rdfs:label": "Capacity Throughput",
         "rdfs:comment": {
             "@value": "<div>Total charge throughput of the battery in ampere-hours since first use.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "dbp:batteryLifetimeRestricted_lastUpdated",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "dbp:BatteryLifetimeRestricted",
+        "rdfs:range": "xsd:dateTime",
+        "rdfs:label": "Last Updated",
+        "rdfs:comment": {
+            "@value": "<div>Timestamp of the most recent update to the restricted battery lifetime data.</div>",
             "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
         },
         "vs:term_status": "stable",
@@ -2192,6 +2282,21 @@
             "@type": "jsonld:Context"
         }]
     }, {
+        "@id": "dbp:temperatureConditionsRestricted_lastUpdated",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "dbp:TemperatureConditionsRestricted",
+        "rdfs:range": "xsd:dateTime",
+        "rdfs:label": "Last Updated",
+        "rdfs:comment": {
+            "@value": "<div>Timestamp of the most recent update to the restricted temperature conditions data.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
+            "@type": "jsonld:Context"
+        }]
+    }, {
         "@id": "dbp:negativeEvents_deepDischargeEvents",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:NegativeEvents",
@@ -2229,6 +2334,21 @@
         "rdfs:label": "Information on Accidents",
         "rdfs:comment": {
             "@value": "<div>URI linking to records of accidents or safety incidents involving the battery.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "dbp:negativeEvents_lastUpdated",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "dbp:NegativeEvents",
+        "rdfs:range": "xsd:dateTime",
+        "rdfs:label": "Last Updated",
+        "rdfs:comment": {
+            "@value": "<div>Timestamp of the most recent update to the negative events data.</div>",
             "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
         },
         "vs:term_status": "stable",

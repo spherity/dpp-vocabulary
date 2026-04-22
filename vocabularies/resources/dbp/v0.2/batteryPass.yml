@@ -436,6 +436,13 @@ property:
     comment: |
       Unique identifier for this Digital Product Passport expressed as a URI.
 
+  - id: batteryIdentifiers_lastUpdated
+    label: Last Updated
+    domain: dbp:BatteryIdentifiers
+    range: xsd:dateTime
+    comment: |
+      Timestamp of the most recent update to the battery identifiers record.
+
   # --- ProductData ---
   - id: productData_economicOperator
     label: Economic Operator
@@ -538,6 +545,13 @@ property:
     range: xsd:string
     comment: |
       Current operational status of the battery (e.g. original, repurposed, remanufactured, waste).
+
+  - id: restrictedProductData_lastUpdated
+    label: Last Updated
+    domain: dbp:RestrictedProductData
+    range: xsd:dateTime
+    comment: |
+      Timestamp of the most recent update to the restricted product data record.
 
   # --- Label ---
   - id: label_symbol
@@ -1190,6 +1204,13 @@ property:
     comment: |
       Current state of charge (SoC) expressed as a percentage of remaining capacity.
 
+  - id: capacityEnergyVoltageRestricted_lastUpdated
+    label: Last Updated
+    domain: dbp:CapacityEnergyVoltageRestricted
+    range: xsd:dateTime
+    comment: |
+      Timestamp of the most recent update to the restricted capacity, energy, and voltage data.
+
   # --- PowerCapabilityRestricted ---
   - id: powerCapabilityRestricted_powerFade
     label: Power Fade
@@ -1204,6 +1225,13 @@ property:
     range: xsd:integer
     comment: |
       Current remaining power capability of the battery in watts.
+
+  - id: powerCapabilityRestricted_lastUpdated
+    label: Last Updated
+    domain: dbp:PowerCapabilityRestricted
+    range: xsd:dateTime
+    comment: |
+      Timestamp of the most recent update to the restricted power capability data.
 
   # --- RoundTripEfficiencyRestricted ---
   - id: roundTripEfficiencyRestricted_roundTripEfficiencyFade
@@ -1240,6 +1268,13 @@ property:
     range: xsd:decimal
     comment: |
       Historical evolution of self-discharge rates over the battery's service lifetime.
+
+  - id: roundTripEfficiencyRestricted_lastUpdated
+    label: Last Updated
+    domain: dbp:RoundTripEfficiencyRestricted
+    range: xsd:dateTime
+    comment: |
+      Timestamp of the most recent update to the restricted round trip efficiency data.
 
   # --- InternalResistanceRestricted ---
   - id: internalResistanceRestricted_internalResistanceIncrease
@@ -1278,6 +1313,13 @@ property:
     comment: |
       Total charge throughput of the battery in ampere-hours since first use.
 
+  - id: batteryLifetimeRestricted_lastUpdated
+    label: Last Updated
+    domain: dbp:BatteryLifetimeRestricted
+    range: xsd:dateTime
+    comment: |
+      Timestamp of the most recent update to the restricted battery lifetime data.
+
   # --- TemperatureConditionsRestricted ---
   - id: temperatureConditionsRestricted_temperatureInformation
     label: Temperature Information
@@ -1314,6 +1356,13 @@ property:
     comment: |
       Cumulative time the battery has been charged at temperatures below the lower boundary, in hours.
 
+  - id: temperatureConditionsRestricted_lastUpdated
+    label: Last Updated
+    domain: dbp:TemperatureConditionsRestricted
+    range: xsd:dateTime
+    comment: |
+      Timestamp of the most recent update to the restricted temperature conditions data.
+
   # --- NegativeEvents ---
   - id: negativeEvents_deepDischargeEvents
     label: Number of Deep Discharge Events
@@ -1335,3 +1384,10 @@ property:
     range: xsd:anyURI
     comment: |
       URI linking to records of accidents or safety incidents involving the battery.
+
+  - id: negativeEvents_lastUpdated
+    label: Last Updated
+    domain: dbp:NegativeEvents
+    range: xsd:dateTime
+    comment: |
+      Timestamp of the most recent update to the negative events data.
