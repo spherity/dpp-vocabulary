@@ -75,9 +75,9 @@
         "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
     },
     "rdfs:seeAlso": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1542",
-    "dc:date": "2026-04-21",
+    "dc:date": "2026-04-22",
     "rdfs_properties": [{
-        "@id": "dbp:postalCode",
+        "@id": "dbp:postalAddress_postalCode",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:PostalAddress",
         "rdfs:range": "xsd:string",
@@ -88,11 +88,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:streetAddress",
+        "@id": "dbp:postalAddress_streetAddress",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:PostalAddress",
         "rdfs:range": "xsd:string",
@@ -103,11 +103,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:country",
+        "@id": "dbp:postalAddress_country",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:PostalAddress",
         "rdfs:range": "xsd:string",
@@ -118,11 +118,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:phone",
+        "@id": "dbp:contactInformation_phone",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:ContactInformation",
         "rdfs:range": "xsd:string",
@@ -133,11 +133,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:email",
+        "@id": "dbp:contactInformation_email",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:ContactInformation",
         "rdfs:range": "xsd:string",
@@ -148,11 +148,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:website",
+        "@id": "dbp:contactInformation_website",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:ContactInformation",
         "rdfs:range": "xsd:anyURI",
@@ -163,11 +163,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:identifier",
+        "@id": "dbp:companyInformation_identifier",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CompanyInformation",
         "rdfs:range": "xsd:string",
@@ -178,26 +178,26 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:name",
+        "@id": "dbp:companyInformation_legalName",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CompanyInformation",
         "rdfs:range": "xsd:string",
-        "rdfs:label": "Name",
+        "rdfs:label": "Legal Name",
         "rdfs:comment": {
             "@value": "<div>Legal name of the company or operator.</div>",
             "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:contact",
+        "@id": "dbp:companyInformation_contact",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:CompanyInformation",
         "rdfs:range": "dbp:ContactInformation",
@@ -208,11 +208,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:address",
+        "@id": "dbp:companyInformation_address",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:CompanyInformation",
         "rdfs:range": "dbp:PostalAddress",
@@ -223,11 +223,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:schemaVersion",
+        "@id": "dbp:dppInfo_schemaVersion",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:DPPInfo",
         "rdfs:range": "xsd:string",
@@ -238,11 +238,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:dppGranularity",
+        "@id": "dbp:dppInfo_dppGranularity",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:DPPInfo",
         "rdfs:range": "xsd:string",
@@ -253,11 +253,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:dppStatus",
+        "@id": "dbp:dppInfo_dppStatus",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:DPPInfo",
         "rdfs:range": "xsd:string",
@@ -268,11 +268,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:lastUpdated",
+        "@id": "dbp:dppInfo_lastUpdated",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:DPPInfo",
         "rdfs:range": "xsd:dateTime",
@@ -283,11 +283,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:warrantyPeriod",
+        "@id": "dbp:batteryAttributes_warrantyPeriod",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryAttributes",
         "rdfs:range": "xsd:date",
@@ -298,11 +298,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCategory",
+        "@id": "dbp:batteryAttributes_batteryCategory",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryAttributes",
         "rdfs:range": "xsd:string",
@@ -313,11 +313,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryMass",
+        "@id": "dbp:batteryAttributes_batteryMass",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryAttributes",
         "rdfs:range": "xsd:decimal",
@@ -328,11 +328,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryModelIdentifier",
+        "@id": "dbp:batteryIdentifiers_batteryModelIdentifier",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryIdentifiers",
         "rdfs:range": "xsd:string",
@@ -343,11 +343,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:uniqueBatteryIdentifier",
+        "@id": "dbp:batteryIdentifiers_uniqueBatteryIdentifier",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryIdentifiers",
         "rdfs:range": "xsd:anyURI",
@@ -358,11 +358,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:serialNumber",
+        "@id": "dbp:batteryIdentifiers_serialNumber",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryIdentifiers",
         "rdfs:range": "xsd:string",
@@ -373,11 +373,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:uniqueDPPIdentifier",
+        "@id": "dbp:batteryIdentifiers_uniqueDPPIdentifier",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryIdentifiers",
         "rdfs:range": "xsd:anyURI",
@@ -388,11 +388,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:economicOperator",
+        "@id": "dbp:productData_economicOperator",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:ProductData",
         "rdfs:range": "dbp:CompanyInformation",
@@ -403,11 +403,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:manufacturer",
+        "@id": "dbp:productData_manufacturer",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:ProductData",
         "rdfs:range": "dbp:CompanyInformation",
@@ -418,11 +418,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:manufacturingPlace",
+        "@id": "dbp:productData_manufacturingPlace",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:ProductData",
         "rdfs:range": "dbp:PostalAddress",
@@ -433,11 +433,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:manufacturingDate",
+        "@id": "dbp:productData_manufacturingDate",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:ProductData",
         "rdfs:range": "xsd:date",
@@ -448,11 +448,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:general",
+        "@id": "dbp:generalInformationPublic_general",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:GeneralInformationPublic",
         "rdfs:range": "dbp:BatteryAttributes",
@@ -463,7 +463,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -478,7 +478,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -493,7 +493,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -508,7 +508,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -523,11 +523,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:manufacturerId",
+        "@id": "dbp:operatorIdentifiers_manufacturerId",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:OperatorIdentifiers",
         "rdfs:range": "xsd:string",
@@ -538,11 +538,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:facilityId",
+        "@id": "dbp:operatorIdentifiers_facilityId",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:OperatorIdentifiers",
         "rdfs:range": "xsd:string",
@@ -553,11 +553,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:economicOperatorId",
+        "@id": "dbp:operatorIdentifiers_economicOperatorId",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:OperatorIdentifiers",
         "rdfs:range": "xsd:string",
@@ -568,11 +568,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:dateOfPuttingIntoService",
+        "@id": "dbp:restrictedProductData_dateOfPuttingIntoService",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RestrictedProductData",
         "rdfs:range": "xsd:date",
@@ -583,11 +583,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryStatus",
+        "@id": "dbp:restrictedProductData_batteryStatus",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RestrictedProductData",
         "rdfs:range": "xsd:string",
@@ -598,11 +598,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:symbol",
+        "@id": "dbp:label_symbol",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:Label",
         "rdfs:range": "xsd:string",
@@ -613,11 +613,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:meaning",
+        "@id": "dbp:label_meaning",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:Label",
         "rdfs:range": "xsd:string",
@@ -628,11 +628,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:subject",
+        "@id": "dbp:label_subject",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:Label",
         "rdfs:range": "xsd:string",
@@ -643,11 +643,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:separateCollectionSymbol",
+        "@id": "dbp:batteryCompliancePublic_separateCollectionSymbol",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryCompliancePublic",
         "rdfs:range": "dbp:Label",
@@ -658,11 +658,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:cadmium",
+        "@id": "dbp:batteryCompliancePublic_cadmium",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryCompliancePublic",
         "rdfs:range": "dbp:Label",
@@ -673,11 +673,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:lead",
+        "@id": "dbp:batteryCompliancePublic_lead",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryCompliancePublic",
         "rdfs:range": "dbp:Label",
@@ -688,11 +688,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:carbonFootprint",
+        "@id": "dbp:batteryCompliancePublic_carbonFootprint",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryCompliancePublic",
         "rdfs:range": "dbp:Label",
@@ -703,11 +703,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:extinguishingAgent",
+        "@id": "dbp:batteryCompliancePublic_extinguishingAgent",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCompliancePublic",
         "rdfs:range": "xsd:string",
@@ -718,11 +718,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:euDeclarationConformity",
+        "@id": "dbp:batteryCompliancePublic_euDeclarationConformity",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCompliancePublic",
         "rdfs:range": "xsd:anyURI",
@@ -733,11 +733,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:testReportResults",
+        "@id": "dbp:batteryComplianceRestricted_testReportResults",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryComplianceRestricted",
         "rdfs:range": "xsd:anyURI",
@@ -748,11 +748,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:dueDiligenceReport",
+        "@id": "dbp:supplyChainDueDiligence_dueDiligenceReport",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:SupplyChainDueDiligence",
         "rdfs:range": "xsd:anyURI",
@@ -763,11 +763,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:thirdPartyAssurances",
+        "@id": "dbp:supplyChainDueDiligence_thirdPartyAssurances",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:SupplyChainDueDiligence",
         "rdfs:range": "xsd:string",
@@ -778,11 +778,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:supplyChainIndices",
+        "@id": "dbp:supplyChainDueDiligence_supplyChainIndices",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:SupplyChainDueDiligence",
         "rdfs:range": "xsd:string",
@@ -793,11 +793,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:substance",
+        "@id": "dbp:hazardousSubstance_substance",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:HazardousSubstance",
         "rdfs:range": "xsd:string",
@@ -808,11 +808,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:impactOnEnvironment",
+        "@id": "dbp:hazardousSubstance_impactOnEnvironment",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:HazardousSubstance",
         "rdfs:range": "xsd:string",
@@ -823,11 +823,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:clearName",
+        "@id": "dbp:batteryChemistry_clearName",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryChemistry",
         "rdfs:range": "xsd:string",
@@ -838,11 +838,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:shortName",
+        "@id": "dbp:batteryChemistry_shortName",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryChemistry",
         "rdfs:range": "xsd:string",
@@ -853,11 +853,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryChemistry",
+        "@id": "dbp:batteryMaterialsPublic_batteryChemistry",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryMaterialsPublic",
         "rdfs:range": "dbp:BatteryChemistry",
@@ -868,11 +868,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:criticalRawMaterials",
+        "@id": "dbp:batteryMaterialsPublic_criticalRawMaterials",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryMaterialsPublic",
         "rdfs:range": "xsd:string",
@@ -883,11 +883,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:hazardousSubstances",
+        "@id": "dbp:batteryMaterialsPublic_hazardousSubstances",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryMaterialsPublic",
         "rdfs:range": "dbp:HazardousSubstance",
@@ -898,11 +898,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:componentId",
+        "@id": "dbp:batteryMaterialLocation_componentId",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryMaterialLocation",
         "rdfs:range": "xsd:string",
@@ -913,11 +913,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:componentName",
+        "@id": "dbp:batteryMaterialLocation_componentName",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryMaterialLocation",
         "rdfs:range": "xsd:string",
@@ -928,11 +928,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryMaterialIdentifier",
+        "@id": "dbp:batteryMaterial_batteryMaterialIdentifier",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryMaterial",
         "rdfs:range": "xsd:string",
@@ -943,11 +943,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryMaterialName",
+        "@id": "dbp:batteryMaterial_batteryMaterialName",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryMaterial",
         "rdfs:range": "xsd:string",
@@ -958,11 +958,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryMaterialMass",
+        "@id": "dbp:batteryMaterial_batteryMaterialMass",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryMaterial",
         "rdfs:range": "xsd:decimal",
@@ -973,11 +973,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryMaterialShare",
+        "@id": "dbp:batteryMaterial_batteryMaterialShare",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryMaterial",
         "rdfs:range": "xsd:decimal",
@@ -988,11 +988,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:isCriticalRawMaterial",
+        "@id": "dbp:batteryMaterial_isCriticalRawMaterial",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryMaterial",
         "rdfs:range": "xsd:boolean",
@@ -1003,11 +1003,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryMaterialLocation",
+        "@id": "dbp:batteryMaterial_batteryMaterialLocation",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryMaterial",
         "rdfs:range": "dbp:BatteryMaterialLocation",
@@ -1018,11 +1018,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:materialsComposition",
+        "@id": "dbp:batteryMaterialsRestricted_materialsComposition",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryMaterialsRestricted",
         "rdfs:range": "dbp:BatteryMaterial",
@@ -1033,11 +1033,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:carbonFootprintPerFU",
+        "@id": "dbp:batteryCarbonFootprint_carbonFootprintPerFU",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCarbonFootprint",
         "rdfs:range": "xsd:decimal",
@@ -1048,11 +1048,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:contributionRawMaterial",
+        "@id": "dbp:batteryCarbonFootprint_contributionRawMaterial",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCarbonFootprint",
         "rdfs:range": "xsd:decimal",
@@ -1063,11 +1063,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:contributionProduction",
+        "@id": "dbp:batteryCarbonFootprint_contributionProduction",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCarbonFootprint",
         "rdfs:range": "xsd:decimal",
@@ -1078,11 +1078,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:contributionDistribution",
+        "@id": "dbp:batteryCarbonFootprint_contributionDistribution",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCarbonFootprint",
         "rdfs:range": "xsd:decimal",
@@ -1093,11 +1093,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:contributionEndOfLife",
+        "@id": "dbp:batteryCarbonFootprint_contributionEndOfLife",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCarbonFootprint",
         "rdfs:range": "xsd:decimal",
@@ -1108,11 +1108,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:performanceClass",
+        "@id": "dbp:batteryCarbonFootprint_performanceClass",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCarbonFootprint",
         "rdfs:range": "dbp:PerformanceClass",
@@ -1123,11 +1123,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:publicCarbonFootprintStudy",
+        "@id": "dbp:batteryCarbonFootprint_publicCarbonFootprintStudy",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCarbonFootprint",
         "rdfs:range": "xsd:anyURI",
@@ -1138,11 +1138,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:absoluteCarbonFootprint",
+        "@id": "dbp:batteryCarbonFootprint_absoluteCarbonFootprint",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCarbonFootprint",
         "rdfs:range": "xsd:integer",
@@ -1153,11 +1153,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:wastePrevention",
+        "@id": "dbp:endUserInformation_wastePrevention",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:EndUserInformation",
         "rdfs:range": "xsd:anyURI",
@@ -1168,11 +1168,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:separateCollection",
+        "@id": "dbp:endUserInformation_separateCollection",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:EndUserInformation",
         "rdfs:range": "xsd:anyURI",
@@ -1183,11 +1183,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:collectionEndOfLife",
+        "@id": "dbp:endUserInformation_collectionEndOfLife",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:EndUserInformation",
         "rdfs:range": "xsd:anyURI",
@@ -1198,11 +1198,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:preConsumerNickelShare",
+        "@id": "dbp:recycledRenewableContent_preConsumerNickelShare",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RecycledRenewableContent",
         "rdfs:range": "xsd:decimal",
@@ -1213,11 +1213,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:preConsumerCobaltShare",
+        "@id": "dbp:recycledRenewableContent_preConsumerCobaltShare",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RecycledRenewableContent",
         "rdfs:range": "xsd:decimal",
@@ -1228,11 +1228,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:preConsumerLithiumShare",
+        "@id": "dbp:recycledRenewableContent_preConsumerLithiumShare",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RecycledRenewableContent",
         "rdfs:range": "xsd:decimal",
@@ -1243,11 +1243,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:postConsumerNickelShare",
+        "@id": "dbp:recycledRenewableContent_postConsumerNickelShare",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RecycledRenewableContent",
         "rdfs:range": "xsd:decimal",
@@ -1258,11 +1258,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:postConsumerCobaltShare",
+        "@id": "dbp:recycledRenewableContent_postConsumerCobaltShare",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RecycledRenewableContent",
         "rdfs:range": "xsd:decimal",
@@ -1273,11 +1273,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:postConsumerLithiumShare",
+        "@id": "dbp:recycledRenewableContent_postConsumerLithiumShare",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RecycledRenewableContent",
         "rdfs:range": "xsd:decimal",
@@ -1288,11 +1288,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:recycledLeadShare",
+        "@id": "dbp:recycledRenewableContent_recycledLeadShare",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RecycledRenewableContent",
         "rdfs:range": "xsd:decimal",
@@ -1303,11 +1303,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:renewableContentShare",
+        "@id": "dbp:recycledRenewableContent_renewableContentShare",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RecycledRenewableContent",
         "rdfs:range": "xsd:decimal",
@@ -1318,11 +1318,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:endUserInfo",
+        "@id": "dbp:batteryCircularityPublic_endUserInfo",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryCircularityPublic",
         "rdfs:range": "dbp:EndUserInformation",
@@ -1333,11 +1333,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:recycledContent",
+        "@id": "dbp:batteryCircularityPublic_recycledContent",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryCircularityPublic",
         "rdfs:range": "dbp:RecycledRenewableContent",
@@ -1348,11 +1348,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:dismantlingManuals",
+        "@id": "dbp:batteryCircularityPrivate_dismantlingManuals",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCircularityPrivate",
         "rdfs:range": "xsd:anyURI",
@@ -1363,11 +1363,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:partNumbers",
+        "@id": "dbp:batteryCircularityPrivate_partNumbers",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCircularityPrivate",
         "rdfs:range": "xsd:anyURI",
@@ -1378,11 +1378,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:sparePartsInfo",
+        "@id": "dbp:batteryCircularityPrivate_sparePartsInfo",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCircularityPrivate",
         "rdfs:range": "xsd:anyURI",
@@ -1393,11 +1393,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:safetyMeasures",
+        "@id": "dbp:batteryCircularityPrivate_safetyMeasures",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCircularityPrivate",
         "rdfs:range": "xsd:anyURI",
@@ -1408,11 +1408,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:ratedCapacity",
+        "@id": "dbp:capacityEnergyVoltagePublic_ratedCapacity",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltagePublic",
         "rdfs:range": "xsd:integer",
@@ -1423,11 +1423,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:certifiedUsableBattEnergy",
+        "@id": "dbp:capacityEnergyVoltagePublic_certifiedUsableBattEnergy",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltagePublic",
         "rdfs:range": "xsd:integer",
@@ -1438,11 +1438,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:minimumVoltage",
+        "@id": "dbp:capacityEnergyVoltagePublic_minimumVoltage",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltagePublic",
         "rdfs:range": "xsd:decimal",
@@ -1453,11 +1453,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:maximumVoltage",
+        "@id": "dbp:capacityEnergyVoltagePublic_maximumVoltage",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltagePublic",
         "rdfs:range": "xsd:decimal",
@@ -1468,11 +1468,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:nominalVoltage",
+        "@id": "dbp:capacityEnergyVoltagePublic_nominalVoltage",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltagePublic",
         "rdfs:range": "xsd:decimal",
@@ -1483,11 +1483,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:originalPowerCapability",
+        "@id": "dbp:powerCapabilityPublic_originalPowerCapability",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:PowerCapabilityPublic",
         "rdfs:range": "xsd:integer",
@@ -1498,11 +1498,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:maximumPermittedPower",
+        "@id": "dbp:powerCapabilityPublic_maximumPermittedPower",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:PowerCapabilityPublic",
         "rdfs:range": "xsd:integer",
@@ -1513,11 +1513,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:ratioPowerToEnergy",
+        "@id": "dbp:powerCapabilityPublic_ratioPowerToEnergy",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:PowerCapabilityPublic",
         "rdfs:range": "xsd:integer",
@@ -1528,11 +1528,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:initialRoundTripEfficiency",
+        "@id": "dbp:roundTripEfficiencyPublic_initialRoundTripEfficiency",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RoundTripEfficiencyPublic",
         "rdfs:range": "xsd:decimal",
@@ -1543,11 +1543,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:roundTripEfficiencyAt50pct",
+        "@id": "dbp:roundTripEfficiencyPublic_roundTripEfficiencyAt50pct",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RoundTripEfficiencyPublic",
         "rdfs:range": "xsd:decimal",
@@ -1558,11 +1558,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:initialInternalResistance",
+        "@id": "dbp:internalResistancePublic_initialInternalResistance",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:InternalResistancePublic",
         "rdfs:range": "xsd:integer",
@@ -1573,11 +1573,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:expectedLifetimeCycles",
+        "@id": "dbp:batteryLifetimePublic_expectedLifetimeCycles",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryLifetimePublic",
         "rdfs:range": "xsd:integer",
@@ -1588,11 +1588,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:cycleLifeReferenceTest",
+        "@id": "dbp:batteryLifetimePublic_cycleLifeReferenceTest",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryLifetimePublic",
         "rdfs:range": "xsd:string",
@@ -1603,11 +1603,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:cRateCycleLifeTest",
+        "@id": "dbp:batteryLifetimePublic_cRateCycleLifeTest",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryLifetimePublic",
         "rdfs:range": "xsd:decimal",
@@ -1618,11 +1618,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:capacityThresholdExhaustion",
+        "@id": "dbp:batteryLifetimePublic_capacityThresholdExhaustion",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryLifetimePublic",
         "rdfs:range": "xsd:decimal",
@@ -1633,11 +1633,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:tempRangeIdleLower",
+        "@id": "dbp:temperatureConditionsPublic_tempRangeIdleLower",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:TemperatureConditionsPublic",
         "rdfs:range": "xsd:integer",
@@ -1648,11 +1648,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:tempRangeIdleUpper",
+        "@id": "dbp:temperatureConditionsPublic_tempRangeIdleUpper",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:TemperatureConditionsPublic",
         "rdfs:range": "xsd:integer",
@@ -1663,7 +1663,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -1678,7 +1678,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -1693,7 +1693,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -1708,7 +1708,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -1723,7 +1723,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -1738,7 +1738,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -1753,7 +1753,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -1768,7 +1768,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -1783,7 +1783,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -1798,7 +1798,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -1813,7 +1813,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -1828,7 +1828,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -1843,11 +1843,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:negativeEvents",
+        "@id": "dbp:batteryPerformanceRestricted_negativeEvents",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryPerformanceRestricted",
         "rdfs:range": "dbp:NegativeEvents",
@@ -1858,11 +1858,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:capacityFade",
+        "@id": "dbp:capacityEnergyVoltageRestricted_capacityFade",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltageRestricted",
         "rdfs:range": "xsd:decimal",
@@ -1873,11 +1873,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:remainingCapacity",
+        "@id": "dbp:capacityEnergyVoltageRestricted_remainingCapacity",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltageRestricted",
         "rdfs:range": "xsd:integer",
@@ -1888,11 +1888,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:remainingUsableBattEnergy",
+        "@id": "dbp:capacityEnergyVoltageRestricted_remainingUsableBattEnergy",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltageRestricted",
         "rdfs:range": "xsd:integer",
@@ -1903,11 +1903,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:stateOfCertifiedEnergy",
+        "@id": "dbp:capacityEnergyVoltageRestricted_stateOfCertifiedEnergy",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltageRestricted",
         "rdfs:range": "xsd:decimal",
@@ -1918,11 +1918,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:stateOfCharge",
+        "@id": "dbp:capacityEnergyVoltageRestricted_stateOfCharge",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltageRestricted",
         "rdfs:range": "xsd:decimal",
@@ -1933,11 +1933,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:powerFade",
+        "@id": "dbp:powerCapabilityRestricted_powerFade",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:PowerCapabilityRestricted",
         "rdfs:range": "xsd:decimal",
@@ -1948,11 +1948,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:remainingPowerCapability",
+        "@id": "dbp:powerCapabilityRestricted_remainingPowerCapability",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:PowerCapabilityRestricted",
         "rdfs:range": "xsd:integer",
@@ -1963,11 +1963,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:roundTripEfficiencyFade",
+        "@id": "dbp:roundTripEfficiencyRestricted_roundTripEfficiencyFade",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RoundTripEfficiencyRestricted",
         "rdfs:range": "xsd:decimal",
@@ -1978,11 +1978,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:initialSelfDischargeRate",
+        "@id": "dbp:roundTripEfficiencyRestricted_initialSelfDischargeRate",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RoundTripEfficiencyRestricted",
         "rdfs:range": "xsd:decimal",
@@ -1993,11 +1993,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:remainingRoundTripEfficiency",
+        "@id": "dbp:roundTripEfficiencyRestricted_remainingRoundTripEfficiency",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RoundTripEfficiencyRestricted",
         "rdfs:range": "xsd:decimal",
@@ -2008,11 +2008,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:currentSelfDischargeRate",
+        "@id": "dbp:roundTripEfficiencyRestricted_currentSelfDischargeRate",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RoundTripEfficiencyRestricted",
         "rdfs:range": "xsd:decimal",
@@ -2023,11 +2023,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:evolutionSelfDischargeRates",
+        "@id": "dbp:roundTripEfficiencyRestricted_evolutionSelfDischargeRates",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RoundTripEfficiencyRestricted",
         "rdfs:range": "xsd:decimal",
@@ -2038,11 +2038,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:internalResistanceIncrease",
+        "@id": "dbp:internalResistanceRestricted_internalResistanceIncrease",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:InternalResistanceRestricted",
         "rdfs:range": "xsd:decimal",
@@ -2053,11 +2053,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:expectedLifetimeYears",
+        "@id": "dbp:batteryLifetimeRestricted_expectedLifetimeYears",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryLifetimeRestricted",
         "rdfs:range": "xsd:decimal",
@@ -2068,11 +2068,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:numberOfFullCycles",
+        "@id": "dbp:batteryLifetimeRestricted_numberOfFullCycles",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryLifetimeRestricted",
         "rdfs:range": "xsd:integer",
@@ -2083,11 +2083,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:energyThroughput",
+        "@id": "dbp:batteryLifetimeRestricted_energyThroughput",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryLifetimeRestricted",
         "rdfs:range": "xsd:decimal",
@@ -2098,11 +2098,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:capacityThroughput",
+        "@id": "dbp:batteryLifetimeRestricted_capacityThroughput",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryLifetimeRestricted",
         "rdfs:range": "xsd:decimal",
@@ -2113,11 +2113,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:temperatureInformation",
+        "@id": "dbp:temperatureConditionsRestricted_temperatureInformation",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:TemperatureConditionsRestricted",
         "rdfs:range": "xsd:integer",
@@ -2128,11 +2128,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:timeInExtremeTempsAbove",
+        "@id": "dbp:temperatureConditionsRestricted_timeInExtremeTempsAbove",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:TemperatureConditionsRestricted",
         "rdfs:range": "xsd:integer",
@@ -2143,11 +2143,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:timeInExtremeTempsBelow",
+        "@id": "dbp:temperatureConditionsRestricted_timeInExtremeTempsBelow",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:TemperatureConditionsRestricted",
         "rdfs:range": "xsd:integer",
@@ -2158,11 +2158,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:timeChargingExtremeTempsAbove",
+        "@id": "dbp:temperatureConditionsRestricted_timeChargingExtremeTempsAbove",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:TemperatureConditionsRestricted",
         "rdfs:range": "xsd:integer",
@@ -2173,11 +2173,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:timeChargingExtremeTempsBelow",
+        "@id": "dbp:temperatureConditionsRestricted_timeChargingExtremeTempsBelow",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:TemperatureConditionsRestricted",
         "rdfs:range": "xsd:integer",
@@ -2188,11 +2188,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:deepDischargeEvents",
+        "@id": "dbp:negativeEvents_deepDischargeEvents",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:NegativeEvents",
         "rdfs:range": "xsd:integer",
@@ -2203,11 +2203,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:overchargeEvents",
+        "@id": "dbp:negativeEvents_overchargeEvents",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:NegativeEvents",
         "rdfs:range": "xsd:integer",
@@ -2218,11 +2218,11 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:informationOnAccidents",
+        "@id": "dbp:negativeEvents_informationOnAccidents",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:NegativeEvents",
         "rdfs:range": "xsd:anyURI",
@@ -2233,7 +2233,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }],
@@ -2247,7 +2247,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2260,7 +2260,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2273,7 +2273,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2286,7 +2286,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2299,7 +2299,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2312,7 +2312,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2325,7 +2325,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2338,7 +2338,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2351,7 +2351,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2364,7 +2364,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2377,7 +2377,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2390,7 +2390,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2403,7 +2403,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2416,7 +2416,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2429,7 +2429,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2442,7 +2442,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2455,7 +2455,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2468,7 +2468,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2481,7 +2481,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2494,7 +2494,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2507,7 +2507,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2520,7 +2520,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2533,7 +2533,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2546,7 +2546,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2559,7 +2559,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2572,7 +2572,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2585,7 +2585,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2598,7 +2598,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2611,7 +2611,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2624,7 +2624,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2637,7 +2637,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2650,7 +2650,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2663,7 +2663,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2676,7 +2676,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2689,7 +2689,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2702,7 +2702,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2715,7 +2715,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2728,7 +2728,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2741,7 +2741,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2754,7 +2754,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }, {
@@ -2767,7 +2767,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }],
@@ -2788,7 +2788,7 @@
         },
         "vs:term_status": "stable",
         "mentioned": [{
-            "@id": "vocab",
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
             "@type": "jsonld:Context"
         }]
     }]

@@ -8,7 +8,7 @@
 vocab:
   - id: dbp
     value: https://dpp.vocabulary.spherity.com/dbp/v0.2/
-    context: https://dpp.vocabulary.spherity.com/dbp/v0.2
+    context: https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld
 
 prefix:
   - id: xsd
