@@ -282,21 +282,21 @@ datatype:
 
 property:
   # --- PostalAddress ---
-  - id: postalCode
+  - id: postalAddress_postalCode
     label: Postal Code
     domain: dbp:PostalAddress
     range: xsd:string
     comment: |
       The postal or ZIP code of the address.
 
-  - id: streetAddress
+  - id: postalAddress_streetAddress
     label: Street Address
     domain: dbp:PostalAddress
     range: xsd:string
     comment: |
       The full street address including building number.
 
-  - id: country
+  - id: postalAddress_country
     label: Country
     domain: dbp:PostalAddress
     range: xsd:string
@@ -304,21 +304,21 @@ property:
       The country of the address, preferably as an ISO 3166-1 alpha-2 country code.
 
   # --- ContactInformation ---
-  - id: phone
+  - id: contactInformation_phone
     label: Phone
     domain: dbp:ContactInformation
     range: xsd:string
     comment: |
       The telephone number for the contact.
 
-  - id: email
+  - id: contactInformation_email
     label: Email
     domain: dbp:ContactInformation
     range: xsd:string
     comment: |
       The email address for the contact.
 
-  - id: website
+  - id: contactInformation_website
     label: Website
     domain: dbp:ContactInformation
     range: xsd:anyURI
@@ -326,28 +326,28 @@ property:
       The URL of the organisation's website.
 
   # --- CompanyInformation ---
-  - id: identifier
+  - id: companyInformation_identifier
     label: Identifier
     domain: dbp:CompanyInformation
     range: xsd:string
     comment: |
       Unique identifier for the company or operator.
 
-  - id: name
-    label: Name
+  - id: companyInformation_legalName
+    label: Legal Name
     domain: dbp:CompanyInformation
     range: xsd:string
     comment: |
       Legal name of the company or operator.
 
-  - id: contact
+  - id: companyInformation_contact
     label: Contact
     domain: dbp:CompanyInformation
     range: dbp:ContactInformation
     comment: |
       Contact details for the company or operator.
 
-  - id: address
+  - id: companyInformation_address
     label: Address
     domain: dbp:CompanyInformation
     range: dbp:PostalAddress
@@ -355,28 +355,28 @@ property:
       Registered postal address of the company or operator.
 
   # --- DPPInfo ---
-  - id: schemaVersion
+  - id: dppInfo_schemaVersion
     label: Schema Version
     domain: dbp:DPPInfo
     range: xsd:string
     comment: |
       Version of the DPP data schema used for this battery passport instance.
 
-  - id: dppGranularity
+  - id: dppInfo_dppGranularity
     label: DPP Granularity
     domain: dbp:DPPInfo
     range: xsd:string
     comment: |
       Granularity level of the DPP — model, batch, site, or individual battery.
 
-  - id: dppStatus
+  - id: dppInfo_dppStatus
     label: DPP Status
     domain: dbp:DPPInfo
     range: xsd:string
     comment: |
       Current lifecycle status of the DPP (e.g. active, withdrawn, updated).
 
-  - id: lastUpdated
+  - id: dppInfo_lastUpdated
     label: Last Updated
     domain: dbp:DPPInfo
     range: xsd:dateTime
@@ -384,14 +384,14 @@ property:
       Timestamp of the most recent update to the DPP record.
 
   # --- BatteryAttributes ---
-  - id: warrantyPeriod
+  - id: batteryAttributes_warrantyPeriod
     label: Warranty Period
     domain: dbp:BatteryAttributes
     range: xsd:date
     comment: |
       Date until which the manufacturer warranty for the battery is valid.
 
-  - id: batteryCategory
+  - id: batteryAttributes_batteryCategory
     label: Battery Category
     domain: dbp:BatteryAttributes
     range: xsd:string
@@ -399,7 +399,7 @@ property:
       Category of the battery as defined by the EU Battery Regulation
       (e.g. EV, LMT, industrial, stationary).
 
-  - id: batteryMass
+  - id: batteryAttributes_batteryMass
     label: Battery Mass
     domain: dbp:BatteryAttributes
     range: xsd:decimal
@@ -407,28 +407,28 @@ property:
       Total mass of the battery in kilograms.
 
   # --- BatteryIdentifiers ---
-  - id: batteryModelIdentifier
+  - id: batteryIdentifiers_batteryModelIdentifier
     label: Battery Model Identifier
     domain: dbp:BatteryIdentifiers
     range: xsd:string
     comment: |
       Unique identifier for the battery model, assigned at model level.
 
-  - id: uniqueBatteryIdentifier
+  - id: batteryIdentifiers_uniqueBatteryIdentifier
     label: Unique Battery Identifier
     domain: dbp:BatteryIdentifiers
     range: xsd:anyURI
     comment: |
       Unique identifier for the individual battery unit expressed as a URI.
 
-  - id: serialNumber
+  - id: batteryIdentifiers_serialNumber
     label: Serial Number
     domain: dbp:BatteryIdentifiers
     range: xsd:string
     comment: |
       Manufacturer-assigned serial number for the individual battery unit.
 
-  - id: uniqueDPPIdentifier
+  - id: batteryIdentifiers_uniqueDPPIdentifier
     label: Unique DPP Identifier
     domain: dbp:BatteryIdentifiers
     range: xsd:anyURI
@@ -436,28 +436,28 @@ property:
       Unique identifier for this Digital Product Passport expressed as a URI.
 
   # --- ProductData ---
-  - id: economicOperator
+  - id: productData_economicOperator
     label: Economic Operator
     domain: dbp:ProductData
     range: dbp:CompanyInformation
     comment: |
       Information about the economic operator responsible for placing the battery on the market.
 
-  - id: manufacturer
+  - id: productData_manufacturer
     label: Manufacturer
     domain: dbp:ProductData
     range: dbp:CompanyInformation
     comment: |
       Information about the battery manufacturer.
 
-  - id: manufacturingPlace
+  - id: productData_manufacturingPlace
     label: Manufacturing Place
     domain: dbp:ProductData
     range: dbp:PostalAddress
     comment: |
       Postal address of the manufacturing facility.
 
-  - id: manufacturingDate
+  - id: productData_manufacturingDate
     label: Manufacturing Date
     domain: dbp:ProductData
     range: xsd:date
@@ -465,7 +465,7 @@ property:
       Date on which the battery was manufactured.
 
   # --- GeneralInformationPublic ---
-  - id: general
+  - id: generalInformationPublic_general
     label: General
     domain: dbp:GeneralInformationPublic
     range: dbp:BatteryAttributes
@@ -502,21 +502,21 @@ property:
       Restricted product data sub-section within the restricted general information context.
 
   # --- OperatorIdentifiers ---
-  - id: manufacturerId
+  - id: operatorIdentifiers_manufacturerId
     label: Manufacturer ID
     domain: dbp:OperatorIdentifiers
     range: xsd:string
     comment: |
       Unique identifier for the battery manufacturer.
 
-  - id: facilityId
+  - id: operatorIdentifiers_facilityId
     label: Facility ID
     domain: dbp:OperatorIdentifiers
     range: xsd:string
     comment: |
       Unique identifier for the manufacturing facility.
 
-  - id: economicOperatorId
+  - id: operatorIdentifiers_economicOperatorId
     label: Economic Operator ID
     domain: dbp:OperatorIdentifiers
     range: xsd:string
@@ -524,14 +524,14 @@ property:
       Unique identifier for the economic operator.
 
   # --- RestrictedProductData ---
-  - id: dateOfPuttingIntoService
+  - id: restrictedProductData_dateOfPuttingIntoService
     label: Date of Putting Into Service
     domain: dbp:RestrictedProductData
     range: xsd:date
     comment: |
       Date on which the battery was first put into service.
 
-  - id: batteryStatus
+  - id: restrictedProductData_batteryStatus
     label: Battery Status
     domain: dbp:RestrictedProductData
     range: xsd:string
@@ -539,21 +539,21 @@ property:
       Current operational status of the battery (e.g. original, repurposed, remanufactured, waste).
 
   # --- Label ---
-  - id: symbol
+  - id: label_symbol
     label: Symbol
     domain: dbp:Label
     range: xsd:string
     comment: |
       The regulatory symbol code or icon reference.
 
-  - id: meaning
+  - id: label_meaning
     label: Meaning
     domain: dbp:Label
     range: xsd:string
     comment: |
       Human-readable explanation of the symbol's meaning.
 
-  - id: subject
+  - id: label_subject
     label: Subject
     domain: dbp:Label
     range: xsd:string
@@ -561,42 +561,42 @@ property:
       The subject matter or topic addressed by this label or symbol.
 
   # --- BatteryCompliancePublic ---
-  - id: separateCollectionSymbol
+  - id: batteryCompliancePublic_separateCollectionSymbol
     label: Separate Collection Symbol
     domain: dbp:BatteryCompliancePublic
     range: dbp:Label
     comment: |
       Symbol indicating that the battery must be separately collected at end of life.
 
-  - id: cadmium
+  - id: batteryCompliancePublic_cadmium
     label: Cadmium Label
     domain: dbp:BatteryCompliancePublic
     range: dbp:Label
     comment: |
       Label indicating presence of cadmium above the regulatory threshold.
 
-  - id: lead
+  - id: batteryCompliancePublic_lead
     label: Lead Label
     domain: dbp:BatteryCompliancePublic
     range: dbp:Label
     comment: |
       Label indicating presence of lead above the regulatory threshold.
 
-  - id: carbonFootprint
+  - id: batteryCompliancePublic_carbonFootprint
     label: Carbon Footprint Label
     domain: dbp:BatteryCompliancePublic
     range: dbp:Label
     comment: |
       Label displaying the carbon footprint performance class assigned to the battery model.
 
-  - id: extinguishingAgent
+  - id: batteryCompliancePublic_extinguishingAgent
     label: Extinguishing Agent
     domain: dbp:BatteryCompliancePublic
     range: xsd:string
     comment: |
       The type of extinguishing agent suitable for use in case of battery fire.
 
-  - id: euDeclarationConformity
+  - id: batteryCompliancePublic_euDeclarationConformity
     label: EU Declaration of Conformity
     domain: dbp:BatteryCompliancePublic
     range: xsd:anyURI
@@ -604,7 +604,7 @@ property:
       URI linking to the EU declaration of conformity document for this battery.
 
   # --- BatteryComplianceRestricted ---
-  - id: testReportResults
+  - id: batteryComplianceRestricted_testReportResults
     label: Test Report Results
     domain: dbp:BatteryComplianceRestricted
     range: xsd:anyURI
@@ -612,21 +612,21 @@ property:
       URI linking to the results of conformity test reports.
 
   # --- SupplyChainDueDiligence ---
-  - id: dueDiligenceReport
+  - id: supplyChainDueDiligence_dueDiligenceReport
     label: Due Diligence Report
     domain: dbp:SupplyChainDueDiligence
     range: xsd:anyURI
     comment: |
       URI linking to the supply chain due diligence report.
 
-  - id: thirdPartyAssurances
+  - id: supplyChainDueDiligence_thirdPartyAssurances
     label: Third Party Assurances
     domain: dbp:SupplyChainDueDiligence
     range: xsd:string
     comment: |
       Description of third-party assurances obtained for supply chain due diligence.
 
-  - id: supplyChainIndices
+  - id: supplyChainDueDiligence_supplyChainIndices
     label: Supply Chain Indices
     domain: dbp:SupplyChainDueDiligence
     range: xsd:string
@@ -634,14 +634,14 @@ property:
       Indices or metrics used to assess supply chain sustainability performance.
 
   # --- HazardousSubstance ---
-  - id: substance
+  - id: hazardousSubstance_substance
     label: Substance
     domain: dbp:HazardousSubstance
     range: xsd:string
     comment: |
       Name or identifier of the hazardous substance present in the battery.
 
-  - id: impactOnEnvironment
+  - id: hazardousSubstance_impactOnEnvironment
     label: Impact on Environment
     domain: dbp:HazardousSubstance
     range: xsd:string
@@ -649,14 +649,14 @@ property:
       Description of the impact of the substance on the environment and human health.
 
   # --- BatteryChemistry ---
-  - id: clearName
+  - id: batteryChemistry_clearName
     label: Clear Name
     domain: dbp:BatteryChemistry
     range: xsd:string
     comment: |
       Full descriptive name of the battery chemistry (e.g. Lithium Nickel Manganese Cobalt Oxide).
 
-  - id: shortName
+  - id: batteryChemistry_shortName
     label: Short Name
     domain: dbp:BatteryChemistry
     range: xsd:string
@@ -664,14 +664,14 @@ property:
       Abbreviated name of the battery chemistry (e.g. NMC, LFP, NCA).
 
   # --- BatteryMaterialsPublic ---
-  - id: batteryChemistry
+  - id: batteryMaterialsPublic_batteryChemistry
     label: Battery Chemistry
     domain: dbp:BatteryMaterialsPublic
     range: dbp:BatteryChemistry
     comment: |
       The electrochemical technology and active materials used in the battery.
 
-  - id: criticalRawMaterials
+  - id: batteryMaterialsPublic_criticalRawMaterials
     label: Critical Raw Materials
     domain: dbp:BatteryMaterialsPublic
     range: xsd:string
@@ -679,7 +679,7 @@ property:
       List of critical raw materials present in the battery as defined by the EU Critical
       Raw Materials Act.
 
-  - id: hazardousSubstances
+  - id: batteryMaterialsPublic_hazardousSubstances
     label: Hazardous Substances
     domain: dbp:BatteryMaterialsPublic
     range: dbp:HazardousSubstance
@@ -688,14 +688,14 @@ property:
 
 
   # --- BatteryMaterialLocation ---
-  - id: componentId
+  - id: batteryMaterialLocation_componentId
     label: Component ID
     domain: dbp:BatteryMaterialLocation
     range: xsd:string
     comment: |
       Unique identifier of the battery component (e.g. cathode, anode, electrolyte) where this material is located.
 
-  - id: componentName
+  - id: batteryMaterialLocation_componentName
     label: Component Name
     domain: dbp:BatteryMaterialLocation
     range: xsd:string
@@ -703,42 +703,42 @@ property:
       Name of the battery component where this material is located (e.g. Cathode, Anode, Electrolyte).
 
   # --- BatteryMaterial ---
-  - id: batteryMaterialIdentifier
+  - id: batteryMaterial_batteryMaterialIdentifier
     label: Battery Material Identifier
     domain: dbp:BatteryMaterial
     range: xsd:string
     comment: |
       Unique identifier for this material entry, such as a CAS number or internal reference code.
 
-  - id: batteryMaterialName
+  - id: batteryMaterial_batteryMaterialName
     label: Battery Material Name
     domain: dbp:BatteryMaterial
     range: xsd:string
     comment: |
       Common or IUPAC name of the material (e.g. Graphite, Lithium Iron Phosphate).
 
-  - id: batteryMaterialMass
+  - id: batteryMaterial_batteryMaterialMass
     label: Battery Material Mass
     domain: dbp:BatteryMaterial
     range: xsd:decimal
     comment: |
       Mass of this material in the battery expressed in grams.
 
-  - id: batteryMaterialShare
+  - id: batteryMaterial_batteryMaterialShare
     label: Battery Material Share
     domain: dbp:BatteryMaterial
     range: xsd:decimal
     comment: |
       Share of this material as a percentage of the total battery weight.
 
-  - id: isCriticalRawMaterial
+  - id: batteryMaterial_isCriticalRawMaterial
     label: Is Critical Raw Material
     domain: dbp:BatteryMaterial
     range: xsd:boolean
     comment: |
       Indicates whether this material is classified as a critical raw material by the EU.
 
-  - id: batteryMaterialLocation
+  - id: batteryMaterial_batteryMaterialLocation
     label: Battery Material Location
     domain: dbp:BatteryMaterial
     range: dbp:BatteryMaterialLocation
@@ -746,7 +746,7 @@ property:
       The location within the battery assembly where this material is present.
 
   # --- BatteryMaterialsRestricted ---
-  - id: materialsComposition
+  - id: batteryMaterialsRestricted_materialsComposition
     label: Materials Composition
     domain: dbp:BatteryMaterialsRestricted
     range: dbp:BatteryMaterial
@@ -755,56 +755,56 @@ property:
       identifiers, names, masses, shares, and component locations.
 
   # --- BatteryCarbonFootprint ---
-  - id: carbonFootprintPerFU
+  - id: batteryCarbonFootprint_carbonFootprintPerFU
     label: Carbon Footprint per Functional Unit
     domain: dbp:BatteryCarbonFootprint
     range: xsd:decimal
     comment: |
       Total carbon footprint of the battery per functional unit in kg CO2 equivalent per kWh.
 
-  - id: contributionRawMaterial
+  - id: batteryCarbonFootprint_contributionRawMaterial
     label: Contribution Raw Material Acquisition
     domain: dbp:BatteryCarbonFootprint
     range: xsd:decimal
     comment: |
       Carbon footprint contribution from raw material acquisition and pre-processing phase.
 
-  - id: contributionProduction
+  - id: batteryCarbonFootprint_contributionProduction
     label: Contribution Main Product Production
     domain: dbp:BatteryCarbonFootprint
     range: xsd:decimal
     comment: |
       Carbon footprint contribution from the main battery production phase.
 
-  - id: contributionDistribution
+  - id: batteryCarbonFootprint_contributionDistribution
     label: Contribution Distribution
     domain: dbp:BatteryCarbonFootprint
     range: xsd:decimal
     comment: |
       Carbon footprint contribution from distribution and logistics.
 
-  - id: contributionEndOfLife
+  - id: batteryCarbonFootprint_contributionEndOfLife
     label: Contribution End of Life and Recycling
     domain: dbp:BatteryCarbonFootprint
     range: xsd:decimal
     comment: |
       Carbon footprint contribution from end-of-life treatment and recycling.
 
-  - id: performanceClass
+  - id: batteryCarbonFootprint_performanceClass
     label: Performance Class
     domain: dbp:BatteryCarbonFootprint
     range: dbp:PerformanceClass
     comment: |
       Carbon footprint performance class assigned to the battery model (A through G).
 
-  - id: publicCarbonFootprintStudy
+  - id: batteryCarbonFootprint_publicCarbonFootprintStudy
     label: Public Carbon Footprint Study
     domain: dbp:BatteryCarbonFootprint
     range: xsd:anyURI
     comment: |
       URI linking to the publicly accessible carbon footprint study for this battery.
 
-  - id: absoluteCarbonFootprint
+  - id: batteryCarbonFootprint_absoluteCarbonFootprint
     label: Absolute Battery Carbon Footprint
     domain: dbp:BatteryCarbonFootprint
     range: xsd:integer
@@ -812,21 +812,21 @@ property:
       Absolute carbon footprint of the battery expressed in kg CO2 equivalent.
 
   # --- EndUserInformation ---
-  - id: wastePrevention
+  - id: endUserInformation_wastePrevention
     label: Waste Prevention
     domain: dbp:EndUserInformation
     range: xsd:anyURI
     comment: |
       URI linking to information on the end-user's role in waste prevention.
 
-  - id: separateCollection
+  - id: endUserInformation_separateCollection
     label: Separate Collection
     domain: dbp:EndUserInformation
     range: xsd:anyURI
     comment: |
       URI linking to information on the end-user's role in separate collection of batteries.
 
-  - id: collectionEndOfLife
+  - id: endUserInformation_collectionEndOfLife
     label: Collection End of Life
     domain: dbp:EndUserInformation
     range: xsd:anyURI
@@ -834,56 +834,56 @@ property:
       URI linking to information on battery collection, second life, and end-of-life options.
 
   # --- RecycledRenewableContent ---
-  - id: preConsumerNickelShare
+  - id: recycledRenewableContent_preConsumerNickelShare
     label: Pre-Consumer Recycled Nickel Share
     domain: dbp:RecycledRenewableContent
     range: xsd:decimal
     comment: |
       Share of nickel sourced from pre-consumer recycled material as a percentage.
 
-  - id: preConsumerCobaltShare
+  - id: recycledRenewableContent_preConsumerCobaltShare
     label: Pre-Consumer Recycled Cobalt Share
     domain: dbp:RecycledRenewableContent
     range: xsd:decimal
     comment: |
       Share of cobalt sourced from pre-consumer recycled material as a percentage.
 
-  - id: preConsumerLithiumShare
+  - id: recycledRenewableContent_preConsumerLithiumShare
     label: Pre-Consumer Recycled Lithium Share
     domain: dbp:RecycledRenewableContent
     range: xsd:decimal
     comment: |
       Share of lithium sourced from pre-consumer recycled material as a percentage.
 
-  - id: postConsumerNickelShare
+  - id: recycledRenewableContent_postConsumerNickelShare
     label: Post-Consumer Recycled Nickel Share
     domain: dbp:RecycledRenewableContent
     range: xsd:decimal
     comment: |
       Share of nickel sourced from post-consumer recycled material as a percentage.
 
-  - id: postConsumerCobaltShare
+  - id: recycledRenewableContent_postConsumerCobaltShare
     label: Post-Consumer Recycled Cobalt Share
     domain: dbp:RecycledRenewableContent
     range: xsd:decimal
     comment: |
       Share of cobalt sourced from post-consumer recycled material as a percentage.
 
-  - id: postConsumerLithiumShare
+  - id: recycledRenewableContent_postConsumerLithiumShare
     label: Post-Consumer Recycled Lithium Share
     domain: dbp:RecycledRenewableContent
     range: xsd:decimal
     comment: |
       Share of lithium sourced from post-consumer recycled material as a percentage.
 
-  - id: recycledLeadShare
+  - id: recycledRenewableContent_recycledLeadShare
     label: Recycled Lead Share
     domain: dbp:RecycledRenewableContent
     range: xsd:decimal
     comment: |
       Share of lead sourced from recycled material as a percentage.
 
-  - id: renewableContentShare
+  - id: recycledRenewableContent_renewableContentShare
     label: Renewable Content Share
     domain: dbp:RecycledRenewableContent
     range: xsd:decimal
@@ -891,14 +891,14 @@ property:
       Share of renewable material content in the battery as a percentage.
 
   # --- BatteryCircularityPublic ---
-  - id: endUserInfo
+  - id: batteryCircularityPublic_endUserInfo
     label: End-User Info
     domain: dbp:BatteryCircularityPublic
     range: dbp:EndUserInformation
     comment: |
       End-user information on waste prevention, separate collection, and end-of-life handling.
 
-  - id: recycledContent
+  - id: batteryCircularityPublic_recycledContent
     label: Recycled Content
     domain: dbp:BatteryCircularityPublic
     range: dbp:RecycledRenewableContent
@@ -906,28 +906,28 @@ property:
       Recycled and renewable content shares for key materials in the battery.
 
   # --- BatteryCircularityPrivate ---
-  - id: dismantlingManuals
+  - id: batteryCircularityPrivate_dismantlingManuals
     label: Dismantling Manuals
     domain: dbp:BatteryCircularityPrivate
     range: xsd:anyURI
     comment: |
       URI linking to dismantling and disassembly manuals for the battery.
 
-  - id: partNumbers
+  - id: batteryCircularityPrivate_partNumbers
     label: Part Numbers
     domain: dbp:BatteryCircularityPrivate
     range: xsd:anyURI
     comment: |
       URI linking to part numbers for battery components.
 
-  - id: sparePartsInfo
+  - id: batteryCircularityPrivate_sparePartsInfo
     label: Spare Parts Info
     domain: dbp:BatteryCircularityPrivate
     range: xsd:anyURI
     comment: |
       URI linking to information on sources of spare parts for the battery.
 
-  - id: safetyMeasures
+  - id: batteryCircularityPrivate_safetyMeasures
     label: Safety Measures
     domain: dbp:BatteryCircularityPrivate
     range: xsd:anyURI
@@ -935,35 +935,35 @@ property:
       URI linking to safety measures for handling, storage, and transport of the battery.
 
   # --- CapacityEnergyVoltagePublic ---
-  - id: ratedCapacity
+  - id: capacityEnergyVoltagePublic_ratedCapacity
     label: Rated Capacity
     domain: dbp:CapacityEnergyVoltagePublic
     range: xsd:integer
     comment: |
       Rated capacity of the battery in ampere-hours (Ah) at time of manufacture.
 
-  - id: certifiedUsableBattEnergy
+  - id: capacityEnergyVoltagePublic_certifiedUsableBattEnergy
     label: Certified Usable Battery Energy
     domain: dbp:CapacityEnergyVoltagePublic
     range: xsd:integer
     comment: |
       Certified usable battery energy in watt-hours (Wh).
 
-  - id: minimumVoltage
+  - id: capacityEnergyVoltagePublic_minimumVoltage
     label: Minimum Voltage
     domain: dbp:CapacityEnergyVoltagePublic
     range: xsd:decimal
     comment: |
       Minimum operational voltage of the battery in volts.
 
-  - id: maximumVoltage
+  - id: capacityEnergyVoltagePublic_maximumVoltage
     label: Maximum Voltage
     domain: dbp:CapacityEnergyVoltagePublic
     range: xsd:decimal
     comment: |
       Maximum operational voltage of the battery in volts.
 
-  - id: nominalVoltage
+  - id: capacityEnergyVoltagePublic_nominalVoltage
     label: Nominal Voltage
     domain: dbp:CapacityEnergyVoltagePublic
     range: xsd:decimal
@@ -971,21 +971,21 @@ property:
       Nominal voltage of the battery in volts.
 
   # --- PowerCapabilityPublic ---
-  - id: originalPowerCapability
+  - id: powerCapabilityPublic_originalPowerCapability
     label: Original Power Capability
     domain: dbp:PowerCapabilityPublic
     range: xsd:integer
     comment: |
       Original power capability of the battery at beginning of life in watts.
 
-  - id: maximumPermittedPower
+  - id: powerCapabilityPublic_maximumPermittedPower
     label: Maximum Permitted Battery Power
     domain: dbp:PowerCapabilityPublic
     range: xsd:integer
     comment: |
       Maximum permitted power of the battery in watts.
 
-  - id: ratioPowerToEnergy
+  - id: powerCapabilityPublic_ratioPowerToEnergy
     label: Ratio Nominal Power to Battery Energy
     domain: dbp:PowerCapabilityPublic
     range: xsd:integer
@@ -993,14 +993,14 @@ property:
       Ratio of nominal power to battery energy expressed in W/Wh.
 
   # --- RoundTripEfficiencyPublic ---
-  - id: initialRoundTripEfficiency
+  - id: roundTripEfficiencyPublic_initialRoundTripEfficiency
     label: Initial Round Trip Energy Efficiency
     domain: dbp:RoundTripEfficiencyPublic
     range: xsd:decimal
     comment: |
       Initial round trip energy efficiency of the battery as a percentage at beginning of life.
 
-  - id: roundTripEfficiencyAt50pct
+  - id: roundTripEfficiencyPublic_roundTripEfficiencyAt50pct
     label: Round Trip Efficiency at 50% Cycle Life
     domain: dbp:RoundTripEfficiencyPublic
     range: xsd:decimal
@@ -1008,7 +1008,7 @@ property:
       Round trip energy efficiency at 50% of the expected cycle life as a percentage.
 
   # --- InternalResistancePublic ---
-  - id: initialInternalResistance
+  - id: internalResistancePublic_initialInternalResistance
     label: Initial Internal Resistance
     domain: dbp:InternalResistancePublic
     range: xsd:integer
@@ -1016,28 +1016,28 @@ property:
       Initial internal resistance of the battery cell and pack at beginning of life in milliohms.
 
   # --- BatteryLifetimePublic ---
-  - id: expectedLifetimeCycles
+  - id: batteryLifetimePublic_expectedLifetimeCycles
     label: Expected Lifetime Charge-Discharge Cycles
     domain: dbp:BatteryLifetimePublic
     range: xsd:integer
     comment: |
       Expected number of charge-discharge cycles before capacity drops below the exhaustion threshold.
 
-  - id: cycleLifeReferenceTest
+  - id: batteryLifetimePublic_cycleLifeReferenceTest
     label: Cycle-Life Reference Test
     domain: dbp:BatteryLifetimePublic
     range: xsd:string
     comment: |
       Reference to the standard or test procedure used to determine cycle life.
 
-  - id: cRateCycleLifeTest
+  - id: batteryLifetimePublic_cRateCycleLifeTest
     label: C-Rate of Cycle-Life Test
     domain: dbp:BatteryLifetimePublic
     range: xsd:decimal
     comment: |
       C-rate applied during the cycle-life reference test.
 
-  - id: capacityThresholdExhaustion
+  - id: batteryLifetimePublic_capacityThresholdExhaustion
     label: Capacity Threshold for Exhaustion
     domain: dbp:BatteryLifetimePublic
     range: xsd:decimal
@@ -1045,14 +1045,14 @@ property:
       Capacity threshold below which the battery is considered exhausted, expressed as a percentage.
 
   # --- TemperatureConditionsPublic ---
-  - id: tempRangeIdleLower
+  - id: temperatureConditionsPublic_tempRangeIdleLower
     label: Temperature Range Idle Lower Boundary
     domain: dbp:TemperatureConditionsPublic
     range: xsd:integer
     comment: |
       Lower boundary of the temperature range for idle state storage in degrees Celsius.
 
-  - id: tempRangeIdleUpper
+  - id: temperatureConditionsPublic_tempRangeIdleUpper
     label: Temperature Range Idle Upper Boundary
     domain: dbp:TemperatureConditionsPublic
     range: xsd:integer
@@ -1145,7 +1145,7 @@ property:
     comment: |
       Dynamic restricted temperature conditions sub-section.
 
-  - id: negativeEvents
+  - id: batteryPerformanceRestricted_negativeEvents
     label: Negative Events
     domain: dbp:BatteryPerformanceRestricted
     range: dbp:NegativeEvents
@@ -1154,35 +1154,35 @@ property:
       overcharge events, and accident records.
 
   # --- CapacityEnergyVoltageRestricted ---
-  - id: capacityFade
+  - id: capacityEnergyVoltageRestricted_capacityFade
     label: Capacity Fade
     domain: dbp:CapacityEnergyVoltageRestricted
     range: xsd:decimal
     comment: |
       Decrease in rated capacity over time as a percentage of the original capacity.
 
-  - id: remainingCapacity
+  - id: capacityEnergyVoltageRestricted_remainingCapacity
     label: Remaining Capacity
     domain: dbp:CapacityEnergyVoltageRestricted
     range: xsd:integer
     comment: |
       Current remaining capacity of the battery in ampere-hours (Ah).
 
-  - id: remainingUsableBattEnergy
+  - id: capacityEnergyVoltageRestricted_remainingUsableBattEnergy
     label: Remaining Usable Battery Energy
     domain: dbp:CapacityEnergyVoltageRestricted
     range: xsd:integer
     comment: |
       Current remaining usable energy of the battery in watt-hours (Wh).
 
-  - id: stateOfCertifiedEnergy
+  - id: capacityEnergyVoltageRestricted_stateOfCertifiedEnergy
     label: State of Certified Energy
     domain: dbp:CapacityEnergyVoltageRestricted
     range: xsd:decimal
     comment: |
       State of certified energy (SOCE) as the ratio of remaining usable energy to certified usable energy.
 
-  - id: stateOfCharge
+  - id: capacityEnergyVoltageRestricted_stateOfCharge
     label: State of Charge
     domain: dbp:CapacityEnergyVoltageRestricted
     range: xsd:decimal
@@ -1190,14 +1190,14 @@ property:
       Current state of charge (SoC) expressed as a percentage of remaining capacity.
 
   # --- PowerCapabilityRestricted ---
-  - id: powerFade
+  - id: powerCapabilityRestricted_powerFade
     label: Power Fade
     domain: dbp:PowerCapabilityRestricted
     range: xsd:decimal
     comment: |
       Decrease in power capability over time as a percentage of original power capability.
 
-  - id: remainingPowerCapability
+  - id: powerCapabilityRestricted_remainingPowerCapability
     label: Remaining Power Capability
     domain: dbp:PowerCapabilityRestricted
     range: xsd:integer
@@ -1205,35 +1205,35 @@ property:
       Current remaining power capability of the battery in watts.
 
   # --- RoundTripEfficiencyRestricted ---
-  - id: roundTripEfficiencyFade
+  - id: roundTripEfficiencyRestricted_roundTripEfficiencyFade
     label: Energy Round Trip Efficiency Fade
     domain: dbp:RoundTripEfficiencyRestricted
     range: xsd:decimal
     comment: |
       Decrease in round trip energy efficiency over time as a percentage.
 
-  - id: initialSelfDischargeRate
+  - id: roundTripEfficiencyRestricted_initialSelfDischargeRate
     label: Initial Self-Discharge Rate
     domain: dbp:RoundTripEfficiencyRestricted
     range: xsd:decimal
     comment: |
       Self-discharge rate at beginning of life expressed as a percentage per unit time.
 
-  - id: remainingRoundTripEfficiency
+  - id: roundTripEfficiencyRestricted_remainingRoundTripEfficiency
     label: Remaining Round Trip Energy Efficiency
     domain: dbp:RoundTripEfficiencyRestricted
     range: xsd:decimal
     comment: |
       Current remaining round trip energy efficiency expressed as a percentage.
 
-  - id: currentSelfDischargeRate
+  - id: roundTripEfficiencyRestricted_currentSelfDischargeRate
     label: Current Self-Discharge Rate
     domain: dbp:RoundTripEfficiencyRestricted
     range: xsd:decimal
     comment: |
       Current self-discharge rate expressed as a percentage per unit time.
 
-  - id: evolutionSelfDischargeRates
+  - id: roundTripEfficiencyRestricted_evolutionSelfDischargeRates
     label: Evolution of Self-Discharge Rates
     domain: dbp:RoundTripEfficiencyRestricted
     range: xsd:decimal
@@ -1241,7 +1241,7 @@ property:
       Historical evolution of self-discharge rates over the battery's service lifetime.
 
   # --- InternalResistanceRestricted ---
-  - id: internalResistanceIncrease
+  - id: internalResistanceRestricted_internalResistanceIncrease
     label: Internal Resistance Increase
     domain: dbp:InternalResistanceRestricted
     range: xsd:decimal
@@ -1249,28 +1249,28 @@ property:
       Increase in internal resistance over time expressed as a percentage of original resistance.
 
   # --- BatteryLifetimeRestricted ---
-  - id: expectedLifetimeYears
+  - id: batteryLifetimeRestricted_expectedLifetimeYears
     label: Expected Lifetime in Calendar Years
     domain: dbp:BatteryLifetimeRestricted
     range: xsd:decimal
     comment: |
       Expected remaining lifetime of the battery in calendar years.
 
-  - id: numberOfFullCycles
+  - id: batteryLifetimeRestricted_numberOfFullCycles
     label: Number of Full Charging and Discharging Cycles
     domain: dbp:BatteryLifetimeRestricted
     range: xsd:integer
     comment: |
       Total number of full charge-discharge cycles completed by the battery to date.
 
-  - id: energyThroughput
+  - id: batteryLifetimeRestricted_energyThroughput
     label: Energy Throughput
     domain: dbp:BatteryLifetimeRestricted
     range: xsd:decimal
     comment: |
       Total energy throughput of the battery in watt-hours since first use.
 
-  - id: capacityThroughput
+  - id: batteryLifetimeRestricted_capacityThroughput
     label: Capacity Throughput
     domain: dbp:BatteryLifetimeRestricted
     range: xsd:decimal
@@ -1278,35 +1278,35 @@ property:
       Total charge throughput of the battery in ampere-hours since first use.
 
   # --- TemperatureConditionsRestricted ---
-  - id: temperatureInformation
+  - id: temperatureConditionsRestricted_temperatureInformation
     label: Temperature Information
     domain: dbp:TemperatureConditionsRestricted
     range: xsd:integer
     comment: |
       General temperature information about the battery's operating history.
 
-  - id: timeInExtremeTempsAbove
+  - id: temperatureConditionsRestricted_timeInExtremeTempsAbove
     label: Time in Extreme Temperatures Above Boundary
     domain: dbp:TemperatureConditionsRestricted
     range: xsd:integer
     comment: |
       Cumulative time the battery has spent in temperatures above the upper boundary, in hours.
 
-  - id: timeInExtremeTempsBelow
+  - id: temperatureConditionsRestricted_timeInExtremeTempsBelow
     label: Time in Extreme Temperatures Below Boundary
     domain: dbp:TemperatureConditionsRestricted
     range: xsd:integer
     comment: |
       Cumulative time the battery has spent in temperatures below the lower boundary, in hours.
 
-  - id: timeChargingExtremeTempsAbove
+  - id: temperatureConditionsRestricted_timeChargingExtremeTempsAbove
     label: Time Charging in Extreme Temperatures Above
     domain: dbp:TemperatureConditionsRestricted
     range: xsd:integer
     comment: |
       Cumulative time the battery has been charged at temperatures above the upper boundary, in hours.
 
-  - id: timeChargingExtremeTempsBelow
+  - id: temperatureConditionsRestricted_timeChargingExtremeTempsBelow
     label: Time Charging in Extreme Temperatures Below
     domain: dbp:TemperatureConditionsRestricted
     range: xsd:integer
@@ -1314,21 +1314,21 @@ property:
       Cumulative time the battery has been charged at temperatures below the lower boundary, in hours.
 
   # --- NegativeEvents ---
-  - id: deepDischargeEvents
+  - id: negativeEvents_deepDischargeEvents
     label: Number of Deep Discharge Events
     domain: dbp:NegativeEvents
     range: xsd:integer
     comment: |
       Total number of deep discharge events recorded for the battery.
 
-  - id: overchargeEvents
+  - id: negativeEvents_overchargeEvents
     label: Number of Overcharge Events
     domain: dbp:NegativeEvents
     range: xsd:integer
     comment: |
       Total number of overcharge events recorded for the battery.
 
-  - id: informationOnAccidents
+  - id: negativeEvents_informationOnAccidents
     label: Information on Accidents
     domain: dbp:NegativeEvents
     range: xsd:anyURI
