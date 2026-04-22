@@ -1,6 +1,6 @@
 {
     "@context": {
-        "dbp": "https://dpp.vocabulary.spherity.com/dbp/v0.2/",
+        "dbp": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "dc": "http://purl.org/dc/terms/",
         "owl": "http://www.w3.org/2002/07/owl#",
@@ -64,7 +64,7 @@
             "@type": "@id"
         }
     },
-    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/",
+    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#",
     "@type": "owl:Ontology",
     "dc:title": {
         "@value": "Digital Battery Passport Vocabulary",
