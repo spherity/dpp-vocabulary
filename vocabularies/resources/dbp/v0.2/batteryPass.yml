@@ -436,13 +436,6 @@ property:
     comment: |
       Unique identifier for this Digital Product Passport expressed as a URI.
 
-  - id: batteryIdentifiers_lastUpdated
-    label: Last Updated
-    domain: dbp:BatteryIdentifiers
-    range: xsd:dateTime
-    comment: |
-      Timestamp of the most recent update to the battery identifiers record.
-
   # --- ProductData ---
   - id: productData_economicOperator
     label: Economic Operator
@@ -545,13 +538,6 @@ property:
     range: xsd:string
     comment: |
       Current operational status of the battery (e.g. original, repurposed, remanufactured, waste).
-
-  - id: restrictedProductData_lastUpdated
-    label: Last Updated
-    domain: dbp:RestrictedProductData
-    range: xsd:dateTime
-    comment: |
-      Timestamp of the most recent update to the restricted product data record.
 
   # --- Label ---
   - id: label_symbol

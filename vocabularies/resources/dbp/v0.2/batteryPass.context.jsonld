@@ -118,10 +118,6 @@
                 "batteryIdentifiers_uniqueDPPIdentifier": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#batteryIdentifiers_uniqueDPPIdentifier",
                     "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-                },
-                "batteryIdentifiers_lastUpdated": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#batteryIdentifiers_lastUpdated",
-                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
                 }
             }
         },
@@ -194,10 +190,6 @@
                 "restrictedProductData_batteryStatus": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#restrictedProductData_batteryStatus",
                     "@type": "http://www.w3.org/2001/XMLSchema#string"
-                },
-                "restrictedProductData_lastUpdated": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#restrictedProductData_lastUpdated",
-                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
                 }
             }
         },

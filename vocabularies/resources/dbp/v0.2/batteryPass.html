@@ -252,7 +252,6 @@
                         <li><a href="#batteryCompliancePublic_separateCollectionSymbol"><code>batteryCompliancePublic_separateCollectionSymbol<code></code></code></a></li>
                         <li><a href="#batteryComplianceRestricted_testReportResults"><code>batteryComplianceRestricted_testReportResults<code></code></code></a></li>
                         <li><a href="#batteryIdentifiers_batteryModelIdentifier"><code>batteryIdentifiers_batteryModelIdentifier<code></code></code></a></li>
-                        <li><a href="#batteryIdentifiers_lastUpdated"><code>batteryIdentifiers_lastUpdated<code></code></code></a></li>
                         <li><a href="#batteryIdentifiers_serialNumber"><code>batteryIdentifiers_serialNumber<code></code></code></a></li>
                         <li><a href="#batteryIdentifiers_uniqueBatteryIdentifier"><code>batteryIdentifiers_uniqueBatteryIdentifier<code></code></code></a></li>
                         <li><a href="#batteryIdentifiers_uniqueDPPIdentifier"><code>batteryIdentifiers_uniqueDPPIdentifier<code></code></code></a></li>
@@ -357,7 +356,6 @@
                         <li><a href="#recycledRenewableContent_renewableContentShare"><code>recycledRenewableContent_renewableContentShare<code></code></code></a></li>
                         <li><a href="#restrictedProductData_batteryStatus"><code>restrictedProductData_batteryStatus<code></code></code></a></li>
                         <li><a href="#restrictedProductData_dateOfPuttingIntoService"><code>restrictedProductData_dateOfPuttingIntoService<code></code></code></a></li>
-                        <li><a href="#restrictedProductData_lastUpdated"><code>restrictedProductData_lastUpdated<code></code></code></a></li>
                         <li><a href="#roundTripEfficiencyPublic_initialRoundTripEfficiency"><code>roundTripEfficiencyPublic_initialRoundTripEfficiency<code></code></code></a></li>
                         <li><a href="#roundTripEfficiencyPublic_roundTripEfficiencyAt50pct"><code>roundTripEfficiencyPublic_roundTripEfficiencyAt50pct<code></code></code></a></li>
                         <li><a href="#roundTripEfficiencyRestricted_currentSelfDischargeRate"><code>roundTripEfficiencyRestricted_currentSelfDischargeRate<code></code></code></a></li>
@@ -705,21 +703,6 @@
                     <dd><a href="https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld"><code>https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld</code></a></dd>
                 </dl>
             </section>
-            <section id="batteryIdentifiers_lastUpdated">
-                <h4><code>batteryIdentifiers_lastUpdated</code></h4>
-                <p><em>Last Updated</em></p>
-                <div>Timestamp of the most recent update to the battery identifiers record.</div>
-                <dl class="terms">
-                    <dt>Domain:</dt>
-                    <dd><a href="#BatteryIdentifiers"><code>BatteryIdentifiers</code></a></dd>
-                    <dt>Range:</dt>
-                    <dd><code>xsd:dateTime</code></dd>
-                </dl>
-                <dl class="terms">
-                    <dt>Relevant <code>@context</code>:</dt>
-                    <dd><a href="https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld"><code>https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld</code></a></dd>
-                </dl>
-            </section>
             <section id="productData_economicOperator">
                 <h4><code>productData_economicOperator</code></h4>
                 <p><em>Economic Operator</em></p>
@@ -924,21 +907,6 @@
                     <dd><a href="#RestrictedProductData"><code>RestrictedProductData</code></a></dd>
                     <dt>Range:</dt>
                     <dd><a href="http://www.w3.org/2001/XMLSchema#string"><code>xsd:string</code></a></dd>
-                </dl>
-                <dl class="terms">
-                    <dt>Relevant <code>@context</code>:</dt>
-                    <dd><a href="https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld"><code>https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld</code></a></dd>
-                </dl>
-            </section>
-            <section id="restrictedProductData_lastUpdated">
-                <h4><code>restrictedProductData_lastUpdated</code></h4>
-                <p><em>Last Updated</em></p>
-                <div>Timestamp of the most recent update to the restricted product data record.</div>
-                <dl class="terms">
-                    <dt>Domain:</dt>
-                    <dd><a href="#RestrictedProductData"><code>RestrictedProductData</code></a></dd>
-                    <dt>Range:</dt>
-                    <dd><code>xsd:dateTime</code></dd>
                 </dl>
                 <dl class="terms">
                     <dt>Relevant <code>@context</code>:</dt>
@@ -2761,7 +2729,7 @@
                     <dt>Range of:</dt>
                     <dd><a href="#generalInformationPublic_identifiers"><code>generalInformationPublic_identifiers</code></a></dd>
                     <dt>Domain of:</dt>
-                    <dd><a href="#batteryIdentifiers_batteryModelIdentifier"><code>batteryIdentifiers_batteryModelIdentifier</code></a>, <a href="#batteryIdentifiers_uniqueBatteryIdentifier"><code>batteryIdentifiers_uniqueBatteryIdentifier</code></a>, <a href="#batteryIdentifiers_serialNumber"><code>batteryIdentifiers_serialNumber</code></a>, <a href="#batteryIdentifiers_uniqueDPPIdentifier"><code>batteryIdentifiers_uniqueDPPIdentifier</code></a>, <a href="#batteryIdentifiers_lastUpdated"><code>batteryIdentifiers_lastUpdated</code></a></dd>
+                    <dd><a href="#batteryIdentifiers_batteryModelIdentifier"><code>batteryIdentifiers_batteryModelIdentifier</code></a>, <a href="#batteryIdentifiers_uniqueBatteryIdentifier"><code>batteryIdentifiers_uniqueBatteryIdentifier</code></a>, <a href="#batteryIdentifiers_serialNumber"><code>batteryIdentifiers_serialNumber</code></a>, <a href="#batteryIdentifiers_uniqueDPPIdentifier"><code>batteryIdentifiers_uniqueDPPIdentifier</code></a></dd>
                 </dl>
                 <dl class="terms">
                     <dt>Relevant <code>@context</code>:</dt>
@@ -2822,7 +2790,7 @@
                     <dt>Range of:</dt>
                     <dd><a href="#generalInformationRestricted_productData"><code>generalInformationRestricted_productData</code></a></dd>
                     <dt>Domain of:</dt>
-                    <dd><a href="#restrictedProductData_dateOfPuttingIntoService"><code>restrictedProductData_dateOfPuttingIntoService</code></a>, <a href="#restrictedProductData_batteryStatus"><code>restrictedProductData_batteryStatus</code></a>, <a href="#restrictedProductData_lastUpdated"><code>restrictedProductData_lastUpdated</code></a></dd>
+                    <dd><a href="#restrictedProductData_dateOfPuttingIntoService"><code>restrictedProductData_dateOfPuttingIntoService</code></a>, <a href="#restrictedProductData_batteryStatus"><code>restrictedProductData_batteryStatus</code></a></dd>
                 </dl>
                 <dl class="terms">
                     <dt>Relevant <code>@context</code>:</dt>

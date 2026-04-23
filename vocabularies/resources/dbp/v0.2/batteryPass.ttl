@@ -5,8 +5,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix jsonld: <http://www.w3.org/ns/json-ld#> .
-@prefix schema: <https://schema.org/> .
 
 # Ontology definition
 dbp: a owl:Ontology ;
@@ -210,15 +208,6 @@ dbp:batteryIdentifiers_uniqueDPPIdentifier a rdf:Property, owl:DatatypeProperty 
     vs:term_status "stable" ;
 .
 
-dbp:batteryIdentifiers_lastUpdated a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:BatteryIdentifiers ;
-    rdfs:range xsd:dateTime ;
-    rdfs:label "Last Updated" ;
-    rdfs:comment """<div>Timestamp of the most recent update to the battery identifiers record.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
 dbp:productData_economicOperator a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:ProductData ;
     rdfs:range dbp:CompanyInformation ;
@@ -341,15 +330,6 @@ dbp:restrictedProductData_batteryStatus a rdf:Property, owl:DatatypeProperty ;
     rdfs:range xsd:string ;
     rdfs:label "Battery Status" ;
     rdfs:comment """<div>Current operational status of the battery (e.g. original, repurposed, remanufactured, waste).</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:restrictedProductData_lastUpdated a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:RestrictedProductData ;
-    rdfs:range xsd:dateTime ;
-    rdfs:label "Last Updated" ;
-    rdfs:comment """<div>Timestamp of the most recent update to the restricted product data record.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
@@ -1794,7 +1774,6 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:batteryCompliancePublic_separateCollectionSymbol,
         dbp:batteryComplianceRestricted_testReportResults,
         dbp:batteryIdentifiers_batteryModelIdentifier,
-        dbp:batteryIdentifiers_lastUpdated,
         dbp:batteryIdentifiers_serialNumber,
         dbp:batteryIdentifiers_uniqueBatteryIdentifier,
         dbp:batteryIdentifiers_uniqueDPPIdentifier,
@@ -1899,7 +1878,6 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:recycledRenewableContent_renewableContentShare,
         dbp:restrictedProductData_batteryStatus,
         dbp:restrictedProductData_dateOfPuttingIntoService,
-        dbp:restrictedProductData_lastUpdated,
         dbp:roundTripEfficiencyPublic_initialRoundTripEfficiency,
         dbp:roundTripEfficiencyPublic_roundTripEfficiencyAt50pct,
         dbp:roundTripEfficiencyRestricted_currentSelfDischargeRate,

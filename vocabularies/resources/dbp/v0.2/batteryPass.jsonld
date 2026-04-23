@@ -392,21 +392,6 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryIdentifiers_lastUpdated",
-        "@type": ["rdf:Property", "owl:DatatypeProperty"],
-        "rdfs:domain": "dbp:BatteryIdentifiers",
-        "rdfs:range": "xsd:dateTime",
-        "rdfs:label": "Last Updated",
-        "rdfs:comment": {
-            "@value": "<div>Timestamp of the most recent update to the battery identifiers record.</div>",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
-        },
-        "vs:term_status": "stable",
-        "mentioned": [{
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
-            "@type": "jsonld:Context"
-        }]
-    }, {
         "@id": "dbp:productData_economicOperator",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:ProductData",
@@ -609,21 +594,6 @@
         "rdfs:label": "Battery Status",
         "rdfs:comment": {
             "@value": "<div>Current operational status of the battery (e.g. original, repurposed, remanufactured, waste).</div>",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
-        },
-        "vs:term_status": "stable",
-        "mentioned": [{
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
-            "@type": "jsonld:Context"
-        }]
-    }, {
-        "@id": "dbp:restrictedProductData_lastUpdated",
-        "@type": ["rdf:Property", "owl:DatatypeProperty"],
-        "rdfs:domain": "dbp:RestrictedProductData",
-        "rdfs:range": "xsd:dateTime",
-        "rdfs:label": "Last Updated",
-        "rdfs:comment": {
-            "@value": "<div>Timestamp of the most recent update to the restricted product data record.</div>",
             "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
         },
         "vs:term_status": "stable",
