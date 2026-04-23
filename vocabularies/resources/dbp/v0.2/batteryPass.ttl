@@ -14,11 +14,11 @@ compliance, materials, carbon footprint, circularity, and performance and durabi
 as defined by the BatteryPass-Ready DataAttributeLongList v1.3 (March 2026).
 """^^rdf:HTML ;
     rdfs:seeAlso <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1542> ;
-    dc:date "2026-04-22"^^xsd:date ;
+    dc:date "2026-04-23"^^xsd:date ;
 .
 
 # Property definitions
-dbp:postalAddress_postalCode a rdf:Property, owl:DatatypeProperty ;
+dbp:postalCode a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:PostalAddress ;
     rdfs:range xsd:string ;
     rdfs:label "Postal Code" ;
@@ -27,7 +27,7 @@ dbp:postalAddress_postalCode a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:postalAddress_streetAddress a rdf:Property, owl:DatatypeProperty ;
+dbp:streetAddress a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:PostalAddress ;
     rdfs:range xsd:string ;
     rdfs:label "Street Address" ;
@@ -36,7 +36,7 @@ dbp:postalAddress_streetAddress a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:postalAddress_country a rdf:Property, owl:DatatypeProperty ;
+dbp:country a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:PostalAddress ;
     rdfs:range xsd:string ;
     rdfs:label "Country" ;
@@ -45,7 +45,7 @@ dbp:postalAddress_country a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:contactInformation_phone a rdf:Property, owl:DatatypeProperty ;
+dbp:phone a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:ContactInformation ;
     rdfs:range xsd:string ;
     rdfs:label "Phone" ;
@@ -54,7 +54,7 @@ dbp:contactInformation_phone a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:contactInformation_email a rdf:Property, owl:DatatypeProperty ;
+dbp:email a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:ContactInformation ;
     rdfs:range xsd:string ;
     rdfs:label "Email" ;
@@ -63,7 +63,7 @@ dbp:contactInformation_email a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:contactInformation_website a rdf:Property, owl:DatatypeProperty ;
+dbp:website a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:ContactInformation ;
     rdfs:range xsd:anyURI ;
     rdfs:label "Website" ;
@@ -72,7 +72,7 @@ dbp:contactInformation_website a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:companyInformation_identifier a rdf:Property, owl:DatatypeProperty ;
+dbp:identifier a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:CompanyInformation ;
     rdfs:range xsd:string ;
     rdfs:label "Identifier" ;
@@ -81,7 +81,7 @@ dbp:companyInformation_identifier a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:companyInformation_legalName a rdf:Property, owl:DatatypeProperty ;
+dbp:legalName a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:CompanyInformation ;
     rdfs:range xsd:string ;
     rdfs:label "Legal Name" ;
@@ -90,7 +90,7 @@ dbp:companyInformation_legalName a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:companyInformation_contact a rdf:Property, owl:ObjectProperty ;
+dbp:contact a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:CompanyInformation ;
     rdfs:range dbp:ContactInformation ;
     rdfs:label "Contact" ;
@@ -99,7 +99,7 @@ dbp:companyInformation_contact a rdf:Property, owl:ObjectProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:companyInformation_address a rdf:Property, owl:ObjectProperty ;
+dbp:address a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:CompanyInformation ;
     rdfs:range dbp:PostalAddress ;
     rdfs:label "Address" ;
@@ -108,7 +108,7 @@ dbp:companyInformation_address a rdf:Property, owl:ObjectProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:dppInfo_schemaVersion a rdf:Property, owl:DatatypeProperty ;
+dbp:schemaVersion a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:DPPInfo ;
     rdfs:range xsd:string ;
     rdfs:label "Schema Version" ;
@@ -117,7 +117,7 @@ dbp:dppInfo_schemaVersion a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:dppInfo_dppGranularity a rdf:Property, owl:DatatypeProperty ;
+dbp:dppGranularity a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:DPPInfo ;
     rdfs:range xsd:string ;
     rdfs:label "DPP Granularity" ;
@@ -126,7 +126,7 @@ dbp:dppInfo_dppGranularity a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:dppInfo_dppStatus a rdf:Property, owl:DatatypeProperty ;
+dbp:dppStatus a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:DPPInfo ;
     rdfs:range xsd:string ;
     rdfs:label "DPP Status" ;
@@ -135,16 +135,15 @@ dbp:dppInfo_dppStatus a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:dppInfo_lastUpdated a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:DPPInfo ;
+dbp:lastUpdated a rdf:Property, owl:DatatypeProperty ;
     rdfs:range xsd:dateTime ;
     rdfs:label "Last Updated" ;
-    rdfs:comment """<div>Timestamp of the most recent update to the DPP record.</div>"""^^rdf:HTML ;
+    rdfs:comment """<div>Timestamp of the most recent update to the data record.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryAttributes_warrantyPeriod a rdf:Property, owl:DatatypeProperty ;
+dbp:warrantyPeriod a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryAttributes ;
     rdfs:range xsd:date ;
     rdfs:label "Warranty Period" ;
@@ -153,7 +152,7 @@ dbp:batteryAttributes_warrantyPeriod a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryAttributes_batteryCategory a rdf:Property, owl:DatatypeProperty ;
+dbp:batteryCategory a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryAttributes ;
     rdfs:range xsd:string ;
     rdfs:label "Battery Category" ;
@@ -163,7 +162,7 @@ dbp:batteryAttributes_batteryCategory a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryAttributes_batteryMass a rdf:Property, owl:DatatypeProperty ;
+dbp:batteryMass a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryAttributes ;
     rdfs:range xsd:decimal ;
     rdfs:label "Battery Mass" ;
@@ -172,7 +171,7 @@ dbp:batteryAttributes_batteryMass a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryIdentifiers_batteryModelIdentifier a rdf:Property, owl:DatatypeProperty ;
+dbp:batteryModelIdentifier a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryIdentifiers ;
     rdfs:range xsd:string ;
     rdfs:label "Battery Model Identifier" ;
@@ -181,7 +180,7 @@ dbp:batteryIdentifiers_batteryModelIdentifier a rdf:Property, owl:DatatypeProper
     vs:term_status "stable" ;
 .
 
-dbp:batteryIdentifiers_uniqueBatteryIdentifier a rdf:Property, owl:DatatypeProperty ;
+dbp:uniqueBatteryIdentifier a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryIdentifiers ;
     rdfs:range xsd:anyURI ;
     rdfs:label "Unique Battery Identifier" ;
@@ -190,7 +189,7 @@ dbp:batteryIdentifiers_uniqueBatteryIdentifier a rdf:Property, owl:DatatypePrope
     vs:term_status "stable" ;
 .
 
-dbp:batteryIdentifiers_serialNumber a rdf:Property, owl:DatatypeProperty ;
+dbp:serialNumber a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryIdentifiers ;
     rdfs:range xsd:string ;
     rdfs:label "Serial Number" ;
@@ -199,7 +198,7 @@ dbp:batteryIdentifiers_serialNumber a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryIdentifiers_uniqueDPPIdentifier a rdf:Property, owl:DatatypeProperty ;
+dbp:uniqueDPPIdentifier a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryIdentifiers ;
     rdfs:range xsd:anyURI ;
     rdfs:label "Unique DPP Identifier" ;
@@ -208,7 +207,7 @@ dbp:batteryIdentifiers_uniqueDPPIdentifier a rdf:Property, owl:DatatypeProperty 
     vs:term_status "stable" ;
 .
 
-dbp:productData_economicOperator a rdf:Property, owl:ObjectProperty ;
+dbp:economicOperator a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:ProductData ;
     rdfs:range dbp:CompanyInformation ;
     rdfs:label "Economic Operator" ;
@@ -217,7 +216,7 @@ dbp:productData_economicOperator a rdf:Property, owl:ObjectProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:productData_manufacturer a rdf:Property, owl:ObjectProperty ;
+dbp:manufacturer a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:ProductData ;
     rdfs:range dbp:CompanyInformation ;
     rdfs:label "Manufacturer" ;
@@ -226,7 +225,7 @@ dbp:productData_manufacturer a rdf:Property, owl:ObjectProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:productData_manufacturingPlace a rdf:Property, owl:ObjectProperty ;
+dbp:manufacturingPlace a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:ProductData ;
     rdfs:range dbp:PostalAddress ;
     rdfs:label "Manufacturing Place" ;
@@ -235,7 +234,7 @@ dbp:productData_manufacturingPlace a rdf:Property, owl:ObjectProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:productData_manufacturingDate a rdf:Property, owl:DatatypeProperty ;
+dbp:manufacturingDate a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:ProductData ;
     rdfs:range xsd:date ;
     rdfs:label "Manufacturing Date" ;
@@ -244,7 +243,7 @@ dbp:productData_manufacturingDate a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:generalInformationPublic_general a rdf:Property, owl:ObjectProperty ;
+dbp:general a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:GeneralInformationPublic ;
     rdfs:range dbp:BatteryAttributes ;
     rdfs:label "General" ;
@@ -253,43 +252,23 @@ dbp:generalInformationPublic_general a rdf:Property, owl:ObjectProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:generalInformationPublic_identifiers a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:GeneralInformationPublic ;
-    rdfs:range dbp:BatteryIdentifiers ;
+dbp:identifiers a rdf:Property ;
     rdfs:label "Identifiers" ;
-    rdfs:comment """<div>Battery identifiers sub-section. In the restricted context points to OperatorIdentifiers.</div>"""^^rdf:HTML ;
+    rdfs:comment """<div>Identifiers sub-section. In the public context points to BatteryIdentifiers;
+in the restricted context points to OperatorIdentifiers.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:generalInformationPublic_productData a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:GeneralInformationPublic ;
-    rdfs:range dbp:ProductData ;
+dbp:productData a rdf:Property ;
     rdfs:label "Product Data" ;
-    rdfs:comment """<div>Product and operator data sub-section. In the restricted context points to RestrictedProductData.</div>"""^^rdf:HTML ;
+    rdfs:comment """<div>Product data sub-section. In the public context points to ProductData;
+in the restricted context points to RestrictedProductData.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:generalInformationRestricted_identifiers a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:GeneralInformationRestricted ;
-    rdfs:range dbp:OperatorIdentifiers ;
-    rdfs:label "Identifiers" ;
-    rdfs:comment """<div>Operator identifiers sub-section within the restricted general information context.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:generalInformationRestricted_productData a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:GeneralInformationRestricted ;
-    rdfs:range dbp:RestrictedProductData ;
-    rdfs:label "Product Data" ;
-    rdfs:comment """<div>Restricted product data sub-section within the restricted general information context.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:operatorIdentifiers_manufacturerId a rdf:Property, owl:DatatypeProperty ;
+dbp:manufacturerId a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:OperatorIdentifiers ;
     rdfs:range xsd:string ;
     rdfs:label "Manufacturer ID" ;
@@ -298,7 +277,7 @@ dbp:operatorIdentifiers_manufacturerId a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:operatorIdentifiers_facilityId a rdf:Property, owl:DatatypeProperty ;
+dbp:facilityId a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:OperatorIdentifiers ;
     rdfs:range xsd:string ;
     rdfs:label "Facility ID" ;
@@ -307,7 +286,7 @@ dbp:operatorIdentifiers_facilityId a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:operatorIdentifiers_economicOperatorId a rdf:Property, owl:DatatypeProperty ;
+dbp:economicOperatorId a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:OperatorIdentifiers ;
     rdfs:range xsd:string ;
     rdfs:label "Economic Operator ID" ;
@@ -316,7 +295,7 @@ dbp:operatorIdentifiers_economicOperatorId a rdf:Property, owl:DatatypeProperty 
     vs:term_status "stable" ;
 .
 
-dbp:restrictedProductData_dateOfPuttingIntoService a rdf:Property, owl:DatatypeProperty ;
+dbp:dateOfPuttingIntoService a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:RestrictedProductData ;
     rdfs:range xsd:date ;
     rdfs:label "Date of Putting Into Service" ;
@@ -325,7 +304,7 @@ dbp:restrictedProductData_dateOfPuttingIntoService a rdf:Property, owl:DatatypeP
     vs:term_status "stable" ;
 .
 
-dbp:restrictedProductData_batteryStatus a rdf:Property, owl:DatatypeProperty ;
+dbp:batteryStatus a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:RestrictedProductData ;
     rdfs:range xsd:string ;
     rdfs:label "Battery Status" ;
@@ -334,7 +313,7 @@ dbp:restrictedProductData_batteryStatus a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:label_symbol a rdf:Property, owl:DatatypeProperty ;
+dbp:symbol a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:Label ;
     rdfs:range xsd:string ;
     rdfs:label "Symbol" ;
@@ -343,7 +322,7 @@ dbp:label_symbol a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:label_meaning a rdf:Property, owl:DatatypeProperty ;
+dbp:meaning a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:Label ;
     rdfs:range xsd:string ;
     rdfs:label "Meaning" ;
@@ -352,7 +331,7 @@ dbp:label_meaning a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:label_subject a rdf:Property, owl:DatatypeProperty ;
+dbp:subject a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:Label ;
     rdfs:range xsd:string ;
     rdfs:label "Subject" ;
@@ -361,7 +340,7 @@ dbp:label_subject a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryCompliancePublic_separateCollectionSymbol a rdf:Property, owl:ObjectProperty ;
+dbp:separateCollectionSymbol a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:BatteryCompliancePublic ;
     rdfs:range dbp:Label ;
     rdfs:label "Separate Collection Symbol" ;
@@ -370,7 +349,7 @@ dbp:batteryCompliancePublic_separateCollectionSymbol a rdf:Property, owl:ObjectP
     vs:term_status "stable" ;
 .
 
-dbp:batteryCompliancePublic_cadmium a rdf:Property, owl:ObjectProperty ;
+dbp:cadmium a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:BatteryCompliancePublic ;
     rdfs:range dbp:Label ;
     rdfs:label "Cadmium Label" ;
@@ -379,7 +358,7 @@ dbp:batteryCompliancePublic_cadmium a rdf:Property, owl:ObjectProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryCompliancePublic_lead a rdf:Property, owl:ObjectProperty ;
+dbp:lead a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:BatteryCompliancePublic ;
     rdfs:range dbp:Label ;
     rdfs:label "Lead Label" ;
@@ -388,7 +367,7 @@ dbp:batteryCompliancePublic_lead a rdf:Property, owl:ObjectProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryCompliancePublic_carbonFootprint a rdf:Property, owl:ObjectProperty ;
+dbp:carbonFootprint a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:BatteryCompliancePublic ;
     rdfs:range dbp:Label ;
     rdfs:label "Carbon Footprint Label" ;
@@ -397,7 +376,7 @@ dbp:batteryCompliancePublic_carbonFootprint a rdf:Property, owl:ObjectProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryCompliancePublic_extinguishingAgent a rdf:Property, owl:DatatypeProperty ;
+dbp:extinguishingAgent a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryCompliancePublic ;
     rdfs:range xsd:string ;
     rdfs:label "Extinguishing Agent" ;
@@ -406,7 +385,7 @@ dbp:batteryCompliancePublic_extinguishingAgent a rdf:Property, owl:DatatypePrope
     vs:term_status "stable" ;
 .
 
-dbp:batteryCompliancePublic_euDeclarationConformity a rdf:Property, owl:DatatypeProperty ;
+dbp:euDeclarationConformity a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryCompliancePublic ;
     rdfs:range xsd:anyURI ;
     rdfs:label "EU Declaration of Conformity" ;
@@ -415,7 +394,7 @@ dbp:batteryCompliancePublic_euDeclarationConformity a rdf:Property, owl:Datatype
     vs:term_status "stable" ;
 .
 
-dbp:batteryComplianceRestricted_testReportResults a rdf:Property, owl:DatatypeProperty ;
+dbp:testReportResults a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryComplianceRestricted ;
     rdfs:range xsd:anyURI ;
     rdfs:label "Test Report Results" ;
@@ -424,7 +403,7 @@ dbp:batteryComplianceRestricted_testReportResults a rdf:Property, owl:DatatypePr
     vs:term_status "stable" ;
 .
 
-dbp:supplyChainDueDiligence_dueDiligenceReport a rdf:Property, owl:DatatypeProperty ;
+dbp:dueDiligenceReport a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:SupplyChainDueDiligence ;
     rdfs:range xsd:anyURI ;
     rdfs:label "Due Diligence Report" ;
@@ -433,7 +412,7 @@ dbp:supplyChainDueDiligence_dueDiligenceReport a rdf:Property, owl:DatatypePrope
     vs:term_status "stable" ;
 .
 
-dbp:supplyChainDueDiligence_thirdPartyAssurances a rdf:Property, owl:DatatypeProperty ;
+dbp:thirdPartyAssurances a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:SupplyChainDueDiligence ;
     rdfs:range xsd:string ;
     rdfs:label "Third Party Assurances" ;
@@ -442,7 +421,7 @@ dbp:supplyChainDueDiligence_thirdPartyAssurances a rdf:Property, owl:DatatypePro
     vs:term_status "stable" ;
 .
 
-dbp:supplyChainDueDiligence_supplyChainIndices a rdf:Property, owl:DatatypeProperty ;
+dbp:supplyChainIndices a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:SupplyChainDueDiligence ;
     rdfs:range xsd:string ;
     rdfs:label "Supply Chain Indices" ;
@@ -451,7 +430,7 @@ dbp:supplyChainDueDiligence_supplyChainIndices a rdf:Property, owl:DatatypePrope
     vs:term_status "stable" ;
 .
 
-dbp:hazardousSubstance_substance a rdf:Property, owl:DatatypeProperty ;
+dbp:substance a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:HazardousSubstance ;
     rdfs:range xsd:string ;
     rdfs:label "Substance" ;
@@ -460,7 +439,7 @@ dbp:hazardousSubstance_substance a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:hazardousSubstance_impactOnEnvironment a rdf:Property, owl:DatatypeProperty ;
+dbp:impactOnEnvironment a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:HazardousSubstance ;
     rdfs:range xsd:string ;
     rdfs:label "Impact on Environment" ;
@@ -469,7 +448,7 @@ dbp:hazardousSubstance_impactOnEnvironment a rdf:Property, owl:DatatypeProperty 
     vs:term_status "stable" ;
 .
 
-dbp:batteryChemistry_clearName a rdf:Property, owl:DatatypeProperty ;
+dbp:clearName a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryChemistry ;
     rdfs:range xsd:string ;
     rdfs:label "Clear Name" ;
@@ -478,7 +457,7 @@ dbp:batteryChemistry_clearName a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryChemistry_shortName a rdf:Property, owl:DatatypeProperty ;
+dbp:shortName a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryChemistry ;
     rdfs:range xsd:string ;
     rdfs:label "Short Name" ;
@@ -487,7 +466,7 @@ dbp:batteryChemistry_shortName a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryMaterialsPublic_batteryChemistry a rdf:Property, owl:ObjectProperty ;
+dbp:batteryChemistry a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:BatteryMaterialsPublic ;
     rdfs:range dbp:BatteryChemistry ;
     rdfs:label "Battery Chemistry" ;
@@ -496,7 +475,7 @@ dbp:batteryMaterialsPublic_batteryChemistry a rdf:Property, owl:ObjectProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryMaterialsPublic_criticalRawMaterials a rdf:Property, owl:DatatypeProperty ;
+dbp:criticalRawMaterials a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryMaterialsPublic ;
     rdfs:range xsd:string ;
     rdfs:label "Critical Raw Materials" ;
@@ -506,7 +485,7 @@ Raw Materials Act.</div>"""^^rdf:HTML ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryMaterialsPublic_hazardousSubstances a rdf:Property, owl:ObjectProperty ;
+dbp:hazardousSubstances a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:BatteryMaterialsPublic ;
     rdfs:range dbp:HazardousSubstance ;
     rdfs:label "Hazardous Substances" ;
@@ -515,7 +494,7 @@ dbp:batteryMaterialsPublic_hazardousSubstances a rdf:Property, owl:ObjectPropert
     vs:term_status "stable" ;
 .
 
-dbp:batteryMaterialLocation_componentId a rdf:Property, owl:DatatypeProperty ;
+dbp:componentId a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryMaterialLocation ;
     rdfs:range xsd:string ;
     rdfs:label "Component ID" ;
@@ -524,7 +503,7 @@ dbp:batteryMaterialLocation_componentId a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryMaterialLocation_componentName a rdf:Property, owl:DatatypeProperty ;
+dbp:componentName a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryMaterialLocation ;
     rdfs:range xsd:string ;
     rdfs:label "Component Name" ;
@@ -533,7 +512,7 @@ dbp:batteryMaterialLocation_componentName a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryMaterial_batteryMaterialIdentifier a rdf:Property, owl:DatatypeProperty ;
+dbp:batteryMaterialIdentifier a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryMaterial ;
     rdfs:range xsd:string ;
     rdfs:label "Battery Material Identifier" ;
@@ -542,7 +521,7 @@ dbp:batteryMaterial_batteryMaterialIdentifier a rdf:Property, owl:DatatypeProper
     vs:term_status "stable" ;
 .
 
-dbp:batteryMaterial_batteryMaterialName a rdf:Property, owl:DatatypeProperty ;
+dbp:batteryMaterialName a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryMaterial ;
     rdfs:range xsd:string ;
     rdfs:label "Battery Material Name" ;
@@ -551,7 +530,7 @@ dbp:batteryMaterial_batteryMaterialName a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryMaterial_batteryMaterialMass a rdf:Property, owl:DatatypeProperty ;
+dbp:batteryMaterialMass a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryMaterial ;
     rdfs:range xsd:decimal ;
     rdfs:label "Battery Material Mass" ;
@@ -560,7 +539,7 @@ dbp:batteryMaterial_batteryMaterialMass a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryMaterial_batteryMaterialShare a rdf:Property, owl:DatatypeProperty ;
+dbp:batteryMaterialShare a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryMaterial ;
     rdfs:range xsd:decimal ;
     rdfs:label "Battery Material Share" ;
@@ -569,7 +548,7 @@ dbp:batteryMaterial_batteryMaterialShare a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryMaterial_isCriticalRawMaterial a rdf:Property, owl:DatatypeProperty ;
+dbp:isCriticalRawMaterial a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryMaterial ;
     rdfs:range xsd:boolean ;
     rdfs:label "Is Critical Raw Material" ;
@@ -578,7 +557,7 @@ dbp:batteryMaterial_isCriticalRawMaterial a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryMaterial_batteryMaterialLocation a rdf:Property, owl:ObjectProperty ;
+dbp:batteryMaterialLocation a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:BatteryMaterial ;
     rdfs:range dbp:BatteryMaterialLocation ;
     rdfs:label "Battery Material Location" ;
@@ -587,7 +566,7 @@ dbp:batteryMaterial_batteryMaterialLocation a rdf:Property, owl:ObjectProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryMaterialsRestricted_materialsComposition a rdf:Property, owl:ObjectProperty ;
+dbp:materialsComposition a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:BatteryMaterialsRestricted ;
     rdfs:range dbp:BatteryMaterial ;
     rdfs:label "Materials Composition" ;
@@ -597,7 +576,7 @@ identifiers, names, masses, shares, and component locations.</div>"""^^rdf:HTML 
     vs:term_status "stable" ;
 .
 
-dbp:batteryCarbonFootprint_carbonFootprintPerFU a rdf:Property, owl:DatatypeProperty ;
+dbp:carbonFootprintPerFU a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryCarbonFootprint ;
     rdfs:range xsd:decimal ;
     rdfs:label "Carbon Footprint per Functional Unit" ;
@@ -606,7 +585,7 @@ dbp:batteryCarbonFootprint_carbonFootprintPerFU a rdf:Property, owl:DatatypeProp
     vs:term_status "stable" ;
 .
 
-dbp:batteryCarbonFootprint_contributionRawMaterial a rdf:Property, owl:DatatypeProperty ;
+dbp:contributionRawMaterial a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryCarbonFootprint ;
     rdfs:range xsd:decimal ;
     rdfs:label "Contribution Raw Material Acquisition" ;
@@ -615,7 +594,7 @@ dbp:batteryCarbonFootprint_contributionRawMaterial a rdf:Property, owl:DatatypeP
     vs:term_status "stable" ;
 .
 
-dbp:batteryCarbonFootprint_contributionProduction a rdf:Property, owl:DatatypeProperty ;
+dbp:contributionProduction a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryCarbonFootprint ;
     rdfs:range xsd:decimal ;
     rdfs:label "Contribution Main Product Production" ;
@@ -624,7 +603,7 @@ dbp:batteryCarbonFootprint_contributionProduction a rdf:Property, owl:DatatypePr
     vs:term_status "stable" ;
 .
 
-dbp:batteryCarbonFootprint_contributionDistribution a rdf:Property, owl:DatatypeProperty ;
+dbp:contributionDistribution a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryCarbonFootprint ;
     rdfs:range xsd:decimal ;
     rdfs:label "Contribution Distribution" ;
@@ -633,7 +612,7 @@ dbp:batteryCarbonFootprint_contributionDistribution a rdf:Property, owl:Datatype
     vs:term_status "stable" ;
 .
 
-dbp:batteryCarbonFootprint_contributionEndOfLife a rdf:Property, owl:DatatypeProperty ;
+dbp:contributionEndOfLife a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryCarbonFootprint ;
     rdfs:range xsd:decimal ;
     rdfs:label "Contribution End of Life and Recycling" ;
@@ -642,7 +621,7 @@ dbp:batteryCarbonFootprint_contributionEndOfLife a rdf:Property, owl:DatatypePro
     vs:term_status "stable" ;
 .
 
-dbp:batteryCarbonFootprint_performanceClass a rdf:Property, owl:DatatypeProperty ;
+dbp:performanceClass a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryCarbonFootprint ;
     rdfs:range dbp:PerformanceClass ;
     rdfs:label "Performance Class" ;
@@ -651,7 +630,7 @@ dbp:batteryCarbonFootprint_performanceClass a rdf:Property, owl:DatatypeProperty
     vs:term_status "stable" ;
 .
 
-dbp:batteryCarbonFootprint_publicCarbonFootprintStudy a rdf:Property, owl:DatatypeProperty ;
+dbp:publicCarbonFootprintStudy a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryCarbonFootprint ;
     rdfs:range xsd:anyURI ;
     rdfs:label "Public Carbon Footprint Study" ;
@@ -660,7 +639,7 @@ dbp:batteryCarbonFootprint_publicCarbonFootprintStudy a rdf:Property, owl:Dataty
     vs:term_status "stable" ;
 .
 
-dbp:batteryCarbonFootprint_absoluteCarbonFootprint a rdf:Property, owl:DatatypeProperty ;
+dbp:absoluteCarbonFootprint a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryCarbonFootprint ;
     rdfs:range xsd:integer ;
     rdfs:label "Absolute Battery Carbon Footprint" ;
@@ -669,7 +648,7 @@ dbp:batteryCarbonFootprint_absoluteCarbonFootprint a rdf:Property, owl:DatatypeP
     vs:term_status "stable" ;
 .
 
-dbp:endUserInformation_wastePrevention a rdf:Property, owl:DatatypeProperty ;
+dbp:wastePrevention a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:EndUserInformation ;
     rdfs:range xsd:anyURI ;
     rdfs:label "Waste Prevention" ;
@@ -678,7 +657,7 @@ dbp:endUserInformation_wastePrevention a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:endUserInformation_separateCollection a rdf:Property, owl:DatatypeProperty ;
+dbp:separateCollection a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:EndUserInformation ;
     rdfs:range xsd:anyURI ;
     rdfs:label "Separate Collection" ;
@@ -687,7 +666,7 @@ dbp:endUserInformation_separateCollection a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:endUserInformation_collectionEndOfLife a rdf:Property, owl:DatatypeProperty ;
+dbp:collectionEndOfLife a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:EndUserInformation ;
     rdfs:range xsd:anyURI ;
     rdfs:label "Collection End of Life" ;
@@ -696,7 +675,7 @@ dbp:endUserInformation_collectionEndOfLife a rdf:Property, owl:DatatypeProperty 
     vs:term_status "stable" ;
 .
 
-dbp:recycledRenewableContent_preConsumerNickelShare a rdf:Property, owl:DatatypeProperty ;
+dbp:preConsumerNickelShare a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:RecycledRenewableContent ;
     rdfs:range xsd:decimal ;
     rdfs:label "Pre-Consumer Recycled Nickel Share" ;
@@ -705,7 +684,7 @@ dbp:recycledRenewableContent_preConsumerNickelShare a rdf:Property, owl:Datatype
     vs:term_status "stable" ;
 .
 
-dbp:recycledRenewableContent_preConsumerCobaltShare a rdf:Property, owl:DatatypeProperty ;
+dbp:preConsumerCobaltShare a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:RecycledRenewableContent ;
     rdfs:range xsd:decimal ;
     rdfs:label "Pre-Consumer Recycled Cobalt Share" ;
@@ -714,7 +693,7 @@ dbp:recycledRenewableContent_preConsumerCobaltShare a rdf:Property, owl:Datatype
     vs:term_status "stable" ;
 .
 
-dbp:recycledRenewableContent_preConsumerLithiumShare a rdf:Property, owl:DatatypeProperty ;
+dbp:preConsumerLithiumShare a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:RecycledRenewableContent ;
     rdfs:range xsd:decimal ;
     rdfs:label "Pre-Consumer Recycled Lithium Share" ;
@@ -723,7 +702,7 @@ dbp:recycledRenewableContent_preConsumerLithiumShare a rdf:Property, owl:Datatyp
     vs:term_status "stable" ;
 .
 
-dbp:recycledRenewableContent_postConsumerNickelShare a rdf:Property, owl:DatatypeProperty ;
+dbp:postConsumerNickelShare a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:RecycledRenewableContent ;
     rdfs:range xsd:decimal ;
     rdfs:label "Post-Consumer Recycled Nickel Share" ;
@@ -732,7 +711,7 @@ dbp:recycledRenewableContent_postConsumerNickelShare a rdf:Property, owl:Datatyp
     vs:term_status "stable" ;
 .
 
-dbp:recycledRenewableContent_postConsumerCobaltShare a rdf:Property, owl:DatatypeProperty ;
+dbp:postConsumerCobaltShare a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:RecycledRenewableContent ;
     rdfs:range xsd:decimal ;
     rdfs:label "Post-Consumer Recycled Cobalt Share" ;
@@ -741,7 +720,7 @@ dbp:recycledRenewableContent_postConsumerCobaltShare a rdf:Property, owl:Datatyp
     vs:term_status "stable" ;
 .
 
-dbp:recycledRenewableContent_postConsumerLithiumShare a rdf:Property, owl:DatatypeProperty ;
+dbp:postConsumerLithiumShare a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:RecycledRenewableContent ;
     rdfs:range xsd:decimal ;
     rdfs:label "Post-Consumer Recycled Lithium Share" ;
@@ -750,7 +729,7 @@ dbp:recycledRenewableContent_postConsumerLithiumShare a rdf:Property, owl:Dataty
     vs:term_status "stable" ;
 .
 
-dbp:recycledRenewableContent_recycledLeadShare a rdf:Property, owl:DatatypeProperty ;
+dbp:recycledLeadShare a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:RecycledRenewableContent ;
     rdfs:range xsd:decimal ;
     rdfs:label "Recycled Lead Share" ;
@@ -759,7 +738,7 @@ dbp:recycledRenewableContent_recycledLeadShare a rdf:Property, owl:DatatypePrope
     vs:term_status "stable" ;
 .
 
-dbp:recycledRenewableContent_renewableContentShare a rdf:Property, owl:DatatypeProperty ;
+dbp:renewableContentShare a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:RecycledRenewableContent ;
     rdfs:range xsd:decimal ;
     rdfs:label "Renewable Content Share" ;
@@ -768,7 +747,7 @@ dbp:recycledRenewableContent_renewableContentShare a rdf:Property, owl:DatatypeP
     vs:term_status "stable" ;
 .
 
-dbp:batteryCircularityPublic_endUserInfo a rdf:Property, owl:ObjectProperty ;
+dbp:endUserInfo a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:BatteryCircularityPublic ;
     rdfs:range dbp:EndUserInformation ;
     rdfs:label "End-User Info" ;
@@ -777,7 +756,7 @@ dbp:batteryCircularityPublic_endUserInfo a rdf:Property, owl:ObjectProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryCircularityPublic_recycledContent a rdf:Property, owl:ObjectProperty ;
+dbp:recycledContent a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:BatteryCircularityPublic ;
     rdfs:range dbp:RecycledRenewableContent ;
     rdfs:label "Recycled Content" ;
@@ -786,7 +765,7 @@ dbp:batteryCircularityPublic_recycledContent a rdf:Property, owl:ObjectProperty 
     vs:term_status "stable" ;
 .
 
-dbp:batteryCircularityPrivate_dismantlingManuals a rdf:Property, owl:DatatypeProperty ;
+dbp:dismantlingManuals a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryCircularityPrivate ;
     rdfs:range xsd:anyURI ;
     rdfs:label "Dismantling Manuals" ;
@@ -795,7 +774,7 @@ dbp:batteryCircularityPrivate_dismantlingManuals a rdf:Property, owl:DatatypePro
     vs:term_status "stable" ;
 .
 
-dbp:batteryCircularityPrivate_partNumbers a rdf:Property, owl:DatatypeProperty ;
+dbp:partNumbers a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryCircularityPrivate ;
     rdfs:range xsd:anyURI ;
     rdfs:label "Part Numbers" ;
@@ -804,7 +783,7 @@ dbp:batteryCircularityPrivate_partNumbers a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryCircularityPrivate_sparePartsInfo a rdf:Property, owl:DatatypeProperty ;
+dbp:sparePartsInfo a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryCircularityPrivate ;
     rdfs:range xsd:anyURI ;
     rdfs:label "Spare Parts Info" ;
@@ -813,7 +792,7 @@ dbp:batteryCircularityPrivate_sparePartsInfo a rdf:Property, owl:DatatypePropert
     vs:term_status "stable" ;
 .
 
-dbp:batteryCircularityPrivate_safetyMeasures a rdf:Property, owl:DatatypeProperty ;
+dbp:safetyMeasures a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryCircularityPrivate ;
     rdfs:range xsd:anyURI ;
     rdfs:label "Safety Measures" ;
@@ -822,7 +801,7 @@ dbp:batteryCircularityPrivate_safetyMeasures a rdf:Property, owl:DatatypePropert
     vs:term_status "stable" ;
 .
 
-dbp:capacityEnergyVoltagePublic_ratedCapacity a rdf:Property, owl:DatatypeProperty ;
+dbp:ratedCapacity a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:CapacityEnergyVoltagePublic ;
     rdfs:range xsd:integer ;
     rdfs:label "Rated Capacity" ;
@@ -831,7 +810,7 @@ dbp:capacityEnergyVoltagePublic_ratedCapacity a rdf:Property, owl:DatatypeProper
     vs:term_status "stable" ;
 .
 
-dbp:capacityEnergyVoltagePublic_certifiedUsableBattEnergy a rdf:Property, owl:DatatypeProperty ;
+dbp:certifiedUsableBattEnergy a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:CapacityEnergyVoltagePublic ;
     rdfs:range xsd:integer ;
     rdfs:label "Certified Usable Battery Energy" ;
@@ -840,7 +819,7 @@ dbp:capacityEnergyVoltagePublic_certifiedUsableBattEnergy a rdf:Property, owl:Da
     vs:term_status "stable" ;
 .
 
-dbp:capacityEnergyVoltagePublic_minimumVoltage a rdf:Property, owl:DatatypeProperty ;
+dbp:minimumVoltage a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:CapacityEnergyVoltagePublic ;
     rdfs:range xsd:decimal ;
     rdfs:label "Minimum Voltage" ;
@@ -849,7 +828,7 @@ dbp:capacityEnergyVoltagePublic_minimumVoltage a rdf:Property, owl:DatatypePrope
     vs:term_status "stable" ;
 .
 
-dbp:capacityEnergyVoltagePublic_maximumVoltage a rdf:Property, owl:DatatypeProperty ;
+dbp:maximumVoltage a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:CapacityEnergyVoltagePublic ;
     rdfs:range xsd:decimal ;
     rdfs:label "Maximum Voltage" ;
@@ -858,7 +837,7 @@ dbp:capacityEnergyVoltagePublic_maximumVoltage a rdf:Property, owl:DatatypePrope
     vs:term_status "stable" ;
 .
 
-dbp:capacityEnergyVoltagePublic_nominalVoltage a rdf:Property, owl:DatatypeProperty ;
+dbp:nominalVoltage a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:CapacityEnergyVoltagePublic ;
     rdfs:range xsd:decimal ;
     rdfs:label "Nominal Voltage" ;
@@ -867,7 +846,7 @@ dbp:capacityEnergyVoltagePublic_nominalVoltage a rdf:Property, owl:DatatypePrope
     vs:term_status "stable" ;
 .
 
-dbp:powerCapabilityPublic_originalPowerCapability a rdf:Property, owl:DatatypeProperty ;
+dbp:originalPowerCapability a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:PowerCapabilityPublic ;
     rdfs:range xsd:integer ;
     rdfs:label "Original Power Capability" ;
@@ -876,7 +855,7 @@ dbp:powerCapabilityPublic_originalPowerCapability a rdf:Property, owl:DatatypePr
     vs:term_status "stable" ;
 .
 
-dbp:powerCapabilityPublic_maximumPermittedPower a rdf:Property, owl:DatatypeProperty ;
+dbp:maximumPermittedPower a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:PowerCapabilityPublic ;
     rdfs:range xsd:integer ;
     rdfs:label "Maximum Permitted Battery Power" ;
@@ -885,7 +864,7 @@ dbp:powerCapabilityPublic_maximumPermittedPower a rdf:Property, owl:DatatypeProp
     vs:term_status "stable" ;
 .
 
-dbp:powerCapabilityPublic_ratioPowerToEnergy a rdf:Property, owl:DatatypeProperty ;
+dbp:ratioPowerToEnergy a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:PowerCapabilityPublic ;
     rdfs:range xsd:integer ;
     rdfs:label "Ratio Nominal Power to Battery Energy" ;
@@ -894,7 +873,7 @@ dbp:powerCapabilityPublic_ratioPowerToEnergy a rdf:Property, owl:DatatypePropert
     vs:term_status "stable" ;
 .
 
-dbp:roundTripEfficiencyPublic_initialRoundTripEfficiency a rdf:Property, owl:DatatypeProperty ;
+dbp:initialRoundTripEfficiency a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:RoundTripEfficiencyPublic ;
     rdfs:range xsd:decimal ;
     rdfs:label "Initial Round Trip Energy Efficiency" ;
@@ -903,7 +882,7 @@ dbp:roundTripEfficiencyPublic_initialRoundTripEfficiency a rdf:Property, owl:Dat
     vs:term_status "stable" ;
 .
 
-dbp:roundTripEfficiencyPublic_roundTripEfficiencyAt50pct a rdf:Property, owl:DatatypeProperty ;
+dbp:roundTripEfficiencyAt50pct a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:RoundTripEfficiencyPublic ;
     rdfs:range xsd:decimal ;
     rdfs:label "Round Trip Efficiency at 50% Cycle Life" ;
@@ -912,7 +891,7 @@ dbp:roundTripEfficiencyPublic_roundTripEfficiencyAt50pct a rdf:Property, owl:Dat
     vs:term_status "stable" ;
 .
 
-dbp:internalResistancePublic_initialInternalResistance a rdf:Property, owl:DatatypeProperty ;
+dbp:initialInternalResistance a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:InternalResistancePublic ;
     rdfs:range xsd:integer ;
     rdfs:label "Initial Internal Resistance" ;
@@ -921,7 +900,7 @@ dbp:internalResistancePublic_initialInternalResistance a rdf:Property, owl:Datat
     vs:term_status "stable" ;
 .
 
-dbp:batteryLifetimePublic_expectedLifetimeCycles a rdf:Property, owl:DatatypeProperty ;
+dbp:expectedLifetimeCycles a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryLifetimePublic ;
     rdfs:range xsd:integer ;
     rdfs:label "Expected Lifetime Charge-Discharge Cycles" ;
@@ -930,7 +909,7 @@ dbp:batteryLifetimePublic_expectedLifetimeCycles a rdf:Property, owl:DatatypePro
     vs:term_status "stable" ;
 .
 
-dbp:batteryLifetimePublic_cycleLifeReferenceTest a rdf:Property, owl:DatatypeProperty ;
+dbp:cycleLifeReferenceTest a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryLifetimePublic ;
     rdfs:range xsd:string ;
     rdfs:label "Cycle-Life Reference Test" ;
@@ -939,7 +918,7 @@ dbp:batteryLifetimePublic_cycleLifeReferenceTest a rdf:Property, owl:DatatypePro
     vs:term_status "stable" ;
 .
 
-dbp:batteryLifetimePublic_cRateCycleLifeTest a rdf:Property, owl:DatatypeProperty ;
+dbp:cRateCycleLifeTest a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryLifetimePublic ;
     rdfs:range xsd:decimal ;
     rdfs:label "C-Rate of Cycle-Life Test" ;
@@ -948,7 +927,7 @@ dbp:batteryLifetimePublic_cRateCycleLifeTest a rdf:Property, owl:DatatypePropert
     vs:term_status "stable" ;
 .
 
-dbp:batteryLifetimePublic_capacityThresholdExhaustion a rdf:Property, owl:DatatypeProperty ;
+dbp:capacityThresholdExhaustion a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryLifetimePublic ;
     rdfs:range xsd:decimal ;
     rdfs:label "Capacity Threshold for Exhaustion" ;
@@ -957,7 +936,7 @@ dbp:batteryLifetimePublic_capacityThresholdExhaustion a rdf:Property, owl:Dataty
     vs:term_status "stable" ;
 .
 
-dbp:temperatureConditionsPublic_tempRangeIdleLower a rdf:Property, owl:DatatypeProperty ;
+dbp:tempRangeIdleLower a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:TemperatureConditionsPublic ;
     rdfs:range xsd:integer ;
     rdfs:label "Temperature Range Idle Lower Boundary" ;
@@ -966,7 +945,7 @@ dbp:temperatureConditionsPublic_tempRangeIdleLower a rdf:Property, owl:DatatypeP
     vs:term_status "stable" ;
 .
 
-dbp:temperatureConditionsPublic_tempRangeIdleUpper a rdf:Property, owl:DatatypeProperty ;
+dbp:tempRangeIdleUpper a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:TemperatureConditionsPublic ;
     rdfs:range xsd:integer ;
     rdfs:label "Temperature Range Idle Upper Boundary" ;
@@ -975,115 +954,49 @@ dbp:temperatureConditionsPublic_tempRangeIdleUpper a rdf:Property, owl:DatatypeP
     vs:term_status "stable" ;
 .
 
-dbp:batteryPerformancePublic_capacityEnergyVoltage a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:BatteryPerformancePublic ;
-    rdfs:range dbp:CapacityEnergyVoltagePublic ;
+dbp:capacityEnergyVoltage a rdf:Property ;
     rdfs:label "Capacity Energy and Voltage" ;
     rdfs:comment """<div>Capacity, energy, and voltage sub-section. Applied to both public and restricted performance containers.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryPerformancePublic_powerCapability a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:BatteryPerformancePublic ;
-    rdfs:range dbp:PowerCapabilityPublic ;
+dbp:powerCapability a rdf:Property ;
     rdfs:label "Power Capability" ;
     rdfs:comment """<div>Power capability sub-section. Applied to both public and restricted performance containers.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryPerformancePublic_roundTripEfficiency a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:BatteryPerformancePublic ;
-    rdfs:range dbp:RoundTripEfficiencyPublic ;
+dbp:roundTripEfficiency a rdf:Property ;
     rdfs:label "Round Trip Efficiency" ;
     rdfs:comment """<div>Round trip efficiency and self-discharge sub-section. Applied to both public and restricted performance containers.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryPerformancePublic_internalResistance a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:BatteryPerformancePublic ;
-    rdfs:range dbp:InternalResistancePublic ;
+dbp:internalResistance a rdf:Property ;
     rdfs:label "Internal Resistance" ;
     rdfs:comment """<div>Internal resistance sub-section. Applied to both public and restricted performance containers.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryPerformancePublic_batteryLifetime a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:BatteryPerformancePublic ;
-    rdfs:range dbp:BatteryLifetimePublic ;
+dbp:batteryLifetime a rdf:Property ;
     rdfs:label "Battery Lifetime" ;
     rdfs:comment """<div>Battery lifetime sub-section. Applied to both public and restricted performance containers.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryPerformancePublic_temperatureConditions a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:BatteryPerformancePublic ;
-    rdfs:range dbp:TemperatureConditionsPublic ;
+dbp:temperatureConditions a rdf:Property ;
     rdfs:label "Temperature Conditions" ;
-    rdfs:comment """<div>Temperature conditions sub-section of the public battery performance container.</div>"""^^rdf:HTML ;
+    rdfs:comment """<div>Temperature conditions sub-section. Applied to both public and restricted performance containers.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:batteryPerformanceRestricted_capacityEnergyVoltage a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:BatteryPerformanceRestricted ;
-    rdfs:range dbp:CapacityEnergyVoltageRestricted ;
-    rdfs:label "Capacity Energy and Voltage" ;
-    rdfs:comment """<div>Dynamic restricted capacity, energy, and voltage sub-section.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:batteryPerformanceRestricted_powerCapability a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:BatteryPerformanceRestricted ;
-    rdfs:range dbp:PowerCapabilityRestricted ;
-    rdfs:label "Power Capability" ;
-    rdfs:comment """<div>Dynamic restricted power capability sub-section.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:batteryPerformanceRestricted_roundTripEfficiency a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:BatteryPerformanceRestricted ;
-    rdfs:range dbp:RoundTripEfficiencyRestricted ;
-    rdfs:label "Round Trip Efficiency" ;
-    rdfs:comment """<div>Dynamic restricted round trip efficiency and self-discharge sub-section.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:batteryPerformanceRestricted_internalResistance a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:BatteryPerformanceRestricted ;
-    rdfs:range dbp:InternalResistanceRestricted ;
-    rdfs:label "Internal Resistance" ;
-    rdfs:comment """<div>Dynamic restricted internal resistance sub-section.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:batteryPerformanceRestricted_batteryLifetime a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:BatteryPerformanceRestricted ;
-    rdfs:range dbp:BatteryLifetimeRestricted ;
-    rdfs:label "Battery Lifetime" ;
-    rdfs:comment """<div>Dynamic restricted battery lifetime sub-section.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:batteryPerformanceRestricted_temperatureConditions a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:BatteryPerformanceRestricted ;
-    rdfs:range dbp:TemperatureConditionsRestricted ;
-    rdfs:label "Temperature Conditions" ;
-    rdfs:comment """<div>Dynamic restricted temperature conditions sub-section.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:batteryPerformanceRestricted_negativeEvents a rdf:Property, owl:ObjectProperty ;
+dbp:negativeEvents a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:BatteryPerformanceRestricted ;
     rdfs:range dbp:NegativeEvents ;
     rdfs:label "Negative Events" ;
@@ -1093,7 +1006,7 @@ overcharge events, and accident records.</div>"""^^rdf:HTML ;
     vs:term_status "stable" ;
 .
 
-dbp:capacityEnergyVoltageRestricted_capacityFade a rdf:Property, owl:DatatypeProperty ;
+dbp:capacityFade a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:CapacityEnergyVoltageRestricted ;
     rdfs:range xsd:decimal ;
     rdfs:label "Capacity Fade" ;
@@ -1102,7 +1015,7 @@ dbp:capacityEnergyVoltageRestricted_capacityFade a rdf:Property, owl:DatatypePro
     vs:term_status "stable" ;
 .
 
-dbp:capacityEnergyVoltageRestricted_remainingCapacity a rdf:Property, owl:DatatypeProperty ;
+dbp:remainingCapacity a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:CapacityEnergyVoltageRestricted ;
     rdfs:range xsd:integer ;
     rdfs:label "Remaining Capacity" ;
@@ -1111,7 +1024,7 @@ dbp:capacityEnergyVoltageRestricted_remainingCapacity a rdf:Property, owl:Dataty
     vs:term_status "stable" ;
 .
 
-dbp:capacityEnergyVoltageRestricted_remainingUsableBattEnergy a rdf:Property, owl:DatatypeProperty ;
+dbp:remainingUsableBattEnergy a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:CapacityEnergyVoltageRestricted ;
     rdfs:range xsd:integer ;
     rdfs:label "Remaining Usable Battery Energy" ;
@@ -1120,7 +1033,7 @@ dbp:capacityEnergyVoltageRestricted_remainingUsableBattEnergy a rdf:Property, ow
     vs:term_status "stable" ;
 .
 
-dbp:capacityEnergyVoltageRestricted_stateOfCertifiedEnergy a rdf:Property, owl:DatatypeProperty ;
+dbp:stateOfCertifiedEnergy a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:CapacityEnergyVoltageRestricted ;
     rdfs:range xsd:decimal ;
     rdfs:label "State of Certified Energy" ;
@@ -1129,7 +1042,7 @@ dbp:capacityEnergyVoltageRestricted_stateOfCertifiedEnergy a rdf:Property, owl:D
     vs:term_status "stable" ;
 .
 
-dbp:capacityEnergyVoltageRestricted_stateOfCharge a rdf:Property, owl:DatatypeProperty ;
+dbp:stateOfCharge a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:CapacityEnergyVoltageRestricted ;
     rdfs:range xsd:decimal ;
     rdfs:label "State of Charge" ;
@@ -1138,16 +1051,7 @@ dbp:capacityEnergyVoltageRestricted_stateOfCharge a rdf:Property, owl:DatatypePr
     vs:term_status "stable" ;
 .
 
-dbp:capacityEnergyVoltageRestricted_lastUpdated a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:CapacityEnergyVoltageRestricted ;
-    rdfs:range xsd:dateTime ;
-    rdfs:label "Last Updated" ;
-    rdfs:comment """<div>Timestamp of the most recent update to the restricted capacity, energy, and voltage data.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:powerCapabilityRestricted_powerFade a rdf:Property, owl:DatatypeProperty ;
+dbp:powerFade a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:PowerCapabilityRestricted ;
     rdfs:range xsd:decimal ;
     rdfs:label "Power Fade" ;
@@ -1156,7 +1060,7 @@ dbp:powerCapabilityRestricted_powerFade a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:powerCapabilityRestricted_remainingPowerCapability a rdf:Property, owl:DatatypeProperty ;
+dbp:remainingPowerCapability a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:PowerCapabilityRestricted ;
     rdfs:range xsd:integer ;
     rdfs:label "Remaining Power Capability" ;
@@ -1165,16 +1069,7 @@ dbp:powerCapabilityRestricted_remainingPowerCapability a rdf:Property, owl:Datat
     vs:term_status "stable" ;
 .
 
-dbp:powerCapabilityRestricted_lastUpdated a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:PowerCapabilityRestricted ;
-    rdfs:range xsd:dateTime ;
-    rdfs:label "Last Updated" ;
-    rdfs:comment """<div>Timestamp of the most recent update to the restricted power capability data.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:roundTripEfficiencyRestricted_roundTripEfficiencyFade a rdf:Property, owl:DatatypeProperty ;
+dbp:roundTripEfficiencyFade a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:RoundTripEfficiencyRestricted ;
     rdfs:range xsd:decimal ;
     rdfs:label "Energy Round Trip Efficiency Fade" ;
@@ -1183,7 +1078,7 @@ dbp:roundTripEfficiencyRestricted_roundTripEfficiencyFade a rdf:Property, owl:Da
     vs:term_status "stable" ;
 .
 
-dbp:roundTripEfficiencyRestricted_initialSelfDischargeRate a rdf:Property, owl:DatatypeProperty ;
+dbp:initialSelfDischargeRate a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:RoundTripEfficiencyRestricted ;
     rdfs:range xsd:decimal ;
     rdfs:label "Initial Self-Discharge Rate" ;
@@ -1192,7 +1087,7 @@ dbp:roundTripEfficiencyRestricted_initialSelfDischargeRate a rdf:Property, owl:D
     vs:term_status "stable" ;
 .
 
-dbp:roundTripEfficiencyRestricted_remainingRoundTripEfficiency a rdf:Property, owl:DatatypeProperty ;
+dbp:remainingRoundTripEfficiency a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:RoundTripEfficiencyRestricted ;
     rdfs:range xsd:decimal ;
     rdfs:label "Remaining Round Trip Energy Efficiency" ;
@@ -1201,7 +1096,7 @@ dbp:roundTripEfficiencyRestricted_remainingRoundTripEfficiency a rdf:Property, o
     vs:term_status "stable" ;
 .
 
-dbp:roundTripEfficiencyRestricted_currentSelfDischargeRate a rdf:Property, owl:DatatypeProperty ;
+dbp:currentSelfDischargeRate a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:RoundTripEfficiencyRestricted ;
     rdfs:range xsd:decimal ;
     rdfs:label "Current Self-Discharge Rate" ;
@@ -1210,7 +1105,7 @@ dbp:roundTripEfficiencyRestricted_currentSelfDischargeRate a rdf:Property, owl:D
     vs:term_status "stable" ;
 .
 
-dbp:roundTripEfficiencyRestricted_evolutionSelfDischargeRates a rdf:Property, owl:DatatypeProperty ;
+dbp:evolutionSelfDischargeRates a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:RoundTripEfficiencyRestricted ;
     rdfs:range xsd:decimal ;
     rdfs:label "Evolution of Self-Discharge Rates" ;
@@ -1219,16 +1114,7 @@ dbp:roundTripEfficiencyRestricted_evolutionSelfDischargeRates a rdf:Property, ow
     vs:term_status "stable" ;
 .
 
-dbp:roundTripEfficiencyRestricted_lastUpdated a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:RoundTripEfficiencyRestricted ;
-    rdfs:range xsd:dateTime ;
-    rdfs:label "Last Updated" ;
-    rdfs:comment """<div>Timestamp of the most recent update to the restricted round trip efficiency data.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:internalResistanceRestricted_internalResistanceIncrease a rdf:Property, owl:DatatypeProperty ;
+dbp:internalResistanceIncrease a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:InternalResistanceRestricted ;
     rdfs:range xsd:decimal ;
     rdfs:label "Internal Resistance Increase" ;
@@ -1237,7 +1123,7 @@ dbp:internalResistanceRestricted_internalResistanceIncrease a rdf:Property, owl:
     vs:term_status "stable" ;
 .
 
-dbp:batteryLifetimeRestricted_expectedLifetimeYears a rdf:Property, owl:DatatypeProperty ;
+dbp:expectedLifetimeYears a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryLifetimeRestricted ;
     rdfs:range xsd:decimal ;
     rdfs:label "Expected Lifetime in Calendar Years" ;
@@ -1246,7 +1132,7 @@ dbp:batteryLifetimeRestricted_expectedLifetimeYears a rdf:Property, owl:Datatype
     vs:term_status "stable" ;
 .
 
-dbp:batteryLifetimeRestricted_numberOfFullCycles a rdf:Property, owl:DatatypeProperty ;
+dbp:numberOfFullCycles a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryLifetimeRestricted ;
     rdfs:range xsd:integer ;
     rdfs:label "Number of Full Charging and Discharging Cycles" ;
@@ -1255,7 +1141,7 @@ dbp:batteryLifetimeRestricted_numberOfFullCycles a rdf:Property, owl:DatatypePro
     vs:term_status "stable" ;
 .
 
-dbp:batteryLifetimeRestricted_energyThroughput a rdf:Property, owl:DatatypeProperty ;
+dbp:energyThroughput a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryLifetimeRestricted ;
     rdfs:range xsd:decimal ;
     rdfs:label "Energy Throughput" ;
@@ -1264,7 +1150,7 @@ dbp:batteryLifetimeRestricted_energyThroughput a rdf:Property, owl:DatatypePrope
     vs:term_status "stable" ;
 .
 
-dbp:batteryLifetimeRestricted_capacityThroughput a rdf:Property, owl:DatatypeProperty ;
+dbp:capacityThroughput a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryLifetimeRestricted ;
     rdfs:range xsd:decimal ;
     rdfs:label "Capacity Throughput" ;
@@ -1273,16 +1159,7 @@ dbp:batteryLifetimeRestricted_capacityThroughput a rdf:Property, owl:DatatypePro
     vs:term_status "stable" ;
 .
 
-dbp:batteryLifetimeRestricted_lastUpdated a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:BatteryLifetimeRestricted ;
-    rdfs:range xsd:dateTime ;
-    rdfs:label "Last Updated" ;
-    rdfs:comment """<div>Timestamp of the most recent update to the restricted battery lifetime data.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:temperatureConditionsRestricted_temperatureInformation a rdf:Property, owl:DatatypeProperty ;
+dbp:temperatureInformation a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:TemperatureConditionsRestricted ;
     rdfs:range xsd:integer ;
     rdfs:label "Temperature Information" ;
@@ -1291,7 +1168,7 @@ dbp:temperatureConditionsRestricted_temperatureInformation a rdf:Property, owl:D
     vs:term_status "stable" ;
 .
 
-dbp:temperatureConditionsRestricted_timeInExtremeTempsAbove a rdf:Property, owl:DatatypeProperty ;
+dbp:timeInExtremeTempsAbove a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:TemperatureConditionsRestricted ;
     rdfs:range xsd:integer ;
     rdfs:label "Time in Extreme Temperatures Above Boundary" ;
@@ -1300,7 +1177,7 @@ dbp:temperatureConditionsRestricted_timeInExtremeTempsAbove a rdf:Property, owl:
     vs:term_status "stable" ;
 .
 
-dbp:temperatureConditionsRestricted_timeInExtremeTempsBelow a rdf:Property, owl:DatatypeProperty ;
+dbp:timeInExtremeTempsBelow a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:TemperatureConditionsRestricted ;
     rdfs:range xsd:integer ;
     rdfs:label "Time in Extreme Temperatures Below Boundary" ;
@@ -1309,7 +1186,7 @@ dbp:temperatureConditionsRestricted_timeInExtremeTempsBelow a rdf:Property, owl:
     vs:term_status "stable" ;
 .
 
-dbp:temperatureConditionsRestricted_timeChargingExtremeTempsAbove a rdf:Property, owl:DatatypeProperty ;
+dbp:timeChargingExtremeTempsAbove a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:TemperatureConditionsRestricted ;
     rdfs:range xsd:integer ;
     rdfs:label "Time Charging in Extreme Temperatures Above" ;
@@ -1318,7 +1195,7 @@ dbp:temperatureConditionsRestricted_timeChargingExtremeTempsAbove a rdf:Property
     vs:term_status "stable" ;
 .
 
-dbp:temperatureConditionsRestricted_timeChargingExtremeTempsBelow a rdf:Property, owl:DatatypeProperty ;
+dbp:timeChargingExtremeTempsBelow a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:TemperatureConditionsRestricted ;
     rdfs:range xsd:integer ;
     rdfs:label "Time Charging in Extreme Temperatures Below" ;
@@ -1327,16 +1204,7 @@ dbp:temperatureConditionsRestricted_timeChargingExtremeTempsBelow a rdf:Property
     vs:term_status "stable" ;
 .
 
-dbp:temperatureConditionsRestricted_lastUpdated a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:TemperatureConditionsRestricted ;
-    rdfs:range xsd:dateTime ;
-    rdfs:label "Last Updated" ;
-    rdfs:comment """<div>Timestamp of the most recent update to the restricted temperature conditions data.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:negativeEvents_deepDischargeEvents a rdf:Property, owl:DatatypeProperty ;
+dbp:deepDischargeEvents a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:NegativeEvents ;
     rdfs:range xsd:integer ;
     rdfs:label "Number of Deep Discharge Events" ;
@@ -1345,7 +1213,7 @@ dbp:negativeEvents_deepDischargeEvents a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:negativeEvents_overchargeEvents a rdf:Property, owl:DatatypeProperty ;
+dbp:overchargeEvents a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:NegativeEvents ;
     rdfs:range xsd:integer ;
     rdfs:label "Number of Overcharge Events" ;
@@ -1354,20 +1222,11 @@ dbp:negativeEvents_overchargeEvents a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:negativeEvents_informationOnAccidents a rdf:Property, owl:DatatypeProperty ;
+dbp:informationOnAccidents a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:NegativeEvents ;
     rdfs:range xsd:anyURI ;
     rdfs:label "Information on Accidents" ;
     rdfs:comment """<div>URI linking to records of accidents or safety incidents involving the battery.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:negativeEvents_lastUpdated a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:NegativeEvents ;
-    rdfs:range xsd:dateTime ;
-    rdfs:label "Last Updated" ;
-    rdfs:comment """<div>Timestamp of the most recent update to the negative events data.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
@@ -1747,155 +1606,141 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:SupplyChainDueDiligence,
         dbp:TemperatureConditionsPublic,
         dbp:TemperatureConditionsRestricted,
-        dbp:batteryAttributes_batteryCategory,
-        dbp:batteryAttributes_batteryMass,
-        dbp:batteryAttributes_warrantyPeriod,
-        dbp:batteryCarbonFootprint_absoluteCarbonFootprint,
-        dbp:batteryCarbonFootprint_carbonFootprintPerFU,
-        dbp:batteryCarbonFootprint_contributionDistribution,
-        dbp:batteryCarbonFootprint_contributionEndOfLife,
-        dbp:batteryCarbonFootprint_contributionProduction,
-        dbp:batteryCarbonFootprint_contributionRawMaterial,
-        dbp:batteryCarbonFootprint_performanceClass,
-        dbp:batteryCarbonFootprint_publicCarbonFootprintStudy,
-        dbp:batteryChemistry_clearName,
-        dbp:batteryChemistry_shortName,
-        dbp:batteryCircularityPrivate_dismantlingManuals,
-        dbp:batteryCircularityPrivate_partNumbers,
-        dbp:batteryCircularityPrivate_safetyMeasures,
-        dbp:batteryCircularityPrivate_sparePartsInfo,
-        dbp:batteryCircularityPublic_endUserInfo,
-        dbp:batteryCircularityPublic_recycledContent,
-        dbp:batteryCompliancePublic_cadmium,
-        dbp:batteryCompliancePublic_carbonFootprint,
-        dbp:batteryCompliancePublic_euDeclarationConformity,
-        dbp:batteryCompliancePublic_extinguishingAgent,
-        dbp:batteryCompliancePublic_lead,
-        dbp:batteryCompliancePublic_separateCollectionSymbol,
-        dbp:batteryComplianceRestricted_testReportResults,
-        dbp:batteryIdentifiers_batteryModelIdentifier,
-        dbp:batteryIdentifiers_serialNumber,
-        dbp:batteryIdentifiers_uniqueBatteryIdentifier,
-        dbp:batteryIdentifiers_uniqueDPPIdentifier,
-        dbp:batteryLifetimePublic_cRateCycleLifeTest,
-        dbp:batteryLifetimePublic_capacityThresholdExhaustion,
-        dbp:batteryLifetimePublic_cycleLifeReferenceTest,
-        dbp:batteryLifetimePublic_expectedLifetimeCycles,
-        dbp:batteryLifetimeRestricted_capacityThroughput,
-        dbp:batteryLifetimeRestricted_energyThroughput,
-        dbp:batteryLifetimeRestricted_expectedLifetimeYears,
-        dbp:batteryLifetimeRestricted_lastUpdated,
-        dbp:batteryLifetimeRestricted_numberOfFullCycles,
-        dbp:batteryMaterialLocation_componentId,
-        dbp:batteryMaterialLocation_componentName,
-        dbp:batteryMaterial_batteryMaterialIdentifier,
-        dbp:batteryMaterial_batteryMaterialLocation,
-        dbp:batteryMaterial_batteryMaterialMass,
-        dbp:batteryMaterial_batteryMaterialName,
-        dbp:batteryMaterial_batteryMaterialShare,
-        dbp:batteryMaterial_isCriticalRawMaterial,
-        dbp:batteryMaterialsPublic_batteryChemistry,
-        dbp:batteryMaterialsPublic_criticalRawMaterials,
-        dbp:batteryMaterialsPublic_hazardousSubstances,
-        dbp:batteryMaterialsRestricted_materialsComposition,
-        dbp:batteryPerformancePublic_batteryLifetime,
-        dbp:batteryPerformancePublic_capacityEnergyVoltage,
-        dbp:batteryPerformancePublic_internalResistance,
-        dbp:batteryPerformancePublic_powerCapability,
-        dbp:batteryPerformancePublic_roundTripEfficiency,
-        dbp:batteryPerformancePublic_temperatureConditions,
-        dbp:batteryPerformanceRestricted_batteryLifetime,
-        dbp:batteryPerformanceRestricted_capacityEnergyVoltage,
-        dbp:batteryPerformanceRestricted_internalResistance,
-        dbp:batteryPerformanceRestricted_negativeEvents,
-        dbp:batteryPerformanceRestricted_powerCapability,
-        dbp:batteryPerformanceRestricted_roundTripEfficiency,
-        dbp:batteryPerformanceRestricted_temperatureConditions,
-        dbp:capacityEnergyVoltagePublic_certifiedUsableBattEnergy,
-        dbp:capacityEnergyVoltagePublic_maximumVoltage,
-        dbp:capacityEnergyVoltagePublic_minimumVoltage,
-        dbp:capacityEnergyVoltagePublic_nominalVoltage,
-        dbp:capacityEnergyVoltagePublic_ratedCapacity,
-        dbp:capacityEnergyVoltageRestricted_capacityFade,
-        dbp:capacityEnergyVoltageRestricted_lastUpdated,
-        dbp:capacityEnergyVoltageRestricted_remainingCapacity,
-        dbp:capacityEnergyVoltageRestricted_remainingUsableBattEnergy,
-        dbp:capacityEnergyVoltageRestricted_stateOfCertifiedEnergy,
-        dbp:capacityEnergyVoltageRestricted_stateOfCharge,
-        dbp:companyInformation_address,
-        dbp:companyInformation_contact,
-        dbp:companyInformation_identifier,
-        dbp:companyInformation_legalName,
-        dbp:contactInformation_email,
-        dbp:contactInformation_phone,
-        dbp:contactInformation_website,
-        dbp:dppInfo_dppGranularity,
-        dbp:dppInfo_dppStatus,
-        dbp:dppInfo_lastUpdated,
-        dbp:dppInfo_schemaVersion,
-        dbp:endUserInformation_collectionEndOfLife,
-        dbp:endUserInformation_separateCollection,
-        dbp:endUserInformation_wastePrevention,
-        dbp:generalInformationPublic_general,
-        dbp:generalInformationPublic_identifiers,
-        dbp:generalInformationPublic_productData,
-        dbp:generalInformationRestricted_identifiers,
-        dbp:generalInformationRestricted_productData,
-        dbp:hazardousSubstance_impactOnEnvironment,
-        dbp:hazardousSubstance_substance,
-        dbp:internalResistancePublic_initialInternalResistance,
-        dbp:internalResistanceRestricted_internalResistanceIncrease,
-        dbp:label_meaning,
-        dbp:label_subject,
-        dbp:label_symbol,
-        dbp:negativeEvents_deepDischargeEvents,
-        dbp:negativeEvents_informationOnAccidents,
-        dbp:negativeEvents_lastUpdated,
-        dbp:negativeEvents_overchargeEvents,
-        dbp:operatorIdentifiers_economicOperatorId,
-        dbp:operatorIdentifiers_facilityId,
-        dbp:operatorIdentifiers_manufacturerId,
-        dbp:postalAddress_country,
-        dbp:postalAddress_postalCode,
-        dbp:postalAddress_streetAddress,
-        dbp:powerCapabilityPublic_maximumPermittedPower,
-        dbp:powerCapabilityPublic_originalPowerCapability,
-        dbp:powerCapabilityPublic_ratioPowerToEnergy,
-        dbp:powerCapabilityRestricted_lastUpdated,
-        dbp:powerCapabilityRestricted_powerFade,
-        dbp:powerCapabilityRestricted_remainingPowerCapability,
-        dbp:productData_economicOperator,
-        dbp:productData_manufacturer,
-        dbp:productData_manufacturingDate,
-        dbp:productData_manufacturingPlace,
-        dbp:recycledRenewableContent_postConsumerCobaltShare,
-        dbp:recycledRenewableContent_postConsumerLithiumShare,
-        dbp:recycledRenewableContent_postConsumerNickelShare,
-        dbp:recycledRenewableContent_preConsumerCobaltShare,
-        dbp:recycledRenewableContent_preConsumerLithiumShare,
-        dbp:recycledRenewableContent_preConsumerNickelShare,
-        dbp:recycledRenewableContent_recycledLeadShare,
-        dbp:recycledRenewableContent_renewableContentShare,
-        dbp:restrictedProductData_batteryStatus,
-        dbp:restrictedProductData_dateOfPuttingIntoService,
-        dbp:roundTripEfficiencyPublic_initialRoundTripEfficiency,
-        dbp:roundTripEfficiencyPublic_roundTripEfficiencyAt50pct,
-        dbp:roundTripEfficiencyRestricted_currentSelfDischargeRate,
-        dbp:roundTripEfficiencyRestricted_evolutionSelfDischargeRates,
-        dbp:roundTripEfficiencyRestricted_initialSelfDischargeRate,
-        dbp:roundTripEfficiencyRestricted_lastUpdated,
-        dbp:roundTripEfficiencyRestricted_remainingRoundTripEfficiency,
-        dbp:roundTripEfficiencyRestricted_roundTripEfficiencyFade,
-        dbp:supplyChainDueDiligence_dueDiligenceReport,
-        dbp:supplyChainDueDiligence_supplyChainIndices,
-        dbp:supplyChainDueDiligence_thirdPartyAssurances,
-        dbp:temperatureConditionsPublic_tempRangeIdleLower,
-        dbp:temperatureConditionsPublic_tempRangeIdleUpper,
-        dbp:temperatureConditionsRestricted_lastUpdated,
-        dbp:temperatureConditionsRestricted_temperatureInformation,
-        dbp:temperatureConditionsRestricted_timeChargingExtremeTempsAbove,
-        dbp:temperatureConditionsRestricted_timeChargingExtremeTempsBelow,
-        dbp:temperatureConditionsRestricted_timeInExtremeTempsAbove,
-        dbp:temperatureConditionsRestricted_timeInExtremeTempsBelow ;
+        dbp:absoluteCarbonFootprint,
+        dbp:address,
+        dbp:batteryCategory,
+        dbp:batteryChemistry,
+        dbp:batteryLifetime,
+        dbp:batteryMass,
+        dbp:batteryMaterialIdentifier,
+        dbp:batteryMaterialLocation,
+        dbp:batteryMaterialMass,
+        dbp:batteryMaterialName,
+        dbp:batteryMaterialShare,
+        dbp:batteryModelIdentifier,
+        dbp:batteryStatus,
+        dbp:cRateCycleLifeTest,
+        dbp:cadmium,
+        dbp:capacityEnergyVoltage,
+        dbp:capacityFade,
+        dbp:capacityThresholdExhaustion,
+        dbp:capacityThroughput,
+        dbp:carbonFootprint,
+        dbp:carbonFootprintPerFU,
+        dbp:certifiedUsableBattEnergy,
+        dbp:clearName,
+        dbp:collectionEndOfLife,
+        dbp:componentId,
+        dbp:componentName,
+        dbp:contact,
+        dbp:contributionDistribution,
+        dbp:contributionEndOfLife,
+        dbp:contributionProduction,
+        dbp:contributionRawMaterial,
+        dbp:country,
+        dbp:criticalRawMaterials,
+        dbp:currentSelfDischargeRate,
+        dbp:cycleLifeReferenceTest,
+        dbp:dateOfPuttingIntoService,
+        dbp:deepDischargeEvents,
+        dbp:dismantlingManuals,
+        dbp:dppGranularity,
+        dbp:dppStatus,
+        dbp:dueDiligenceReport,
+        dbp:economicOperator,
+        dbp:economicOperatorId,
+        dbp:email,
+        dbp:endUserInfo,
+        dbp:energyThroughput,
+        dbp:euDeclarationConformity,
+        dbp:evolutionSelfDischargeRates,
+        dbp:expectedLifetimeCycles,
+        dbp:expectedLifetimeYears,
+        dbp:extinguishingAgent,
+        dbp:facilityId,
+        dbp:general,
+        dbp:hazardousSubstances,
+        dbp:identifier,
+        dbp:identifiers,
+        dbp:impactOnEnvironment,
+        dbp:informationOnAccidents,
+        dbp:initialInternalResistance,
+        dbp:initialRoundTripEfficiency,
+        dbp:initialSelfDischargeRate,
+        dbp:internalResistance,
+        dbp:internalResistanceIncrease,
+        dbp:isCriticalRawMaterial,
+        dbp:lastUpdated,
+        dbp:lead,
+        dbp:legalName,
+        dbp:manufacturer,
+        dbp:manufacturerId,
+        dbp:manufacturingDate,
+        dbp:manufacturingPlace,
+        dbp:materialsComposition,
+        dbp:maximumPermittedPower,
+        dbp:maximumVoltage,
+        dbp:meaning,
+        dbp:minimumVoltage,
+        dbp:negativeEvents,
+        dbp:nominalVoltage,
+        dbp:numberOfFullCycles,
+        dbp:originalPowerCapability,
+        dbp:overchargeEvents,
+        dbp:partNumbers,
+        dbp:performanceClass,
+        dbp:phone,
+        dbp:postConsumerCobaltShare,
+        dbp:postConsumerLithiumShare,
+        dbp:postConsumerNickelShare,
+        dbp:postalCode,
+        dbp:powerCapability,
+        dbp:powerFade,
+        dbp:preConsumerCobaltShare,
+        dbp:preConsumerLithiumShare,
+        dbp:preConsumerNickelShare,
+        dbp:productData,
+        dbp:publicCarbonFootprintStudy,
+        dbp:ratedCapacity,
+        dbp:ratioPowerToEnergy,
+        dbp:recycledContent,
+        dbp:recycledLeadShare,
+        dbp:remainingCapacity,
+        dbp:remainingPowerCapability,
+        dbp:remainingRoundTripEfficiency,
+        dbp:remainingUsableBattEnergy,
+        dbp:renewableContentShare,
+        dbp:roundTripEfficiency,
+        dbp:roundTripEfficiencyAt50pct,
+        dbp:roundTripEfficiencyFade,
+        dbp:safetyMeasures,
+        dbp:schemaVersion,
+        dbp:separateCollection,
+        dbp:separateCollectionSymbol,
+        dbp:serialNumber,
+        dbp:shortName,
+        dbp:sparePartsInfo,
+        dbp:stateOfCertifiedEnergy,
+        dbp:stateOfCharge,
+        dbp:streetAddress,
+        dbp:subject,
+        dbp:substance,
+        dbp:supplyChainIndices,
+        dbp:symbol,
+        dbp:tempRangeIdleLower,
+        dbp:tempRangeIdleUpper,
+        dbp:temperatureConditions,
+        dbp:temperatureInformation,
+        dbp:testReportResults,
+        dbp:thirdPartyAssurances,
+        dbp:timeChargingExtremeTempsAbove,
+        dbp:timeChargingExtremeTempsBelow,
+        dbp:timeInExtremeTempsAbove,
+        dbp:timeInExtremeTempsBelow,
+        dbp:uniqueBatteryIdentifier,
+        dbp:uniqueDPPIdentifier,
+        dbp:warrantyPeriod,
+        dbp:wastePrevention,
+        dbp:website ;
 .
 

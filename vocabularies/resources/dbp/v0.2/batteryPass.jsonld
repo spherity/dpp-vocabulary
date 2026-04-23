@@ -75,9 +75,9 @@
         "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
     },
     "rdfs:seeAlso": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1542",
-    "dc:date": "2026-04-22",
+    "dc:date": "2026-04-23",
     "rdfs_properties": [{
-        "@id": "dbp:postalAddress_postalCode",
+        "@id": "dbp:postalCode",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:PostalAddress",
         "rdfs:range": "xsd:string",
@@ -92,7 +92,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:postalAddress_streetAddress",
+        "@id": "dbp:streetAddress",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:PostalAddress",
         "rdfs:range": "xsd:string",
@@ -107,7 +107,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:postalAddress_country",
+        "@id": "dbp:country",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:PostalAddress",
         "rdfs:range": "xsd:string",
@@ -122,7 +122,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:contactInformation_phone",
+        "@id": "dbp:phone",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:ContactInformation",
         "rdfs:range": "xsd:string",
@@ -137,7 +137,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:contactInformation_email",
+        "@id": "dbp:email",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:ContactInformation",
         "rdfs:range": "xsd:string",
@@ -152,7 +152,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:contactInformation_website",
+        "@id": "dbp:website",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:ContactInformation",
         "rdfs:range": "xsd:anyURI",
@@ -167,7 +167,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:companyInformation_identifier",
+        "@id": "dbp:identifier",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CompanyInformation",
         "rdfs:range": "xsd:string",
@@ -182,7 +182,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:companyInformation_legalName",
+        "@id": "dbp:legalName",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CompanyInformation",
         "rdfs:range": "xsd:string",
@@ -197,7 +197,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:companyInformation_contact",
+        "@id": "dbp:contact",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:CompanyInformation",
         "rdfs:range": "dbp:ContactInformation",
@@ -212,7 +212,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:companyInformation_address",
+        "@id": "dbp:address",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:CompanyInformation",
         "rdfs:range": "dbp:PostalAddress",
@@ -227,7 +227,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:dppInfo_schemaVersion",
+        "@id": "dbp:schemaVersion",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:DPPInfo",
         "rdfs:range": "xsd:string",
@@ -242,7 +242,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:dppInfo_dppGranularity",
+        "@id": "dbp:dppGranularity",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:DPPInfo",
         "rdfs:range": "xsd:string",
@@ -257,7 +257,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:dppInfo_dppStatus",
+        "@id": "dbp:dppStatus",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:DPPInfo",
         "rdfs:range": "xsd:string",
@@ -272,13 +272,12 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:dppInfo_lastUpdated",
+        "@id": "dbp:lastUpdated",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
-        "rdfs:domain": "dbp:DPPInfo",
         "rdfs:range": "xsd:dateTime",
         "rdfs:label": "Last Updated",
         "rdfs:comment": {
-            "@value": "<div>Timestamp of the most recent update to the DPP record.</div>",
+            "@value": "<div>Timestamp of the most recent update to the data record.</div>",
             "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
         },
         "vs:term_status": "stable",
@@ -287,7 +286,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryAttributes_warrantyPeriod",
+        "@id": "dbp:warrantyPeriod",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryAttributes",
         "rdfs:range": "xsd:date",
@@ -302,7 +301,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryAttributes_batteryCategory",
+        "@id": "dbp:batteryCategory",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryAttributes",
         "rdfs:range": "xsd:string",
@@ -317,7 +316,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryAttributes_batteryMass",
+        "@id": "dbp:batteryMass",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryAttributes",
         "rdfs:range": "xsd:decimal",
@@ -332,7 +331,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryIdentifiers_batteryModelIdentifier",
+        "@id": "dbp:batteryModelIdentifier",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryIdentifiers",
         "rdfs:range": "xsd:string",
@@ -347,7 +346,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryIdentifiers_uniqueBatteryIdentifier",
+        "@id": "dbp:uniqueBatteryIdentifier",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryIdentifiers",
         "rdfs:range": "xsd:anyURI",
@@ -362,7 +361,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryIdentifiers_serialNumber",
+        "@id": "dbp:serialNumber",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryIdentifiers",
         "rdfs:range": "xsd:string",
@@ -377,7 +376,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryIdentifiers_uniqueDPPIdentifier",
+        "@id": "dbp:uniqueDPPIdentifier",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryIdentifiers",
         "rdfs:range": "xsd:anyURI",
@@ -392,7 +391,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:productData_economicOperator",
+        "@id": "dbp:economicOperator",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:ProductData",
         "rdfs:range": "dbp:CompanyInformation",
@@ -407,7 +406,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:productData_manufacturer",
+        "@id": "dbp:manufacturer",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:ProductData",
         "rdfs:range": "dbp:CompanyInformation",
@@ -422,7 +421,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:productData_manufacturingPlace",
+        "@id": "dbp:manufacturingPlace",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:ProductData",
         "rdfs:range": "dbp:PostalAddress",
@@ -437,7 +436,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:productData_manufacturingDate",
+        "@id": "dbp:manufacturingDate",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:ProductData",
         "rdfs:range": "xsd:date",
@@ -452,7 +451,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:generalInformationPublic_general",
+        "@id": "dbp:general",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:GeneralInformationPublic",
         "rdfs:range": "dbp:BatteryAttributes",
@@ -467,13 +466,11 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:generalInformationPublic_identifiers",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
-        "rdfs:domain": "dbp:GeneralInformationPublic",
-        "rdfs:range": "dbp:BatteryIdentifiers",
+        "@id": "dbp:identifiers",
+        "@type": "rdf:Property",
         "rdfs:label": "Identifiers",
         "rdfs:comment": {
-            "@value": "<div>Battery identifiers sub-section. In the restricted context points to OperatorIdentifiers.</div>",
+            "@value": "<div>Identifiers sub-section. In the public context points to BatteryIdentifiers;\nin the restricted context points to OperatorIdentifiers.</div>",
             "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
         },
         "vs:term_status": "stable",
@@ -482,13 +479,11 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:generalInformationPublic_productData",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
-        "rdfs:domain": "dbp:GeneralInformationPublic",
-        "rdfs:range": "dbp:ProductData",
+        "@id": "dbp:productData",
+        "@type": "rdf:Property",
         "rdfs:label": "Product Data",
         "rdfs:comment": {
-            "@value": "<div>Product and operator data sub-section. In the restricted context points to RestrictedProductData.</div>",
+            "@value": "<div>Product data sub-section. In the public context points to ProductData;\nin the restricted context points to RestrictedProductData.</div>",
             "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
         },
         "vs:term_status": "stable",
@@ -497,37 +492,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:generalInformationRestricted_identifiers",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
-        "rdfs:domain": "dbp:GeneralInformationRestricted",
-        "rdfs:range": "dbp:OperatorIdentifiers",
-        "rdfs:label": "Identifiers",
-        "rdfs:comment": {
-            "@value": "<div>Operator identifiers sub-section within the restricted general information context.</div>",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
-        },
-        "vs:term_status": "stable",
-        "mentioned": [{
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
-            "@type": "jsonld:Context"
-        }]
-    }, {
-        "@id": "dbp:generalInformationRestricted_productData",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
-        "rdfs:domain": "dbp:GeneralInformationRestricted",
-        "rdfs:range": "dbp:RestrictedProductData",
-        "rdfs:label": "Product Data",
-        "rdfs:comment": {
-            "@value": "<div>Restricted product data sub-section within the restricted general information context.</div>",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
-        },
-        "vs:term_status": "stable",
-        "mentioned": [{
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
-            "@type": "jsonld:Context"
-        }]
-    }, {
-        "@id": "dbp:operatorIdentifiers_manufacturerId",
+        "@id": "dbp:manufacturerId",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:OperatorIdentifiers",
         "rdfs:range": "xsd:string",
@@ -542,7 +507,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:operatorIdentifiers_facilityId",
+        "@id": "dbp:facilityId",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:OperatorIdentifiers",
         "rdfs:range": "xsd:string",
@@ -557,7 +522,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:operatorIdentifiers_economicOperatorId",
+        "@id": "dbp:economicOperatorId",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:OperatorIdentifiers",
         "rdfs:range": "xsd:string",
@@ -572,7 +537,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:restrictedProductData_dateOfPuttingIntoService",
+        "@id": "dbp:dateOfPuttingIntoService",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RestrictedProductData",
         "rdfs:range": "xsd:date",
@@ -587,7 +552,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:restrictedProductData_batteryStatus",
+        "@id": "dbp:batteryStatus",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RestrictedProductData",
         "rdfs:range": "xsd:string",
@@ -602,7 +567,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:label_symbol",
+        "@id": "dbp:symbol",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:Label",
         "rdfs:range": "xsd:string",
@@ -617,7 +582,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:label_meaning",
+        "@id": "dbp:meaning",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:Label",
         "rdfs:range": "xsd:string",
@@ -632,7 +597,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:label_subject",
+        "@id": "dbp:subject",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:Label",
         "rdfs:range": "xsd:string",
@@ -647,7 +612,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCompliancePublic_separateCollectionSymbol",
+        "@id": "dbp:separateCollectionSymbol",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryCompliancePublic",
         "rdfs:range": "dbp:Label",
@@ -662,7 +627,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCompliancePublic_cadmium",
+        "@id": "dbp:cadmium",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryCompliancePublic",
         "rdfs:range": "dbp:Label",
@@ -677,7 +642,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCompliancePublic_lead",
+        "@id": "dbp:lead",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryCompliancePublic",
         "rdfs:range": "dbp:Label",
@@ -692,7 +657,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCompliancePublic_carbonFootprint",
+        "@id": "dbp:carbonFootprint",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryCompliancePublic",
         "rdfs:range": "dbp:Label",
@@ -707,7 +672,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCompliancePublic_extinguishingAgent",
+        "@id": "dbp:extinguishingAgent",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCompliancePublic",
         "rdfs:range": "xsd:string",
@@ -722,7 +687,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCompliancePublic_euDeclarationConformity",
+        "@id": "dbp:euDeclarationConformity",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCompliancePublic",
         "rdfs:range": "xsd:anyURI",
@@ -737,7 +702,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryComplianceRestricted_testReportResults",
+        "@id": "dbp:testReportResults",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryComplianceRestricted",
         "rdfs:range": "xsd:anyURI",
@@ -752,7 +717,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:supplyChainDueDiligence_dueDiligenceReport",
+        "@id": "dbp:dueDiligenceReport",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:SupplyChainDueDiligence",
         "rdfs:range": "xsd:anyURI",
@@ -767,7 +732,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:supplyChainDueDiligence_thirdPartyAssurances",
+        "@id": "dbp:thirdPartyAssurances",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:SupplyChainDueDiligence",
         "rdfs:range": "xsd:string",
@@ -782,7 +747,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:supplyChainDueDiligence_supplyChainIndices",
+        "@id": "dbp:supplyChainIndices",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:SupplyChainDueDiligence",
         "rdfs:range": "xsd:string",
@@ -797,7 +762,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:hazardousSubstance_substance",
+        "@id": "dbp:substance",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:HazardousSubstance",
         "rdfs:range": "xsd:string",
@@ -812,7 +777,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:hazardousSubstance_impactOnEnvironment",
+        "@id": "dbp:impactOnEnvironment",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:HazardousSubstance",
         "rdfs:range": "xsd:string",
@@ -827,7 +792,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryChemistry_clearName",
+        "@id": "dbp:clearName",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryChemistry",
         "rdfs:range": "xsd:string",
@@ -842,7 +807,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryChemistry_shortName",
+        "@id": "dbp:shortName",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryChemistry",
         "rdfs:range": "xsd:string",
@@ -857,7 +822,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryMaterialsPublic_batteryChemistry",
+        "@id": "dbp:batteryChemistry",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryMaterialsPublic",
         "rdfs:range": "dbp:BatteryChemistry",
@@ -872,7 +837,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryMaterialsPublic_criticalRawMaterials",
+        "@id": "dbp:criticalRawMaterials",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryMaterialsPublic",
         "rdfs:range": "xsd:string",
@@ -887,7 +852,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryMaterialsPublic_hazardousSubstances",
+        "@id": "dbp:hazardousSubstances",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryMaterialsPublic",
         "rdfs:range": "dbp:HazardousSubstance",
@@ -902,7 +867,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryMaterialLocation_componentId",
+        "@id": "dbp:componentId",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryMaterialLocation",
         "rdfs:range": "xsd:string",
@@ -917,7 +882,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryMaterialLocation_componentName",
+        "@id": "dbp:componentName",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryMaterialLocation",
         "rdfs:range": "xsd:string",
@@ -932,7 +897,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryMaterial_batteryMaterialIdentifier",
+        "@id": "dbp:batteryMaterialIdentifier",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryMaterial",
         "rdfs:range": "xsd:string",
@@ -947,7 +912,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryMaterial_batteryMaterialName",
+        "@id": "dbp:batteryMaterialName",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryMaterial",
         "rdfs:range": "xsd:string",
@@ -962,7 +927,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryMaterial_batteryMaterialMass",
+        "@id": "dbp:batteryMaterialMass",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryMaterial",
         "rdfs:range": "xsd:decimal",
@@ -977,7 +942,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryMaterial_batteryMaterialShare",
+        "@id": "dbp:batteryMaterialShare",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryMaterial",
         "rdfs:range": "xsd:decimal",
@@ -992,7 +957,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryMaterial_isCriticalRawMaterial",
+        "@id": "dbp:isCriticalRawMaterial",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryMaterial",
         "rdfs:range": "xsd:boolean",
@@ -1007,7 +972,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryMaterial_batteryMaterialLocation",
+        "@id": "dbp:batteryMaterialLocation",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryMaterial",
         "rdfs:range": "dbp:BatteryMaterialLocation",
@@ -1022,7 +987,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryMaterialsRestricted_materialsComposition",
+        "@id": "dbp:materialsComposition",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryMaterialsRestricted",
         "rdfs:range": "dbp:BatteryMaterial",
@@ -1037,7 +1002,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCarbonFootprint_carbonFootprintPerFU",
+        "@id": "dbp:carbonFootprintPerFU",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCarbonFootprint",
         "rdfs:range": "xsd:decimal",
@@ -1052,7 +1017,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCarbonFootprint_contributionRawMaterial",
+        "@id": "dbp:contributionRawMaterial",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCarbonFootprint",
         "rdfs:range": "xsd:decimal",
@@ -1067,7 +1032,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCarbonFootprint_contributionProduction",
+        "@id": "dbp:contributionProduction",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCarbonFootprint",
         "rdfs:range": "xsd:decimal",
@@ -1082,7 +1047,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCarbonFootprint_contributionDistribution",
+        "@id": "dbp:contributionDistribution",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCarbonFootprint",
         "rdfs:range": "xsd:decimal",
@@ -1097,7 +1062,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCarbonFootprint_contributionEndOfLife",
+        "@id": "dbp:contributionEndOfLife",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCarbonFootprint",
         "rdfs:range": "xsd:decimal",
@@ -1112,7 +1077,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCarbonFootprint_performanceClass",
+        "@id": "dbp:performanceClass",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCarbonFootprint",
         "rdfs:range": "dbp:PerformanceClass",
@@ -1127,7 +1092,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCarbonFootprint_publicCarbonFootprintStudy",
+        "@id": "dbp:publicCarbonFootprintStudy",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCarbonFootprint",
         "rdfs:range": "xsd:anyURI",
@@ -1142,7 +1107,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCarbonFootprint_absoluteCarbonFootprint",
+        "@id": "dbp:absoluteCarbonFootprint",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCarbonFootprint",
         "rdfs:range": "xsd:integer",
@@ -1157,7 +1122,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:endUserInformation_wastePrevention",
+        "@id": "dbp:wastePrevention",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:EndUserInformation",
         "rdfs:range": "xsd:anyURI",
@@ -1172,7 +1137,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:endUserInformation_separateCollection",
+        "@id": "dbp:separateCollection",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:EndUserInformation",
         "rdfs:range": "xsd:anyURI",
@@ -1187,7 +1152,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:endUserInformation_collectionEndOfLife",
+        "@id": "dbp:collectionEndOfLife",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:EndUserInformation",
         "rdfs:range": "xsd:anyURI",
@@ -1202,7 +1167,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:recycledRenewableContent_preConsumerNickelShare",
+        "@id": "dbp:preConsumerNickelShare",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RecycledRenewableContent",
         "rdfs:range": "xsd:decimal",
@@ -1217,7 +1182,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:recycledRenewableContent_preConsumerCobaltShare",
+        "@id": "dbp:preConsumerCobaltShare",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RecycledRenewableContent",
         "rdfs:range": "xsd:decimal",
@@ -1232,7 +1197,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:recycledRenewableContent_preConsumerLithiumShare",
+        "@id": "dbp:preConsumerLithiumShare",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RecycledRenewableContent",
         "rdfs:range": "xsd:decimal",
@@ -1247,7 +1212,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:recycledRenewableContent_postConsumerNickelShare",
+        "@id": "dbp:postConsumerNickelShare",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RecycledRenewableContent",
         "rdfs:range": "xsd:decimal",
@@ -1262,7 +1227,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:recycledRenewableContent_postConsumerCobaltShare",
+        "@id": "dbp:postConsumerCobaltShare",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RecycledRenewableContent",
         "rdfs:range": "xsd:decimal",
@@ -1277,7 +1242,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:recycledRenewableContent_postConsumerLithiumShare",
+        "@id": "dbp:postConsumerLithiumShare",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RecycledRenewableContent",
         "rdfs:range": "xsd:decimal",
@@ -1292,7 +1257,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:recycledRenewableContent_recycledLeadShare",
+        "@id": "dbp:recycledLeadShare",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RecycledRenewableContent",
         "rdfs:range": "xsd:decimal",
@@ -1307,7 +1272,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:recycledRenewableContent_renewableContentShare",
+        "@id": "dbp:renewableContentShare",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RecycledRenewableContent",
         "rdfs:range": "xsd:decimal",
@@ -1322,7 +1287,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCircularityPublic_endUserInfo",
+        "@id": "dbp:endUserInfo",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryCircularityPublic",
         "rdfs:range": "dbp:EndUserInformation",
@@ -1337,7 +1302,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCircularityPublic_recycledContent",
+        "@id": "dbp:recycledContent",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryCircularityPublic",
         "rdfs:range": "dbp:RecycledRenewableContent",
@@ -1352,7 +1317,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCircularityPrivate_dismantlingManuals",
+        "@id": "dbp:dismantlingManuals",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCircularityPrivate",
         "rdfs:range": "xsd:anyURI",
@@ -1367,7 +1332,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCircularityPrivate_partNumbers",
+        "@id": "dbp:partNumbers",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCircularityPrivate",
         "rdfs:range": "xsd:anyURI",
@@ -1382,7 +1347,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCircularityPrivate_sparePartsInfo",
+        "@id": "dbp:sparePartsInfo",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCircularityPrivate",
         "rdfs:range": "xsd:anyURI",
@@ -1397,7 +1362,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryCircularityPrivate_safetyMeasures",
+        "@id": "dbp:safetyMeasures",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCircularityPrivate",
         "rdfs:range": "xsd:anyURI",
@@ -1412,7 +1377,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:capacityEnergyVoltagePublic_ratedCapacity",
+        "@id": "dbp:ratedCapacity",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltagePublic",
         "rdfs:range": "xsd:integer",
@@ -1427,7 +1392,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:capacityEnergyVoltagePublic_certifiedUsableBattEnergy",
+        "@id": "dbp:certifiedUsableBattEnergy",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltagePublic",
         "rdfs:range": "xsd:integer",
@@ -1442,7 +1407,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:capacityEnergyVoltagePublic_minimumVoltage",
+        "@id": "dbp:minimumVoltage",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltagePublic",
         "rdfs:range": "xsd:decimal",
@@ -1457,7 +1422,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:capacityEnergyVoltagePublic_maximumVoltage",
+        "@id": "dbp:maximumVoltage",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltagePublic",
         "rdfs:range": "xsd:decimal",
@@ -1472,7 +1437,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:capacityEnergyVoltagePublic_nominalVoltage",
+        "@id": "dbp:nominalVoltage",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltagePublic",
         "rdfs:range": "xsd:decimal",
@@ -1487,7 +1452,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:powerCapabilityPublic_originalPowerCapability",
+        "@id": "dbp:originalPowerCapability",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:PowerCapabilityPublic",
         "rdfs:range": "xsd:integer",
@@ -1502,7 +1467,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:powerCapabilityPublic_maximumPermittedPower",
+        "@id": "dbp:maximumPermittedPower",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:PowerCapabilityPublic",
         "rdfs:range": "xsd:integer",
@@ -1517,7 +1482,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:powerCapabilityPublic_ratioPowerToEnergy",
+        "@id": "dbp:ratioPowerToEnergy",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:PowerCapabilityPublic",
         "rdfs:range": "xsd:integer",
@@ -1532,7 +1497,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:roundTripEfficiencyPublic_initialRoundTripEfficiency",
+        "@id": "dbp:initialRoundTripEfficiency",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RoundTripEfficiencyPublic",
         "rdfs:range": "xsd:decimal",
@@ -1547,7 +1512,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:roundTripEfficiencyPublic_roundTripEfficiencyAt50pct",
+        "@id": "dbp:roundTripEfficiencyAt50pct",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RoundTripEfficiencyPublic",
         "rdfs:range": "xsd:decimal",
@@ -1562,7 +1527,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:internalResistancePublic_initialInternalResistance",
+        "@id": "dbp:initialInternalResistance",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:InternalResistancePublic",
         "rdfs:range": "xsd:integer",
@@ -1577,7 +1542,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryLifetimePublic_expectedLifetimeCycles",
+        "@id": "dbp:expectedLifetimeCycles",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryLifetimePublic",
         "rdfs:range": "xsd:integer",
@@ -1592,7 +1557,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryLifetimePublic_cycleLifeReferenceTest",
+        "@id": "dbp:cycleLifeReferenceTest",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryLifetimePublic",
         "rdfs:range": "xsd:string",
@@ -1607,7 +1572,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryLifetimePublic_cRateCycleLifeTest",
+        "@id": "dbp:cRateCycleLifeTest",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryLifetimePublic",
         "rdfs:range": "xsd:decimal",
@@ -1622,7 +1587,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryLifetimePublic_capacityThresholdExhaustion",
+        "@id": "dbp:capacityThresholdExhaustion",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryLifetimePublic",
         "rdfs:range": "xsd:decimal",
@@ -1637,7 +1602,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:temperatureConditionsPublic_tempRangeIdleLower",
+        "@id": "dbp:tempRangeIdleLower",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:TemperatureConditionsPublic",
         "rdfs:range": "xsd:integer",
@@ -1652,7 +1617,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:temperatureConditionsPublic_tempRangeIdleUpper",
+        "@id": "dbp:tempRangeIdleUpper",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:TemperatureConditionsPublic",
         "rdfs:range": "xsd:integer",
@@ -1667,10 +1632,8 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryPerformancePublic_capacityEnergyVoltage",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
-        "rdfs:domain": "dbp:BatteryPerformancePublic",
-        "rdfs:range": "dbp:CapacityEnergyVoltagePublic",
+        "@id": "dbp:capacityEnergyVoltage",
+        "@type": "rdf:Property",
         "rdfs:label": "Capacity Energy and Voltage",
         "rdfs:comment": {
             "@value": "<div>Capacity, energy, and voltage sub-section. Applied to both public and restricted performance containers.</div>",
@@ -1682,10 +1645,8 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryPerformancePublic_powerCapability",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
-        "rdfs:domain": "dbp:BatteryPerformancePublic",
-        "rdfs:range": "dbp:PowerCapabilityPublic",
+        "@id": "dbp:powerCapability",
+        "@type": "rdf:Property",
         "rdfs:label": "Power Capability",
         "rdfs:comment": {
             "@value": "<div>Power capability sub-section. Applied to both public and restricted performance containers.</div>",
@@ -1697,10 +1658,8 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryPerformancePublic_roundTripEfficiency",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
-        "rdfs:domain": "dbp:BatteryPerformancePublic",
-        "rdfs:range": "dbp:RoundTripEfficiencyPublic",
+        "@id": "dbp:roundTripEfficiency",
+        "@type": "rdf:Property",
         "rdfs:label": "Round Trip Efficiency",
         "rdfs:comment": {
             "@value": "<div>Round trip efficiency and self-discharge sub-section. Applied to both public and restricted performance containers.</div>",
@@ -1712,10 +1671,8 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryPerformancePublic_internalResistance",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
-        "rdfs:domain": "dbp:BatteryPerformancePublic",
-        "rdfs:range": "dbp:InternalResistancePublic",
+        "@id": "dbp:internalResistance",
+        "@type": "rdf:Property",
         "rdfs:label": "Internal Resistance",
         "rdfs:comment": {
             "@value": "<div>Internal resistance sub-section. Applied to both public and restricted performance containers.</div>",
@@ -1727,10 +1684,8 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryPerformancePublic_batteryLifetime",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
-        "rdfs:domain": "dbp:BatteryPerformancePublic",
-        "rdfs:range": "dbp:BatteryLifetimePublic",
+        "@id": "dbp:batteryLifetime",
+        "@type": "rdf:Property",
         "rdfs:label": "Battery Lifetime",
         "rdfs:comment": {
             "@value": "<div>Battery lifetime sub-section. Applied to both public and restricted performance containers.</div>",
@@ -1742,13 +1697,11 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryPerformancePublic_temperatureConditions",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
-        "rdfs:domain": "dbp:BatteryPerformancePublic",
-        "rdfs:range": "dbp:TemperatureConditionsPublic",
+        "@id": "dbp:temperatureConditions",
+        "@type": "rdf:Property",
         "rdfs:label": "Temperature Conditions",
         "rdfs:comment": {
-            "@value": "<div>Temperature conditions sub-section of the public battery performance container.</div>",
+            "@value": "<div>Temperature conditions sub-section. Applied to both public and restricted performance containers.</div>",
             "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
         },
         "vs:term_status": "stable",
@@ -1757,97 +1710,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryPerformanceRestricted_capacityEnergyVoltage",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
-        "rdfs:domain": "dbp:BatteryPerformanceRestricted",
-        "rdfs:range": "dbp:CapacityEnergyVoltageRestricted",
-        "rdfs:label": "Capacity Energy and Voltage",
-        "rdfs:comment": {
-            "@value": "<div>Dynamic restricted capacity, energy, and voltage sub-section.</div>",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
-        },
-        "vs:term_status": "stable",
-        "mentioned": [{
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
-            "@type": "jsonld:Context"
-        }]
-    }, {
-        "@id": "dbp:batteryPerformanceRestricted_powerCapability",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
-        "rdfs:domain": "dbp:BatteryPerformanceRestricted",
-        "rdfs:range": "dbp:PowerCapabilityRestricted",
-        "rdfs:label": "Power Capability",
-        "rdfs:comment": {
-            "@value": "<div>Dynamic restricted power capability sub-section.</div>",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
-        },
-        "vs:term_status": "stable",
-        "mentioned": [{
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
-            "@type": "jsonld:Context"
-        }]
-    }, {
-        "@id": "dbp:batteryPerformanceRestricted_roundTripEfficiency",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
-        "rdfs:domain": "dbp:BatteryPerformanceRestricted",
-        "rdfs:range": "dbp:RoundTripEfficiencyRestricted",
-        "rdfs:label": "Round Trip Efficiency",
-        "rdfs:comment": {
-            "@value": "<div>Dynamic restricted round trip efficiency and self-discharge sub-section.</div>",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
-        },
-        "vs:term_status": "stable",
-        "mentioned": [{
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
-            "@type": "jsonld:Context"
-        }]
-    }, {
-        "@id": "dbp:batteryPerformanceRestricted_internalResistance",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
-        "rdfs:domain": "dbp:BatteryPerformanceRestricted",
-        "rdfs:range": "dbp:InternalResistanceRestricted",
-        "rdfs:label": "Internal Resistance",
-        "rdfs:comment": {
-            "@value": "<div>Dynamic restricted internal resistance sub-section.</div>",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
-        },
-        "vs:term_status": "stable",
-        "mentioned": [{
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
-            "@type": "jsonld:Context"
-        }]
-    }, {
-        "@id": "dbp:batteryPerformanceRestricted_batteryLifetime",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
-        "rdfs:domain": "dbp:BatteryPerformanceRestricted",
-        "rdfs:range": "dbp:BatteryLifetimeRestricted",
-        "rdfs:label": "Battery Lifetime",
-        "rdfs:comment": {
-            "@value": "<div>Dynamic restricted battery lifetime sub-section.</div>",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
-        },
-        "vs:term_status": "stable",
-        "mentioned": [{
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
-            "@type": "jsonld:Context"
-        }]
-    }, {
-        "@id": "dbp:batteryPerformanceRestricted_temperatureConditions",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
-        "rdfs:domain": "dbp:BatteryPerformanceRestricted",
-        "rdfs:range": "dbp:TemperatureConditionsRestricted",
-        "rdfs:label": "Temperature Conditions",
-        "rdfs:comment": {
-            "@value": "<div>Dynamic restricted temperature conditions sub-section.</div>",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
-        },
-        "vs:term_status": "stable",
-        "mentioned": [{
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
-            "@type": "jsonld:Context"
-        }]
-    }, {
-        "@id": "dbp:batteryPerformanceRestricted_negativeEvents",
+        "@id": "dbp:negativeEvents",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryPerformanceRestricted",
         "rdfs:range": "dbp:NegativeEvents",
@@ -1862,7 +1725,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:capacityEnergyVoltageRestricted_capacityFade",
+        "@id": "dbp:capacityFade",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltageRestricted",
         "rdfs:range": "xsd:decimal",
@@ -1877,7 +1740,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:capacityEnergyVoltageRestricted_remainingCapacity",
+        "@id": "dbp:remainingCapacity",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltageRestricted",
         "rdfs:range": "xsd:integer",
@@ -1892,7 +1755,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:capacityEnergyVoltageRestricted_remainingUsableBattEnergy",
+        "@id": "dbp:remainingUsableBattEnergy",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltageRestricted",
         "rdfs:range": "xsd:integer",
@@ -1907,7 +1770,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:capacityEnergyVoltageRestricted_stateOfCertifiedEnergy",
+        "@id": "dbp:stateOfCertifiedEnergy",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltageRestricted",
         "rdfs:range": "xsd:decimal",
@@ -1922,7 +1785,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:capacityEnergyVoltageRestricted_stateOfCharge",
+        "@id": "dbp:stateOfCharge",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:CapacityEnergyVoltageRestricted",
         "rdfs:range": "xsd:decimal",
@@ -1937,22 +1800,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:capacityEnergyVoltageRestricted_lastUpdated",
-        "@type": ["rdf:Property", "owl:DatatypeProperty"],
-        "rdfs:domain": "dbp:CapacityEnergyVoltageRestricted",
-        "rdfs:range": "xsd:dateTime",
-        "rdfs:label": "Last Updated",
-        "rdfs:comment": {
-            "@value": "<div>Timestamp of the most recent update to the restricted capacity, energy, and voltage data.</div>",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
-        },
-        "vs:term_status": "stable",
-        "mentioned": [{
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
-            "@type": "jsonld:Context"
-        }]
-    }, {
-        "@id": "dbp:powerCapabilityRestricted_powerFade",
+        "@id": "dbp:powerFade",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:PowerCapabilityRestricted",
         "rdfs:range": "xsd:decimal",
@@ -1967,7 +1815,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:powerCapabilityRestricted_remainingPowerCapability",
+        "@id": "dbp:remainingPowerCapability",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:PowerCapabilityRestricted",
         "rdfs:range": "xsd:integer",
@@ -1982,22 +1830,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:powerCapabilityRestricted_lastUpdated",
-        "@type": ["rdf:Property", "owl:DatatypeProperty"],
-        "rdfs:domain": "dbp:PowerCapabilityRestricted",
-        "rdfs:range": "xsd:dateTime",
-        "rdfs:label": "Last Updated",
-        "rdfs:comment": {
-            "@value": "<div>Timestamp of the most recent update to the restricted power capability data.</div>",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
-        },
-        "vs:term_status": "stable",
-        "mentioned": [{
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
-            "@type": "jsonld:Context"
-        }]
-    }, {
-        "@id": "dbp:roundTripEfficiencyRestricted_roundTripEfficiencyFade",
+        "@id": "dbp:roundTripEfficiencyFade",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RoundTripEfficiencyRestricted",
         "rdfs:range": "xsd:decimal",
@@ -2012,7 +1845,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:roundTripEfficiencyRestricted_initialSelfDischargeRate",
+        "@id": "dbp:initialSelfDischargeRate",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RoundTripEfficiencyRestricted",
         "rdfs:range": "xsd:decimal",
@@ -2027,7 +1860,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:roundTripEfficiencyRestricted_remainingRoundTripEfficiency",
+        "@id": "dbp:remainingRoundTripEfficiency",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RoundTripEfficiencyRestricted",
         "rdfs:range": "xsd:decimal",
@@ -2042,7 +1875,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:roundTripEfficiencyRestricted_currentSelfDischargeRate",
+        "@id": "dbp:currentSelfDischargeRate",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RoundTripEfficiencyRestricted",
         "rdfs:range": "xsd:decimal",
@@ -2057,7 +1890,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:roundTripEfficiencyRestricted_evolutionSelfDischargeRates",
+        "@id": "dbp:evolutionSelfDischargeRates",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:RoundTripEfficiencyRestricted",
         "rdfs:range": "xsd:decimal",
@@ -2072,22 +1905,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:roundTripEfficiencyRestricted_lastUpdated",
-        "@type": ["rdf:Property", "owl:DatatypeProperty"],
-        "rdfs:domain": "dbp:RoundTripEfficiencyRestricted",
-        "rdfs:range": "xsd:dateTime",
-        "rdfs:label": "Last Updated",
-        "rdfs:comment": {
-            "@value": "<div>Timestamp of the most recent update to the restricted round trip efficiency data.</div>",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
-        },
-        "vs:term_status": "stable",
-        "mentioned": [{
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
-            "@type": "jsonld:Context"
-        }]
-    }, {
-        "@id": "dbp:internalResistanceRestricted_internalResistanceIncrease",
+        "@id": "dbp:internalResistanceIncrease",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:InternalResistanceRestricted",
         "rdfs:range": "xsd:decimal",
@@ -2102,7 +1920,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryLifetimeRestricted_expectedLifetimeYears",
+        "@id": "dbp:expectedLifetimeYears",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryLifetimeRestricted",
         "rdfs:range": "xsd:decimal",
@@ -2117,7 +1935,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryLifetimeRestricted_numberOfFullCycles",
+        "@id": "dbp:numberOfFullCycles",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryLifetimeRestricted",
         "rdfs:range": "xsd:integer",
@@ -2132,7 +1950,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryLifetimeRestricted_energyThroughput",
+        "@id": "dbp:energyThroughput",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryLifetimeRestricted",
         "rdfs:range": "xsd:decimal",
@@ -2147,7 +1965,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryLifetimeRestricted_capacityThroughput",
+        "@id": "dbp:capacityThroughput",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryLifetimeRestricted",
         "rdfs:range": "xsd:decimal",
@@ -2162,22 +1980,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:batteryLifetimeRestricted_lastUpdated",
-        "@type": ["rdf:Property", "owl:DatatypeProperty"],
-        "rdfs:domain": "dbp:BatteryLifetimeRestricted",
-        "rdfs:range": "xsd:dateTime",
-        "rdfs:label": "Last Updated",
-        "rdfs:comment": {
-            "@value": "<div>Timestamp of the most recent update to the restricted battery lifetime data.</div>",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
-        },
-        "vs:term_status": "stable",
-        "mentioned": [{
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
-            "@type": "jsonld:Context"
-        }]
-    }, {
-        "@id": "dbp:temperatureConditionsRestricted_temperatureInformation",
+        "@id": "dbp:temperatureInformation",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:TemperatureConditionsRestricted",
         "rdfs:range": "xsd:integer",
@@ -2192,7 +1995,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:temperatureConditionsRestricted_timeInExtremeTempsAbove",
+        "@id": "dbp:timeInExtremeTempsAbove",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:TemperatureConditionsRestricted",
         "rdfs:range": "xsd:integer",
@@ -2207,7 +2010,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:temperatureConditionsRestricted_timeInExtremeTempsBelow",
+        "@id": "dbp:timeInExtremeTempsBelow",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:TemperatureConditionsRestricted",
         "rdfs:range": "xsd:integer",
@@ -2222,7 +2025,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:temperatureConditionsRestricted_timeChargingExtremeTempsAbove",
+        "@id": "dbp:timeChargingExtremeTempsAbove",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:TemperatureConditionsRestricted",
         "rdfs:range": "xsd:integer",
@@ -2237,7 +2040,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:temperatureConditionsRestricted_timeChargingExtremeTempsBelow",
+        "@id": "dbp:timeChargingExtremeTempsBelow",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:TemperatureConditionsRestricted",
         "rdfs:range": "xsd:integer",
@@ -2252,22 +2055,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:temperatureConditionsRestricted_lastUpdated",
-        "@type": ["rdf:Property", "owl:DatatypeProperty"],
-        "rdfs:domain": "dbp:TemperatureConditionsRestricted",
-        "rdfs:range": "xsd:dateTime",
-        "rdfs:label": "Last Updated",
-        "rdfs:comment": {
-            "@value": "<div>Timestamp of the most recent update to the restricted temperature conditions data.</div>",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
-        },
-        "vs:term_status": "stable",
-        "mentioned": [{
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
-            "@type": "jsonld:Context"
-        }]
-    }, {
-        "@id": "dbp:negativeEvents_deepDischargeEvents",
+        "@id": "dbp:deepDischargeEvents",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:NegativeEvents",
         "rdfs:range": "xsd:integer",
@@ -2282,7 +2070,7 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:negativeEvents_overchargeEvents",
+        "@id": "dbp:overchargeEvents",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:NegativeEvents",
         "rdfs:range": "xsd:integer",
@@ -2297,28 +2085,13 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:negativeEvents_informationOnAccidents",
+        "@id": "dbp:informationOnAccidents",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:NegativeEvents",
         "rdfs:range": "xsd:anyURI",
         "rdfs:label": "Information on Accidents",
         "rdfs:comment": {
             "@value": "<div>URI linking to records of accidents or safety incidents involving the battery.</div>",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
-        },
-        "vs:term_status": "stable",
-        "mentioned": [{
-            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
-            "@type": "jsonld:Context"
-        }]
-    }, {
-        "@id": "dbp:negativeEvents_lastUpdated",
-        "@type": ["rdf:Property", "owl:DatatypeProperty"],
-        "rdfs:domain": "dbp:NegativeEvents",
-        "rdfs:range": "xsd:dateTime",
-        "rdfs:label": "Last Updated",
-        "rdfs:comment": {
-            "@value": "<div>Timestamp of the most recent update to the negative events data.</div>",
             "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
         },
         "vs:term_status": "stable",
