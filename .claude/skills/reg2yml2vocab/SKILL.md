@@ -394,7 +394,17 @@ yml2vocab appends a `# Context files and their mentions` block to the TTL that c
 - `<vocab>` — a relative URI with no `@base`, rejected by any OWL API-based tool (e.g. WebVOWL)
 - `jsonld:` and `schema:` prefixes used but never declared in the `@prefix` block
 
-Fix both automatically after every successful run:
+**Why the YAML `prefix:` section does NOT fix this**: yml2vocab only emits `@prefix` declarations for
+namespaces that appear in the main vocabulary body (properties, classes, datatypes). The `jsonld:` and
+`schema:` prefixes are only used inside the auto-appended context block — they never appear in the body,
+so adding them to `prefix:` in the YAML has no effect on the TTL output.
+
+**Do not** attempt to fix this by:
+- Adding `jsonld`/`schema` entries to the YAML `prefix:` section (has no effect)
+- Removing the `context:` field from the YAML `vocab:` section (prevents the block but loses the
+  cross-reference triple linking the ontology to its JSON-LD context file)
+
+The only correct fix is the post-processing script below. Run it automatically after every successful yml2vocab invocation.
 
 ```python
 import re
