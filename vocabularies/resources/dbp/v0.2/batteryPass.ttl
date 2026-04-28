@@ -14,7 +14,7 @@ compliance, materials, carbon footprint, circularity, and performance and durabi
 as defined by the BatteryPass-Ready DataAttributeLongList v1.3 (March 2026).
 """^^rdf:HTML ;
     rdfs:seeAlso <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1542> ;
-    dc:date "2026-04-23"^^xsd:date ;
+    dc:date "2026-04-28"^^xsd:date ;
 .
 
 # Property definitions

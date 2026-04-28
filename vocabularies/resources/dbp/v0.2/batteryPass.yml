@@ -15,6 +15,10 @@ prefix:
     value: http://www.w3.org/2001/XMLSchema#
   - id: dc
     value: http://purl.org/dc/terms/
+  - id: jsonld
+    value: http://www.w3.org/ns/json-ld#
+  - id: schema
+    value: https://schema.org/
 
 ontology:
   - property: dc:title

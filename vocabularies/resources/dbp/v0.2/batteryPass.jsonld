@@ -3,11 +3,11 @@
         "dbp": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "dc": "http://purl.org/dc/terms/",
+        "jsonld": "http://www.w3.org/ns/json-ld#",
         "owl": "http://www.w3.org/2002/07/owl#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
-        "jsonld": "http://www.w3.org/ns/json-ld#",
         "dc:date": {
             "@type": "xsd:date"
         },
@@ -75,7 +75,7 @@
         "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
     },
     "rdfs:seeAlso": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1542",
-    "dc:date": "2026-04-23",
+    "dc:date": "2026-04-28",
     "rdfs_properties": [{
         "@id": "dbp:postalCode",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
