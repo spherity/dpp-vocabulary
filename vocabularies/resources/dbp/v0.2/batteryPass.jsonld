@@ -75,7 +75,7 @@
         "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
     },
     "rdfs:seeAlso": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1542",
-    "dc:date": "2026-04-28",
+    "dc:date": "2026-06-09",
     "rdfs_properties": [{
         "@id": "dbp:postalCode",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
@@ -613,9 +613,9 @@
         }]
     }, {
         "@id": "dbp:separateCollectionSymbol",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCompliancePublic",
-        "rdfs:range": "dbp:Label",
+        "rdfs:range": "xsd:boolean",
         "rdfs:label": "Separate Collection Symbol",
         "rdfs:comment": {
             "@value": "<div>Symbol indicating that the battery must be separately collected at end of life.</div>",
@@ -627,13 +627,13 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:cadmium",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "@id": "dbp:cadmiumSymbol",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCompliancePublic",
-        "rdfs:range": "dbp:Label",
-        "rdfs:label": "Cadmium Label",
+        "rdfs:range": "xsd:boolean",
+        "rdfs:label": "Cadmium Symbol",
         "rdfs:comment": {
-            "@value": "<div>Label indicating presence of cadmium above the regulatory threshold.</div>",
+            "@value": "<div>Indicates presence of cadmium above the regulatory threshold of 0.004% by weight.</div>",
             "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
         },
         "vs:term_status": "stable",
@@ -642,13 +642,13 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:lead",
-        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "@id": "dbp:leadSymbol",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryCompliancePublic",
-        "rdfs:range": "dbp:Label",
-        "rdfs:label": "Lead Label",
+        "rdfs:range": "xsd:boolean",
+        "rdfs:label": "Lead Symbol",
         "rdfs:comment": {
-            "@value": "<div>Label indicating presence of lead above the regulatory threshold.</div>",
+            "@value": "<div>Indicates presence of lead above the regulatory threshold of 0.004% by weight.</div>",
             "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
         },
         "vs:term_status": "stable",

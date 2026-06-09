@@ -16,7 +16,7 @@ compliance, materials, carbon footprint, circularity, and performance and durabi
 as defined by the BatteryPass-Ready DataAttributeLongList v1.3 (March 2026).
 """^^rdf:HTML ;
     rdfs:seeAlso <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1542> ;
-    dc:date "2026-04-28"^^xsd:date ;
+    dc:date "2026-06-09"^^xsd:date ;
 .
 
 # Property definitions
@@ -342,29 +342,29 @@ dbp:subject a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:separateCollectionSymbol a rdf:Property, owl:ObjectProperty ;
+dbp:separateCollectionSymbol a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryCompliancePublic ;
-    rdfs:range dbp:Label ;
+    rdfs:range xsd:boolean ;
     rdfs:label "Separate Collection Symbol" ;
     rdfs:comment """<div>Symbol indicating that the battery must be separately collected at end of life.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:cadmium a rdf:Property, owl:ObjectProperty ;
+dbp:cadmiumSymbol a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryCompliancePublic ;
-    rdfs:range dbp:Label ;
-    rdfs:label "Cadmium Label" ;
-    rdfs:comment """<div>Label indicating presence of cadmium above the regulatory threshold.</div>"""^^rdf:HTML ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Cadmium Symbol" ;
+    rdfs:comment """<div>Indicates presence of cadmium above the regulatory threshold of 0.004% by weight.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:lead a rdf:Property, owl:ObjectProperty ;
+dbp:leadSymbol a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryCompliancePublic ;
-    rdfs:range dbp:Label ;
-    rdfs:label "Lead Label" ;
-    rdfs:comment """<div>Label indicating presence of lead above the regulatory threshold.</div>"""^^rdf:HTML ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Lead Symbol" ;
+    rdfs:comment """<div>Indicates presence of lead above the regulatory threshold of 0.004% by weight.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
@@ -1622,7 +1622,7 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:batteryModelIdentifier,
         dbp:batteryStatus,
         dbp:cRateCycleLifeTest,
-        dbp:cadmium,
+        dbp:cadmiumSymbol,
         dbp:capacityEnergyVoltage,
         dbp:capacityFade,
         dbp:capacityThresholdExhaustion,
@@ -1673,7 +1673,7 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:internalResistanceIncrease,
         dbp:isCriticalRawMaterial,
         dbp:lastUpdated,
-        dbp:lead,
+        dbp:leadSymbol,
         dbp:legalName,
         dbp:manufacturer,
         dbp:manufacturerId,

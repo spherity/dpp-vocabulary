@@ -112,7 +112,7 @@
         <dl>
             <dt>Published:</dt>
             <dd>
-                <time property="dc:date" id="time">2026-04-28</time>
+                <time property="dc:date" id="time">2026-06-09</time>
             </dd>
             <dt>Version Info:</dt>
             <dd>0.2</dd>
@@ -239,7 +239,7 @@
                         <li><a href="#batteryModelIdentifier"><code>batteryModelIdentifier<code></code></code></a></li>
                         <li><a href="#batteryStatus"><code>batteryStatus<code></code></code></a></li>
                         <li><a href="#cRateCycleLifeTest"><code>cRateCycleLifeTest<code></code></code></a></li>
-                        <li><a href="#cadmium"><code>cadmium<code></code></code></a></li>
+                        <li><a href="#cadmiumSymbol"><code>cadmiumSymbol<code></code></code></a></li>
                         <li><a href="#capacityEnergyVoltage"><code>capacityEnergyVoltage<code></code></code></a></li>
                         <li><a href="#capacityFade"><code>capacityFade<code></code></code></a></li>
                         <li><a href="#capacityThresholdExhaustion"><code>capacityThresholdExhaustion<code></code></code></a></li>
@@ -290,7 +290,7 @@
                         <li><a href="#internalResistanceIncrease"><code>internalResistanceIncrease<code></code></code></a></li>
                         <li><a href="#isCriticalRawMaterial"><code>isCriticalRawMaterial<code></code></code></a></li>
                         <li><a href="#lastUpdated"><code>lastUpdated<code></code></code></a></li>
-                        <li><a href="#lead"><code>lead<code></code></code></a></li>
+                        <li><a href="#leadSymbol"><code>leadSymbol<code></code></code></a></li>
                         <li><a href="#legalName"><code>legalName<code></code></code></a></li>
                         <li><a href="#manufacturer"><code>manufacturer<code></code></code></a></li>
                         <li><a href="#manufacturerId"><code>manufacturerId<code></code></code></a></li>
@@ -910,37 +910,37 @@
                     <dt>Domain:</dt>
                     <dd><a href="#BatteryCompliancePublic"><code>BatteryCompliancePublic</code></a></dd>
                     <dt>Range:</dt>
-                    <dd><a href="#Label"><code>Label</code></a></dd>
+                    <dd><code>xsd:boolean</code></dd>
                 </dl>
                 <dl class="terms">
                     <dt>Relevant <code>@context</code>:</dt>
                     <dd><a href="https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld"><code>https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld</code></a></dd>
                 </dl>
             </section>
-            <section id="cadmium">
-                <h4><code>cadmium</code></h4>
-                <p><em>Cadmium Label</em></p>
-                <div>Label indicating presence of cadmium above the regulatory threshold.</div>
+            <section id="cadmiumSymbol">
+                <h4><code>cadmiumSymbol</code></h4>
+                <p><em>Cadmium Symbol</em></p>
+                <div>Indicates presence of cadmium above the regulatory threshold of 0.004% by weight.</div>
                 <dl class="terms">
                     <dt>Domain:</dt>
                     <dd><a href="#BatteryCompliancePublic"><code>BatteryCompliancePublic</code></a></dd>
                     <dt>Range:</dt>
-                    <dd><a href="#Label"><code>Label</code></a></dd>
+                    <dd><code>xsd:boolean</code></dd>
                 </dl>
                 <dl class="terms">
                     <dt>Relevant <code>@context</code>:</dt>
                     <dd><a href="https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld"><code>https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld</code></a></dd>
                 </dl>
             </section>
-            <section id="lead">
-                <h4><code>lead</code></h4>
-                <p><em>Lead Label</em></p>
-                <div>Label indicating presence of lead above the regulatory threshold.</div>
+            <section id="leadSymbol">
+                <h4><code>leadSymbol</code></h4>
+                <p><em>Lead Symbol</em></p>
+                <div>Indicates presence of lead above the regulatory threshold of 0.004% by weight.</div>
                 <dl class="terms">
                     <dt>Domain:</dt>
                     <dd><a href="#BatteryCompliancePublic"><code>BatteryCompliancePublic</code></a></dd>
                     <dt>Range:</dt>
-                    <dd><a href="#Label"><code>Label</code></a></dd>
+                    <dd><code>xsd:boolean</code></dd>
                 </dl>
                 <dl class="terms">
                     <dt>Relevant <code>@context</code>:</dt>
@@ -2533,7 +2533,7 @@
                 <div>A regulatory label or symbol with its symbol code, human-readable meaning, and subject matter.</div>
                 <dl class="terms">
                     <dt>Range of:</dt>
-                    <dd><a href="#separateCollectionSymbol"><code>separateCollectionSymbol</code></a>, <a href="#cadmium"><code>cadmium</code></a>, <a href="#lead"><code>lead</code></a>, <a href="#carbonFootprint"><code>carbonFootprint</code></a></dd>
+                    <dd><a href="#carbonFootprint"><code>carbonFootprint</code></a></dd>
                     <dt>Domain of:</dt>
                     <dd><a href="#symbol"><code>symbol</code></a>, <a href="#meaning"><code>meaning</code></a>, <a href="#subject"><code>subject</code></a></dd>
                 </dl>
@@ -2549,7 +2549,7 @@
                     and EU declaration of conformity.</div>
                 <dl class="terms">
                     <dt>Domain of:</dt>
-                    <dd><a href="#separateCollectionSymbol"><code>separateCollectionSymbol</code></a>, <a href="#cadmium"><code>cadmium</code></a>, <a href="#lead"><code>lead</code></a>, <a href="#carbonFootprint"><code>carbonFootprint</code></a>, <a href="#extinguishingAgent"><code>extinguishingAgent</code></a>, <a href="#euDeclarationConformity"><code>euDeclarationConformity</code></a></dd>
+                    <dd><a href="#separateCollectionSymbol"><code>separateCollectionSymbol</code></a>, <a href="#cadmiumSymbol"><code>cadmiumSymbol</code></a>, <a href="#leadSymbol"><code>leadSymbol</code></a>, <a href="#carbonFootprint"><code>carbonFootprint</code></a>, <a href="#extinguishingAgent"><code>extinguishingAgent</code></a>, <a href="#euDeclarationConformity"><code>euDeclarationConformity</code></a></dd>
                 </dl>
                 <dl class="terms">
                     <dt>Relevant <code>@context</code>:</dt>

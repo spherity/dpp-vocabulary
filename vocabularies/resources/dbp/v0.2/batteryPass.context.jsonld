@@ -206,15 +206,15 @@
                 "@protected": true,
                 "separateCollectionSymbol": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#separateCollectionSymbol",
-                    "@type": "@id"
+                    "@type": "http://www.w3.org/2001/XMLSchema#boolean"
                 },
-                "cadmium": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#cadmium",
-                    "@type": "@id"
+                "cadmiumSymbol": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#cadmiumSymbol",
+                    "@type": "http://www.w3.org/2001/XMLSchema#boolean"
                 },
-                "lead": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#lead",
-                    "@type": "@id"
+                "leadSymbol": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#leadSymbol",
+                    "@type": "http://www.w3.org/2001/XMLSchema#boolean"
                 },
                 "carbonFootprint": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#carbonFootprint",

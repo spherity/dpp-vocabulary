@@ -551,23 +551,23 @@ property:
   - id: separateCollectionSymbol
     label: Separate Collection Symbol
     domain: dbp:BatteryCompliancePublic
-    range: dbp:Label
+    range: xsd:boolean
     comment: |
       Symbol indicating that the battery must be separately collected at end of life.
 
-  - id: cadmium
-    label: Cadmium Label
+  - id: cadmiumSymbol
+    label: Cadmium Symbol
     domain: dbp:BatteryCompliancePublic
-    range: dbp:Label
+    range: xsd:boolean
     comment: |
-      Label indicating presence of cadmium above the regulatory threshold.
+      Indicates presence of cadmium above the regulatory threshold of 0.004% by weight.
 
-  - id: lead
-    label: Lead Label
+  - id: leadSymbol
+    label: Lead Symbol
     domain: dbp:BatteryCompliancePublic
-    range: dbp:Label
+    range: xsd:boolean
     comment: |
-      Label indicating presence of lead above the regulatory threshold.
+      Indicates presence of lead above the regulatory threshold of 0.004% by weight.
 
   - id: carbonFootprint
     label: Carbon Footprint Label
