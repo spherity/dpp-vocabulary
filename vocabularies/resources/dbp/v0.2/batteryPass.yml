@@ -19,6 +19,8 @@ prefix:
     value: http://www.w3.org/ns/json-ld#
   - id: schema
     value: https://schema.org/
+  - id: rdfs
+    value: http://www.w3.org/2000/01/rdf-schema#
 
 ontology:
   - property: dc:title
@@ -35,6 +37,24 @@ ontology:
 
 class:
   # --- Shared Types ---
+  - id: DynamicDataPoint
+    label: Dynamic Data Point
+    comment: |
+      Timestamped wrapper for a dynamic battery data point. Carries a scalar value of any type
+      alongside the timestamp of its most recent measurement or update.
+
+  - id: Distribution
+    label: Distribution
+    comment: |
+      Aggregated interval distribution of a battery measurement over a defined time period.
+      Represents histogram-style data suitable for bar chart visualisation.
+
+  - id: DistributionInterval
+    label: Distribution Interval
+    comment: |
+      One interval bucket in a distribution. Boundary convention: [min, max) for all buckets
+      except the last which uses a closed upper bound [min, max].
+
   - id: PostalAddress
     label: Postal Address
     comment: |
@@ -189,93 +209,19 @@ class:
       Restricted circularity information including dismantling manuals, part numbers,
       spare parts sources, and safety measures.
 
-  # --- BatteryPerformance — Public sub-classes ---
-  - id: CapacityEnergyVoltagePublic
-    label: Capacity, Energy and Voltage (Public)
-    comment: |
-      Public static battery performance data for capacity, energy, and voltage including
-      rated capacity, certified usable energy, and minimum, maximum, and nominal voltages.
-
-  - id: PowerCapabilityPublic
-    label: Power Capability (Public)
-    comment: |
-      Public static power capability data including original power capability, maximum
-      permitted battery power, and ratio of nominal power to battery energy.
-
-  - id: RoundTripEfficiencyPublic
-    label: Round Trip Efficiency (Public)
-    comment: |
-      Public static round trip energy efficiency data including initial efficiency and
-      efficiency at 50% of the expected cycle life.
-
-  - id: InternalResistancePublic
-    label: Internal Resistance (Public)
-    comment: |
-      Public static initial internal resistance of the battery cell and pack at beginning of life.
-
-  - id: BatteryLifetimePublic
-    label: Battery Lifetime (Public)
-    comment: |
-      Public static battery lifetime data including expected charge-discharge cycles,
-      cycle-life reference test, C-rate, and capacity threshold for exhaustion.
-
-  - id: TemperatureConditionsPublic
-    label: Temperature Conditions (Public)
-    comment: |
-      Public static temperature range boundaries for idle state battery storage and operation.
-
+  # --- BatteryPerformance ---
   - id: BatteryPerformancePublic
     label: Battery Performance (Public)
     comment: |
-      Public battery performance and durability data container grouping capacity, power,
-      efficiency, internal resistance, lifetime, and temperature sub-sections.
-
-  # --- BatteryPerformance — Restricted sub-classes ---
-  - id: CapacityEnergyVoltageRestricted
-    label: Capacity, Energy and Voltage (Restricted)
-    comment: |
-      Dynamic restricted capacity and energy data including capacity fade, remaining capacity,
-      remaining usable energy, state of certified energy, and state of charge.
-
-  - id: PowerCapabilityRestricted
-    label: Power Capability (Restricted)
-    comment: |
-      Dynamic restricted power capability data including power fade and remaining power capability.
-
-  - id: RoundTripEfficiencyRestricted
-    label: Round Trip Efficiency (Restricted)
-    comment: |
-      Dynamic restricted round trip efficiency data including efficiency fade, initial and current
-      self-discharge rates, remaining efficiency, and evolution of self-discharge rates.
-
-  - id: InternalResistanceRestricted
-    label: Internal Resistance (Restricted)
-    comment: |
-      Dynamic restricted internal resistance data recording resistance increase over lifetime.
-
-  - id: BatteryLifetimeRestricted
-    label: Battery Lifetime (Restricted)
-    comment: |
-      Dynamic restricted battery lifetime data including expected remaining lifetime in years,
-      number of full cycles completed, energy throughput, and capacity throughput.
-
-  - id: TemperatureConditionsRestricted
-    label: Temperature Conditions (Restricted)
-    comment: |
-      Dynamic restricted temperature condition data including time spent in extreme temperatures
-      during operation and charging.
-
-  - id: NegativeEvents
-    label: Negative Events
-    comment: |
-      Dynamic restricted data on adverse battery events including deep discharge events,
-      overcharge events, and information on accidents.
+      Public battery performance and durability data covering capacity, energy, voltage, power
+      capability, round trip efficiency, internal resistance, lifetime, and temperature conditions.
 
   - id: BatteryPerformanceRestricted
     label: Battery Performance (Restricted)
     comment: |
-      Restricted dynamic battery performance data container grouping capacity, power, efficiency,
-      internal resistance, lifetime, temperature, and negative event sub-sections.
+      Restricted dynamic battery performance and durability data covering capacity fade, remaining
+      capacity and energy, state of charge, power fade, efficiency fade, internal resistance
+      increase, lifetime counters, temperature distributions, and negative events.
 
 datatype:
   - id: PerformanceClass
@@ -286,6 +232,67 @@ datatype:
     one_of: ["A", "B", "C", "D", "E", "F", "G"]
 
 property:
+  # --- DynamicDataPoint ---
+  - id: dynamicDataPointValue
+    label: Value
+    domain: dbp:DynamicDataPoint
+    range: rdfs:Literal
+    comment: |
+      The scalar value of the dynamic data point. May be any literal type (numeric, string,
+      boolean, URI string, etc.); type validation is delegated to the associated JSON Schema.
+
+  - id: dynamicDataPointObservedAt
+    label: Observed At
+    domain: dbp:DynamicDataPoint
+    range: xsd:dateTime
+    comment: |
+      Timestamp of the most recent measurement or update for this dynamic data point.
+
+  # --- Distribution ---
+  - id: distributionFromTimestamp
+    label: From Timestamp
+    domain: dbp:Distribution
+    range: xsd:dateTime
+    comment: |
+      Start of the measurement period covered by this distribution.
+
+  - id: distributionToTimestamp
+    label: To Timestamp
+    domain: dbp:Distribution
+    range: xsd:dateTime
+    comment: |
+      End of the measurement period covered by this distribution.
+
+  - id: distributionIntervals
+    label: Intervals
+    domain: dbp:Distribution
+    range: dbp:DistributionInterval
+    comment: |
+      Collection of interval buckets comprising the distribution.
+
+  # --- DistributionInterval ---
+  - id: distributionIntervalMin
+    label: Minimum
+    domain: dbp:DistributionInterval
+    range: xsd:decimal
+    comment: |
+      Lower bound of the interval bucket (inclusive).
+
+  - id: distributionIntervalMax
+    label: Maximum
+    domain: dbp:DistributionInterval
+    range: xsd:decimal
+    comment: |
+      Upper bound of the interval bucket. Exclusive for all buckets except the last, which is inclusive.
+
+  - id: distributionIntervalValue
+    label: Value
+    domain: dbp:DistributionInterval
+    range: xsd:decimal
+    comment: |
+      Aggregated value for this interval bucket over the measurement period. Unit is defined by
+      the parent distribution property (e.g. cumulative hours or cumulative percentage of time).
+
   # --- PostalAddress ---
   - id: postalCode
     label: Postal Code
@@ -358,6 +365,13 @@ property:
     range: dbp:PostalAddress
     comment: |
       Registered postal address of the company or operator.
+
+  - id: registeredTradeNameOrTrademark
+    label: Registered Trade Name or Trademark
+    domain: dbp:CompanyInformation
+    range: xsd:string
+    comment: |
+      Registered trade name or registered trademark of the manufacturer or economic operator, where applicable.
 
   # --- DPPInfo ---
   - id: schemaVersion
@@ -569,7 +583,7 @@ property:
     comment: |
       Indicates presence of lead above the regulatory threshold of 0.004% by weight.
 
-  - id: carbonFootprint
+  - id: carbonFootprintLabel
     label: Carbon Footprint Label
     domain: dbp:BatteryCompliancePublic
     range: dbp:Label
@@ -663,8 +677,8 @@ property:
     domain: dbp:BatteryMaterialsPublic
     range: xsd:string
     comment: |
-      List of critical raw materials present in the battery as defined by the EU Critical
-      Raw Materials Act.
+      Collection of critical raw materials present in the battery as defined by the EU Critical
+      Raw Materials Act. This property is multi-valued; each value is one material name string.
 
   - id: hazardousSubstances
     label: Hazardous Substances
@@ -708,7 +722,7 @@ property:
     domain: dbp:BatteryMaterial
     range: xsd:decimal
     comment: |
-      Mass of this material in the battery expressed in grams.
+      Mass of this material in the battery expressed in kilograms.
 
   - id: batteryMaterialShare
     label: Battery Material Share
@@ -920,348 +934,335 @@ property:
     comment: |
       URI linking to safety measures for handling, storage, and transport of the battery.
 
-  # --- CapacityEnergyVoltagePublic ---
+  # --- BatteryPerformancePublic — Capacity, Energy and Voltage ---
   - id: ratedCapacity
     label: Rated Capacity
-    domain: dbp:CapacityEnergyVoltagePublic
+    domain: dbp:BatteryPerformancePublic
     range: xsd:integer
     comment: |
       Rated capacity of the battery in ampere-hours (Ah) at time of manufacture.
 
   - id: certifiedUsableBattEnergy
     label: Certified Usable Battery Energy
-    domain: dbp:CapacityEnergyVoltagePublic
+    domain: dbp:BatteryPerformancePublic
     range: xsd:integer
     comment: |
       Certified usable battery energy in watt-hours (Wh).
 
   - id: minimumVoltage
     label: Minimum Voltage
-    domain: dbp:CapacityEnergyVoltagePublic
+    domain: dbp:BatteryPerformancePublic
     range: xsd:decimal
     comment: |
       Minimum operational voltage of the battery in volts.
 
   - id: maximumVoltage
     label: Maximum Voltage
-    domain: dbp:CapacityEnergyVoltagePublic
+    domain: dbp:BatteryPerformancePublic
     range: xsd:decimal
     comment: |
       Maximum operational voltage of the battery in volts.
 
   - id: nominalVoltage
     label: Nominal Voltage
-    domain: dbp:CapacityEnergyVoltagePublic
+    domain: dbp:BatteryPerformancePublic
     range: xsd:decimal
     comment: |
       Nominal voltage of the battery in volts.
 
-  # --- PowerCapabilityPublic ---
+  # --- BatteryPerformancePublic — Power Capability ---
   - id: originalPowerCapability
     label: Original Power Capability
-    domain: dbp:PowerCapabilityPublic
+    domain: dbp:BatteryPerformancePublic
     range: xsd:integer
     comment: |
       Original power capability of the battery at beginning of life in watts.
 
   - id: maximumPermittedPower
     label: Maximum Permitted Battery Power
-    domain: dbp:PowerCapabilityPublic
+    domain: dbp:BatteryPerformancePublic
     range: xsd:integer
     comment: |
       Maximum permitted power of the battery in watts.
 
   - id: ratioPowerToEnergy
     label: Ratio Nominal Power to Battery Energy
-    domain: dbp:PowerCapabilityPublic
+    domain: dbp:BatteryPerformancePublic
     range: xsd:integer
     comment: |
       Ratio of nominal power to battery energy expressed in W/Wh.
 
-  # --- RoundTripEfficiencyPublic ---
+  # --- BatteryPerformancePublic — Round Trip Efficiency ---
   - id: initialRoundTripEfficiency
     label: Initial Round Trip Energy Efficiency
-    domain: dbp:RoundTripEfficiencyPublic
+    domain: dbp:BatteryPerformancePublic
     range: xsd:decimal
     comment: |
       Initial round trip energy efficiency of the battery as a percentage at beginning of life.
 
   - id: roundTripEfficiencyAt50pct
     label: Round Trip Efficiency at 50% Cycle Life
-    domain: dbp:RoundTripEfficiencyPublic
+    domain: dbp:BatteryPerformancePublic
     range: xsd:decimal
     comment: |
       Round trip energy efficiency at 50% of the expected cycle life as a percentage.
 
-  # --- InternalResistancePublic ---
+  # --- BatteryPerformancePublic — Internal Resistance ---
   - id: initialInternalResistance
     label: Initial Internal Resistance
-    domain: dbp:InternalResistancePublic
+    domain: dbp:BatteryPerformancePublic
     range: xsd:integer
     comment: |
       Initial internal resistance of the battery cell and pack at beginning of life in milliohms.
 
-  # --- BatteryLifetimePublic ---
+  # --- BatteryPerformancePublic — Battery Lifetime ---
   - id: expectedLifetimeCycles
     label: Expected Lifetime Charge-Discharge Cycles
-    domain: dbp:BatteryLifetimePublic
+    domain: dbp:BatteryPerformancePublic
     range: xsd:integer
     comment: |
       Expected number of charge-discharge cycles before capacity drops below the exhaustion threshold.
 
   - id: cycleLifeReferenceTest
     label: Cycle-Life Reference Test
-    domain: dbp:BatteryLifetimePublic
+    domain: dbp:BatteryPerformancePublic
     range: xsd:string
     comment: |
       Reference to the standard or test procedure used to determine cycle life.
 
   - id: cRateCycleLifeTest
     label: C-Rate of Cycle-Life Test
-    domain: dbp:BatteryLifetimePublic
+    domain: dbp:BatteryPerformancePublic
     range: xsd:decimal
     comment: |
       C-rate applied during the cycle-life reference test.
 
   - id: capacityThresholdExhaustion
     label: Capacity Threshold for Exhaustion
-    domain: dbp:BatteryLifetimePublic
+    domain: dbp:BatteryPerformancePublic
     range: xsd:decimal
     comment: |
       Capacity threshold below which the battery is considered exhausted, expressed as a percentage.
 
-  # --- TemperatureConditionsPublic ---
+  # --- BatteryPerformancePublic — Temperature Conditions ---
   - id: tempRangeIdleLower
     label: Temperature Range Idle Lower Boundary
-    domain: dbp:TemperatureConditionsPublic
+    domain: dbp:BatteryPerformancePublic
     range: xsd:integer
     comment: |
       Lower boundary of the temperature range for idle state storage in degrees Celsius.
 
   - id: tempRangeIdleUpper
     label: Temperature Range Idle Upper Boundary
-    domain: dbp:TemperatureConditionsPublic
+    domain: dbp:BatteryPerformancePublic
     range: xsd:integer
     comment: |
       Upper boundary of the temperature range for idle state storage in degrees Celsius.
 
-  # --- BatteryPerformancePublic / BatteryPerformanceRestricted ---
-  - id: capacityEnergyVoltage
-    label: Capacity Energy and Voltage
-    comment: |
-      Capacity, energy, and voltage sub-section. Applied to both public and restricted performance containers.
-
-  - id: powerCapability
-    label: Power Capability
-    comment: |
-      Power capability sub-section. Applied to both public and restricted performance containers.
-
-  - id: roundTripEfficiency
-    label: Round Trip Efficiency
-    comment: |
-      Round trip efficiency and self-discharge sub-section. Applied to both public and restricted performance containers.
-
-  - id: internalResistance
-    label: Internal Resistance
-    comment: |
-      Internal resistance sub-section. Applied to both public and restricted performance containers.
-
-  - id: batteryLifetime
-    label: Battery Lifetime
-    comment: |
-      Battery lifetime sub-section. Applied to both public and restricted performance containers.
-
-  - id: temperatureConditions
-    label: Temperature Conditions
-    comment: |
-      Temperature conditions sub-section. Applied to both public and restricted performance containers.
-
-  - id: negativeEvents
-    label: Negative Events
-    domain: dbp:BatteryPerformanceRestricted
-    range: dbp:NegativeEvents
-    comment: |
-      Dynamic restricted adverse battery events sub-section including deep discharge,
-      overcharge events, and accident records.
-
-  # --- CapacityEnergyVoltageRestricted ---
+  # --- BatteryPerformanceRestricted — Capacity, Energy and Voltage ---
   - id: capacityFade
     label: Capacity Fade
-    domain: dbp:CapacityEnergyVoltageRestricted
+    domain: dbp:BatteryPerformanceRestricted
     range: xsd:decimal
     comment: |
       Decrease in rated capacity over time as a percentage of the original capacity.
 
   - id: remainingCapacity
     label: Remaining Capacity
-    domain: dbp:CapacityEnergyVoltageRestricted
-    range: xsd:integer
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
     comment: |
       Current remaining capacity of the battery in ampere-hours (Ah).
 
   - id: remainingUsableBattEnergy
     label: Remaining Usable Battery Energy
-    domain: dbp:CapacityEnergyVoltageRestricted
-    range: xsd:integer
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
     comment: |
       Current remaining usable energy of the battery in watt-hours (Wh).
 
   - id: stateOfCertifiedEnergy
     label: State of Certified Energy
-    domain: dbp:CapacityEnergyVoltageRestricted
-    range: xsd:decimal
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
     comment: |
       State of certified energy (SOCE) as the ratio of remaining usable energy to certified usable energy.
 
   - id: stateOfCharge
     label: State of Charge
-    domain: dbp:CapacityEnergyVoltageRestricted
-    range: xsd:decimal
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
     comment: |
       Current state of charge (SoC) expressed as a percentage of remaining capacity.
 
-  # --- PowerCapabilityRestricted ---
+  - id: stateOfChargeDistributionHours
+    label: State of Charge Distribution (Hours)
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:Distribution
+    comment: |
+      Distribution of time spent in each state-of-charge interval over the measurement period,
+      expressed in cumulative hours. Interval min and max represent SoC percentage bands.
+
+  - id: stateOfChargeDistributionPercent
+    label: State of Charge Distribution (Percent)
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:Distribution
+    comment: |
+      Distribution of time spent in each state-of-charge interval over the measurement period,
+      expressed as cumulative percentage of total operating time. Interval min and max represent
+      SoC percentage bands.
+
+  # --- BatteryPerformanceRestricted — Power Capability ---
   - id: powerFade
     label: Power Fade
-    domain: dbp:PowerCapabilityRestricted
+    domain: dbp:BatteryPerformanceRestricted
     range: xsd:decimal
     comment: |
       Decrease in power capability over time as a percentage of original power capability.
 
   - id: remainingPowerCapability
     label: Remaining Power Capability
-    domain: dbp:PowerCapabilityRestricted
-    range: xsd:integer
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
     comment: |
       Current remaining power capability of the battery in watts.
 
-  # --- RoundTripEfficiencyRestricted ---
+  # --- BatteryPerformanceRestricted — Round Trip Efficiency ---
   - id: roundTripEfficiencyFade
     label: Energy Round Trip Efficiency Fade
-    domain: dbp:RoundTripEfficiencyRestricted
+    domain: dbp:BatteryPerformanceRestricted
     range: xsd:decimal
     comment: |
       Decrease in round trip energy efficiency over time as a percentage.
 
   - id: initialSelfDischargeRate
     label: Initial Self-Discharge Rate
-    domain: dbp:RoundTripEfficiencyRestricted
+    domain: dbp:BatteryPerformanceRestricted
     range: xsd:decimal
     comment: |
       Self-discharge rate at beginning of life expressed as a percentage per unit time.
 
   - id: remainingRoundTripEfficiency
     label: Remaining Round Trip Energy Efficiency
-    domain: dbp:RoundTripEfficiencyRestricted
-    range: xsd:decimal
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
     comment: |
       Current remaining round trip energy efficiency expressed as a percentage.
 
   - id: currentSelfDischargeRate
     label: Current Self-Discharge Rate
-    domain: dbp:RoundTripEfficiencyRestricted
-    range: xsd:decimal
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
     comment: |
       Current self-discharge rate expressed as a percentage per unit time.
 
   - id: evolutionSelfDischargeRates
     label: Evolution of Self-Discharge Rates
-    domain: dbp:RoundTripEfficiencyRestricted
-    range: xsd:decimal
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
     comment: |
       Historical evolution of self-discharge rates over the battery's service lifetime.
 
-  # --- InternalResistanceRestricted ---
+  # --- BatteryPerformanceRestricted — Internal Resistance ---
   - id: internalResistanceIncrease
     label: Internal Resistance Increase
-    domain: dbp:InternalResistanceRestricted
+    domain: dbp:BatteryPerformanceRestricted
     range: xsd:decimal
     comment: |
       Increase in internal resistance over time expressed as a percentage of original resistance.
 
-  # --- BatteryLifetimeRestricted ---
+  # --- BatteryPerformanceRestricted — Battery Lifetime ---
   - id: expectedLifetimeYears
     label: Expected Lifetime in Calendar Years
-    domain: dbp:BatteryLifetimeRestricted
+    domain: dbp:BatteryPerformanceRestricted
     range: xsd:decimal
     comment: |
       Expected remaining lifetime of the battery in calendar years.
 
   - id: numberOfFullCycles
     label: Number of Full Charging and Discharging Cycles
-    domain: dbp:BatteryLifetimeRestricted
-    range: xsd:integer
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
     comment: |
       Total number of full charge-discharge cycles completed by the battery to date.
 
   - id: energyThroughput
     label: Energy Throughput
-    domain: dbp:BatteryLifetimeRestricted
-    range: xsd:decimal
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
     comment: |
       Total energy throughput of the battery in watt-hours since first use.
 
   - id: capacityThroughput
     label: Capacity Throughput
-    domain: dbp:BatteryLifetimeRestricted
-    range: xsd:decimal
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
     comment: |
       Total charge throughput of the battery in ampere-hours since first use.
 
-  # --- TemperatureConditionsRestricted ---
+  # --- BatteryPerformanceRestricted — Temperature Conditions ---
   - id: temperatureInformation
     label: Temperature Information
-    domain: dbp:TemperatureConditionsRestricted
-    range: xsd:integer
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
     comment: |
       General temperature information about the battery's operating history.
 
   - id: timeInExtremeTempsAbove
     label: Time in Extreme Temperatures Above Boundary
-    domain: dbp:TemperatureConditionsRestricted
-    range: xsd:integer
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
     comment: |
       Cumulative time the battery has spent in temperatures above the upper boundary, in hours.
 
   - id: timeInExtremeTempsBelow
     label: Time in Extreme Temperatures Below Boundary
-    domain: dbp:TemperatureConditionsRestricted
-    range: xsd:integer
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
     comment: |
       Cumulative time the battery has spent in temperatures below the lower boundary, in hours.
 
   - id: timeChargingExtremeTempsAbove
     label: Time Charging in Extreme Temperatures Above
-    domain: dbp:TemperatureConditionsRestricted
-    range: xsd:integer
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
     comment: |
       Cumulative time the battery has been charged at temperatures above the upper boundary, in hours.
 
   - id: timeChargingExtremeTempsBelow
     label: Time Charging in Extreme Temperatures Below
-    domain: dbp:TemperatureConditionsRestricted
-    range: xsd:integer
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
     comment: |
       Cumulative time the battery has been charged at temperatures below the lower boundary, in hours.
 
-  # --- NegativeEvents ---
+  - id: temperatureDistribution
+    label: Temperature Distribution
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:Distribution
+    comment: |
+      Distribution of time spent in each temperature interval over the measurement period,
+      expressed as cumulative percentage of total operating time. Interval min and max represent
+      temperature bands in degrees Celsius.
+
+  # --- BatteryPerformanceRestricted — Negative Events ---
   - id: deepDischargeEvents
     label: Number of Deep Discharge Events
-    domain: dbp:NegativeEvents
-    range: xsd:integer
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
     comment: |
       Total number of deep discharge events recorded for the battery.
 
   - id: overchargeEvents
     label: Number of Overcharge Events
-    domain: dbp:NegativeEvents
-    range: xsd:integer
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
     comment: |
       Total number of overcharge events recorded for the battery.
 
   - id: informationOnAccidents
     label: Information on Accidents
-    domain: dbp:NegativeEvents
-    range: xsd:anyURI
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
     comment: |
       URI linking to records of accidents or safety incidents involving the battery.

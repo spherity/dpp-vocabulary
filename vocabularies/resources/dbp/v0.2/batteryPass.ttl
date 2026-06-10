@@ -1,12 +1,12 @@
 @prefix dbp: <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dc: <http://purl.org/dc/terms/> .
+@prefix jsonld: <http://www.w3.org/ns/json-ld#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix jsonld: <http://www.w3.org/ns/json-ld#> .
-@prefix schema: <https://schema.org/> .
 
 # Ontology definition
 dbp: a owl:Ontology ;
@@ -16,10 +16,84 @@ compliance, materials, carbon footprint, circularity, and performance and durabi
 as defined by the BatteryPass-Ready DataAttributeLongList v1.3 (March 2026).
 """^^rdf:HTML ;
     rdfs:seeAlso <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1542> ;
-    dc:date "2026-06-09"^^xsd:date ;
+    dc:date "2026-06-10"^^xsd:date ;
 .
 
 # Property definitions
+dbp:dynamicDataPointValue a rdf:Property ;
+    rdfs:domain dbp:DynamicDataPoint ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "Value" ;
+    rdfs:comment """<div>The scalar value of the dynamic data point. May be any literal type (numeric, string,
+boolean, URI string, etc.); type validation is delegated to the associated JSON Schema.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
+dbp:dynamicDataPointObservedAt a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:DynamicDataPoint ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "Observed At" ;
+    rdfs:comment """<div>Timestamp of the most recent measurement or update for this dynamic data point.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
+dbp:distributionFromTimestamp a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:Distribution ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "From Timestamp" ;
+    rdfs:comment """<div>Start of the measurement period covered by this distribution.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
+dbp:distributionToTimestamp a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:Distribution ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "To Timestamp" ;
+    rdfs:comment """<div>End of the measurement period covered by this distribution.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
+dbp:distributionIntervals a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:Distribution ;
+    rdfs:range dbp:DistributionInterval ;
+    rdfs:label "Intervals" ;
+    rdfs:comment """<div>Collection of interval buckets comprising the distribution.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
+dbp:distributionIntervalMin a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:DistributionInterval ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Minimum" ;
+    rdfs:comment """<div>Lower bound of the interval bucket (inclusive).</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
+dbp:distributionIntervalMax a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:DistributionInterval ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Maximum" ;
+    rdfs:comment """<div>Upper bound of the interval bucket. Exclusive for all buckets except the last, which is inclusive.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
+dbp:distributionIntervalValue a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:DistributionInterval ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Value" ;
+    rdfs:comment """<div>Aggregated value for this interval bucket over the measurement period. Unit is defined by
+the parent distribution property (e.g. cumulative hours or cumulative percentage of time).</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
 dbp:postalCode a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:PostalAddress ;
     rdfs:range xsd:string ;
@@ -106,6 +180,15 @@ dbp:address a rdf:Property, owl:ObjectProperty ;
     rdfs:range dbp:PostalAddress ;
     rdfs:label "Address" ;
     rdfs:comment """<div>Registered postal address of the company or operator.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
+dbp:registeredTradeNameOrTrademark a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:CompanyInformation ;
+    rdfs:range xsd:string ;
+    rdfs:label "Registered Trade Name or Trademark" ;
+    rdfs:comment """<div>Registered trade name or registered trademark of the manufacturer or economic operator, where applicable.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
@@ -369,7 +452,7 @@ dbp:leadSymbol a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:carbonFootprint a rdf:Property, owl:ObjectProperty ;
+dbp:carbonFootprintLabel a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:BatteryCompliancePublic ;
     rdfs:range dbp:Label ;
     rdfs:label "Carbon Footprint Label" ;
@@ -481,8 +564,8 @@ dbp:criticalRawMaterials a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryMaterialsPublic ;
     rdfs:range xsd:string ;
     rdfs:label "Critical Raw Materials" ;
-    rdfs:comment """<div>List of critical raw materials present in the battery as defined by the EU Critical
-Raw Materials Act.</div>"""^^rdf:HTML ;
+    rdfs:comment """<div>Collection of critical raw materials present in the battery as defined by the EU Critical
+Raw Materials Act. This property is multi-valued; each value is one material name string.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
@@ -536,7 +619,7 @@ dbp:batteryMaterialMass a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryMaterial ;
     rdfs:range xsd:decimal ;
     rdfs:label "Battery Material Mass" ;
-    rdfs:comment """<div>Mass of this material in the battery expressed in grams.</div>"""^^rdf:HTML ;
+    rdfs:comment """<div>Mass of this material in the battery expressed in kilograms.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
@@ -804,7 +887,7 @@ dbp:safetyMeasures a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:ratedCapacity a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:CapacityEnergyVoltagePublic ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
     rdfs:range xsd:integer ;
     rdfs:label "Rated Capacity" ;
     rdfs:comment """<div>Rated capacity of the battery in ampere-hours (Ah) at time of manufacture.</div>"""^^rdf:HTML ;
@@ -813,7 +896,7 @@ dbp:ratedCapacity a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:certifiedUsableBattEnergy a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:CapacityEnergyVoltagePublic ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
     rdfs:range xsd:integer ;
     rdfs:label "Certified Usable Battery Energy" ;
     rdfs:comment """<div>Certified usable battery energy in watt-hours (Wh).</div>"""^^rdf:HTML ;
@@ -822,7 +905,7 @@ dbp:certifiedUsableBattEnergy a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:minimumVoltage a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:CapacityEnergyVoltagePublic ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
     rdfs:range xsd:decimal ;
     rdfs:label "Minimum Voltage" ;
     rdfs:comment """<div>Minimum operational voltage of the battery in volts.</div>"""^^rdf:HTML ;
@@ -831,7 +914,7 @@ dbp:minimumVoltage a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:maximumVoltage a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:CapacityEnergyVoltagePublic ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
     rdfs:range xsd:decimal ;
     rdfs:label "Maximum Voltage" ;
     rdfs:comment """<div>Maximum operational voltage of the battery in volts.</div>"""^^rdf:HTML ;
@@ -840,7 +923,7 @@ dbp:maximumVoltage a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:nominalVoltage a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:CapacityEnergyVoltagePublic ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
     rdfs:range xsd:decimal ;
     rdfs:label "Nominal Voltage" ;
     rdfs:comment """<div>Nominal voltage of the battery in volts.</div>"""^^rdf:HTML ;
@@ -849,7 +932,7 @@ dbp:nominalVoltage a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:originalPowerCapability a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:PowerCapabilityPublic ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
     rdfs:range xsd:integer ;
     rdfs:label "Original Power Capability" ;
     rdfs:comment """<div>Original power capability of the battery at beginning of life in watts.</div>"""^^rdf:HTML ;
@@ -858,7 +941,7 @@ dbp:originalPowerCapability a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:maximumPermittedPower a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:PowerCapabilityPublic ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
     rdfs:range xsd:integer ;
     rdfs:label "Maximum Permitted Battery Power" ;
     rdfs:comment """<div>Maximum permitted power of the battery in watts.</div>"""^^rdf:HTML ;
@@ -867,7 +950,7 @@ dbp:maximumPermittedPower a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:ratioPowerToEnergy a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:PowerCapabilityPublic ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
     rdfs:range xsd:integer ;
     rdfs:label "Ratio Nominal Power to Battery Energy" ;
     rdfs:comment """<div>Ratio of nominal power to battery energy expressed in W/Wh.</div>"""^^rdf:HTML ;
@@ -876,7 +959,7 @@ dbp:ratioPowerToEnergy a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:initialRoundTripEfficiency a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:RoundTripEfficiencyPublic ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
     rdfs:range xsd:decimal ;
     rdfs:label "Initial Round Trip Energy Efficiency" ;
     rdfs:comment """<div>Initial round trip energy efficiency of the battery as a percentage at beginning of life.</div>"""^^rdf:HTML ;
@@ -885,7 +968,7 @@ dbp:initialRoundTripEfficiency a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:roundTripEfficiencyAt50pct a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:RoundTripEfficiencyPublic ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
     rdfs:range xsd:decimal ;
     rdfs:label "Round Trip Efficiency at 50% Cycle Life" ;
     rdfs:comment """<div>Round trip energy efficiency at 50% of the expected cycle life as a percentage.</div>"""^^rdf:HTML ;
@@ -894,7 +977,7 @@ dbp:roundTripEfficiencyAt50pct a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:initialInternalResistance a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:InternalResistancePublic ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
     rdfs:range xsd:integer ;
     rdfs:label "Initial Internal Resistance" ;
     rdfs:comment """<div>Initial internal resistance of the battery cell and pack at beginning of life in milliohms.</div>"""^^rdf:HTML ;
@@ -903,7 +986,7 @@ dbp:initialInternalResistance a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:expectedLifetimeCycles a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:BatteryLifetimePublic ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
     rdfs:range xsd:integer ;
     rdfs:label "Expected Lifetime Charge-Discharge Cycles" ;
     rdfs:comment """<div>Expected number of charge-discharge cycles before capacity drops below the exhaustion threshold.</div>"""^^rdf:HTML ;
@@ -912,7 +995,7 @@ dbp:expectedLifetimeCycles a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:cycleLifeReferenceTest a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:BatteryLifetimePublic ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
     rdfs:range xsd:string ;
     rdfs:label "Cycle-Life Reference Test" ;
     rdfs:comment """<div>Reference to the standard or test procedure used to determine cycle life.</div>"""^^rdf:HTML ;
@@ -921,7 +1004,7 @@ dbp:cycleLifeReferenceTest a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:cRateCycleLifeTest a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:BatteryLifetimePublic ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
     rdfs:range xsd:decimal ;
     rdfs:label "C-Rate of Cycle-Life Test" ;
     rdfs:comment """<div>C-rate applied during the cycle-life reference test.</div>"""^^rdf:HTML ;
@@ -930,7 +1013,7 @@ dbp:cRateCycleLifeTest a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:capacityThresholdExhaustion a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:BatteryLifetimePublic ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
     rdfs:range xsd:decimal ;
     rdfs:label "Capacity Threshold for Exhaustion" ;
     rdfs:comment """<div>Capacity threshold below which the battery is considered exhausted, expressed as a percentage.</div>"""^^rdf:HTML ;
@@ -939,7 +1022,7 @@ dbp:capacityThresholdExhaustion a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:tempRangeIdleLower a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:TemperatureConditionsPublic ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
     rdfs:range xsd:integer ;
     rdfs:label "Temperature Range Idle Lower Boundary" ;
     rdfs:comment """<div>Lower boundary of the temperature range for idle state storage in degrees Celsius.</div>"""^^rdf:HTML ;
@@ -948,7 +1031,7 @@ dbp:tempRangeIdleLower a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:tempRangeIdleUpper a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:TemperatureConditionsPublic ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
     rdfs:range xsd:integer ;
     rdfs:label "Temperature Range Idle Upper Boundary" ;
     rdfs:comment """<div>Upper boundary of the temperature range for idle state storage in degrees Celsius.</div>"""^^rdf:HTML ;
@@ -956,60 +1039,8 @@ dbp:tempRangeIdleUpper a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:capacityEnergyVoltage a rdf:Property ;
-    rdfs:label "Capacity Energy and Voltage" ;
-    rdfs:comment """<div>Capacity, energy, and voltage sub-section. Applied to both public and restricted performance containers.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:powerCapability a rdf:Property ;
-    rdfs:label "Power Capability" ;
-    rdfs:comment """<div>Power capability sub-section. Applied to both public and restricted performance containers.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:roundTripEfficiency a rdf:Property ;
-    rdfs:label "Round Trip Efficiency" ;
-    rdfs:comment """<div>Round trip efficiency and self-discharge sub-section. Applied to both public and restricted performance containers.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:internalResistance a rdf:Property ;
-    rdfs:label "Internal Resistance" ;
-    rdfs:comment """<div>Internal resistance sub-section. Applied to both public and restricted performance containers.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:batteryLifetime a rdf:Property ;
-    rdfs:label "Battery Lifetime" ;
-    rdfs:comment """<div>Battery lifetime sub-section. Applied to both public and restricted performance containers.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:temperatureConditions a rdf:Property ;
-    rdfs:label "Temperature Conditions" ;
-    rdfs:comment """<div>Temperature conditions sub-section. Applied to both public and restricted performance containers.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:negativeEvents a rdf:Property, owl:ObjectProperty ;
-    rdfs:domain dbp:BatteryPerformanceRestricted ;
-    rdfs:range dbp:NegativeEvents ;
-    rdfs:label "Negative Events" ;
-    rdfs:comment """<div>Dynamic restricted adverse battery events sub-section including deep discharge,
-overcharge events, and accident records.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
 dbp:capacityFade a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:CapacityEnergyVoltageRestricted ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
     rdfs:range xsd:decimal ;
     rdfs:label "Capacity Fade" ;
     rdfs:comment """<div>Decrease in rated capacity over time as a percentage of the original capacity.</div>"""^^rdf:HTML ;
@@ -1017,44 +1048,65 @@ dbp:capacityFade a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:remainingCapacity a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:CapacityEnergyVoltageRestricted ;
-    rdfs:range xsd:integer ;
+dbp:remainingCapacity a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
     rdfs:label "Remaining Capacity" ;
     rdfs:comment """<div>Current remaining capacity of the battery in ampere-hours (Ah).</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:remainingUsableBattEnergy a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:CapacityEnergyVoltageRestricted ;
-    rdfs:range xsd:integer ;
+dbp:remainingUsableBattEnergy a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
     rdfs:label "Remaining Usable Battery Energy" ;
     rdfs:comment """<div>Current remaining usable energy of the battery in watt-hours (Wh).</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:stateOfCertifiedEnergy a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:CapacityEnergyVoltageRestricted ;
-    rdfs:range xsd:decimal ;
+dbp:stateOfCertifiedEnergy a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
     rdfs:label "State of Certified Energy" ;
     rdfs:comment """<div>State of certified energy (SOCE) as the ratio of remaining usable energy to certified usable energy.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:stateOfCharge a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:CapacityEnergyVoltageRestricted ;
-    rdfs:range xsd:decimal ;
+dbp:stateOfCharge a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
     rdfs:label "State of Charge" ;
     rdfs:comment """<div>Current state of charge (SoC) expressed as a percentage of remaining capacity.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
+dbp:stateOfChargeDistributionHours a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:Distribution ;
+    rdfs:label "State of Charge Distribution (Hours)" ;
+    rdfs:comment """<div>Distribution of time spent in each state-of-charge interval over the measurement period,
+expressed in cumulative hours. Interval min and max represent SoC percentage bands.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
+dbp:stateOfChargeDistributionPercent a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:Distribution ;
+    rdfs:label "State of Charge Distribution (Percent)" ;
+    rdfs:comment """<div>Distribution of time spent in each state-of-charge interval over the measurement period,
+expressed as cumulative percentage of total operating time. Interval min and max represent
+SoC percentage bands.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
 dbp:powerFade a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:PowerCapabilityRestricted ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
     rdfs:range xsd:decimal ;
     rdfs:label "Power Fade" ;
     rdfs:comment """<div>Decrease in power capability over time as a percentage of original power capability.</div>"""^^rdf:HTML ;
@@ -1062,9 +1114,9 @@ dbp:powerFade a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:remainingPowerCapability a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:PowerCapabilityRestricted ;
-    rdfs:range xsd:integer ;
+dbp:remainingPowerCapability a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
     rdfs:label "Remaining Power Capability" ;
     rdfs:comment """<div>Current remaining power capability of the battery in watts.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
@@ -1072,7 +1124,7 @@ dbp:remainingPowerCapability a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:roundTripEfficiencyFade a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:RoundTripEfficiencyRestricted ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
     rdfs:range xsd:decimal ;
     rdfs:label "Energy Round Trip Efficiency Fade" ;
     rdfs:comment """<div>Decrease in round trip energy efficiency over time as a percentage.</div>"""^^rdf:HTML ;
@@ -1081,7 +1133,7 @@ dbp:roundTripEfficiencyFade a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:initialSelfDischargeRate a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:RoundTripEfficiencyRestricted ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
     rdfs:range xsd:decimal ;
     rdfs:label "Initial Self-Discharge Rate" ;
     rdfs:comment """<div>Self-discharge rate at beginning of life expressed as a percentage per unit time.</div>"""^^rdf:HTML ;
@@ -1089,27 +1141,27 @@ dbp:initialSelfDischargeRate a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:remainingRoundTripEfficiency a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:RoundTripEfficiencyRestricted ;
-    rdfs:range xsd:decimal ;
+dbp:remainingRoundTripEfficiency a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
     rdfs:label "Remaining Round Trip Energy Efficiency" ;
     rdfs:comment """<div>Current remaining round trip energy efficiency expressed as a percentage.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:currentSelfDischargeRate a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:RoundTripEfficiencyRestricted ;
-    rdfs:range xsd:decimal ;
+dbp:currentSelfDischargeRate a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
     rdfs:label "Current Self-Discharge Rate" ;
     rdfs:comment """<div>Current self-discharge rate expressed as a percentage per unit time.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:evolutionSelfDischargeRates a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:RoundTripEfficiencyRestricted ;
-    rdfs:range xsd:decimal ;
+dbp:evolutionSelfDischargeRates a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
     rdfs:label "Evolution of Self-Discharge Rates" ;
     rdfs:comment """<div>Historical evolution of self-discharge rates over the battery's service lifetime.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
@@ -1117,7 +1169,7 @@ dbp:evolutionSelfDischargeRates a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:internalResistanceIncrease a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:InternalResistanceRestricted ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
     rdfs:range xsd:decimal ;
     rdfs:label "Internal Resistance Increase" ;
     rdfs:comment """<div>Increase in internal resistance over time expressed as a percentage of original resistance.</div>"""^^rdf:HTML ;
@@ -1126,7 +1178,7 @@ dbp:internalResistanceIncrease a rdf:Property, owl:DatatypeProperty ;
 .
 
 dbp:expectedLifetimeYears a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:BatteryLifetimeRestricted ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
     rdfs:range xsd:decimal ;
     rdfs:label "Expected Lifetime in Calendar Years" ;
     rdfs:comment """<div>Expected remaining lifetime of the battery in calendar years.</div>"""^^rdf:HTML ;
@@ -1134,99 +1186,110 @@ dbp:expectedLifetimeYears a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:numberOfFullCycles a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:BatteryLifetimeRestricted ;
-    rdfs:range xsd:integer ;
+dbp:numberOfFullCycles a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
     rdfs:label "Number of Full Charging and Discharging Cycles" ;
     rdfs:comment """<div>Total number of full charge-discharge cycles completed by the battery to date.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:energyThroughput a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:BatteryLifetimeRestricted ;
-    rdfs:range xsd:decimal ;
+dbp:energyThroughput a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
     rdfs:label "Energy Throughput" ;
     rdfs:comment """<div>Total energy throughput of the battery in watt-hours since first use.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:capacityThroughput a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:BatteryLifetimeRestricted ;
-    rdfs:range xsd:decimal ;
+dbp:capacityThroughput a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
     rdfs:label "Capacity Throughput" ;
     rdfs:comment """<div>Total charge throughput of the battery in ampere-hours since first use.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:temperatureInformation a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:TemperatureConditionsRestricted ;
-    rdfs:range xsd:integer ;
+dbp:temperatureInformation a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
     rdfs:label "Temperature Information" ;
     rdfs:comment """<div>General temperature information about the battery's operating history.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:timeInExtremeTempsAbove a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:TemperatureConditionsRestricted ;
-    rdfs:range xsd:integer ;
+dbp:timeInExtremeTempsAbove a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
     rdfs:label "Time in Extreme Temperatures Above Boundary" ;
     rdfs:comment """<div>Cumulative time the battery has spent in temperatures above the upper boundary, in hours.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:timeInExtremeTempsBelow a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:TemperatureConditionsRestricted ;
-    rdfs:range xsd:integer ;
+dbp:timeInExtremeTempsBelow a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
     rdfs:label "Time in Extreme Temperatures Below Boundary" ;
     rdfs:comment """<div>Cumulative time the battery has spent in temperatures below the lower boundary, in hours.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:timeChargingExtremeTempsAbove a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:TemperatureConditionsRestricted ;
-    rdfs:range xsd:integer ;
+dbp:timeChargingExtremeTempsAbove a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
     rdfs:label "Time Charging in Extreme Temperatures Above" ;
     rdfs:comment """<div>Cumulative time the battery has been charged at temperatures above the upper boundary, in hours.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:timeChargingExtremeTempsBelow a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:TemperatureConditionsRestricted ;
-    rdfs:range xsd:integer ;
+dbp:timeChargingExtremeTempsBelow a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
     rdfs:label "Time Charging in Extreme Temperatures Below" ;
     rdfs:comment """<div>Cumulative time the battery has been charged at temperatures below the lower boundary, in hours.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:deepDischargeEvents a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:NegativeEvents ;
-    rdfs:range xsd:integer ;
+dbp:temperatureDistribution a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:Distribution ;
+    rdfs:label "Temperature Distribution" ;
+    rdfs:comment """<div>Distribution of time spent in each temperature interval over the measurement period,
+expressed as cumulative percentage of total operating time. Interval min and max represent
+temperature bands in degrees Celsius.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
+dbp:deepDischargeEvents a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
     rdfs:label "Number of Deep Discharge Events" ;
     rdfs:comment """<div>Total number of deep discharge events recorded for the battery.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:overchargeEvents a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:NegativeEvents ;
-    rdfs:range xsd:integer ;
+dbp:overchargeEvents a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
     rdfs:label "Number of Overcharge Events" ;
     rdfs:comment """<div>Total number of overcharge events recorded for the battery.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
-dbp:informationOnAccidents a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain dbp:NegativeEvents ;
-    rdfs:range xsd:anyURI ;
+dbp:informationOnAccidents a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
     rdfs:label "Information on Accidents" ;
     rdfs:comment """<div>URI linking to records of accidents or safety incidents involving the battery.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
@@ -1234,6 +1297,30 @@ dbp:informationOnAccidents a rdf:Property, owl:DatatypeProperty ;
 .
 
 # Class definitions
+dbp:DynamicDataPoint a rdfs:Class ;
+    rdfs:label "Dynamic Data Point" ;
+    rdfs:comment """<div>Timestamped wrapper for a dynamic battery data point. Carries a scalar value of any type
+alongside the timestamp of its most recent measurement or update.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
+dbp:Distribution a rdfs:Class ;
+    rdfs:label "Distribution" ;
+    rdfs:comment """<div>Aggregated interval distribution of a battery measurement over a defined time period.
+Represents histogram-style data suitable for bar chart visualisation.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
+dbp:DistributionInterval a rdfs:Class ;
+    rdfs:label "Distribution Interval" ;
+    rdfs:comment """<div>One interval bucket in a distribution. Boundary convention: [min, max) for all buckets
+except the last which uses a closed upper bound [min, max].</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
 dbp:PostalAddress a rdfs:Class ;
     rdfs:label "Postal Address" ;
     rdfs:comment """<div>A structured postal address including postal code, street address, and country.</div>"""^^rdf:HTML ;
@@ -1434,118 +1521,19 @@ spare parts sources, and safety measures.</div>"""^^rdf:HTML ;
     vs:term_status "stable" ;
 .
 
-dbp:CapacityEnergyVoltagePublic a rdfs:Class ;
-    rdfs:label "Capacity, Energy and Voltage (Public)" ;
-    rdfs:comment """<div>Public static battery performance data for capacity, energy, and voltage including
-rated capacity, certified usable energy, and minimum, maximum, and nominal voltages.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:PowerCapabilityPublic a rdfs:Class ;
-    rdfs:label "Power Capability (Public)" ;
-    rdfs:comment """<div>Public static power capability data including original power capability, maximum
-permitted battery power, and ratio of nominal power to battery energy.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:RoundTripEfficiencyPublic a rdfs:Class ;
-    rdfs:label "Round Trip Efficiency (Public)" ;
-    rdfs:comment """<div>Public static round trip energy efficiency data including initial efficiency and
-efficiency at 50% of the expected cycle life.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:InternalResistancePublic a rdfs:Class ;
-    rdfs:label "Internal Resistance (Public)" ;
-    rdfs:comment """<div>Public static initial internal resistance of the battery cell and pack at beginning of life.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:BatteryLifetimePublic a rdfs:Class ;
-    rdfs:label "Battery Lifetime (Public)" ;
-    rdfs:comment """<div>Public static battery lifetime data including expected charge-discharge cycles,
-cycle-life reference test, C-rate, and capacity threshold for exhaustion.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:TemperatureConditionsPublic a rdfs:Class ;
-    rdfs:label "Temperature Conditions (Public)" ;
-    rdfs:comment """<div>Public static temperature range boundaries for idle state battery storage and operation.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
 dbp:BatteryPerformancePublic a rdfs:Class ;
     rdfs:label "Battery Performance (Public)" ;
-    rdfs:comment """<div>Public battery performance and durability data container grouping capacity, power,
-efficiency, internal resistance, lifetime, and temperature sub-sections.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:CapacityEnergyVoltageRestricted a rdfs:Class ;
-    rdfs:label "Capacity, Energy and Voltage (Restricted)" ;
-    rdfs:comment """<div>Dynamic restricted capacity and energy data including capacity fade, remaining capacity,
-remaining usable energy, state of certified energy, and state of charge.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:PowerCapabilityRestricted a rdfs:Class ;
-    rdfs:label "Power Capability (Restricted)" ;
-    rdfs:comment """<div>Dynamic restricted power capability data including power fade and remaining power capability.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:RoundTripEfficiencyRestricted a rdfs:Class ;
-    rdfs:label "Round Trip Efficiency (Restricted)" ;
-    rdfs:comment """<div>Dynamic restricted round trip efficiency data including efficiency fade, initial and current
-self-discharge rates, remaining efficiency, and evolution of self-discharge rates.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:InternalResistanceRestricted a rdfs:Class ;
-    rdfs:label "Internal Resistance (Restricted)" ;
-    rdfs:comment """<div>Dynamic restricted internal resistance data recording resistance increase over lifetime.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:BatteryLifetimeRestricted a rdfs:Class ;
-    rdfs:label "Battery Lifetime (Restricted)" ;
-    rdfs:comment """<div>Dynamic restricted battery lifetime data including expected remaining lifetime in years,
-number of full cycles completed, energy throughput, and capacity throughput.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:TemperatureConditionsRestricted a rdfs:Class ;
-    rdfs:label "Temperature Conditions (Restricted)" ;
-    rdfs:comment """<div>Dynamic restricted temperature condition data including time spent in extreme temperatures
-during operation and charging.</div>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
-    vs:term_status "stable" ;
-.
-
-dbp:NegativeEvents a rdfs:Class ;
-    rdfs:label "Negative Events" ;
-    rdfs:comment """<div>Dynamic restricted data on adverse battery events including deep discharge events,
-overcharge events, and information on accidents.</div>"""^^rdf:HTML ;
+    rdfs:comment """<div>Public battery performance and durability data covering capacity, energy, voltage, power
+capability, round trip efficiency, internal resistance, lifetime, and temperature conditions.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
 
 dbp:BatteryPerformanceRestricted a rdfs:Class ;
     rdfs:label "Battery Performance (Restricted)" ;
-    rdfs:comment """<div>Restricted dynamic battery performance data container grouping capacity, power, efficiency,
-internal resistance, lifetime, temperature, and negative event sub-sections.</div>"""^^rdf:HTML ;
+    rdfs:comment """<div>Restricted dynamic battery performance and durability data covering capacity fade, remaining
+capacity and energy, state of charge, power fade, efficiency fade, internal resistance
+increase, lifetime counters, temperature distributions, and negative events.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
@@ -1574,45 +1562,34 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:BatteryCompliancePublic,
         dbp:BatteryComplianceRestricted,
         dbp:BatteryIdentifiers,
-        dbp:BatteryLifetimePublic,
-        dbp:BatteryLifetimeRestricted,
         dbp:BatteryMaterial,
         dbp:BatteryMaterialLocation,
         dbp:BatteryMaterialsPublic,
         dbp:BatteryMaterialsRestricted,
         dbp:BatteryPerformancePublic,
         dbp:BatteryPerformanceRestricted,
-        dbp:CapacityEnergyVoltagePublic,
-        dbp:CapacityEnergyVoltageRestricted,
         dbp:CompanyInformation,
         dbp:ContactInformation,
         dbp:DPPInfo,
+        dbp:Distribution,
+        dbp:DistributionInterval,
+        dbp:DynamicDataPoint,
         dbp:EndUserInformation,
         dbp:GeneralInformationPublic,
         dbp:GeneralInformationRestricted,
         dbp:HazardousSubstance,
-        dbp:InternalResistancePublic,
-        dbp:InternalResistanceRestricted,
         dbp:Label,
-        dbp:NegativeEvents,
         dbp:OperatorIdentifiers,
         dbp:PerformanceClass,
         dbp:PostalAddress,
-        dbp:PowerCapabilityPublic,
-        dbp:PowerCapabilityRestricted,
         dbp:ProductData,
         dbp:RecycledRenewableContent,
         dbp:RestrictedProductData,
-        dbp:RoundTripEfficiencyPublic,
-        dbp:RoundTripEfficiencyRestricted,
         dbp:SupplyChainDueDiligence,
-        dbp:TemperatureConditionsPublic,
-        dbp:TemperatureConditionsRestricted,
         dbp:absoluteCarbonFootprint,
         dbp:address,
         dbp:batteryCategory,
         dbp:batteryChemistry,
-        dbp:batteryLifetime,
         dbp:batteryMass,
         dbp:batteryMaterialIdentifier,
         dbp:batteryMaterialLocation,
@@ -1623,11 +1600,10 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:batteryStatus,
         dbp:cRateCycleLifeTest,
         dbp:cadmiumSymbol,
-        dbp:capacityEnergyVoltage,
         dbp:capacityFade,
         dbp:capacityThresholdExhaustion,
         dbp:capacityThroughput,
-        dbp:carbonFootprint,
+        dbp:carbonFootprintLabel,
         dbp:carbonFootprintPerFU,
         dbp:certifiedUsableBattEnergy,
         dbp:clearName,
@@ -1646,9 +1622,17 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:dateOfPuttingIntoService,
         dbp:deepDischargeEvents,
         dbp:dismantlingManuals,
+        dbp:distributionFromTimestamp,
+        dbp:distributionIntervalMax,
+        dbp:distributionIntervalMin,
+        dbp:distributionIntervalValue,
+        dbp:distributionIntervals,
+        dbp:distributionToTimestamp,
         dbp:dppGranularity,
         dbp:dppStatus,
         dbp:dueDiligenceReport,
+        dbp:dynamicDataPointObservedAt,
+        dbp:dynamicDataPointValue,
         dbp:economicOperator,
         dbp:economicOperatorId,
         dbp:email,
@@ -1669,7 +1653,6 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:initialInternalResistance,
         dbp:initialRoundTripEfficiency,
         dbp:initialSelfDischargeRate,
-        dbp:internalResistance,
         dbp:internalResistanceIncrease,
         dbp:isCriticalRawMaterial,
         dbp:lastUpdated,
@@ -1684,7 +1667,6 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:maximumVoltage,
         dbp:meaning,
         dbp:minimumVoltage,
-        dbp:negativeEvents,
         dbp:nominalVoltage,
         dbp:numberOfFullCycles,
         dbp:originalPowerCapability,
@@ -1696,7 +1678,6 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:postConsumerLithiumShare,
         dbp:postConsumerNickelShare,
         dbp:postalCode,
-        dbp:powerCapability,
         dbp:powerFade,
         dbp:preConsumerCobaltShare,
         dbp:preConsumerLithiumShare,
@@ -1707,12 +1688,12 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:ratioPowerToEnergy,
         dbp:recycledContent,
         dbp:recycledLeadShare,
+        dbp:registeredTradeNameOrTrademark,
         dbp:remainingCapacity,
         dbp:remainingPowerCapability,
         dbp:remainingRoundTripEfficiency,
         dbp:remainingUsableBattEnergy,
         dbp:renewableContentShare,
-        dbp:roundTripEfficiency,
         dbp:roundTripEfficiencyAt50pct,
         dbp:roundTripEfficiencyFade,
         dbp:safetyMeasures,
@@ -1724,6 +1705,8 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:sparePartsInfo,
         dbp:stateOfCertifiedEnergy,
         dbp:stateOfCharge,
+        dbp:stateOfChargeDistributionHours,
+        dbp:stateOfChargeDistributionPercent,
         dbp:streetAddress,
         dbp:subject,
         dbp:substance,
@@ -1731,7 +1714,7 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:symbol,
         dbp:tempRangeIdleLower,
         dbp:tempRangeIdleUpper,
-        dbp:temperatureConditions,
+        dbp:temperatureDistribution,
         dbp:temperatureInformation,
         dbp:testReportResults,
         dbp:thirdPartyAssurances,
