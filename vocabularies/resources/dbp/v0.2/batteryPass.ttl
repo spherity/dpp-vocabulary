@@ -16,7 +16,7 @@ compliance, materials, carbon footprint, circularity, and performance and durabi
 as defined by the BatteryPass-Ready DataAttributeLongList v1.3 (March 2026).
 """^^rdf:HTML ;
     rdfs:seeAlso <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1542> ;
-    dc:date "2026-06-10"^^xsd:date ;
+    dc:date "2026-06-11"^^xsd:date ;
 .
 
 # Property definitions
@@ -931,11 +931,20 @@ dbp:nominalVoltage a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:originalPowerCapability a rdf:Property, owl:DatatypeProperty ;
+dbp:originalPowerCapabilityAt20SoC a rdf:Property, owl:DatatypeProperty ;
     rdfs:domain dbp:BatteryPerformancePublic ;
     rdfs:range xsd:integer ;
-    rdfs:label "Original Power Capability" ;
-    rdfs:comment """<div>Original power capability of the battery at beginning of life in watts.</div>"""^^rdf:HTML ;
+    rdfs:label "Original Power Capability at 20% SoC" ;
+    rdfs:comment """<div>Original power capability of the battery at beginning of life measured at 20% state of charge, in watts.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
+dbp:originalPowerCapabilityAt80SoC a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain dbp:BatteryPerformancePublic ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Original Power Capability at 80% SoC" ;
+    rdfs:comment """<div>Original power capability of the battery at beginning of life measured at 80% state of charge, in watts.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
@@ -1114,11 +1123,20 @@ dbp:powerFade a rdf:Property, owl:DatatypeProperty ;
     vs:term_status "stable" ;
 .
 
-dbp:remainingPowerCapability a rdf:Property, owl:ObjectProperty ;
+dbp:remainingPowerCapabilityAt20SoC a rdf:Property, owl:ObjectProperty ;
     rdfs:domain dbp:BatteryPerformanceRestricted ;
     rdfs:range dbp:DynamicDataPoint ;
-    rdfs:label "Remaining Power Capability" ;
-    rdfs:comment """<div>Current remaining power capability of the battery in watts.</div>"""^^rdf:HTML ;
+    rdfs:label "Remaining Power Capability at 20% SoC" ;
+    rdfs:comment """<div>Current remaining power capability of the battery measured at 20% state of charge, in watts.</div>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
+    vs:term_status "stable" ;
+.
+
+dbp:remainingPowerCapabilityAt80SoC a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain dbp:BatteryPerformanceRestricted ;
+    rdfs:range dbp:DynamicDataPoint ;
+    rdfs:label "Remaining Power Capability at 80% SoC" ;
+    rdfs:comment """<div>Current remaining power capability of the battery measured at 80% state of charge, in watts.</div>"""^^rdf:HTML ;
     rdfs:isDefinedBy <https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#> ;
     vs:term_status "stable" ;
 .
@@ -1669,7 +1687,8 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:minimumVoltage,
         dbp:nominalVoltage,
         dbp:numberOfFullCycles,
-        dbp:originalPowerCapability,
+        dbp:originalPowerCapabilityAt20SoC,
+        dbp:originalPowerCapabilityAt80SoC,
         dbp:overchargeEvents,
         dbp:partNumbers,
         dbp:performanceClass,
@@ -1690,7 +1709,8 @@ dbp:PerformanceClass a rdfs:Datatype ;
         dbp:recycledLeadShare,
         dbp:registeredTradeNameOrTrademark,
         dbp:remainingCapacity,
-        dbp:remainingPowerCapability,
+        dbp:remainingPowerCapabilityAt20SoC,
+        dbp:remainingPowerCapabilityAt80SoC,
         dbp:remainingRoundTripEfficiency,
         dbp:remainingUsableBattEnergy,
         dbp:renewableContentShare,

@@ -76,7 +76,7 @@
         "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
     },
     "rdfs:seeAlso": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1542",
-    "dc:date": "2026-06-10",
+    "dc:date": "2026-06-11",
     "rdfs_properties": [{
         "@id": "dbp:dynamicDataPointValue",
         "@type": "rdf:Property",
@@ -1588,13 +1588,28 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:originalPowerCapability",
+        "@id": "dbp:originalPowerCapabilityAt20SoC",
         "@type": ["rdf:Property", "owl:DatatypeProperty"],
         "rdfs:domain": "dbp:BatteryPerformancePublic",
         "rdfs:range": "xsd:integer",
-        "rdfs:label": "Original Power Capability",
+        "rdfs:label": "Original Power Capability at 20% SoC",
         "rdfs:comment": {
-            "@value": "<div>Original power capability of the battery at beginning of life in watts.</div>",
+            "@value": "<div>Original power capability of the battery at beginning of life measured at 20% state of charge, in watts.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "dbp:originalPowerCapabilityAt80SoC",
+        "@type": ["rdf:Property", "owl:DatatypeProperty"],
+        "rdfs:domain": "dbp:BatteryPerformancePublic",
+        "rdfs:range": "xsd:integer",
+        "rdfs:label": "Original Power Capability at 80% SoC",
+        "rdfs:comment": {
+            "@value": "<div>Original power capability of the battery at beginning of life measured at 80% state of charge, in watts.</div>",
             "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
         },
         "vs:term_status": "stable",
@@ -1888,13 +1903,28 @@
             "@type": "jsonld:Context"
         }]
     }, {
-        "@id": "dbp:remainingPowerCapability",
+        "@id": "dbp:remainingPowerCapabilityAt20SoC",
         "@type": ["rdf:Property", "owl:ObjectProperty"],
         "rdfs:domain": "dbp:BatteryPerformanceRestricted",
         "rdfs:range": "dbp:DynamicDataPoint",
-        "rdfs:label": "Remaining Power Capability",
+        "rdfs:label": "Remaining Power Capability at 20% SoC",
         "rdfs:comment": {
-            "@value": "<div>Current remaining power capability of the battery in watts.</div>",
+            "@value": "<div>Current remaining power capability of the battery measured at 20% state of charge, in watts.</div>",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
+        },
+        "vs:term_status": "stable",
+        "mentioned": [{
+            "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld",
+            "@type": "jsonld:Context"
+        }]
+    }, {
+        "@id": "dbp:remainingPowerCapabilityAt80SoC",
+        "@type": ["rdf:Property", "owl:ObjectProperty"],
+        "rdfs:domain": "dbp:BatteryPerformanceRestricted",
+        "rdfs:range": "dbp:DynamicDataPoint",
+        "rdfs:label": "Remaining Power Capability at 80% SoC",
+        "rdfs:comment": {
+            "@value": "<div>Current remaining power capability of the battery measured at 80% state of charge, in watts.</div>",
             "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
         },
         "vs:term_status": "stable",

@@ -112,7 +112,7 @@
         <dl>
             <dt>Published:</dt>
             <dd>
-                <time property="dc:date" id="time">2026-06-10</time>
+                <time property="dc:date" id="time">2026-06-11</time>
             </dd>
             <dt>Version Info:</dt>
             <dd>0.2</dd>
@@ -298,7 +298,8 @@
                         <li><a href="#minimumVoltage"><code>minimumVoltage<code></code></code></a></li>
                         <li><a href="#nominalVoltage"><code>nominalVoltage<code></code></code></a></li>
                         <li><a href="#numberOfFullCycles"><code>numberOfFullCycles<code></code></code></a></li>
-                        <li><a href="#originalPowerCapability"><code>originalPowerCapability<code></code></code></a></li>
+                        <li><a href="#originalPowerCapabilityAt20SoC"><code>originalPowerCapabilityAt20SoC<code></code></code></a></li>
+                        <li><a href="#originalPowerCapabilityAt80SoC"><code>originalPowerCapabilityAt80SoC<code></code></code></a></li>
                         <li><a href="#overchargeEvents"><code>overchargeEvents<code></code></code></a></li>
                         <li><a href="#partNumbers"><code>partNumbers<code></code></code></a></li>
                         <li><a href="#performanceClass"><code>performanceClass<code></code></code></a></li>
@@ -319,7 +320,8 @@
                         <li><a href="#recycledLeadShare"><code>recycledLeadShare<code></code></code></a></li>
                         <li><a href="#registeredTradeNameOrTrademark"><code>registeredTradeNameOrTrademark<code></code></code></a></li>
                         <li><a href="#remainingCapacity"><code>remainingCapacity<code></code></code></a></li>
-                        <li><a href="#remainingPowerCapability"><code>remainingPowerCapability<code></code></code></a></li>
+                        <li><a href="#remainingPowerCapabilityAt20SoC"><code>remainingPowerCapabilityAt20SoC<code></code></code></a></li>
+                        <li><a href="#remainingPowerCapabilityAt80SoC"><code>remainingPowerCapabilityAt80SoC<code></code></code></a></li>
                         <li><a href="#remainingRoundTripEfficiency"><code>remainingRoundTripEfficiency<code></code></code></a></li>
                         <li><a href="#remainingUsableBattEnergy"><code>remainingUsableBattEnergy<code></code></code></a></li>
                         <li><a href="#renewableContentShare"><code>renewableContentShare<code></code></code></a></li>
@@ -1876,10 +1878,25 @@
                     <dd><a href="https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld"><code>https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld</code></a></dd>
                 </dl>
             </section>
-            <section id="originalPowerCapability">
-                <h4><code>originalPowerCapability</code></h4>
-                <p><em>Original Power Capability</em></p>
-                <div>Original power capability of the battery at beginning of life in watts.</div>
+            <section id="originalPowerCapabilityAt20SoC">
+                <h4><code>originalPowerCapabilityAt20SoC</code></h4>
+                <p><em>Original Power Capability at 20% SoC</em></p>
+                <div>Original power capability of the battery at beginning of life measured at 20% state of charge, in watts.</div>
+                <dl class="terms">
+                    <dt>Domain:</dt>
+                    <dd><a href="#BatteryPerformancePublic"><code>BatteryPerformancePublic</code></a></dd>
+                    <dt>Range:</dt>
+                    <dd><code>xsd:integer</code></dd>
+                </dl>
+                <dl class="terms">
+                    <dt>Relevant <code>@context</code>:</dt>
+                    <dd><a href="https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld"><code>https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld</code></a></dd>
+                </dl>
+            </section>
+            <section id="originalPowerCapabilityAt80SoC">
+                <h4><code>originalPowerCapabilityAt80SoC</code></h4>
+                <p><em>Original Power Capability at 80% SoC</em></p>
+                <div>Original power capability of the battery at beginning of life measured at 80% state of charge, in watts.</div>
                 <dl class="terms">
                     <dt>Domain:</dt>
                     <dd><a href="#BatteryPerformancePublic"><code>BatteryPerformancePublic</code></a></dd>
@@ -2179,10 +2196,25 @@
                     <dd><a href="https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld"><code>https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld</code></a></dd>
                 </dl>
             </section>
-            <section id="remainingPowerCapability">
-                <h4><code>remainingPowerCapability</code></h4>
-                <p><em>Remaining Power Capability</em></p>
-                <div>Current remaining power capability of the battery in watts.</div>
+            <section id="remainingPowerCapabilityAt20SoC">
+                <h4><code>remainingPowerCapabilityAt20SoC</code></h4>
+                <p><em>Remaining Power Capability at 20% SoC</em></p>
+                <div>Current remaining power capability of the battery measured at 20% state of charge, in watts.</div>
+                <dl class="terms">
+                    <dt>Domain:</dt>
+                    <dd><a href="#BatteryPerformanceRestricted"><code>BatteryPerformanceRestricted</code></a></dd>
+                    <dt>Range:</dt>
+                    <dd><a href="#DynamicDataPoint"><code>DynamicDataPoint</code></a></dd>
+                </dl>
+                <dl class="terms">
+                    <dt>Relevant <code>@context</code>:</dt>
+                    <dd><a href="https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld"><code>https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass.context.jsonld</code></a></dd>
+                </dl>
+            </section>
+            <section id="remainingPowerCapabilityAt80SoC">
+                <h4><code>remainingPowerCapabilityAt80SoC</code></h4>
+                <p><em>Remaining Power Capability at 80% SoC</em></p>
+                <div>Current remaining power capability of the battery measured at 80% state of charge, in watts.</div>
                 <dl class="terms">
                     <dt>Domain:</dt>
                     <dd><a href="#BatteryPerformanceRestricted"><code>BatteryPerformanceRestricted</code></a></dd>
@@ -2493,7 +2525,7 @@
                     alongside the timestamp of its most recent measurement or update.</div>
                 <dl class="terms">
                     <dt>Range of:</dt>
-                    <dd><a href="#remainingCapacity"><code>remainingCapacity</code></a>, <a href="#remainingUsableBattEnergy"><code>remainingUsableBattEnergy</code></a>, <a href="#stateOfCertifiedEnergy"><code>stateOfCertifiedEnergy</code></a>, <a href="#stateOfCharge"><code>stateOfCharge</code></a>, <a href="#remainingPowerCapability"><code>remainingPowerCapability</code></a>, <a href="#remainingRoundTripEfficiency"><code>remainingRoundTripEfficiency</code></a>, <a href="#currentSelfDischargeRate"><code>currentSelfDischargeRate</code></a>, <a href="#evolutionSelfDischargeRates"><code>evolutionSelfDischargeRates</code></a>, <a href="#numberOfFullCycles"><code>numberOfFullCycles</code></a>, <a href="#energyThroughput"><code>energyThroughput</code></a>, <a href="#capacityThroughput"><code>capacityThroughput</code></a>, <a href="#temperatureInformation"><code>temperatureInformation</code></a>, <a href="#timeInExtremeTempsAbove"><code>timeInExtremeTempsAbove</code></a>, <a href="#timeInExtremeTempsBelow"><code>timeInExtremeTempsBelow</code></a>, <a href="#timeChargingExtremeTempsAbove"><code>timeChargingExtremeTempsAbove</code></a>, <a href="#timeChargingExtremeTempsBelow"><code>timeChargingExtremeTempsBelow</code></a>, <a href="#deepDischargeEvents"><code>deepDischargeEvents</code></a>, <a href="#overchargeEvents"><code>overchargeEvents</code></a>, <a href="#informationOnAccidents"><code>informationOnAccidents</code></a></dd>
+                    <dd><a href="#remainingCapacity"><code>remainingCapacity</code></a>, <a href="#remainingUsableBattEnergy"><code>remainingUsableBattEnergy</code></a>, <a href="#stateOfCertifiedEnergy"><code>stateOfCertifiedEnergy</code></a>, <a href="#stateOfCharge"><code>stateOfCharge</code></a>, <a href="#remainingPowerCapabilityAt20SoC"><code>remainingPowerCapabilityAt20SoC</code></a>, <a href="#remainingPowerCapabilityAt80SoC"><code>remainingPowerCapabilityAt80SoC</code></a>, <a href="#remainingRoundTripEfficiency"><code>remainingRoundTripEfficiency</code></a>, <a href="#currentSelfDischargeRate"><code>currentSelfDischargeRate</code></a>, <a href="#evolutionSelfDischargeRates"><code>evolutionSelfDischargeRates</code></a>, <a href="#numberOfFullCycles"><code>numberOfFullCycles</code></a>, <a href="#energyThroughput"><code>energyThroughput</code></a>, <a href="#capacityThroughput"><code>capacityThroughput</code></a>, <a href="#temperatureInformation"><code>temperatureInformation</code></a>, <a href="#timeInExtremeTempsAbove"><code>timeInExtremeTempsAbove</code></a>, <a href="#timeInExtremeTempsBelow"><code>timeInExtremeTempsBelow</code></a>, <a href="#timeChargingExtremeTempsAbove"><code>timeChargingExtremeTempsAbove</code></a>, <a href="#timeChargingExtremeTempsBelow"><code>timeChargingExtremeTempsBelow</code></a>, <a href="#deepDischargeEvents"><code>deepDischargeEvents</code></a>, <a href="#overchargeEvents"><code>overchargeEvents</code></a>, <a href="#informationOnAccidents"><code>informationOnAccidents</code></a></dd>
                     <dt>Domain of:</dt>
                     <dd><a href="#dynamicDataPointValue"><code>dynamicDataPointValue</code></a>, <a href="#dynamicDataPointObservedAt"><code>dynamicDataPointObservedAt</code></a></dd>
                 </dl>
@@ -2915,7 +2947,7 @@
                     capability, round trip efficiency, internal resistance, lifetime, and temperature conditions.</div>
                 <dl class="terms">
                     <dt>Domain of:</dt>
-                    <dd><a href="#ratedCapacity"><code>ratedCapacity</code></a>, <a href="#certifiedUsableBattEnergy"><code>certifiedUsableBattEnergy</code></a>, <a href="#minimumVoltage"><code>minimumVoltage</code></a>, <a href="#maximumVoltage"><code>maximumVoltage</code></a>, <a href="#nominalVoltage"><code>nominalVoltage</code></a>, <a href="#originalPowerCapability"><code>originalPowerCapability</code></a>, <a href="#maximumPermittedPower"><code>maximumPermittedPower</code></a>, <a href="#ratioPowerToEnergy"><code>ratioPowerToEnergy</code></a>, <a href="#initialRoundTripEfficiency"><code>initialRoundTripEfficiency</code></a>, <a href="#roundTripEfficiencyAt50pct"><code>roundTripEfficiencyAt50pct</code></a>, <a href="#initialInternalResistance"><code>initialInternalResistance</code></a>, <a href="#expectedLifetimeCycles"><code>expectedLifetimeCycles</code></a>, <a href="#cycleLifeReferenceTest"><code>cycleLifeReferenceTest</code></a>, <a href="#cRateCycleLifeTest"><code>cRateCycleLifeTest</code></a>, <a href="#capacityThresholdExhaustion"><code>capacityThresholdExhaustion</code></a>, <a href="#tempRangeIdleLower"><code>tempRangeIdleLower</code></a>, <a href="#tempRangeIdleUpper"><code>tempRangeIdleUpper</code></a></dd>
+                    <dd><a href="#ratedCapacity"><code>ratedCapacity</code></a>, <a href="#certifiedUsableBattEnergy"><code>certifiedUsableBattEnergy</code></a>, <a href="#minimumVoltage"><code>minimumVoltage</code></a>, <a href="#maximumVoltage"><code>maximumVoltage</code></a>, <a href="#nominalVoltage"><code>nominalVoltage</code></a>, <a href="#originalPowerCapabilityAt20SoC"><code>originalPowerCapabilityAt20SoC</code></a>, <a href="#originalPowerCapabilityAt80SoC"><code>originalPowerCapabilityAt80SoC</code></a>, <a href="#maximumPermittedPower"><code>maximumPermittedPower</code></a>, <a href="#ratioPowerToEnergy"><code>ratioPowerToEnergy</code></a>, <a href="#initialRoundTripEfficiency"><code>initialRoundTripEfficiency</code></a>, <a href="#roundTripEfficiencyAt50pct"><code>roundTripEfficiencyAt50pct</code></a>, <a href="#initialInternalResistance"><code>initialInternalResistance</code></a>, <a href="#expectedLifetimeCycles"><code>expectedLifetimeCycles</code></a>, <a href="#cycleLifeReferenceTest"><code>cycleLifeReferenceTest</code></a>, <a href="#cRateCycleLifeTest"><code>cRateCycleLifeTest</code></a>, <a href="#capacityThresholdExhaustion"><code>capacityThresholdExhaustion</code></a>, <a href="#tempRangeIdleLower"><code>tempRangeIdleLower</code></a>, <a href="#tempRangeIdleUpper"><code>tempRangeIdleUpper</code></a></dd>
                 </dl>
                 <dl class="terms">
                     <dt>Relevant <code>@context</code>:</dt>
@@ -2930,7 +2962,7 @@
                     increase, lifetime counters, temperature distributions, and negative events.</div>
                 <dl class="terms">
                     <dt>Domain of:</dt>
-                    <dd><a href="#capacityFade"><code>capacityFade</code></a>, <a href="#remainingCapacity"><code>remainingCapacity</code></a>, <a href="#remainingUsableBattEnergy"><code>remainingUsableBattEnergy</code></a>, <a href="#stateOfCertifiedEnergy"><code>stateOfCertifiedEnergy</code></a>, <a href="#stateOfCharge"><code>stateOfCharge</code></a>, <a href="#stateOfChargeDistributionHours"><code>stateOfChargeDistributionHours</code></a>, <a href="#stateOfChargeDistributionPercent"><code>stateOfChargeDistributionPercent</code></a>, <a href="#powerFade"><code>powerFade</code></a>, <a href="#remainingPowerCapability"><code>remainingPowerCapability</code></a>, <a href="#roundTripEfficiencyFade"><code>roundTripEfficiencyFade</code></a>, <a href="#initialSelfDischargeRate"><code>initialSelfDischargeRate</code></a>, <a href="#remainingRoundTripEfficiency"><code>remainingRoundTripEfficiency</code></a>, <a href="#currentSelfDischargeRate"><code>currentSelfDischargeRate</code></a>, <a href="#evolutionSelfDischargeRates"><code>evolutionSelfDischargeRates</code></a>, <a href="#internalResistanceIncrease"><code>internalResistanceIncrease</code></a>, <a href="#expectedLifetimeYears"><code>expectedLifetimeYears</code></a>, <a href="#numberOfFullCycles"><code>numberOfFullCycles</code></a>, <a href="#energyThroughput"><code>energyThroughput</code></a>, <a href="#capacityThroughput"><code>capacityThroughput</code></a>, <a href="#temperatureInformation"><code>temperatureInformation</code></a>, <a href="#timeInExtremeTempsAbove"><code>timeInExtremeTempsAbove</code></a>, <a href="#timeInExtremeTempsBelow"><code>timeInExtremeTempsBelow</code></a>, <a href="#timeChargingExtremeTempsAbove"><code>timeChargingExtremeTempsAbove</code></a>, <a href="#timeChargingExtremeTempsBelow"><code>timeChargingExtremeTempsBelow</code></a>, <a href="#temperatureDistribution"><code>temperatureDistribution</code></a>, <a href="#deepDischargeEvents"><code>deepDischargeEvents</code></a>, <a href="#overchargeEvents"><code>overchargeEvents</code></a>, <a href="#informationOnAccidents"><code>informationOnAccidents</code></a></dd>
+                    <dd><a href="#capacityFade"><code>capacityFade</code></a>, <a href="#remainingCapacity"><code>remainingCapacity</code></a>, <a href="#remainingUsableBattEnergy"><code>remainingUsableBattEnergy</code></a>, <a href="#stateOfCertifiedEnergy"><code>stateOfCertifiedEnergy</code></a>, <a href="#stateOfCharge"><code>stateOfCharge</code></a>, <a href="#stateOfChargeDistributionHours"><code>stateOfChargeDistributionHours</code></a>, <a href="#stateOfChargeDistributionPercent"><code>stateOfChargeDistributionPercent</code></a>, <a href="#powerFade"><code>powerFade</code></a>, <a href="#remainingPowerCapabilityAt20SoC"><code>remainingPowerCapabilityAt20SoC</code></a>, <a href="#remainingPowerCapabilityAt80SoC"><code>remainingPowerCapabilityAt80SoC</code></a>, <a href="#roundTripEfficiencyFade"><code>roundTripEfficiencyFade</code></a>, <a href="#initialSelfDischargeRate"><code>initialSelfDischargeRate</code></a>, <a href="#remainingRoundTripEfficiency"><code>remainingRoundTripEfficiency</code></a>, <a href="#currentSelfDischargeRate"><code>currentSelfDischargeRate</code></a>, <a href="#evolutionSelfDischargeRates"><code>evolutionSelfDischargeRates</code></a>, <a href="#internalResistanceIncrease"><code>internalResistanceIncrease</code></a>, <a href="#expectedLifetimeYears"><code>expectedLifetimeYears</code></a>, <a href="#numberOfFullCycles"><code>numberOfFullCycles</code></a>, <a href="#energyThroughput"><code>energyThroughput</code></a>, <a href="#capacityThroughput"><code>capacityThroughput</code></a>, <a href="#temperatureInformation"><code>temperatureInformation</code></a>, <a href="#timeInExtremeTempsAbove"><code>timeInExtremeTempsAbove</code></a>, <a href="#timeInExtremeTempsBelow"><code>timeInExtremeTempsBelow</code></a>, <a href="#timeChargingExtremeTempsAbove"><code>timeChargingExtremeTempsAbove</code></a>, <a href="#timeChargingExtremeTempsBelow"><code>timeChargingExtremeTempsBelow</code></a>, <a href="#temperatureDistribution"><code>temperatureDistribution</code></a>, <a href="#deepDischargeEvents"><code>deepDischargeEvents</code></a>, <a href="#overchargeEvents"><code>overchargeEvents</code></a>, <a href="#informationOnAccidents"><code>informationOnAccidents</code></a></dd>
                 </dl>
                 <dl class="terms">
                     <dt>Relevant <code>@context</code>:</dt>

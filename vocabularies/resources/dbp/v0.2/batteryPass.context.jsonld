@@ -347,8 +347,7 @@
                 },
                 "criticalRawMaterials": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#criticalRawMaterials",
-                    "@type": "http://www.w3.org/2001/XMLSchema#string",
-                    "@container": "@set"
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
                 },
                 "hazardousSubstances": {
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#hazardousSubstances",
@@ -564,8 +563,12 @@
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#nominalVoltage",
                     "@type": "http://www.w3.org/2001/XMLSchema#decimal"
                 },
-                "originalPowerCapability": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#originalPowerCapability",
+                "originalPowerCapabilityAt20SoC": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#originalPowerCapabilityAt20SoC",
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                },
+                "originalPowerCapabilityAt80SoC": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#originalPowerCapabilityAt80SoC",
                     "@type": "http://www.w3.org/2001/XMLSchema#integer"
                 },
                 "maximumPermittedPower": {
@@ -650,8 +653,12 @@
                     "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#powerFade",
                     "@type": "http://www.w3.org/2001/XMLSchema#decimal"
                 },
-                "remainingPowerCapability": {
-                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#remainingPowerCapability",
+                "remainingPowerCapabilityAt20SoC": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#remainingPowerCapabilityAt20SoC",
+                    "@type": "@id"
+                },
+                "remainingPowerCapabilityAt80SoC": {
+                    "@id": "https://dpp.vocabulary.spherity.com/dbp/v0.2/batteryPass#remainingPowerCapabilityAt80SoC",
                     "@type": "@id"
                 },
                 "roundTripEfficiencyFade": {

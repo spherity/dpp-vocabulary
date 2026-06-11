@@ -971,12 +971,19 @@ property:
       Nominal voltage of the battery in volts.
 
   # --- BatteryPerformancePublic — Power Capability ---
-  - id: originalPowerCapability
-    label: Original Power Capability
+  - id: originalPowerCapabilityAt20SoC
+    label: Original Power Capability at 20% SoC
     domain: dbp:BatteryPerformancePublic
     range: xsd:integer
     comment: |
-      Original power capability of the battery at beginning of life in watts.
+      Original power capability of the battery at beginning of life measured at 20% state of charge, in watts.
+
+  - id: originalPowerCapabilityAt80SoC
+    label: Original Power Capability at 80% SoC
+    domain: dbp:BatteryPerformancePublic
+    range: xsd:integer
+    comment: |
+      Original power capability of the battery at beginning of life measured at 80% state of charge, in watts.
 
   - id: maximumPermittedPower
     label: Maximum Permitted Battery Power
@@ -1120,12 +1127,19 @@ property:
     comment: |
       Decrease in power capability over time as a percentage of original power capability.
 
-  - id: remainingPowerCapability
-    label: Remaining Power Capability
+  - id: remainingPowerCapabilityAt20SoC
+    label: Remaining Power Capability at 20% SoC
     domain: dbp:BatteryPerformanceRestricted
     range: dbp:DynamicDataPoint
     comment: |
-      Current remaining power capability of the battery in watts.
+      Current remaining power capability of the battery measured at 20% state of charge, in watts.
+
+  - id: remainingPowerCapabilityAt80SoC
+    label: Remaining Power Capability at 80% SoC
+    domain: dbp:BatteryPerformanceRestricted
+    range: dbp:DynamicDataPoint
+    comment: |
+      Current remaining power capability of the battery measured at 80% state of charge, in watts.
 
   # --- BatteryPerformanceRestricted — Round Trip Efficiency ---
   - id: roundTripEfficiencyFade
